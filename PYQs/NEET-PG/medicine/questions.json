@@ -1,222 +1,196 @@
 [
   {
-    "id": "PG23D001",
-    "y": 2023,
+    "id": "PGGM001",
+    "y": 2021,
+    "t": "NRL",
+    "q": "Pt. has h/o vomiting & doctor gave antiemetic. Patient developed abnormal movements. What would be given?",
+    "o": [
+      "Methyl dopa",
+      "Benzhexol",
+      "Hyoscine",
+      "Cyproheptadine"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM002",
+    "y": 2021,
     "t": "CAD",
-    "q": "[Image: Full-body clinical illustration with the upper and lower limbs and hands/feet visible.] Identify the condition associated with the murmur in the image below.",
+    "q": "A 56 yr old pt. Has developed excruciating chest discomfort in past 72 hours relieved on GTN spray. TROP I is normal. ECG shows feature of LVH with T wave flattening. He is already on statins, aspirin & metoprolol 50mg. What is next best step?",
     "o": [
-      "Mitral regurgitation",
-      "Aortic regurgitation",
-      "Aortic stenosis",
-      "Mitral stenosis"
+      "LMWH",
+      "Increase beta blocker dose",
+      "IV NTG Drip",
+      "Add tab clopidogrel"
     ],
     "a": 0
   },
   {
-    "id": "PG23D002",
-    "y": 2023,
-    "t": "RHU",
-    "q": "[Image: Spinal radiograph showing thin marginal bridging along multiple vertebral bodies with reduced normal contouring.] A young man came to the medical OPD with complaints of early morning backache and stiffness, which improves on exercise, and persistent red eyes. On examination, lung expansion was less than 3 cm. X-ray is shown in the image given below. What is the most probable diagnosis?",
+    "id": "PGGM003",
+    "y": 2021,
+    "t": "IFD",
+    "q": "Known case of HIV with cough of sputum production & fever with examination finding of consolidation in right infrascapular area with x-ray showing right lower consolidation with CD4 of 55. What is the most common cause of this in these?",
     "o": [
-      "Ankylosing spondylitis",
-      "Paget's disease",
-      "Healed tuberculosis",
-      "Osteopetrosis"
+      "Staph aureus",
+      "Strep pneumonia",
+      "Mycoplasma",
+      "P. jiroveci"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM004",
+    "y": 2021,
+    "t": "HML",
+    "q": "A patient with mediastinal mass was diagnosed with red cell aplasia. What is the probable cause?",
+    "o": [
+      "Bronchogenic carcinoma",
+      "NHL",
+      "Thymic neoplasia",
+      "T cell ALL"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGM005",
+    "y": 2021,
+    "t": "HML",
+    "q": "A software engineer presented to OPD with complaints of easy fatiguability. He gives a history of sitting in front of the computer for 12-14 hrs a day and consuming junk food and less fruits and vegetables. CBC picture showed Hb concentration as 7gm%, MCV-120. What is the most likely cause of anemia?",
+    "o": [
+      "Folate deficiency",
+      "Sideroblastic anemia",
+      "Cyanocobalamin deficiency",
+      "Acute blood loss"
     ],
     "a": 0
   },
   {
-    "id": "PG23D003",
-    "y": 2023,
+    "id": "PGGM006",
+    "y": 2021,
+    "t": "END",
+    "q": "False about pheochromocytoma",
+    "o": [
+      "Propanolol is preferred drug for hypertension control",
+      "Surgery is t/t of choice",
+      "VMA are diagnostic test",
+      "catecholamines are diagnostic test"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM007",
+    "y": 2021,
     "t": "NEP",
-    "q": "A patient with hyperkalemia and elevated urea levels underwent dialysis. Towards the end of the session, she became drowsy and had a sudden seizure episode. On examination, the patient was hypotensive. What is the treatment for this condition?",
+    "q": "A 50 yr old pt. With renal insufficiency was recently operated for pyelolithotomy, which drug you will give for post op analgesia?",
     "o": [
-      "Bumetanide",
-      "Ethacrynic acid",
-      "Nesiritide",
-      "IV Mannitol"
+      "Diclofenac sodium",
+      "Naproxen",
+      "Indomethacin",
+      "Acetaminophen"
     ],
     "a": 3
   },
   {
-    "id": "PG23D004",
-    "y": 2023,
-    "t": "END",
-    "q": "A female patient presents to the emergency department with severe restlessness, palpitations, and tremors. She is a known case of bronchial asthma. On examination, the neck looks swollen. Blood pressure is elevated, and tachycardia is noted. ECG shows atrial fibrillation. Which of the following drugs is used for immediate management in this patient?",
-    "o": [
-      "Diltiazem",
-      "Propranolol",
-      "Esmolol",
-      "Propylthiouracil"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG23D005",
-    "y": 2023,
-    "t": "GAS",
-    "q": "A 30-year-old male is found to be positive for HBsAg and HBeAg and is diagnosed with chronic hepatitis B. The patient’s viral load was 2x 100000 and SGPT is found to be doubled. What is the appropriate management in this patient? SGPT-Serum glutamate pyruvate transaminase",
-    "o": [
-      "Lamivudine for 30+ weeks",
-      "Tenofovir for> 40 weeks",
-      "Pegylated interferon for 52 weeks",
-      "Combined pegylated interferon with lamivudine"
-    ],
-    "a": 1
-  },
-  {
-    "id": "PG23D006",
-    "y": 2023,
-    "t": "END",
-    "q": "[Image: Clinical photograph showing prominent forward displacement of both eyes.] A 25-year-old male patient complained of palpitations, sweating, and restlessness. He has a complaint of sweaty palms. Clinical findings are depicted in the image given below. What is the diagnostic test done on this patient?",
-    "o": [
-      "Anti-thyroglobulin antibody",
-      "Anti-thyroid peroxidase antibody",
-      "Thyroid receptor antibody",
-      "Elevated ultrasensitive thyrotropin levels"
-    ],
-    "a": 2
-  },
-  {
-    "id": "PG23D007",
-    "y": 2023,
-    "t": "IFD",
-    "q": "[Image: Skin photograph showing multiple reddish-brown to violaceous plaques and nodules.] A 50-year-old HIV patient presented with a painless lesion, as shown in the image. What is the most likely diagnosis?",
-    "o": [
-      "Basal cell carcinoma",
-      "Kaposi sarcoma",
-      "Malignant melanoma",
-      "Squamous cell carcinoma"
-    ],
-    "a": 1
-  },
-  {
-    "id": "PG23D008",
-    "y": 2023,
-    "t": "NRL",
-    "q": "A patient is brought to the OPD by his wife, complaining about difficulty expressing emotions and not participating in daily activities. On examination, resting tremors and rigidity are noted. Given the possible diagnosis, which part of the brain is affected in this patient?",
-    "o": [
-      "Basal ganglia",
-      "Hippocampus",
-      "Cerebellum",
-      "Premotor cortex"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG23D009",
-    "y": 2023,
-    "t": "IFD",
-    "q": "A 45-year-old HIV-positive male complained of persistent cough and weight loss. He has skin lesions that appear as umbilicated papules and nodules predominantly on the face, trunk, and upper extremities. Chest x-ray showed multiple bilateral nodular infiltrates. His sputum CBNAAT for tuberculosis was negative, and he has a low CD4 count. What is the probable diagnosis?",
-    "o": [
-      "HIV with disseminated histoplasmosis",
-      "HIV with disseminated cryptococcosis",
-      "HIV with molluscum contagiosum",
-      "HIV with tuberculosis"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG23D010",
-    "y": 2023,
-    "t": "IFD",
-    "q": "A male patient presented to the emergency room with seizures. He has a history of fever, headache, and confusion. An MRI brain was done, and it showed inflammation involving the bitemporal lobe. What is the most likely aetiology for this presentation?",
-    "o": [
-      "Cytomegalovirus",
-      "Toxoplasma gondii",
-      "Herpes simplex virus",
-      "Mycobacterium tuberculosis"
-    ],
-    "a": 2
-  },
-  {
-    "id": "PG23D011",
-    "y": 2023,
-    "t": "NRL",
-    "q": "A male patient presents with sensory loss and weakness of limbs for 3 months. He also has angular stomatitis. On examination, there is loss of proprioception, vibration sensations, UMN type of lower limb weakness, and absent ankle reflex. What is the most probable diagnosis?",
-    "o": [
-      "Extradural cord compression",
-      "Amyotrophic lateral sclerosis",
-      "Multiple sclerosis",
-      "Subacute combined degeneration of cord"
-    ],
-    "a": 3
-  },
-  {
-    "id": "PG23D012",
-    "y": 2023,
-    "t": "CAD",
-    "q": "A 40-year-old female patient came with complaints of chest pain, palpitation, and shortness of breath. On examination, a mid-diastolic murmur was heard, and a prominent 'a' wave was found on JVP. What is the most likely diagnosis?",
-    "o": [
-      "Mitral stenosis",
-      "Tricuspid stenosis",
-      "Mitral regurgitation",
-      "Tricuspid regurgitation"
-    ],
-    "a": 1
-  },
-  {
-    "id": "PG23D013",
-    "y": 2023,
-    "t": "CAD",
-    "q": "[Image: ECG tracing with abnormal broadening of the ventricular complexes and repolarization changes.] the ECG finding? A patient who is a known case of hypertension on multiple anti-hypertensive medications came to OPD. His ECG finding is given below. Which of the following drugs is responsible for",
-    "o": [
-      "Prazosin",
-      "Metoprolol",
-      "Hydrochlorothiazide",
-      "Spironolactone"
-    ],
-    "a": 3
-  },
-  {
-    "id": "PG23D014",
-    "y": 2023,
-    "t": "NRL",
-    "q": "A 78-year-old woman presents with a progressive decline in daily activity. She gives a history of convulsions and visual hallucinations. She does not talk to anyone and keeps looking at the sky. Pathological examination shows the presence of Lewy bodies within the neurons. What is the most probable diagnosis?",
-    "o": [
-      "Parkinson's disease",
-      "Prion disease",
-      "Huntington's chorea",
-      "Alzheimer's disease"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG23D015",
-    "y": 2023,
-    "t": "END",
-    "q": "A patient came to the medical OPD with complaints of polyuria. He has a history of undergoing total hypophysectomy. His Na+ levels are found to be 155 mEq/ L, urine osmolarity was 200 mOsm/L. What is the definitive management in this patient?",
-    "o": [
-      "DDAVP for 2 weeks and then discontinue",
-      "DDAVP supplementation for lifelong",
-      "Upsetting of receptors so no treatment is required",
-      "Thiazides for 2 weeks"
-    ],
-    "a": 1
-  },
-  {
-    "id": "PG23D016",
-    "y": 2023,
+    "id": "PGGM008",
+    "y": 2021,
     "t": "PUL",
-    "q": "[Image: Chest radiograph with an abnormal opacity at the lung apex.] A 65-year-old chronic smoker came to the medicine outpatient department with complaints of upper chest discomfort and drooping of an eyelid. He also complained of pain radiating to the upper arm and a tingling sensation in the 4th and 5th digits of his left hand. The chest X-ray is given below. Which of the following is the most likely diagnosis?",
+    "q": "68/m cough with sputum, bronchial sounds. RR-20/min, urea-44mg/dl, BP-110/70mmhg. Next step?",
     "o": [
-      "Pancoast tumour",
-      "Upper lobe pneumonia",
-      "Superior vena cava obstruction",
-      "Aspergilloma"
+      "Home Rx",
+      "Admit in ICU without MV",
+      "Admit in ICU with MV",
+      "Room admission"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGM009",
+    "y": 2021,
+    "t": "RHU",
+    "q": "3 patients feel numb finger tips. Facial skin is tightened. ANA +ve. IF nucleolar pattern",
+    "o": [
+      "Systemic sclerosis",
+      "Sjogren's syndrome",
+      "SLE",
+      "RA"
     ],
     "a": 0
   },
   {
-    "id": "PG23D017",
-    "y": 2023,
-    "t": "RHU",
-    "q": "A chronic alcoholic patient presents with acute pain and swelling of the left great toe. There is no history of trauma. Synovial fluid analysis shows raised leukocytes. Lab investigations show normal serum uric acid levels. What is the most likely diagnosis?",
+    "id": "PGGM010",
+    "y": 2021,
+    "t": "PUL",
+    "q": "A hyperventilating patient has ABG value of pH=7.53, pCO2= 20mmHg, HCO3=26meq",
     "o": [
-      "Pseudogout",
-      "Acute gout",
-      "Reactive arthritis",
-      "Septic arthritis"
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "Metabolic alkalosis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM011",
+    "y": 2021,
+    "t": "PUL",
+    "q": "Patient presents with breathlessness & wheezing. Absolute Eosinophil count is 500. Miliary pattern on CXR. Diagnosis",
+    "o": [
+      "Miliary TB",
+      "Tropical pulmonary eosinophilia",
+      "Bronchial asthma",
+      "Hypersensitivity pneumonitis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM012",
+    "y": 2021,
+    "t": "CAD",
+    "q": "Breathing difficulty with generalized weakness. On auscultation a mid diastolic murmur with prominent wave is seen in",
+    "o": [
+      "TS",
+      "MS",
+      "MR",
+      "TR"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM013",
+    "y": 2021,
+    "t": "NEP",
+    "q": "Patient behaving strangely, & CNS features were described. Urine osm=1000 & plasma osmolality= 250",
+    "o": [
+      "Hyponatremia",
+      "Hypernatremia",
+      "Hypokalemia",
+      "Hyperkalemia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM014",
+    "y": 2021,
+    "t": "NEP",
+    "q": "30 y/F, 70 kg man with serum sodium=120. Calculate total sodium deficit",
+    "o": [
+      "420",
+      "840",
+      "1400",
+      "280"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM015",
+    "y": 2021,
+    "t": "NEP",
+    "q": "Hypertension with peripheral edema & CKD",
+    "o": [
+      "Aliskiren",
+      "Chlorthalidone",
+      "Prazosin",
+      "Beta blocker"
     ],
     "a": 1
   }
