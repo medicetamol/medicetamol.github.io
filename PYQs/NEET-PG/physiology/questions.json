@@ -117,9 +117,9 @@
     "a": 2
   },
   {
-    "id": "PGPY010",
+    "id": "PGPH010",
     "y": 2021,
-    "t": "GEN",
+    "t": "GNM",
     "q": "Beta 2 receptors act via following secondary messenger",
     "o": [
       "Adenylate Cyclase",
@@ -130,10 +130,10 @@
     "a": 0
   },
   {
-    "id": "PGPY011",
+    "id": "PGPH011",
     "y": 2021,
     "t": "GIT",
-    "q": "A child presented with dehydration and was supplemented with ORS solution for management. Which of the following receptors help in the absorption of glucose fromGIT?",
+    "q": "A child presented with dehydration and was supplemented with ORS solution for management. Which of the following receptors help in the absorption of glucose from GIT?",
     "o": [
       "SGLT 1",
       "SGLT 2",
@@ -143,10 +143,10 @@
     "a": 0
   },
   {
-    "id": "PGPY012",
+    "id": "PGPH012",
     "y": 2021,
-    "t": "CVD",
-    "q": "A patient presented with cold skin, fatigue, shortness of breath with activity and enlarged liver. His JVP was measured which showed higher amplitude of “a” wave JVP is due to",
+    "t": "CVS",
+    "q": "A patient presented with cold skin, fatigue, shortness of breath with activity and enlarged liver. His JVP was measured which showed higher amplitude of the a wave. JVP is due to?",
     "o": [
       "Tricuspid Regurgitation",
       "Tricuspid Stenosis",
@@ -156,10 +156,10 @@
     "a": 1
   },
   {
-    "id": "PGPY013",
+    "id": "PGPH013",
     "y": 2021,
     "t": "REN",
-    "q": "The body fluid compartments of a patient were measured, which showed the following values: Na-10 K-140 Cl-15 Name the fluid compartment.",
+    "q": "The body fluid compartments of a patient were measured, which showed the following values: Na-10 K-140 Cl-15. Name the fluid compartment.",
     "o": [
       "Interstitial fluid",
       "ECF",
@@ -169,7 +169,7 @@
     "a": 2
   },
   {
-    "id": "PGPY014",
+    "id": "PGPH014",
     "y": 2021,
     "t": "REN",
     "q": "An elderly female presented with dribbling of urine only on coughing and straining. What type of urinary incontinence is she suffering from?",
@@ -182,10 +182,10 @@
     "a": 0
   },
   {
-    "id": "PGPY015",
+    "id": "PGPH015",
     "y": 2021,
-    "t": "RES",
-    "q": "A young patient presented with muscle spasms, numbness in hands and feet, seizures and difficulty in breathing due to laryngospasm.. His blood picture showed electrolyte imbalance. What is the cause for these manifestations in the patient.",
+    "t": "REN",
+    "q": "A young patient presented with muscle spasms, numbness in hands and feet, seizures and difficulty in breathing due to laryngospasm. His blood picture showed electrolyte imbalance. What is the cause for these manifestations in the patient?",
     "o": [
       "Respiratory Acidosis",
       "Respiratory Alkalosis",
@@ -194,5 +194,4 @@
     ],
     "a": 1
   }
-]
-
+  ]
