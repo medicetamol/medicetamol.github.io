@@ -8,7 +8,7 @@ export const EXAMS: Array<{ id: Exam; name: string; description: string }> = [
 
 export const SUBJECTS: Subject[] = [
   {
-    id: "anatomy", name: "Anatomy", code: "A", short: "Anat",
+    id: "anatomy", name: "Anatomy", code: "AN", short: "Anat",
     topics: [
       { id: "EMB", name: "Embryology" },
       { id: "HIS", name: "Histology" },
@@ -22,7 +22,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "physiology", name: "Physiology", code: "P", short: "Physio",
+    id: "physiology", name: "Physiology", code: "PH", short: "Physio",
     topics: [
       { id: "GNM", name: "General & Nerve Muscle" },
       { id: "CVS", name: "CVS" },
@@ -36,7 +36,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "biochemistry", name: "Biochemistry", code: "B", short: "Biochem",
+    id: "biochemistry", name: "Biochemistry", code: "BC", short: "Biochem",
     topics: [
       { id: "CAR", name: "Carbohydrate" },
       { id: "LIP", name: "Lipids" },
@@ -48,7 +48,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "pathology", name: "Pathology", code: "T", short: "Path",
+    id: "pathology", name: "Pathology", code: "PT", short: "Path",
     topics: [
       { id: "CIN", name: "Cell Injury & Adaptation" },
       { id: "INF", name: "Inflammation & Repair" },
@@ -67,7 +67,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "pharmacology", name: "Pharmacology", code: "F", short: "Pharma",
+    id: "pharmacology", name: "Pharmacology", code: "PM", short: "Pharma",
     topics: [
       { id: "GNP", name: "General" },
       { id: "ANS", name: "ANS" },
@@ -82,7 +82,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "microbiology", name: "Microbiology", code: "M", short: "Micro",
+    id: "microbiology", name: "Microbiology", code: "MB", short: "Micro",
     topics: [
       { id: "GNB", name: "General Microbiology" },
       { id: "BAC", name: "Bacteriology" },
@@ -94,7 +94,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "forensic-medicine", name: "Forensic Medicine", code: "R", short: "FMT",
+    id: "forensic-medicine", name: "Forensic Medicine", code: "FM", short: "FMT",
     topics: [
       { id: "TRM", name: "Traumatology" },
       { id: "ASP", name: "Asphyxial Deaths" },
@@ -106,7 +106,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "community-medicine", name: "Community Medicine", code: "C", short: "PSM",
+    id: "community-medicine", name: "Community Medicine", code: "CM", short: "PSM",
     topics: [
       { id: "EPI", name: "Epidemiology & Biostatistics" },
       { id: "CMD", name: "Communicable Diseases" },
@@ -122,7 +122,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "medicine", name: "Medicine", code: "D", short: "Medicine",
+    id: "medicine", name: "Medicine", code: "GM", short: "Medicine",
     topics: [
       { id: "CAD", name: "Cardiology" },
       { id: "PUL", name: "Pulmonology" },
@@ -138,7 +138,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "dermatology", name: "Dermatology", code: "E", short: "Derma",
+    id: "dermatology", name: "Dermatology", code: "DR", short: "Derma",
     topics: [
       { id: "PAP", name: "Papulosquamous" },
       { id: "BKI", name: "Bacterial Infections" },
@@ -151,7 +151,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "psychiatry", name: "Psychiatry", code: "Y", short: "Psych",
+    id: "psychiatry", name: "Psychiatry", code: "PS", short: "Psych",
     topics: [
       { id: "SCH", name: "Schizophrenia & Psychosis" },
       { id: "MOD", name: "Mood Disorders" },
@@ -166,7 +166,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "pediatrics", name: "Pediatrics", code: "K", short: "Peds",
+    id: "pediatrics", name: "Pediatrics", code: "PD", short: "Peds",
     topics: [
       { id: "GRW", name: "Growth & Development" },
       { id: "NEN", name: "Neonatology" },
@@ -182,7 +182,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "surgery", name: "Surgery", code: "S", short: "Surg",
+    id: "surgery", name: "Surgery", code: "GS", short: "Surg",
     topics: [
       { id: "GNS", name: "General" },
       { id: "BRS", name: "Breast" },
@@ -199,7 +199,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "orthopedics", name: "Orthopedics", code: "O", short: "Ortho",
+    id: "orthopedics", name: "Orthopedics", code: "OR", short: "Ortho",
     topics: [
       { id: "FRG", name: "Fractures — General" },
       { id: "FUL", name: "Upper Limb Fractures" },
@@ -213,7 +213,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "radiology", name: "Radiology", code: "L", short: "Radio",
+    id: "radiology", name: "Radiology", code: "RD", short: "Radio",
     topics: [
       { id: "RDB", name: "Basics" },
       { id: "RDG", name: "GIT" },
@@ -227,7 +227,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "anesthesiology", name: "Anesthesiology", code: "N", short: "Anes",
+    id: "anesthesiology", name: "Anesthesiology", code: "AN", short: "Anes",
     topics: [
       { id: "AGL", name: "General Principles & Pre-op Assessment" },
       { id: "AAW", name: "Airway Management" },
@@ -240,7 +240,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "ent", name: "ENT", code: "Q", short: "ENT",
+    id: "ent", name: "ENT", code: "EN", short: "ENT",
     topics: [
       { id: "EAR", name: "Ear" },
       { id: "NOS", name: "Nose" },
@@ -250,7 +250,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "ophthalmology", name: "Ophthalmology", code: "V", short: "Ophtha",
+    id: "ophthalmology", name: "Ophthalmology", code: "OP", short: "Ophtha",
     topics: [
       { id: "CJC", name: "Conjunctiva & Cornea" },
       { id: "LNC", name: "Lens & Cataract" },
@@ -264,7 +264,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "obstetrics-gynecology", name: "Obstetrics & Gynecology", code: "G", short: "OBG",
+    id: "obstetrics-gynecology", name: "Obstetrics & Gynecology", code: "OG", short: "OBG",
     topics: [
       { id: "NPA", name: "Normal Pregnancy & ANC" },
       { id: "FTP", name: "Fetus & Pelvis" },
