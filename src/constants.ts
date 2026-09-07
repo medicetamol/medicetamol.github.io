@@ -227,7 +227,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "anesthesiology", name: "Anesthesiology", code: "AN", short: "Anes",
+    id: "anesthesiology", name: "Anesthesiology", code: "AE", short: "Anes",
     topics: [
       { id: "AGL", name: "General Principles & Pre-op Assessment" },
       { id: "AAW", name: "Airway Management" },
