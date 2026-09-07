@@ -1,105 +1,131 @@
 [
   {
-    "id": "PG21R001",
+    "id": "PGFM001",
     "y": 2021,
     "t": "TOX",
-    "q": "A child before playing consumed fruit from the garden. After some time he developed a high fever, confusion, photophobia, and unable to urinate. What are the likely causative agent and the appropriate antidote used in this case?",
+    "q": "A child accidentally ingested some fruit which he plucked from a tree while playing. After the ingestion of the fruit, he presented with restlessness, painful swallowing, photophobia, dry skin, urinary retention and elevated body temperature. What is the possible poisoning and the appropriate antidote for it?",
     "o": [
-      "Datura, Pralidoxime",
-      "Datura, Physostigmine",
-      "Yellow oleander, Pralidoxime",
-      "Yellow oleander, Physostigmine"
-    ],
-    "a": 2
-  },
-  {
-    "id": "PG21R002",
-    "y": 2021,
-    "t": "THA",
-    "q": "The method of autopsy carried out en masse to remove from tongue to prostate is.",
-    "o": [
-      "Virchow technique",
-      "Rokitansky technique",
-      "Ghon technique",
-      "Letulle technique"
+      "Datura & Physostigmine",
+      "Yellow oleander & Physostigmine",
+      "Datura & Pralidoxime",
+      "Yellow oleander & Pralidoxime"
     ],
     "a": 0
   },
   {
-    "id": "PG21R003",
+    "id": "PGFM002",
     "y": 2021,
-    "t": "THA",
-    "q": "A 42-year-old HIV-positive patient died, and his body was brought for post-mortem. The method of autopsy to be done is___",
+    "t": "TOX",
+    "q": "A 30 year old male presents with a history of consumption of some unknown substance. The attending doctor notices the person to be having diaphoresis, headache and acute coronary spasm like features. The person is least likely to show which clinical feature?",
     "o": [
-      "Ghon technique",
-      "Letulle technique",
-      "Virchow technique",
-      "Rokitansky technique"
+      "Bradycardia",
+      "Tachycardia",
+      "Hyperthermia",
+      "Hypertension"
     ],
     "a": 0
   },
   {
-    "id": "PG21R004",
+    "id": "PGFM003",
     "y": 2021,
-    "t": "SXO",
-    "q": "A 10-year-old male child came to the casualty with difficulty in walking and pain in the perianal region. On subjecting the specimen from the perianal region to a test, it produces yellow needle-shaped rhombic crystals with picric acid. What is the test done?",
+    "t": "THA",
+    "q": "[Image: Branching dark discoloration following superficial veins over the limb] Identify the finding.",
     "o": [
-      "Barberio test",
-      "Florence test",
-      "Teichmann test",
-      "Acid phosphatase test"
+      "It is due to sulphaemoglobin pigment",
+      "This change is seen at 24 hours",
+      "It is non bacterial",
+      "It is associated with lightning case"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGFM004",
+    "y": 2021,
+    "t": "TRM",
+    "q": "[Image: Irregular wound with irregular margins and an elongated lacerated appearance] Identify the wound type.",
+    "o": [
+      "Incised looking laceration",
+      "Laceration",
+      "Laceration looking incision",
+      "Incision"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGFM005",
+    "y": 2021,
+    "t": "JUR",
+    "q": "While recording evidence in the court of law, lawyer asked the witness, Were you present when A killed B?, and the witness answered yes. This type of questioning is permitted in?",
+    "o": [
+      "Examination in chief",
+      "Direct examination",
+      "Redirect examination",
+      "Cross examination"
     ],
     "a": 3
   },
   {
-    "id": "PG21R005",
+    "id": "PGFM006",
     "y": 2021,
-    "t": "TOX",
-    "q": "A patient was brought to casualty with seizures. He had multiple episodes and was taking herbal medicines for the same. He was conscious in between the episodes. During the episodes, he had arching of his back. What is the likely cause?",
+    "t": "THA",
+    "q": "[Image: Pale, wrinkled, waterlogged skin with prominent creases over the soles] Identify the finding.",
     "o": [
-      "Strychnine",
-      "Ricinus",
-      "Nerium odorum",
-      "Datura"
+      "Case of torture in hot water",
+      "Case of postmortem hanging",
+      "Case of immersion in water for 36 hours",
+      "Case of colliquative liquefaction"
     ],
     "a": 2
   },
   {
-    "id": "PG21R006",
+    "id": "PGFM007",
     "y": 2021,
     "t": "JUR",
-    "q": "Section 314 IPC deals with",
+    "q": "A woman gave birth to twins. However, her husband asked for a DNA fingerprinting test as he believed that the babies did not belong to him. The results showed that one baby did not belong to him. This is a case of:",
     "o": [
-      "Causing miscarriage with the consent of the mother",
-      "Causing miscarriage without the consent of the mother",
-      "Death of the mother by act done with intent to cause miscarriage",
-      "Causing the death of the quick unborn child by an act amounting to culpable homicide"
+      "Superfecundation",
+      "Superfetation",
+      "Atavism",
+      "Posthumus child"
     ],
     "a": 0
   },
   {
-    "id": "PG21R007",
+    "id": "PGFM008",
+    "y": 2021,
+    "t": "SXO",
+    "q": "A man was sitting in the balcony which was overlooking a park. He was sitting naked for sexual gratification. This is called",
+    "o": [
+      "Voyeurism",
+      "Masochism",
+      "Exhibitionism",
+      "Fetishism"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGFM009",
     "y": 2021,
     "t": "THA",
-    "q": "The temperature of a body of a deceased person is found to be 39 degrees Celsius. Which of the following is the most probable reason?",
+    "q": "A daily wage labourer was working in the farm on a hot summer day and suddenly collapsed. He was brought to the hospital and the attending doctor measured his body temperature as 106 degrees fahrenheit. Which of the following symptoms is least likely to be seen?",
     "o": [
-      "Cyanide poisoning",
-      "Septicemia",
-      "Corrosive poisoning",
-      "Intra-abdominal hemorrhage"
+      "Sweating",
+      "Hot skin",
+      "Hypotension",
+      "Disorientation"
     ],
     "a": 0
   },
   {
-    "id": "PG21R008",
+    "id": "PGFM010",
     "y": 2021,
     "t": "TOX",
-    "q": "A farmer was sleeping in the field, and he felt a sting on his leg. He saw something moving away quickly. He then got drowsy and was taken to the hospital. He developed pain around the site and continued to bleed profusely from the wound site. The wound became red with blisters. Which of the following is the most likely cause?",
+    "q": "[Image: Multiple dark, rough, irregularly shaped seeds/nuts] Identify the active principle in the poisonous seed shown.",
     "o": [
-      "Viper",
-      "Cobra",
-      "Wasp bite",
-      "Scorpion"
+      "Abrin",
+      "Ricin",
+      "Cannabinol",
+      "Bhilawanol"
     ],
     "a": 3
   }
