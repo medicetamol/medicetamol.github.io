@@ -1,198 +1,288 @@
 [
   {
-    "id": "PG21C001",
+    "id": "PGCM001",
     "y": 2021,
     "t": "NUT",
-    "q": "In a village, it is observed that several farmers have crossed gait and use a stick for support to stand up and walk. Due to poor yield from farms, they consume meals containing rice and pulses only. Supplementing their diet with which of the following vitamins could have prevented this?",
+    "q": "Global Hunger index does not include",
     "o": [
-      "Vitamin A",
-      "Vitamin D",
-      "Vitamin C",
-      "Vitamin B"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG21C002",
-    "y": 2021,
-    "t": "EPI",
-    "q": "Research is being conducted to find the association between aniline dye exposure and bladder cancer in workers who have worked in the industry for >20 years. Two groups were formed: one directly involved with dye handling and the other group consisting of office clerks not directly exposed to the dye. Years of occupation were noted from records. What type of study is being performed?",
-    "o": [
-      "Retrospective cohort study",
-      "Prospective cohort study",
-      "Case-control study",
-      "Intervention and response"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG21C003",
-    "y": 2021,
-    "t": "EPI",
-    "q": "The blood pressure of a population was tracked from childhood to adulthood. It was observed that those who had lower BP in childhood had low BP in adulthood, while those who had higher BP in childhood had high BP in adulthood. This can be best described as",
-    "o": [
-      "Rule of halves",
-      "Tracking of blood pressure",
-      "STEPwise approach",
-      "Primordial approach"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG21C004",
-    "y": 2021,
-    "t": "HAD",
-    "q": "A 30-week primigravida complaints of reduced vision at night. She has been avoiding papaya, mango, and other fruits throughout her pregnancy as she thinks they could be abortifacients. It is the primary duty of which of the following workers to provide counseling and information to the patient?",
-    "o": [
-      "ANM",
-      "AWW",
-      "Trained birth attendant",
-      "ASHA"
+      "Under 5 mortality rate",
+      "IMR",
+      "Child mortality rate",
+      "Child undernutrition"
     ],
     "a": 1
   },
   {
-    "id": "PG21C005",
+    "id": "PGCM002",
     "y": 2021,
-    "t": "CMD",
-    "q": "A 22-year-old female comes to the STI clinic with minimal vaginal discharge. On speculum examination, erosions are seen on the cervix. Which of the following kit should be given to this patient?",
+    "t": "EPI",
+    "q": "A child presented with bluish white spots in the mouth followed by a rash. What is the genome of probable diagnosis?",
     "o": [
-      "Green",
-      "Red",
-      "Grey",
-      "Yellow"
+      "Enveloped virus with single stranded RNA",
+      "Naked virus with single stranded RNA",
+      "Double stranded Naked RNA",
+      "Double stranded Enveloped RNA"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM003",
+    "y": 2021,
+    "t": "NUT",
+    "q": "16 month old child, 8kg weight. On assessing in a growth chart, child falls between standard & -2sd. What should be done next for the management.",
+    "o": [
+      "Assure mother that no malnutrition",
+      "Mild malnutrition- home treatment",
+      "Moderate malnutrition-teach mother on how to feed",
+      "Severe malnutrition: refer to NRC"
     ],
     "a": 3
   },
   {
-    "id": "PG21C006",
-    "y": 2021,
-    "t": "EPI",
-    "q": "The years of potential life lost could be attributed to,",
-    "o": [
-      "Years lost to morbidity",
-      "Years lost due to premature death",
-      "Years lost to disability",
-      "Years lost to poor quality of life"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG21C007",
-    "y": 2021,
-    "t": "VAC",
-    "q": "In a 10-year-old school child, which of the following vaccines is given as a part of the school immunization program?",
-    "o": [
-      "Measles vaccine",
-      "Rotavirus vaccine",
-      "TT/Td vaccine",
-      "Hepatitis B vaccine"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG21C008",
-    "y": 2021,
-    "t": "INT",
-    "q": "Which of the following statements is true about cancer treatment according to the Colombo plan?",
-    "o": [
-      "Help with PET scan units for diagnosis of cancer",
-      "Human resource strengthening",
-      "Setting up chemotherapy units",
-      "Setting up cobalt therapy units"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG21C009",
+    "id": "PGCM004",
     "y": 2021,
     "t": "NUT",
-    "q": "A poor farmer with a history of successive crop failure develops progressive spastic paraparesis, signs of upper motor neuron paralysis, and gait instability. Name the toxin responsible for this condition.",
+    "q": "An anganwadi teacher takes weight & height of a 4 yr old & finds out that height for age <-2SD, likely cause is",
     "o": [
-      "Aflatoxin",
-      "Beta-oxalyl-amino-alanine",
-      "Ergot alkaloids",
-      "Fusarium toxin"
+      "Chronic malnutrition",
+      "Acute malnutrition",
+      "Recent malnutrition",
+      "No malnutrition"
     ],
     "a": 0
   },
   {
-    "id": "PG21C010",
+    "id": "PGCM005",
     "y": 2021,
-    "t": "CMD",
-    "q": "A young male came to the hospital with a clean-cut wound without any bleeding. The patient received a full course of tetanus vaccination 10 years ago. What is the best management for this patient?",
+    "t": "NUT",
+    "q": "A farmer is having ℅ skin rash which increase on sun exposure. There is also redness of tongue. Maize in his staple diet. Which of the following vitamin deficiency can cause this type of feature",
     "o": [
-      "Human tetanus immunoglobulin and full course of vaccine",
-      "Human tetanus immunoglobulin only",
-      "Single-dose tetanus toxoid",
-      "Full course tetanus toxoid"
+      "Niacin deficiency",
+      "Folic acid deficiency",
+      "Vit C deficiency",
+      "Vit K deficiency"
     ],
     "a": 0
   },
   {
-    "id": "PG21C011",
+    "id": "PGCM006",
+    "y": 2021,
+    "t": "NUT",
+    "q": "[Image: Symmetric hyperpigmented, thickened and scaly skin around the neck and upper chest]",
+    "o": [
+      "H/o dietary pattern, dementia, diarrhea",
+      "Dietary history",
+      "Dementia",
+      "Depression"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM007",
+    "y": 2021,
+    "t": "IMM",
+    "q": "A girl child has had recurrent yeast & respiratory virus infection since she was 3 months old. Now considering studies for immune status, which vaccine is contraindicated?",
+    "o": [
+      "TT/Td",
+      "Measles/MMR",
+      "DPT",
+      "Killed IPV"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM008",
+    "y": 2021,
+    "t": "IMM",
+    "q": "In a 10 year school child under school health program, which vaccine has to be given?",
+    "o": [
+      "BCG",
+      "MMR",
+      "TT,Td",
+      "DPT"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM009",
+    "y": 2021,
+    "t": "IMM",
+    "q": "There is an outbreak of encephalitis in a community. According to the universal immunization schedule, the route of administration of vaccine for the likely infection is ?",
+    "o": [
+      "Live & subcutaneous",
+      "Killed & subcutaneous",
+      "Live & intramuscular",
+      "Killed & intramuscular"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM010",
     "y": 2021,
     "t": "ENV",
-    "q": "How is water collected for bacteriological examination during a disease outbreak?",
+    "q": "Low air velocity will be measured by",
     "o": [
-      "Collect water from already leaking taps",
-      "Before collecting, let water flow for at least 1 minute",
-      "Water sample container is kept close to the tap avoid spillage",
-      "Collect from a gentle stream of water to avoid splashing"
+      "Kata thermometer",
+      "Globe thermometer",
+      "Wet thermometer",
+      "Beckmans thermometer"
     ],
     "a": 0
   },
   {
-    "id": "PG21C012",
+    "id": "PGCM011",
     "y": 2021,
-    "t": "CMD",
-    "q": "A boys' hostel has an outbreak of fever cases with headache, followed by the development of pleomorphic rashes sparing palms and soles. What is the next best step in the management of suspected cases? VZIG-Varicella zoster immunoglobulin",
+    "t": "ADM",
+    "q": "School health service is at which level",
     "o": [
-      "Isolate for 6 days after giving acyclovir, followed by VZIG within 72 hours of exposure.",
-      "Isolate for 12 days after giving acyclovir, followed by VZIG within 48 hours of exposure",
-      "Isolate for 6 days",
-      "Only give VZIG"
+      "District",
+      "Subcentre",
+      "Subdistrict",
+      "PHC"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM012",
+    "y": 2021,
+    "t": "ENV",
+    "q": "Post diwali air pollution index chart was created. Air quality index values on 4 different days were plotted, A AQI value of 470 indicates which level air pollution",
+    "o": [
+      "Poor",
+      "Very poor",
+      "Severe",
+      "Moderate"
     ],
     "a": 2
   },
   {
-    "id": "PG21C013",
+    "id": "PGCM013",
     "y": 2021,
-    "t": "CMD",
-    "q": "A 35-year-old homeless man presented with a 1-month history of fever, cough, and weight loss. Both sputum smears turned out to be negative, but the chest x-ray ordered was suggestive of tuberculosis. According to the recent NTEP guidelines, which is the next best line of management?",
+    "t": "STA",
+    "q": "A researcher wants to know whether there is an association of CRP values with risk of MI/Cancer. They started to take CRP readings. 4 Values of RR was plotted (0.5, 1.5,1.7,1.8) with respect to CRP",
     "o": [
-      "Repeat sputum smears",
-      "Ask for CBNAAT",
-      "Ask for line probe assay",
-      "Wait until TB culture results to start ATT"
+      "CRP increase disease/cancer risk",
+      "CRP has no relationship",
+      "CRP decreases & disease decreases",
+      "No association in first interval"
     ],
-    "a": 2
+    "a": 0
   },
   {
-    "id": "PG21C014",
+    "id": "PGCM014",
     "y": 2021,
-    "t": "HAD",
-    "q": "Which of the following is the sensitive indicator to assess the availability, utilization, and effectiveness of healthcare in a community?",
+    "t": "IMM",
+    "q": "A child known case of HIV. His CD count is 50. Which vaccine is avoided in him/her",
     "o": [
-      "Infant mortality rate",
-      "Maternal mortality rate",
-      "Immunization coverage",
-      "Disability-adjusted life years"
+      "MMR",
+      "TT",
+      "DPT",
+      "BCG"
     ],
-    "a": 2
+    "a": 0
   },
   {
-    "id": "PG21C015",
+    "id": "PGCM015",
+    "y": 2021,
+    "t": "ADM",
+    "q": "For functioning of a health centre with reference to evaluation, which is the most important determinant for assessing clinical management.",
+    "o": [
+      "Input",
+      "Process",
+      "Structure",
+      "Outcome"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM016",
+    "y": 2021,
+    "t": "EPI",
+    "q": "[Image: White/purulent discharge visible at the urethral opening]",
+    "o": [
+      "Gonorrhea",
+      "B. Hemophyli Ducreii",
+      "Syphillis",
+      "HIV"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM017",
     "y": 2021,
     "t": "NUT",
-    "q": "The average daily dietary nutrient intake level sufficient to meet the nutrient requirements of nearly all (97-98%) healthy individuals in a particular life stage and gender group is known as?",
+    "q": "A group of people had pastries late at night followed by bouts of vomiting early in the morning. What could be the cause?",
     "o": [
-      "Adequate intake",
-      "Dietary goal",
-      "Estimated average requirement",
-      "Recommended dietary allowance"
+      "S. aureus",
+      "B cereus",
+      "E. coli",
+      "Lactobacillus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM018",
+    "y": 2021,
+    "t": "IMM",
+    "q": "A pregnant woman whose niece contracted varicella in same house was negative for serum antibodies of varicella. What would this mean?",
+    "o": [
+      "She is susceptible to zoster",
+      "She is susceptible to chicken pox",
+      "She is immune to chicken pox",
+      "She is immune to zoster"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM019",
+    "y": 2021,
+    "t": "COM",
+    "q": "Child learning steps of hand hygiene",
+    "o": [
+      "Cognitive",
+      "Psychomotor",
+      "Affective",
+      "Affective & cognitive"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM020",
+    "y": 2021,
+    "t": "ENV",
+    "q": "What is the SI Unit of brightness/illuminance",
+    "o": [
+      "Candella",
+      "Luminance",
+      "Lumen",
+      "Lux"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM021",
+    "y": 2021,
+    "t": "NUT",
+    "q": "Receptor for absorption of glucose in intestine when person is given ORS is",
+    "o": [
+      "SGLT-1",
+      "SGLT-2",
+      "GLP-1",
+      "GLUT-1"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM022",
+    "y": 2021,
+    "t": "NUT",
+    "q": "A 55 year old patient from chattisgarh presents with progressive muscle weakness, stiffness of both lower limbs & complete paralysis. Most important history asked",
+    "o": [
+      "Dietary history",
+      "Medical history",
+      "Present illness",
+      "socioeconomic"
     ],
     "a": 0
   }
-  
 ]
