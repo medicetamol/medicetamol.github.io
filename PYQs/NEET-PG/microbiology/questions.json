@@ -171,136 +171,6 @@
   {
     "id": "PGMB014",
     "y": 2021,
-    "t": "MSC",
-    "q": "A child accidentally ingested some fruit which he plucked from a tree while playing . After the ingestion of the fruit , he presented with restlessness, painful swallowing, photophobia, dry skin , urinary retention and elevated body temperature. What is the possible poisoning and the appropriate antidote for it?",
-    "o": [
-      "Datura & Physostigmine",
-      "Yellow oleander & Physostigmine",
-      "Datura & Pralidoxime",
-      "Yellow oleander & Pralidoxime"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGMB015",
-    "y": 2021,
-    "t": "MSC",
-    "q": "A 30 year old male presents with a history of consumption of some unknown substance. The attending doctor notices the person to be having diaphoresis, headache and acute coronary spasm like features. The person is least likely to show which clinical feature?",
-    "o": [
-      "Bradycardia",
-      "Tachycardia",
-      "Hyperthermia",
-      "Hypertension"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGMB016",
-    "y": 2021,
-    "t": "MSC",
-    "q": "[Image: Branching dark discoloration following superficial veins over the limb]",
-    "o": [
-      "It is due to sulphaemoglobin pigment",
-      "This change is seen at 24 hours",
-      "It is non bacterial",
-      "It is associated with lightning case"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGMB017",
-    "y": 2021,
-    "t": "MSC",
-    "q": "[Image: Irregular wound with irregular margins and an elongated lacerated appearance]",
-    "o": [
-      "Incised looking laceration",
-      "Laceration",
-      "Laceration looking incision",
-      "Incision"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGMB018",
-    "y": 2021,
-    "t": "MSC",
-    "q": "While recording evidence in the court of law, lawyer asked the witness, “Were you present when A killed B?”, and the witness answered “yes”. This type of questioning is permitted in?",
-    "o": [
-      "Examination in chief",
-      "Direct examination",
-      "Redirect examination",
-      "Cross examination"
-    ],
-    "a": 3
-  },
-  {
-    "id": "PGMB019",
-    "y": 2021,
-    "t": "MSC",
-    "q": "[Image: Pale, wrinkled, waterlogged skin with prominent creases over the soles]",
-    "o": [
-      "Case of torture in hot water",
-      "Case of postmortem hanging",
-      "Case of immersion in water for 36 hours",
-      "Case of colliquative liquefaction"
-    ],
-    "a": 2
-  },
-  {
-    "id": "PGMB020",
-    "y": 2021,
-    "t": "MSC",
-    "q": "A woman gave birth to twins. However, her husband asked for a DNA fingerprinting test as he believed that the babies did not belong to him. The results showed that one baby did not belong to him. This is a case of:",
-    "o": [
-      "Superfecundation",
-      "Superfetation",
-      "Atavism",
-      "Posthumus child"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGMB021",
-    "y": 2021,
-    "t": "MSC",
-    "q": "A man was sitting in the balcony which was overlooking a park. He was sitting naked for sexual gratification. This is called",
-    "o": [
-      "Voyeurism",
-      "Masochism",
-      "Exhibitionism",
-      "Fetishism"
-    ],
-    "a": 2
-  },
-  {
-    "id": "PGMB022",
-    "y": 2021,
-    "t": "MSC",
-    "q": "A daily wage labourer was working in the farm on a hot summer day and suddenly collapsed. He was brought to the hospital and the attending doctor measured his body temperature as 106 degrees fahrenheit. Which of the following symptoms is least likely to be seen?",
-    "o": [
-      "Sweating",
-      "Hot skin",
-      "Hypotension",
-      "Disorientation"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGMB023",
-    "y": 2021,
-    "t": "MSC",
-    "q": "[Image: Multiple dark, rough, irregularly shaped seeds/nuts] Identify the active principle in the poisonous seed shown below",
-    "o": [
-      "Abrin",
-      "Ricin",
-      "Cannabinol",
-      "Bhilawanol"
-    ],
-    "a": 3
-  },
-  {
-    "id": "PGMB024",
-    "y": 2021,
     "t": "VIR",
     "q": "A child admitted with fever, rash begins behind ears, conjunctivitis, coryza, cough and koplik spot. Based on the clinical manifestations, choose the correct description of the pathogen?",
     "o": [
@@ -312,7 +182,7 @@
     "a": 0
   },
   {
-    "id": "PGMB025",
+    "id": "PGMB015",
     "y": 2021,
     "t": "PAR",
     "q": "Name the parasite whose microfilariae have a sheath with no nuclei at the tail end.",
@@ -325,7 +195,7 @@
     "a": 0
   },
   {
-    "id": "PGMB026",
+    "id": "PGMB016",
     "y": 2021,
     "t": "BAC",
     "q": "History of Pastry intake causing food poisoning. What is the causative agent",
@@ -338,7 +208,7 @@
     "a": 0
   },
   {
-    "id": "PGMB027",
+    "id": "PGMB017",
     "y": 2021,
     "t": "BAC",
     "q": "[Image: Numerous slender pink rod-shaped organisms against a pale background]",
@@ -351,7 +221,7 @@
     "a": 0
   },
   {
-    "id": "PGMB028",
+    "id": "PGMB018",
     "y": 2021,
     "t": "BAC",
     "q": "A truck driver presented with a painless, demarcated ulcer on penis with inguinal lymphadenopathy. What is the best method of visualization of motility of the probable causative agent?",
@@ -364,7 +234,7 @@
     "a": 0
   },
   {
-    "id": "PGMB029",
+    "id": "PGMB019",
     "y": 2021,
     "t": "GEN",
     "q": "Swab is discarded in which color bin?",
@@ -377,7 +247,7 @@
     "a": 0
   },
   {
-    "id": "PGMB030",
+    "id": "PGMB020",
     "y": 2021,
     "t": "MSC",
     "q": "A female engineer works for 12- 14 hours a day and gives a history of consuming only fast food. There are no vegetables or fruits in his diet. Her Hb count is 9gm/dl MCV 120 fl. On examination, PS shows macrocytes. What will be the diagnosis?",
@@ -390,7 +260,7 @@
     "a": 0
   },
   {
-    "id": "PGMB031",
+    "id": "PGMB021",
     "y": 2021,
     "t": "IMM",
     "q": "A patient was suspected of having brucellosis. Serum sample was sent for a standard agglutination test. It came negative initially but after dilution of the serum sample, the test was positive. What could be the reason for the initial negative test?",
@@ -403,7 +273,7 @@
     "a": 0
   },
   {
-    "id": "PGMB032",
+    "id": "PGMB022",
     "y": 2021,
     "t": "PAR",
     "q": "A patient who was on steroids presented with nocturnal cough and chronic urticaria. BAL stain was done. Identify the organism.",
@@ -416,7 +286,7 @@
     "a": 0
   },
   {
-    "id": "PGMB033",
+    "id": "PGMB023",
     "y": 2021,
     "t": "GEN",
     "q": "Blood spill management",
@@ -429,7 +299,7 @@
     "a": 3
   },
   {
-    "id": "PGMB034",
+    "id": "PGMB024",
     "y": 2021,
     "t": "BAC",
     "q": "A child presented with bloody stools and abdominal pain. What enrichment medium should be used for the faeces sample?",
@@ -442,7 +312,7 @@
     "a": 0
   },
   {
-    "id": "PGMB035",
+    "id": "PGMB025",
     "y": 2021,
     "t": "PAR",
     "q": "What is the vector for a parasite which has kinetoplast in one of its morphological forms?",
@@ -455,7 +325,7 @@
     "a": 0
   },
   {
-    "id": "PGMB036",
+    "id": "PGMB026",
     "y": 2021,
     "t": "MYC",
     "q": "A known case of AIDS with productive cough and fever was found to have consolidation in the right infrascapular area. X-Ray chest showed right lower lobe consolidation with CD4 count of 55 per microlitre. What is the most common cause of this?",
