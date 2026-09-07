@@ -1,6 +1,19 @@
 export type Exam = "NEET-PG" | "INI-CET" | "FMGE";
 export type StatusFilter = "all" | "incorrect" | "correct" | "bookmark";
 
+export interface Topic {
+  id: string;
+  name: string;
+}
+
+export interface Subject {
+  id: string;
+  name: string;
+  code: string;
+  short: string;
+  topics: Topic[];
+}
+
 export interface PYQQuestion {
   id: string;
   exam: Exam;
@@ -51,11 +64,4 @@ export interface DailyActivity {
   questions: number;
   correct: number;
   incorrect: number;
-}
-
-export interface Subject {
-  id: string;
-  name: string;
-  code: string;
-  short: string;
 }
