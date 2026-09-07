@@ -1,7 +1,7 @@
 [
   {
-    "id": "PG23R001",
-    "y": 2023,
+    "id": "PG21R001",
+    "y": 2021,
     "t": "TOX",
     "q": "A child before playing consumed fruit from the garden. After some time he developed a high fever, confusion, photophobia, and unable to urinate. What are the likely causative agent and the appropriate antidote used in this case?",
     "o": [
@@ -10,11 +10,11 @@
       "Yellow oleander, Pralidoxime",
       "Yellow oleander, Physostigmine"
     ],
-    "a": 1
+    "a": 2
   },
   {
-    "id": "PG23R002",
-    "y": 2023,
+    "id": "PG21R002",
+    "y": 2021,
     "t": "THA",
     "q": "The method of autopsy carried out en masse to remove from tongue to prostate is.",
     "o": [
@@ -23,11 +23,11 @@
       "Ghon technique",
       "Letulle technique"
     ],
-    "a": 3
+    "a": 0
   },
   {
-    "id": "PG23R003",
-    "y": 2023,
+    "id": "PG21R003",
+    "y": 2021,
     "t": "THA",
     "q": "A 42-year-old HIV-positive patient died, and his body was brought for post-mortem. The method of autopsy to be done is___",
     "o": [
@@ -36,11 +36,11 @@
       "Virchow technique",
       "Rokitansky technique"
     ],
-    "a": 3
+    "a": 0
   },
   {
-    "id": "PG23R004",
-    "y": 2023,
+    "id": "PG21R004",
+    "y": 2021,
     "t": "SXO",
     "q": "A 10-year-old male child came to the casualty with difficulty in walking and pain in the perianal region. On subjecting the specimen from the perianal region to a test, it produces yellow needle-shaped rhombic crystals with picric acid. What is the test done?",
     "o": [
@@ -49,11 +49,11 @@
       "Teichmann test",
       "Acid phosphatase test"
     ],
-    "a": 0
+    "a": 3
   },
   {
-    "id": "PG23R005",
-    "y": 2023,
+    "id": "PG21R005",
+    "y": 2021,
     "t": "TOX",
     "q": "A patient was brought to casualty with seizures. He had multiple episodes and was taking herbal medicines for the same. He was conscious in between the episodes. During the episodes, he had arching of his back. What is the likely cause?",
     "o": [
@@ -62,11 +62,11 @@
       "Nerium odorum",
       "Datura"
     ],
-    "a": 0
+    "a": 2
   },
   {
-    "id": "PG23R006",
-    "y": 2023,
+    "id": "PG21R006",
+    "y": 2021,
     "t": "JUR",
     "q": "Section 314 IPC deals with",
     "o": [
@@ -75,11 +75,11 @@
       "Death of the mother by act done with intent to cause miscarriage",
       "Causing the death of the quick unborn child by an act amounting to culpable homicide"
     ],
-    "a": 2
+    "a": 0
   },
   {
-    "id": "PG23R007",
-    "y": 2023,
+    "id": "PG21R007",
+    "y": 2021,
     "t": "THA",
     "q": "The temperature of a body of a deceased person is found to be 39 degrees Celsius. Which of the following is the most probable reason?",
     "o": [
@@ -88,11 +88,11 @@
       "Corrosive poisoning",
       "Intra-abdominal hemorrhage"
     ],
-    "a": 1
+    "a": 0
   },
   {
-    "id": "PG23R008",
-    "y": 2023,
+    "id": "PG21R008",
+    "y": 2021,
     "t": "TOX",
     "q": "A farmer was sleeping in the field, and he felt a sting on his leg. He saw something moving away quickly. He then got drowsy and was taken to the hospital. He developed pain around the site and continued to bleed profusely from the wound site. The wound became red with blisters. Which of the following is the most likely cause?",
     "o": [
@@ -101,7 +101,6 @@
       "Wasp bite",
       "Scorpion"
     ],
-    "a": 0
+    "a": 3
   }
-  
 ]
