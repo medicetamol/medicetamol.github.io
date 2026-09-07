@@ -1,4 +1,5 @@
 import type { Exam, PYQExplanation, PYQQuestion } from "../types";
+import { SUBJECTS } from "../constants";
 
 const questionModules = import.meta.glob("../../PYQs/*/*/questions.json", {
   eager: true,
@@ -27,8 +28,20 @@ type CompactQuestion = {
   q: string;
   o: string[];
   a: number;
-  image?: string;
+  image?: true | string;
 };
+
+function resolveImage(
+  image: true | string | undefined,
+  exam: Exam,
+  subjectId: string,
+  id: string
+): string | undefined {
+  if (!image) return undefined;
+  if (image === true) return `PYQs/${exam}/${subjectId}/images/${id}.webp`;
+  if (image.startsWith("http")) return image;
+  return `PYQs/${exam}/${subjectId}/images/${image}`;
+}
 
 function parseQuestions(
   raw: string,
@@ -37,19 +50,24 @@ function parseQuestions(
 ): PYQQuestion[] {
   try {
     const questions: CompactQuestion[] = JSON.parse(raw);
+    const subject = SUBJECTS.find((s) => s.id === subjectId);
 
-    return questions.map((q) => ({
-      id: q.id,
-      exam,
-      year: q.y,
-      subjectId,
-      topicId: q.t,
-      topicName: q.t,
-      question: q.q,
-      options: q.o,
-      answer: q.a,
-      ...(q.image ? { image: q.image } : {}),
-    }));
+    return questions.map((q) => {
+      const topic = subject?.topics.find((t) => t.id === q.t);
+
+      return {
+        id: q.id,
+        exam,
+        year: q.y,
+        subjectId,
+        topicId: q.t,
+        topicName: topic?.name ?? q.t,
+        question: q.q,
+        options: q.o,
+        answer: q.a,
+        ...(q.image ? { image: resolveImage(q.image, exam, subjectId, q.id) } : {}),
+      };
+    });
   } catch {
     return [];
   }
