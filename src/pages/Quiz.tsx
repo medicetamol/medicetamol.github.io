@@ -247,23 +247,27 @@ export default function Quiz() {
     // Guide / direct: restore prior answer if any
     const previousAnswer = answersRef.current.find((a) => a.qid === question.id);
 
-    // For direct PYQ, also check IndexedDB to restore persisted answers
-    if (!isCustom && !previousAnswer) {
+    // For direct PYQ, also check IndexedDB to restore persisted answers.
+    // Guard against stale async: if the question changes before this resolves, discard the result.
+    let cancelled = false;
+    if (!isCustom && !isSolveLink && !previousAnswer) {
       getQuestionProgress(question.id).then((p) => {
+        if (cancelled) return;
         if (p && p.attempts > 0) {
-          // Question was answered in a previous session — restore as "submitted"
-          // We don't know which option they chose, so we show correct answer highlighted (no selection)
+          // Question was answered in a previous session — restore as "submitted".
+          // We don't store which option was chosen, so restore selected as the
+          // correct answer index so it highlights green (not the skipped/timed-out sky style).
           const syntheticAnswer: QuizAnswer = {
             qid: question.id,
-            selected: null,
+            selected: p.directCorrect ? question.answer : null,
             correct: p.directCorrect,
           };
           answersRef.current = [...answersRef.current.filter((a) => a.qid !== question.id), syntheticAnswer];
-          selectedRef.current = null;
+          selectedRef.current = syntheticAnswer.selected;
           submittedRef.current = true;
-          setSelected(null);
+          setSelected(syntheticAnswer.selected);
           setSubmitted(true);
-          setTimedOut(true); // timedOut=true with selected=null shows the "reveal" style
+          setTimedOut(!p.directCorrect); // only show "skipped" style when they actually got it wrong
         }
       });
     }
@@ -277,7 +281,9 @@ export default function Quiz() {
     setSecondsLeft(SECONDS_PER_QUESTION);
     setTimerEnabled(true);
     setFeedback("");
-  }, [question?.id, isQuizMode, isCustom]);
+
+    return () => { cancelled = true; };
+  }, [index, question?.id, isQuizMode, isCustom, isSolveLink]);
 
   useEffect(() => {
     setDetailedExplanation(null);
@@ -358,7 +364,7 @@ export default function Quiz() {
 
     if (timeout) setSecondsLeft(0);
 
-    if (!isCustom) {
+    if (!isCustom && !isSolveLink) {
       await recordDirectAnswer(question.id, correct);
     }
   }
