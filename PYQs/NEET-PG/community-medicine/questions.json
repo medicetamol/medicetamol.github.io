@@ -3,6 +3,32 @@
     "id": "PGCM001",
     "y": 2021,
     "t": "NUT",
+    "q": "A female engineer works for 12-14 hours a day and gives a history of consuming only fast food. There are no vegetables or fruits in her diet. Her Hb count is 9gm/dl MCV 120 fl. On examination, PS shows macrocytes. What will be the diagnosis?",
+    "o": [
+      "Vitamin B12 deficiency",
+      "Folic acid deficiency",
+      "Vitamin D deficiency",
+      "None"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM002",
+    "y": 2021,
+    "t": "CMD",
+    "q": "There is an outbreak of buboes in a community. What is the vector?",
+    "o": [
+      "Xenopsylla (Rat Flea)",
+      "Tse tse fly",
+      "Human flea",
+      "Sand fly"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM003",
+    "y": 2021,
+    "t": "NUT",
     "q": "Global Hunger index does not include",
     "o": [
       "Under 5 mortality rate",
@@ -13,23 +39,10 @@
     "a": 1
   },
   {
-    "id": "PGCM002",
-    "y": 2021,
-    "t": "EPI",
-    "q": "A child presented with bluish white spots in the mouth followed by a rash. What is the genome of probable diagnosis?",
-    "o": [
-      "Enveloped virus with single stranded RNA",
-      "Naked virus with single stranded RNA",
-      "Double stranded Naked RNA",
-      "Double stranded Enveloped RNA"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGCM003",
+    "id": "PGCM004",
     "y": 2021,
     "t": "NUT",
-    "q": "16 month old child, 8kg weight. On assessing in a growth chart, child falls between standard & -2sd. What should be done next for the management.",
+    "q": "16 month old child, 8kg weight. On assessing in a growth chart, child falls between standard & -2sd. What should be done next for the management?",
     "o": [
       "Assure mother that no malnutrition",
       "Mild malnutrition- home treatment",
@@ -39,7 +52,7 @@
     "a": 3
   },
   {
-    "id": "PGCM004",
+    "id": "PGCM005",
     "y": 2021,
     "t": "NUT",
     "q": "An anganwadi teacher takes weight & height of a 4 yr old & finds out that height for age <-2SD, likely cause is",
@@ -52,10 +65,10 @@
     "a": 0
   },
   {
-    "id": "PGCM005",
+    "id": "PGCM006",
     "y": 2021,
     "t": "NUT",
-    "q": "A farmer is having ℅ skin rash which increase on sun exposure. There is also redness of tongue. Maize in his staple diet. Which of the following vitamin deficiency can cause this type of feature",
+    "q": "A farmer is having c/o skin rash which increase on sun exposure. There is also redness of tongue. Maize in his staple diet. Which of the following vitamin deficiency can cause this type of feature?",
     "o": [
       "Niacin deficiency",
       "Folic acid deficiency",
@@ -65,10 +78,10 @@
     "a": 0
   },
   {
-    "id": "PGCM006",
+    "id": "PGCM007",
     "y": 2021,
     "t": "NUT",
-    "q": "[Image: Symmetric hyperpigmented, thickened and scaly skin around the neck and upper chest]",
+    "q": "[Image: Symmetric hyperpigmented, thickened and scaly skin around the neck and upper chest] What is the most important associated history to ask?",
     "o": [
       "H/o dietary pattern, dementia, diarrhea",
       "Dietary history",
@@ -78,9 +91,9 @@
     "a": 0
   },
   {
-    "id": "PGCM007",
+    "id": "PGCM008",
     "y": 2021,
-    "t": "IMM",
+    "t": "VAC",
     "q": "A girl child has had recurrent yeast & respiratory virus infection since she was 3 months old. Now considering studies for immune status, which vaccine is contraindicated?",
     "o": [
       "TT/Td",
@@ -91,9 +104,9 @@
     "a": 1
   },
   {
-    "id": "PGCM008",
+    "id": "PGCM009",
     "y": 2021,
-    "t": "IMM",
+    "t": "VAC",
     "q": "In a 10 year school child under school health program, which vaccine has to be given?",
     "o": [
       "BCG",
@@ -104,10 +117,10 @@
     "a": 2
   },
   {
-    "id": "PGCM009",
+    "id": "PGCM010",
     "y": 2021,
-    "t": "IMM",
-    "q": "There is an outbreak of encephalitis in a community. According to the universal immunization schedule, the route of administration of vaccine for the likely infection is ?",
+    "t": "VAC",
+    "q": "There is an outbreak of encephalitis in a community. According to the universal immunization schedule, the route of administration of vaccine for the likely infection is?",
     "o": [
       "Live & subcutaneous",
       "Killed & subcutaneous",
@@ -117,7 +130,7 @@
     "a": 0
   },
   {
-    "id": "PGCM010",
+    "id": "PGCM011",
     "y": 2021,
     "t": "ENV",
     "q": "Low air velocity will be measured by",
@@ -130,10 +143,10 @@
     "a": 0
   },
   {
-    "id": "PGCM011",
+    "id": "PGCM012",
     "y": 2021,
-    "t": "ADM",
-    "q": "School health service is at which level",
+    "t": "HAD",
+    "q": "School health service is at which level?",
     "o": [
       "District",
       "Subcentre",
@@ -143,10 +156,10 @@
     "a": 3
   },
   {
-    "id": "PGCM012",
+    "id": "PGCM013",
     "y": 2021,
     "t": "ENV",
-    "q": "Post diwali air pollution index chart was created. Air quality index values on 4 different days were plotted, A AQI value of 470 indicates which level air pollution",
+    "q": "Post diwali air pollution index chart was created. Air quality index values on 4 different days were plotted. A AQI value of 470 indicates which level air pollution?",
     "o": [
       "Poor",
       "Very poor",
@@ -156,10 +169,10 @@
     "a": 2
   },
   {
-    "id": "PGCM013",
+    "id": "PGCM014",
     "y": 2021,
-    "t": "STA",
-    "q": "A researcher wants to know whether there is an association of CRP values with risk of MI/Cancer. They started to take CRP readings. 4 Values of RR was plotted (0.5, 1.5,1.7,1.8) with respect to CRP",
+    "t": "EPI",
+    "q": "A researcher wants to know whether there is an association of CRP values with risk of MI/Cancer. They started to take CRP readings. 4 Values of RR was plotted (0.5, 1.5, 1.7, 1.8) with respect to CRP",
     "o": [
       "CRP increase disease/cancer risk",
       "CRP has no relationship",
@@ -169,10 +182,10 @@
     "a": 0
   },
   {
-    "id": "PGCM014",
+    "id": "PGCM015",
     "y": 2021,
-    "t": "IMM",
-    "q": "A child known case of HIV. His CD count is 50. Which vaccine is avoided in him/her",
+    "t": "VAC",
+    "q": "A child known case of HIV. His CD count is 50. Which vaccine is avoided in him/her?",
     "o": [
       "MMR",
       "TT",
@@ -182,10 +195,10 @@
     "a": 0
   },
   {
-    "id": "PGCM015",
+    "id": "PGCM016",
     "y": 2021,
-    "t": "ADM",
-    "q": "For functioning of a health centre with reference to evaluation, which is the most important determinant for assessing clinical management.",
+    "t": "HAD",
+    "q": "For functioning of a health centre with reference to evaluation, which is the most important determinant for assessing clinical management?",
     "o": [
       "Input",
       "Process",
@@ -195,48 +208,9 @@
     "a": 3
   },
   {
-    "id": "PGCM016",
-    "y": 2021,
-    "t": "EPI",
-    "q": "[Image: White/purulent discharge visible at the urethral opening]",
-    "o": [
-      "Gonorrhea",
-      "B. Hemophyli Ducreii",
-      "Syphillis",
-      "HIV"
-    ],
-    "a": 0
-  },
-  {
     "id": "PGCM017",
     "y": 2021,
-    "t": "NUT",
-    "q": "A group of people had pastries late at night followed by bouts of vomiting early in the morning. What could be the cause?",
-    "o": [
-      "S. aureus",
-      "B cereus",
-      "E. coli",
-      "Lactobacillus"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGCM018",
-    "y": 2021,
-    "t": "IMM",
-    "q": "A pregnant woman whose niece contracted varicella in same house was negative for serum antibodies of varicella. What would this mean?",
-    "o": [
-      "She is susceptible to zoster",
-      "She is susceptible to chicken pox",
-      "She is immune to chicken pox",
-      "She is immune to zoster"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PGCM019",
-    "y": 2021,
-    "t": "COM",
+    "t": "EPI",
     "q": "Child learning steps of hand hygiene",
     "o": [
       "Cognitive",
@@ -247,10 +221,10 @@
     "a": 1
   },
   {
-    "id": "PGCM020",
+    "id": "PGCM018",
     "y": 2021,
     "t": "ENV",
-    "q": "What is the SI Unit of brightness/illuminance",
+    "q": "What is the SI Unit of brightness/illuminance?",
     "o": [
       "Candella",
       "Luminance",
@@ -260,7 +234,7 @@
     "a": 3
   },
   {
-    "id": "PGCM021",
+    "id": "PGCM019",
     "y": 2021,
     "t": "NUT",
     "q": "Receptor for absorption of glucose in intestine when person is given ORS is",
@@ -273,15 +247,28 @@
     "a": 0
   },
   {
-    "id": "PGCM022",
+    "id": "PGCM020",
     "y": 2021,
-    "t": "NUT",
+    "t": "EPI",
     "q": "A 55 year old patient from chattisgarh presents with progressive muscle weakness, stiffness of both lower limbs & complete paralysis. Most important history asked",
     "o": [
       "Dietary history",
       "Medical history",
       "Present illness",
       "socioeconomic"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM021",
+    "y": 2021,
+    "t": "VAC",
+    "q": "A pregnant woman whose niece contracted varicella in same house was negative for serum antibodies of varicella. What would this mean?",
+    "o": [
+      "She is susceptible to zoster",
+      "She is susceptible to chicken pox",
+      "She is immune to chicken pox",
+      "She is immune to zoster"
     ],
     "a": 0
   }
