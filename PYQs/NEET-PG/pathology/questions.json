@@ -1,6 +1,6 @@
 [
   {
-    "id": "PG23T001",
+    "id": "PGPT001",
     "y": 2023,
     "t": "GNC",
     "q": "Which of the following is true regarding the Mendelian mode of inheritance?",
@@ -13,7 +13,7 @@
     "a": 3
   },
   {
-    "id": "PG23T002",
+    "id": "PGPT002",
     "y": 2023,
     "t": "HAM",
     "q": "[Image: Peripheral smear with many round red cells showing reduced central pallor and dense staining.] A child presents with intermittent jaundice and splenomegaly. There is a history of similar complaints in the elder brother. Peripheral smear shows the following finding. How will you investigate this condition?",
@@ -26,7 +26,7 @@
     "a": 0
   },
   {
-    "id": "PG23T003",
+    "id": "PGPT003",
     "y": 2023,
     "t": "HAM",
     "q": "[Image: Biopsy field with sheets of large basophilic lymphoid cells and scattered pale macrophage-like cells.] An African child is found to have a mass in the jaw. A biopsy of the mass was done, and it appears as shown in the image below. The child also had a translocation of t(8;14). What is the probable diagnosis?",
@@ -39,7 +39,7 @@
     "a": 3
   },
   {
-    "id": "PG23T004",
+    "id": "PGPT004",
     "y": 2023,
     "t": "RNP",
     "q": "A child presented to the hospital with cola-colored urine, hypertension, and puffiness of eyes. Laboratory investigations were done, and creatinine was 2.5 mg/dL. Treatment was started, and despite treatment, the patient did not improve for the next 3 weeks. The creatinine value increased to 4.5 mg/dL. Which among the following electron microscopic findings will be seen in this patient?",
@@ -52,7 +52,7 @@
     "a": 1
   },
   {
-    "id": "PG23T005",
+    "id": "PGPT005",
     "y": 2023,
     "t": "HAM",
     "q": "A patient was transfused 4 units of blood 2 hours ago, and now she complains of chest discomfort. X-ray shows bilateral fissural thickening. Which of the following is the most probable cause?",
@@ -65,7 +65,7 @@
     "a": 1
   },
   {
-    "id": "PG23T006",
+    "id": "PGPT006",
     "y": 2023,
     "t": "RNP",
     "q": "A 48-year-old man presents with complaints of facial puffiness, frothy urine, and hypertension. He gives a history of infection with hepatitis B. Urine examination reveals microscopic hematuria. The histopathological image of the kidney biopsy shows a spike and dome pattern. What is the diagnosis of this condition?",
@@ -78,7 +78,7 @@
     "a": 1
   },
   {
-    "id": "PG23T007",
+    "id": "PGPT007",
     "y": 2023,
     "t": "CVP",
     "q": "[Image: Myocardial biopsy showing cardiac muscle fibers with a prominent interstitial inflammatory infiltrate.] A 5-year-old child is brought with fever, fatigue, and left ventricular dysfunction. An endomyocardial biopsy is shown below. What is the probable diagnosis?",
@@ -91,7 +91,7 @@
     "a": 3
   },
   {
-    "id": "PG23T008",
+    "id": "PGPT008",
     "y": 2023,
     "t": "RSP",
     "q": "An elderly male is known as a smoker presented with chronic cough, significant weight loss, and fatigue. Serum calcium level is raised. A lung biopsy was done, and it showed large atypical cells with hyperchromasia. What is the probable diagnosis?",
@@ -104,7 +104,7 @@
     "a": 3
   },
   {
-    "id": "PG23T009",
+    "id": "PGPT009",
     "y": 2023,
     "t": "HAM",
     "q": "[Image: Peripheral smear with numerous small mature lymphocyte-like cells and several smudged/fragile cell remnants.] An elderly male went for a medical examination. Laboratory investigations showed a marked elevation of lymphocytes with marked leukocytosis. The peripheral smear of the patient is given below. What is the appropriate next step for this patient?",
@@ -117,7 +117,7 @@
     "a": 2
   },
   {
-    "id": "PG23T010",
+    "id": "PGPT010",
     "y": 2023,
     "t": "HAM",
     "q": "[Image: Peripheral smear showing abnormal large granular cells with dark nuclei and prominent cytoplasmic granules.] A 25-year-old male presented with low hemoglobin, platelet count of 25,000/mL, gum bleeding, and raised PT & aPTT. The image of his peripheral smear is given below. What is the likely diagnosis?",
@@ -130,7 +130,7 @@
     "a": 2
   },
   {
-    "id": "PG23T011",
+    "id": "PGPT011",
     "y": 2023,
     "t": "HAM",
     "q": "A young patient presents with a large retroperitoneal hemorrhage. He also gives a frequent history of intermittent swelling of knees on strenuous exercise. There is no history of any mucosal bleeding. Which among the following clotting factors is responsible for the condition mentioned above?",
@@ -143,7 +143,7 @@
     "a": 0
   },
   {
-    "id": "PG23T012",
+    "id": "PGPT012",
     "y": 2023,
     "t": "RSP",
     "q": "A chronic smoker who worked in a cement factory for 20 years developed mesothelioma. The association is likely to be due to ________.",
@@ -154,6 +154,123 @@
       "Bagassosis"
     ],
     "a": 1
+  },
+  {
+    "id": "PGPT013",
+    "y": 2021,
+    "t": "HAM",
+    "q": "A Patient presents to you with generalized weakness and easy fatigability. He gives you a history of working in a factory with an exposure to Benzene. Which of the following cases would you suspect in this patient?",
+    "o": [
+      "Blood Cancer",
+      "Urinary Bladder Cancer",
+      "Carcinoma Gall Bladder",
+      "Hepatocellular Carcinoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPT014",
+    "y": 2021,
+    "t": "LVR",
+    "q": "Chronic Alcoholic patient with history of increasing abdominal girth. On liver biopsy there are reddish inclusions. What are these made up of?",
+    "o": [
+      "Actin",
+      "Microtubules",
+      "Intermediate filaments",
+      "Myofibril"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPT015",
+    "y": 2021,
+    "t": "HAM",
+    "q": "All are increased in IDA except?",
+    "o": [
+      "TIBC",
+      "Soluble transferrin receptor",
+      "Transferrin saturation",
+      "Erythropoietin"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPT016",
+    "y": 2021,
+    "t": "RPD",
+    "q": "Woman on pap smear having disorganised growth of cells with hyperchromatic nuclei, which phenomenon is occurring here?",
+    "o": [
+      "Dysplasia",
+      "Metaplasia",
+      "Hypertrophy",
+      "Carcinoma"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPT017",
+    "y": 2021,
+    "t": "HAM",
+    "q": "Poor prognostic marker in MM is-",
+    "o": [
+      "S. creatinine",
+      "Hypercalcemia",
+      "B2 microglobulins",
+      "Telomerase"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPT018",
+    "y": 2021,
+    "t": "CVP",
+    "q": "[Image: Microscopy shows cardiac muscle fibers with a pale central area surrounded by inflammatory cells] What is the diagnosis?",
+    "o": [
+      "Infective endocarditis",
+      "Rheumatic heart disease",
+      "SABE",
+      "Cardiac failure"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPT019",
+    "y": 2021,
+    "t": "HAM",
+    "q": "A 18 year old male presented to the OPD with gum bleeding, fever low TLC and low platelet count. General examination is unremarkable. Further investigation show a low reticulocyte count, absent megakaryocytes and no immature cells. Diagnosis will be?",
+    "o": [
+      "Aplastic anemia",
+      "MDS",
+      "PNH",
+      "None"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPT020",
+    "y": 2021,
+    "t": "GNC",
+    "q": "HNPCC has defect in",
+    "o": [
+      "Nucleotide excision",
+      "Base pair excision",
+      "Point mutation",
+      "Mismatch repair gene"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPT021",
+    "y": 2021,
+    "t": "HAM",
+    "q": "Patient with general fatigue and tiredness. Primary clinical examination is uneventful. Normal TLC, DLC. No immature cells seen. Superficial discrete lymphnodes enlarged. On biopsy effaced architecture, indented nucleus and prominent nucleolus containing atypical cells. CD 10 & BCL-2 positive.",
+    "o": [
+      "Follicular",
+      "Burkitts",
+      "NHL",
+      "Mycosis Fungoides"
+    ],
+    "a": 0
   }
   
 ]
