@@ -10,7 +10,7 @@
       "Factors II, VII, IX, XI",
       "Factors II, VIII, X, XI"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGBC002",
@@ -23,7 +23,7 @@
       "Vitamin B6 deficiency",
       "Vitamin B12 deficiency"
     ],
-    "a": 1
+    "a": 0
   },
   {
     "id": "PGBC003",
@@ -36,7 +36,7 @@
       "Cori's disease",
       "Andersen disease"
     ],
-    "a": 1
+    "a": 0
   },
   {
     "id": "PGBC004",
@@ -49,7 +49,7 @@
       "Thiamine-transaminase",
       "Riboflavin-transketolase"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGBC005",
@@ -62,7 +62,7 @@
       "Vitamin D deficiency",
       "Vitamin C deficiency"
     ],
-    "a": 1
+    "a": 0
   },
   {
     "id": "PGBC006",
@@ -75,7 +75,7 @@
       "Debranching enzyme",
       "Glucose 6 phosphatase"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGBC007",
@@ -88,7 +88,7 @@
       "Pyridoxine",
       "Niacin"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGBC008",
@@ -101,7 +101,7 @@
       "Increased urate and lactate levels",
       "Increased level of alkaline phosphatase"
     ],
-    "a": 3
+    "a": 2
   },
   {
     "id": "PGBC009",
@@ -114,7 +114,7 @@
       "Calcium deficiency",
       "Copper deficiency"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGBC010",
@@ -127,12 +127,12 @@
       "Inhibition of clotting factors",
       "Increased keratinization of epithelium"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGBC011",
     "y": 2023,
-    "t": "GEN",
+    "t": "LIP",
     "q": "Which of the following is seen in low insulin: glucagon ratio?",
     "o": [
       "Activation of lipoprotein lipase",
@@ -140,12 +140,12 @@
       "Activation of phosphofructokinase 1",
       "Activation of hormone-sensitive lipase"
     ],
-    "a": 4
+    "a": 3
   },
   {
     "id": "PGBC012",
     "y": 2023,
-    "t": "AMN",
+    "t": "PRO",
     "q": "An infant is brought by his parents with complaints that his urine turns black on standing. Which of the following metabolic disorders is likely?",
     "o": [
       "Phenylketonuria",
@@ -153,7 +153,7 @@
       "Homocystinuria",
       "Maple syrup urine disease"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGBC013",
@@ -166,7 +166,7 @@
       "Biotin",
       "Thiamine"
     ],
-    "a": 3
+    "a": 2
   },
   {
     "id": "PGBC014",
@@ -179,7 +179,7 @@
       "Hurler syndrome",
       "Gaucher disease"
     ],
-    "a": 1
+    "a": 0
   },
   {
     "id": "PGBC015",
@@ -192,7 +192,7 @@
       "Sphingomyelinase",
       "Alpha 1,4-glucosidase"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGBC016",
