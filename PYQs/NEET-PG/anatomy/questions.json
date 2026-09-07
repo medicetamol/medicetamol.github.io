@@ -93,8 +93,8 @@
   {
     "id": "PGAN008",
     "y": 2021,
-    "t": "ULM",
-    "q": "[Image: Hand held palm-up with a needle electrode inserted into a forearm/hand muscle.] Pen Test is for which nerve",
+    "t": "UPL",
+    "q": "[Image: Hand held palm-up with a needle electrode inserted into a forearm/hand muscle] Pen Test is for which nerve?",
     "o": [
       "Median Nerve",
       "Ulnar nerve",
@@ -106,7 +106,7 @@
   {
     "id": "PGAN009",
     "y": 2021,
-    "t": "ULM",
+    "t": "UPL",
     "q": "A small boy with multiple fracture of Humerus following which there is loss of sensation over lateral side of forearm, difficulty in flexion of elbow & supination of forearm.",
     "o": [
       "Musculocutaneous nerve",
@@ -120,7 +120,7 @@
     "id": "PGAN010",
     "y": 2021,
     "t": "EMB",
-    "q": "Which blood vessel carries deoxygenated blood back to placenta",
+    "q": "Which blood vessel carries deoxygenated blood back to placenta?",
     "o": [
       "Umbilical Artery",
       "Umbilical vein",
@@ -132,7 +132,7 @@
   {
     "id": "PGAN011",
     "y": 2021,
-    "t": "ABD",
+    "t": "ABP",
     "q": "Structure preventing vertical descent of spleen",
     "o": [
       "Phrenocolic ligament",
@@ -146,7 +146,7 @@
     "id": "PGAN012",
     "y": 2021,
     "t": "HNK",
-    "q": "Which nerve is required for GAG reflex",
+    "q": "Which nerve is required for GAG reflex?",
     "o": [
       "9th cranial nerve",
       "10th cranial nerve",
@@ -158,7 +158,7 @@
   {
     "id": "PGAN013",
     "y": 2021,
-    "t": "LLM",
+    "t": "LWL",
     "q": "The Great saphenous vein graft was used for a patient in CABG. Post surgery the patient is having a neuralgia on the medial aspect of leg and foot. Which nerve has been injured?",
     "o": [
       "Saphenous Nerve",
@@ -169,3 +169,4 @@
     "a": 0
   }
 ]
+
