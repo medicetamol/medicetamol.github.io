@@ -1,54 +1,93 @@
 [
   {
-    "id": "PG21E001",
+    "id": "PGDR001",
+    "y": 2021,
+    "t": "BKI",
+    "q": "[Image: Well-demarcated erythematous swelling involving the hand and fingers] What is the most suitable antibiotic for this condition?",
+    "o": [
+      "Amoxycillin & Clavulinic acid",
+      "Amikacin",
+      "Norfloxacin",
+      "Metronidazole"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGDR002",
+    "y": 2021,
+    "t": "BLA",
+    "q": "A 30 year old woman came with flaccid bullae on her skin which were easy to rupture. Biopsy of the lesion revealed a suprabasal split. What is the most likely diagnosis?",
+    "o": [
+      "Pemphigus vegetans",
+      "Pemphigus vulgaris",
+      "Pemphigus foliaceous",
+      "Erythema multiforme"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGDR003",
+    "y": 2021,
+    "t": "BKI",
+    "q": "A patient who has been on MBMDT presents with inflammation over pre-existing lesions and nerve involvement. What will be the best approach of treatment?",
+    "o": [
+      "Stop ALT and start steroids",
+      "Stop ALT and start thalidomide",
+      "Continue ALT and start steroids",
+      "Continue ALT and give thalidomide"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGDR004",
+    "y": 2021,
+    "t": "BKI",
+    "q": "A 13 year old male presented with erythematous edematous plaques on face over his previously existing hypoanaesthetic patches. He also complained of pain since 10 days. He has been on MBMDT since the past 2 months. What is your diagnosis?",
+    "o": [
+      "Cellulitis of face",
+      "Type 1 lepra reaction",
+      "Erythema Nodosum Leprosum",
+      "Erysipelas"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGDR005",
+    "y": 2021,
+    "t": "PGH",
+    "q": "[Image: Symmetric dark, thickened and scaly skin over the neck and upper chest] What are the associated features of this deficiency disorder?",
+    "o": [
+      "History of diarrhoea & dementia associated with cognitive impairment",
+      "Bitot's spots",
+      "Angular stomatitis",
+      "Loss of muscle coordination"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGDR006",
     "y": 2021,
     "t": "MSD",
-    "q": "[Image: Well-demarcated erythematous patch over the posterior neck and hairline region.] A lady developed a skin reaction, as shown in the image, after using a hair dye. Which of the following chemicals is responsible for this condition?",
+    "q": "A young girl presented to the OPD with rough surfaced lesions over her elbows and knees. She also complained of diminished vision in the night. What is the most likely diagnosis?",
     "o": [
-      "Pollen",
-      "Chromates",
-      "Balsam of Peru",
-      "p-Phenylenediamine"
+      "Keratosis pilaris",
+      "Phrynoderma",
+      "Folliculitis",
+      "Pyoderma"
     ],
     "a": 1
   },
   {
-    "id": "PG21E002",
+    "id": "PGDR007",
     "y": 2021,
-    "t": "PAP",
-    "q": "A female patient presented with acne that is not resolving on oral isotretinoin and antibiotics therapy. Which of the following is the next best investigation?",
+    "t": "BKI",
+    "q": "[Image: Raised, boggy, tender scalp swelling with broken hairs and pustular areas] Identify the diagnosis.",
     "o": [
-      "Look for dietary triggers.",
-      "Evaluate for hyperandrogenism",
-      "Check for antibiotic resistance",
-      "Look for drug triggers"
+      "Folliculitis",
+      "Abscess",
+      "Kerion",
+      "Scabies"
     ],
-    "a": 0
-  },
-  {
-    "id": "PG21E003",
-    "y": 2021,
-    "t": "STI",
-    "q": "A young woman complains of a painless ulcer in the genital area. It is associated with non-tender inguinal lymphadenopathy. What is the most likely diagnosis?",
-    "o": [
-      "Chancroid",
-      "Syphilis",
-      "Herpes genitalis",
-      "Granuloma inguinale"
-    ],
-    "a": 0
-  },
-  {
-    "id": "PG21E004",
-    "y": 2021,
-    "t": "SKT",
-    "q": "[Image: Several brown-red papules/nodules on skin, including a larger irregularly pigmented raised lesion.] Which of the following is associated with the clinical condition shown in the image?",
-    "o": [
-      "Cataract",
-      "Glaucoma",
-      "Malignant melanoma",
-      "Basal cell carcinoma"
-    ],
-    "a": 1
+    "a": 2
   }
 ]
