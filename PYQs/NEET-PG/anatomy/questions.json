@@ -1,9 +1,9 @@
 [
   {
-    "id": "PG23A001",
+    "id": "PGAN001",
     "y": 2023,
-    "t": "Abdomen and Pelvis",
-    "q": "Image: Diagram of the inguinal region showing the inguinal canal and spermatic cord, with the marked opening in the posterior wall of the canal.\nA defect in which of the following forms the structure marked below?",
+    "t": "ABD",
+    "q": "[Image: Diagram of the inguinal region showing the inguinal canal and spermatic cord, with the marked opening in the posterior wall of the canal] A defect in which of the following forms the structure marked below?",
     "o": [
       "Internal oblique",
       "External oblique",
@@ -13,9 +13,9 @@
     "a": 3
   },
   {
-    "id": "PG23A002",
+    "id": "PGAN002",
     "y": 2023,
-    "t": "Head and Neck",
+    "t": "HNK",
     "q": "A student had his jaw locked while yawning. Which of the following muscles is attached to the articular disc of the temporomandibular joint?",
     "o": [
       "Lateral pterygoid",
@@ -26,10 +26,10 @@
     "a": 0
   },
   {
-    "id": "PG23A003",
+    "id": "PGAN003",
     "y": 2023,
-    "t": "Histology",
-    "q": "Image: Histological section showing a rounded capillary tuft enclosed within a clear capsule and surrounded by renal tubules.\nThe given histology image is of ?",
+    "t": "HIS",
+    "q": "[Image: Histological section showing a rounded capillary tuft enclosed within a clear capsule and surrounded by renal tubules] The given histology image is of ?",
     "o": [
       "Leydig cells of testis",
       "Pancreatic islet cells",
@@ -39,10 +39,10 @@
     "a": 3
   },
   {
-    "id": "PG23A004",
+    "id": "PGAN004",
     "y": 2023,
-    "t": "Thorax",
-    "q": "Image: Diagram of the great vessels showing a vascular defect near the aortic arch and pulmonary artery.\nA defect in which of the following aortic arches causes the defect shown in the image?",
+    "t": "THX",
+    "q": "[Image: Diagram of the great vessels showing a vascular defect near the aortic arch and pulmonary artery] A defect in which of the following aortic arches causes the defect shown in the image?",
     "o": [
       "4th right",
       "4th left",
@@ -52,10 +52,10 @@
     "a": 3
   },
   {
-    "id": "PG23A005",
+    "id": "PGAN005",
     "y": 2023,
-    "t": "Embryology",
-    "q": "Image: Embryonic cross-section with numbered structures; structure 4 is marked near the midline connecting-stalk/umbilical region.\nWhich of the following structures develops from the structure marked 4?",
+    "t": "EMB",
+    "q": "[Image: Embryonic cross-section with numbered structures; structure 4 is marked near the midline connecting-stalk/umbilical region] Which of the following structures develops from the structure marked 4?",
     "o": [
       "Medial umbilical ligament",
       "Median umbilical ligament",
@@ -65,10 +65,10 @@
     "a": 1
   },
   {
-    "id": "PG23A006",
+    "id": "PGAN006",
     "y": 2023,
-    "t": "Lower Limb",
-    "q": "Image: Knee radiograph showing four numbered markers around the distal femur and proximal tibia/fibula.\nInjury at which of the following marked sites causes failure of dorsiflexion?",
+    "t": "LWL",
+    "q": "[Image: Knee radiograph showing four numbered markers around the distal femur and proximal tibia/fibula] Injury at which of the following marked sites causes failure of dorsiflexion?",
     "o": [
       "3",
       "2",
@@ -78,9 +78,9 @@
     "a": 0
   },
   {
-    "id": "PG23A007",
+    "id": "PGAN007",
     "y": 2023,
-    "t": "Head and Neck",
+    "t": "HNK",
     "q": "A patient presents with swelling under the left ear lobule and complains of pain. Which of the following structures is the likely cause of the pain?",
     "o": [
       "Facial nerve",
@@ -89,5 +89,83 @@
       "Investing layer of deep cervical fascia"
     ],
     "a": 1
+  },
+  {
+    "id": "PGAN008",
+    "y": 2021,
+    "t": "ULM",
+    "q": "[Image: Hand held palm-up with a needle electrode inserted into a forearm/hand muscle.] Pen Test is for which nerve",
+    "o": [
+      "Median Nerve",
+      "Ulnar nerve",
+      "PIN",
+      "Musculocutaneous"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN009",
+    "y": 2021,
+    "t": "ULM",
+    "q": "A small boy with multiple fracture of Humerus following which there is loss of sensation over lateral side of forearm, difficulty in flexion of elbow & supination of forearm.",
+    "o": [
+      "Musculocutaneous nerve",
+      "Median nerve",
+      "Axillary",
+      "Radial nerve"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN010",
+    "y": 2021,
+    "t": "EMB",
+    "q": "Which blood vessel carries deoxygenated blood back to placenta",
+    "o": [
+      "Umbilical Artery",
+      "Umbilical vein",
+      "Uterine artery",
+      "Descending aorta"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN011",
+    "y": 2021,
+    "t": "ABD",
+    "q": "Structure preventing vertical descent of spleen",
+    "o": [
+      "Phrenocolic ligament",
+      "Hepatogastric ligament",
+      "Ligamentum teres",
+      "Ligamentum flavum"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN012",
+    "y": 2021,
+    "t": "HNK",
+    "q": "Which nerve is required for GAG reflex",
+    "o": [
+      "9th cranial nerve",
+      "10th cranial nerve",
+      "11th cranial nerve",
+      "12th cranial nerve"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN013",
+    "y": 2021,
+    "t": "LLM",
+    "q": "The Great saphenous vein graft was used for a patient in CABG. Post surgery the patient is having a neuralgia on the medial aspect of leg and foot. Which nerve has been injured?",
+    "o": [
+      "Saphenous Nerve",
+      "Femoral vein",
+      "Profunda femoris vein",
+      "Popliteal vein"
+    ],
+    "a": 0
   }
 ]
