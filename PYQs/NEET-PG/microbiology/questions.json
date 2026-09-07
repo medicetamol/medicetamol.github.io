@@ -1,8 +1,8 @@
 [
   {
-    "id": "PG23M001",
+    "id": "PGMB001",
     "y": 2023,
-    "t": "Virology",
+    "t": "VIR",
     "q": "A patient hailing from Delhi presents with fever, arthralgia, and extensive petechial rash for 3 days. Laboratory investigations reveal a platelet count of 20,000 cells/mm³, prolonged bleeding time, and normal clotting time. What is the most likely diagnosis?",
     "o": [
       "Dengue",
@@ -13,9 +13,9 @@
     "a": 0
   },
   {
-    "id": "PG23M002",
+    "id": "PGMB002",
     "y": 2023,
-    "t": "Parasitology",
+    "t": "PAR",
     "q": "Which of the following statements is true about Trichomonas vaginalis?",
     "o": [
       "It cannot be cultured",
@@ -26,9 +26,9 @@
     "a": 1
   },
   {
-    "id": "PG23M003",
+    "id": "PGMB003",
     "y": 2023,
-    "t": "Parasitology",
+    "t": "PAR",
     "q": "A lady from West Rajasthan presents with an ulcer surrounded by erythema on the right leg. Microscopy of a biopsy from the edge of the ulcer shows organisms with dark-staining nuclei and kinetoplasts. What is the most likely causative agent?",
     "o": [
       "Leishmania tropica",
@@ -39,9 +39,9 @@
     "a": 0
   },
   {
-    "id": "PG23M004",
+    "id": "PGMB004",
     "y": 2023,
-    "t": "Virology",
+    "t": "VIR",
     "q": "A child presents with fever and rash. Urine examination shows cells with an owl's-eye appearance. What is the most likely diagnosis?",
     "o": [
       "Cytomegalovirus",
@@ -52,9 +52,9 @@
     "a": 0
   },
   {
-    "id": "PG23M005",
+    "id": "PGMB005",
     "y": 2023,
-    "t": "Parasitology",
+    "t": "PAR",
     "q": "Infection with Clonorchis sinensis is associated with an increased risk of which malignancy?",
     "o": [
       "Cervical cancer",
@@ -65,9 +65,9 @@
     "a": 1
   },
   {
-    "id": "PG23M006",
+    "id": "PGMB006",
     "y": 2023,
-    "t": "Mycology",
+    "t": "MYC",
     "q": "A patient with poorly controlled HIV infection presents with persistent cough and weight loss. Fungal culture of sputum is negative. Gomori methenamine silver staining shows darkly stained crescent-shaped cysts. What is the most likely causative organism?",
     "o": [
       "Paracoccidioides brasiliensis",
@@ -78,9 +78,9 @@
     "a": 3
   },
   {
-    "id": "PG23M007",
+    "id": "PGMB007",
     "y": 2023,
-    "t": "Systemic Bacteriology",
+    "t": "BAC",
     "q": "A sewage worker presents with abdominal pain, jaundice, conjunctival injection, and hematuria for 5 days. Which of the following is the investigation of choice?",
     "o": [
       "Widal test",
@@ -91,9 +91,9 @@
     "a": 1
   },
   {
-    "id": "PG23M008",
+    "id": "PGMB008",
     "y": 2023,
-    "t": "Virology",
+    "t": "VIR",
     "q": "Which of the following laboratory tests is used to diagnose rotavirus diarrhea?",
     "o": [
       "Antigen detection in the stool sample",
@@ -104,9 +104,9 @@
     "a": 0
   },
   {
-    "id": "PG23M009",
+    "id": "PGMB009",
     "y": 2023,
-    "t": "Parasitology",
+    "t": "PAR",
     "q": "A boy presents with fever and chills. A rapid test is positive for the specific antigen HRP-2. Which species of Plasmodium is the most likely causative agent?",
     "o": [
       "Plasmodium falciparum",
@@ -117,9 +117,9 @@
     "a": 0
   },
   {
-    "id": "PG23M010",
+    "id": "PGMB010",
     "y": 2023,
-    "t": "Systemic Bacteriology",
+    "t": "BAC",
     "q": "A child presents with high fever, multiple seizures, headache, and neck rigidity. CSF analysis shows low glucose, high protein, and many polymorphs. CSF culture shows pleomorphic gram-negative bacilli. What is true about the causative organism?",
     "o": [
       "It is bacitracin sensitive",
@@ -130,9 +130,9 @@
     "a": 2
   },
   {
-    "id": "PG23M011",
+    "id": "PGMB011",
     "y": 2023,
-    "t": "Systemic Bacteriology",
+    "t": "BAC",
     "q": "A man presents with dysuria and urethral discharge after unprotected sexual intercourse. Gram staining of the purulent discharge shows the characteristic organism. What is the treatment of choice for this infection?",
     "o": [
       "Erythromycin",
@@ -143,9 +143,9 @@
     "a": 2
   },
   {
-    "id": "PG23M012",
+    "id": "PGMB012",
     "y": 2023,
-    "t": "Virology",
+    "t": "VIR",
     "q": "A patient presents with high fever, altered sensorium, headache, neck rigidity, and seizures and is diagnosed with HSV encephalitis. Which test can be used to confirm the diagnosis?",
     "o": [
       "IgM in CSF",
@@ -156,9 +156,9 @@
     "a": 2
   },
   {
-    "id": "PG23M013",
+    "id": "PGMB013",
     "y": 2023,
-    "t": "Parasitology",
+    "t": "PAR",
     "q": "In a patient with fever and a positive filarial antigen test, what is the next appropriate method of management?",
     "o": [
       "Bone marrow biopsy",
@@ -167,5 +167,305 @@
       "Ultrasound of the scrotum"
     ],
     "a": 2
+  },
+  {
+    "id": "PGMB014",
+    "y": 2021,
+    "t": "MSC",
+    "q": "A child accidentally ingested some fruit which he plucked from a tree while playing . After the ingestion of the fruit , he presented with restlessness, painful swallowing, photophobia, dry skin , urinary retention and elevated body temperature. What is the possible poisoning and the appropriate antidote for it?",
+    "o": [
+      "Datura & Physostigmine",
+      "Yellow oleander & Physostigmine",
+      "Datura & Pralidoxime",
+      "Yellow oleander & Pralidoxime"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB015",
+    "y": 2021,
+    "t": "MSC",
+    "q": "A 30 year old male presents with a history of consumption of some unknown substance. The attending doctor notices the person to be having diaphoresis, headache and acute coronary spasm like features. The person is least likely to show which clinical feature?",
+    "o": [
+      "Bradycardia",
+      "Tachycardia",
+      "Hyperthermia",
+      "Hypertension"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB016",
+    "y": 2021,
+    "t": "MSC",
+    "q": "[Image: Branching dark discoloration following superficial veins over the limb]",
+    "o": [
+      "It is due to sulphaemoglobin pigment",
+      "This change is seen at 24 hours",
+      "It is non bacterial",
+      "It is associated with lightning case"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB017",
+    "y": 2021,
+    "t": "MSC",
+    "q": "[Image: Irregular wound with irregular margins and an elongated lacerated appearance]",
+    "o": [
+      "Incised looking laceration",
+      "Laceration",
+      "Laceration looking incision",
+      "Incision"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB018",
+    "y": 2021,
+    "t": "MSC",
+    "q": "While recording evidence in the court of law, lawyer asked the witness, “Were you present when A killed B?”, and the witness answered “yes”. This type of questioning is permitted in?",
+    "o": [
+      "Examination in chief",
+      "Direct examination",
+      "Redirect examination",
+      "Cross examination"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGMB019",
+    "y": 2021,
+    "t": "MSC",
+    "q": "[Image: Pale, wrinkled, waterlogged skin with prominent creases over the soles]",
+    "o": [
+      "Case of torture in hot water",
+      "Case of postmortem hanging",
+      "Case of immersion in water for 36 hours",
+      "Case of colliquative liquefaction"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGMB020",
+    "y": 2021,
+    "t": "MSC",
+    "q": "A woman gave birth to twins. However, her husband asked for a DNA fingerprinting test as he believed that the babies did not belong to him. The results showed that one baby did not belong to him. This is a case of:",
+    "o": [
+      "Superfecundation",
+      "Superfetation",
+      "Atavism",
+      "Posthumus child"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB021",
+    "y": 2021,
+    "t": "MSC",
+    "q": "A man was sitting in the balcony which was overlooking a park. He was sitting naked for sexual gratification. This is called",
+    "o": [
+      "Voyeurism",
+      "Masochism",
+      "Exhibitionism",
+      "Fetishism"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGMB022",
+    "y": 2021,
+    "t": "MSC",
+    "q": "A daily wage labourer was working in the farm on a hot summer day and suddenly collapsed. He was brought to the hospital and the attending doctor measured his body temperature as 106 degrees fahrenheit. Which of the following symptoms is least likely to be seen?",
+    "o": [
+      "Sweating",
+      "Hot skin",
+      "Hypotension",
+      "Disorientation"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB023",
+    "y": 2021,
+    "t": "MSC",
+    "q": "[Image: Multiple dark, rough, irregularly shaped seeds/nuts] Identify the active principle in the poisonous seed shown below",
+    "o": [
+      "Abrin",
+      "Ricin",
+      "Cannabinol",
+      "Bhilawanol"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGMB024",
+    "y": 2021,
+    "t": "VIR",
+    "q": "A child admitted with fever, rash begins behind ears, conjunctivitis, coryza, cough and koplik spot. Based on the clinical manifestations, choose the correct description of the pathogen?",
+    "o": [
+      "SS enveloped RNA virus",
+      "DS enveloped RNA virus",
+      "SS naked RNA virus",
+      "DS naked RNA virus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB025",
+    "y": 2021,
+    "t": "PAR",
+    "q": "Name the parasite whose microfilariae have a sheath with no nuclei at the tail end.",
+    "o": [
+      "Wuchereria Bancrofti",
+      "Brugia malayi",
+      "Loa loa",
+      "None"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB026",
+    "y": 2021,
+    "t": "BAC",
+    "q": "History of Pastry intake causing food poisoning. What is the causative agent",
+    "o": [
+      "S aureus",
+      "B. cereus",
+      "EIEC",
+      "Verotoxin E.coli"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB027",
+    "y": 2021,
+    "t": "BAC",
+    "q": "[Image: Numerous slender pink rod-shaped organisms against a pale background]",
+    "o": [
+      "Pseudomonas aeruginosa",
+      "Meningococcus",
+      "Streptococcus pyogenes",
+      "Pneumococcus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB028",
+    "y": 2021,
+    "t": "BAC",
+    "q": "A truck driver presented with a painless, demarcated ulcer on penis with inguinal lymphadenopathy. What is the best method of visualization of motility of the probable causative agent?",
+    "o": [
+      "Dark field microscopy",
+      "Light microscopy",
+      "Fluorescent microscopy",
+      "Electron microscopy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB029",
+    "y": 2021,
+    "t": "GEN",
+    "q": "Swab is discarded in which color bin?",
+    "o": [
+      "Yellow bag",
+      "Red bag",
+      "White bag",
+      "Blue bag"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB030",
+    "y": 2021,
+    "t": "MSC",
+    "q": "A female engineer works for 12- 14 hours a day and gives a history of consuming only fast food. There are no vegetables or fruits in his diet. Her Hb count is 9gm/dl MCV 120 fl. On examination, PS shows macrocytes. What will be the diagnosis?",
+    "o": [
+      "Vitamin B12 deficiency",
+      "Folic acid deficiency",
+      "Vitamin D deficiency",
+      "None"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB031",
+    "y": 2021,
+    "t": "IMM",
+    "q": "A patient was suspected of having brucellosis. Serum sample was sent for a standard agglutination test. It came negative initially but after dilution of the serum sample, the test was positive. What could be the reason for the initial negative test?",
+    "o": [
+      "Prozone",
+      "Postzone",
+      "Complement inactivation",
+      "Antigen antibody complexes"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB032",
+    "y": 2021,
+    "t": "PAR",
+    "q": "A patient who was on steroids presented with nocturnal cough and chronic urticaria. BAL stain was done. Identify the organism.",
+    "o": [
+      "Strongyloides stercoralis",
+      "Enterobius",
+      "Ancylostoma",
+      "Capillaria philippinensis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB033",
+    "y": 2021,
+    "t": "GEN",
+    "q": "Blood spill management",
+    "o": [
+      "Ethyl Alcohol",
+      "Chlorhexidine",
+      "Formaldehyde",
+      "Sodium Hypochlorite"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGMB034",
+    "y": 2021,
+    "t": "BAC",
+    "q": "A child presented with bloody stools and abdominal pain. What enrichment medium should be used for the faeces sample?",
+    "o": [
+      "Selenite F broth",
+      "Alkaline peptone water",
+      "Blood agar",
+      "Muller Hinton Broth"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB035",
+    "y": 2021,
+    "t": "PAR",
+    "q": "What is the vector for a parasite which has kinetoplast in one of its morphological forms?",
+    "o": [
+      "Sand fly",
+      "TseTse fly",
+      "Female Anopheles Mosquito",
+      "Triatomine bug"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB036",
+    "y": 2021,
+    "t": "MYC",
+    "q": "A known case of AIDS with productive cough and fever was found to have consolidation in the right infrascapular area. X-Ray chest showed right lower lobe consolidation with CD4 count of 55 per microlitre. What is the most common cause of this?",
+    "o": [
+      "Staphylococcus aureus",
+      "Streptococcus pneumoniae",
+      "Mycoplasma",
+      "Pneumocystis jirovecii"
+    ],
+    "a": 1
   }
+
 ]
