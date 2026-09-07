@@ -84,12 +84,12 @@ export const SUBJECTS: Subject[] = [
   {
     id: "microbiology", name: "Microbiology", code: "MB", short: "Micro",
     topics: [
-      { id: "GNB", name: "General Microbiology" },
+      { id: "GEN", name: "General Microbiology" },
       { id: "BAC", name: "Bacteriology" },
       { id: "VIR", name: "Virology" },
       { id: "MYC", name: "Mycology" },
       { id: "PAR", name: "Parasitology" },
-      { id: "IMN", name: "Immunology" },
+      { id: "IMM", name: "Immunology" },
       { id: "CLM", name: "Clinical Microbiology" },
     ]
   },
@@ -227,7 +227,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "anesthesiology", name: "Anesthesiology", code: "AE", short: "Anes",
+    id: "anesthesiology", name: "Anesthesiology", code: "AS", short: "Anes",
     topics: [
       { id: "AGL", name: "General Principles & Pre-op Assessment" },
       { id: "AAW", name: "Airway Management" },
