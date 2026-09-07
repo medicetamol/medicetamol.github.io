@@ -249,15 +249,15 @@
   {
     "id": "PGMB020",
     "y": 2021,
-    "t": "MSC",
-    "q": "A female engineer works for 12- 14 hours a day and gives a history of consuming only fast food. There are no vegetables or fruits in his diet. Her Hb count is 9gm/dl MCV 120 fl. On examination, PS shows macrocytes. What will be the diagnosis?",
+    "t": "MYC",
+    "q": "A known case of AIDS with productive cough and fever was found to have consolidation in the right infrascapular area. X-Ray chest showed right lower lobe consolidation with CD4 count of 55 per microlitre. What is the most common cause of this?",
     "o": [
-      "Vitamin B12 deficiency",
-      "Folic acid deficiency",
-      "Vitamin D deficiency",
-      "None"
+      "Staphylococcus aureus",
+      "Streptococcus pneumoniae",
+      "Mycoplasma",
+      "Pneumocystis jirovecii"
     ],
-    "a": 0
+    "a": 1
   },
   {
     "id": "PGMB021",
@@ -323,19 +323,6 @@
       "Triatomine bug"
     ],
     "a": 0
-  },
-  {
-    "id": "PGMB026",
-    "y": 2021,
-    "t": "MYC",
-    "q": "A known case of AIDS with productive cough and fever was found to have consolidation in the right infrascapular area. X-Ray chest showed right lower lobe consolidation with CD4 count of 55 per microlitre. What is the most common cause of this?",
-    "o": [
-      "Staphylococcus aureus",
-      "Streptococcus pneumoniae",
-      "Mycoplasma",
-      "Pneumocystis jirovecii"
-    ],
-    "a": 1
   }
 
 ]
