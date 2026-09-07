@@ -1,7 +1,7 @@
 [
   {
-    "id": "PG23C001",
-    "y": 2023,
+    "id": "PG21C001",
+    "y": 2021,
     "t": "NUT",
     "q": "In a village, it is observed that several farmers have crossed gait and use a stick for support to stand up and walk. Due to poor yield from farms, they consume meals containing rice and pulses only. Supplementing their diet with which of the following vitamins could have prevented this?",
     "o": [
@@ -10,11 +10,11 @@
       "Vitamin C",
       "Vitamin B"
     ],
-    "a": 2
+    "a": 0
   },
   {
-    "id": "PG23C002",
-    "y": 2023,
+    "id": "PG21C002",
+    "y": 2021,
     "t": "EPI",
     "q": "Research is being conducted to find the association between aniline dye exposure and bladder cancer in workers who have worked in the industry for >20 years. Two groups were formed: one directly involved with dye handling and the other group consisting of office clerks not directly exposed to the dye. Years of occupation were noted from records. What type of study is being performed?",
     "o": [
@@ -26,8 +26,8 @@
     "a": 0
   },
   {
-    "id": "PG23C003",
-    "y": 2023,
+    "id": "PG21C003",
+    "y": 2021,
     "t": "EPI",
     "q": "The blood pressure of a population was tracked from childhood to adulthood. It was observed that those who had lower BP in childhood had low BP in adulthood, while those who had higher BP in childhood had high BP in adulthood. This can be best described as",
     "o": [
@@ -36,11 +36,11 @@
       "STEPwise approach",
       "Primordial approach"
     ],
-    "a": 1
+    "a": 0
   },
   {
-    "id": "PG23C004",
-    "y": 2023,
+    "id": "PG21C004",
+    "y": 2021,
     "t": "HAD",
     "q": "A 30-week primigravida complaints of reduced vision at night. She has been avoiding papaya, mango, and other fruits throughout her pregnancy as she thinks they could be abortifacients. It is the primary duty of which of the following workers to provide counseling and information to the patient?",
     "o": [
@@ -49,11 +49,11 @@
       "Trained birth attendant",
       "ASHA"
     ],
-    "a": 3
+    "a": 1
   },
   {
-    "id": "PG23C005",
-    "y": 2023,
+    "id": "PG21C005",
+    "y": 2021,
     "t": "CMD",
     "q": "A 22-year-old female comes to the STI clinic with minimal vaginal discharge. On speculum examination, erosions are seen on the cervix. Which of the following kit should be given to this patient?",
     "o": [
@@ -62,11 +62,11 @@
       "Grey",
       "Yellow"
     ],
-    "a": 2
+    "a": 3
   },
   {
-    "id": "PG23C006",
-    "y": 2023,
+    "id": "PG21C006",
+    "y": 2021,
     "t": "EPI",
     "q": "The years of potential life lost could be attributed to,",
     "o": [
@@ -75,11 +75,11 @@
       "Years lost to disability",
       "Years lost to poor quality of life"
     ],
-    "a": 1
+    "a": 0
   },
   {
-    "id": "PG23C007",
-    "y": 2023,
+    "id": "PG21C007",
+    "y": 2021,
     "t": "VAC",
     "q": "In a 10-year-old school child, which of the following vaccines is given as a part of the school immunization program?",
     "o": [
@@ -88,11 +88,11 @@
       "TT/Td vaccine",
       "Hepatitis B vaccine"
     ],
-    "a": 2
+    "a": 0
   },
   {
-    "id": "PG23C008",
-    "y": 2023,
+    "id": "PG21C008",
+    "y": 2021,
     "t": "INT",
     "q": "Which of the following statements is true about cancer treatment according to the Colombo plan?",
     "o": [
@@ -101,11 +101,11 @@
       "Setting up chemotherapy units",
       "Setting up cobalt therapy units"
     ],
-    "a": 3
+    "a": 0
   },
   {
-    "id": "PG23C009",
-    "y": 2023,
+    "id": "PG21C009",
+    "y": 2021,
     "t": "NUT",
     "q": "A poor farmer with a history of successive crop failure develops progressive spastic paraparesis, signs of upper motor neuron paralysis, and gait instability. Name the toxin responsible for this condition.",
     "o": [
@@ -114,11 +114,11 @@
       "Ergot alkaloids",
       "Fusarium toxin"
     ],
-    "a": 1
+    "a": 0
   },
   {
-    "id": "PG23C010",
-    "y": 2023,
+    "id": "PG21C010",
+    "y": 2021,
     "t": "CMD",
     "q": "A young male came to the hospital with a clean-cut wound without any bleeding. The patient received a full course of tetanus vaccination 10 years ago. What is the best management for this patient?",
     "o": [
@@ -127,11 +127,11 @@
       "Single-dose tetanus toxoid",
       "Full course tetanus toxoid"
     ],
-    "a": 2
+    "a": 0
   },
   {
-    "id": "PG23C011",
-    "y": 2023,
+    "id": "PG21C011",
+    "y": 2021,
     "t": "ENV",
     "q": "How is water collected for bacteriological examination during a disease outbreak?",
     "o": [
@@ -140,11 +140,11 @@
       "Water sample container is kept close to the tap avoid spillage",
       "Collect from a gentle stream of water to avoid splashing"
     ],
-    "a": 3
+    "a": 0
   },
   {
-    "id": "PG23C012",
-    "y": 2023,
+    "id": "PG21C012",
+    "y": 2021,
     "t": "CMD",
     "q": "A boys' hostel has an outbreak of fever cases with headache, followed by the development of pleomorphic rashes sparing palms and soles. What is the next best step in the management of suspected cases? VZIG-Varicella zoster immunoglobulin",
     "o": [
@@ -156,8 +156,8 @@
     "a": 2
   },
   {
-    "id": "PG23C013",
-    "y": 2023,
+    "id": "PG21C013",
+    "y": 2021,
     "t": "CMD",
     "q": "A 35-year-old homeless man presented with a 1-month history of fever, cough, and weight loss. Both sputum smears turned out to be negative, but the chest x-ray ordered was suggestive of tuberculosis. According to the recent NTEP guidelines, which is the next best line of management?",
     "o": [
@@ -166,11 +166,11 @@
       "Ask for line probe assay",
       "Wait until TB culture results to start ATT"
     ],
-    "a": 1
+    "a": 2
   },
   {
-    "id": "PG23C014",
-    "y": 2023,
+    "id": "PG21C014",
+    "y": 2021,
     "t": "HAD",
     "q": "Which of the following is the sensitive indicator to assess the availability, utilization, and effectiveness of healthcare in a community?",
     "o": [
@@ -179,11 +179,11 @@
       "Immunization coverage",
       "Disability-adjusted life years"
     ],
-    "a": 0
+    "a": 2
   },
   {
-    "id": "PG23C015",
-    "y": 2023,
+    "id": "PG21C015",
+    "y": 2021,
     "t": "NUT",
     "q": "The average daily dietary nutrient intake level sufficient to meet the nutrient requirements of nearly all (97-98%) healthy individuals in a particular life stage and gender group is known as?",
     "o": [
@@ -192,6 +192,7 @@
       "Estimated average requirement",
       "Recommended dietary allowance"
     ],
-    "a": 3
+    "a": 0
   }
+  
 ]
