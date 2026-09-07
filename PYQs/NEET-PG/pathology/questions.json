@@ -1,0 +1,159 @@
+[
+  {
+    "id": "PG23T001",
+    "y": 2023,
+    "t": "GNC",
+    "q": "Which of the following is true regarding the Mendelian mode of inheritance?",
+    "o": [
+      "Every 10th patient has a Y-linked disorder",
+      "1/3rd of Mendelian disorders is autosomal recessive",
+      "Every 5th patient has an X-linked recessive disorder",
+      "2/3rd of Mendelian disorders are autosomal dominant"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PG23T002",
+    "y": 2023,
+    "t": "HAM",
+    "q": "[Image: Peripheral smear with many round red cells showing reduced central pallor and dense staining.] A child presents with intermittent jaundice and splenomegaly. There is a history of similar complaints in the elder brother. Peripheral smear shows the following finding. How will you investigate this condition?",
+    "o": [
+      "Osmotic fragility test - Hereditary spherocytosis",
+      "Coombs test - AIHA",
+      "G6PD deficiency - Genetic testing",
+      "Paroxysmal nocturnal hemoglobinuria - Flow cytometry"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PG23T003",
+    "y": 2023,
+    "t": "HAM",
+    "q": "[Image: Biopsy field with sheets of large basophilic lymphoid cells and scattered pale macrophage-like cells.] An African child is found to have a mass in the jaw. A biopsy of the mass was done, and it appears as shown in the image below. The child also had a translocation of t(8;14). What is the probable diagnosis?",
+    "o": [
+      "Acute myeloid leukemia",
+      "Follicular lymphoma",
+      "Multiple myeloma",
+      "Burkitt lymphoma"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PG23T004",
+    "y": 2023,
+    "t": "RNP",
+    "q": "A child presented to the hospital with cola-colored urine, hypertension, and puffiness of eyes. Laboratory investigations were done, and creatinine was 2.5 mg/dL. Treatment was started, and despite treatment, the patient did not improve for the next 3 weeks. The creatinine value increased to 4.5 mg/dL. Which among the following electron microscopic findings will be seen in this patient?",
+    "o": [
+      "Subendothelial deposits",
+      "Subepithelial deposits",
+      "Crescent formation",
+      "Mesangial deposits"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PG23T005",
+    "y": 2023,
+    "t": "HAM",
+    "q": "A patient was transfused 4 units of blood 2 hours ago, and now she complains of chest discomfort. X-ray shows bilateral fissural thickening. Which of the following is the most probable cause?",
+    "o": [
+      "ABO incompatibility reactions",
+      "Fluid overload",
+      "Hypocalcemia",
+      "Graft-versus-host disease"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PG23T006",
+    "y": 2023,
+    "t": "RNP",
+    "q": "A 48-year-old man presents with complaints of facial puffiness, frothy urine, and hypertension. He gives a history of infection with hepatitis B. Urine examination reveals microscopic hematuria. The histopathological image of the kidney biopsy shows a spike and dome pattern. What is the diagnosis of this condition?",
+    "o": [
+      "Minimal change disease",
+      "Membranous nephropathy",
+      "FSGS",
+      "PSGN-associated disease"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PG23T007",
+    "y": 2023,
+    "t": "CVP",
+    "q": "[Image: Myocardial biopsy showing cardiac muscle fibers with a prominent interstitial inflammatory infiltrate.] A 5-year-old child is brought with fever, fatigue, and left ventricular dysfunction. An endomyocardial biopsy is shown below. What is the probable diagnosis?",
+    "o": [
+      "Acute rheumatic fever",
+      "Chagas disease",
+      "Pyogenic myocarditis",
+      "Lymphocytic myocarditis"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PG23T008",
+    "y": 2023,
+    "t": "RSP",
+    "q": "An elderly male is known as a smoker presented with chronic cough, significant weight loss, and fatigue. Serum calcium level is raised. A lung biopsy was done, and it showed large atypical cells with hyperchromasia. What is the probable diagnosis?",
+    "o": [
+      "Large cell neuroendocrine tumor",
+      "Small cell carcinoma",
+      "Adenocarcinoma",
+      "Squamous cell carcinoma"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PG23T009",
+    "y": 2023,
+    "t": "HAM",
+    "q": "[Image: Peripheral smear with numerous small mature lymphocyte-like cells and several smudged/fragile cell remnants.] An elderly male went for a medical examination. Laboratory investigations showed a marked elevation of lymphocytes with marked leukocytosis. The peripheral smear of the patient is given below. What is the appropriate next step for this patient?",
+    "o": [
+      "Stem cell transplantation",
+      "Bone marrow biopsy",
+      "Flow cytometry",
+      "Start high-dose chemotherapy"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PG23T010",
+    "y": 2023,
+    "t": "HAM",
+    "q": "[Image: Peripheral smear showing abnormal large granular cells with dark nuclei and prominent cytoplasmic granules.] A 25-year-old male presented with low hemoglobin, platelet count of 25,000/mL, gum bleeding, and raised PT & aPTT. The image of his peripheral smear is given below. What is the likely diagnosis?",
+    "o": [
+      "AML with t(8;21)",
+      "AML with inv(16)",
+      "AML with t(15;17)",
+      "AML with t(11;22)"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PG23T011",
+    "y": 2023,
+    "t": "HAM",
+    "q": "A young patient presents with a large retroperitoneal hemorrhage. He also gives a frequent history of intermittent swelling of knees on strenuous exercise. There is no history of any mucosal bleeding. Which among the following clotting factors is responsible for the condition mentioned above?",
+    "o": [
+      "Factors VIII and IX",
+      "Factors XI and XII",
+      "Von Willebrand factor",
+      "Lupus anticoagulant"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PG23T012",
+    "y": 2023,
+    "t": "RSP",
+    "q": "A chronic smoker who worked in a cement factory for 20 years developed mesothelioma. The association is likely to be due to ________.",
+    "o": [
+      "Silicosis",
+      "Asbestosis",
+      "Coal workers' pneumoconiosis",
+      "Bagassosis"
+    ],
+    "a": 1
+  }
+  
+]
