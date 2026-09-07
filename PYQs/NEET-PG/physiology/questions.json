@@ -1,27 +1,119 @@
-[{
-  "id": "PG23P001", "y": 2023, "t": "RES", "q": "Identify the marked region in the given spirometry.", "o": ["Functional residual capacity", "Tidal volume", "Expiratory reserve volume", "Expiratory capacity"], "a": 1, "image": ""
-},
+[
   {
-    "id": "PG23P002", "y": 2023, "t": "GNM", "q": "A man was brought to the emergency after suddenly becoming unconscious while working in the field. On examination, his temperature was 105 degrees Fahrenheit, and his skin turgor was decreased. Which of the following would not be seen in the patient?", "o": ["Tachypnea", "Hypotension", "Sweating", "Red hot skin"], "a": 3
+    "id": "PG23P001",
+    "y": 2023,
+    "t": "RES",
+    "q": "[Image: Volume-time spirometry trace with tidal oscillations, maximal inspiration near 6 L, and maximal expiration near the residual-volume range.] Identify the marked region in the given spirometry.",
+    "o": [
+      "Functional residual capacity",
+      "Tidal volume",
+      "Expiratory reserve volume",
+      "Expiratory capacity"
+    ],
+    "a": 0
   },
   {
-    "id": "PG23P003", "y": 2023, "t": "REN", "q": "Identify the correctly matched pair of substances with their renal clearance from the graph below.", "o": ["A-Glucose, B-PAH, C-Bicarbonate and D-Inulin", "A-Glucose, B-Bicarbonate, C-Inulin and D-PAH", "A-PAH, B-Inulin, C-Glucose and D-Bicarbonate", "A-Inulin, B-Glucose, C-Bicarbonate and D-PAH"], "a": 2, "image": ""
+    "id": "PG23P002",
+    "y": 2023,
+    "t": "GNM",
+    "q": "A man was brought to the emergency after suddenly becoming unconscious while working in the field. On examination, his temperature was 105 degrees Fahrenheit, and his skin turgor was decreased. Which of the following would not be seen in the patient?",
+    "o": [
+      "Tachypnea",
+      "Hypotension",
+      "Sweating",
+      "Red hot skin"
+    ],
+    "a": 2
   },
   {
-    "id": "PG23P004", "y": 2023, "t": "GNM", "q": "Identify the true statement regarding the given nerve action potential curve?", "o": ["The threshold point is at A", "At point E, the nerve is more excitable", "Point C to D is due to the opening of Na+ and closure of K+ channels", "Point B to D is a refractory period"], "a": 3, "image": ""
+    "id": "PG23P003",
+    "y": 2023,
+    "t": "REN",
+    "q": "[Image: Graph showing filtered load from Bowman’s space with four curves diverging along nephron segments.] Identify the correctly matched pair of substances with their renal clearance from the graph below.",
+    "o": [
+      "A-Glucose, B-PAH, C- Bicarbonate and D - Inulin",
+      "A-Glucose, B- Bicarbonate, C-Inulin and D - PAH",
+      "A-PAH, B-Inulin, C - Glucose and D - Bicarbonate",
+      "A - Inulin, B - Glucose, C - Bicarbonate and D - PAH"
+    ],
+    "a": 1
   },
   {
-    "id": "PG23P005", "y": 2023, "t": "GNM", "q": "Identify the type of transport across the cell membrane given below?", "o": ["Simple diffusion", "Facilitated diffusion", "Primary active transport", "Secondary active transport"], "a": 2, "image": ""
+    "id": "PG23P004",
+    "y": 2023,
+    "t": "GNM",
+    "q": "[Image: Nerve action-potential curve with threshold, rapid upstroke, repolarization, and after-hyperpolarization; points A–E are marked.] Identify the true statement regarding the given nerve action potential curve?",
+    "o": [
+      "The threshold point is at A",
+      "At point E, the nerve is more excitable",
+      "Point C to D is due to the opening of Na+ and closure of K+ channels",
+      "Point B to D is a refractory period"
+    ],
+    "a": 3
   },
   {
-    "id": "PG23P006", "y": 2023, "t": "RES", "q": "A preterm baby who was delivered at 28 weeks developed respiratory distress syndrome. Which of the following is true about surface tension and compliance in this baby?", "o": ["Surface tension - decreased; Compliance - increased", "Surface tension - increased; Compliance - decreased", "Both surface tension and compliance decreased", "Both surface tension and compliance increased"], "a": 2
+    "id": "PG23P005",
+    "y": 2023,
+    "t": "GNM",
+    "q": "[Image: Cell-membrane diagram showing solute movement through a protein channel and carrier proteins down a concentration gradient.] Identify the type of transport across the cell membrane given below?",
+    "o": [
+      "Simple diffusion",
+      "Facilitated diffusion",
+      "Primary active transport",
+      "Secondary active transport"
+    ],
+    "a": 1
   },
   {
-    "id": "PG23P007", "y": 2023, "t": "GNM", "q": "A patient came to the hospital after a road traffic accident. He had severe muscle injury, and his serum K+ level was found to be 5.5 mEq/L. What will happen to the resting membrane potential in this patient?", "o": ["No change", "Becomes more negative", "Becomes more positive", "First becomes more positive then negative"], "a": 3
+    "id": "PG23P006",
+    "y": 2023,
+    "t": "RES",
+    "q": "A preterm baby who was delivered at 28 weeks developed respiratory distress syndrome. Which of the following is true about surface tension and compliance in this baby?",
+    "o": [
+      "Surface tension - decreased; Compliance - increased",
+      "Surface tension - increased; Compliance - decreased",
+      "Both surface tension and compliance decreased",
+      "Both surface tension and compliance increased"
+    ],
+    "a": 1
   },
   {
-    "id": "PG23P008", "y": 2023, "t": "NPH", "q": "A patient met with a road traffic accident and developed a cervical spine injury. The fracture fragment had pierced the lateral aspect of the dorsal column tract. Which of the following findings is seen in this patient?", "o": ["Absence of ipsilateral lower limb proprioception", "Absence of fine motor movement of fingers", "Absence of ipsilateral arm proprioception", "Absence of contralateral lower limb proprioception"], "a": 3
+    "id": "PG23P007",
+    "y": 2023,
+    "t": "GNM",
+    "q": "A patient came to the hospital after a road traffic accident. He had severe muscle injury, and his serum K+ level was found to be 5.5 mEq/L. What will happen to the resting membrane potential in this patient?",
+    "o": [
+      "No change",
+      "Becomes more negative",
+      "Becomes more positive",
+      "First becomes more positive then negative"
+    ],
+    "a": 2
   },
   {
-    "id": "PG23P009", "y": 2023, "t": "CVS", "q": "Identify the true statement regarding the point marked(Red) on the myocardial action potential curve?", "o": ["Due to the opening of Na+ and closure of fast K+ channels", "Due to the slow but prolonged opening of Ca2+ channels", "Due to the closure of Na+ and opening of the slow K+ channel", "Due to Na+/K+ ATPase"], "a": 2, "image": ""
-  }]
+    "id": "PG23P008",
+    "y": 2023,
+    "t": "NPH",
+    "q": "A patient met with a road traffic accident and developed a cervical spine injury. The fracture fragment had pierced the lateral aspect of the dorsal column tract. Which of the following findings is seen in this patient?",
+    "o": [
+      "Absence of ipsilateral lower limb proprioception",
+      "Absence of fine motor movement of fingers",
+      "Absence of ipsilateral arm proprioception",
+      "Absence of contralateral lower limb proprioception"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PG23P009",
+    "y": 2023,
+    "t": "CVS",
+    "q": "[Image: Myocardial action-potential trace with rapid upstroke, prolonged plateau, and repolarization; a red point is marked on the plateau.] Identify the true statement regarding the point marked(Red) on the myocardial action potential curve?",
+    "o": [
+      "Due to the opening of Na+ and closure of fast K+ channels",
+      "Due to the slow but prolonged opening of Ca2+ channels",
+      "Due to the closure of Na+ and opening of the slow K+ channel",
+      "Due to Na+/K+ ATPase"
+    ],
+    "a": 1
+  }
+]
