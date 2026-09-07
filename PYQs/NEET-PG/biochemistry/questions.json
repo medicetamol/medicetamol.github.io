@@ -1,197 +1,301 @@
 [
-    {
-      "id": "PG23B001",
-      "y": 2023,
-      "t": "Vitamins",
-      "q": "Which of the following clotting factors is needed for gamma-glutamyl carboxylase?",
-      "o": [
-        "Factors II, VIII, IX, X",
-        "Factors II, VII, IX, and X",
-        "Factors II, VII, IX, XI",
-        "Factors II, VIII, X, XI"
-      ],
-      "a": 2
-    },
-    {
-      "id": "PG23B002",
-      "y": 2023,
-      "t": "Vitamins",
-      "q": "A patient presented with diarrhea, dermatitis, and dementia. Which of the following vitamin deficiencies would you suspect in this patient?",
-      "o": [
-        "Vitamin B3 deficiency",
-        "Vitamin B1 deficiency",
-        "Vitamin B6 deficiency",
-        "Vitamin B12 deficiency"
-      ],
-      "a": 1
-    },
-    {
-      "id": "PG23B003",
-      "y": 2023,
-      "t": "Carbohydrate Metabolism",
-      "q": "A young boy presents to the OPD with hypoglycemia and muscle cramps, on exertion or while playing. Then he becomes normal after resting for a while. These episodes are recurrent after a period of activity. He has decreased serum lactate and glucose levels. Which of the following diseases is he most likely to be suffering from?",
-      "o": [
-        "McArdle disease",
-        "Hers disease",
-        "Cori's disease",
-        "Andersen disease"
-      ],
-      "a": 1
-    },
-    {
-      "id": "PG23B004",
-      "y": 2023,
-      "t": "Vitamins",
-      "q": "A family consumes only polished rice. Which of the following combinations of vitamin deficiency and enzymatic defect will be present in this family?",
-      "o": [
-        "Riboflavin-glutathione reductase",
-        "Thiamine-transketolase",
-        "Thiamine-transaminase",
-        "Riboflavin-transketolase"
-      ],
-      "a": 2
-    },
-    {
-      "id": "PG23B005",
-      "y": 2023,
-      "t": "Vitamins",
-      "q": "A chronic alcoholic patient presented to the casualty with confusion, ataxia, and painful eye movements. What could be the vitamin deficiency seen in this patient?",
-      "o": [
-        "Vitamin B deficiency",
-        "Vitamin A deficiency",
-        "Vitamin D deficiency",
-        "Vitamin C deficiency"
-      ],
-      "a": 1
-    },
-    {
-      "id": "PG23B006",
-      "y": 2023,
-      "t": "Carbohydrate Metabolism",
-      "q": "A 4-year-old child presents with easy fatigability. The mother also complains that the child has increased hunger between meals, which is relieved after food. Liver examination revealed no glycogen. The enzyme most likely deficient is?",
-      "o": [
-        "Glycogen phosphorylase",
-        "Glycogen synthase",
-        "Debranching enzyme",
-        "Glucose 6 phosphatase"
-      ],
-      "a": 2
-    },
-    {
-      "id": "PG23B007",
-      "y": 2023,
-      "t": "Vitamins",
-      "q": "A child was bought with pedal edema and cheilosis. Cardiomegaly was present. What is the vitamin deficiency associated with this clinical presentation?",
-      "o": [
-        "Riboflavin",
-        "Thiamine",
-        "Pyridoxine",
-        "Niacin"
-      ],
-      "a": 2
-    },
-    {
-      "id": "PG23B008",
-      "y": 2023,
-      "t": "Vitamins",
-      "q": "A chronic alcoholic patient is diagnosed with gouty arthritis. What biochemical changes will be seen in this patient?",
-      "o": [
-        "Decreased NADH/NAD+ ratio",
-        "Increased urea and urate levels",
-        "Increased urate and lactate levels",
-        "Increased level of alkaline phosphatase"
-      ],
-      "a": 3
-    },
-    {
-      "id": "PG23B009",
-      "y": 2023,
-      "t": "Enzymes",
-      "q": "A child presents with erythematous scaly patches in the perioral region, mucosal ulcers, and impaired epithelial wound healing. The most likely mineral deficiency associated with this condition is?",
-      "o": [
-        "Iron deficiency",
-        "Zinc deficiency",
-        "Calcium deficiency",
-        "Copper deficiency"
-      ],
-      "a": 2
-    },
-    {
-      "id": "PG23B010",
-      "y": 2023,
-      "t": "Vitamins",
-      "q": "A patient presenting with bleeding gums and easy bruisability was diagnosed with scurvy. This is due to",
-      "o": [
-        "Low calcium",
-        "Defective collagen formation",
-        "Inhibition of clotting factors",
-        "Increased keratinization of epithelium"
-      ],
-      "a": 2
-    },
-    {
-      "id": "PG23B011",
-      "y": 2023,
-      "t": "Introduction",
-      "q": "Which of the following is seen in low insulin: glucagon ratio?",
-      "o": [
-        "Activation of lipoprotein lipase",
-        "Activation of glycogen synthase",
-        "Activation of phosphofructokinase 1",
-        "Activation of hormone-sensitive lipase"
-      ],
-      "a": 4
-    },
-    {
-      "id": "PG23B012",
-      "y": 2023,
-      "t": "Amino Acids and Proteins Chemistry",
-      "q": "An infant is brought by his parents with complaints that his urine turns black on standing. Which of the following metabolic disorders is likely?",
-      "o": [
-        "Phenylketonuria",
-        "Alkaptonuria",
-        "Homocystinuria",
-        "Maple syrup urine disease"
-      ],
-      "a": 2
-    },
-    {
-      "id": "PG23B013",
-      "y": 2023,
-      "t": "Vitamins",
-      "q": "A child presents with thinning of hair and scaling of the scalp. On taking further history, it is found that she consumes raw eggs in her diet regularly. The given manifestations are due to the deficiency of which of the following vitamins?",
-      "o": [
-        "Niacin",
-        "Pyridoxine",
-        "Biotin",
-        "Thiamine"
-      ],
-      "a": 3
-    },
-    {
-      "id": "PG23B014",
-      "y": 2023,
-      "t": "Lipid Metabolism",
-      "q": "A child presents with mental retardation, bone pain, and inability to walk. On funduscopic examination, a cherry red spot is seen. There is no organomegaly. What is the most likely diagnosis?",
-      "o": [
-        "Tay-Sachs disease",
-        "Niemann-Pick disease",
-        "Hurler syndrome",
-        "Gaucher disease"
-      ],
-      "a": 1
-    },
-    {
-      "id": "PG23B015",
-      "y": 2023,
-      "t": "Lipid Metabolism",
-      "q": "Image: Bone-marrow aspirate showing a large pale macrophage-like cell containing coarse/fibrillary cytoplasmic material among hematopoietic cells.\nA child presents with bone pain and hepatosplenomegaly. A trephine biopsy and aspirate show the following finding. Which of the following is the most likely enzyme deficient in this condition?",
-      "o": [
-        "Hexosaminidase",
-        "Glucocerebrosidase",
-        "Sphingomyelinase",
-        "Alpha 1,4-glucosidase"
-      ],
-      "a": 2
-    }
-  ]
+  {
+    "id": "PGBC001",
+    "y": 2023,
+    "t": "VIT",
+    "q": "Which of the following clotting factors is needed for gamma-glutamyl carboxylase?",
+    "o": [
+      "Factors II, VIII, IX, X",
+      "Factors II, VII, IX, and X",
+      "Factors II, VII, IX, XI",
+      "Factors II, VIII, X, XI"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC002",
+    "y": 2023,
+    "t": "VIT",
+    "q": "A patient presented with diarrhea, dermatitis, and dementia. Which of the following vitamin deficiencies would you suspect in this patient?",
+    "o": [
+      "Vitamin B3 deficiency",
+      "Vitamin B1 deficiency",
+      "Vitamin B6 deficiency",
+      "Vitamin B12 deficiency"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC003",
+    "y": 2023,
+    "t": "CAR",
+    "q": "A young boy presents to the OPD with hypoglycemia and muscle cramps, on exertion or while playing. Then he becomes normal after resting for a while. These episodes are recurrent after a period of activity. He has decreased serum lactate and glucose levels. Which of the following diseases is he most likely to be suffering from?",
+    "o": [
+      "McArdle disease",
+      "Hers disease",
+      "Cori's disease",
+      "Andersen disease"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC004",
+    "y": 2023,
+    "t": "VIT",
+    "q": "A family consumes only polished rice. Which of the following combinations of vitamin deficiency and enzymatic defect will be present in this family?",
+    "o": [
+      "Riboflavin-glutathione reductase",
+      "Thiamine-transketolase",
+      "Thiamine-transaminase",
+      "Riboflavin-transketolase"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC005",
+    "y": 2023,
+    "t": "VIT",
+    "q": "A chronic alcoholic patient presented to the casualty with confusion, ataxia, and painful eye movements. What could be the vitamin deficiency seen in this patient?",
+    "o": [
+      "Vitamin B deficiency",
+      "Vitamin A deficiency",
+      "Vitamin D deficiency",
+      "Vitamin C deficiency"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC006",
+    "y": 2023,
+    "t": "CAR",
+    "q": "A 4-year-old child presents with easy fatigability. The mother also complains that the child has increased hunger between meals, which is relieved after food. Liver examination revealed no glycogen. The enzyme most likely deficient is?",
+    "o": [
+      "Glycogen phosphorylase",
+      "Glycogen synthase",
+      "Debranching enzyme",
+      "Glucose 6 phosphatase"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC007",
+    "y": 2023,
+    "t": "VIT",
+    "q": "A child was bought with pedal edema and cheilosis. Cardiomegaly was present. What is the vitamin deficiency associated with this clinical presentation?",
+    "o": [
+      "Riboflavin",
+      "Thiamine",
+      "Pyridoxine",
+      "Niacin"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC008",
+    "y": 2023,
+    "t": "VIT",
+    "q": "A chronic alcoholic patient is diagnosed with gouty arthritis. What biochemical changes will be seen in this patient?",
+    "o": [
+      "Decreased NADH/NAD+ ratio",
+      "Increased urea and urate levels",
+      "Increased urate and lactate levels",
+      "Increased level of alkaline phosphatase"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGBC009",
+    "y": 2023,
+    "t": "ENZ",
+    "q": "A child presents with erythematous scaly patches in the perioral region, mucosal ulcers, and impaired epithelial wound healing. The most likely mineral deficiency associated with this condition is?",
+    "o": [
+      "Iron deficiency",
+      "Zinc deficiency",
+      "Calcium deficiency",
+      "Copper deficiency"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC010",
+    "y": 2023,
+    "t": "VIT",
+    "q": "A patient presenting with bleeding gums and easy bruisability was diagnosed with scurvy. This is due to",
+    "o": [
+      "Low calcium",
+      "Defective collagen formation",
+      "Inhibition of clotting factors",
+      "Increased keratinization of epithelium"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC011",
+    "y": 2023,
+    "t": "GEN",
+    "q": "Which of the following is seen in low insulin: glucagon ratio?",
+    "o": [
+      "Activation of lipoprotein lipase",
+      "Activation of glycogen synthase",
+      "Activation of phosphofructokinase 1",
+      "Activation of hormone-sensitive lipase"
+    ],
+    "a": 4
+  },
+  {
+    "id": "PGBC012",
+    "y": 2023,
+    "t": "AMN",
+    "q": "An infant is brought by his parents with complaints that his urine turns black on standing. Which of the following metabolic disorders is likely?",
+    "o": [
+      "Phenylketonuria",
+      "Alkaptonuria",
+      "Homocystinuria",
+      "Maple syrup urine disease"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC013",
+    "y": 2023,
+    "t": "VIT",
+    "q": "A child presents with thinning of hair and scaling of the scalp. On taking further history, it is found that she consumes raw eggs in her diet regularly. The given manifestations are due to the deficiency of which of the following vitamins?",
+    "o": [
+      "Niacin",
+      "Pyridoxine",
+      "Biotin",
+      "Thiamine"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGBC014",
+    "y": 2023,
+    "t": "LIP",
+    "q": "A child presents with mental retardation, bone pain, and inability to walk. On funduscopic examination, a cherry red spot is seen. There is no organomegaly. What is the most likely diagnosis?",
+    "o": [
+      "Tay-Sachs disease",
+      "Niemann-Pick disease",
+      "Hurler syndrome",
+      "Gaucher disease"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC015",
+    "y": 2023,
+    "t": "LIP",
+    "q": "[Image: Bone-marrow aspirate showing a large pale macrophage-like cell containing coarse/fibrillary cytoplasmic material among hematopoietic cells] A child presents with bone pain and hepatosplenomegaly. A trephine biopsy and aspirate show the following finding. Which of the following is the most likely enzyme deficient in this condition?",
+    "o": [
+      "Hexosaminidase",
+      "Glucocerebrosidase",
+      "Sphingomyelinase",
+      "Alpha 1,4-glucosidase"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC016",
+    "y": 2021,
+    "t": "VIT",
+    "q": "A patient on a maize diet presented with diarrhea, dementia and dysentry . Which vitamin deficiency is responsible for the features",
+    "o": [
+      "Niacin",
+      "Thiamine",
+      "Riboflavin",
+      "Pyridoxine"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC017",
+    "y": 2021,
+    "t": "VIT",
+    "q": "A patient presented with dryness in eye with a gritty sensation along with corneal softening. What is the most probable cause ?",
+    "o": [
+      "Vitamin A deficiency",
+      "Riboflavin Deficiency",
+      "Viral Keratitis",
+      "Follicular conjunctivitis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC018",
+    "y": 2021,
+    "t": "AMN",
+    "q": "Which amino acid needs to be supplemented through diet in patient with cystathionine beta synthase",
+    "o": [
+      "Cysteine",
+      "Methionine",
+      "Serine",
+      "Tryptophan"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC019",
+    "y": 2021,
+    "t": "CAR",
+    "q": "Corneal Transparency is maintained by which of the following GAGs",
+    "o": [
+      "Keratan Sulphate",
+      "Dermatan Sulphate",
+      "Heparan Sulphate",
+      "Chondroitin Sulphate"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC020",
+    "y": 2021,
+    "t": "MOL",
+    "q": "Which of the following is associated with defect in mismatch repair",
+    "o": [
+      "Hereditary NPCC",
+      "SCID",
+      "Bloom Disorder",
+      "MUTYH Associated Polyposis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC021",
+    "y": 2021,
+    "t": "CAR",
+    "q": "A patient had dinner at 8 PM in the night and dose his blood sugar test at 7 AM in the morning. What is the major source of glucose",
+    "o": [
+      "Muscle Glycogen",
+      "Liver Glycogen",
+      "Gluconeogenesis",
+      "Dietary Carbohydrate"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC022",
+    "y": 2021,
+    "t": "LIP",
+    "q": "A patient with tendon xanthomas , Increased LDL and cholesterol . What is the most probable diagnosis ?",
+    "o": [
+      "Type I Hyperlipoproteinemia",
+      "Type II Hyperlipoproteinemia",
+      "Type III Hyperlipoproteinemia",
+      "Abetalipoproteinemia"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC023",
+    "y": 2021,
+    "t": "AMN",
+    "q": "A 5 year old child was brought to the physician with a history of black urine . There is no history of fever or any other complaints. There is no growth retardation and all the developmental milestones are normal. The child is suspected to have an enzyme defect for metabolism of an aromatic amino acid. What is the enzyme deficient ?",
+    "o": [
+      "Homogentistae oxidase",
+      "Homogentisate dehydrogenase",
+      "Tryptophan Hydroxylase",
+      "Tyrosine Transaminase"
+    ],
+    "a": 0
+  }
+]
