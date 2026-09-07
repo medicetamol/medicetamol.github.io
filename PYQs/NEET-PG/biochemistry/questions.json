@@ -198,7 +198,7 @@
     "id": "PGBC016",
     "y": 2021,
     "t": "VIT",
-    "q": "A patient on a maize diet presented with diarrhea, dementia and dysentry . Which vitamin deficiency is responsible for the features",
+    "q": "A patient on a maize diet presented with diarrhea, dementia and dysentery. Which vitamin deficiency is responsible for the features?",
     "o": [
       "Niacin",
       "Thiamine",
@@ -211,7 +211,7 @@
     "id": "PGBC017",
     "y": 2021,
     "t": "VIT",
-    "q": "A patient presented with dryness in eye with a gritty sensation along with corneal softening. What is the most probable cause ?",
+    "q": "A patient presented with dryness in eye with a gritty sensation along with corneal softening. What is the most probable cause?",
     "o": [
       "Vitamin A deficiency",
       "Riboflavin Deficiency",
@@ -223,8 +223,8 @@
   {
     "id": "PGBC018",
     "y": 2021,
-    "t": "AMN",
-    "q": "Which amino acid needs to be supplemented through diet in patient with cystathionine beta synthase",
+    "t": "PRO",
+    "q": "Which amino acid needs to be supplemented through diet in patient with cystathionine beta synthase deficiency?",
     "o": [
       "Cysteine",
       "Methionine",
@@ -237,7 +237,7 @@
     "id": "PGBC019",
     "y": 2021,
     "t": "CAR",
-    "q": "Corneal Transparency is maintained by which of the following GAGs",
+    "q": "Corneal Transparency is maintained by which of the following GAGs?",
     "o": [
       "Keratan Sulphate",
       "Dermatan Sulphate",
@@ -250,7 +250,7 @@
     "id": "PGBC020",
     "y": 2021,
     "t": "MOL",
-    "q": "Which of the following is associated with defect in mismatch repair",
+    "q": "Which of the following is associated with defect in mismatch repair?",
     "o": [
       "Hereditary NPCC",
       "SCID",
@@ -263,7 +263,7 @@
     "id": "PGBC021",
     "y": 2021,
     "t": "CAR",
-    "q": "A patient had dinner at 8 PM in the night and dose his blood sugar test at 7 AM in the morning. What is the major source of glucose",
+    "q": "A patient had dinner at 8 PM in the night and does his blood sugar test at 7 AM in the morning. What is the major source of glucose?",
     "o": [
       "Muscle Glycogen",
       "Liver Glycogen",
@@ -276,7 +276,7 @@
     "id": "PGBC022",
     "y": 2021,
     "t": "LIP",
-    "q": "A patient with tendon xanthomas , Increased LDL and cholesterol . What is the most probable diagnosis ?",
+    "q": "A patient with tendon xanthomas, Increased LDL and cholesterol. What is the most probable diagnosis?",
     "o": [
       "Type I Hyperlipoproteinemia",
       "Type II Hyperlipoproteinemia",
@@ -288,14 +288,14 @@
   {
     "id": "PGBC023",
     "y": 2021,
-    "t": "AMN",
-    "q": "A 5 year old child was brought to the physician with a history of black urine . There is no history of fever or any other complaints. There is no growth retardation and all the developmental milestones are normal. The child is suspected to have an enzyme defect for metabolism of an aromatic amino acid. What is the enzyme deficient ?",
+    "t": "PRO",
+    "q": "A 5 year old child was brought to the physician with a history of black urine. There is no history of fever or any other complaints. There is no growth retardation and all the developmental milestones are normal. The child is suspected to have an enzyme defect for metabolism of an aromatic amino acid. What is the enzyme deficient?",
     "o": [
-      "Homogentistae oxidase",
+      "Homogentisate oxidase",
       "Homogentisate dehydrogenase",
       "Tryptophan Hydroxylase",
       "Tyrosine Transaminase"
     ],
     "a": 0
   }
-]
+  ]
