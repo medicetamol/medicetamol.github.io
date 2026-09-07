@@ -1,6 +1,6 @@
 [
   {
-    "id": "PGPY001",
+    "id": "PGPH001",
     "y": 2023,
     "t": "RES",
     "q": "[Image: Spirometry volume-time graph showing tidal breathing with a marked region between the end of normal expiration and maximal expiration] Identify the marked region in the given spirometry.",
@@ -10,12 +10,12 @@
       "Expiratory reserve volume",
       "Expiratory capacity"
     ],
-    "a": 1
+    "a": 0
   },
   {
-    "id": "PGPY002",
+    "id": "PGPH002",
     "y": 2023,
-    "t": "GEN",
+    "t": "GNM",
     "q": "A man was brought to the emergency after suddenly becoming unconscious while working in the field. On examination, his temperature was 105 degrees Fahrenheit, and his skin turgor was decreased. Which of the following would not be seen in the patient?",
     "o": [
       "Tachypnea",
@@ -23,10 +23,10 @@
       "Sweating",
       "Red hot skin"
     ],
-    "a": 3
+    "a": 2
   },
   {
-    "id": "PGPY003",
+    "id": "PGPH003",
     "y": 2023,
     "t": "REN",
     "q": "[Image: Graph showing changes in filtered load/renal handling of different substances along the nephron, with curves labelled A, B, C and D] Identify the correctly matched pair of substances with their renal clearance from the graph below.",
@@ -36,12 +36,12 @@
       "A-PAH, B-Inulin, C - Glucose and D - Bicarbonate",
       "A - Inulin, B - Glucose, C - Bicarbonate and D - PAH"
     ],
-    "a": 2
+    "a": 1
   },
   {
-    "id": "PGPY004",
+    "id": "PGPH004",
     "y": 2023,
-    "t": "NMP",
+    "t": "GNM",
     "q": "[Image: Nerve action-potential curve showing threshold, depolarization, repolarization and after-hyperpolarization, with points A to E marked] Identify the true statement regarding the given nerve action potential curve?",
     "o": [
       "The threshold point is at A",
@@ -49,12 +49,12 @@
       "Point C to D is due to the opening of Na+ and closure of K+ channels",
       "Point B to D is a refractory period"
     ],
-    "a": 4
+    "a": 3
   },
   {
-    "id": "PGPY005",
+    "id": "PGPH005",
     "y": 2023,
-    "t": "GEN",
+    "t": "GNM",
     "q": "[Image: Cell membrane diagram showing movement of a substance through a membrane protein down its concentration gradient without direct ATP use] Identify the type of transport across the cell membrane given below?",
     "o": [
       "Simple diffusion",
@@ -62,10 +62,10 @@
       "Primary active transport",
       "Secondary active transport"
     ],
-    "a": 2
+    "a": 1
   },
   {
-    "id": "PGPY006",
+    "id": "PGPH006",
     "y": 2023,
     "t": "RES",
     "q": "A preterm baby who was delivered at 28 weeks developed respiratory distress syndrome. Which of the following is true about surface tension and compliance in this baby?",
@@ -75,12 +75,12 @@
       "Both surface tension and compliance decreased",
       "Both surface tension and compliance increased"
     ],
-    "a": 2
+    "a": 1
   },
   {
-    "id": "PGPY007",
+    "id": "PGPH007",
     "y": 2023,
-    "t": "NMP",
+    "t": "GNM",
     "q": "A patient came to the hospital after a road traffic accident. He had severe muscle injury, and his serum K+ level was found to be 5.5 mEq/L. What will happen to the resting membrane potential in this patient?",
     "o": [
       "No change",
@@ -88,12 +88,12 @@
       "Becomes more positive",
       "First becomes more positive then negative"
     ],
-    "a": 3
+    "a": 2
   },
   {
-    "id": "PGPY008",
+    "id": "PGPH008",
     "y": 2023,
-    "t": "CNS",
+    "t": "NPH",
     "q": "A patient met with a road traffic accident and developed a cervical spine injury. The fracture fragment had pierced the lateral aspect of the dorsal column tract. Which of the following findings is seen in this patient?",
     "o": [
       "Absence of ipsilateral lower limb proprioception",
@@ -101,10 +101,10 @@
       "Absence of ipsilateral arm proprioception",
       "Absence of contralateral lower limb proprioception"
     ],
-    "a": 3
+    "a": 2
   },
   {
-    "id": "PGPY009",
+    "id": "PGPH009",
     "y": 2023,
     "t": "CVS",
     "q": "[Image: Myocardial action-potential curve showing rapid depolarization followed by a prolonged plateau and repolarization, with a red point marked on the plateau phase] Identify the true statement regarding the point marked(Red) on the myocardial action potential curve?",
@@ -114,7 +114,7 @@
       "Due to the closure of Na+ and opening of the slow K+ channel",
       "Due to Na+/K+ ATPase"
     ],
-    "a": 2
+    "a": 1
   },
   {
     "id": "PGPH010",
