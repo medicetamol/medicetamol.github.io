@@ -1,0 +1,67 @@
+[
+  {
+    "id": "PGAS001",
+    "y": 2021,
+    "t": "AMM",
+    "q": "A 30 year old male was intubated for surgery. The best method to confirm the position of Endotracheal tube is",
+    "o": [
+      "X-ray chest",
+      "Auscultation",
+      "Capnography",
+      "Chest expansion"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGAS002",
+    "y": 2021,
+    "t": "AAW",
+    "q": "[Image: Airway manoeuvre with the head and neck positioned to maintain airway patency] Identify the manoeuvre.",
+    "o": [
+      "Head tilt, chin lift",
+      "Jaw thrust",
+      "In line manual stabilization",
+      "Head stabilization"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAS003",
+    "y": 2021,
+    "t": "ARG",
+    "q": "A young male was given regional anaesthesia with 0.25% bupivacaine. The pt. Become unresponsive & pulse become unrecordable. Best Management would be",
+    "o": [
+      "CPCR with 20% Intralipid",
+      "CPCR with sod. Bicarbonate",
+      "CPCR with dobutamine",
+      "CPCR with calcium"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAS004",
+    "y": 2021,
+    "t": "ARG",
+    "q": "While doing lumbar puncture, last structure to be encountered will be in a patient who presented with fever, neck rigidity & altered sensorium",
+    "o": [
+      "Arachnoid membrane",
+      "Ligamentum flavum",
+      "Dura mater",
+      "Pia mater"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAS005",
+    "y": 2021,
+    "t": "AIV",
+    "q": "A pt. Is undergoing surgery where anaesthesia is maintained on halothane. The pt. Developed hyperthermia & m/s rigidity. Which of the agents is responsible?",
+    "o": [
+      "D-tubocurarine",
+      "Suxamethonium",
+      "Cisatracurium",
+      "Rocuronium"
+    ],
+    "a": 1
+  }
+]
