@@ -38,9 +38,9 @@ function resolveImage(
   id: string
 ): string | undefined {
   if (!image) return undefined;
-  if (image === true) return `PYQs/${exam}/${subjectId}/images/${id}.webp`;
+  if (image === true) return `/PYQs/${exam}/${subjectId}/images/${id}.webp`;
   if (image.startsWith("http")) return image;
-  return `PYQs/${exam}/${subjectId}/images/${image}`;
+  return `/PYQs/${exam}/${subjectId}/images/${image}`;
 }
 
 function parseQuestions(
