@@ -1,0 +1,93 @@
+[
+  {
+    "id": "PGEN001",
+    "y": 2021,
+    "t": "NOS",
+    "q": "A women visited ENT opd with nasal obstruction. On examination greenish black crusts were present in the nasal cavity covering turbinate and septum. She also had merciful anosmia. What other sign will you find in this case on examination?",
+    "o": [
+      "Polyp",
+      "Hypertrophied inferior turbinate",
+      "Roomy nasal cavity",
+      "Foreign antibody"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN002",
+    "y": 2021,
+    "t": "NOS",
+    "q": "A 35 year old male presented with epistaxis. Conservative management was done to stop the bleeding which failed. What is the next step of management?",
+    "o": [
+      "Endoscopic Sphenopalantine artery ligation",
+      "ICA ligation",
+      "ECA ligation",
+      "Maxillary artery ligation"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN003",
+    "y": 2021,
+    "t": "INS",
+    "q": "[Image: Two small glass vials containing white powder] Which of the following is the topical use of the medicine shown in the image?",
+    "o": [
+      "Subglottic stenosis",
+      "Inlay type I myringoplasty",
+      "Post-adenoidectomy to control bleeding",
+      "Rhino cerebral mucormycosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN004",
+    "y": 2021,
+    "t": "PHR",
+    "q": "A post tonsillectomy child was lying in the ward. He started bleeding in the ward. Which of the following should be done?",
+    "o": [
+      "Take to OT, remove the clot & re-ligation",
+      "Take to OT & pressure packing",
+      "Cautery",
+      "Conservative management"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN005",
+    "y": 2021,
+    "t": "EAR",
+    "q": "[Image: CT brain shows a well-defined ring lesion with a central low-density area in the temporal region] Identify the diagnosis.",
+    "o": [
+      "Extradural Abscess",
+      "Cerebral Abscess",
+      "Temporal lobe Abscess",
+      "Meningitis"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGEN006",
+    "y": 2021,
+    "t": "PHR",
+    "q": "[Image: Sagittal head-and-neck illustration with a marked structure in the oropharyngeal region] Identify the marked nerve.",
+    "o": [
+      "Vagus",
+      "Facial nerve",
+      "Glossopharyngeal nerve",
+      "Trigeminal nerve"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGEN007",
+    "y": 2021,
+    "t": "PHR",
+    "q": "[Image: Histological section showing a large rounded papillary structure with surrounding epithelial folds] Identify the structure.",
+    "o": [
+      "Circumvallate",
+      "Fungiform",
+      "Filiform",
+      "Foliate"
+    ],
+    "a": 2
+  }
+]
