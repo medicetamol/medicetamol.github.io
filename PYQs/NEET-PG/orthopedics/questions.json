@@ -1,0 +1,106 @@
+[
+  {
+    "id": "PGOR001",
+    "y": 2021,
+    "t": "SPN",
+    "q": "A 26 years old male with backache, morning stiffness, chest expansion and reddening of eyes with an X-ray presented in OPD. Most likely diagnosis for this patient is",
+    "o": [
+      "Rheumatoid arthritis",
+      "Ankylosing spondylitis",
+      "Paget's disease",
+      "Osteopetrosis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR002",
+    "y": 2021,
+    "t": "NMM",
+    "q": "60 year old elderly female with previous h/o colles fracture is complaining of backache. Which of the given statement is wrong in relation to treatment of this patient?",
+    "o": [
+      "Teriparatide should be started before supplementing bisphosphonates",
+      "Bisphosphonates not given for more than a year",
+      "Calcium requirement is 1200mg per day",
+      "Oral vit D3 given along with oral calcium"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOR003",
+    "y": 2021,
+    "t": "FLL",
+    "q": "A patient fell down from bicycle & started having pain around hip, shortening of limb & attitude was flexion, adduction, IR of hip",
+    "o": [
+      "Anterior dislocation",
+      "Transcervical fracture",
+      "Posterior dislocation",
+      "IT Fracture"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOR004",
+    "y": 2021,
+    "t": "SPN",
+    "q": "A 20 year old patient presenting with chronic low backache and early morning stiffness since last 2 years. Since 6 months there are bilateral heel pain also. Most likely diagnosis for this patient is –",
+    "o": [
+      "TB spine",
+      "Ankylosing spondylitis",
+      "Mechanical pain",
+      "Disc prolapsed"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR005",
+    "y": 2021,
+    "t": "SPN",
+    "q": "[Image: Spinal radiograph showing bilateral sacroiliac changes and thin marginal bony bridges] Identify the diagnosis.",
+    "o": [
+      "Rheumatoid arthritis",
+      "Ankylosing spondylitis",
+      "Paget's disease",
+      "Osteopetrosis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR006",
+    "y": 2021,
+    "t": "NMM",
+    "q": "60 year old elderly female with previous h/o colles fracture is complaining of backache. Which of the given statement is wrong in relation to treatment of this patient?",
+    "o": [
+      "Teriparatide should be started before supplementing bisphosphonates",
+      "Bisphosphonates not given for more than a year",
+      "Calcium requirement is 1200mg per day",
+      "Oral vit D3 given along with oral calcium"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOR007",
+    "y": 2021,
+    "t": "FLL",
+    "q": "A patient fell down from bicycle & started having pain around hip, shortening of limb & attitude was flexion, adduction, IR of hip",
+    "o": [
+      "Anterior dislocation",
+      "Transcervical fracture",
+      "Posterior dislocation",
+      "IT Fracture"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOR008",
+    "y": 2021,
+    "t": "SPN",
+    "q": "A 20 year old patient presenting with chronic low backache and early morning stiffness since last 2 years. Since 6 months there are bilateral heel pain also. Most likely diagnosis for this patient is –",
+    "o": [
+      "TB spine",
+      "Ankylosing spondylitis",
+      "Mechanical pain",
+      "Disc prolapsed"
+    ],
+    "a": 1
+  }
+]
