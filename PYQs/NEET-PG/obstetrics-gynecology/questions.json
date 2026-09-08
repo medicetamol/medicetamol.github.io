@@ -1,0 +1,302 @@
+[
+  {
+    "id": "PGOG001",
+    "y": 2021,
+    "t": "NPA",
+    "q": "A Pregnant woman came for a routine antenatal checkup. She had a history of twin pregnancy 1 year ago. What will be gravida and para?",
+    "o": [
+      "G2P2",
+      "G2P3",
+      "G2P1",
+      "G2P0"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG002",
+    "y": 2021,
+    "t": "HRP",
+    "q": "A Hypertensive patient wants to conceive. Which of the following medicines needs to be Stopped?",
+    "o": [
+      "Calcium Channel Blockers",
+      "ACE inhibitors",
+      "Alpha Methyl dopa",
+      "Labetolol"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG003",
+    "y": 2021,
+    "t": "MNA",
+    "q": "A 27 year old woman who had delivered a female child 9 months back, came to the gynaecologist with complaints of absent periods since child birth. She has been using contraceptive methods as a family control measure. She was advised to get her serum beta hCG levels tested, which came out as 4.9 mIU/ml. Her prolactin level was 88ng/ml, and TSH was 3.8. What could be the reason for amenorrhea in this case?",
+    "o": [
+      "Normal pregnancy",
+      "Lactational amenorrhea",
+      "Hypothyroidism",
+      "Prolactinoma"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG004",
+    "y": 2021,
+    "t": "FTP",
+    "q": "Uterine didelphys will cause all of the following symptoms except?",
+    "o": [
+      "Transverse lie",
+      "Endometriosis",
+      "Repeated abortion",
+      "Premature labor"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG005",
+    "y": 2021,
+    "t": "FTP",
+    "q": "Management of uterine septum?",
+    "o": [
+      "Laparoscopic resection of septum",
+      "Hysteroscopic resection of septum",
+      "Uterine metroplasty",
+      "Laparotomy and resection"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG006",
+    "y": 2021,
+    "t": "IPR",
+    "q": "[Image: Pelvic radiograph with contrast filling the uterine cavity and extending into both fallopian tubes] What is the modality of this test?",
+    "o": [
+      "Hysterosalpingography",
+      "Laparoscopy",
+      "Hysteroscopy",
+      "Saline infusion sonography"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG007",
+    "y": 2021,
+    "t": "HRP",
+    "q": "A 24 year old female pt. With weeks of amenorrhea, left adnexal mass on USG, B-hcg 2500, no fetal heart rate. What's the management?",
+    "o": [
+      "Expectant management",
+      "Salpingectomy",
+      "Single dose methotrexate",
+      "Milking of tube"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG008",
+    "y": 2021,
+    "t": "IFR",
+    "q": "H/o primary infertility, 2 fibroids in the cornua, & both sides tubal blockage, ovulation of women & semen analysis is normal. Treatment?",
+    "o": [
+      "ART",
+      "Lap Myomectomy",
+      "Hysterectomy",
+      "Uterine artery embolization"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG009",
+    "y": 2021,
+    "t": "CNT",
+    "q": "Lady using OCP since 5 month. Amenorrhea since last 6 weeks. Which is best to calculate gestational age in this case?",
+    "o": [
+      "280 days from LMP",
+      "256 days from LMP",
+      "CRL by USG",
+      "Abdominal girth"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG010",
+    "y": 2021,
+    "t": "PPP",
+    "q": "Order of ligation of devascularization in PPH",
+    "o": [
+      "Uterine artery, pudendal artery, vaginal artery",
+      "Uterine artery, internal iliac, obturator artery",
+      "Uterine artery, ovarian artery, internal iliac artery",
+      "Uterine artery, ovarian artery, vaginal artery"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG011",
+    "y": 2021,
+    "t": "GTD",
+    "q": "Patient with post molar evacuation, now has lesion in lungs cannon ball appearance. Which is the best management?",
+    "o": [
+      "Hysterectomy",
+      "Emaco regimen",
+      "Inj. methotrexate",
+      "Multiple dose of Inj. methotrexate"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG012",
+    "y": 2021,
+    "t": "IST",
+    "q": "Pregnant female with herpetic lesions in the vulva. Management is?",
+    "o": [
+      "Acyclovir & elective Cs",
+      "Induction of labor",
+      "Acyclovir & allow spontaneous progression of labor",
+      "Wait & watch"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG013",
+    "y": 2021,
+    "t": "LBD",
+    "q": "Patient with infraumbilical flattening & fetal heart rate heard laterally, what is the presentation?",
+    "o": [
+      "Occipitoposterior",
+      "Knee",
+      "Brow",
+      "Right dorsoanterior"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG014",
+    "y": 2021,
+    "t": "FTP",
+    "q": "Husband asks for paternal testing of his twins. One twin is found to be his son & other is not. Diagnosis?",
+    "o": [
+      "Superfecundation",
+      "Superfoetation",
+      "Posthumous child",
+      "None of the above"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG015",
+    "y": 2021,
+    "t": "FBE",
+    "q": "Teenage patient with transverse vaginal septum with dysmenorrhea & chronic pelvic pain. Diagnosis?",
+    "o": [
+      "Endometriosis",
+      "Tubovarian abscess",
+      "Dermoid cyst",
+      "Theca lutein cyst"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG016",
+    "y": 2021,
+    "t": "IST",
+    "q": "28 years old married female anxious about conception. C/o profuse vaginal discharge. No h/o itching. 12 days since LMP",
+    "o": [
+      "Candida",
+      "Trichomonas",
+      "Bacterial vaginosis",
+      "Physiological"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOG017",
+    "y": 2021,
+    "t": "HRP",
+    "q": "H/o recurrent abortions at 8,11& 22 weeks. Cardiac activity is normal in all the three. H/o of preeclampsia in last pregnancy. What is the most probable cause?",
+    "o": [
+      "Syphilis",
+      "APLA",
+      "TORCH",
+      "GDM"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG018",
+    "y": 2021,
+    "t": "CNT",
+    "q": "Female missed OCP on 4 different days in 1st 2 weeks of menstrual cycle. What will you advice?",
+    "o": [
+      "Continue taking pill",
+      "Take all 4 pills at once & continue taking pills",
+      "Adopt another method of contraception",
+      "Continue current pack, consider additional contraceptive method for remaining days"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOG019",
+    "y": 2021,
+    "t": "HRP",
+    "q": "36 weeks pregnant female on warfarin with mitral stenosis. What should we do?",
+    "o": [
+      "Shift to LMW Heparin",
+      "Warfarin",
+      "Switch to Aspirin",
+      "Aspirin + heparin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG020",
+    "y": 2021,
+    "t": "HRP",
+    "q": "Indomethacin when given beyond 36 weeks what will happen?",
+    "o": [
+      "Premature closure of PDA",
+      "Still birth",
+      "No effect",
+      "Teratogenic"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG021",
+    "y": 2021,
+    "t": "PLF",
+    "q": "A pt. 2nd degree cervical prolapse C/o dribbling of urine on cough",
+    "o": [
+      "Stress incontinence",
+      "Overflow incontinence",
+      "Cystitis",
+      "Functional incontinence"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG022",
+    "y": 2021,
+    "t": "NPA",
+    "q": "What does umbilical artery do?",
+    "o": [
+      "Carrying deoxygenated blood from fetus to placenta",
+      "Carrying oxygenated blood from placenta to fetus",
+      "Provide nutrients",
+      "None of the above"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG023",
+    "y": 2021,
+    "t": "MNA",
+    "q": "A woman, anxious to conceive, complains of profuse white discharge per vaginum, which was non foul smelling and not itchy. Her LMP was 13-15 days back. What is the most probable diagnosis?",
+    "o": [
+      "Candidiasis",
+      "Bacterial Vaginosis",
+      "Physiological",
+      "Trichomoniasis"
+    ],
+    "a": 2
+  }
+  
+]
