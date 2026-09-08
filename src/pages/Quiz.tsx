@@ -915,6 +915,18 @@ export default function Quiz() {
             >
               SUBMIT
             </button>
+          ) : isSolveLink && index === 0 ? (
+            // Solve link: first question answered → single full-width SOLVE MORE
+            <button
+              type="button"
+              onClick={next}
+              className={`w-full ${solveMoreClass}`}
+            >
+              <span className="flex items-center justify-center gap-2">
+                SOLVE MORE
+                <ChevronRight size={18} />
+              </span>
+            </button>
           ) : index < pool.length - 1 ? (
             // Guide/direct: submitted, not last question
             <>
@@ -934,10 +946,10 @@ export default function Quiz() {
               <button
                 type="button"
                 onClick={next}
-                className={`flex-1 ${isSolveLink && index === 0 ? solveMoreClass : actionClass}`}
+                className={`flex-1 ${actionClass}`}
               >
                 <span className="flex items-center justify-center gap-2">
-                  {isSolveLink && index === 0 ? "SOLVE MORE" : "NEXT"}
+                  NEXT
                   <ChevronRight size={18} />
                 </span>
               </button>
