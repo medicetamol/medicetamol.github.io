@@ -28,21 +28,20 @@ export default function QuestionCard({
 
   const solveUrl = getSiteUrl(`/solve/${question.id}`);
 
-  // Close modal on browser back
+  // Lock body scroll + handle back + Escape when modal open
   useEffect(() => {
     if (!imgModal) return;
+    document.body.style.overflow = "hidden";
     window.history.pushState({ imgModal: true }, "");
     const onPop = () => setImgModal(false);
-    window.addEventListener("popstate", onPop);
-    return () => window.removeEventListener("popstate", onPop);
-  }, [imgModal]);
-
-  // Close modal on Escape key
-  useEffect(() => {
-    if (!imgModal) return;
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setImgModal(false); };
+    window.addEventListener("popstate", onPop);
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("popstate", onPop);
+      window.removeEventListener("keydown", onKey);
+    };
   }, [imgModal]);
   const aiUrl = getSiteUrl(`/ai/${question.id}`);
 
@@ -79,6 +78,7 @@ export default function QuestionCard({
             loading="lazy"
             className="max-h-64 w-full object-contain"
           />
+
         </button>
       )}
       
@@ -153,7 +153,8 @@ export default function QuestionCard({
     {/* Full screen image modal */}
     {imgModal && question.image && (
       <div
-        className="fixed inset-0 z-50 bg-black"
+        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm"
+        style={{ touchAction: "pan-x pan-y pinch-zoom" }}
         onClick={() => setImgModal(false)}
       >
         <button
@@ -165,19 +166,14 @@ export default function QuestionCard({
           <X size={20} />
         </button>
 
-        <div
-          className="flex h-full w-full items-center justify-center overflow-auto"
-          style={{ touchAction: "pan-x pan-y pinch-zoom" }}
+        <img
+          src={question.image}
+          alt="Question"
+          draggable={false}
           onClick={(e) => e.stopPropagation()}
-        >
-          <img
-            src={question.image}
-            alt="Question"
-            className="min-h-0 min-w-0 max-w-none"
-            style={{ touchAction: "pan-x pan-y pinch-zoom" }}
-            draggable={false}
-          />
-        </div>
+          style={{ touchAction: "pan-x pan-y pinch-zoom" }}
+          className="absolute inset-0 m-auto max-h-full max-w-full object-contain"
+        />
       </div>
     )}
     </>
