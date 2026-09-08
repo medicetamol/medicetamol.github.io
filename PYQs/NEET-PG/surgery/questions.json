@@ -1,0 +1,210 @@
+[
+  {
+    "id": "PGGS001",
+    "y": 2021,
+    "t": "GIS",
+    "q": "[Image: Diagram showing a circular purse-string type operative procedure around the anal canal] What surgery is shown here in the image?",
+    "o": [
+      "Thiersch wiring",
+      "Wells procedure",
+      "Aktemeier operation",
+      "Hemorrhoidectomy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS002",
+    "y": 2021,
+    "t": "BRS",
+    "q": "Post MRM patient presented with upper limb swelling. What is the most probable cause?",
+    "o": [
+      "Upper limb Lymphedema",
+      "Angiosarcoma",
+      "Recurrence",
+      "Metastasis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS003",
+    "y": 2021,
+    "t": "GNS",
+    "q": "Repair done for direct inguinal hernia",
+    "o": [
+      "Lichtenstein repair",
+      "Bassini's repair",
+      "Herniotomy",
+      "All"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS004",
+    "y": 2021,
+    "t": "TCC",
+    "q": "A patient presented with RTA leading to breathlessness and decreased air entry into right lung and patient is hypotensive. What is the next step?",
+    "o": [
+      "Needle inserted at 2nd ICS in MCL",
+      "Needle inserted at 5th ICS in mid axillary",
+      "Fluid resuscitation using wide bore cannula",
+      "Wide bore needle decompression"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS005",
+    "y": 2021,
+    "t": "ENS",
+    "q": "After total thyroidectomy, the surgeon is unable to extubate and the patient shows cyanosis and respiratory distress. Cause of unable to extubate this-",
+    "o": [
+      "Bilateral recurrent laryngeal nerve palsy",
+      "UL recurrent laryngeal nerve palsy",
+      "Hemorrhage",
+      "Supra laryngeal nerve palsy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS006",
+    "y": 2021,
+    "t": "VAS",
+    "q": "Asymptomatic Varicose veins under CEAP scoring will be",
+    "o": [
+      "C2a",
+      "C2b",
+      "C3a",
+      "C3b"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS007",
+    "y": 2021,
+    "t": "GIS",
+    "q": "60 years old male patient has antral carcinoma which is spreading to the head of the pancreas and multiple small metastasis to the right lobe of liver. What will be the best treatment?",
+    "o": [
+      "Whipple's surgery",
+      "Gastrectomy + Right lobectomy",
+      "Gastrojejunostomy",
+      "Palliative care"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS008",
+    "y": 2021,
+    "t": "HNS",
+    "q": "MC nerve injured during Submandibular gland surgery?",
+    "o": [
+      "Lingual nerve",
+      "Inferior alveolar nerve",
+      "Hypoglossal nerve",
+      "Nerve to mylohyoid"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS009",
+    "y": 2021,
+    "t": "GNS",
+    "q": "Which statement is true among all?",
+    "o": [
+      "Associated with mixed aerobic and anaerobic infection",
+      "Orchidectomy should be done",
+      "Anti-gas gangrene serum should always be used",
+      "Urinary diversion done"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS010",
+    "y": 2021,
+    "t": "URO",
+    "q": "85 year with Ca prostate with Gleason 6 and PSA <8 ng/ml. Best management?",
+    "o": [
+      "TURP",
+      "Radiation",
+      "Radical prostatectomy",
+      "Keep on active surveillance"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS011",
+    "y": 2021,
+    "t": "HBP",
+    "q": "Post cholecystectomy, CBD stone detected after 2 years. What type of stone is it?",
+    "o": [
+      "Primary",
+      "Secondary",
+      "Tertiary",
+      "Retained stone"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS012",
+    "y": 2021,
+    "t": "GIS",
+    "q": "Gas under diaphragm is seen in-",
+    "o": [
+      "Viscus perforation",
+      "Liver abscess",
+      "Spontaneous rupture of oesophagus",
+      "Empyema Thorax"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS013",
+    "y": 2021,
+    "t": "TCC",
+    "q": "Left hypochondrium contusion SBP- 70 mm Hg PR 110. So what needs to be done next?",
+    "o": [
+      "FAST",
+      "CECT",
+      "DPL",
+      "Abdomen X-ray"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS014",
+    "y": 2021,
+    "t": "URO",
+    "q": "Mr Ramu faced an accident and had straddle injury and presents with blood at urethral meatus. What will be the next step?",
+    "o": [
+      "Foleys catheter insertion",
+      "SPC and drain the urine",
+      "Do retrograde urethrogram",
+      "CECT pelvis is taken"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS015",
+    "y": 2021,
+    "t": "GIS",
+    "q": "[Image: Abdominal radiograph showing multiple dilated central bowel loops with several air-fluid levels] Identify the finding.",
+    "o": [
+      "Intestinal obstruction",
+      "Valvulae conniventes",
+      "Haustrations",
+      "None"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS016",
+    "y": 2021,
+    "t": "PDS",
+    "q": "What is the metabolic finding seen in a baby with CHPS?",
+    "o": [
+      "Hyperchloremic hypernatremic metabolic alkalosis",
+      "Hypochloremic hypernatremic metabolic acidosis",
+      "Hypochloremic hyponatremic metabolic alkalosis",
+      "Hyperchloremic hyponatremic metabolic alkalosis"
+    ],
+    "a": 2
+  }
+]
