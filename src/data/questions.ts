@@ -65,7 +65,7 @@ function parseQuestions(
         question: q.q,
         options: q.o,
         answer: q.a,
-        ...(q.image ? { image: resolveImage(q.image, exam, subjectId, q.id) } : {}),
+        ...(q.img ? { image: resolveImage(q.img, exam, subjectId, q.id) } : {}),
       };
     });
   } catch {
