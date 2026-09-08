@@ -1,0 +1,54 @@
+[
+  {
+    "id": "PGPS001",
+    "y": 2021,
+    "t": "MOD",
+    "q": "A 16 year old female patient presented with over familiarity, flight of ideas, elevated mood, increased sexual desire, pseudohallucinations. What will be the diagnosis?",
+    "o": [
+      "Mania",
+      "Schizomania",
+      "Hypomania",
+      "Cyclothymia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPS002",
+    "y": 2021,
+    "t": "SUB",
+    "q": "A 50 year old male suddenly stopped alcohol consumption for 3 days in hospital with agitation, altered sensorium, paranoid delusions and hallucinations. The most likely diagnosis is",
+    "o": [
+      "Wernicke's Encephalopathy",
+      "Korsakoff's psychosis",
+      "Hangover",
+      "Delirium Tremens"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPS003",
+    "y": 2021,
+    "t": "SCH",
+    "q": "Which of the following is included in form of thought disorder",
+    "o": [
+      "Derailment",
+      "Obsession",
+      "Thought insertion",
+      "Delusion"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPS004",
+    "y": 2021,
+    "t": "ORG",
+    "q": "During the course of psychotherapy, the therapist has mixed conscious and unconscious feeling towards a patient, this is known as",
+    "o": [
+      "Transference",
+      "Countertransference",
+      "Dissociation",
+      "Preoccupation"
+    ],
+    "a": 1
+  }
+]
