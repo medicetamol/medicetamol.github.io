@@ -511,8 +511,8 @@ export default function Quiz() {
   const askAI = async () => {
     if (!question) return;
     const aiUrl = getSiteUrl(`/ai/${question.id}`);
-    const text = `Explain this PYQ using the\nmediceTaMol AI prompt.\n\n${formatQuestionForShare(question)}\n\nUse this prompt to solve this:\n${aiUrl}`;
-    const result = await shareOrCopy({ title: `Ask AI • ${question.id}`, text });
+    const text = `Explain this PYQ using the\nmediceTaMol AI prompt.\n\n${formatQuestionForShare(question, { includeBranding: false })}\n\nUse this prompt to solve this:\n${aiUrl}`;
+    const result = await shareOrCopy({ title: "Share with AI • mediceTaMol", text });
     showFeedback(
       result === "copied" ? "AI prompt link copied"
       : result === "shared" ? "Share sheet opened"
