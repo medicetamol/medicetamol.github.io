@@ -79,7 +79,6 @@ export default function QuestionCard({
             loading="lazy"
             className="max-h-64 w-full object-contain"
           />
-          <p className="py-1.5 text-center text-xs text-slate-500">Tap to zoom</p>
         </button>
       )}
       
