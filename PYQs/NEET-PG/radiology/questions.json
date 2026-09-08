@@ -1,0 +1,249 @@
+[
+  {
+    "id": "PGRD001",
+    "y": 2021,
+    "t": "RDM",
+    "q": "[Image: Spine radiograph showing bilateral sacroiliac joint changes with marginal vertebral bridging] Identify the diagnosis.",
+    "o": [
+      "Ankylosing Spondylitis",
+      "Psoriatic Arthritis",
+      "Rheumatoid Arthritis",
+      "Sjogeren Syndrome"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD002",
+    "y": 2021,
+    "t": "RDC",
+    "q": "[Image: Chest radiograph showing widened superior mediastinum with a characteristic figure-of-eight/snowman configuration] Identify the diagnosis.",
+    "o": [
+      "Cottage loaf heart, Truncus arteriosus",
+      "Snowman heart, supracardiac TAPVC",
+      "Egg on side, TGA",
+      "Boot shaped heart, TOF"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGRD003",
+    "y": 2021,
+    "t": "RDG",
+    "q": "[Image: Abdominal radiograph showing multiple dilated bowel loops with valvulae conniventes extending across the lumen] Identify the segment involved.",
+    "o": [
+      "Jejunum",
+      "Duodenum",
+      "Ileum",
+      "Transverse colon"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD004",
+    "y": 2021,
+    "t": "RDM",
+    "q": "A 10 year old child presents with limb pain. Bone mineral density is normal. Diagnosis",
+    "o": [
+      "Scurvy",
+      "Rickets",
+      "Pyknodysostosis",
+      "Metaphyseal Dysplasia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD005",
+    "y": 2021,
+    "t": "RDW",
+    "q": "[Image: Plain radiograph of kidney showing diffuse homogeneous, dense calcific material within the renal outline] Identify the finding.",
+    "o": [
+      "Nephrocalcinosis",
+      "Putty Kidney",
+      "Stag horn calculus",
+      "Psoas Calcification"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGRD006",
+    "y": 2021,
+    "t": "RDI",
+    "q": "A child undergoes prophylactic irradiation as preparation for BMT for treatment of ALL. Which of the following will be least affected?",
+    "o": [
+      "Spermatogonia",
+      "Intestinal epithelial cells",
+      "Neurons",
+      "Bone marrow"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGRD007",
+    "y": 2021,
+    "t": "RDB",
+    "q": "RTA- absent air entry on left side. Tenderness in left lower chest wall. Next step in EMR",
+    "o": [
+      "X-ray",
+      "CT",
+      "FAST",
+      "DPL"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGRD008",
+    "y": 2021,
+    "t": "RDM",
+    "q": "[Image: Localized soft-tissue swelling around the wrist with a corresponding soft-tissue mass adjacent to the joint] Identify the diagnosis.",
+    "o": [
+      "GCT",
+      "Osteochondroma",
+      "Osteoid Osteoma",
+      "Ewings Sarcoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD009",
+    "y": 2021,
+    "t": "RDN",
+    "q": "[Image: CT brain shows a ring-enhancing lesion in the temporal lobe] Identify the diagnosis.",
+    "o": [
+      "Cerebellar abscess",
+      "Temporal lobe abscess",
+      "Extradural abscess",
+      "Meningitis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGRD010",
+    "y": 2021,
+    "t": "RDW",
+    "q": "Infertility patient-USG s/o uterine anomaly. Best to confirm",
+    "o": [
+      "TVS",
+      "Hysteroscopy + Laparoscopy",
+      "HSG",
+      "Laparoscopy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGRD011",
+    "y": 2021,
+    "t": "RDM",
+    "q": "[Image: Pelvic radiograph showing bilateral sacroiliac joint irregularity, erosions and sclerosis] Identify the diagnosis.",
+    "o": [
+      "Ankylosing Spondylitis",
+      "Healed TB spine",
+      "Pagets",
+      "Osteopetrosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD012",
+    "y": 2021,
+    "t": "RDW",
+    "q": "A mother gets her daughter with short stature, webbing of neck etc. USG will show",
+    "o": [
+      "Hepatomegaly with altered echotexture",
+      "Single kidney",
+      "Echo showing tricuspid stenosis",
+      "Streak ovaries with small uterus"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGRD013",
+    "y": 2021,
+    "t": "RDG",
+    "q": "[Image: Abdominal radiographs showing dilated bowel loops, multiple air-fluid levels and branching gas within the biliary tree] Identify the diagnosis.",
+    "o": [
+      "Gall stone Ileus",
+      "Small bowel obstruction",
+      "Large bowel obstruction",
+      "Paralytic ileus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD014",
+    "y": 2021,
+    "t": "RDC",
+    "q": "A 45 year old patient with hypertension presenting with acute severe chest pain & there is diaphoresis. Also there is h/o loss of consciousness, unequal pulses. In emergency condition which is the best one to make a diagnosis",
+    "o": [
+      "Cardiac enzymes",
+      "MRI",
+      "X-ray",
+      "TEE"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGRD015",
+    "y": 2021,
+    "t": "RDG",
+    "q": "A female presenting with abdominal pain, distension, organ failure in last 24 hours. CT scan shows pancreas which is bulky & there is fluid density lesion in the pancreas. Which of the following will be increased?",
+    "o": [
+      "AST",
+      "Lipase",
+      "Creatine Kinase",
+      "Blood Urea Nitrogen"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGRD016",
+    "y": 2021,
+    "t": "RDW",
+    "q": "There was patient of Kidney trauma with hematuria. Which of the following investigation is advised to localise the site of hematuria",
+    "o": [
+      "CT",
+      "X-ray",
+      "MRI",
+      "USG"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD017",
+    "y": 2021,
+    "t": "RDG",
+    "q": "[Image: Erect chest radiograph showing crescentic free gas beneath the diaphragm] Identify the diagnosis.",
+    "o": [
+      "Empyema Thorax",
+      "Liver abscess",
+      "Gastric volvulus",
+      "Hollow viscus perforation"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGRD018",
+    "y": 2021,
+    "t": "RDR",
+    "q": "[Image: AP chest radiograph shows a round metallic object in the midline above the aortic knob; lateral view shows the object posterior to the tracheal air column] Identify the location of the object.",
+    "o": [
+      "Oesophagus",
+      "Trachea",
+      "Below diaphragm",
+      "GI tract"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD019",
+    "y": 2021,
+    "t": "RDM",
+    "q": "[Image: CT axial and coronal views with an arrow pointing to an elongated paired muscle along the anterolateral lumbar vertebral bodies] Identify the muscle.",
+    "o": [
+      "Gluteus Muscle",
+      "Psoas Muscle",
+      "latissimus dorsi",
+      "Multifidus"
+    ],
+    "a": 1
+  }
+]
