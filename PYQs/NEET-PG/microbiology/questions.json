@@ -140,7 +140,8 @@
       "Ceftriaxone",
       "Penicillin G"
     ],
-    "a": 2
+    "a": 2,
+    "img": true
   },
   {
     "id": "PGMB012",
