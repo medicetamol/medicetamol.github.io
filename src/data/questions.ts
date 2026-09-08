@@ -28,7 +28,7 @@ type CompactQuestion = {
   q: string;
   o: string[];
   a: number;
-  image?: true | string;
+  img?: true | string;
 };
 
 function resolveImage(
