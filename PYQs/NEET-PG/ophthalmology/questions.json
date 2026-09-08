@@ -1,0 +1,145 @@
+[
+  {
+    "id": "PGOP001",
+    "y": 2021,
+    "t": "NRO",
+    "q": "A 33 year old female patient presented with inability to see the right side from both the eyes. What is the most probable cause?",
+    "o": [
+      "Injury to Left Optic Tract",
+      "Right occipital lobe lesion",
+      "Optic chiasma lesion",
+      "Right optic nerve lesion"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP002",
+    "y": 2021,
+    "t": "CJC",
+    "q": "[Image: Large rounded papillary elevations on the inner surface of the upper eyelid] Identify the diagnosis.",
+    "o": [
+      "Giant Papillary conjunctivitis",
+      "Trachoma",
+      "Vernal Keratoconjunctivitis",
+      "OSSN"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP003",
+    "y": 2021,
+    "t": "RFQ",
+    "q": "A 15 year old girl patient does not want to use specs for myopic astigmatism. What is the best alternative for her?",
+    "o": [
+      "ICL",
+      "FEMTO Lasik",
+      "LASIK",
+      "Spherical Specs"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP004",
+    "y": 2021,
+    "t": "TRM",
+    "q": "A boy working on a hammer & chisel had a Foreign body entering eye. Detrimental investigation for this boy is",
+    "o": [
+      "X-ray",
+      "B scan orbit",
+      "CT Scan",
+      "MRI"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOP005",
+    "y": 2021,
+    "t": "RTV",
+    "q": "A child presenting with whitish pupillary reflex was treated with enucleation. Histopathology of the specimen showed Flexner Wintersteiner rosettes. What is the diagnosis?",
+    "o": [
+      "Retinoblastoma",
+      "Rhabdomyosarcoma",
+      "Medulloblastoma",
+      "Astrocytoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP006",
+    "y": 2021,
+    "t": "GLC",
+    "q": "A one month baby presents with watering and increased corneal size. What is the diagnosis?",
+    "o": [
+      "Buphthalmos",
+      "Hurlers Syndrome",
+      "Galactosemia",
+      "Cataract"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP007",
+    "y": 2021,
+    "t": "RTV",
+    "q": "[Image: Yellow-white deposits clustered around the macular region of the fundus] Identify the finding.",
+    "o": [
+      "Hard Exudates in Diabetic Retinopathy",
+      "Flame shaped haemorrhages in Hypertensive Retinopathy",
+      "Soft Exudates in Hypertensive Retinopathy",
+      "CRVO"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP008",
+    "y": 2021,
+    "t": "CJC",
+    "q": "A patient complained of gradual diminution of vision. On examination the patient had dry eyes and a rough corneal surface. What could be the deficiency in the patient causing these manifestations?",
+    "o": [
+      "Iron",
+      "Protein",
+      "Niacin",
+      "Retinoic Acid"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOP009",
+    "y": 2021,
+    "t": "LNC",
+    "q": "A young boy with thin built and long fingers presents with diminished vision. On examination subluxation of lens is observed and cystathionine synthase deficiency was detected. Which amino acid should the patient be supplied with?",
+    "o": [
+      "Serine",
+      "Tyrosine",
+      "Methionine",
+      "Cysteine"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOP010",
+    "y": 2021,
+    "t": "ORL",
+    "q": "[Image: Incomplete eyelid closure with a widened palpebral fissure and exposed ocular surface] Identify the diagnosis.",
+    "o": [
+      "Cataract",
+      "Exposure Keratitis",
+      "Difficulty in eye movement",
+      "Glaucoma"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOP011",
+    "y": 2021,
+    "t": "GLC",
+    "q": "A patient has been diagnosed with Primary Open Angle Glaucoma. On eliciting history, it was observed that the patient is a known case of bronchial asthma. What is the drug of choice for POAG in this patient?",
+    "o": [
+      "Latanoprost",
+      "Gemeprost",
+      "Carboprost",
+      "Alprostadil"
+    ],
+    "a": 0
+  }
+]
