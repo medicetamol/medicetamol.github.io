@@ -1,4 +1,5 @@
 import { Check, Share, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import type { PYQQuestion } from "../types";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
 
@@ -23,7 +24,26 @@ export default function QuestionCard({
   hasDetailedExplanation = false,
   onShareFeedback,
 }: Props) {
+  const [imgModal, setImgModal] = useState(false);
+
   const solveUrl = getSiteUrl(`/solve/${question.id}`);
+
+  // Close modal on browser back
+  useEffect(() => {
+    if (!imgModal) return;
+    window.history.pushState({ imgModal: true }, "");
+    const onPop = () => setImgModal(false);
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [imgModal]);
+
+  // Close modal on Escape key
+  useEffect(() => {
+    if (!imgModal) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setImgModal(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [imgModal]);
   const aiUrl = getSiteUrl(`/ai/${question.id}`);
 
   const shareQuestion = async () => {
@@ -40,11 +60,29 @@ export default function QuestionCard({
 
 
   return (
+    <>
     <section className="w-full rounded-xl border border-slate-800 bg-slate-900/70 px-2.5 py-3 sm:px-4 sm:py-5">
       <h2 className="text-base font-semibold leading-7 text-slate-100 sm:text-lg">
         {question.question}
       </h2>
 
+      {question.image && (
+        <button
+          type="button"
+          onClick={() => setImgModal(true)}
+          className="mt-3 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-950"
+          aria-label="View image fullscreen"
+        >
+          <img
+            src={question.image}
+            alt="Question"
+            loading="lazy"
+            className="max-h-64 w-full object-contain"
+          />
+          <p className="py-1.5 text-center text-xs text-slate-500">Tap to zoom</p>
+        </button>
+      )}
+      
       <div className="mt-4 space-y-2 pb-3">
         {question.options.map((option, index) => {
           const isCorrect = submitted && index === question.answer;
@@ -112,5 +150,37 @@ export default function QuestionCard({
         </div>
       )}
     </section>
+
+    {/* Full screen image modal */}
+    {imgModal && question.image && (
+      <div
+        className="fixed inset-0 z-50 bg-black"
+        onClick={() => setImgModal(false)}
+      >
+        <button
+          type="button"
+          onClick={() => setImgModal(false)}
+          className="absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full bg-black/60 text-white backdrop-blur"
+          aria-label="Close image"
+        >
+          <X size={20} />
+        </button>
+
+        <div
+          className="flex h-full w-full items-center justify-center overflow-auto"
+          style={{ touchAction: "pan-x pan-y pinch-zoom" }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <img
+            src={question.image}
+            alt="Question"
+            className="min-h-0 min-w-0 max-w-none"
+            style={{ touchAction: "pan-x pan-y pinch-zoom" }}
+            draggable={false}
+          />
+        </div>
+      </div>
+    )}
+    </>
   );
 }
