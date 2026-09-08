@@ -1,0 +1,106 @@
+[
+  {
+    "id": "PGPD001",
+    "y": 2021,
+    "t": "PEM",
+    "q": "A child with rachitic changes in limbs, which was not responding to Vitamin D. Investigations done shows- Calcium- 9.5mg/dl, Phosphorous- 1.6 mg/dl, ALP- 814 IU, Sr. PTH- 24.2. Sr. Electrolytes, Creatinine and blood gases- normal. Diagnosis?",
+    "o": [
+      "Vitamin D dependent rickets type 1",
+      "Vitamin D dependent rickets type 2",
+      "Hypophosphatemic rickets",
+      "Chronic renal failure"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPD002",
+    "y": 2021,
+    "t": "PIM",
+    "q": "Contraindicated vaccine in 3 months old with recurrent respiratory illness-",
+    "o": [
+      "Inactivated polio",
+      "Measles",
+      "DPT",
+      "DT"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD003",
+    "y": 2021,
+    "t": "NUM",
+    "q": "In a child height for age < -2 SD likely cause is-",
+    "o": [
+      "Chronic malnutrition",
+      "Acute malnutrition",
+      "Recent infection",
+      "No malnutrition"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD004",
+    "y": 2021,
+    "t": "PNR",
+    "q": "Child presents with myoclonus jerk, decrease performance in school. There is history of fever at the age of 1 year with rash. It is suggestive of-",
+    "o": [
+      "Subacute sclerosing panencephalitis",
+      "Mesial temporal sclerosis",
+      "Polio",
+      "Measles"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD005",
+    "y": 2021,
+    "t": "PGS",
+    "q": "Webbed neck, short stature, low posterior hairline. Diagnosis-",
+    "o": [
+      "Turner syndrome",
+      "Downs syndrome",
+      "Patau syndrome",
+      "Edwards syndrome"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD006",
+    "y": 2021,
+    "t": "PCR",
+    "q": "A 12 year old boy presented with weak pulses in upper limbs. His BP was 90/60mmHg. He also had retinal haemorrhages. Most likely diagnosis is",
+    "o": [
+      "PAn",
+      "Microscopic polyangiitis",
+      "Takayasu arteritis",
+      "HSP"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPD007",
+    "y": 2021,
+    "t": "PRR",
+    "q": "A 10 year old male child presented with generalised edema. His cholesterol was 238mg/dl and urine protein was 3+. Stool microscopy showed fat in stool.",
+    "o": [
+      "Goodpasture syndrome",
+      "Urine infection",
+      "Nephrotic syndrome",
+      "Nephritic syndrome"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPD008",
+    "y": 2021,
+    "t": "GRW",
+    "q": "[Image: Pediatric knee radiograph showing metaphyseal abnormality with preserved overall bone density] Identify the diagnosis.",
+    "o": [
+      "Rickets",
+      "Scurvy",
+      "Metaphyseal dysplasia",
+      "Osteopetrosis"
+    ],
+    "a": 1
+  }
+]
