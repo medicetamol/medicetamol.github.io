@@ -26,6 +26,7 @@ jobs:
 
       - run: npm install
       - run: npm run build
+      - run: find PYQs -type d -name images | while read dir; do dest="dist/$dir"; mkdir -p "$dest"; cp "$dir"/* "$dest/" 2>/dev/null || true; done
 
       - uses: actions/upload-pages-artifact@v3
         with:
