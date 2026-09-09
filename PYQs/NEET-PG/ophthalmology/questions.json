@@ -141,5 +141,109 @@
       "Alprostadil"
     ],
     "a": 0
+  },
+  {
+    "id": "PGOP012",
+    "y": 2023,
+    "t": "NRO",
+    "q": "A female presents with loss of vision in the right halves of both eyes. Where is the lesion located in the optic pathway?",
+    "o": [
+      "Left optic tract",
+      "Optic radiation",
+      "Optic chiasma",
+      "Right optic tract"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP013",
+    "y": 2023,
+    "t": "LNC",
+    "q": "[Image: Close-up photo of an eye Central whitish-gray cloudy opacity visible within the pupil Surrounding iris and eyelashes normal in appearance] A 65-year-old diabetic woman presents with painless loss of vision. The ocular findings are shown in the image below. What is the likely diagnosis and management for this patient?",
+    "o": [
+      "Zonular cataract and lensectomy",
+      "Rosette cataract and sugar control",
+      "Sunflower cataract and lesion extraction",
+      "Immature senile cataract and phacoemulsification with IOL"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOP014",
+    "y": 2023,
+    "t": "CJC",
+    "q": "[Image: Close-up photo of an eye Yellowish, fleshy, dome-shaped nodule at the outer corner near the limbus Fine surface blood vessels visible over the nodule] A 5-year-old boy presents with a small nodule on the sclera as shown in the image below. What is the likely diagnosis?",
+    "o": [
+      "Pterygium",
+      "Pinguecula",
+      "Dermolipoma",
+      "Dermoid"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOP015",
+    "y": 2023,
+    "t": "CJC",
+    "q": "The eye examination of a 20-year-old male shows a golden ring on the iris. What is the next investigation to diagnose the condition?",
+    "o": [
+      "Alpha-1-antitrypsin",
+      "Alpha-fetoprotein",
+      "Serum iron",
+      "Serum ceruloplasmin"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOP016",
+    "y": 2023,
+    "t": "CJC",
+    "q": "What is the dye and filter used to diagnose corneal ulcers?",
+    "o": [
+      "Lissamine dye green filter",
+      "Lissamine dye cobalt blue filter",
+      "Fluorescein dye - visualized under green filter",
+      "Fluorescein dye - visualized under cobalt blue filter"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOP017",
+    "y": 2023,
+    "t": "RFQ",
+    "q": "[Image: Two side-by-side night-time street photos showing car headlights and taillights One image shows sharply focused points of light The other image shows streaked, blurred, radiating light distortion] Which of the following refractive errors is associated with the image given below?",
+    "o": [
+      "Presbyopia",
+      "Astigmatism",
+      "Hypermetropia",
+      "Myopia"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOP018",
+    "y": 2023,
+    "t": "GLC",
+    "q": "[Image: Close-up photo of an infant's eyes One eye visibly larger with a hazy, cloudy cornea Watery discharge/tearing noted from the affected eye compared to the other eye] An infant is brought with complaints of excessive watering of the eyes and photophobia. The image is given below. What is the likely diagnosis?",
+    "o": [
+      "Congenital glaucoma",
+      "Congenital cataract",
+      "Mucopolysaccharidosis",
+      "Ophthalmia neonatorum"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP019",
+    "y": 2023,
+    "t": "RFQ",
+    "q": "[Image: Close-up slit-lamp view of an eye Distinct rainbow-colored band pattern crossing the pupil Bright reflective points visible on the corneal surface] A patient complains of decreased distant vision but now he does not use spectacles for near vision. The image of his ocular examination is given below. What is this type of refractive error called?",
+    "o": [
+      "Index myopia",
+      "Axial myopia",
+      "Curvatural myopia",
+      "Positional myopia"
+    ],
+    "a": 0
   }
 ]
