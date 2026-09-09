@@ -271,5 +271,200 @@
       "She is immune to zoster"
     ],
     "a": 0
+  },
+  {
+    "id": "PGCM022",
+    "y": 2023,
+    "t": "NUT",
+    "q": "In a village, it is observed that several farmers have crossed gait and use a stick for support to stand up and walk. Due to poor yield from farms, they consume meals containing rice and pulses only. Supplementing their diet with which of the following vitamins could have prevented this?",
+    "o": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin C",
+      "Vitamin B"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM023",
+    "y": 2023,
+    "t": "EPI",
+    "q": "Research is being conducted to find the association between aniline dye exposure and bladder cancer in workers who have worked in the industry for >20 years. Two groups were formed: one directly involved with dye handling and the other group consisting of office clerks not directly exposed to the dye. Years of occupation were noted from records. What type of study is being performed?",
+    "o": [
+      "Retrospective cohort study",
+      "Prospective cohort study",
+      "Case-control study",
+      "Intervention and response"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM024",
+    "y": 2023,
+    "t": "NCD",
+    "q": "The blood pressure of a population was tracked from childhood to adulthood. It was observed that those who had lower BP in childhood had low BP in adulthood, while those who had higher BP in childhood had high BP in adulthood. This can be best described as",
+    "o": [
+      "Rule of halves",
+      "Tracking of blood pressure",
+      "STEPwise approach",
+      "Primordial approach"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM025",
+    "y": 2023,
+    "t": "HAD",
+    "q": "A 30-week primigravida complaints of reduced vision at night. She has been avoiding papaya, mango, and other fruits throughout her pregnancy as she thinks they could be abortifacients. It is the primary duty of which of the following workers to provide counseling and information to the patient?",
+    "o": [
+      "ANM",
+      "AWW",
+      "Trained birth attendant",
+      "ASHA"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM026",
+    "y": 2023,
+    "t": "CMD",
+    "q": "A 22-year-old female comes to the STI clinic with minimal vaginal discharge. On speculum examination, erosions are seen on the cervix. Which of the following kit should be given to this patient?",
+    "o": [
+      "Green",
+      "Red",
+      "Grey",
+      "Yellow"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM027",
+    "y": 2023,
+    "t": "NCD",
+    "q": "The years of potential life lost could be attributed to,",
+    "o": [
+      "Years lost to morbidity",
+      "Years lost due to premature death",
+      "Years lost to disability",
+      "Years lost to poor quality of life"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM028",
+    "y": 2023,
+    "t": "VAC",
+    "q": "In a 10-year-old school child, which of the following vaccines is given as a part of the school immunization program?",
+    "o": [
+      "Measles vaccine",
+      "Rotavirus vaccine",
+      "TT/Td vaccine",
+      "Hepatitis B vaccine"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM029",
+    "y": 2023,
+    "t": "INT",
+    "q": "Which of the following statements is true about cancer treatment according to the Colombo plan?",
+    "o": [
+      "Help with PET scan units for diagnosis of cancer",
+      "Human resource strengthening",
+      "Setting up chemotherapy units",
+      "Setting up cobalt therapy units"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM030",
+    "y": 2023,
+    "t": "NUT",
+    "q": "A poor farmer with a history of successive crop failure develops progressive spastic paraparesis, signs of upper motor neuron paralysis, and gait instability. Name the toxin responsible for this condition.",
+    "o": [
+      "Aflatoxin",
+      "Beta-oxalyl-amino-alanine",
+      "Ergot alkaloids",
+      "Fusarium toxin"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM031",
+    "y": 2023,
+    "t": "VAC",
+    "q": "A young male came to the hospital with a clean-cut wound without any bleeding. The patient received a full course of tetanus vaccination 10 years ago. What is the best management for this patient?",
+    "o": [
+      "Human tetanus immunoglobulin and full course of vaccine",
+      "Human tetanus immunoglobulin only",
+      "Single-dose tetanus toxoid",
+      "Full course tetanus toxoid"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM032",
+    "y": 2023,
+    "t": "ENV",
+    "q": "How is water collected for bacteriological examination during a disease outbreak?",
+    "o": [
+      "Collect water from already leaking taps",
+      "Before collecting, let water flow for at least 1 minute",
+      "Water sample container is kept close to the tap avoid spillage",
+      "Collect from a gentle stream of water to avoid splashing"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM033",
+    "y": 2023,
+    "t": "CMD",
+    "q": "A boys' hostel has an outbreak of fever cases with headache, followed by the development of pleomorphic rashes sparing palms and soles. What is the next best step in the management of suspected cases? VZIG-Varicella zoster immunoglobulin",
+    "o": [
+      "Isolate for 6 days after giving acyclovir, followed by VZIG within 72 hours of exposure.",
+      "Isolate for 12 days after giving acyclovir, followed by VZIG within 48 hours of exposure",
+      "Isolate for 6 days",
+      "Only give VZIG"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM034",
+    "y": 2023,
+    "t": "CMD",
+    "q": "A 35-year-old homeless man presented with a 1-month history of fever, cough, and weight loss. Both sputum smears turned out to be negative, but the chest x-ray ordered was suggestive of tuberculosis. According to the recent NTEP guidelines, which is the next best line of management?",
+    "o": [
+      "Repeat sputum smears",
+      "Ask for CBNAAT",
+      "Ask for line probe assay",
+      "Wait until TB culture results to start ATT"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM035",
+    "y": 2023,
+    "t": "EPI",
+    "q": "Which of the following is the sensitive indicator to assess the availability, utilization, and effectiveness of healthcare in a community?",
+    "o": [
+      "Infant mortality rate",
+      "Maternal mortality rate",
+      "Immunization coverage",
+      "Disability-adjusted life years"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM036",
+    "y": 2023,
+    "t": "NUT",
+    "q": "The average daily dietary nutrient intake level sufficient to meet the nutrient requirements of nearly all (97-98%) healthy individuals in a particular life stage and gender group is known as?",
+    "o": [
+      "Adequate intake",
+      "Dietary goal",
+      "Estimated average requirement",
+      "Recommended dietary allowance"
+    ],
+    "a": 3
   }
 ]
