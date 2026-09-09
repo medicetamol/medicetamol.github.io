@@ -19,25 +19,20 @@ export default function Subject() {
 
   const [selectedTopic, setSelectedTopic] = useState<string>("all");
 
-  // Progress stats for this subject
+  // Set of attempted question IDs for this subject
   const [attemptedIds, setAttemptedIds] = useState<Set<string>>(new Set());
-  const [correctCount, setCorrectCount] = useState(0);
-  const [bookmarkCount, setBookmarkCount] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
     const subjectQids = new Set(questions.map((q) => q.id));
     getAllQuestionProgress().then((all) => {
       if (cancelled) return;
-      const subjectRows = all.filter((p) => subjectQids.has(p.qid));
       const attempted = new Set(
-        subjectRows.filter((p) => p.attempts > 0).map((p) => p.qid)
+        all
+          .filter((p) => p.attempts > 0 && subjectQids.has(p.qid))
+          .map((p) => p.qid)
       );
-      const correct = subjectRows.reduce((n, p) => n + p.correctAttempts, 0);
-      const bookmarks = subjectRows.filter((p) => p.bookmarked).length;
       setAttemptedIds(attempted);
-      setCorrectCount(correct);
-      setBookmarkCount(bookmarks);
     });
     return () => { cancelled = true; };
   }, [questions]);
@@ -56,7 +51,6 @@ export default function Subject() {
   const totalCount = questions.length;
   const attemptedCount = attemptedIds.size;
   const solvedPct = totalCount > 0 ? Math.round((attemptedCount / totalCount) * 100) : 0;
-  const accuracyPct = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
 
   // Per-topic counts
   const topicStats = useMemo(() => {
@@ -90,8 +84,8 @@ export default function Subject() {
         <div
           className="mt-2 overflow-hidden rounded-full"
           style={{
-            background: `linear-gradient(to right, rgba(255,255,255,0.18) ${solvedPct}%, rgba(255,255,255,0.05) ${solvedPct}%)`,
-            border: "1px solid rgba(255,255,255,0.1)",
+            background: `linear-gradient(to right, rgba(148,163,184,0.15) ${solvedPct}%, rgba(148,163,184,0.06) ${solvedPct}%)`,
+            border: "1px solid rgba(148,163,184,0.1)",
           }}
         >
           <p className="px-3 py-1.5 text-xs text-slate-400">
@@ -113,31 +107,44 @@ export default function Subject() {
               {/* All topics pill */}
               <button
                 onClick={() => setSelectedTopic("all")}
-                className={`rounded-lg px-3 py-2 text-xs font-semibold ${
+                className="relative overflow-hidden rounded-lg px-3 py-2 text-xs font-semibold"
+                style={
                   selectedTopic === "all"
-                    ? "bg-slate-100 text-slate-950"
-                    : "bg-slate-800 text-slate-300"
-                }`}
+                    ? { background: "rgba(241,245,249,1)", color: "#0f172a", border: "1px solid transparent" }
+                    : { background: "rgba(148,163,184,0.06)", color: "rgb(203,213,225)", border: "1px solid rgba(148,163,184,0.1)" }
+                }
               >
                 All topics
               </button>
 
               {topics.map(([id, name]) => {
                 const stats = topicStats.get(id) ?? { total: 0, attempted: 0 };
+                const topicPct = stats.total > 0
+                  ? Math.round((stats.attempted / stats.total) * 100)
+                  : 0;
                 const isActive = selectedTopic === id;
 
                 return (
                   <button
                     key={id}
                     onClick={() => setSelectedTopic(id)}
-                    className={`rounded-lg border border-transparent px-3 py-2 text-xs font-semibold ${
+                    className="relative overflow-hidden rounded-lg px-3 py-2 text-xs font-semibold"
+                    style={
                       isActive
-                        ? "bg-slate-100 text-slate-950"
-                        : "bg-slate-800 text-slate-300"
-                    }`}
+                        ? { background: "rgba(241,245,249,1)", color: "#0f172a", border: "1px solid transparent" }
+                        : {
+                            background: `linear-gradient(to right, rgba(148,163,184,0.15) ${topicPct}%, rgba(148,163,184,0.06) ${topicPct}%)`,
+                            border: "1px solid rgba(148,163,184,0.1)",
+                            color: "rgb(203,213,225)",
+                          }
+                    }
                   >
                     {name}
-                    <span className="ml-1.5 text-[10px] font-normal text-slate-500">
+                    <span
+                      className={`ml-1.5 rounded px-1 text-[10px] font-normal ${
+                        isActive ? "text-slate-600" : "text-slate-600"
+                      }`}
+                    >
                       {stats.total}
                     </span>
                   </button>
@@ -186,10 +193,10 @@ export default function Subject() {
                 {/* Text */}
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-slate-200">
-                    {accuracyPct}% Accuracy
+                    {attemptedCount} solved
                   </p>
                   <p className="mt-0.5 text-xs text-slate-500">
-                    {attemptedCount} Solved · {totalCount - attemptedCount} Remaining · {bookmarkCount} Bookmark{bookmarkCount === 1 ? "" : "s"}
+                    {totalCount - attemptedCount} remaining · {solvedPct}%
                   </p>
                 </div>
               </div>
