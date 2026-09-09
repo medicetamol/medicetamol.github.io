@@ -22,6 +22,18 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
+    id: "biochemistry", name: "Biochemistry", code: "BC", short: "Biochem",
+    topics: [
+      { id: "CAR", name: "Carbohydrate" },
+      { id: "LIP", name: "Lipids" },
+      { id: "PRO", name: "Proteins & Amino Acids" },
+      { id: "ENZ", name: "Enzymes" },
+      { id: "MOL", name: "Molecular Biology & Genetics" },
+      { id: "VIT", name: "Vitamins & Minerals" },
+      { id: "MSC", name: "Miscellaneous" },
+    ]
+  },
+  {
     id: "physiology", name: "Physiology", code: "PH", short: "Physio",
     topics: [
       { id: "GNM", name: "General & Nerve Muscle" },
@@ -33,18 +45,6 @@ export const SUBJECTS: Subject[] = [
       { id: "NPH", name: "Neurophysiology" },
       { id: "HAE", name: "Haematology" },
       { id: "SPS", name: "Special Senses" },
-    ]
-  },
-  {
-    id: "biochemistry", name: "Biochemistry", code: "BC", short: "Biochem",
-    topics: [
-      { id: "CAR", name: "Carbohydrate" },
-      { id: "LIP", name: "Lipids" },
-      { id: "PRO", name: "Proteins & Amino Acids" },
-      { id: "ENZ", name: "Enzymes" },
-      { id: "MOL", name: "Molecular Biology & Genetics" },
-      { id: "VIT", name: "Vitamins & Minerals" },
-      { id: "MSC", name: "Miscellaneous" },
     ]
   },
   {
@@ -94,18 +94,6 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "forensic-medicine", name: "Forensic Medicine", code: "FM", short: "FMT",
-    topics: [
-      { id: "TRM", name: "Traumatology" },
-      { id: "ASP", name: "Asphyxial Deaths" },
-      { id: "TOX", name: "Toxicology" },
-      { id: "THA", name: "Thanatology & Identification" },
-      { id: "JUR", name: "Medical Jurisprudence" },
-      { id: "SXO", name: "Sexual Offences & Infant Deaths" },
-      { id: "FSP", name: "Forensic Psychiatry" },
-    ]
-  },
-  {
     id: "community-medicine", name: "Community Medicine", code: "CM", short: "PSM",
     topics: [
       { id: "EPI", name: "Epidemiology & Biostatistics" },
@@ -122,6 +110,42 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
+    id: "forensic-medicine", name: "Forensic Medicine", code: "FM", short: "FMT",
+    topics: [
+      { id: "TRM", name: "Traumatology" },
+      { id: "ASP", name: "Asphyxial Deaths" },
+      { id: "TOX", name: "Toxicology" },
+      { id: "THA", name: "Thanatology & Identification" },
+      { id: "JUR", name: "Medical Jurisprudence" },
+      { id: "SXO", name: "Sexual Offences & Infant Deaths" },
+      { id: "FSP", name: "Forensic Psychiatry" },
+    ]
+  },
+  {
+    id: "ophthalmology", name: "Ophthalmology", code: "OP", short: "Ophtha",
+    topics: [
+      { id: "CJC", name: "Conjunctiva & Cornea" },
+      { id: "LNC", name: "Lens & Cataract" },
+      { id: "GLC", name: "Glaucoma" },
+      { id: "RTV", name: "Retina & Vitreous" },
+      { id: "UVO", name: "Uvea & Optic Nerve" },
+      { id: "RFQ", name: "Refraction & Squint" },
+      { id: "ORL", name: "Orbit, Lids & Lacrimal" },
+      { id: "NRO", name: "Neuro-Ophthalmology" },
+      { id: "TRM", name: "Trauma & Miscellaneous" },
+    ]
+  },
+  {
+    id: "ent", name: "ENT", code: "EN", short: "ENT",
+    topics: [
+      { id: "EAR", name: "Ear" },
+      { id: "NOS", name: "Nose" },
+      { id: "PHR", name: "Pharynx" },
+      { id: "LRY", name: "Larynx" },
+      { id: "INS", name: "Instruments" },
+    ]
+  },
+  {
     id: "medicine", name: "Medicine", code: "GM", short: "Medicine",
     topics: [
       { id: "CAD", name: "Cardiology" },
@@ -135,6 +159,59 @@ export const SUBJECTS: Subject[] = [
       { id: "RHU", name: "Rheumatology & CTD" },
       { id: "EMR", name: "Emergency Medicine" },
       { id: "MSM", name: "Miscellaneous" },
+    ]
+  },
+    {
+    id: "surgery", name: "Surgery", code: "GS", short: "Surg",
+    topics: [
+      { id: "GNS", name: "General" },
+      { id: "BRS", name: "Breast" },
+      { id: "GIS", name: "GIT" },
+      { id: "HBP", name: "Hepatobiliary & Pancreas" },
+      { id: "ENS", name: "Endocrine" },
+      { id: "URO", name: "Urology" },
+      { id: "VAS", name: "Vascular & Cardiothoracic" },
+      { id: "HNS", name: "Head & Neck" },
+      { id: "NRS", name: "Neurosurgery" },
+      { id: "PLB", name: "Plastic Surgery & Burns" },
+      { id: "TCC", name: "Trauma & Critical Care" },
+      { id: "PDS", name: "Paediatric Surgery" },
+    ]
+  },
+  {
+    id: "obstetrics-gynecology", name: "Obstetrics & Gynecology", code: "OG", short: "OBG",
+    topics: [
+      { id: "NPA", name: "Normal Pregnancy & ANC" },
+      { id: "FTP", name: "Fetus & Pelvis" },
+      { id: "HRP", name: "High-Risk Pregnancy" },
+      { id: "APH", name: "Antepartum Haemorrhage" },
+      { id: "GTD", name: "Gestational Trophoblastic Disease" },
+      { id: "LBD", name: "Labour & Delivery" },
+      { id: "PPP", name: "Postpartum & Puerperium" },
+      { id: "MNA", name: "Menstrual Disorders & Amenorrhoea" },
+      { id: "IST", name: "Infections & STIs" },
+      { id: "FBE", name: "Fibroids & Endometriosis" },
+      { id: "PLF", name: "Prolapse & Pelvic Floor" },
+      { id: "GYM", name: "Gynaecological Malignancies" },
+      { id: "CNT", name: "Contraception" },
+      { id: "IFR", name: "Infertility & Reproductive Endocrinology" },
+      { id: "IPR", name: "Instruments & Procedures" },
+    ]
+  },
+    {
+    id: "pediatrics", name: "Pediatrics", code: "PD", short: "Peds",
+    topics: [
+      { id: "GRW", name: "Growth & Development" },
+      { id: "NEN", name: "Neonatology" },
+      { id: "NUM", name: "Nutrition & Malnutrition" },
+      { id: "PKI", name: "Infectious Diseases" },
+      { id: "PIM", name: "Immunisation" },
+      { id: "PCR", name: "Cardiology" },
+      { id: "PNR", name: "Neurology" },
+      { id: "PHO", name: "Haematology & Oncology" },
+      { id: "PRR", name: "Respiratory & Renal" },
+      { id: "PEM", name: "Endocrine & Metabolic" },
+      { id: "PGS", name: "Genetics & Syndromes" },
     ]
   },
   {
@@ -166,39 +243,6 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "pediatrics", name: "Pediatrics", code: "PD", short: "Peds",
-    topics: [
-      { id: "GRW", name: "Growth & Development" },
-      { id: "NEN", name: "Neonatology" },
-      { id: "NUM", name: "Nutrition & Malnutrition" },
-      { id: "PKI", name: "Infectious Diseases" },
-      { id: "PIM", name: "Immunisation" },
-      { id: "PCR", name: "Cardiology" },
-      { id: "PNR", name: "Neurology" },
-      { id: "PHO", name: "Haematology & Oncology" },
-      { id: "PRR", name: "Respiratory & Renal" },
-      { id: "PEM", name: "Endocrine & Metabolic" },
-      { id: "PGS", name: "Genetics & Syndromes" },
-    ]
-  },
-  {
-    id: "surgery", name: "Surgery", code: "GS", short: "Surg",
-    topics: [
-      { id: "GNS", name: "General" },
-      { id: "BRS", name: "Breast" },
-      { id: "GIS", name: "GIT" },
-      { id: "HBP", name: "Hepatobiliary & Pancreas" },
-      { id: "ENS", name: "Endocrine" },
-      { id: "URO", name: "Urology" },
-      { id: "VAS", name: "Vascular & Cardiothoracic" },
-      { id: "HNS", name: "Head & Neck" },
-      { id: "NRS", name: "Neurosurgery" },
-      { id: "PLB", name: "Plastic Surgery & Burns" },
-      { id: "TCC", name: "Trauma & Critical Care" },
-      { id: "PDS", name: "Paediatric Surgery" },
-    ]
-  },
-  {
     id: "orthopedics", name: "Orthopedics", code: "OR", short: "Ortho",
     topics: [
       { id: "FRG", name: "Fractures — General" },
@@ -210,20 +254,6 @@ export const SUBJECTS: Subject[] = [
       { id: "ARJ", name: "Arthritis & Joint Disorders" },
       { id: "PDO", name: "Paediatric Orthopaedics" },
       { id: "NMM", name: "Neuromuscular & Metabolic" },
-    ]
-  },
-  {
-    id: "radiology", name: "Radiology", code: "RD", short: "Radio",
-    topics: [
-      { id: "RDB", name: "Basics" },
-      { id: "RDG", name: "GIT" },
-      { id: "RDR", name: "Respiratory" },
-      { id: "RDC", name: "CVS" },
-      { id: "RDN", name: "Neuroradiology" },
-      { id: "RDM", name: "Musculoskeletal" },
-      { id: "RDW", name: "Genitourinary & Women's Imaging" },
-      { id: "RDI", name: "Interventional & Nuclear Medicine" },
-      { id: "RDT", name: "Radiotherapy" },
     ]
   },
   {
@@ -240,49 +270,19 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "ent", name: "ENT", code: "EN", short: "ENT",
+    id: "radiology", name: "Radiology", code: "RD", short: "Radio",
     topics: [
-      { id: "EAR", name: "Ear" },
-      { id: "NOS", name: "Nose" },
-      { id: "PHR", name: "Pharynx" },
-      { id: "LRY", name: "Larynx" },
-      { id: "INS", name: "Instruments" },
+      { id: "RDB", name: "Basics" },
+      { id: "RDG", name: "GIT" },
+      { id: "RDR", name: "Respiratory" },
+      { id: "RDC", name: "CVS" },
+      { id: "RDN", name: "Neuroradiology" },
+      { id: "RDM", name: "Musculoskeletal" },
+      { id: "RDW", name: "Genitourinary & Women's Imaging" },
+      { id: "RDI", name: "Interventional & Nuclear Medicine" },
+      { id: "RDT", name: "Radiotherapy" },
     ]
-  },
-  {
-    id: "ophthalmology", name: "Ophthalmology", code: "OP", short: "Ophtha",
-    topics: [
-      { id: "CJC", name: "Conjunctiva & Cornea" },
-      { id: "LNC", name: "Lens & Cataract" },
-      { id: "GLC", name: "Glaucoma" },
-      { id: "RTV", name: "Retina & Vitreous" },
-      { id: "UVO", name: "Uvea & Optic Nerve" },
-      { id: "RFQ", name: "Refraction & Squint" },
-      { id: "ORL", name: "Orbit, Lids & Lacrimal" },
-      { id: "NRO", name: "Neuro-Ophthalmology" },
-      { id: "TRM", name: "Trauma & Miscellaneous" },
-    ]
-  },
-  {
-    id: "obstetrics-gynecology", name: "Obstetrics & Gynecology", code: "OG", short: "OBG",
-    topics: [
-      { id: "NPA", name: "Normal Pregnancy & ANC" },
-      { id: "FTP", name: "Fetus & Pelvis" },
-      { id: "HRP", name: "High-Risk Pregnancy" },
-      { id: "APH", name: "Antepartum Haemorrhage" },
-      { id: "GTD", name: "Gestational Trophoblastic Disease" },
-      { id: "LBD", name: "Labour & Delivery" },
-      { id: "PPP", name: "Postpartum & Puerperium" },
-      { id: "MNA", name: "Menstrual Disorders & Amenorrhoea" },
-      { id: "IST", name: "Infections & STIs" },
-      { id: "FBE", name: "Fibroids & Endometriosis" },
-      { id: "PLF", name: "Prolapse & Pelvic Floor" },
-      { id: "GYM", name: "Gynaecological Malignancies" },
-      { id: "CNT", name: "Contraception" },
-      { id: "IFR", name: "Infertility & Reproductive Endocrinology" },
-      { id: "IPR", name: "Instruments & Procedures" },
-    ]
-  },
+  }
 ];
 
 export const getSubject = (id: string) => SUBJECTS.find((s) => s.id === id);
