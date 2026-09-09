@@ -89,5 +89,84 @@
       "Foliate"
     ],
     "a": 2
+  },  
+  {
+    "id": "PGEN008",
+    "y": 2023,
+    "t": "NOS",
+    "q": "[Image: Axial CT scan of the head Large, well-circumscribed, round hypodense lesion in the frontal region Associated local bony defect adjacent to the lesion] A 30-year-old male presents with nonaxial proptosis of the left eye. The patient gives a history of a road traffic accident 15 years back. The CT image is given below. What is the most likely diagnosis?",
+    "o": [
+      "Frontal mucocele",
+      "Frontal meningioma",
+      "Juvenile nasopharyngeal angiofibroma",
+      "Pseudotumor of orbit"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN009",
+    "y": 2023,
+    "t": "LRY",
+    "q": "[Image: Photo of anterior neck below the collar Permanent round stoma opening directly into the airway Surrounding skin healed and settled] A 55-year-old patient comes with hoarseness of voice and difficulty swallowing. The patient was diagnosed with laryngeal carcinoma, and surgical management was done. The post-operative image of the patient is given below. Which of the following surgery was done on this patient?",
+    "o": [
+      "Partial laryngectomy",
+      "Percutaneous tracheostomy",
+      "Standard tracheostomy",
+      "Total laryngectomy"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGEN010",
+    "y": 2023,
+    "t": "EAR",
+    "q": "A female patient with hearing loss is examined and is found to be Rinne negative at 256 Hz and 512 Hz, while Rinne positive at 1024 Hz. What is the expected air conduction and bone conduction gap?",
+    "o": [
+      "30-45 dB",
+      "15-30 dB",
+      "45-60 dB",
+      ">60 dB"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN011",
+    "y": 2023,
+    "t": "PHR",
+    "q": "[Image: Endoscopic view of the nasopharynx via scope placed through the nostril Arrow pointing to a specific mucosal fold/structure Surrounding mucosal landmarks visible in the field] Identify the structure marked in the image.",
+    "o": [
+      "Fossa of Rosenmuller",
+      "Tubal tonsil",
+      "Opening of the Eustachian tube",
+      "Adenoid"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN012",
+    "y": 2023,
+    "t": "PHR",
+    "q": "[Image: Photo of a curved plastic tube-shaped device Device made up of three connected component parts Curved shape designed to fit an anatomical passage] The instrument shown in the image is not used for which of the following?",
+    "o": [
+      "Airway toileting",
+      "Upper airway examination",
+      "Acute nasopharyngeal obstruction",
+      "Prolonged mechanical ventilation"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGEN013",
+    "y": 2023,
+    "t": "PHR",
+    "q": "A 10-year-old child presents with throat pain, fever, and ear pain. He is diagnosed with recurrent tonsillitis. Which nerve is responsible for the ear pain in this patient?",
+    "o": [
+      "Tympanic branch of the glossopharyngeal nerve",
+      "Greater auricular nerve",
+      "Auriculotemporal nerve",
+      "Auricular branch of the vagus nerve"
+    ],
+    "a": 0
   }
 ]
+
