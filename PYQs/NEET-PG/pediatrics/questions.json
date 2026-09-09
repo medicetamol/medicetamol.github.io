@@ -102,5 +102,135 @@
       "Osteopetrosis"
     ],
     "a": 1
+  },
+  {
+    "id": "PGPD009",
+    "y": 2023,
+    "t": "PRR",
+    "q": "A newborn presented with chest retractions, dyspnea, and lethargy. The pediatrician diagnosed the baby with respiratory distress syndrome. This occurs due to the deficiency of:",
+    "o": [
+      "Dipalmitoyl inositol",
+      "Lecithin",
+      "Sphingomyelin",
+      "Dipalmitoylphosphatidylethanolamine"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD010",
+    "y": 2023,
+    "t": "PRR",
+    "q": "A 10-year-old child weighing 30 kg presents with a history of loose stools for 2 days. On examination, there is severe dehydration. Laboratory investigations are as follows. What is the initial management as per ISPAD guidelines? RBS 550mg/dL pH 7.01 Na+ 158mEq/L Urine glucose 3+",
+    "o": [
+      "Manage ABC, NS 20 mL/kg and start insulin after 1 hour",
+      "Manage ABC, NS 20 mL/kg along with insulin 0.1 IU/kg/hr",
+      "Manage ABC, NS 10 mL/kg along with insulin 0.1 IU/kg/hr",
+      "Manage ABC, NS 10 mL/kg and start insulin after 1 hour"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD011",
+    "y": 2023,
+    "t": "GRW",
+    "q": "Which of the following is the best sign to indicate adequate growth in an infant with a birth weight of 2.8 kg?",
+    "o": [
+      "Increase in length of 25 centimetres in the first year",
+      "Weight gain of 300 grams per month till 1 year",
+      "Anterior fontanelle closure by 6 months of age",
+      "Weight under the 75th percentile and height under the 25th percentile"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD012",
+    "y": 2023,
+    "t": "PKI",
+    "q": "A 3-month-old baby complains of deafness, cataract, and patent ductus arteriosus. Which of the following is the most likely diagnosis?",
+    "o": [
+      "Congenital herpes simplex virus infection",
+      "Congenital toxoplasmosis",
+      "Congenital cytomegalovirus infection",
+      "Congenital rubella syndrome"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPD013",
+    "y": 2023,
+    "t": "PRR",
+    "q": "Chloride level in sweat is used in the diagnosis of which disease?",
+    "o": [
+      "Phenylketonuria",
+      "Cystic fibrosis",
+      "Gaucher's disease",
+      "Osteogenesis imperfecta"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD014",
+    "y": 2023,
+    "t": "PKI",
+    "q": "A child presents with fever and a rash spreading from the face, behind cheeks, and buccal mucosa to other body parts. On examination, Koplik's spot is present. What is the likely diagnosis?",
+    "o": [
+      "Measles",
+      "Rubella",
+      "Varicella",
+      "Mumps"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD015",
+    "y": 2023,
+    "t": "PKI",
+    "q": "A 3-week-old infant presents with a cough and sore throat. The mother reports that the infant develops a paroxysm of cough followed by apnea. The total leucocyte count is >50,000 cells/μL. Which of the following drugs will you prescribe for this patient?",
+    "o": [
+      "Azithromycin",
+      "Amoxicillin",
+      "Cotrimoxazole",
+      "Clarithromycin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD016",
+    "y": 2023,
+    "t": "PRR",
+    "q": "[Image: Frontal neck/chest X-ray Arrow pointing to narrowing of the air column in the upper airway region Symmetric tapering of the tracheal air shadow] A child is brought to the hospital with respiratory distress and biphasic stridor. The radiograph is shown below. What is the diagnosis?",
+    "o": [
+      "Acute epiglottitis",
+      "Acute laryngotracheobronchitis",
+      "Foreign body aspiration",
+      "Laryngomalacia"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD017",
+    "y": 2023,
+    "t": "PRR",
+    "q": "A 3-month-old baby presents with jaundice and clay-coloured stools. Lab investigation reveals that the baby has conjugated hyperbilirubinemia. The liver biopsy shows periductal proliferation. What is the most likely diagnosis?",
+    "o": [
+      "Crigler-Najjar syndrome",
+      "Rotor syndrome",
+      "Dubin-Johnson syndrome",
+      "Biliary atresia"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPD018",
+    "y": 2023,
+    "t": "PKI",
+    "q": "An infant presents with hepatosplenomegaly and thrombocytopenia. Neuroimaging with CT shows periventricular calcifications. What is the most likely diagnosis?",
+    "o": [
+      "Congenital rubella syndrome",
+      "Congenital herpes simplex virus infection",
+      "Congenital toxoplasmosis",
+      "Congenital cytomegalovirus infection"
+    ],
+    "a": 3
   }
 ]
