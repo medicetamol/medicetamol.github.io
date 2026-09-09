@@ -89,5 +89,58 @@
       "Scabies"
     ],
     "a": 2
+  },
+  {
+    "id": "PGDR008",
+    "y": 2023,
+    "t": "MSD",
+    "q": "[Image: Photo of back of neck Well-demarcated erythematous (reddish) patch Distribution pattern corresponding to a contact area] A lady developed a skin reaction, as shown in the image, after using a hair dye. Which of the following chemicals is responsible for this condition?",
+    "o": [
+      "Pollen",
+      "Chromates",
+      "Balsam of Peru",
+      "p-Phenylenediamine"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGDR009",
+    "y": 2023,
+    "t": "MSD",
+    "q": "A female patient presented with acne that is not resolving on oral isotretinoin and antibiotics therapy. Which of the following is the next best investigation?",
+    "o": [
+      "Look for dietary triggers.",
+      "Evaluate for hyperandrogenism",
+      "Check for antibiotic resistance",
+      "Look for drug triggers"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGDR010",
+    "y": 2023,
+    "t": "STI",
+    "q": "A young woman complains of a painless ulcer in the genital area. It is associated with non-tender inguinal lymphadenopathy. What is the most likely diagnosis?",
+    "o": [
+      "Chancroid",
+      "Syphilis",
+      "Herpes genitalis",
+      "Granuloma inguinale"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGDR011",
+    "y": 2023,
+    "t": "MSD",
+    "q": "[Image: Photo of skin surface Multiple raised, papillomatous, wart-like nodules Lesions vary in size, brown to skin-colored] Which of the following is associated with the clinical condition shown in the image?",
+    "o": [
+      "Cataract",
+      "Glaucoma",
+      "Malignant melanoma",
+      "Basal cell carcinoma"
+    ],
+    "a": 2
   }
 ]
+  
