@@ -206,5 +206,356 @@
       "Hyperchloremic hyponatremic metabolic alkalosis"
     ],
     "a": 2
+  },
+  {
+    "id": "PGGS017",
+    "y": 2023,
+    "t": "URO",
+    "q": "A 55-year-old male presented with verrucous carcinoma around the glans of the penis. Examination reveals that the inguinal lymph nodes are not enlarged. What is the appropriate management for this patient?",
+    "o": [
+      "Total penectomy",
+      "CO2 laser excision",
+      "Topical 5-fluorouracil",
+      "Partial penectomy"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS018",
+    "y": 2023,
+    "t": "GNS",
+    "q": "[Image: Photo of a limb draped in surgical cloth A rigid needle-like device inserted directly into the bone Syringe attached to the device via connecting tubing] Identify the procedure being performed in the image given below.",
+    "o": [
+      "Intraosseous cannula for pain relief",
+      "Bone marrow aspiration",
+      "Intraosseous route access for giving IV fluids",
+      "Intraosseous abscess drainage"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS019",
+    "y": 2023,
+    "t": "URO",
+    "q": "[Image: Extensive area of raw, red, ulcerated tissue over the groin/perineal region Irregular, ragged wound borders Surrounding skin appears darkened and discolored] A diabetic patient presents with sudden-onset perineal pain. On examination, foul-smelling discharge, and necrotic tissue as seen in the image is noted. Which of the following is true about the given condition?",
+    "o": [
+      "Anti-gas gangrene serum indicated for all cases",
+      "Urinary diversion is the next step",
+      "Bilateral orchidectomy must be done",
+      "Mixed aerobic and anaerobic infection"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS020",
+    "y": 2023,
+    "t": "GIS",
+    "q": "Which of the following is the most common complication following ligation of the first vessel during abdominoperineal resection for rectal carcinoma? (APR Abdominoperineal resection)",
+    "o": [
+      "Parasympathetic-bladder dysfunction and retrograde ejaculation.",
+      "Sympathetic - - bladder dysfunction and impotence.",
+      "Sympathetic- retrograde ejaculation and bladder dysfunction.",
+      "Sympathetic-Impotence and loss of cutaneous sensation in perineal region"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS021",
+    "y": 2023,
+    "t": "PLB",
+    "q": "[Image: Photo of upper chest Raised, elongated, pink-colored firm scar Scar tissue extends beyond the original wound margins] A patient presents to the clinic with the lesion given in the image. He had a traumatic injury to the chest one year ago. What is the most likely diagnosis?",
+    "o": [
+      "Hemangioma",
+      "Hypertrophic scar",
+      "Keloid",
+      "Neurofibroma"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS022",
+    "y": 2023,
+    "t": "GIS",
+    "q": "A 45-year-old male underwent bilateral laparoscopic hernia repair for inguinal hernia. Postoperatively, he complained of pain in the right thigh. Which of the following nerve entrapment leads to this symptom?",
+    "o": [
+      "Ilioinguinal nerve",
+      "Iliohypogastric nerve",
+      "Femoral nerve",
+      "Lateral cutaneous nerve of thigh"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS023",
+    "y": 2023,
+    "t": "GNS",
+    "q": "A patient was brought to the ER following a road traffic accident. On examination, the patient opens his eyes to a painful stimulus, speaks inappropriately, and withdraws his limbs to a painful stimulus. What is his GCS score?",
+    "o": [
+      "E2V2M3",
+      "E3V3M3",
+      "E2V3M4",
+      "E3V2M2"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS024",
+    "y": 2023,
+    "t": "HBP",
+    "q": "[Image: Axial CT scan of the abdomen Well-defined cystic lesion within the liver, with internal septations Arrow pointing to the lesion margin] A patient presented with fever and abdominal pain with jaundice. Investigations showed the given findings. Which of the following statements is true regarding this condition?",
+    "o": [
+      "Surgery is mandatory",
+      "Fine-needle aspiration cytology is diagnostic",
+      "Angioembolization is the treatment of choice",
+      "Echinococcus species is involved in etiology"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS025",
+    "y": 2023,
+    "t": "HBP",
+    "q": "A patient who is a known case of alcohol dependence syndrome presents with sudden and unintentional weight loss. What is the most likely diagnosis? -ALP 240 IU/L -S. Direct bilirubin - 1 mg/dL -AST/ALT -0.5 -Alpha fetoprotein- 600 ng/mL",
+    "o": [
+      "Hepatic adenoma",
+      "Cholangiocarcinoma",
+      "Hepatocellular carcinoma",
+      "Alcoholic hepatitis"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS026",
+    "y": 2023,
+    "t": "HBP",
+    "q": "A patient presented with features of chronic pancreatitis with recurrent attacks and has a 10 mm dilatation of the pancreatic duct with intraductal calculi present. Which of the following is the surgery of choice?",
+    "o": [
+      "Pancreaticoduodenectomy",
+      "Longitudinal pancreaticojejunostomy",
+      "ERCP and sphincterotomy",
+      "Coring of pancreas head"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS027",
+    "y": 2023,
+    "t": "BRS",
+    "q": "A woman presented with a BIRADS-5 breast lesion. Which of the following is a good prognostic factor for this lesion?",
+    "o": [
+      "BRCA-1 positive",
+      "p53 positive",
+      "ER positive",
+      "High Ki-67"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS028",
+    "y": 2023,
+    "t": "VAS",
+    "q": "A patient presents with sudden onset of chest pain shooting to the neck and interscapular region. X-ray shows widened mediastinum. BP is 110/90 mmHg in the right upper limb and 160/100 mmHg in the left upper limb. What is the most likely diagnosis?",
+    "o": [
+      "Acute coronary syndrome",
+      "Acute pulmonary embolism",
+      "Acute aortic dissection",
+      "Esophageal rupture"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS029",
+    "y": 2023,
+    "t": "HBP",
+    "q": "A patient presented with right hypochondriac pain. He had an episode of diarrhea 1 week prior. CT scan of the abdomen reveals a liver abscess of around 25 ccs. What is the next step in management?",
+    "o": [
+      "PAIR",
+      "Surgery",
+      "Medical therapy",
+      "Percutaneous drainage"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS030",
+    "y": 2023,
+    "t": "NRS",
+    "q": "[Image: Axial CT scan of the brain Crescent-shaped hyperdense (bright) collection along the inner skull margin on one side Associated midline shift of brain structures] A 50-year-old patient with a history of trauma one week back presents with confusion and ataxia. He is on treatment for alcohol dependence and his last intake was 2 weeks back. CT scan reveals the following finding. What is the diagnosis?",
+    "o": [
+      "Extradural hemorrhage",
+      "Subdural hemorrhage",
+      "Intra-parenchymal hemorrhage",
+      "Subarachnoid hemorrhage"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS031",
+    "y": 2023,
+    "t": "PLB",
+    "q": "[Image: Photo of a limb Extensive reddish-purple discoloration of the skin Patchy yellowish necrotic areas with blistering] Which of the following is false about the given condition?",
+    "o": [
+      "Repeated radical surgery every 24 hours may be required to adequately manage this condition",
+      "This is a case of Meleney's gangrene",
+      "The condition is caused by β hemolytic streptococcus and may sometimes be polymicrobial",
+      "Hyperbaric oxygen has no role in the treatment of this condition"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS032",
+    "y": 2023,
+    "t": "GIS",
+    "q": "A patient presents with a swelling in the groin region and it is diagnosed as a direct inguinal hernia. Weakness in which of the following structures is most likely to cause this condition?",
+    "o": [
+      "Pectineal ligament",
+      "Conjoint tendon",
+      "Reflected part of inguinal ligament",
+      "Lacunar ligament"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS033",
+    "y": 2023,
+    "t": "VAS",
+    "q": "A construction worker came to the OPD complaining of white fingers. He has been working in the cement and concrete industry and has been working on heavy machinery drills, wood, and furniture polishing for 20 years. What is the most likely etiology for this condition?",
+    "o": [
+      "Candidal infection of the fingers due to continuous exposure to water",
+      "Exposure to thinners and paints",
+      "Continuous exposure to cement and concrete",
+      "Continuous exposure to drills and machines"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS034",
+    "y": 2023,
+    "t": "GIS",
+    "q": "A 5-year-old child was admitted to the hospital for prolapsing rectal mass and painless rectal bleeding. Histopathological examination reveals enlarged and inflamed glands filled with mucin. What is the likely diagnosis?",
+    "o": [
+      "Adenoma",
+      "Choristoma",
+      "Hamartoma",
+      "Carcinoma"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS035",
+    "y": 2023,
+    "t": "PLB",
+    "q": "[Image: Photo of the sole of a foot A round, punched-out ulcer with a pink base surrounded by thickened yellowish callused skin Surrounding skin appears otherwise intact] Identify the given condition.",
+    "o": [
+      "Venous ulcer",
+      "Malignant ulcer",
+      "Arterial ulcer",
+      "Trophic ulcer"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS036",
+    "y": 2023,
+    "t": "VAS",
+    "q": "A patient with varicose veins complains of eczema over the same region. What is the stage of the clinical classification according to the CEAP guidelines? CEAP-Clinical-Aetiology-Anatomy- Pathophysiology classification of chronic venous disorders",
+    "o": [
+      "C2",
+      "C3",
+      "C4a",
+      "C4b"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS037",
+    "y": 2023,
+    "t": "NRS",
+    "q": "A patient comes to the casualty with a severe headache. His BP was found to be 160/100 mmHg. CT scan revealed a subarachnoid hemorrhage. What is the next best step in the management of this patient?",
+    "o": [
+      "Nimodipine",
+      "Angiography",
+      "Surgery",
+      "Fibrinolytic therapy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS038",
+    "y": 2023,
+    "t": "GIS",
+    "q": "A 20-year-old female patient consumed a cleaning product containing 90% sodium hydroxide. She is having complete dysphagia. What is the best step in management?",
+    "o": [
+      "Esophagojejunostomy",
+      "Stent placement",
+      "Feeding jejunostomy",
+      "Gastrojejunostomy"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS039",
+    "y": 2023,
+    "t": "ENS",
+    "q": "A 23-year-old male patient presents with midline swelling in the neck. The swelling moves with deglutition and protrusion of the tongue. What is the likely diagnosis?",
+    "o": [
+      "Brachial cyst",
+      "Thyroglossal cyst",
+      "Plunging ranula",
+      "Dermoid cyst"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS040",
+    "y": 2023,
+    "t": "GNS",
+    "q": "A young patient is admitted with a history of fever for 5 days. BP is 90/60 mmHg, PR-120 bpm, RR-24 breaths/ min, GCS score-10; laboratory tests show leucocytosis with neutrophilia and serum creatinine level of 2.6 mg/ dL. An intern doctor wants to calculate the qSOFA score to predict prognosis and hospitalization duration. Which of the following comprises the qSOFA score?",
+    "o": [
+      "BP, RR and CBC",
+      "Creatinine, PR, BP",
+      "RR, Body temperature, PR",
+      "SBP, RR, GCS score"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS041",
+    "y": 2023,
+    "t": "GYM",
+    "q": "A 54-year-old woman presents with cervical cancer stage 2A. It is decided to give neoadjuvant chemotherapy. What does neoadjuvant chemotherapy mean?",
+    "o": [
+      "Chemotherapy is given along with radiation.",
+      "Chemotherapy is given during surgery.",
+      "Chemotherapy is given before radical surgery to reduce the bulk of the tumor",
+      "Chemotherapy is given after radical surgery for micrometastases"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS042",
+    "y": 2023,
+    "t": "GIS",
+    "q": "A patient presents with sudden onset of hematemesis. He has been taking aspirin for his arthritis and drinks alcohol occasionally. He gives a history of occasional abdominal pain. On examination, there is no abdominal mass or tenderness. What is the likely diagnosis?",
+    "o": [
+      "Mallory-Weiss tear",
+      "Esophagitis",
+      "Peptic ulcer",
+      "Esophageal varices"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGS043",
+    "y": 2023,
+    "t": "PLB",
+    "q": "[Image: Photo of the side of the face and neck Rounded swelling located just below and behind the ear lobule Skin over the swelling appears normal in color] A 40-year-old male patient presents with a swelling that has been slowly growing in the past 2 years. On examination, it was variable in consistency and fully mobile. What is the most likely diagnosis?",
+    "o": [
+      "Dermoid cyst",
+      "Parotid tumor",
+      "Sebaceous cyst",
+      "Cervical lymph node"
+    ],
+    "a": 1
   }
 ]
