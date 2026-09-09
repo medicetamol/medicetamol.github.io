@@ -1,6 +1,6 @@
 import {
-  ArrowLeft,
   Bookmark,
+  ChevronLeft,
   ChevronRight,
   ClipboardCheck,
   CornerRightUp,
@@ -200,15 +200,17 @@ export default function Quiz() {
     };
   }, []);
 
-  // ── Prevent browser back ──
+  // ── Prevent browser back (custom modules + solve links only) ──
   useEffect(() => {
     if (!pool.length) return;
+    // Direct PYQ: allow native back navigation
+    if (!isCustom && !isSolveLink) return;
     const state = { mediCetamolQuiz: true };
     window.history.pushState(state, "", window.location.href);
     const blockBack = () => window.history.pushState(state, "", window.location.href);
     window.addEventListener("popstate", blockBack);
     return () => window.removeEventListener("popstate", blockBack);
-  }, [pool.length, index]);
+  }, [pool.length, index, isCustom, isSolveLink]);
 
   // ── Fullscreen management (custom modules only) ──
   useEffect(() => {
@@ -876,7 +878,7 @@ export default function Quiz() {
                 aria-label="Previous question"
               >
                 <span className="flex items-center justify-center gap-2">
-                  <ArrowLeft size={18} />
+                  <ChevronLeft size={18} />
                   PREV
                 </span>
               </button>
@@ -938,7 +940,7 @@ export default function Quiz() {
                 aria-label="Previous question"
               >
                 <span className="flex items-center justify-center gap-2">
-                  <ArrowLeft size={18} />
+                  <ChevronLeft size={18} />
                   PREV
                 </span>
               </button>
@@ -974,7 +976,7 @@ export default function Quiz() {
                 aria-label="Previous question"
               >
                 <span className="flex items-center justify-center gap-2">
-                  <ArrowLeft size={18} />
+                  <ChevronLeft size={18} />
                   PREV
                 </span>
               </button>
