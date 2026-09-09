@@ -297,6 +297,240 @@
       "Trichomoniasis"
     ],
     "a": 2
+  },
+  {
+    "id": "PGOG024",
+    "y": 2023,
+    "t": "LBD",
+    "q": "[Image: Partogram chart with multiple graphs Fetal heart rate line showing a declining trend over time Cervical dilation plot crossing to the right of the reference action line Contraction frequency chart shown below] A partogram of a woman who is in labor is shown below. Oxytocin infusion is already given. How will you manage the condition?",
+    "o": [
+      "Forceps-assisted delivery",
+      "Vacuum-assisted delivery",
+      "Oxytocin infusion",
+      "Cesarean section"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOG025",
+    "y": 2023,
+    "t": "HRP",
+    "q": "A woman presents to you at 36 weeks of gestation with complaints of breathlessness and excessive abdominal distension. Fetal movements are normal. On examination, fetal parts are not easily felt and fetal heartbeat is heard but it is muffled. Her symphysis fundal height is 41 cm. Her abdomen is tense but not tender. What is the most likely diagnosis?",
+    "o": [
+      "Abruptio placenta",
+      "Hydrocephalus of fetus",
+      "Polyhydramnios",
+      "Fetal-maternal ascites"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG026",
+    "y": 2023,
+    "t": "IPR",
+    "q": "For which of the following procedures in the given OT list, can you preferably do a hysteroscopy?",
+    "o": [
+      "Tubal ligation",
+      "Asherman syndrome",
+      "Endocervical polyp",
+      "Subserosal fibroid"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG027",
+    "y": 2023,
+    "t": "HRP",
+    "q": "A primigravida presents to you with anemia early in her pregnancy. She is 7 weeks pregnant as seen on ultrasound. Her hemoglobin level is 9 g/dL. When should the iron supplements be started for her?",
+    "o": [
+      "10 to 12 weeks",
+      "8 to 10 weeks",
+      "After 14 weeks",
+      "After 20 weeks"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG028",
+    "y": 2023,
+    "t": "IFR",
+    "q": "A 23-year-old woman accompanied by her mother-in-law comes to the infertility clinic. She has been having regular intercourse for 6 months but is not able to conceive. What is the next best step?",
+    "o": [
+      "Semen analysis for husband",
+      "Reassure and review the couple after 6 months",
+      "Hysterolaparoscopy",
+      "Diagnostic hysteroscopy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG029",
+    "y": 2023,
+    "t": "GYM",
+    "q": "A 50-year-old woman presents with foul-smelling bloody discharge per vagina mixed with mucous. On examination, a necrotizing growth is seen in the cervix with lateral parametrium involvement. What is the management for this patient?",
+    "o": [
+      "Chemotherapy",
+      "Brachytherapy",
+      "Chemoradiation",
+      "Surgery"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG030",
+    "y": 2023,
+    "t": "IST",
+    "q": "A 28-year-old woman with a history of multiple sexual partners presents with lower abdominal pain for 1 month. She experiences minimal discharge and complaints of intermenstrual bleeding. What is the most likely cause?",
+    "o": [
+      "Herpes simplex",
+      "Genital tuberculosis",
+      "Candida",
+      "Neisseria gonorrhoea"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG031",
+    "y": 2023,
+    "t": "IPR",
+    "q": "A woman is set to undergo a complete laparoscopic hysterectomy. She wants to know if there are any disadvantages to this procedure. What are the disadvantages of laproscopis over-open surgery?",
+    "o": [
+      "Prolonged recovery time",
+      "Not knowing the extent of thermal burns",
+      "Increased bleeding",
+      "Increased pain"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG032",
+    "y": 2023,
+    "t": "LBD",
+    "q": "A 27-year-old pregnant G3P2L2 woman presents to you at 36+6 weeks. Ultrasound is done and shows the fetus is in a transverse lie. The liquor is adequate, the placenta is normal, and she has no risk factors. Both her previous deliveries were normal vaginal deliveries. How will you manage this patient?",
+    "o": [
+      "Cesarean section",
+      "External cephalic version",
+      "Expectant management",
+      "Induction of labor"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG033",
+    "y": 2023,
+    "t": "HRP",
+    "q": "A female presents to you with 6 weeks of amenorrhea complaining of bleeding per vagina and slight abdominal pain. The urine pregnancy test is positive and hCG level is 2800 IU/L. A mass is seen on the left adnexa measuring 3 x 2.5 cm. She is hemodynamically stable. How will you manage this patient? hCG-Human chorionic gonadotropin",
+    "o": [
+      "Oral methotrexate",
+      "Single-dose methotrexate injection",
+      "Serial methotrexate + leucovorin rescue",
+      "Salpingectomy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG034",
+    "y": 2023,
+    "t": "IFR",
+    "q": "[Image: Ultrasound image of an ovary Enlarged ovary with multiple peripherally arranged rounded cystic structures Central stromal area surrounded by the cysts] A 24-year-old woman who is being treated for infertility with human menopausal gonadotropin came with complaints of sudden abdominal pain, nausea, vomiting, and breathlessness. The finding of the ultrasound is shown below. What is the most likely diagnosis?",
+    "o": [
+      "Ovarian hyperstimulation syndrome",
+      "Polycystic ovarian syndrome",
+      "Theca lutein cysts",
+      "Granulosa cell tumor"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG035",
+    "y": 2023,
+    "t": "IPR",
+    "q": "During a hysteroscopic removal of a submucosal fibroid, a fluid deficit of 2000 mL is estimated in a patient. What is the immediate complication of this?",
+    "o": [
+      "Acute tubular necrosis",
+      "DIC",
+      "Pulmonary edema",
+      "Thromboembolism"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG036",
+    "y": 2023,
+    "t": "PLF",
+    "q": "[Image: Close-up photo of the labial region Swollen, red, rounded mass at the lower part of the labia Area circled for emphasis, indicating a tender lump] A woman comes with complaints of pain and swelling in the perineal area. She also has complaints of difficulty in walking and sitting. She gives a history of multiple sexual partners. On examination, a tender swelling is seen with redness on the labia, as shown in the image given below. What is the most likely diagnosis?",
+    "o": [
+      "Chlamydial infection",
+      "Bartholin abscess",
+      "Genital Tuberculosis",
+      "Herpes infection"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG037",
+    "y": 2023,
+    "t": "GYM",
+    "q": "A 54-year-old woman was diagnosed with advanced cervical cancer. She has a 14-year-old daughter. What advice would you give her daughter?",
+    "o": [
+      "Advise HPV vaccine",
+      "Screen for BRCA mutation",
+      "Screen for PTEN mutation",
+      "Perform cervical biopsy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG038",
+    "y": 2023,
+    "t": "MNA",
+    "q": "A 17-year-old girl is seen for primary amenorrhea. There is no development of breasts or hair in the pubic or axillary region. Her height is 155 cm, and her weight is 48 kg. She has bilateral inguinal masses. The uterus, fallopian tube, and Ovary are absent on ultrasound examination. What is the most likely diagnosis?",
+    "o": [
+      "Complete androgen insensitivity syndrome",
+      "Hypergonadotropic hypogonadism",
+      "Turner syndrome",
+      "Polycystic ovary syndrome"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG039",
+    "y": 2023,
+    "t": "MNA",
+    "q": "A 16-year-old girl presents with cyclical pelvic pain every month. She has not achieved menarche yet. On examination, a suprapubic bulge can be seen in the lower abdomen. PR examination reveals a bulging swelling in the anterior aspect. What is the most likely diagnosis?",
+    "o": [
+      "Transverse vaginal septum above the vagina",
+      "Vaginal atresia",
+      "Imperforate hymen",
+      "Cervical agenesis"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG040",
+    "y": 2023,
+    "t": "NPA",
+    "q": "A pregnant woman comes to the clinic. She already has twins by normal delivery. Which of the following is the correct representation of her obstetric score?",
+    "o": [
+      "G3P2",
+      "G3P1",
+      "G2P1",
+      "G2P2"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG041",
+    "y": 2023,
+    "t": "NPA",
+    "q": "A woman presents to you at 36 weeks of gestation with complaints of feeling lightheadedness and dizziness when she lies on her back. She says she feels alright if she lies on her side or when walks. What is the most likely reason behind this? IVC- inferior vena cava",
+    "o": [
+      "Increased intracranial pressure",
+      "IVC compression",
+      "Heavy meals",
+      "Excessive venous pooling at the feet"
+    ],
+    "a": 1
   }
-  
 ]
+  
