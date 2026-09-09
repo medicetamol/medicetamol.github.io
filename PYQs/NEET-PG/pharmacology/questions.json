@@ -89,5 +89,161 @@
       "Liraglutide"
     ],
     "a": 3
+  },
+  {
+    "id": "PGPM008",
+    "y": 2023,
+    "t": "AMI",
+    "q": "A bronchial asthma patient on inhalational steroids presented with white patchy lesions on the tongue and buccal mucosa. What is the drug that can be used to treat this condition?",
+    "o": [
+      "Clotrimazole",
+      "Griseofulvin",
+      "Terbinafine",
+      "Flucytosine"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM009",
+    "y": 2023,
+    "t": "GNP",
+    "q": "A pregnant woman with a history of bronchial asthma is in the third stage of labor. Which drugs should be avoided in managing postpartum hemorrhage in this mother?",
+    "o": [
+      "Carboprost",
+      "Oxytocin",
+      "Dinoprostone",
+      "Methyl ergometrine"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM010",
+    "y": 2023,
+    "t": "CVF",
+    "q": "[Image: Flowchart diagram of two hormonal pathways side by side Arrows connecting various enzymes and hormones with inhibition symbols A question mark placed at a junction point where two arrows converge] Name the drug that acts on both the marked areas.",
+    "o": [
+      "Sacubitril",
+      "Omapatrilat",
+      "Losartan",
+      "Nesiritide"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPM011",
+    "y": 2023,
+    "t": "CVF",
+    "q": "A patient with a previous history of myocardial infarction and ventricular arrhythmia is on treatment for a few months. He developed fatigue, dyspnea, and weight gain. He had also developed pulmonary fibrosis. Which of the following drugs is responsible for the side effects mentioned above?",
+    "o": [
+      "Amiodarone",
+      "Atenolol",
+      "Aspirin",
+      "Spironolactone"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM012",
+    "y": 2023,
+    "t": "AUT",
+    "q": "A young female comes to the emergency department after consuming 100 aspirin tablets. What should be the next step in management?",
+    "o": [
+      "N-acetyl cysteine to replenish glutathione stores",
+      "Pralidoxime",
+      "Glucagon to control bradycardia and hypoglycemia",
+      "Give sodium bicarbonate to alkalize urine"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPM013",
+    "y": 2023,
+    "t": "CVF",
+    "q": "A chronic smoker was on nicotine replacement therapy and clonidine tablets for smoking de-addiction. He stopped taking clonidine tablets and now presents with a headache. What is the reason behind this condition?",
+    "o": [
+      "Postural hypotension",
+      "Receptor upregulation",
+      "Rebound hypertension",
+      "Receptor hypersensitivity"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPM014",
+    "y": 2023,
+    "t": "AUT",
+    "q": "A patient with recurrent gout attacks was started on a therapy that inhibits uric acid synthesis. His symptoms were reduced after therapy. Which drug was he started on?",
+    "o": [
+      "Probenecid",
+      "Colchicine",
+      "Diclofenac",
+      "Allopurinol"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPM015",
+    "y": 2023,
+    "t": "CVF",
+    "q": "A patient with a malignancy is undergoing chemotherapy. The platelet counts were reduced after the previous cycle of chemotherapy. Which of the following drugs can be used to treat this patient?",
+    "o": [
+      "Oprelvekin (IL-11)",
+      "Filgrastim",
+      "Erythropoietin",
+      "Amifostine"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM016",
+    "y": 2023,
+    "t": "CVF",
+    "q": "The true statement among the following is___",
+    "o": [
+      "The dose of telmisartan should be reduced in renal failure but not in hepatic failure.",
+      "The dose of irbesartan should be reduced in case of mild-moderate hepatic failure and renal failure.",
+      "The dose of candesartan should be reduced in mild-moderate liver failure but not in renal failure.",
+      "Losartan acts as a thromboxane A2 antagonist and inhibits platelet aggregation."
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPM017",
+    "y": 2023,
+    "t": "GNP",
+    "q": "A patient given digoxin started having side effects like nausea and vomiting. The serum concentration of digoxin was 4 mg/dL. The plasma therapeutic range is 1 mg/dL. If the half-life of digoxin is 40 hours, how long should one wait before resuming the treatment?",
+    "o": [
+      "40 hours",
+      "80 hours",
+      "120 hours",
+      "140-180 hours"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPM018",
+    "y": 2023,
+    "t": "ANS",
+    "q": "A patient comes to the casualty with organophosphate poisoning. He was started on atropine infusion and pralidoxime. After 2 hours, the patient had a sudden rise in temperature. What is the likely cause of fever?",
+    "o": [
+      "Atropine toxicity",
+      "side effect of pralidoxime",
+      "Due to organophosphate poisoning",
+      "Idiopathic"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM019",
+    "y": 2023,
+    "t": "CVF",
+    "q": "The mechanism of action of tissue plasminogen activator is",
+    "o": [
+      "Inhibit extrinsic pathway",
+      "Inhibits platelet aggregation",
+      "Enhance fibrin degradation",
+      "Inhibit clot formation"
+    ],
+    "a": 2
   }
 ]
