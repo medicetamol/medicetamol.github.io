@@ -42,7 +42,7 @@ const LAST_TEN_SECONDS = 10;
 // ─── Quiz mode derivation ────────────────────────────────────────────────────
 // source=custom  → custom module (ids param present)
 // source=direct  → normal PYQ drill (default)
-// mode=quiz      → exam/quiz mode (global timer, no per-Q submit, no live marking)
+// mode=quiz      → exam mode (global timer, no per-Q submit, no live marking)
 // mode=guide     → guide mode (per-question timer, submit, explanation live)  ← default for custom
 // For direct PYQ sessions mode is always "guide" behaviour (with submit).
 
@@ -406,6 +406,22 @@ export default function Quiz() {
 
   const requestFinalSubmit = useCallback(() => {
     if (isQuizMode) {
+      // Flush the current question's selection into answersRef before counting.
+      // The last question has no NEXT button to trigger the flush that next() does,
+      // so the selection lives only in selectedRef until we explicitly save it here.
+      const currentSel = selectedRef.current;
+      if (currentSel !== null && question) {
+        const alreadySaved = answersRef.current.find((a) => a.qid === question.id);
+        if (!alreadySaved) {
+          const correct = currentSel === question.answer;
+          const flushed: QuizAnswer[] = [
+            ...answersRef.current,
+            { qid: question.id, selected: currentSel, correct },
+          ];
+          answersRef.current = flushed;
+          setAnswers(flushed);
+        }
+      }
       // Check unanswered
       const unanswered = pool.filter(
         (q) => !answersRef.current.find((a) => a.qid === q.id && a.selected !== null)
@@ -434,7 +450,7 @@ export default function Quiz() {
 
     // Early exit from non-last question
     setShowEarlyConfirm(true);
-  }, [isQuizMode, index, pool, finishQuiz]);
+  }, [isQuizMode, index, pool, question, finishQuiz]);
 
   const next = useCallback(() => {
     if (isQuizMode) {
