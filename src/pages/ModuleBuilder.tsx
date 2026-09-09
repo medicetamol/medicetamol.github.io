@@ -105,7 +105,7 @@ function ModeToggle({
                 : "text-slate-500 hover:text-slate-300"
             }`}
           >
-            {m === "guide" ? "Guide Mode" : "Quiz Mode"}
+            {m === "guide" ? "Guide Mode" : "Exam Mode"}
           </button>
         );
       })}
