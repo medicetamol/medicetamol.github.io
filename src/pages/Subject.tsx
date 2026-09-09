@@ -124,35 +124,20 @@ export default function Subject() {
 
               {topics.map(([id, name]) => {
                 const stats = topicStats.get(id) ?? { total: 0, attempted: 0 };
-                const topicPct = stats.total > 0
-                  ? Math.round((stats.attempted / stats.total) * 100)
-                  : 0;
                 const isActive = selectedTopic === id;
 
                 return (
                   <button
                     key={id}
                     onClick={() => setSelectedTopic(id)}
-                    className={`relative overflow-hidden rounded-lg px-3 py-2 text-xs font-semibold ${
+                    className={`rounded-lg border border-transparent px-3 py-2 text-xs font-semibold ${
                       isActive
                         ? "bg-slate-100 text-slate-950"
-                        : "text-slate-300"
+                        : "bg-slate-800 text-slate-300"
                     }`}
-                    style={
-                      !isActive
-                        ? {
-                            background: `linear-gradient(to right, rgba(255,255,255,0.18) ${topicPct}%, rgba(255,255,255,0.05) ${topicPct}%)`,
-                            border: "1px solid rgba(255,255,255,0.1)",
-                          }
-                        : undefined
-                    }
                   >
                     {name}
-                    <span
-                      className={`ml-1.5 rounded px-1 text-[10px] font-normal ${
-                        isActive ? "text-slate-600" : "text-slate-600"
-                      }`}
-                    >
+                    <span className="ml-1.5 text-[10px] font-normal text-slate-500">
                       {stats.total}
                     </span>
                   </button>
