@@ -245,5 +245,57 @@
       "Multifidus"
     ],
     "a": 1
+  },
+  {
+    "id": "PGRD020",
+    "y": 2023,
+    "t": "RDN",
+    "q": "[Image: Frontal skull X-ray of an infant Rounded soft tissue swelling overlying parietal bone Arrow marking swelling confined within suture margins] A 2-month-old infant is brought to the OPD with a parietal swelling present since birth. The X-ray image is given below. What could be the probable diagnosis?",
+    "o": [
+      "Subgaleal hematoma",
+      "Cephalhematoma",
+      "Caput succedaneum",
+      "Enecephalocele"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGRD021",
+    "y": 2023,
+    "t": "RDW",
+    "q": "[Image: Plain X-ray abdomen Multiple rounded, coarse calcified densities overlying one kidney region Dense stippled calcification pattern] A patient presented with abdominal pain and sterile pyuria, and the x-ray showed the following features. What is the likely diagnosis?",
+    "o": [
+      "Putty kidney",
+      "Nephrocalcinosis",
+      "Staghorn calculus",
+      "Psoas calcification"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD022",
+    "y": 2023,
+    "t": "RDT",
+    "q": "A woman with endometrial carcinoma is undergoing radiotherapy. Which of the following is true?",
+    "o": [
+      "Intensity is inversely proportional to the square of the distance from the source",
+      "Small blood vessels are most radioresistant",
+      "Rapidly proliferating cells are most radioresistant",
+      "Small intestinal mucosa is most radio-resistant"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD023",
+    "y": 2023,
+    "t": "RDR",
+    "q": "[Image: Chest X-ray, frontal view Dense white opacity/consolidation at the base of one lung Sharp margin of the opacity along a lobar boundary] A patient presents with a history of fever and cough for the past 3-5 days. His examination findings reveal crepitations. Chest X-ray is given below. What is the probable diagnosis?",
+    "o": [
+      "Apical segment of Right lower lobe consolidation",
+      "Right middle lobe consolidation",
+      "Posterior segment of right lower lobe consolidation",
+      "Loculated pleural effusion"
+    ],
+    "a": 1
   }
 ]
