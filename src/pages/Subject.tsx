@@ -19,20 +19,25 @@ export default function Subject() {
 
   const [selectedTopic, setSelectedTopic] = useState<string>("all");
 
-  // Set of attempted question IDs for this subject
+  // Progress stats for this subject
   const [attemptedIds, setAttemptedIds] = useState<Set<string>>(new Set());
+  const [correctCount, setCorrectCount] = useState(0);
+  const [bookmarkCount, setBookmarkCount] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
     const subjectQids = new Set(questions.map((q) => q.id));
     getAllQuestionProgress().then((all) => {
       if (cancelled) return;
+      const subjectRows = all.filter((p) => subjectQids.has(p.qid));
       const attempted = new Set(
-        all
-          .filter((p) => p.attempts > 0 && subjectQids.has(p.qid))
-          .map((p) => p.qid)
+        subjectRows.filter((p) => p.attempts > 0).map((p) => p.qid)
       );
+      const correct = subjectRows.reduce((n, p) => n + p.correctAttempts, 0);
+      const bookmarks = subjectRows.filter((p) => p.bookmarked).length;
       setAttemptedIds(attempted);
+      setCorrectCount(correct);
+      setBookmarkCount(bookmarks);
     });
     return () => { cancelled = true; };
   }, [questions]);
@@ -51,6 +56,7 @@ export default function Subject() {
   const totalCount = questions.length;
   const attemptedCount = attemptedIds.size;
   const solvedPct = totalCount > 0 ? Math.round((attemptedCount / totalCount) * 100) : 0;
+  const accuracyPct = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
 
   // Per-topic counts
   const topicStats = useMemo(() => {
@@ -91,7 +97,7 @@ export default function Subject() {
           <p className="px-3 py-1.5 text-xs text-slate-400">
             {totalCount} PYQ{totalCount === 1 ? "" : "s"}
             {attemptedCount > 0 && (
-              <span className="ml-1.5 text-slate-500">· {solvedPct}% solved</span>
+              <span className="ml-1.5">· {solvedPct}% solved</span>
             )}
           </p>
         </div>
@@ -193,10 +199,10 @@ export default function Subject() {
                 {/* Text */}
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-slate-200">
-                    {attemptedCount} solved
+                    {accuracyPct}% Accuracy
                   </p>
                   <p className="mt-0.5 text-xs text-slate-500">
-                    {totalCount - attemptedCount} remaining · {solvedPct}%
+                    {attemptedCount} Solved · {totalCount - attemptedCount} Remaining · {bookmarkCount} Bookmark{bookmarkCount === 1 ? "" : "s"}
                   </p>
                 </div>
               </div>
