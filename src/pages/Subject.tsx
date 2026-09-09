@@ -19,20 +19,25 @@ export default function Subject() {
 
   const [selectedTopic, setSelectedTopic] = useState<string>("all");
 
-  // Set of attempted question IDs for this subject
+  // Progress stats for this subject
   const [attemptedIds, setAttemptedIds] = useState<Set<string>>(new Set());
+  const [correctCount, setCorrectCount] = useState(0);
+  const [bookmarkCount, setBookmarkCount] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
     const subjectQids = new Set(questions.map((q) => q.id));
     getAllQuestionProgress().then((all) => {
       if (cancelled) return;
+      const subjectRows = all.filter((p) => subjectQids.has(p.qid));
       const attempted = new Set(
-        all
-          .filter((p) => p.attempts > 0 && subjectQids.has(p.qid))
-          .map((p) => p.qid)
+        subjectRows.filter((p) => p.attempts > 0).map((p) => p.qid)
       );
+      const correct = subjectRows.reduce((n, p) => n + p.correctAttempts, 0);
+      const bookmarks = subjectRows.filter((p) => p.bookmarked).length;
       setAttemptedIds(attempted);
+      setCorrectCount(correct);
+      setBookmarkCount(bookmarks);
     });
     return () => { cancelled = true; };
   }, [questions]);
@@ -51,6 +56,7 @@ export default function Subject() {
   const totalCount = questions.length;
   const attemptedCount = attemptedIds.size;
   const solvedPct = totalCount > 0 ? Math.round((attemptedCount / totalCount) * 100) : 0;
+  const accuracyPct = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
 
   // Per-topic counts
   const topicStats = useMemo(() => {
@@ -84,8 +90,8 @@ export default function Subject() {
         <div
           className="mt-2 overflow-hidden rounded-full"
           style={{
-            background: `linear-gradient(to right, rgba(148,163,184,0.18) ${solvedPct}%, rgba(148,163,184,0.06) ${solvedPct}%)`,
-            border: "1px solid rgba(148,163,184,0.12)",
+            background: `linear-gradient(to right, rgba(255,255,255,0.18) ${solvedPct}%, rgba(255,255,255,0.05) ${solvedPct}%)`,
+            border: "1px solid rgba(255,255,255,0.1)",
           }}
         >
           <p className="px-3 py-1.5 text-xs text-slate-400">
@@ -102,7 +108,7 @@ export default function Subject() {
       ) : (
         <>
           {/* Topic filter */}
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
+          <div className="rounded-2xl border border-slate-800 bg-transparent p-4">
             <div className="flex flex-wrap gap-2">
               {/* All topics pill */}
               <button
@@ -135,8 +141,8 @@ export default function Subject() {
                     style={
                       !isActive
                         ? {
-                            background: `linear-gradient(to right, rgba(148,163,184,0.15) ${topicPct}%, rgba(148,163,184,0.06) ${topicPct}%)`,
-                            border: "1px solid rgba(148,163,184,0.1)",
+                            background: `linear-gradient(to right, rgba(255,255,255,0.18) ${topicPct}%, rgba(255,255,255,0.05) ${topicPct}%)`,
+                            border: "1px solid rgba(255,255,255,0.1)",
                           }
                         : undefined
                     }
@@ -195,10 +201,10 @@ export default function Subject() {
                 {/* Text */}
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-slate-200">
-                    {attemptedCount} solved
+                    {accuracyPct}% Accuracy
                   </p>
                   <p className="mt-0.5 text-xs text-slate-500">
-                    {totalCount - attemptedCount} remaining · {solvedPct}%
+                    {attemptedCount} Solved · {totalCount - attemptedCount} Remaining · {bookmarkCount} Bookmark{bookmarkCount === 1 ? "" : "s"}
                   </p>
                 </div>
               </div>
