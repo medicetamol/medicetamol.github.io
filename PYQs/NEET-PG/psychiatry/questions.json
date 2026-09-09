@@ -50,5 +50,70 @@
       "Preoccupation"
     ],
     "a": 1
+  },
+  {
+    "id": "PGPS005",
+    "y": 2023,
+    "t": "SCH",
+    "q": "A schizophrenic patient was prescribed drug A after he did not respond to haloperidol and thioridazine. He now presents with excessive salivation, an increase in blood glucose, and hyperlipidemia. What is drug A?",
+    "o": [
+      "Ziprasidone",
+      "Risperidone",
+      "Clozapine",
+      "Aripiprazole"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPS006",
+    "y": 2023,
+    "t": "MOD",
+    "q": "A woman, who is 4 days postpartum, presented with tearfulness, mood swings, and occasional insomnia. What is the likely diagnosis?",
+    "o": [
+      "Postpartum depression",
+      "Postpartum blues",
+      "Postpartum psychosis",
+      "Postpartum anxiety"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPS007",
+    "y": 2023,
+    "t": "ANX",
+    "q": "A 25-year-old female reported symptoms of anxiety, palpitations, sweating, breathlessness, chest pain, and a feeling of impending doom. She recalls having experienced 5-6 similar episodes in the past 6 months, each episode lasting for about 20-30 minutes. What is the likely diagnosis?",
+    "o": [
+      "Depression",
+      "Panic disorder",
+      "Generalized anxiety disorder",
+      "Phobia"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPS008",
+    "y": 2023,
+    "t": "SSE",
+    "q": "A middle-aged man complains of very early ejaculation during intercourse. What is the non-pharmacological management that can be advised to the patient?",
+    "o": [
+      "Cognitive behavioral therapy",
+      "Exposure and response prevention therapy",
+      "Squeeze technique",
+      "Sensate focus therapy"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPS009",
+    "y": 2023,
+    "t": "SUB",
+    "q": "A chronic alcoholic is brought to the emergency department with confusion, ataxia, and painful eye movements. The 6th cranial nerve is also involved. What is the likely diagnosis?",
+    "o": [
+      "Wernicke's encephalopathy",
+      "Korsakoff psychosis",
+      "Delirium tremens",
+      "De Clerambault syndrome"
+    ],
+    "a": 0
   }
 ]
