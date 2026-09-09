@@ -59,22 +59,22 @@ export default function SubjectSelect() {
                 <span className="text-sm font-semibold leading-5">{subject.name}</span>
               </div>
 
-              {/* Bottom strip: count + progress bar */}
-              <div className="border-t border-slate-800 px-4 py-2.5">
+              {/* Progress bar as separator — full width, same style as quiz timer bar */}
+              <div className="h-1 w-full overflow-hidden bg-slate-800">
+                <div
+                  className="h-full bg-slate-500 transition-[width]"
+                  style={{ width: total > 0 ? `${pct}%` : "0%" }}
+                />
+              </div>
+
+              {/* Bottom strip: count + % */}
+              <div className="px-4 py-2.5">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-slate-500">{total} PYQ{total === 1 ? "" : "s"}</span>
                   {total > 0 && attempted > 0 && (
                     <span className="text-[10px] text-slate-600">{pct}%</span>
                   )}
                 </div>
-                {total > 0 && (
-                  <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-slate-800">
-                    <div
-                      className="h-full rounded-full bg-slate-500 transition-[width]"
-                      style={{ width: `${pct}%` }}
-                    />
-                  </div>
-                )}
               </div>
             </Link>
           );
