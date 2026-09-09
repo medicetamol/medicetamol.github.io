@@ -102,5 +102,83 @@
       "Disc prolapsed"
     ],
     "a": 1
+  },
+  {
+    "id": "PGOR009",
+    "y": 2023,
+    "t": "PDO",
+    "q": "[Image: X-ray of both lower limbs, frontal view Pronounced outward bowing/curving of the leg bones bilaterally Widened, frayed appearance at the growth ends of the bones] A child was brought with bony deformities, as shown in the radiograph below. It could be due to the deficiency of which of the following?",
+    "o": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin K",
+      "Vitamin C"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR010",
+    "y": 2023,
+    "t": "NMM",
+    "q": "[Image: Photo of a hand and wrist wearing a supportive splint device Device extends over the wrist with straps and finger extension supports A cord/pulley mechanism connecting to the fingers] In which of the following nerve injuries is the instrument shown below used?",
+    "o": [
+      "Radial nerve",
+      "Median nerve",
+      "Ulnar nerve",
+      "Volkmann's ischemic contracture"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOR011",
+    "y": 2023,
+    "t": "FLL",
+    "q": "[Image: Knee X-ray, two views side by side A separate rounded bone fragment near the upper pole of the patella Smooth, well-corticated margins of the fragment] A patient presented with chronic knee pain but has no history of trauma. Identify the condition shown in the radiograph below and the appropriate management.",
+    "o": [
+      "Patellar avulsion fracture, TBW",
+      "Bipartite fracture patella, X-ray of other knees",
+      "Fracture of the upper pole of the patella, Cylindrical cast",
+      "Avulsion fracture, interfragmentary screw fixation"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR012",
+    "y": 2023,
+    "t": "NMM",
+    "q": "A patient at the orthopedics OPD complains of troubled sleep at night due to numbness and tingling sensation involving his lateral 3 digits. His symptoms are relieved as he lays his arms hanging from the bed. Which of the following options correctly describes his condition and the test used to assess it?",
+    "o": [
+      "Guyon's canal syndrome, Froment's test",
+      "Carpal tunnel syndrome, Froment's test",
+      "Guyon's canal syndrome, Durkan's test",
+      "Carpal tunnel syndrome, Durkan's test"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOR013",
+    "y": 2023,
+    "t": "NMM",
+    "q": "[Image: X-ray of the proximal femur Expanded, deformed bone with a ground-glass internal texture Abnormal curvature of the bone shaft] A child is brought to the orthopedics OPD with a deformity in the lower limb and hyperpigmented skin lesions. The x-ray of her thigh is shown below. What is the most likely diagnosis?",
+    "o": [
+      "Non-ossifying fibroma",
+      "Fibrous dysplasia",
+      "Paget's disease",
+      "Osteogenesis imperfecta"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR014",
+    "y": 2023,
+    "t": "BNT",
+    "q": "[Image: Knee X-ray, anteroposterior view Arrow pointing to a well-defined, dense rounded lesion at the epiphyseal end of bone Lesion appears denser than surrounding bone] The given image is an x-ray of a 22-year-old female. What is the probable diagnosis?",
+    "o": [
+      "Chondroblastoma",
+      "Osteochondroma",
+      "Giant cell tumor",
+      "Aneurysmal bone cyst"
+    ],
+    "a": 2
   }
 ]
