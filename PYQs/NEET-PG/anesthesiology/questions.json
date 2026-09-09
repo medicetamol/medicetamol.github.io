@@ -63,5 +63,45 @@
       "Rocuronium"
     ],
     "a": 1
+  },
+    {
+    "id": "PGAS006",
+    "y": 2023,
+    "t": "AVC",
+    "q": "[Image: Illustration of a supine patient One hand placed on the forehead tilting the head backward Other hand lifting the chin upward] Identify the maneuver being performed in the given image.",
+    "o": [
+      "Head tilt, chin lift",
+      "Jaw thrust",
+      "Head extension",
+      "In-line manual stabilization"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAS007",
+    "y": 2023,
+    "t": "AGL",
+    "q": "Which of the following is the drug of choice for preoperative antibiotic prophylaxis in a patient undergoing cardiac surgery?",
+    "o": [
+      "Penicillin G",
+      "Erythromycin",
+      "Azithromycin",
+      "Cefazolin"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGAS008",
+    "y": 2023,
+    "t": "AVC",
+    "q": "[Image: Illustration of a person lying on their side One arm bent supporting the head Opposite leg bent forward for stability, labeled as \"the recovery position\"] During resuscitation, when is the given position indicated?",
+    "o": [
+      "Unconsciousness with pulse and breathing absent",
+      "Unconsciousness with pulse present and breathing absent",
+      "Unconsciousness with pulse and breathing present",
+      "Unconsciousness with pulse absent and breathing present"
+    ],
+    "a": 2
   }
 ]
+
