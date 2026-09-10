@@ -233,13 +233,13 @@ export default function Result() {
         </div>
 
         {/* Headline — sits left, donut floats top-right via absolute */}
-        <div className="mt-3 pr-32">
+        <div className="mt-3 pr-36">
           <h1 className="text-3xl font-bold">{correct}/{total}</h1>
           <p className="mt-1 text-sm text-slate-500">{accuracy}% accuracy</p>
         </div>
 
         {/* C / I / S boxes — full width, below headline, not affected by donut */}
-        <div className="mt-5 grid grid-cols-3 gap-2">
+        <div className="mt-7 grid grid-cols-3 gap-2">
           <StatBox label="Correct" value={correct} color="text-emerald-400" />
           <StatBox label="Incorrect" value={incorrect} color="text-red-400" />
           <StatBox label="Skipped" value={skipped} color="text-slate-400" />

@@ -80,9 +80,6 @@ export default function Progress() {
   } | null>(null);
   const [clearing, setClearing] = useState(false);
 
-  // Double-tap tracking
-  const lastTapRef = useRef<{ subjectId: string; time: number } | null>(null);
-
   const subjectsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -162,17 +159,9 @@ export default function Progress() {
     );
   });
 
-  // Double-tap handler for subject rows
+  // Single-tap handler for subject rows — opens confirmation modal directly
   const handleSubjectTap = (subjectId: string, subjectName: string) => {
-    const now = Date.now();
-    const last = lastTapRef.current;
-    if (last && last.subjectId === subjectId && now - last.time < 500) {
-      // Double tap detected
-      lastTapRef.current = null;
-      setClearTarget({ subjectId, subjectName });
-    } else {
-      lastTapRef.current = { subjectId, time: now };
-    }
+    setClearTarget({ subjectId, subjectName });
   };
 
   const handleConfirmClear = async () => {
@@ -265,10 +254,10 @@ export default function Progress() {
             </p>
           ) : (
             <>
-              <p className="mt-1 text-xs leading-5 text-slate-400">
-                Double-tap a subject to get options to clear records.
+              <p className="mt-1 text-sm leading-6 text-slate-300">
+                Click on the subject to get options to clear records.
               </p>
-              <p className="text-xs leading-5 text-slate-500">
+              <p className="text-sm leading-6 text-slate-400">
                 Once cleared, history can't be revived. But you can solve again and that will reflect in progress.
               </p>
 
@@ -289,6 +278,7 @@ export default function Progress() {
                       <span className="flex-1 text-sm text-slate-300">{s.name}</span>
                       <span className="text-xs text-slate-500">{s.attempts} Q</span>
                       <b className="text-xs">{s.accuracy}%</b>
+                      <Trash2 size={15} className="ml-1 shrink-0 text-red-400/70" strokeWidth={1.8} />
                     </button>
                   );
                 })}
