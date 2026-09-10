@@ -48,34 +48,52 @@ export default function SubjectSelect() {
           }).length;
           const pct = total > 0 ? Math.round((attempted / total) * 100) : 0;
 
+          // Donut ring color: linear RGB interpolation
+          // 0%   → rgb(55, 65, 81)
+          // 100% → rgb(148, 163, 184)
+          const donutColor = `rgb(${Math.round(55 + 93 * (pct / 100))}, ${Math.round(
+            65 + 98 * (pct / 100)
+          )}, ${Math.round(81 + 103 * (pct / 100))})`;
+
+          const RADIUS = 15;
+          const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+          const dash = (pct / 100) * CIRCUMFERENCE;
+          const gap = CIRCUMFERENCE - dash;
+          const showDonut = total > 0 && attempted > 0;
+
           return (
             <Link
               key={subject.id}
               to={`/pyqs/${examId}/${subject.id}`}
-              className="group flex min-h-28 flex-col justify-between overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-slate-600"
+              className="group relative flex min-h-[100px] flex-col justify-between overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-3.5 pl-4 hover:border-slate-600"
             >
-              {/* Card body */}
-              <div className="flex-1 p-4">
-                <span className="text-sm font-semibold leading-5">{subject.name}</span>
-              </div>
-
-              {/* Progress bar as separator — full width, same style as quiz timer bar */}
-              <div className="h-1 w-full overflow-hidden bg-slate-800">
-                <div
-                  className="h-full bg-slate-500 transition-[width]"
-                  style={{ width: total > 0 ? `${pct}%` : "0%" }}
-                />
-              </div>
-
-              {/* Bottom strip: count + % */}
-              <div className="px-4 py-2.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-500">{total} PYQ{total === 1 ? "" : "s"}</span>
-                  {total > 0 && attempted > 0 && (
-                    <span className="text-[10px] text-slate-600">{pct}%</span>
-                  )}
+              {showDonut && (
+                <div className="absolute right-[5px] top-[5px] h-[42px] w-[42px]">
+                  <svg viewBox="0 0 42 42" className="h-full w-full -rotate-90">
+                    <circle cx="21" cy="21" r={RADIUS} fill="none" stroke="#1e293b" strokeWidth="4.5" />
+                    <circle
+                      cx="21"
+                      cy="21"
+                      r={RADIUS}
+                      fill="none"
+                      stroke={donutColor}
+                      strokeWidth="4.5"
+                      strokeDasharray={`${dash} ${gap}`}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <div
+                    className="absolute inset-0 flex items-center justify-center text-[8px] font-bold"
+                    style={{ color: donutColor }}
+                  >
+                    {pct}%
+                  </div>
                 </div>
-              </div>
+              )}
+
+              <span className="pr-[50px] text-sm font-semibold leading-5">{subject.name}</span>
+
+              <span className="text-xs text-slate-600">{total} PYQ{total === 1 ? "" : "s"}</span>
             </Link>
           );
         })}
