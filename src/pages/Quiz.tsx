@@ -36,7 +36,6 @@ function shuffle<T>(items: T[]): T[] {
 }
 
 const SECONDS_PER_QUESTION = 60;
-const HALF_TIME = 30;
 const LAST_TEN_SECONDS = 10;
 
 // ─── Quiz mode derivation ────────────────────────────────────────────────────
@@ -297,20 +296,25 @@ export default function Quiz() {
   useEffect(() => {
     if (isQuizMode) return;
     if (!timerEnabled || submitted || !question) return;
+    if (secondsLeft <= 0) return;
 
     const timer = window.setInterval(() => {
-      setSecondsLeft((value) => {
-        if (value <= 1) {
-          window.clearInterval(timer);
-          void submitCurrent(selectedRef.current, true);
-          return 0;
-        }
-        return value - 1;
-      });
+      setSecondsLeft((value) => (value <= 1 ? 0 : value - 1));
     }, 1000);
 
     return () => window.clearInterval(timer);
-  }, [isQuizMode, timerEnabled, submitted, question?.id]);
+  }, [isQuizMode, timerEnabled, submitted, question?.id, secondsLeft]);
+
+  // React to the per-question timer hitting zero and auto-submit as skipped.
+  // Kept as a separate effect (rather than nested inside the setSecondsLeft
+  // updater above) so this real side effect always runs exactly once,
+  // reliably flips `submitted`, and never leaves the question stuck.
+  useEffect(() => {
+    if (isQuizMode) return;
+    if (submitted || !question) return;
+    if (secondsLeft > 0) return;
+    void submitCurrent(selectedRef.current, true);
+  }, [isQuizMode, submitted, question?.id, secondsLeft]);
 
   // ── Global timer (quiz mode) ──
   useEffect(() => {
@@ -362,7 +366,10 @@ export default function Quiz() {
     submittedRef.current = true;
     setAnswers(nextAnswers);
     setSubmitted(true);
-    setTimedOut(timeout && choice === null);
+    // "Skipped" styling (sky, not green) applies whenever nothing was
+    // selected at submit time — whether from the timer running out or the
+    // user hitting Submit with no choice made.
+    setTimedOut(choice === null);
 
     if (timeout) setSecondsLeft(0);
 
@@ -404,24 +411,38 @@ export default function Quiz() {
     });
   }, [pool, examId, isCustom, startedAt, navigate]);
 
+  // In quiz mode, save/update the current question's selection into answersRef.
+  // Must overwrite any existing entry (not just add when missing) so that
+  // changing a previously-picked answer and then navigating away persists the change.
+  const flushCurrentQuizSelection = useCallback(() => {
+    if (!question) return;
+    const sel = selectedRef.current;
+    const existing = answersRef.current.find((a) => a.qid === question.id);
+    if (sel === null) {
+      // No selection: drop any stale saved answer for this question so it stays unanswered.
+      if (existing) {
+        const nextAnswers = answersRef.current.filter((a) => a.qid !== question.id);
+        answersRef.current = nextAnswers;
+        setAnswers(nextAnswers);
+      }
+      return;
+    }
+    if (existing && existing.selected === sel) return; // already in sync
+    const correct = sel === question.answer;
+    const nextAnswers: QuizAnswer[] = [
+      ...answersRef.current.filter((a) => a.qid !== question.id),
+      { qid: question.id, selected: sel, correct },
+    ];
+    answersRef.current = nextAnswers;
+    setAnswers(nextAnswers);
+  }, [question]);
+
   const requestFinalSubmit = useCallback(() => {
     if (isQuizMode) {
       // Flush the current question's selection into answersRef before counting.
       // The last question has no NEXT button to trigger the flush that next() does,
       // so the selection lives only in selectedRef until we explicitly save it here.
-      const currentSel = selectedRef.current;
-      if (currentSel !== null && question) {
-        const alreadySaved = answersRef.current.find((a) => a.qid === question.id);
-        if (!alreadySaved) {
-          const correct = currentSel === question.answer;
-          const flushed: QuizAnswer[] = [
-            ...answersRef.current,
-            { qid: question.id, selected: currentSel, correct },
-          ];
-          answersRef.current = flushed;
-          setAnswers(flushed);
-        }
-      }
+      flushCurrentQuizSelection();
       // Check unanswered
       const unanswered = pool.filter(
         (q) => !answersRef.current.find((a) => a.qid === q.id && a.selected !== null)
@@ -434,71 +455,73 @@ export default function Quiz() {
       return;
     }
 
-    // Guide / direct: check if on last question
+    // Guide / direct: answers are locked in once submitted, so there's nothing
+    // to go back and change — skip the "you have N left" confirmation and
+    // just finish directly.
     const isLast = index === pool.length - 1;
     if (isLast) {
-      const unanswered = pool.filter(
-        (q) => !answersRef.current.find((a) => a.qid === q.id && a.selected !== null)
-      ).length;
-      if (unanswered > 0) {
-        setShowFinalConfirm(true);
-        return;
-      }
       void finishQuiz();
       return;
     }
 
     // Early exit from non-last question
     setShowEarlyConfirm(true);
-  }, [isQuizMode, index, pool, question, finishQuiz]);
+  }, [isQuizMode, index, pool, finishQuiz, flushCurrentQuizSelection]);
+
+  // Compute and apply the (selected, submitted, timedOut) state for a target
+  // question synchronously, in the same handler as setIndex, so the freshly
+  // rendered question never briefly shows the previous question's state
+  // (e.g. stale correct/wrong colors) before the effect corrects it.
+  const applyQuestionState = useCallback((targetQuestion: PYQQuestion) => {
+    const previousAnswer = answersRef.current.find((a) => a.qid === targetQuestion.id);
+    const restoredSelection = previousAnswer?.selected ?? null;
+    selectedRef.current = restoredSelection;
+    setSelected(restoredSelection);
+    if (isQuizMode) {
+      submittedRef.current = false;
+      setSubmitted(false);
+      setTimedOut(false);
+    } else {
+      submittedRef.current = Boolean(previousAnswer);
+      setSubmitted(Boolean(previousAnswer));
+      setTimedOut(Boolean(previousAnswer && previousAnswer.selected === null));
+    }
+  }, [isQuizMode]);
 
   const next = useCallback(() => {
     if (isQuizMode) {
       // In quiz mode: save current selection then move on (no submit requirement)
-      const sel = selectedRef.current;
-      if (sel !== null) {
-        const correct = sel === question?.answer;
-        const existing = answersRef.current.find((a) => a.qid === question?.id);
-        if (!existing) {
-          const nextAnswers: QuizAnswer[] = [
-            ...answersRef.current,
-            { qid: question!.id, selected: sel, correct },
-          ];
-          answersRef.current = nextAnswers;
-          setAnswers(nextAnswers);
-        }
-      }
+      flushCurrentQuizSelection();
       if (index < pool.length - 1) {
+        applyQuestionState(pool[index + 1]);
         setIndex((i) => i + 1);
         window.scrollTo({ top: 0, behavior: "auto" });
       }
       return;
     }
     if (!submittedRef.current || index >= pool.length - 1) return;
+    applyQuestionState(pool[index + 1]);
     setIndex((i) => i + 1);
     window.scrollTo({ top: 0, behavior: "auto" });
-  }, [isQuizMode, index, pool.length, question]);
+  }, [isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState]);
 
   const previous = useCallback(() => {
     if (isQuizMode) {
       if (index <= 0) return;
+      flushCurrentQuizSelection();
+      applyQuestionState(pool[index - 1]);
       setIndex((i) => i - 1);
       window.scrollTo({ top: 0, behavior: "auto" });
       return;
     }
     if (!submittedRef.current || index <= 0) return;
+    applyQuestionState(pool[index - 1]);
     setIndex((i) => i - 1);
-  }, [isQuizMode, index]);
+  }, [isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState]);
 
   const handleSubmit = () => {
     if (submittedRef.current || !timerEnabled) return;
-    const hasSelection = selectedRef.current !== null;
-    const halfTimeReached = secondsLeft <= HALF_TIME;
-    if (hasSelection || halfTimeReached) {
-      void submitCurrent(selectedRef.current);
-      return;
-    }
-    showFeedback("Wait for 30s to skip");
+    void submitCurrent(selectedRef.current);
   };
 
   const handleOptionSelect = (choice: number) => {
@@ -720,6 +743,7 @@ export default function Quiz() {
         }`}
       >
         <QuestionCard
+          key={question.id}
           question={question}
           selected={selected}
           submitted={isQuizMode ? false : submitted}
@@ -928,7 +952,7 @@ export default function Quiz() {
             <button
               type="button"
               onClick={handleSubmit}
-              disabled={!timerEnabled || (selected === null && secondsLeft > HALF_TIME)}
+              disabled={!timerEnabled}
               className={`w-full ${actionClass} disabled:cursor-not-allowed disabled:opacity-100`}
             >
               SUBMIT
