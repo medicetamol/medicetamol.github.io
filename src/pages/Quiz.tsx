@@ -634,11 +634,11 @@ export default function Quiz() {
   }
 
   return (
-    <main className="relative mx-auto min-h-screen w-full max-w-4xl px-1 pb-24 pt-1 sm:px-2 sm:pt-2">
+    <main className="relative mx-auto min-h-screen w-full max-w-4xl px-1 pb-24 sm:px-2">
 
       {/* ── Global timer bar (quiz mode) ── */}
       {isQuizMode && (
-        <div className="sticky top-14 z-30 -mx-1 bg-[#080b10]/95 px-1 pb-1 pt-1 backdrop-blur">
+        <div className="sticky top-16 z-30 -mx-1 bg-[#080b10]/95 px-1 pb-1 pt-[0.5px] backdrop-blur">
           <div
             className={`mb-2 h-1 overflow-hidden rounded-full ${globalDanger ? "bg-red-950/70" : "bg-slate-900"}`}
           >
@@ -687,7 +687,7 @@ export default function Quiz() {
 
       {/* ── Per-question timer bar (guide/direct) ── */}
       {!isQuizMode && (
-        <div className={!submitted ? "sticky top-14 z-30 -mx-1 bg-[#080b10]/95 px-1 pb-1 pt-1 backdrop-blur" : ""}>
+        <div className={!submitted ? "sticky top-16 z-30 -mx-1 bg-[#080b10]/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
           <div
             className={`mb-2 h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
             aria-label={`Time remaining ${mm}:${ss}`}

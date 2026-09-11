@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Activity, BarChart3, BookOpen, Menu, X } from "lucide-react";
+import { Activity, BarChart3, Bookmark, BookOpen, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -15,6 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const nav = [
     { to: "/pyqs", label: "PYQs", icon: BookOpen },
+    { to: "/bookmarks", label: "Bookmarks", icon: Bookmark },
     { to: "/progress", label: "Progress", icon: BarChart3 },
   ];
 

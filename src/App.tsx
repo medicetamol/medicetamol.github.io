@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import ExamSelect from "./pages/ExamSelect";
@@ -9,6 +9,8 @@ import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 import Progress from "./pages/Progress";
 import AIPrompt from "./pages/AIPrompt";
+import Bookmarks from "./pages/Bookmarks";
+import BookmarkQuiz from "./pages/BookmarkQuiz";
 
 export default function App() {
   return (
@@ -29,6 +31,8 @@ export default function App() {
         {/* Summary (formerly Result) */}
         <Route path="/result/:exam" element={<Result />} />
         <Route path="/progress" element={<Progress />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
+        <Route path="/bookmarks/:subjectId" element={<BookmarkQuiz />} />
       </Routes>
     </Layout>
   );
