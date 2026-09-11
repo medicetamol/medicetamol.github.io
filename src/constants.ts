@@ -1,10 +1,15 @@
 import type { Exam, Subject } from "./types";
 
-export const EXAMS: Array<{ id: Exam; name: string; description: string }> = [
-  { id: "NEET-PG", name: "NEET PG", description: "National Eligibility cum Entrance Test" },
-  { id: "INI-CET", name: "INI-CET", description: "Institute of National Importance" },
-  { id: "FMGE", name: "FMGE", description: "Foreign Medical Graduate Examination" }
+// qid format: {examPrefix}{subjectCode}{serial} — fixed 2+2+3 chars, e.g. PGAN001
+export const EXAMS: Array<{ id: Exam; name: string; description: string; prefix: string }> = [
+  { id: "NEET-PG", name: "NEET PG", description: "National Eligibility cum Entrance Test", prefix: "PG" },
+  { id: "INI-CET", name: "INI-CET", description: "Institute of National Importance", prefix: "IN" },
+  { id: "FMGE", name: "FMGE", description: "Foreign Medical Graduate Examination", prefix: "FM" }
 ];
+
+export const EXAM_PREFIX: Record<Exam, string> = Object.fromEntries(
+  EXAMS.map((e) => [e.id, e.prefix])
+) as Record<Exam, string>;
 
 export const SUBJECTS: Subject[] = [
   {

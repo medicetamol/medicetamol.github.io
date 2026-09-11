@@ -25,6 +25,7 @@ jobs:
           node-version: 20
 
       - run: npm install
+      - run: node scripts/generate-manifest.cjs
       - run: npm run build
       - run: find PYQs -type d -name images | while read dir; do dest="dist/$dir"; mkdir -p "$dest"; cp "$dir"/* "$dest/" 2>/dev/null || true; done
 

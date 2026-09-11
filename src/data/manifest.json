@@ -1,0 +1,29 @@
+{
+  "FMGE": {
+    "anatomy": 0
+  },
+  "INI-CET": {
+    "anatomy": 0
+  },
+  "NEET-PG": {
+    "anatomy": 13,
+    "anesthesiology": 8,
+    "biochemistry": 23,
+    "community-medicine": 36,
+    "dermatology": 11,
+    "ent": 13,
+    "forensic-medicine": 18,
+    "medicine": 32,
+    "microbiology": 25,
+    "obstetrics-gynecology": 41,
+    "ophthalmology": 19,
+    "orthopedics": 14,
+    "pathology": 21,
+    "pediatrics": 18,
+    "pharmacology": 19,
+    "physiology": 15,
+    "psychiatry": 9,
+    "radiology": 23,
+    "surgery": 43
+  }
+}

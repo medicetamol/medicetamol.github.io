@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/generate-ai-pages.cjs && node scripts/create-404.cjs",
+    "build": "node scripts/generate-manifest.cjs && tsc -b && vite build && node scripts/generate-ai-pages.cjs && node scripts/create-404.cjs",
     "preview": "vite preview"
   },
   "dependencies": {

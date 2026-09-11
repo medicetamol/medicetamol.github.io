@@ -1,9 +1,12 @@
 import { ArrowLeft, Sparkles } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
-import { SUBJECTS, EXAMS } from "../constants";
-import { getAllQuestions } from "../data/questions";
-import { useEffect, useState } from "react";
+import { Link, useParams } from 'react-router-dom';
+import { SUBJECTS, EXAMS, EXAM_PREFIX } from "../constants";
+import manifest from "../data/manifest.json";
+import React, { useEffect, useState } from 'react';
 import { getAllQuestionProgress } from "../lib/db";
+
+type Manifest = Record<string, Record<string, number>>;
+const counts = manifest as Manifest;
 
 export default function SubjectSelect() {
   const { exam } = useParams<{ exam: "NEET-PG" | "INI-CET" | "FMGE" }>();
@@ -40,12 +43,12 @@ export default function SubjectSelect() {
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
         {SUBJECTS.map((subject) => {
-          const allQ = getAllQuestions(examId).filter((q) => q.subjectId === subject.id);
-          const total = allQ.length;
-          const attempted = allQ.filter((q) => {
-            const p = progressMap.get(q.id);
-            return p && p.attempts > 0;
-          }).length;
+          const total = counts[examId]?.[subject.id] ?? 0;
+          const prefix = `${EXAM_PREFIX[examId]}${subject.code}`;
+          let attempted = 0;
+          for (const [qid, p] of progressMap) {
+            if (qid.startsWith(prefix) && p.attempts > 0) attempted++;
+          }
           const pct = total > 0 ? Math.round((attempted / total) * 100) : 0;
 
           // Donut ring color: linear RGB interpolation
