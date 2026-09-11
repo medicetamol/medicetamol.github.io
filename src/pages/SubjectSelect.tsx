@@ -5,7 +5,8 @@ import manifest from "../data/manifest.json";
 import React, { useEffect, useState } from 'react';
 import { getAllQuestionProgress } from "../lib/db";
 
-type Manifest = Record<string, Record<string, number>>;
+type SubjectManifest = { total: number; topics: Record<string, number> };
+type Manifest = Record<string, Record<string, SubjectManifest>>;
 const counts = manifest as Manifest;
 
 export default function SubjectSelect() {
@@ -43,7 +44,7 @@ export default function SubjectSelect() {
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
         {SUBJECTS.map((subject) => {
-          const total = counts[examId]?.[subject.id] ?? 0;
+          const total = counts[examId]?.[subject.id]?.total ?? 0;
           const prefix = `${EXAM_PREFIX[examId]}${subject.code}`;
           let attempted = 0;
           for (const [qid, p] of progressMap) {

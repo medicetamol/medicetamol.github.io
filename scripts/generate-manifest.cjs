@@ -28,15 +28,24 @@ for (const exam of exams) {
   for (const subjectId of subjects) {
     const qFile = path.join(examDir, subjectId, 'questions.json');
     if (!fs.existsSync(qFile)) {
-      manifest[exam][subjectId] = 0;
+      manifest[exam][subjectId] = { total: 0, topics: {} };
       continue;
     }
     try {
       const raw = fs.readFileSync(qFile, 'utf-8');
       const questions = JSON.parse(raw);
-      manifest[exam][subjectId] = Array.isArray(questions) ? questions.length : 0;
+      const list = Array.isArray(questions) ? questions : [];
+
+      const topics = {};
+      for (const q of list) {
+        const code = q.t;
+        if (!code) continue;
+        topics[code] = (topics[code] || 0) + 1;
+      }
+
+      manifest[exam][subjectId] = { total: list.length, topics };
     } catch {
-      manifest[exam][subjectId] = 0;
+      manifest[exam][subjectId] = { total: 0, topics: {} };
     }
   }
 }
