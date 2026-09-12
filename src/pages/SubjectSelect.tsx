@@ -4,6 +4,7 @@ import { SUBJECTS, EXAMS, EXAM_PREFIX } from "../constants";
 import manifest from "../data/manifest.json";
 import React, { useEffect, useState } from 'react';
 import { getAllQuestionProgress } from "../lib/db";
+import { prefetchQuestions } from "../data/questions";
 
 type SubjectManifest = { total: number; topics: Record<string, number> };
 type Manifest = Record<string, Record<string, SubjectManifest>>;
@@ -11,7 +12,8 @@ const counts = manifest as Manifest;
 
 export default function SubjectSelect() {
   const { exam } = useParams<{ exam: "NEET-PG" | "INI-CET" | "FMGE" }>();
-  const examId = exam && EXAMS.some((x) => x.id === exam) ? exam : "NEET-PG";
+  const examId: "NEET-PG" | "INI-CET" | "FMGE" =
+    exam && EXAMS.some((x) => x.id === exam) ? exam : "NEET-PG";
   const currentExam = EXAMS.find((x) => x.id === examId);
 
   const [progressMap, setProgressMap] = useState<Map<string, { attempts: number }>>(new Map());
@@ -69,6 +71,7 @@ export default function SubjectSelect() {
             <Link
               key={subject.id}
               to={`/pyqs/${examId}/${subject.id}`}
+              onClick={() => prefetchQuestions(examId, subject.id)}
               className="group relative flex min-h-[100px] flex-col justify-between overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-3.5 pl-4 hover:border-slate-600"
             >
               {showDonut && (

@@ -2,11 +2,10 @@ import { Activity, BarChart3, CheckCircle2, Flame, Target, Trash2, XCircle } fro
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getAllQuestionProgress, getDailyActivity, clearSubjectProgress } from "../lib/db";
-import { SUBJECTS } from "../constants";
-import { getAllQuestions } from "../data/questions";
-import type { DailyActivity, QuestionProgress } from "../types";
+import { SUBJECTS, EXAM_PREFIX } from "../constants";
+import type { DailyActivity, QuestionProgress, Exam } from "../types";
 
-const EXAMS = ["NEET-PG", "INI-CET", "FMGE"] as const;
+const EXAMS: Exam[] = ["NEET-PG", "INI-CET", "FMGE"];
 
 // ─── Confirm modal ────────────────────────────────────────────────────────────
 
@@ -117,26 +116,32 @@ export default function Progress() {
     return count;
   }, [activity]);
 
-  const questionMap = useMemo(() => {
-    const map = new Map<string, { subjectId: string }>();
+  // Decode subject directly from each progress row's qid prefix (PGAN001 → "AN" → anatomy).
+  // No question JSON needs to load for this — the id format is fully self-describing.
+  const subjectByPrefix = useMemo(() => {
+    const map = new Map<string, string>();
     for (const exam of EXAMS) {
-      for (const q of getAllQuestions(exam)) map.set(q.id, q);
+      const examPrefix = EXAM_PREFIX[exam];
+      for (const subject of SUBJECTS) {
+        map.set(`${examPrefix}${subject.code}`, subject.id);
+      }
     }
     return map;
   }, []);
 
   const subjectStats = SUBJECTS.map((subject) => {
-    const ids = new Set(
-      [...questionMap.entries()]
-        .filter(([, q]) => q.subjectId === subject.id)
-        .map(([id]) => id)
-    );
-    const rows = progress.filter((p) => ids.has(p.qid));
+    const qids = progress
+      .filter((p) => {
+        const prefix = p.qid.slice(0, 4);
+        return subjectByPrefix.get(prefix) === subject.id;
+      })
+      .map((p) => p.qid);
+    const rows = progress.filter((p) => qids.includes(p.qid));
     const attempts = rows.reduce((n, p) => n + p.attempts, 0);
     const c = rows.reduce((n, p) => n + p.correctAttempts, 0);
     return {
       ...subject,
-      qids: Array.from(ids),
+      qids,
       attempts,
       correct: c,
       accuracy: attempts ? Math.round((c / attempts) * 100) : null,

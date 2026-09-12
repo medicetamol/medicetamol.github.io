@@ -4,7 +4,7 @@ import { EXAMS, SUBJECTS } from "../constants";
 import { getAllQuestions } from "../data/questions";
 import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import type { Exam, StatusFilter } from "../types";
+import type { Exam, PYQQuestion, StatusFilter } from "../types";
 import { getAllQuestionProgress } from "../lib/db";
 import FilterBar from "../components/FilterBar";
 
@@ -174,7 +174,19 @@ export default function ModuleBuilder() {
   const { exam } = useParams();
   const navigate = useNavigate();
   const examId = exam as Exam;
-  const all = useMemo(() => getAllQuestions(examId), [examId]);
+  const [all, setAll] = useState<PYQQuestion[]>([]);
+  const [dataLoading, setDataLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    setDataLoading(true);
+    getAllQuestions(examId).then((result) => {
+      if (cancelled) return;
+      setAll(result);
+      setDataLoading(false);
+    });
+    return () => { cancelled = true; };
+  }, [examId]);
 
   const [subjects, setSubjects] = useState<string[]>(["all"]);
   const [topics, setTopics] = useState<string[]>(["all"]);
@@ -380,14 +392,16 @@ export default function ModuleBuilder() {
           </label>
 
           <span className="flex-1 text-center text-xs text-slate-500">
-            {matchingCount === 0
-              ? "No questions available"
-              : `${actualCount} question${actualCount === 1 ? "" : "s"}`}
+            {dataLoading
+              ? "Loading questions…"
+              : matchingCount === 0
+                ? "No questions available"
+                : `${actualCount} question${actualCount === 1 ? "" : "s"}`}
           </span>
 
           <button
             type="button"
-            disabled={matchingCount === 0}
+            disabled={dataLoading || matchingCount === 0}
             onClick={handleCreateClick}
             className="rounded-xl bg-slate-100 px-5 py-3 text-xs font-bold text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
           >

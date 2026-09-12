@@ -23,7 +23,7 @@ import {
   saveQuizResult,
   toggleBookmark,
 } from "../lib/db";
-import { useEffect, useMemo, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import QuestionCard from "../components/QuestionCard";
 import MarkdownContent from "../components/MarkdownContent";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
@@ -88,10 +88,25 @@ export default function Quiz() {
   const navigate = useNavigate();
 
   // Derive session identity
-  const targetQuestion = useMemo(
-    () => (questionId ? findQuestion(questionId) : undefined),
-    [questionId]
-  );
+  const [targetQuestion, setTargetQuestion] = useState<PYQQuestion | undefined>(undefined);
+  const [targetReady, setTargetReady] = useState(!questionId);
+
+  useEffect(() => {
+    if (!questionId) {
+      setTargetQuestion(undefined);
+      setTargetReady(true);
+      return;
+    }
+    let cancelled = false;
+    setTargetReady(false);
+    findQuestion(questionId).then((result) => {
+      if (cancelled) return;
+      setTargetQuestion(result);
+      setTargetReady(true);
+    });
+    return () => { cancelled = true; };
+  }, [questionId]);
+
   const examId = ((exam as Exam | undefined) ?? targetQuestion?.exam ?? "NEET-PG") as Exam;
   const isSolveLink = Boolean(questionId);
 
@@ -107,31 +122,49 @@ export default function Quiz() {
   const topic = search.get("topic") ?? "all";
 
   // ── Build question pool ──
-  const pool = useMemo<PYQQuestion[]>(() => {
-    if (!examId) return [];
-    const allQuestions = getAllQuestions(examId);
+  const [pool, setPool] = useState<PYQQuestion[]>([]);
+  const [poolReady, setPoolReady] = useState(false);
 
-    if (isSolveLink) {
-      if (!targetQuestion) return [];
-      const subjectQuestions = allQuestions.filter((q) => q.subjectId === targetQuestion.subjectId);
-      const topicQuestions = subjectQuestions.filter((q) => q.topicId === targetQuestion.topicId);
-      const candidates = topicQuestions.length >= 5 ? topicQuestions : subjectQuestions;
-      const remaining = shuffle(candidates.filter((q) => q.id !== targetQuestion.id)).slice(0, 39);
-      return [targetQuestion, ...remaining];
-    }
+  useEffect(() => {
+    if (!examId || !targetReady) return;
+    let cancelled = false;
+    setPoolReady(false);
 
-    if (isCustom) {
-      // Custom: maintain the order from the ids param (already shuffled in ModuleBuilder)
-      return ids
-        .map((id) => allQuestions.find((q) => q.id === id))
-        .filter((q): q is PYQQuestion => q !== undefined);
-    }
+    (async () => {
+      const allQuestions = await getAllQuestions(examId);
+      if (cancelled) return;
 
-    // Direct PYQ: serial order (no shuffle)
-    let questions = allQuestions.filter((q) => q.subjectId === subjectId);
-    if (topic !== "all") questions = questions.filter((q) => q.topicId === topic);
-    return questions; // serial, as stored
-  }, [examId, isSolveLink, targetQuestion?.id, isCustom, ids.join(","), subjectId, topic]);
+      let result: PYQQuestion[];
+
+      if (isSolveLink) {
+        if (!targetQuestion) {
+          result = [];
+        } else {
+          const subjectQuestions = allQuestions.filter((q) => q.subjectId === targetQuestion.subjectId);
+          const topicQuestions = subjectQuestions.filter((q) => q.topicId === targetQuestion.topicId);
+          const candidates = topicQuestions.length >= 5 ? topicQuestions : subjectQuestions;
+          const remaining = shuffle(candidates.filter((q) => q.id !== targetQuestion.id)).slice(0, 39);
+          result = [targetQuestion, ...remaining];
+        }
+      } else if (isCustom) {
+        // Custom: maintain the order from the ids param (already shuffled in ModuleBuilder)
+        result = ids
+          .map((id) => allQuestions.find((q) => q.id === id))
+          .filter((q): q is PYQQuestion => q !== undefined);
+      } else {
+        // Direct PYQ: serial order (no shuffle)
+        let questions = allQuestions.filter((q) => q.subjectId === subjectId);
+        if (topic !== "all") questions = questions.filter((q) => q.topicId === topic);
+        result = questions; // serial, as stored
+      }
+
+      if (cancelled) return;
+      setPool(result);
+      setPoolReady(true);
+    })();
+
+    return () => { cancelled = true; };
+  }, [examId, targetReady, isSolveLink, targetQuestion?.id, isCustom, ids.join(","), subjectId, topic]);
 
   // ── Restore starting index for direct PYQ (first unanswered) ──
   const [startIndexReady, setStartIndexReady] = useState(isSolveLink || isCustom);
@@ -167,6 +200,12 @@ export default function Quiz() {
   const totalSeconds = pool.length * SECONDS_PER_QUESTION;
   const [globalSecondsLeft, setGlobalSecondsLeft] = useState(totalSeconds);
   const [globalTimerRunning, setGlobalTimerRunning] = useState(true);
+
+  // pool loads asynchronously — totalSeconds is 0 on first render (pool still empty),
+  // so the useState initializer above locks in 0 permanently unless we resync here.
+  useEffect(() => {
+    if (poolReady) setGlobalSecondsLeft(totalSeconds);
+  }, [poolReady, totalSeconds]);
 
   // Modals
   const [showEarlyConfirm, setShowEarlyConfirm] = useState(false);
@@ -318,7 +357,7 @@ export default function Quiz() {
 
   // ── Global timer (quiz mode) ──
   useEffect(() => {
-    if (!isQuizMode) return;
+    if (!isQuizMode || !poolReady) return;
 
     const timer = window.setInterval(() => {
       if (!globalTimerRunningRef.current) return;
@@ -333,12 +372,26 @@ export default function Quiz() {
     }, 1000);
 
     return () => window.clearInterval(timer);
-  }, [isQuizMode]);
+  }, [isQuizMode, poolReady]);
 
   // ─── Derived ────────────────────────────────────────────────────────────────
 
-  const explanation = question && examId
-    ? loadExplanations(examId, question.subjectId).find((x) => x.id === question.id)
+  const [explanations, setExplanations] = useState<Awaited<ReturnType<typeof loadExplanations>>>([]);
+
+  useEffect(() => {
+    if (!question || !examId) {
+      setExplanations([]);
+      return;
+    }
+    let cancelled = false;
+    loadExplanations(examId, question.subjectId).then((result) => {
+      if (!cancelled) setExplanations(result);
+    });
+    return () => { cancelled = true; };
+  }, [examId, question?.subjectId]);
+
+  const explanation = question
+    ? explanations.find((x) => x.id === question.id)
     : undefined;
 
   const detailedAvailable = Boolean(
@@ -611,8 +664,8 @@ export default function Quiz() {
     (q) => !answersRef.current.find((a) => a.qid === q.id && a.selected !== null)
   ).length;
 
-  if (!startIndexReady || !pool.length) {
-    if (!startIndexReady) {
+  if (!startIndexReady || !poolReady || !pool.length) {
+    if (!startIndexReady || !poolReady) {
       return (
         <main className="mx-auto max-w-3xl px-3 py-12 text-center">
           <p className="text-sm text-slate-500">Loading…</p>

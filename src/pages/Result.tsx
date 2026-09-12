@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import type { PYQQuestion, QuizAnswer } from "../types";
 import { loadExplanations } from "../data/questions";
@@ -78,10 +78,16 @@ function ReviewCard({
   answer: QuizAnswer | undefined;
   examId: string;
 }) {
-  const explanations = useMemo(
-    () => loadExplanations(examId as Parameters<typeof loadExplanations>[0], question.subjectId),
-    [examId, question.subjectId]
-  );
+  const [explanations, setExplanations] = useState<Awaited<ReturnType<typeof loadExplanations>>>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    loadExplanations(examId as Parameters<typeof loadExplanations>[0], question.subjectId).then((result) => {
+      if (!cancelled) setExplanations(result);
+    });
+    return () => { cancelled = true; };
+  }, [examId, question.subjectId]);
+
   const explanation = explanations.find((x) => x.id === question.id);
 
   const selectedIdx = answer?.selected ?? null;

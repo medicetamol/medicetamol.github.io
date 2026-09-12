@@ -1,6 +1,7 @@
-import { useMemo } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { findQuestion } from "../data/questions";
+import type { PYQQuestion } from "../types";
 
 const MASTER_PROMPT = `You are a medical student in an entrance exam (NEET PG & INICET).
 
@@ -32,11 +33,23 @@ function getImageSrc(question: unknown): string | undefined {
 
 export default function AIPrompt() {
   const { questionId } = useParams<{ questionId: string }>();
+  const [question, setQuestion] = useState<PYQQuestion | undefined>(undefined);
+  const [loading, setLoading] = useState(true);
 
-  const question = useMemo(
-    () => findQuestion(questionId ?? ""),
-    [questionId]
-  );
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    findQuestion(questionId ?? "").then((result) => {
+      if (cancelled) return;
+      setQuestion(result);
+      setLoading(false);
+    });
+    return () => { cancelled = true; };
+  }, [questionId]);
+
+  if (loading) {
+    return <pre>{`mediCetamol AI endpoint\n\nLoading...`}</pre>;
+  }
 
   if (!question) {
     return (

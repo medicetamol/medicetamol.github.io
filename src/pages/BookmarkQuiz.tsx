@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getSubject, SUBJECTS } from "../constants";
+import { getSubject, SUBJECTS, EXAM_PREFIX } from "../constants";
 import {
   findQuestion,
   hasDetailedExplanation,
@@ -29,20 +29,17 @@ const LAST_TEN_SECONDS = 10;
 
 // ─── Bookmark-only helper: decode {exam, subjectId} from a qid, since a
 // bookmarked subject can span multiple exams (unlike the rest of the app,
-// which is always single-exam-scoped via the URL). ──
-const EXAM_PREFIXES: Array<{ exam: Exam; prefix: string }> = [
-  { exam: "INI-CET", prefix: "INI" },
-  { exam: "FMGE", prefix: "FMG" },
-  { exam: "NEET-PG", prefix: "PG" },
-];
-
+// which is always single-exam-scoped via the URL). Reuses the same fixed
+// 2+2+3 char qid format and centralized EXAM_PREFIX map as questions.ts. ──
 function decodeQid(qid: string): { exam: Exam; subjectId: string } | null {
-  const match = EXAM_PREFIXES.find((e) => qid.startsWith(e.prefix));
-  if (!match) return null;
-  const code = qid.slice(match.prefix.length, match.prefix.length + 2).toUpperCase();
+  if (qid.length < 4) return null;
+  const examPrefix = qid.slice(0, 2);
+  const exam = (Object.keys(EXAM_PREFIX) as Exam[]).find((e) => EXAM_PREFIX[e] === examPrefix);
+  if (!exam) return null;
+  const code = qid.slice(2, 4).toUpperCase();
   const subject = SUBJECTS.find((s) => s.code === code);
   if (!subject) return null;
-  return { exam: match.exam, subjectId: subject.id };
+  return { exam, subjectId: subject.id };
 }
 
 type LoadState = "loading" | "ready" | "empty";
@@ -63,13 +60,12 @@ export default function BookmarkQuiz() {
     if (!subjectId) return;
 
     setLoadState("loading");
-    getAllQuestionProgress().then((items) => {
+    getAllQuestionProgress().then(async (items) => {
       if (cancelled) return;
       const bookmarkedIds = items.filter((p) => p.bookmarked).map((p) => p.qid);
       const relevantIds = bookmarkedIds.filter((qid) => decodeQid(qid)?.subjectId === subjectId);
-      const questions = relevantIds
-        .map((id) => findQuestion(id))
-        .filter((q): q is PYQQuestion => Boolean(q));
+      const resolved = await Promise.all(relevantIds.map((id) => findQuestion(id)));
+      const questions = resolved.filter((q): q is PYQQuestion => Boolean(q));
 
       if (cancelled) return;
       setBundle(questions);
@@ -256,8 +252,22 @@ function ReviewSession({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submitted, question?.id, secondsLeft]);
 
+  const [explanations, setExplanations] = useState<Awaited<ReturnType<typeof loadExplanations>>>([]);
+
+  useEffect(() => {
+    if (!question) {
+      setExplanations([]);
+      return;
+    }
+    let cancelled = false;
+    loadExplanations(question.exam, question.subjectId).then((result) => {
+      if (!cancelled) setExplanations(result);
+    });
+    return () => { cancelled = true; };
+  }, [question?.exam, question?.subjectId]);
+
   const explanation = question
-    ? loadExplanations(question.exam, question.subjectId).find((x) => x.id === question.id)
+    ? explanations.find((x) => x.id === question.id)
     : undefined;
 
   const detailedAvailable = Boolean(

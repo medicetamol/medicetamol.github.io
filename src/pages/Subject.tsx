@@ -1,21 +1,38 @@
 import { ArrowLeft, Play, Trash2 } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from 'react-router-dom';
 import { EXAMS, getSubject } from "../constants";
 import { loadQuestions } from "../data/questions";
+import manifest from "../data/manifest.json";
 import EmptyState from "../components/EmptyState";
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from 'react';
 import { getAllQuestionProgress } from "../lib/db";
+import type { PYQQuestion } from "../types";
+
+type SubjectManifest = { total: number; topics: Record<string, number> };
+type Manifest = Record<string, Record<string, SubjectManifest>>;
+const manifestCounts = manifest as Manifest;
 
 export default function Subject() {
   const { exam, subjectId } = useParams();
   const subject = getSubject(subjectId ?? "");
   const examId = exam as "NEET-PG" | "INI-CET" | "FMGE";
 
+  const manifestEntry = manifestCounts[examId]?.[subjectId ?? ""];
+
   // Serial order — no shuffle
-  const questions = useMemo(
-    () => loadQuestions(examId, subjectId ?? ""),
-    [examId, subjectId]
-  );
+  const [questions, setQuestions] = useState<PYQQuestion[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    loadQuestions(examId, subjectId ?? "").then((result) => {
+      if (cancelled) return;
+      setQuestions(result);
+      setLoading(false);
+    });
+    return () => { cancelled = true; };
+  }, [examId, subjectId]);
 
   const [selectedTopic, setSelectedTopic] = useState<string>("all");
 
@@ -44,31 +61,45 @@ export default function Subject() {
 
   if (!subject) return null;
 
-  const topics = Array.from(
-    new Map(questions.map((q) => [q.topicId, q.topicName ?? q.topicId])).entries()
-  );
+  // Topic pills: use loaded question data once available, otherwise fall back to the
+  // manifest's topic counts + subject.topics names so pills render instantly on mount.
+  const topics: Array<[string, string]> = questions.length > 0
+    ? Array.from(
+        new Map(questions.map((q): [string, string] => [q.topicId, q.topicName ?? q.topicId])).entries()
+      )
+    : Object.keys(manifestEntry?.topics ?? {}).map((code): [string, string] => [
+        code,
+        subject.topics.find((t) => t.id === code)?.name ?? code
+      ]);
 
   const filtered = selectedTopic === "all"
     ? questions
     : questions.filter((q) => q.topicId === selectedTopic);
 
-  // Overall subject progress
-  const totalCount = questions.length;
+  // Overall subject progress — manifest total is available instantly; question-derived
+  // total (once loaded) is used as the source of truth once available for consistency.
+  const totalCount = questions.length > 0 ? questions.length : (manifestEntry?.total ?? 0);
   const attemptedCount = attemptedIds.size;
   const solvedPct = totalCount > 0 ? Math.round((attemptedCount / totalCount) * 100) : 0;
   const accuracyPct = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
 
-  // Per-topic counts
+  // Per-topic counts — from loaded questions once available, else manifest counts
   const topicStats = useMemo(() => {
     const map = new Map<string, { total: number; attempted: number }>();
-    for (const q of questions) {
-      const existing = map.get(q.topicId) ?? { total: 0, attempted: 0 };
-      existing.total += 1;
-      if (attemptedIds.has(q.id)) existing.attempted += 1;
-      map.set(q.topicId, existing);
+    if (questions.length > 0) {
+      for (const q of questions) {
+        const existing = map.get(q.topicId) ?? { total: 0, attempted: 0 };
+        existing.total += 1;
+        if (attemptedIds.has(q.id)) existing.attempted += 1;
+        map.set(q.topicId, existing);
+      }
+    } else if (manifestEntry) {
+      for (const [code, count] of Object.entries(manifestEntry.topics)) {
+        map.set(code, { total: count, attempted: 0 });
+      }
     }
     return map;
-  }, [questions, attemptedIds]);
+  }, [questions, attemptedIds, manifestEntry]);
 
   // Donut SVG values
   const radius = 28;
@@ -103,7 +134,7 @@ export default function Subject() {
         </div>
       </div>
 
-      {questions.length === 0 ? (
+      {!loading && questions.length === 0 ? (
         <EmptyState subject={subject.name} />
       ) : (
         <>
