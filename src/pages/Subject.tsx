@@ -121,8 +121,8 @@ export default function Subject() {
         <div
           className="mt-2 overflow-hidden rounded-full"
           style={{
-            background: `linear-gradient(to right, rgba(148,163,184,0.15) ${solvedPct}%, rgba(148,163,184,0.06) ${solvedPct}%)`,
-            border: "1px solid rgba(148,163,184,0.1)",
+            background: `linear-gradient(to right, rgba(148,163,184,0.3) ${solvedPct}%, rgba(148,163,184,0.04) ${solvedPct}%)`,
+            border: "1px solid rgba(148,163,184,0.2)",
           }}
         >
           <p className="px-3 py-1.5 text-xs text-slate-400">
