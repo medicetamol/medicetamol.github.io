@@ -170,8 +170,8 @@ export default function Subject() {
                       isActive
                         ? { background: "rgba(241,245,249,1)", color: "#0f172a", border: "1px solid transparent" }
                         : {
-                            background: `linear-gradient(to right, rgba(148,163,184,0.15) ${topicPct}%, rgba(148,163,184,0.06) ${topicPct}%)`,
-                            border: "1px solid rgba(148,163,184,0.1)",
+                            background: `linear-gradient(to right, rgba(148,163,184,0.3) ${topicPct}%, rgba(148,163,184,0.04) ${topicPct}%)`,
+                            border: "1px solid rgba(148,163,184,0.2)",
                             color: "rgb(203,213,225)",
                           }
                     }
