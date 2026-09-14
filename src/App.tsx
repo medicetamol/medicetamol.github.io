@@ -5,6 +5,10 @@ import ExamSelect from "./pages/ExamSelect";
 import SubjectSelect from "./pages/SubjectSelect";
 import Subject from "./pages/Subject";
 import ModuleBuilder from "./pages/ModuleBuilder";
+import ModuleBuilderTopics from "./pages/ModuleBuilderTopics";
+import ModuleBuilderCraft from "./pages/ModuleBuilderCraft";
+import ModuleBuilderSolve from "./pages/ModuleBuilderSolve";
+import SharedModule from "./pages/SharedModule";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 import Progress from "./pages/Progress";
@@ -20,7 +24,18 @@ export default function App() {
         <Route path="/pyqs" element={<ExamSelect />} />
         <Route path="/pyqs/:exam" element={<SubjectSelect />} />
         <Route path="/pyqs/:exam/:subjectId" element={<Subject />} />
+
+        {/* Module Builder — Step 1: subject list */}
         <Route path="/module/:exam" element={<ModuleBuilder />} />
+        {/* Module Builder — Step 1b: topic picker per subject */}
+        <Route path="/module/:exam/topics/:subjectId" element={<ModuleBuilderTopics />} />
+        {/* Module Builder — Step 2: crafting page (status/mode/count + bg fetch) */}
+        <Route path="/module/:exam/craft" element={<ModuleBuilderCraft />} />
+        {/* Module Builder — Step 3: solve module (share link + begin quiz) */}
+        <Route path="/module/:exam/solve" element={<ModuleBuilderSolve />} />
+        {/* Shared module landing (decodes short link, then hands off to Step 3) */}
+        <Route path="/custom/module" element={<SharedModule />} />
+
         {/* Direct subject PYQ drill */}
         <Route path="/quiz/:exam/:subjectId" element={<Quiz />} />
         {/* Custom module (source=custom, mode=quiz|guide in search params) */}
