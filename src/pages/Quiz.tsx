@@ -11,7 +11,7 @@ import {
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import {
   findQuestion,
-  getAllQuestions,
+  loadQuestions,
   hasDetailedExplanation,
   loadDetailedExplanation,
   loadExplanations,
@@ -27,6 +27,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import QuestionCard from "../components/QuestionCard";
 import MarkdownContent from "../components/MarkdownContent";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
+import { SUBJECTS } from "../constants";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
@@ -131,31 +132,46 @@ export default function Quiz() {
     setPoolReady(false);
 
     (async () => {
-      const allQuestions = await getAllQuestions(examId);
-      if (cancelled) return;
-
       let result: PYQQuestion[];
 
       if (isSolveLink) {
         if (!targetQuestion) {
           result = [];
         } else {
-          const subjectQuestions = allQuestions.filter((q) => q.subjectId === targetQuestion.subjectId);
+          const subjectQuestions = await loadQuestions(examId, targetQuestion.subjectId);
+          if (cancelled) return;
           const topicQuestions = subjectQuestions.filter((q) => q.topicId === targetQuestion.topicId);
           const candidates = topicQuestions.length >= 5 ? topicQuestions : subjectQuestions;
           const remaining = shuffle(candidates.filter((q) => q.id !== targetQuestion.id)).slice(0, 39);
           result = [targetQuestion, ...remaining];
         }
       } else if (isCustom) {
-        // Custom: maintain the order from the ids param (already shuffled in ModuleBuilder)
+        // Only fetch the subjects actually referenced by the id list — decode
+        // subject from each id's 2-letter code (qid format: exam+subject+serial).
+        const neededSubjectIds = Array.from(
+          new Set(
+            ids
+              .map((id) => {
+                const code = id.slice(2, 4);
+                return SUBJECTS.find((s) => s.code === code)?.id;
+              })
+              .filter((s): s is string => Boolean(s))
+          )
+        );
+        const bySubject = await Promise.all(
+          neededSubjectIds.map((sid) => loadQuestions(examId, sid))
+        );
+        if (cancelled) return;
+        const loaded = bySubject.flat();
+        // Maintain the order from the ids param (already shuffled in ModuleBuilder)
         result = ids
-          .map((id) => allQuestions.find((q) => q.id === id))
+          .map((id) => loaded.find((q) => q.id === id))
           .filter((q): q is PYQQuestion => q !== undefined);
       } else {
-        // Direct PYQ: serial order (no shuffle)
-        let questions = allQuestions.filter((q) => q.subjectId === subjectId);
-        if (topic !== "all") questions = questions.filter((q) => q.topicId === topic);
-        result = questions; // serial, as stored
+        // Direct PYQ: only the one subject from the route param, serial order
+        const questions = await loadQuestions(examId, subjectId ?? "");
+        if (cancelled) return;
+        result = topic !== "all" ? questions.filter((q) => q.topicId === topic) : questions;
       }
 
       if (cancelled) return;

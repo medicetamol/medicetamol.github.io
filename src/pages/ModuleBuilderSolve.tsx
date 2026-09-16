@@ -1,9 +1,9 @@
 import { ArrowLeft, Check, Copy, Share2 } from "lucide-react";
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import React, { useMemo, useState } from 'react';
-import { EXAMS } from "../constants";
 import { getSiteUrl, shareOrCopy } from "../lib/sharing";
 import { encodeModuleParams, subjectNamesFromIds } from "../lib/moduleShareCode";
+import { clearModuleBuilderState } from "../lib/moduleBuilderState";
 import type { Exam } from "../types";
 import ModuleFooterBar from "../components/ModuleFooterBar";
 
@@ -70,6 +70,8 @@ export default function ModuleBuilderSolve() {
   };
 
   const beginQuiz = () => {
+    clearModuleBuilderState(examId);
+
     const params = new URLSearchParams();
     params.set("source", "custom");
     params.set("mode", mode);
@@ -89,7 +91,7 @@ export default function ModuleBuilderSolve() {
         onClick={() => navigate(-1)}
         className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> {EXAMS.find((e) => e.id === examId)?.name}
+        <ArrowLeft size={16} /> BACK
       </button>
 
       <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
@@ -104,7 +106,7 @@ export default function ModuleBuilderSolve() {
           {mode === "quiz" ? "Exam Mode" : "Guide Mode"}
         </p>
 
-        <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/60 p-4">
+        <div className="mt-6">
           {!shareUrl ? (
             <button
               type="button"
@@ -116,7 +118,7 @@ export default function ModuleBuilderSolve() {
             </button>
           ) : (
             <div className="space-y-3">
-              <p className="truncate rounded-lg bg-slate-900 px-3 py-2 text-xs text-slate-400">{shareUrl}</p>
+              <p className="truncate rounded-lg bg-slate-950 px-3 py-2 text-xs text-slate-400">{shareUrl}</p>
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -139,7 +141,7 @@ export default function ModuleBuilderSolve() {
         </div>
       </div>
 
-      <div className="mt-10 text-center">
+      <div className="mt-16 text-center sm:mt-20">
         <p className="mb-1 text-sm text-slate-400">
           Start solving this module with {ids.length} Question{ids.length === 1 ? "" : "s"}
         </p>

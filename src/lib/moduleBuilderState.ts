@@ -37,3 +37,11 @@ export function saveModuleBuilderState(exam: Exam, state: ModuleBuilderState): v
     // sessionStorage unavailable — selection just won't persist across nav, non-fatal
   }
 }
+
+export function clearModuleBuilderState(exam: Exam): void {
+  try {
+    sessionStorage.removeItem(key(exam));
+  } catch {
+    // sessionStorage unavailable — nothing to clear, non-fatal
+  }
+}

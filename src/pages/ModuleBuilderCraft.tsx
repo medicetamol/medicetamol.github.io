@@ -1,7 +1,7 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Minus, Plus } from "lucide-react";
 import { useNavigate, useParams } from 'react-router-dom';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { EXAMS, SUBJECTS } from "../constants";
+import { SUBJECTS } from "../constants";
 import { loadQuestions } from "../data/questions";
 import { getAllQuestionProgress } from "../lib/db";
 import type { Exam, PYQQuestion, StatusFilter } from "../types";
@@ -21,6 +21,7 @@ const CAPTIONS = [
 
 function useTypewriterCaption(active: boolean): string {
   const [text, setText] = useState("");
+  const textRef = useRef("");
   const orderRef = useRef<number[]>([]);
 
   useEffect(() => {
@@ -42,12 +43,17 @@ function useTypewriterCaption(active: boolean): string {
     let cancelled = false;
     let timeoutId: ReturnType<typeof setTimeout>;
 
+    const setTextSafe = (value: string) => {
+      textRef.current = value;
+      setText(value);
+    };
+
     const typeCaption = (caption: string, onDone: () => void) => {
       let i = 0;
       const tick = () => {
         if (cancelled) return;
         i++;
-        setText(caption.slice(0, i));
+        setTextSafe(caption.slice(0, i));
         if (i < caption.length) {
           timeoutId = setTimeout(tick, 35);
         } else {
@@ -60,15 +66,13 @@ function useTypewriterCaption(active: boolean): string {
     const eraseCaption = (onDone: () => void) => {
       const erase = () => {
         if (cancelled) return;
-        setText((current) => {
-          const next = current.slice(0, -1);
-          if (next.length > 0) {
-            timeoutId = setTimeout(erase, 18);
-          } else {
-            timeoutId = setTimeout(onDone, 150);
-          }
-          return next;
-        });
+        const next = textRef.current.slice(0, -1);
+        setTextSafe(next);
+        if (next.length > 0) {
+          timeoutId = setTimeout(erase, 18);
+        } else {
+          timeoutId = setTimeout(onDone, 150);
+        }
       };
       erase();
     };
@@ -258,7 +262,7 @@ export default function ModuleBuilderCraft() {
         onClick={() => navigate(-1)}
         className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> {EXAMS.find((e) => e.id === examId)?.name}
+        <ArrowLeft size={16} /> BACK
       </button>
 
       <div className="mb-6">
@@ -291,27 +295,32 @@ export default function ModuleBuilderCraft() {
 
       {/* Bottom bar */}
       <ModuleFooterBar>
-        <label className="w-1/4 min-w-[78px] rounded-xl border border-slate-700 bg-slate-900 px-3 py-2">
-          <span className="block text-[10px] text-slate-500">Questions</span>
-          <select
-            value={questionCount}
-            onChange={(e) => setQuestionCount(Number(e.target.value))}
-            className="mt-0.5 w-full bg-transparent text-sm font-semibold text-slate-100 outline-none"
-            aria-label="Number of questions"
+        <div className="flex h-11 min-w-[130px] items-center justify-between gap-2 rounded-xl border border-slate-700 bg-slate-900 px-3">
+          <button
+            type="button"
+            onClick={() => setQuestionCount((n) => Math.max(10, n - 10))}
+            disabled={questionCount <= 10}
+            aria-label="Decrease question count"
+            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-slate-300 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-30"
           >
-            {[10, 20, 30, 40, 50, 60, 80, 100].map((n) => (
-              <option key={n} value={n} className="bg-slate-900">
-                {n}
-              </option>
-            ))}
-          </select>
-        </label>
+            <Minus size={16} />
+          </button>
+          <span className="text-sm font-bold text-slate-100">{questionCount}</span>
+          <button
+            type="button"
+            onClick={() => setQuestionCount((n) => n + 10)}
+            aria-label="Increase question count"
+            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-slate-300 hover:bg-slate-800"
+          >
+            <Plus size={16} />
+          </button>
+        </div>
 
         <button
           type="button"
           disabled={dataLoading || matchingCount === 0 || creating}
           onClick={handleCreate}
-          className="flex-1 rounded-xl bg-slate-100 px-5 py-3 text-xs font-bold text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
+          className="py-3 flex-1 rounded-xl bg-slate-100 px-5 text-xs font-bold text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
         >
           {dataLoading
             ? "LOADING…"
