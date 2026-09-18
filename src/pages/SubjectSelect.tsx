@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { SUBJECTS, EXAMS, EXAM_PREFIX } from "../constants";
 import manifest from "../data/manifest.json";
 import React, { useEffect, useState } from 'react';
-import { getAllQuestionProgress } from "../lib/db";
+import { getAllAnswers } from "../lib/db";
 import { prefetchQuestions } from "../data/questions";
 
 type SubjectManifest = { total: number; topics: Record<string, number> };
@@ -16,11 +16,11 @@ export default function SubjectSelect() {
     exam && EXAMS.some((x) => x.id === exam) ? exam : "NEET-PG";
   const currentExam = EXAMS.find((x) => x.id === examId);
 
-  const [progressMap, setProgressMap] = useState<Map<string, { attempts: number }>>(new Map());
+  const [answeredQids, setAnsweredQids] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    getAllQuestionProgress().then((items) => {
-      setProgressMap(new Map(items.map((p) => [p.qid, p])));
+    getAllAnswers().then((items) => {
+      setAnsweredQids(new Set(items.map((a) => a.qid)));
     });
   }, []);
 
@@ -49,8 +49,8 @@ export default function SubjectSelect() {
           const total = counts[examId]?.[subject.id]?.total ?? 0;
           const prefix = `${EXAM_PREFIX[examId]}${subject.code}`;
           let attempted = 0;
-          for (const [qid, p] of progressMap) {
-            if (qid.startsWith(prefix) && p.attempts > 0) attempted++;
+          for (const qid of answeredQids) {
+            if (qid.startsWith(prefix)) attempted++;
           }
           const pct = total > 0 ? Math.round((attempted / total) * 100) : 0;
 

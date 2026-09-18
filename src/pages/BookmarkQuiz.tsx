@@ -18,7 +18,7 @@ import {
   loadDetailedExplanation,
   loadExplanations,
 } from "../data/questions";
-import { getAllQuestionProgress, toggleBookmark } from "../lib/db";
+import { getAllBookmarks, recordDailyActivity, toggleBookmark } from "../lib/db";
 import QuestionCard from "../components/QuestionCard";
 import MarkdownContent from "../components/MarkdownContent";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
@@ -60,9 +60,9 @@ export default function BookmarkQuiz() {
     if (!subjectId) return;
 
     setLoadState("loading");
-    getAllQuestionProgress().then(async (items) => {
+    getAllBookmarks().then(async (items) => {
       if (cancelled) return;
-      const bookmarkedIds = items.filter((p) => p.bookmarked).map((p) => p.qid);
+      const bookmarkedIds = items.map((b) => b.qid);
       const relevantIds = bookmarkedIds.filter((qid) => decodeQid(qid)?.subjectId === subjectId);
       const resolved = await Promise.all(relevantIds.map((id) => findQuestion(id)));
       const questions = resolved.filter((q): q is PYQQuestion => Boolean(q));
@@ -293,6 +293,10 @@ function ReviewSession({
     setSubmitted(true);
     setTimedOut(choice === null);
     if (timeout) setSecondsLeft(0);
+    // Daily streak counts any actual attempt, bookmark quiz included — never a skip.
+    if (choice !== null) {
+      void recordDailyActivity(correct);
+    }
   }
 
   const applyQuestionState = useCallback((targetQuestion: PYQQuestion) => {

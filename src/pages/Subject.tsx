@@ -5,7 +5,7 @@ import { loadQuestions } from "../data/questions";
 import manifest from "../data/manifest.json";
 import EmptyState from "../components/EmptyState";
 import React, { useEffect, useMemo, useState } from 'react';
-import { getAllQuestionProgress } from "../lib/db";
+import { getAllAnswers, getAllBookmarks } from "../lib/db";
 import type { PYQQuestion } from "../types";
 
 type SubjectManifest = { total: number; topics: Record<string, number> };
@@ -44,14 +44,12 @@ export default function Subject() {
   useEffect(() => {
     let cancelled = false;
     const subjectQids = new Set(questions.map((q) => q.id));
-    getAllQuestionProgress().then((all) => {
+    Promise.all([getAllAnswers(), getAllBookmarks()]).then(([allAnswers, allBookmarks]) => {
       if (cancelled) return;
-      const subjectRows = all.filter((p) => subjectQids.has(p.qid));
-      const attempted = new Set(
-        subjectRows.filter((p) => p.attempts > 0).map((p) => p.qid)
-      );
-      const correct = subjectRows.reduce((n, p) => n + p.correctAttempts, 0);
-      const bookmarks = subjectRows.filter((p) => p.bookmarked).length;
+      const subjectAnswers = allAnswers.filter((a) => subjectQids.has(a.qid));
+      const attempted = new Set(subjectAnswers.map((a) => a.qid));
+      const correct = subjectAnswers.filter((a) => a.incorrect === undefined).length;
+      const bookmarks = allBookmarks.filter((b) => subjectQids.has(b.qid)).length;
       setAttemptedIds(attempted);
       setCorrectCount(correct);
       setBookmarkCount(bookmarks);

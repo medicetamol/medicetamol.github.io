@@ -32,16 +32,14 @@ export interface PYQExplanation {
   e: string;
 }
 
-export interface QuestionProgress {
+export interface Bookmark {
   qid: string;
-  bookmarked: boolean;
-  directCorrect: boolean;
-  directIncorrect: boolean;
-  firstIncorrect: boolean;
-  attempts: number;
-  correctAttempts: number;
-  incorrectAttempts: number;
-  lastAnsweredAt?: string;
+}
+
+export interface QuestionAnswer {
+  qid: string;
+  /** Present only when the attempt was wrong: the option index the user picked. */
+  incorrect?: number;
 }
 
 export interface QuizAnswer {
@@ -61,7 +59,17 @@ export interface QuizResult {
 
 export interface DailyActivity {
   date: string;
-  questions: number;
   correct: number;
   incorrect: number;
+}
+
+/**
+ * Single running lifetime counter, independent of dailyActivity (which will
+ * eventually be pruned to ~2 weeks) and answers (cleared per-subject). Never
+ * decreases — the one number on Progress that survives every kind of clear.
+ */
+export interface LifetimeStats {
+  id: "lifetime";
+  totalSolved: number;
+  totalCorrect: number;
 }

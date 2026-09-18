@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-[#0b0f14] text-slate-100">
-      <header className="sticky top-0 z-40 border-b border-slate-800/90 bg-[#0b0f14]/95 backdrop-blur">
+      <header className="sticky top-0 z-40 relative border-b border-slate-800/90 bg-[#0b0f14]">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           {/* Logo — non-functional during custom module */}
           {isCustomQuiz ? (
@@ -78,9 +78,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           )}
         </div>
 
-        {/* Mobile menu — hidden during custom module */}
+        {/* Mobile menu — floating overlay so it never shifts page content
+            below it as it opens/closes (hidden during custom module) */}
         {!isCustomQuiz && open && (
-          <div className="border-t border-slate-800 px-4 py-3 sm:hidden">
+          <div className="absolute inset-x-0 top-full z-50 border-t border-slate-800 bg-[#0b0f14] px-4 py-3 shadow-xl sm:hidden">
             {nav.map(({ to, label, icon: Icon }) => (
               <Link
                 key={to}

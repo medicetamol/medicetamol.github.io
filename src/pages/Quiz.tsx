@@ -17,8 +17,10 @@ import {
   loadExplanations,
 } from "../data/questions";
 import {
-  getQuestionProgress,
-  getAllQuestionProgress,
+  getQuestionAnswer,
+  getAllAnswers,
+  isBookmarked,
+  recordDailyActivity,
   recordDirectAnswer,
   saveQuizResult,
   toggleBookmark,
@@ -88,6 +90,13 @@ export default function Quiz() {
   const [search] = useSearchParams();
   const navigate = useNavigate();
 
+  // A fresh browser navigation to a URL (as opposed to an in-app Link click)
+  // can restore a stale scroll position on mount — most noticeable on the
+  // shared /solve/:id link opened directly. Force to top once, on mount.
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
   // Derive session identity
   const [targetQuestion, setTargetQuestion] = useState<PYQQuestion | undefined>(undefined);
   const [targetReady, setTargetReady] = useState(!questionId);
@@ -142,7 +151,7 @@ export default function Quiz() {
           if (cancelled) return;
           const topicQuestions = subjectQuestions.filter((q) => q.topicId === targetQuestion.topicId);
           const candidates = topicQuestions.length >= 5 ? topicQuestions : subjectQuestions;
-          const remaining = shuffle(candidates.filter((q) => q.id !== targetQuestion.id)).slice(0, 39);
+          const remaining = shuffle(candidates.filter((q) => q.id !== targetQuestion.id)).slice(0, 4);
           result = [targetQuestion, ...remaining];
         }
       } else if (isCustom) {
@@ -188,13 +197,9 @@ export default function Quiz() {
 
   useEffect(() => {
     if (isSolveLink || isCustom || pool.length === 0) return;
-    getAllQuestionProgress().then((allProgress) => {
-      const progressMap = new Map(allProgress.map((p) => [p.qid, p]));
-      const firstUnanswered = pool.findIndex((q) => {
-        const p = progressMap.get(q.id);
-        // "answered" means has a selection (correct or incorrect). Skipped (attempts but no directCorrect/directIncorrect) not counted.
-        return !p || (p.attempts === 0);
-      });
+    getAllAnswers().then((allAnswers) => {
+      const answeredSet = new Set(allAnswers.map((a) => a.qid));
+      const firstUnanswered = pool.findIndex((q) => !answeredSet.has(q.id));
       setIndex(firstUnanswered >= 0 ? firstUnanswered : 0);
       setStartIndexReady(true);
     });
@@ -254,17 +259,30 @@ export default function Quiz() {
     };
   }, []);
 
-  // ── Prevent browser back (custom modules + solve links only) ──
+  // ── Prevent browser back (custom modules + solve links) ──
+  // Custom modules: block back entirely to protect an in-progress timed quiz.
+  // Solve links (shared /solve/:id, including "PYQ of the Day"): back should
+  // feel like leaving the site into the app, not getting stuck — so instead
+  // of re-trapping the URL, send them to the homepage.
   useEffect(() => {
     if (!pool.length) return;
     // Direct PYQ: allow native back navigation
     if (!isCustom && !isSolveLink) return;
+
+    if (isSolveLink) {
+      const state = { mediCetamolQuiz: true };
+      window.history.pushState(state, "", window.location.href);
+      const goHome = () => navigate("/", { replace: true });
+      window.addEventListener("popstate", goHome);
+      return () => window.removeEventListener("popstate", goHome);
+    }
+
     const state = { mediCetamolQuiz: true };
     window.history.pushState(state, "", window.location.href);
     const blockBack = () => window.history.pushState(state, "", window.location.href);
     window.addEventListener("popstate", blockBack);
     return () => window.removeEventListener("popstate", blockBack);
-  }, [pool.length, index, isCustom, isSolveLink]);
+  }, [pool.length, index, isCustom, isSolveLink, navigate]);
 
   // ── Fullscreen management (custom modules only) ──
   useEffect(() => {
@@ -287,7 +305,7 @@ export default function Quiz() {
   useEffect(() => {
     if (!question) return;
 
-    getQuestionProgress(question.id).then((p) => setBookmarked(Boolean(p?.bookmarked)));
+    isBookmarked(question.id).then(setBookmarked);
 
     if (isQuizMode) {
       // In quiz mode we track selections in answersRef only, no "submitted" state per question
@@ -307,23 +325,24 @@ export default function Quiz() {
     // Guard against stale async: if the question changes before this resolves, discard the result.
     let cancelled = false;
     if (!isCustom && !isSolveLink && !previousAnswer) {
-      getQuestionProgress(question.id).then((p) => {
+      getQuestionAnswer(question.id).then((a) => {
         if (cancelled) return;
-        if (p && p.attempts > 0) {
+        if (a) {
           // Question was answered in a previous session — restore as "submitted".
-          // We don't store which option was chosen, so restore selected as the
-          // correct answer index so it highlights green (not the skipped/timed-out sky style).
+          // `incorrect` holds the exact option picked when wrong; when absent
+          // the question was answered correctly, so highlight the correct answer.
+          const wasCorrect = a.incorrect === undefined;
           const syntheticAnswer: QuizAnswer = {
             qid: question.id,
-            selected: p.directCorrect ? question.answer : null,
-            correct: p.directCorrect,
+            selected: wasCorrect ? question.answer : a.incorrect ?? null,
+            correct: wasCorrect,
           };
-          answersRef.current = [...answersRef.current.filter((a) => a.qid !== question.id), syntheticAnswer];
+          answersRef.current = [...answersRef.current.filter((x) => x.qid !== question.id), syntheticAnswer];
           selectedRef.current = syntheticAnswer.selected;
           submittedRef.current = true;
           setSelected(syntheticAnswer.selected);
           setSubmitted(true);
-          setTimedOut(!p.directCorrect); // only show "skipped" style when they actually got it wrong
+          setTimedOut(false); // a stored answer was always an actual pick, never a skip
         }
       });
     }
@@ -443,7 +462,12 @@ export default function Quiz() {
     if (timeout) setSecondsLeft(0);
 
     if (!isCustom && !isSolveLink) {
-      await recordDirectAnswer(question.id, correct);
+      await recordDirectAnswer(question.id, correct, choice);
+    }
+    // Daily streak counts an actual attempt in any mode — Direct QBank,
+    // custom module, or a shared /solve/:id link — but never a skip/timeout.
+    if (choice !== null) {
+      await recordDailyActivity(correct);
     }
   }
 

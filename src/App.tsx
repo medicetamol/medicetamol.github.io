@@ -15,12 +15,14 @@ import Progress from "./pages/Progress";
 import AIPrompt from "./pages/AIPrompt";
 import Bookmarks from "./pages/Bookmarks";
 import BookmarkQuiz from "./pages/BookmarkQuiz";
+import About from "./pages/About";
 
 export default function App() {
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/pyqs" element={<ExamSelect />} />
         <Route path="/pyqs/:exam" element={<SubjectSelect />} />
         <Route path="/pyqs/:exam/:subjectId" element={<Subject />} />

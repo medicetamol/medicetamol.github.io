@@ -3,7 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { SUBJECTS } from "../constants";
 import { loadQuestions } from "../data/questions";
-import { getAllQuestionProgress } from "../lib/db";
+import { getAllAnswers, getAllBookmarks } from "../lib/db";
+import type { QuestionAnswer } from "../types";
 import type { Exam, PYQQuestion, StatusFilter } from "../types";
 import { loadModuleBuilderState } from "../lib/moduleBuilderState";
 import FilterBar from "../components/FilterBar";
@@ -181,11 +182,13 @@ export default function ModuleBuilderCraft() {
   }, [examId, selectedSubjects.join(",")]);
 
   // ── Progress data (separate, fast source — loads independently of JSON fetch) ──
-  const [progress, setProgress] = useState<Record<string, Awaited<ReturnType<typeof getAllQuestionProgress>>[number]>>({});
+  const [answers, setAnswers] = useState<Record<string, QuestionAnswer>>({});
+  const [bookmarkedQids, setBookmarkedQids] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    getAllQuestionProgress().then((items) => {
-      setProgress(Object.fromEntries(items.map((x) => [x.qid, x])));
+    Promise.all([getAllAnswers(), getAllBookmarks()]).then(([a, b]) => {
+      setAnswers(Object.fromEntries(a.map((x) => [x.qid, x])));
+      setBookmarkedQids(new Set(b.map((x) => x.qid)));
     });
   }, []);
 
@@ -210,15 +213,15 @@ export default function ModuleBuilderCraft() {
       if (!topicsForSubject.includes("all") && !topicsForSubject.includes(q.topicId)) return false;
 
       if (statuses.includes("all")) return true;
-      const p = progress[q.id];
+      const a = answers[q.id];
       return statuses.some((status) => {
-        if (status === "incorrect") return Boolean(p?.firstIncorrect || p?.directIncorrect);
-        if (status === "correct") return Boolean(p?.directCorrect);
-        if (status === "bookmark") return Boolean(p?.bookmarked);
+        if (status === "incorrect") return a?.incorrect !== undefined;
+        if (status === "correct") return a !== undefined && a.incorrect === undefined;
+        if (status === "bookmark") return bookmarkedQids.has(q.id);
         return true;
       });
     });
-  }, [allLoaded, builderState.topicsBySubject, statuses, progress]);
+  }, [allLoaded, builderState.topicsBySubject, statuses, answers, bookmarkedQids]);
 
   const matchingCount = matching.length;
 
@@ -308,9 +311,10 @@ export default function ModuleBuilderCraft() {
           <span className="text-sm font-bold text-slate-100">{questionCount}</span>
           <button
             type="button"
-            onClick={() => setQuestionCount((n) => n + 10)}
+            onClick={() => setQuestionCount((n) => Math.min(180, n + 10))}
+            disabled={questionCount >= 180}
             aria-label="Increase question count"
-            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-slate-300 hover:bg-slate-800"
+            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-slate-300 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-30"
           >
             <Plus size={16} />
           </button>

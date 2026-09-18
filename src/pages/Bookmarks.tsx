@@ -2,7 +2,7 @@ import { ArrowRight, Bookmark } from "lucide-react";
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SUBJECTS } from "../constants";
-import { getAllQuestionProgress } from "../lib/db";
+import { getAllBookmarks } from "../lib/db";
 import type { Exam } from "../types";
 
 // Exam id prefixes as they appear at the start of every qid. Order matters:
@@ -27,8 +27,8 @@ export default function Bookmarks() {
   const [bookmarkedQids, setBookmarkedQids] = useState<string[] | null>(null);
 
   useEffect(() => {
-    getAllQuestionProgress().then((items) => {
-      setBookmarkedQids(items.filter((p) => p.bookmarked).map((p) => p.qid));
+    getAllBookmarks().then((items) => {
+      setBookmarkedQids(items.map((b) => b.qid));
     });
   }, []);
 
