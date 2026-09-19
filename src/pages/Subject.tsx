@@ -40,6 +40,7 @@ export default function Subject() {
   const [attemptedIds, setAttemptedIds] = useState<Set<string>>(new Set());
   const [correctCount, setCorrectCount] = useState(0);
   const [bookmarkCount, setBookmarkCount] = useState(0);
+  const [progressLoaded, setProgressLoaded] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -53,6 +54,7 @@ export default function Subject() {
       setAttemptedIds(attempted);
       setCorrectCount(correct);
       setBookmarkCount(bookmarks);
+      setProgressLoaded(true);
     });
     return () => { cancelled = true; };
   }, [questions]);
@@ -201,8 +203,12 @@ export default function Subject() {
             </Link>
           </div>
 
-          {/* Progress section */}
-          {attemptedCount > 0 && (
+          {/* Progress section — always reserves its slot in the layout so the
+              rest of the page (Clear-progress link, etc.) doesn't jump down
+              once answers/bookmarks finish loading. Shows a lightweight
+              placeholder until then, or nothing at all once we know for
+              certain there's nothing solved yet. */}
+          {progressLoaded && attemptedCount === 0 ? null : (
             <div className="mt-6 border-t border-slate-800/60 pt-5">
               <div className="flex items-center gap-5">
                 {/* Donut */}
@@ -215,24 +221,35 @@ export default function Subject() {
                     strokeWidth="7"
                   />
                   {/* Solved arc */}
-                  <circle
-                    cx="36" cy="36" r={radius}
-                    fill="none"
-                    stroke="rgba(148,163,184,0.55)"
-                    strokeWidth="7"
-                    strokeDasharray={`${solvedArc} ${circumference}`}
-                    strokeLinecap="round"
-                  />
+                  {progressLoaded && (
+                    <circle
+                      cx="36" cy="36" r={radius}
+                      fill="none"
+                      stroke="rgba(148,163,184,0.55)"
+                      strokeWidth="7"
+                      strokeDasharray={`${solvedArc} ${circumference}`}
+                      strokeLinecap="round"
+                    />
+                  )}
                 </svg>
 
                 {/* Text */}
                 <div className="min-w-0">
-                  <p className="text-sm font-semibold text-slate-200">
-                    {accuracyPct}% Accuracy
-                  </p>
-                  <p className="mt-0.5 text-xs text-slate-500">
-                    {attemptedCount} Solved · {totalCount - attemptedCount} Remaining · {bookmarkCount} Bookmark{bookmarkCount === 1 ? "" : "s"}
-                  </p>
+                  {progressLoaded ? (
+                    <>
+                      <p className="text-sm font-semibold text-slate-200">
+                        {accuracyPct}% Accuracy
+                      </p>
+                      <p className="mt-0.5 text-xs text-slate-500">
+                        {attemptedCount} Solved · {totalCount - attemptedCount} Remaining · {bookmarkCount} Bookmark{bookmarkCount === 1 ? "" : "s"}
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="h-4 w-24 animate-pulse rounded bg-slate-800" />
+                      <p className="mt-2 h-3 w-48 animate-pulse rounded bg-slate-800/70" />
+                    </>
+                  )}
                 </div>
               </div>
             </div>

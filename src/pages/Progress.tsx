@@ -1,7 +1,7 @@
 import { Activity, BarChart3, CheckCircle2, Target, Trash2, XCircle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { getAllAnswers, getAllBookmarks, getDailyActivity, getLifetimeStats, clearSubjectProgress, STREAK_DAILY_GOAL } from "../lib/db";
+import { getAllAnswers, getAllBookmarks, getDailyActivity, getLifetimeStats, clearSubjectProgress, computeStreak, STREAK_DAILY_GOAL } from "../lib/db";
 import { SUBJECTS, EXAM_PREFIX, EXAMS } from "../constants";
 import Streak from "../components/Streak";
 import manifest from "../data/manifest.json";
@@ -119,6 +119,8 @@ export default function Progress() {
   const todayActivity = activity.find((a) => a.date === todayKey);
   const todayCount = (todayActivity?.correct ?? 0) + (todayActivity?.incorrect ?? 0);
   const streakGoalMet = todayCount >= STREAK_DAILY_GOAL;
+  const streakInfo = computeStreak(activity);
+  const streakAtRisk = streakInfo.days > 0 && !streakGoalMet;
 
   const [selectedExam, setSelectedExam] = useState<Exam>("NEET-PG");
 
@@ -190,7 +192,7 @@ export default function Progress() {
         <Metric icon={CheckCircle2} label="Correct" value={totalCorrect} />
         <Metric icon={Target} label="Accuracy" value={`${overallAccuracy}%`} />
         <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
-          <Streak size="sm" />
+          <Streak size="md" />
         </div>
       </div>
 
@@ -200,7 +202,11 @@ export default function Progress() {
           {streakGoalMet ? "Streak complete" : `${todayCount}/${STREAK_DAILY_GOAL} Questions Completed`}
         </p>
         {!streakGoalMet && (
-          <p className="mt-1 text-xs text-slate-500">Complete this to maintain your streak</p>
+          <p className={`mt-1 text-xs ${streakAtRisk ? "font-medium text-red-400" : "text-slate-500"}`}>
+            {streakAtRisk
+              ? "Your Streak is at Risk - complete today's target to maintain it"
+              : "Complete today's target to start your streak"}
+          </p>
         )}
       </div>
 

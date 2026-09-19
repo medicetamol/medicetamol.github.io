@@ -34,32 +34,42 @@ export default function Streak({
 
   if (!info) return null;
 
-  const lit = info.completedToday && info.days > 0;
+  // Three distinct states:
+  //  a. no active streak — grayscale, but high-contrast enough to read clearly
+  //  b. streak active, today still pending — colored but desaturated, gently
+  //     pulsing as a nudge; the pulse stops once today's goal is hit
+  //  c. streak active, today's goal met — fully colored, steady (no pulse)
+  const hasStreak = info.days > 0;
+  const pendingToday = hasStreak && !info.completedToday;
+  const completedActive = hasStreak && info.completedToday;
+
   const dims = size === "sm" ? "h-9 w-9 text-2xl" : "h-14 w-14 text-4xl";
+
+  const flameClass = hasStreak ? "" : "opacity-60 grayscale"; // (a) no streak — visible, not colorful
+
+  const countClass = hasStreak ? "text-orange-400" : "text-slate-400";
 
   const content = (
     <div className="flex flex-col items-center gap-1">
       <motion.div
-        className={`grid place-items-center rounded-full bg-transparent ${dims}`}
-        animate={
-          lit
-            ? { scale: [1, 1.08, 1] }
-            : { scale: 1 }
-        }
-        transition={lit ? { duration: 1.1, repeat: Infinity, ease: "easeInOut" } : undefined}
+        className={`grid place-items-center rounded-full bg-transparent ${dims} ${
+          pendingToday ? "border-2 border-dotted border-red-500" : ""
+        }`}
+        animate={pendingToday ? { scale: [1, 1.08, 1] } : { scale: 1 }}
+        transition={pendingToday ? { duration: 1.1, repeat: Infinity, ease: "easeInOut" } : undefined}
       >
-        <span className={lit ? "" : "opacity-30 grayscale"} role="img" aria-label="streak">
+        <span className={flameClass} role="img" aria-label="streak">
           🔥
         </span>
       </motion.div>
-      <span className={`text-sm font-bold ${lit ? "text-orange-400" : "text-slate-600"}`}>
-        {info.days}
-      </span>
+      <span className={`text-sm font-bold ${countClass}`}>{info.days}</span>
       {size === "md" && (
-        <span className="text-[11px] text-slate-500">
-          {info.completedToday
+        <span className={`text-[11px] ${pendingToday ? "text-red-400 font-medium" : "text-slate-500"}`}>
+          {completedActive
             ? "Streak complete"
-            : `${info.todayCount}/${STREAK_DAILY_GOAL} Qs today`}
+            : pendingToday
+              ? `⚠️ Streak At Risk`
+              : `${info.todayCount}/${STREAK_DAILY_GOAL} Qs today`}
         </span>
       )}
     </div>

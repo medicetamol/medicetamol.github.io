@@ -90,13 +90,6 @@ export default function Quiz() {
   const [search] = useSearchParams();
   const navigate = useNavigate();
 
-  // A fresh browser navigation to a URL (as opposed to an in-app Link click)
-  // can restore a stale scroll position on mount — most noticeable on the
-  // shared /solve/:id link opened directly. Force to top once, on mount.
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, []);
-
   // Derive session identity
   const [targetQuestion, setTargetQuestion] = useState<PYQQuestion | undefined>(undefined);
   const [targetReady, setTargetReady] = useState(!questionId);
