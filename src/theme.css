@@ -1,0 +1,179 @@
+/*
+ * Theme tokens (RGB channels, so Tailwind opacity modifiers like bg-slate-900/60 keep working).
+ * tailwind.config.js maps slate / red / emerald / sky / amber / orange + page colours to these
+ * variables, so every existing class flips with the theme — no per-component dark: variants.
+ *
+ * Dark  = Tailwind's default palettes (identical to the app before theming).
+ * Light = the same scales inverted (50<->950, 100<->900, ...; 500 stays), with slate
+ *         600 / 800 / 900 / 950 tuned so cards read as white on a soft grey page, and the
+ *         coloured 800 / 900 / 950 tints mapped to visible pastels.
+ *
+ * Theme is switched by <html data-theme="light"> (see src/lib/theme.ts).
+ */
+:root {
+  color-scheme: dark;
+
+  /* page surfaces */
+  --page: 11 15 20;        /* #0b0f14 */
+  --page-deep: 8 11 16;    /* #080b10 — sticky quiz bars */
+
+  /* native <option> popups */
+  --option-bg: 16 22 30;   /* #10161e */
+  --option-fg: 248 250 252;
+
+  /* slate */
+  --slate-50: 248 250 252;
+  --slate-100: 241 245 249;
+  --slate-200: 226 232 240;
+  --slate-300: 203 213 225;
+  --slate-400: 148 163 184;
+  --slate-500: 100 116 139;
+  --slate-600: 71 85 105;
+  --slate-700: 51 65 85;
+  --slate-800: 30 41 59;
+  --slate-900: 15 23 42;
+  --slate-950: 2 6 23;
+  /* red */
+  --red-50: 254 242 242;
+  --red-100: 254 226 226;
+  --red-200: 254 202 202;
+  --red-300: 252 165 165;
+  --red-400: 248 113 113;
+  --red-500: 239 68 68;
+  --red-600: 220 38 38;
+  --red-700: 185 28 28;
+  --red-800: 153 27 27;
+  --red-900: 127 29 29;
+  --red-950: 69 10 10;
+  /* emerald */
+  --emerald-50: 236 253 245;
+  --emerald-100: 209 250 229;
+  --emerald-200: 167 243 208;
+  --emerald-300: 110 231 183;
+  --emerald-400: 52 211 153;
+  --emerald-500: 16 185 129;
+  --emerald-600: 5 150 105;
+  --emerald-700: 4 120 87;
+  --emerald-800: 6 95 70;
+  --emerald-900: 6 78 59;
+  --emerald-950: 2 44 34;
+  /* sky */
+  --sky-50: 240 249 255;
+  --sky-100: 224 242 254;
+  --sky-200: 186 230 253;
+  --sky-300: 125 211 252;
+  --sky-400: 56 189 248;
+  --sky-500: 14 165 233;
+  --sky-600: 2 132 199;
+  --sky-700: 3 105 161;
+  --sky-800: 7 89 133;
+  --sky-900: 12 74 110;
+  --sky-950: 8 47 73;
+  /* amber */
+  --amber-50: 255 251 235;
+  --amber-100: 254 243 199;
+  --amber-200: 253 230 138;
+  --amber-300: 252 211 77;
+  --amber-400: 251 191 36;
+  --amber-500: 245 158 11;
+  --amber-600: 217 119 6;
+  --amber-700: 180 83 9;
+  --amber-800: 146 64 14;
+  --amber-900: 120 53 15;
+  --amber-950: 69 26 3;
+  /* orange */
+  --orange-50: 255 247 237;
+  --orange-100: 255 237 213;
+  --orange-200: 254 215 170;
+  --orange-300: 253 186 116;
+  --orange-400: 251 146 60;
+  --orange-500: 249 115 22;
+  --orange-600: 234 88 12;
+  --orange-700: 194 65 12;
+  --orange-800: 154 52 18;
+  --orange-900: 124 45 18;
+  --orange-950: 67 20 7;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --page: 241 245 249;     /* #f1f5f9 */
+  --page-deep: 248 250 252;
+
+  --option-bg: 255 255 255;
+  --option-fg: 15 23 42;
+
+  /* slate */
+  --slate-50: 2 6 23;
+  --slate-100: 15 23 42;
+  --slate-200: 30 41 59;
+  --slate-300: 51 65 85;
+  --slate-400: 71 85 105;
+  --slate-500: 100 116 139;
+  --slate-600: 136 150 170;
+  --slate-700: 203 213 225;
+  --slate-800: 219 226 236;
+  --slate-900: 255 255 255;
+  --slate-950: 238 242 247;
+  /* red */
+  --red-50: 69 10 10;
+  --red-100: 127 29 29;
+  --red-200: 153 27 27;
+  --red-300: 185 28 28;
+  --red-400: 220 38 38;
+  --red-500: 239 68 68;
+  --red-600: 248 113 113;
+  --red-700: 252 165 165;
+  --red-800: 252 165 165;
+  --red-900: 252 165 165;
+  --red-950: 254 202 202;
+  /* emerald */
+  --emerald-50: 2 44 34;
+  --emerald-100: 6 78 59;
+  --emerald-200: 6 95 70;
+  --emerald-300: 4 120 87;
+  --emerald-400: 5 150 105;
+  --emerald-500: 16 185 129;
+  --emerald-600: 52 211 153;
+  --emerald-700: 110 231 183;
+  --emerald-800: 110 231 183;
+  --emerald-900: 110 231 183;
+  --emerald-950: 167 243 208;
+  /* sky */
+  --sky-50: 8 47 73;
+  --sky-100: 12 74 110;
+  --sky-200: 7 89 133;
+  --sky-300: 3 105 161;
+  --sky-400: 2 132 199;
+  --sky-500: 14 165 233;
+  --sky-600: 56 189 248;
+  --sky-700: 125 211 252;
+  --sky-800: 125 211 252;
+  --sky-900: 125 211 252;
+  --sky-950: 186 230 253;
+  /* amber */
+  --amber-50: 69 26 3;
+  --amber-100: 120 53 15;
+  --amber-200: 146 64 14;
+  --amber-300: 180 83 9;
+  --amber-400: 217 119 6;
+  --amber-500: 245 158 11;
+  --amber-600: 251 191 36;
+  --amber-700: 252 211 77;
+  --amber-800: 252 211 77;
+  --amber-900: 252 211 77;
+  --amber-950: 253 230 138;
+  /* orange */
+  --orange-50: 67 20 7;
+  --orange-100: 124 45 18;
+  --orange-200: 154 52 18;
+  --orange-300: 194 65 12;
+  --orange-400: 234 88 12;
+  --orange-500: 249 115 22;
+  --orange-600: 251 146 60;
+  --orange-700: 253 186 116;
+  --orange-800: 253 186 116;
+  --orange-900: 253 186 116;
+  --orange-950: 254 215 170;
+}

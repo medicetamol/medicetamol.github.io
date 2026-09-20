@@ -39,7 +39,7 @@ export default function FilterBar({
             type="button"
             onClick={() => toggle(id)}
             className={`min-w-fit flex-1 rounded-lg px-3 py-2 text-xs font-semibold transition ${
-              active ? "bg-slate-800 text-white" : "text-slate-500 hover:text-slate-300"
+              active ? "bg-slate-800 text-slate-50" : "text-slate-500 hover:text-slate-300"
             }`}
           >
             {label}

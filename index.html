@@ -33,6 +33,28 @@
     <meta name="twitter:image" content="https://medicetamol.github.io/logo.png" />
 
     <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- Installable app (PWA) -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="mediCetamol" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- Apply the saved theme before first paint (avoids a dark → light flash).
+         Key must match THEME_STORAGE_KEY in src/lib/theme.ts. -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("medicetamol-theme") === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.setAttribute("content", "#f1f5f9");
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

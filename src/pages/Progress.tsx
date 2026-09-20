@@ -265,7 +265,7 @@ export default function Progress() {
                 onClick={() => setSelectedExam(exam.id)}
                 className={`flex-1 rounded-lg px-3 py-2 text-xs font-semibold transition ${
                   selectedExam === exam.id
-                    ? "bg-slate-800 text-white"
+                    ? "bg-slate-800 text-slate-50"
                     : "text-slate-500 hover:text-slate-300"
                 }`}
               >

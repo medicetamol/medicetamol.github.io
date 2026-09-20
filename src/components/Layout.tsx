@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Activity, BarChart3, Bookmark, BookOpen, Menu, X } from "lucide-react";
+import { Activity, BarChart3, Bookmark, BookOpen, Menu, Settings, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -17,16 +17,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { to: "/pyqs", label: "PYQs", icon: BookOpen },
     { to: "/bookmarks", label: "Bookmarks", icon: Bookmark },
     { to: "/progress", label: "Progress", icon: BarChart3 },
+    { to: "/settings", label: "Settings", icon: Settings },
   ];
 
   return (
-    <div className="min-h-screen bg-[#0b0f14] text-slate-100">
-      <header className="sticky top-0 z-40 relative border-b border-slate-800/90 bg-[#0b0f14]">
+    <div className="min-h-screen bg-page text-slate-100">
+      <header className="sticky top-0 z-40 relative border-b border-slate-800/90 bg-page">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           {/* Logo — non-functional during custom module */}
           {isCustomQuiz ? (
             <span className="flex cursor-default items-center gap-2.5 select-none">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-[#0b0f14]">
+              <span className="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-page">
                 <Activity size={20} strokeWidth={2.5} />
               </span>
               <span className="text-lg font-bold tracking-tight text-slate-300">
@@ -39,7 +40,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               className="flex items-center gap-2.5"
               onClick={() => setOpen(false)}
             >
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-[#0b0f14]">
+              <span className="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-page">
                 <Activity size={20} strokeWidth={2.5} />
               </span>
               <span className="text-lg font-bold tracking-tight">mediCetamol</span>
@@ -48,15 +49,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Desktop nav — hidden during custom module */}
           {!isCustomQuiz && (
-            <nav className="hidden items-center gap-1 sm:flex">
+            <nav className="hidden items-center gap-1 md:flex">
               {nav.map(({ to, label, icon: Icon }) => (
                 <Link
                   key={to}
                   to={to}
                   className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm ${
                     location.pathname.startsWith(to)
-                      ? "bg-slate-800 text-white"
-                      : "text-slate-400 hover:bg-slate-900 hover:text-white"
+                      ? "bg-slate-800 text-slate-50"
+                      : "text-slate-400 hover:bg-slate-900 hover:text-slate-50"
                   }`}
                 >
                   <Icon size={17} />
@@ -71,7 +72,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <button
               aria-label="Open menu"
               onClick={() => setOpen((v) => !v)}
-              className="rounded-lg p-2 text-slate-300 hover:bg-slate-900"
+              className="rounded-lg p-2 text-slate-300 hover:bg-slate-900 md:hidden"
             >
               {open ? <X size={21} /> : <Menu size={21} />}
             </button>
@@ -81,7 +82,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {/* Mobile menu — floating overlay so it never shifts page content
             below it as it opens/closes (hidden during custom module) */}
         {!isCustomQuiz && open && (
-          <div className="absolute inset-x-0 top-full z-50 border-t border-slate-800 bg-[#0b0f14] px-4 py-3 shadow-xl sm:hidden">
+          <div className="absolute inset-x-0 top-full z-50 border-t border-slate-800 bg-page px-4 py-3 shadow-xl md:hidden">
             {nav.map(({ to, label, icon: Icon }) => (
               <Link
                 key={to}

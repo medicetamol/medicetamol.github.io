@@ -17,6 +17,7 @@ import AIPrompt from "./pages/AIPrompt";
 import Bookmarks from "./pages/Bookmarks";
 import BookmarkQuiz from "./pages/BookmarkQuiz";
 import About from "./pages/About";
+import Settings from "./pages/Settings";
 
 // React Router doesn't reset scroll position on navigation by default, so a
 // scrolled-down page (e.g. reading the bottom of Home) leaves new pages
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/progress" element={<Progress />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
         <Route path="/bookmarks/:subjectId" element={<BookmarkQuiz />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Layout>
   );

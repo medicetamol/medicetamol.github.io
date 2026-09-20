@@ -5,6 +5,7 @@ import manifest from "../data/manifest.json";
 import React, { useEffect, useState } from 'react';
 import { getAllAnswers } from "../lib/db";
 import { prefetchQuestions } from "../data/questions";
+import { useTheme } from "../lib/theme";
 
 type SubjectManifest = { total: number; topics: Record<string, number> };
 type Manifest = Record<string, Record<string, SubjectManifest>>;
@@ -15,6 +16,11 @@ export default function SubjectSelect() {
   const examId: "NEET-PG" | "INI-CET" | "FMGE" =
     exam && EXAMS.some((x) => x.id === exam) ? exam : "NEET-PG";
   const currentExam = EXAMS.find((x) => x.id === examId);
+
+  // Donut ring colour endpoints (quiet at 0% → strongest at 100%); inverted for the light theme.
+  const theme = useTheme();
+  const RING_FROM = theme === "light" ? [125, 139, 160] : [55, 65, 81];
+  const RING_TO = theme === "light" ? [51, 65, 85] : [148, 163, 184];
 
   const [answeredQids, setAnsweredQids] = useState<Set<string>>(new Set());
 
@@ -54,12 +60,10 @@ export default function SubjectSelect() {
           }
           const pct = total > 0 ? Math.round((attempted / total) * 100) : 0;
 
-          // Donut ring color: linear RGB interpolation
-          // 0%   → rgb(55, 65, 81)
-          // 100% → rgb(148, 163, 184)
-          const donutColor = `rgb(${Math.round(55 + 93 * (pct / 100))}, ${Math.round(
-            65 + 98 * (pct / 100)
-          )}, ${Math.round(81 + 103 * (pct / 100))})`;
+          // Donut ring color: linear RGB interpolation from RING_FROM (0%) to RING_TO (100%)
+          const donutColor = `rgb(${RING_FROM.map((c, i) =>
+            Math.round(c + (RING_TO[i] - c) * (pct / 100))
+          ).join(", ")})`;
 
           const RADIUS = 15;
           const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
@@ -77,7 +81,7 @@ export default function SubjectSelect() {
               {showDonut && (
                 <div className="absolute right-[5px] top-[5px] h-[42px] w-[42px]">
                   <svg viewBox="0 0 42 42" className="h-full w-full -rotate-90">
-                    <circle cx="21" cy="21" r={RADIUS} fill="none" stroke="#1e293b" strokeWidth="4.5" />
+                    <circle cx="21" cy="21" r={RADIUS} fill="none" className="stroke-slate-800" strokeWidth="4.5" />
                     <circle
                       cx="21"
                       cy="21"

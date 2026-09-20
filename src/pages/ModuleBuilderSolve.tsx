@@ -154,7 +154,7 @@ export default function ModuleBuilderSolve() {
         <button
           type="button"
           onClick={beginQuiz}
-          className="w-full rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950 hover:bg-white"
+          className="w-full rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-50"
         >
           Solve Module
         </button>

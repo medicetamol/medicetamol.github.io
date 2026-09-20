@@ -24,7 +24,7 @@ function DonutChart({
   const segments = [
     { value: correct, color: "#22c55e" },   // green
     { value: incorrect, color: "#ef4444" }, // red
-    { value: skipped, color: "#475569" },   // slate
+    { value: skipped, color: "rgb(var(--slate-600))" }, // slate (themed)
   ];
 
   let offset = 0;
@@ -39,12 +39,11 @@ function DonutChart({
         cy={cy}
         r={R}
         fill="none"
-        stroke={color}
         strokeWidth={16}
         strokeDasharray={`${dash} ${gap}`}
         strokeDashoffset={-offset}
         strokeLinecap="butt"
-        style={{ transform: "rotate(-90deg)", transformOrigin: `${cx}px ${cy}px` }}
+        style={{ stroke: color, transform: "rotate(-90deg)", transformOrigin: `${cx}px ${cy}px` }}
       />
     );
     offset += dash;
@@ -57,7 +56,7 @@ function DonutChart({
     <div className="relative flex shrink-0 items-center justify-center">
       <svg width={112} height={112} viewBox="0 0 112 112">
         {/* track */}
-        <circle cx={cx} cy={cy} r={R} fill="none" stroke="#1e293b" strokeWidth={16} />
+        <circle cx={cx} cy={cy} r={R} fill="none" className="stroke-slate-800" strokeWidth={16} />
         {arcs}
       </svg>
       <div className="absolute flex flex-col items-center leading-none text-center">
@@ -284,7 +283,7 @@ export default function Result() {
                   onClick={() => setFilter(key)}
                   className={`min-w-fit flex-1 rounded-lg px-3 py-2 text-xs font-semibold transition ${
                     active
-                      ? "bg-slate-800 text-white"
+                      ? "bg-slate-800 text-slate-50"
                       : "text-slate-500 hover:text-slate-300"
                   }`}
                 >

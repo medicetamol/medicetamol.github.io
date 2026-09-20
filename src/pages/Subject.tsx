@@ -121,8 +121,8 @@ export default function Subject() {
         <div
           className="mt-2 overflow-hidden rounded-full"
           style={{
-            background: `linear-gradient(to right, rgba(148,163,184,0.3) ${solvedPct}%, rgba(148,163,184,0.04) ${solvedPct}%)`,
-            border: "1px solid rgba(148,163,184,0.2)",
+            background: `linear-gradient(to right, rgb(var(--slate-400) / 0.3) ${solvedPct}%, rgb(var(--slate-400) / 0.04) ${solvedPct}%)`,
+            border: "1px solid rgb(var(--slate-400) / 0.2)",
           }}
         >
           <p className="px-3 py-1.5 text-xs text-slate-400">
@@ -147,8 +147,8 @@ export default function Subject() {
                 className="relative overflow-hidden rounded-lg px-3 py-2 text-xs font-semibold"
                 style={
                   selectedTopic === "all"
-                    ? { background: "rgba(241,245,249,1)", color: "#0f172a", border: "1px solid transparent" }
-                    : { background: "rgba(148,163,184,0.06)", color: "rgb(203,213,225)", border: "1px solid rgba(148,163,184,0.1)" }
+                    ? { background: "rgb(var(--slate-100))", color: "rgb(var(--slate-900))", border: "1px solid transparent" }
+                    : { background: "rgb(var(--slate-400) / 0.06)", color: "rgb(var(--slate-300))", border: "1px solid rgb(var(--slate-400) / 0.1)" }
                 }
               >
                 All topics
@@ -168,11 +168,11 @@ export default function Subject() {
                     className="relative overflow-hidden rounded-lg px-3 py-2 text-xs font-semibold"
                     style={
                       isActive
-                        ? { background: "rgba(241,245,249,1)", color: "#0f172a", border: "1px solid transparent" }
+                        ? { background: "rgb(var(--slate-100))", color: "rgb(var(--slate-900))", border: "1px solid transparent" }
                         : {
-                            background: `linear-gradient(to right, rgba(148,163,184,0.3) ${topicPct}%, rgba(148,163,184,0.04) ${topicPct}%)`,
-                            border: "1px solid rgba(148,163,184,0.2)",
-                            color: "rgb(203,213,225)",
+                            background: `linear-gradient(to right, rgb(var(--slate-400) / 0.3) ${topicPct}%, rgb(var(--slate-400) / 0.04) ${topicPct}%)`,
+                            border: "1px solid rgb(var(--slate-400) / 0.2)",
+                            color: "rgb(var(--slate-300))",
                           }
                     }
                   >
@@ -217,7 +217,7 @@ export default function Subject() {
                   <circle
                     cx="36" cy="36" r={radius}
                     fill="none"
-                    stroke="rgba(148,163,184,0.1)"
+                    style={{ stroke: "rgb(var(--slate-400) / 0.1)" }}
                     strokeWidth="7"
                   />
                   {/* Solved arc */}
@@ -225,7 +225,7 @@ export default function Subject() {
                     <circle
                       cx="36" cy="36" r={radius}
                       fill="none"
-                      stroke="rgba(148,163,184,0.55)"
+                      style={{ stroke: "rgb(var(--slate-400) / 0.55)" }}
                       strokeWidth="7"
                       strokeDasharray={`${solvedArc} ${circumference}`}
                       strokeLinecap="round"

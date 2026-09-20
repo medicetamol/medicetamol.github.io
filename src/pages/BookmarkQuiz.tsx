@@ -401,7 +401,7 @@ function ReviewSession({
   return (
     <main className="relative mx-auto min-h-screen w-full max-w-4xl px-1 pb-24 sm:px-2">
 
-      <div className={!submitted ? "sticky top-16 z-30 -mx-1 bg-[#080b10]/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
+      <div className={!submitted ? "sticky top-16 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
         <div
           className={`mb-2 h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
           aria-label={`Time remaining ${mm}:${ss}`}
@@ -478,7 +478,7 @@ function ReviewSession({
               <button
                 type="button"
                 onClick={askAI}
-                className="inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-xs font-semibold text-slate-200 shadow-sm transition-colors hover:bg-slate-700 hover:text-white active:bg-slate-700"
+                className="inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-xs font-semibold text-slate-200 shadow-sm transition-colors hover:bg-slate-700 hover:text-slate-50 active:bg-slate-700"
                 aria-label="Ask AI"
               >
                 <Sparkles size={15} />
@@ -539,7 +539,7 @@ function ReviewSession({
         {feedback}
       </div>
 
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-[#080b10]/95 px-1.5 py-2 backdrop-blur sm:px-2">
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-page-deep/95 px-1.5 py-2 backdrop-blur sm:px-2">
         <div className="mx-auto flex max-w-4xl items-stretch gap-2">
           <button
             type="button"

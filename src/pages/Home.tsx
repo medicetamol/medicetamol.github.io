@@ -2,6 +2,7 @@ import { ArrowRight, BarChart3, BookOpen, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Streak from "../components/Streak";
+import InstallButton from "../components/InstallButton";
 import { getDailyQuestion } from "../data/dailyQuestion";
 import type { PYQQuestion } from "../types";
 
@@ -41,10 +42,11 @@ export default function Home() {
         <div className="mt-7 flex flex-wrap gap-3">
           <Link
             to="/pyqs"
-            className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950 hover:bg-white"
+            className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-50"
           >
             Proceed to PYQs <ArrowRight size={17} />
           </Link>
+          <InstallButton />
         </div>
       </section>
 
