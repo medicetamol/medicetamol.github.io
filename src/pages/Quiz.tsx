@@ -51,6 +51,11 @@ const LAST_TEN_SECONDS = 10;
 
 // ─── Fullscreen helpers ──────────────────────────────────────────────────────
 
+// History entries kept "in reserve" under a custom-module quiz so Back can be intercepted
+// (Back then lands on one of these, fires popstate, and the page reacts instead of leaving).
+const TRAP_RESERVE = 3;
+type TrapState = { mediCetamolQuiz?: boolean; depth?: number } | null;
+
 function requestFS() {
   if (isStandalone()) return; // installed app: no forced fullscreen
   const el = document.documentElement;
@@ -233,6 +238,22 @@ export default function Quiz() {
   const fsModalOpenedAtRef = useRef(0);        // when it opened (ms)
   const backSubmitRef = useRef(false);         // Back already triggered a submit
   const finishQuizRef = useRef<() => Promise<void>>(async () => {});
+  const trapDepthRef = useRef(0);              // reserve entries currently below the quiz
+  const topUpTraps = useCallback((force = false) => {
+    // Chrome flags history entries a page adds WITHOUT a user gesture and skips them on Back
+    // (Back then leaves the app instead of reaching the page). So the reserve is only built
+    // while there is transient user activation (any tap/click); `force` is a last resort.
+    const ua = (navigator as Navigator & { userActivation?: { isActive: boolean } }).userActivation;
+    if (!force && ua && !ua.isActive) return;
+    while (trapDepthRef.current < TRAP_RESERVE) {
+      trapDepthRef.current += 1;
+      window.history.pushState(
+        { mediCetamolQuiz: true, depth: trapDepthRef.current },
+        "",
+        window.location.href
+      );
+    }
+  }, []);
   useEffect(() => {
     fsModalOpenRef.current = showFSExitModal;
     if (showFSExitModal) fsModalOpenedAtRef.current = Date.now();
@@ -282,16 +303,24 @@ export default function Quiz() {
       return () => window.removeEventListener("popstate", goHome);
     }
 
-    const state = { mediCetamolQuiz: true };
-    window.history.pushState(state, "", window.location.href);
-    const onBack = () => {
+    // Custom module: keep a reserve of history entries under the quiz (built on user taps).
+    const current = window.history.state as TrapState;
+    trapDepthRef.current = current?.mediCetamolQuiz ? (current.depth ?? 0) : 0;
+    topUpTraps();
+    const onClick = () => topUpTraps();
+
+    const onBack = (e: PopStateEvent) => {
+      // Back consumed one reserve entry — work out how many remain from where we landed.
+      const landed = e.state as TrapState;
+      trapDepthRef.current = landed?.mediCetamolQuiz ? (landed.depth ?? 0) : 0;
+
       // Back while the "Continue where you left" modal is already open: submit the module
       // instead of leaving the page, which would throw away every answer.
       if (fsModalOpenRef.current) {
         // Leaving fullscreen with Back can also deliver a popstate in the same gesture —
         // ignore anything arriving right after the modal opened.
         if (Date.now() - fsModalOpenedAtRef.current < 600) {
-          window.history.pushState(state, "", window.location.href);
+          if (trapDepthRef.current === 0) topUpTraps(true);
           return;
         }
         if (!backSubmitRef.current) {
@@ -301,7 +330,6 @@ export default function Quiz() {
         return;
       }
 
-      window.history.pushState(state, "", window.location.href);
       // No fullscreen to exit (installed app, or fullscreen unavailable): the first Back
       // opens the same modal — timer pauses, Exit submits the module, Go Back resumes.
       // (While in fullscreen, leaving fullscreen is what opens it.)
@@ -310,10 +338,18 @@ export default function Quiz() {
         else setTimerEnabled(false);
         setShowFSExitModal(true);
       }
+
+      // Nothing left in reserve: last resort so the next Back is still caught. Normally the
+      // reserve is refilled by the next tap ("Go Back" included), which is gesture-backed.
+      if (trapDepthRef.current === 0) topUpTraps(true);
     };
     window.addEventListener("popstate", onBack);
-    return () => window.removeEventListener("popstate", onBack);
-  }, [pool.length, index, isCustom, isSolveLink, isQuizMode, navigate]);
+    document.addEventListener("click", onClick, true);
+    return () => {
+      window.removeEventListener("popstate", onBack);
+      document.removeEventListener("click", onClick, true);
+    };
+  }, [pool.length, index, isCustom, isSolveLink, isQuizMode, navigate, topUpTraps]);
 
   // ── Fullscreen management (custom modules only) ──
   useEffect(() => {
