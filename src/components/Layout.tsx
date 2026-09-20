@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-page text-slate-100">
       <header className="sticky top-0 z-40 relative border-b border-slate-800/90 bg-page">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
           {/* Logo — non-functional during custom module */}
           {isCustomQuiz ? (
             <span className="flex cursor-default items-center gap-2.5 select-none">

@@ -43,6 +43,12 @@ export default function Subject() {
   const [progressLoaded, setProgressLoaded] = useState(false);
 
   useEffect(() => {
+    // Wait for the questions: computing against an empty list would report "nothing solved"
+    // before the real data arrives, and the section would then pop in and shift the page.
+    if (loading) {
+      setProgressLoaded(false);
+      return;
+    }
     let cancelled = false;
     const subjectQids = new Set(questions.map((q) => q.id));
     Promise.all([getAllAnswers(), getAllBookmarks()]).then(([allAnswers, allBookmarks]) => {
@@ -57,7 +63,7 @@ export default function Subject() {
       setProgressLoaded(true);
     });
     return () => { cancelled = true; };
-  }, [questions]);
+  }, [questions, loading]);
 
   if (!subject) return null;
 
@@ -79,6 +85,12 @@ export default function Subject() {
   // Overall subject progress — manifest total is available instantly; question-derived
   // total (once loaded) is used as the source of truth once available for consistency.
   const totalCount = questions.length > 0 ? questions.length : (manifestEntry?.total ?? 0);
+  // "N questions selected": manifest counts until the questions load, so it never flashes 0.
+  const selectedCount = questions.length > 0
+    ? filtered.length
+    : selectedTopic === "all"
+      ? totalCount
+      : (manifestEntry?.topics?.[selectedTopic] ?? 0);
   const attemptedCount = attemptedIds.size;
   const solvedPct = totalCount > 0 ? Math.round((attemptedCount / totalCount) * 100) : 0;
   const accuracyPct = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
@@ -193,7 +205,7 @@ export default function Subject() {
           {/* Start bar */}
           <div className="mt-4 flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950 px-4 py-3">
             <span className="text-sm text-slate-400">
-              {filtered.length} question{filtered.length === 1 ? "" : "s"} selected
+              {selectedCount} question{selectedCount === 1 ? "" : "s"} selected
             </span>
             <Link
               to={`/quiz/${exam}/${subjectId}?source=direct&topic=${selectedTopic}`}
@@ -203,57 +215,53 @@ export default function Subject() {
             </Link>
           </div>
 
-          {/* Progress section — always reserves its slot in the layout so the
-              rest of the page (Clear-progress link, etc.) doesn't jump down
-              once answers/bookmarks finish loading. Shows a lightweight
-              placeholder until then, or nothing at all once we know for
-              certain there's nothing solved yet. */}
-          {progressLoaded && attemptedCount === 0 ? null : (
-            <div className="mt-6 border-t border-slate-800/60 pt-5">
-              <div className="flex items-center gap-5">
-                {/* Donut */}
-                <svg width="72" height="72" viewBox="0 0 72 72" className="shrink-0 -rotate-90">
-                  {/* Track */}
+          {/* Progress section — always rendered so the page layout never shifts: the
+              skeleton is replaced in place by the real numbers once they load (zeros
+              when nothing has been solved yet). */}
+          <div className="mt-6 border-t border-slate-800/60 pt-5">
+            <div className="flex items-center gap-5">
+              {/* Donut */}
+              <svg width="72" height="72" viewBox="0 0 72 72" className="shrink-0 -rotate-90">
+                {/* Track */}
+                <circle
+                  cx="36" cy="36" r={radius}
+                  fill="none"
+                  style={{ stroke: "rgb(var(--slate-400) / 0.1)" }}
+                  strokeWidth="7"
+                />
+                {/* Solved arc */}
+                {progressLoaded && solvedArc > 0 && (
                   <circle
                     cx="36" cy="36" r={radius}
                     fill="none"
-                    style={{ stroke: "rgb(var(--slate-400) / 0.1)" }}
+                    style={{ stroke: "rgb(var(--slate-400) / 0.55)" }}
                     strokeWidth="7"
+                    strokeDasharray={`${solvedArc} ${circumference}`}
+                    strokeLinecap="round"
                   />
-                  {/* Solved arc */}
-                  {progressLoaded && (
-                    <circle
-                      cx="36" cy="36" r={radius}
-                      fill="none"
-                      style={{ stroke: "rgb(var(--slate-400) / 0.55)" }}
-                      strokeWidth="7"
-                      strokeDasharray={`${solvedArc} ${circumference}`}
-                      strokeLinecap="round"
-                    />
-                  )}
-                </svg>
+                )}
+              </svg>
 
-                {/* Text */}
-                <div className="min-w-0">
-                  {progressLoaded ? (
-                    <>
-                      <p className="text-sm font-semibold text-slate-200">
-                        {accuracyPct}% Accuracy
-                      </p>
-                      <p className="mt-0.5 text-xs text-slate-500">
-                        {attemptedCount} Solved · {totalCount - attemptedCount} Remaining · {bookmarkCount} Bookmark{bookmarkCount === 1 ? "" : "s"}
-                      </p>
-                    </>
-                  ) : (
-                    <>
-                      <p className="h-4 w-24 animate-pulse rounded bg-slate-800" />
-                      <p className="mt-2 h-3 w-48 animate-pulse rounded bg-slate-800/70" />
-                    </>
-                  )}
-                </div>
+              {/* Text */}
+              <div className="min-w-0">
+                {progressLoaded ? (
+                  <>
+                    <p className="text-sm font-semibold text-slate-200">
+                      {accuracyPct}% Accuracy
+                    </p>
+                    <p className="mt-0.5 text-xs text-slate-500">
+                      {attemptedCount} Solved · {totalCount - attemptedCount} Remaining · {bookmarkCount} Bookmark{bookmarkCount === 1 ? "" : "s"}
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="h-4 w-24 animate-pulse rounded bg-slate-800" />
+                    <p className="mt-2 h-3 w-48 animate-pulse rounded bg-slate-800/70" />
+                  </>
+                )}
               </div>
             </div>
-          )}
+          </div>
         </>
       )}
 

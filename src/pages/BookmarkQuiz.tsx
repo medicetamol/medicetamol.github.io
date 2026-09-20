@@ -307,6 +307,10 @@ function ReviewSession({
     submittedRef.current = Boolean(previousAnswer);
     setSubmitted(Boolean(previousAnswer));
     setTimedOut(Boolean(previousAnswer && previousAnswer.selected === null));
+    // Reset the timer in the same batch as the index change. If it were left at 0 (a
+    // timed-out question), the new question would render with secondsLeft = 0 and the
+    // auto-submit effect would instantly skip it — and every question after it.
+    setSecondsLeft(SECONDS_PER_QUESTION);
   }, []);
 
   const next = useCallback(() => {
@@ -401,7 +405,7 @@ function ReviewSession({
   return (
     <main className="relative mx-auto min-h-screen w-full max-w-4xl px-1 pb-24 sm:px-2">
 
-      <div className={!submitted ? "sticky top-16 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
+      <div className={!submitted ? "sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
         <div
           className={`mb-2 h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
           aria-label={`Time remaining ${mm}:${ss}`}

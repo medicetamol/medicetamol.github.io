@@ -31,6 +31,7 @@ import MarkdownContent from "../components/MarkdownContent";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 import { SUBJECTS } from "../constants";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
+import { isStandalone } from "../lib/pwa";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -51,6 +52,7 @@ const LAST_TEN_SECONDS = 10;
 // ─── Fullscreen helpers ──────────────────────────────────────────────────────
 
 function requestFS() {
+  if (isStandalone()) return; // installed app: no forced fullscreen
   const el = document.documentElement;
   if (el.requestFullscreen) el.requestFullscreen().catch(() => {});
 }
@@ -279,7 +281,7 @@ export default function Quiz() {
 
   // ── Fullscreen management (custom modules only) ──
   useEffect(() => {
-    if (!isCustom) return;
+    if (!isCustom || isStandalone()) return; // installed app never enters fullscreen
     const onFSChange = () => {
       if (!isFullscreen()) {
         // User exited fullscreen
@@ -571,6 +573,10 @@ export default function Quiz() {
       submittedRef.current = Boolean(previousAnswer);
       setSubmitted(Boolean(previousAnswer));
       setTimedOut(Boolean(previousAnswer && previousAnswer.selected === null));
+      // Reset the timer in the same batch as the index change. If it were left at 0 (a
+      // timed-out question), the new question would render with secondsLeft = 0 and the
+      // auto-submit effect would instantly skip it — and every question after it.
+      setSecondsLeft(SECONDS_PER_QUESTION);
     }
   }, [isQuizMode]);
 
@@ -724,7 +730,7 @@ export default function Quiz() {
 
       {/* ── Global timer bar (quiz mode) ── */}
       {isQuizMode && (
-        <div className="sticky top-16 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur">
+        <div className="sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur">
           <div
             className={`mb-2 h-1 overflow-hidden rounded-full ${globalDanger ? "bg-red-950/70" : "bg-slate-900"}`}
           >
@@ -773,7 +779,7 @@ export default function Quiz() {
 
       {/* ── Per-question timer bar (guide/direct) ── */}
       {!isQuizMode && (
-        <div className={!submitted ? "sticky top-16 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
+        <div className={!submitted ? "sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
           <div
             className={`mb-2 h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
             aria-label={`Time remaining ${mm}:${ss}`}

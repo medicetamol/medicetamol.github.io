@@ -16,7 +16,8 @@ type InstallState = {
   isIOS: boolean;
 };
 
-function detectStandalone(): boolean {
+/** True when running as an installed app (own window), false in a normal browser tab. */
+export function isStandalone(): boolean {
   return (
     window.matchMedia("(display-mode: standalone)").matches ||
     (navigator as Navigator & { standalone?: boolean }).standalone === true
@@ -35,7 +36,7 @@ function detectIOS(): boolean {
 let deferred: BeforeInstallPromptEvent | null = null;
 let state: InstallState = {
   canPrompt: false,
-  installed: detectStandalone(),
+  installed: isStandalone(),
   isIOS: detectIOS()
 };
 

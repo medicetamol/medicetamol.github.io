@@ -194,7 +194,7 @@ export default function ModuleBuilderCraft() {
 
   // ── User choices (all available immediately, independent of fetch) ──
   const [statuses, setStatuses] = useState<StatusFilter[]>(["all"]);
-  const [mode, setMode] = useState<"quiz" | "guide" | null>(null);
+  const [mode, setMode] = useState<"quiz" | "guide" | null>("quiz"); // Exam Mode preselected
   const [modeError, setModeError] = useState(false);
   const [questionCount, setQuestionCount] = useState(20);
   const [creating, setCreating] = useState(false);

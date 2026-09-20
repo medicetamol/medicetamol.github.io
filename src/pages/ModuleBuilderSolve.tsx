@@ -4,6 +4,7 @@ import React, { useMemo, useState } from 'react';
 import { getSiteUrl, shareOrCopy } from "../lib/sharing";
 import { encodeModuleParams, subjectNamesFromIds } from "../lib/moduleShareCode";
 import { clearModuleBuilderState } from "../lib/moduleBuilderState";
+import { isStandalone } from "../lib/pwa";
 import type { Exam } from "../types";
 import ModuleFooterBar from "../components/ModuleFooterBar";
 
@@ -78,7 +79,8 @@ export default function ModuleBuilderSolve() {
     params.set("ids", ids.join(","));
 
     const el = document.documentElement;
-    if (el.requestFullscreen) {
+    // Installed app already runs in its own window — don't force fullscreen there.
+    if (!isStandalone() && el.requestFullscreen) {
       el.requestFullscreen().catch(() => {});
     }
     navigate(`/quiz/${examId}/custom?${params.toString()}`);

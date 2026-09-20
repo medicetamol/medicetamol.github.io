@@ -1,10 +1,14 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EXAMS } from "../constants";
 
 export default function ExamSelect() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+      <Link to="/" className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200">
+        <ArrowLeft size={16} /> Home
+      </Link>
+
       <div className="mb-7">
         <h1 className="text-2xl font-bold">PYQs</h1>
         <p className="mt-1 text-sm text-slate-500">Choose the examination.</p>
