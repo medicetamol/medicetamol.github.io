@@ -228,6 +228,16 @@ export default function Quiz() {
   const [showFinalConfirm, setShowFinalConfirm] = useState(false); // unanswered questions warning
   const [showFSExitModal, setShowFSExitModal] = useState(false);
 
+  // Back-button handling reads these from inside a long-lived popstate listener.
+  const fsModalOpenRef = useRef(false);        // is the "Continue where you left" modal open?
+  const fsModalOpenedAtRef = useRef(0);        // when it opened (ms)
+  const backSubmitRef = useRef(false);         // Back already triggered a submit
+  const finishQuizRef = useRef<() => Promise<void>>(async () => {});
+  useEffect(() => {
+    fsModalOpenRef.current = showFSExitModal;
+    if (showFSExitModal) fsModalOpenedAtRef.current = Date.now();
+  }, [showFSExitModal]);
+
   // Detailed explanation
   const [detailedExplanation, setDetailedExplanation] = useState<string | null>(null);
   const [loadingDetails, setLoadingDetails] = useState(false);
@@ -274,10 +284,36 @@ export default function Quiz() {
 
     const state = { mediCetamolQuiz: true };
     window.history.pushState(state, "", window.location.href);
-    const blockBack = () => window.history.pushState(state, "", window.location.href);
-    window.addEventListener("popstate", blockBack);
-    return () => window.removeEventListener("popstate", blockBack);
-  }, [pool.length, index, isCustom, isSolveLink, navigate]);
+    const onBack = () => {
+      // Back while the "Continue where you left" modal is already open: submit the module
+      // instead of leaving the page, which would throw away every answer.
+      if (fsModalOpenRef.current) {
+        // Leaving fullscreen with Back can also deliver a popstate in the same gesture —
+        // ignore anything arriving right after the modal opened.
+        if (Date.now() - fsModalOpenedAtRef.current < 600) {
+          window.history.pushState(state, "", window.location.href);
+          return;
+        }
+        if (!backSubmitRef.current) {
+          backSubmitRef.current = true;
+          void finishQuizRef.current();
+        }
+        return;
+      }
+
+      window.history.pushState(state, "", window.location.href);
+      // No fullscreen to exit (installed app, or fullscreen unavailable): the first Back
+      // opens the same modal — timer pauses, Exit submits the module, Go Back resumes.
+      // (While in fullscreen, leaving fullscreen is what opens it.)
+      if (isStandalone() || !isFullscreen()) {
+        if (isQuizMode) setGlobalTimerRunning(false);
+        else setTimerEnabled(false);
+        setShowFSExitModal(true);
+      }
+    };
+    window.addEventListener("popstate", onBack);
+    return () => window.removeEventListener("popstate", onBack);
+  }, [pool.length, index, isCustom, isSolveLink, isQuizMode, navigate]);
 
   // ── Fullscreen management (custom modules only) ──
   useEffect(() => {
@@ -498,6 +534,7 @@ export default function Quiz() {
       },
     });
   }, [pool, examId, isCustom, startedAt, navigate]);
+  finishQuizRef.current = finishQuiz;
 
   // In quiz mode, save/update the current question's selection into answersRef.
   // Must overwrite any existing entry (not just add when missing) so that
