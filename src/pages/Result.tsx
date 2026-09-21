@@ -81,9 +81,9 @@ function ReviewCard({
 
   useEffect(() => {
     let cancelled = false;
-    loadExplanations(examId as Parameters<typeof loadExplanations>[0], question.subjectId).then((result) => {
-      if (!cancelled) setExplanations(result);
-    });
+    loadExplanations(examId as Parameters<typeof loadExplanations>[0], question.subjectId)
+      .then((result) => { if (!cancelled) setExplanations(result); })
+      .catch(() => { if (!cancelled) setExplanations([]); });
     return () => { cancelled = true; };
   }, [examId, question.subjectId]);
 
@@ -192,8 +192,8 @@ export default function Result() {
   const [filter, setFilter] = useState<SummaryFilter>("all");
 
   const total = state?.total ?? 0;
-  const answers = state?.answers ?? [];
-  const questions = state?.questions ?? [];
+  const answers = Array.isArray(state?.answers) ? state!.answers : [];
+  const questions = Array.isArray(state?.questions) ? state!.questions : [];
 
   const correct = answers.filter((a) => a.correct).length;
   const incorrect = answers.filter((a) => !a.correct && a.selected !== null).length;

@@ -1,5 +1,5 @@
 import { ArrowLeft, Check, Copy, Share2 } from "lucide-react";
-import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import React, { useMemo, useState } from 'react';
 import { getSiteUrl, shareOrCopy } from "../lib/sharing";
 import { encodeModuleParams, subjectNamesFromIds } from "../lib/moduleShareCode";
@@ -25,8 +25,7 @@ export default function ModuleBuilderSolve() {
   const [generating, setGenerating] = useState(false);
 
   if (ids.length === 0) {
-    navigate(`/module/${examId}`, { replace: true });
-    return null;
+    return <Navigate to={`/module/${examId}`} replace />;
   }
 
   const subjectNames = subjectNamesFromIds(ids);

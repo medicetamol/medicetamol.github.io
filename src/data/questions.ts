@@ -49,7 +49,9 @@ function parseQuestions(
   subjectId: string
 ): PYQQuestion[] {
   try {
-    const questions: CompactQuestion[] = JSON.parse(raw);
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    const questions = parsed as CompactQuestion[];
     const subject = SUBJECTS.find((s) => s.id === subjectId);
 
     return questions.map((q) => {
@@ -75,7 +77,17 @@ function parseQuestions(
 
 function parseExplanations(raw: string): PYQExplanation[] {
   try {
-    return JSON.parse(raw);
+    const parsed: unknown = JSON.parse(raw);
+    // Placeholder files ("{}"), empty files or any other non-array shape are treated as
+    // "no explanations yet". Callers rely on this being a real array (they .find() on it).
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(
+      (item): item is PYQExplanation =>
+        item !== null &&
+        typeof item === "object" &&
+        typeof (item as PYQExplanation).id === "string" &&
+        typeof (item as PYQExplanation).e === "string"
+    );
   } catch {
     return [];
   }

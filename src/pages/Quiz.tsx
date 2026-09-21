@@ -238,6 +238,7 @@ export default function Quiz() {
   const fsModalOpenedAtRef = useRef(0);        // when it opened (ms)
   const backSubmitRef = useRef(false);         // Back already triggered a submit
   const finishQuizRef = useRef<() => Promise<void>>(async () => {});
+  const finishingRef = useRef(false);        // quiz is being submitted — ignore fullscreen/back events
   const trapDepthRef = useRef(0);              // reserve entries currently below the quiz
   const topUpTraps = useCallback((force = false) => {
     // Chrome flags history entries a page adds WITHOUT a user gesture and skips them on Back
@@ -310,6 +311,7 @@ export default function Quiz() {
     const onClick = () => topUpTraps();
 
     const onBack = (e: PopStateEvent) => {
+      if (finishingRef.current) return; // submitting — let navigation proceed untouched
       // Back consumed one reserve entry — work out how many remain from where we landed.
       const landed = e.state as TrapState;
       trapDepthRef.current = landed?.mediCetamolQuiz ? (landed.depth ?? 0) : 0;
@@ -355,6 +357,7 @@ export default function Quiz() {
   useEffect(() => {
     if (!isCustom || isStandalone()) return; // installed app never enters fullscreen
     const onFSChange = () => {
+      if (finishingRef.current) return; // we exited fullscreen ourselves on submit
       if (!isFullscreen()) {
         // User exited fullscreen
         if (isQuizMode) setGlobalTimerRunning(false);
@@ -372,7 +375,7 @@ export default function Quiz() {
   useEffect(() => {
     if (!question) return;
 
-    isBookmarked(question.id).then(setBookmarked);
+    isBookmarked(question.id).then(setBookmarked).catch(() => setBookmarked(false));
 
     if (isQuizMode) {
       // In quiz mode we track selections in answersRef only, no "submitted" state per question
@@ -463,18 +466,29 @@ export default function Quiz() {
 
     const timer = window.setInterval(() => {
       if (!globalTimerRunningRef.current) return;
-      setGlobalSecondsLeft((value) => {
-        if (value <= 1) {
-          window.clearInterval(timer);
-          void finishQuiz();
-          return 0;
-        }
-        return value - 1;
-      });
+      setGlobalSecondsLeft((value) => (value <= 1 ? 0 : value - 1));
     }, 1000);
 
     return () => window.clearInterval(timer);
   }, [isQuizMode, poolReady]);
+
+  // Time up → submit. Kept out of the state updater above: calling finishQuiz (which sets
+  // state and navigates) from inside an updater is a side effect during render.
+  //
+  // globalSecondsLeft starts at 0 (the pool is empty when the state is first created) and is
+  // only filled in by the resync effect once the pool has loaded. Without the "armed" guard,
+  // that initial 0 would be mistaken for "time is up" and the exam would submit itself the
+  // moment it opened. So a 0 only counts as a timeout after we have seen a real value > 0.
+  const timeUpArmedRef = useRef(false);
+  useEffect(() => {
+    if (!isQuizMode || !poolReady || pool.length === 0) return;
+    if (globalSecondsLeft > 0) {
+      timeUpArmedRef.current = true;
+      return;
+    }
+    if (!timeUpArmedRef.current) return; // stale initial 0, not a real timeout
+    void finishQuizRef.current();
+  }, [isQuizMode, poolReady, pool.length, globalSecondsLeft]);
 
   // ─── Derived ────────────────────────────────────────────────────────────────
 
@@ -486,9 +500,9 @@ export default function Quiz() {
       return;
     }
     let cancelled = false;
-    loadExplanations(examId, question.subjectId).then((result) => {
-      if (!cancelled) setExplanations(result);
-    });
+    loadExplanations(examId, question.subjectId)
+      .then((result) => { if (!cancelled) setExplanations(result); })
+      .catch(() => { if (!cancelled) setExplanations([]); });
     return () => { cancelled = true; };
   }, [examId, question?.subjectId]);
 
@@ -528,19 +542,29 @@ export default function Quiz() {
 
     if (timeout) setSecondsLeft(0);
 
-    if (!isCustom && !isSolveLink) {
-      await recordDirectAnswer(question.id, correct, choice);
-    }
-    // Daily streak counts an actual attempt in any mode — Direct QBank,
-    // custom module, or a shared /solve/:id link — but never a skip/timeout.
-    if (choice !== null) {
-      await recordDailyActivity(correct);
+    // Persistence is best-effort: a storage failure must never break the quiz UI.
+    try {
+      if (!isCustom && !isSolveLink) {
+        await recordDirectAnswer(question.id, correct, choice);
+      }
+      // Daily streak counts an actual attempt in any mode — Direct QBank,
+      // custom module, or a shared /solve/:id link — but never a skip/timeout.
+      if (choice !== null) {
+        await recordDailyActivity(correct);
+      }
+    } catch (err) {
+      console.error("Could not record answer", err);
     }
   }
 
   const finishQuiz = useCallback(async () => {
+    if (finishingRef.current) return; // double-fire guard (timer + button + back)
+    finishingRef.current = true;
+
     setShowFinalConfirm(false);
     setShowFSExitModal(false);
+    setGlobalTimerRunning(false);
+    setTimerEnabled(false);
 
     // For quiz mode: build final answers for all questions (unanswered = skipped)
     const finalAnswers: QuizAnswer[] = pool.map((q) => {
@@ -549,18 +573,24 @@ export default function Quiz() {
       return { qid: q.id, selected: null, correct: false };
     });
 
-    exitFS();
+    // Saving must never block the user from seeing their result.
+    try {
+      await saveQuizResult({
+        exam: examId,
+        questionIds: pool.map((q) => q.id),
+        answers: finalAnswers,
+        customModule: isCustom,
+        startedAt,
+        finishedAt: new Date().toISOString(),
+      });
+    } catch (err) {
+      console.error("saveQuizResult failed", err);
+    }
 
-    await saveQuizResult({
-      exam: examId,
-      questionIds: pool.map((q) => q.id),
-      answers: finalAnswers,
-      customModule: isCustom,
-      startedAt,
-      finishedAt: new Date().toISOString(),
-    });
-
+    // Navigate FIRST, leave fullscreen afterwards. Exiting fullscreen while the quiz
+    // page is still mounted resizes the viewport and can leave a black frame on Android.
     navigate(`/result/${examId}`, {
+      replace: true,
       state: {
         total: pool.length,
         answers: finalAnswers,
@@ -569,6 +599,7 @@ export default function Quiz() {
         examFinished: true,
       },
     });
+    window.setTimeout(exitFS, 150);
   }, [pool, examId, isCustom, startedAt, navigate]);
   finishQuizRef.current = finishQuiz;
 
@@ -763,7 +794,7 @@ export default function Quiz() {
   const globalDanger = globalSecondsLeft <= 60;
 
   // Quiz mode: is question section blurred?
-  const isBlurred = isCustom && (!isFullscreen() && showFSExitModal) ||
+  const isBlurred = (isCustom && showFSExitModal) ||
     (isQuizMode && !globalTimerRunning && !showFSExitModal);
 
   const actionClass =

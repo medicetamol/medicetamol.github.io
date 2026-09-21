@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 import Layout from "./components/Layout";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
 import ExamSelect from "./pages/ExamSelect";
 import SubjectSelect from "./pages/SubjectSelect";
@@ -31,9 +32,12 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
   return (
     <Layout>
       <ScrollToTop />
+      {/* key={pathname}: after a crash, navigating anywhere resets the boundary. */}
+      <ErrorBoundary key={pathname}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -66,6 +70,7 @@ export default function App() {
         <Route path="/bookmarks/:subjectId" element={<BookmarkQuiz />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
+      </ErrorBoundary>
     </Layout>
   );
 }
