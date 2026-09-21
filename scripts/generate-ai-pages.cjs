@@ -1,27 +1,6 @@
-// scripts/generate-ai-pages.cjs
-//
-// Pre-renders a static HTML file for every question at dist/ai/<id>/index.html.
-//
-// Why this exists:
-// /ai/:questionId is currently a client-side React Route (AIPrompt.tsx). GitHub
-// Pages has no matching file for that path, so it serves 404.html with an
-// actual HTTP 404 status. Browsers don't care and just run the JS, so the
-// page "looks fine" to a human. But AI tools/fetchers that read raw HTTP
-// generally treat a 404 status as "page not found" and stop, and even if
-// they didn't, the raw markup is just an empty <div id="root"> with no
-// content until JS runs.
-//
-// This script mirrors AIPrompt.tsx's rendering logic at build time so the
-// exact same content ships as a plain, unindexed static file returning a
-// real 200.
-//
-// Run AFTER `vite build` (needs dist/ to exist) and BEFORE create-404.cjs
-// (order between those two doesn't matter, just needs dist/ present).
-
 const fs = require("fs");
 const path = require("path");
 
-// Kept byte-for-byte identical to MASTER_PROMPT in src/pages/AIPrompt.tsx.
 // If you edit the prompt there, mirror the change here too.
 const MASTER_PROMPT = `You are a medical student in an entrance exam (NEET PG & INICET).
 
@@ -43,8 +22,6 @@ const ROOT = process.cwd();
 const PYQS_DIR = path.join(ROOT, "PYQs");
 const OUT_DIR = path.join(ROOT, "dist", "ai");
 
-// Same field mapping as parseQuestions() in src/data/questions.ts:
-// CompactQuestion { id, y, t, q, o, a, image? } -> PYQQuestion
 function expandQuestion(compact, exam, subjectId) {
   return {
     id: compact.id,
@@ -60,13 +37,11 @@ function expandQuestion(compact, exam, subjectId) {
   };
 }
 
-// Same priority as getImageSrc() in src/pages/AIPrompt.tsx: imageSrc -> imageUrl -> image
 function getImageSrc(question) {
   const src = question.imageSrc ?? question.imageUrl ?? question.image;
   return typeof src === "string" && src.trim() ? src.trim() : undefined;
 }
 
-// Same content assembly as AIPrompt.tsx's `content` array.
 function buildContent(question) {
   const imageSrc = getImageSrc(question);
 
