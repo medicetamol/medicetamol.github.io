@@ -1,12 +1,13 @@
-import type { Bookmark, DailyActivity, LifetimeStats, QuestionAnswer, QuizResult } from "../types";
+import type { Bookmark, CustomModuleHistoryEntry, DailyActivity, LifetimeStats, QuestionAnswer, QuizResult } from "../types";
 
 const DB_NAME = "medicetamol-db";
-const DB_VERSION = 4;
+const DB_VERSION = 5;
 const BOOKMARKS = "bookmarks";
 const ANSWERS = "answers";
 const ACTIVITY = "dailyActivity";
 const LIFETIME = "lifetimeStats";
 const QUIZZES = "quizResults";
+const MODULE_HISTORY = "customModuleHistory";
 // v2 store name, only used during migration
 const LEGACY_PROGRESS = "questionProgress";
 
@@ -33,6 +34,10 @@ function openDB(): Promise<IDBDatabase> {
       }
       if (!db.objectStoreNames.contains(QUIZZES)) {
         const store = db.createObjectStore(QUIZZES, { keyPath: "finishedAt" });
+        store.createIndex("startedAt", "startedAt");
+      }
+      if (!db.objectStoreNames.contains(MODULE_HISTORY)) {
+        const store = db.createObjectStore(MODULE_HISTORY, { keyPath: "id" });
         store.createIndex("startedAt", "startedAt");
       }
 
@@ -304,6 +309,64 @@ export async function clearSubjectProgress(qids: string[]): Promise<void> {
         if (pending === 0) { resolve(); return; }
         for (const qid of qids) {
           const req = store.delete(qid);
+          req.onsuccess = () => { pending--; if (pending === 0) resolve(); };
+          req.onerror = () => reject(req.error);
+        }
+        transaction.onerror = () => reject(transaction.error);
+      })
+  );
+}
+
+// ─── Custom module history (last 10, capped) ────────────────────────────────
+// Separate from quizResults (uncapped, covers every mode). Only the single
+// most-recent entry is ever resumable, and only within RESUME_WINDOW_MS.
+
+export const CUSTOM_MODULE_HISTORY_CAP = 10;
+export const RESUME_WINDOW_MS = 2 * 60 * 60 * 1000; // 2 hours
+
+export async function saveCustomModuleHistory(entry: CustomModuleHistoryEntry): Promise<void> {
+  await tx<void>(MODULE_HISTORY, "readwrite", (store, resolve) => {
+    store.put(entry);
+    resolve();
+  });
+  await pruneCustomModuleHistory();
+}
+
+export async function getCustomModuleHistory(): Promise<CustomModuleHistoryEntry[]> {
+  const rows = await tx<CustomModuleHistoryEntry[]>(MODULE_HISTORY, "readonly", (store, resolve, reject) => {
+    const req = store.getAll();
+    req.onsuccess = () => resolve(req.result as CustomModuleHistoryEntry[]);
+    req.onerror = () => reject(req.error);
+  });
+  // Newest first
+  return rows.sort((a, b) => (a.startedAt < b.startedAt ? 1 : -1));
+}
+
+export async function getCustomModuleHistoryEntry(id: string): Promise<CustomModuleHistoryEntry | null> {
+  return tx<CustomModuleHistoryEntry | null>(MODULE_HISTORY, "readonly", (store, resolve, reject) => {
+    const req = store.get(id);
+    req.onsuccess = () => resolve((req.result as CustomModuleHistoryEntry | undefined) ?? null);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+/**
+ * Keep only the CUSTOM_MODULE_HISTORY_CAP most recent entries; delete the rest.
+ * Called after every save so the store never grows unbounded (keeps IndexedDB
+ * reads/writes fast and the Solved Modules page light).
+ */
+async function pruneCustomModuleHistory(): Promise<void> {
+  const all = await getCustomModuleHistory(); // newest first
+  const toDelete = all.slice(CUSTOM_MODULE_HISTORY_CAP);
+  if (toDelete.length === 0) return;
+  await openDB().then(
+    (db) =>
+      new Promise<void>((resolve, reject) => {
+        const transaction = db.transaction(MODULE_HISTORY, "readwrite");
+        const store = transaction.objectStore(MODULE_HISTORY);
+        let pending = toDelete.length;
+        for (const entry of toDelete) {
+          const req = store.delete(entry.id);
           req.onsuccess = () => { pending--; if (pending === 0) resolve(); };
           req.onerror = () => reject(req.error);
         }

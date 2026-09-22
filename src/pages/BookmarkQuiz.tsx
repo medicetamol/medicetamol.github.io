@@ -4,11 +4,13 @@ import {
   ChevronLeft,
   ChevronRight,
   CornerRightUp,
+  LayoutGrid,
   Loader2,
   Pause,
   Play,
   Sparkles,
 } from "lucide-react";
+import QuestionNavigator, { type NavStatus } from "../components/QuestionNavigator";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getSubject, SUBJECTS, EXAM_PREFIX } from "../constants";
@@ -192,6 +194,9 @@ function ReviewSession({
   );
   const [feedback, setFeedback] = useState("");
 
+  const [navigatorOpen, setNavigatorOpen] = useState(false);
+  const [visited, setVisited] = useState<Set<number>>(() => new Set([0]));
+
   const [timerEnabled, setTimerEnabled] = useState(true);
   const [secondsLeft, setSecondsLeft] = useState(SECONDS_PER_QUESTION);
 
@@ -215,6 +220,10 @@ function ReviewSession({
 
   const question = questions[index];
   const bookmarked = question ? bookmarkedSet.has(question.id) : false;
+
+  useEffect(() => {
+    setVisited((prev) => (prev.has(index) ? prev : new Set(prev).add(index)));
+  }, [index]);
 
   useEffect(() => {
     if (!question) return;
@@ -327,6 +336,17 @@ function ReviewSession({
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [index, questions, applyQuestionState]);
 
+  const goTo = useCallback((target: number) => {
+    if (target < 0 || target >= questions.length || target === index) {
+      setNavigatorOpen(false);
+      return;
+    }
+    applyQuestionState(questions[target]);
+    setIndex(target);
+    setNavigatorOpen(false);
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [questions, index, applyQuestionState]);
+
   const handleSubmit = () => {
     if (submittedRef.current || !timerEnabled) return;
     submitCurrent(selectedRef.current);
@@ -386,6 +406,14 @@ function ReviewSession({
 
   const actionClass =
     "rounded-xl border border-slate-700 bg-slate-800 px-4 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-750";
+
+  const navStatuses: NavStatus[] = questions.map((q, i) => {
+    const ans = answersRef.current.find((a) => a.qid === q.id);
+    const isAnswered = Boolean(ans && ans.selected !== null);
+    if (isAnswered) return "answered";
+    if (visited.has(i)) return "not-answered";
+    return "not-visited";
+  });
 
   if (!question) {
     return (
@@ -454,6 +482,14 @@ function ReviewSession({
               aria-label={bookmarked ? "Remove bookmark" : "Bookmark"}
             >
               <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
+            </button>
+            <button
+              type="button"
+              onClick={() => setNavigatorOpen(true)}
+              className="rounded-lg p-2 text-slate-500 transition-colors hover:text-slate-200"
+              aria-label="Question navigator"
+            >
+              <LayoutGrid size={21} strokeWidth={1.8} />
             </button>
           </div>
         </div>
@@ -542,6 +578,16 @@ function ReviewSession({
       >
         {feedback}
       </div>
+
+      <QuestionNavigator
+        open={navigatorOpen}
+        onClose={() => setNavigatorOpen(false)}
+        total={questions.length}
+        currentIndex={index}
+        statuses={navStatuses}
+        onJump={goTo}
+        showReviewLegend={false}
+      />
 
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-page-deep/95 px-1.5 py-2 backdrop-blur sm:px-2">
         <div className="mx-auto flex max-w-4xl items-stretch gap-2">

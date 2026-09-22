@@ -11,6 +11,7 @@ import ModuleBuilderTopics from "./pages/ModuleBuilderTopics";
 import ModuleBuilderCraft from "./pages/ModuleBuilderCraft";
 import ModuleBuilderSolve from "./pages/ModuleBuilderSolve";
 import SharedModule from "./pages/SharedModule";
+import SolvedModules from "./pages/SolvedModules";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 import Progress from "./pages/Progress";
@@ -55,6 +56,8 @@ export default function App() {
         <Route path="/module/:exam/solve" element={<ModuleBuilderSolve />} />
         {/* Shared module landing (decodes short link, then hands off to Step 3) */}
         <Route path="/custom/module" element={<SharedModule />} />
+        {/* Custom module attempt history (last 10, capped) */}
+        <Route path="/modules/history" element={<SolvedModules />} />
 
         {/* Direct subject PYQ drill */}
         <Route path="/quiz/:exam/:subjectId" element={<Quiz />} />

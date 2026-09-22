@@ -5,6 +5,8 @@ import { getSiteUrl, shareOrCopy } from "../lib/sharing";
 import { encodeModuleParams, subjectNamesFromIds } from "../lib/moduleShareCode";
 import { clearModuleBuilderState } from "../lib/moduleBuilderState";
 import { isStandalone } from "../lib/pwa";
+import { saveCustomModuleHistory } from "../lib/db";
+import { clearModuleDraft } from "../lib/moduleDraft";
 import type { Exam } from "../types";
 import ModuleFooterBar from "../components/ModuleFooterBar";
 
@@ -72,10 +74,30 @@ export default function ModuleBuilderSolve() {
   const beginQuiz = () => {
     clearModuleBuilderState(examId);
 
+    const startedAt = new Date().toISOString();
     const params = new URLSearchParams();
     params.set("source", "custom");
     params.set("mode", mode);
     params.set("ids", ids.join(","));
+    params.set("moduleId", startedAt); // ties this session to its history row
+
+    // Fresh history row immediately, before the quiz even mounts — so it
+    // shows up in Solved Modules (as "Resume available") even if the user
+    // never answers a single question before closing the tab.
+    void saveCustomModuleHistory({
+      id: startedAt,
+      exam: examId,
+      mode,
+      startedAt,
+      finishedAt: null,
+      subjectLabel: subjectSummary || "Custom module",
+      questionIds: ids,
+      answers: ids.map(() => null),
+      correctCount: 0,
+      incorrectCount: 0,
+      skippedCount: ids.length,
+    });
+    clearModuleDraft(); // any stale draft from a previous (now-expired) module
 
     const el = document.documentElement;
     // Installed app already runs in its own window — don't force fullscreen there.

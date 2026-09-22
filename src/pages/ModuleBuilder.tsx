@@ -1,4 +1,4 @@
-import { ArrowLeft, Check, ChevronRight } from "lucide-react";
+import { ArrowLeft, Check, ChevronRight, History } from "lucide-react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { EXAMS, SUBJECTS } from "../constants";
@@ -67,9 +67,17 @@ export default function ModuleBuilder() {
         <ArrowLeft size={16} /> {EXAMS.find((e) => e.id === examId)?.name}
       </Link>
 
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold">Create Module</h1>
-        <p className="mt-1 text-sm text-slate-500">Choose subjects, then optionally pick topics.</p>
+      <div className="mb-6 flex items-start justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-bold">Create Module</h1>
+          <p className="mt-1 text-sm text-slate-500">Choose subjects, then optionally pick topics.</p>
+        </div>
+        <Link
+          to="/modules/history"
+          className="mt-1 inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-slate-800 px-3 py-2 text-xs font-semibold text-slate-400 hover:border-slate-600 hover:text-slate-200"
+        >
+          <History size={14} /> History
+        </Link>
       </div>
 
       <div className="overflow-hidden rounded-2xl border border-slate-800">

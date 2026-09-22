@@ -4,10 +4,13 @@ import {
   ChevronRight,
   ClipboardCheck,
   CornerRightUp,
+  Flag,
+  LayoutGrid,
   Pause,
   Play,
   Sparkles,
 } from "lucide-react";
+import QuestionNavigator, { type NavStatus } from "../components/QuestionNavigator";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import {
   findQuestion,
@@ -23,8 +26,12 @@ import {
   recordDailyActivity,
   recordDirectAnswer,
   saveQuizResult,
+  saveCustomModuleHistory,
+  getCustomModuleHistoryEntry,
   toggleBookmark,
+  RESUME_WINDOW_MS,
 } from "../lib/db";
+import { readModuleDraft, writeModuleDraft, clearModuleDraft } from "../lib/moduleDraft";
 import { useEffect, useRef, useState, useCallback } from "react";
 import QuestionCard from "../components/QuestionCard";
 import MarkdownContent from "../components/MarkdownContent";
@@ -130,6 +137,7 @@ export default function Quiz() {
 
   const ids = (search.get("ids") ?? "").split(",").filter(Boolean);
   const topic = search.get("topic") ?? "all";
+  const moduleId = search.get("moduleId") ?? "";
 
   // ── Build question pool ──
   const [pool, setPool] = useState<PYQQuestion[]>([]);
@@ -202,6 +210,35 @@ export default function Quiz() {
       const firstUnanswered = pool.findIndex((q) => !answeredSet.has(q.id));
       setIndex(firstUnanswered >= 0 ? firstUnanswered : 0);
       setStartIndexReady(true);
+
+      // Seed the legend/navigator with every persisted answer for this pool —
+      // not just the current question. Without this, answers from a prior
+      // session only surface once the user actually revisits that question
+      // (see the per-question resume below), leaving the navigator showing
+      // "not visited" for genuinely-answered questions until then.
+      const byQid = new Map(allAnswers.map((a) => [a.qid, a]));
+      const seeded: QuizAnswer[] = [];
+      const seededVisited = new Set<number>();
+      pool.forEach((q, i) => {
+        const a = byQid.get(q.id);
+        if (!a) return;
+        const wasCorrect = a.incorrect === undefined;
+        seeded.push({
+          qid: q.id,
+          selected: wasCorrect ? q.answer : a.incorrect ?? null,
+          correct: wasCorrect,
+        });
+        seededVisited.add(i);
+      });
+      if (seeded.length > 0) {
+        answersRef.current = seeded;
+        setAnswers(seeded);
+        setVisited((prev) => {
+          const next = new Set(prev);
+          for (const i of seededVisited) next.add(i);
+          return next;
+        });
+      }
     });
   }, [pool.length, isSolveLink, isCustom]);
 
@@ -212,6 +249,82 @@ export default function Quiz() {
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
   const [bookmarked, setBookmarked] = useState(false);
   const [feedback, setFeedback] = useState("");
+
+  // Marked-for-review (session-only, not persisted to DB yet — storage/expiry TBD)
+  const [reviewMarked, setReviewMarked] = useState<Set<string>>(new Set());
+
+  // Question navigator (legend grid bottom sheet)
+  const [navigatorOpen, setNavigatorOpen] = useState(false);
+
+  // Not-visited tracking: every question index reached so far. Needed
+  // because "not-answered" and "not-visited" both mean selected === null
+  // in answersRef — only visiting is what distinguishes them.
+  const [visited, setVisited] = useState<Set<number>>(() => new Set([0]));
+
+  // ── Resume: rehydrate a custom module's draft answers from localStorage ──
+  // (the IndexedDB row for this moduleId was already created in
+  // ModuleBuilderSolve.beginQuiz; here we just restore the in-progress
+  // answers if this session is a reload/return within the resume window)
+  const [resumeChecked, setResumeChecked] = useState(!isCustom || !moduleId);
+  const moduleExpiredRef = useRef(false);
+
+  useEffect(() => {
+    if (!isCustom || !moduleId || pool.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      const entry = await getCustomModuleHistoryEntry(moduleId);
+      if (cancelled) return;
+      if (!entry) { setResumeChecked(true); return; }
+
+      const draft = readModuleDraft(moduleId);
+      const restoredAnswers = draft?.answers ?? entry.answers;
+      const rebuilt: QuizAnswer[] = pool
+        .map((q, i): QuizAnswer | null => {
+          const sel = restoredAnswers[i];
+          if (sel === null || sel === undefined) return null;
+          return { qid: q.id, selected: sel, correct: sel === q.answer };
+        })
+        .filter((a): a is QuizAnswer => a !== null);
+
+      const withinWindow = Date.now() - new Date(entry.startedAt).getTime() < RESUME_WINDOW_MS;
+      if (!withinWindow) {
+        // Expired: still load whatever was answered so the imminent
+        // auto-submit (below) has real data instead of an empty pool.
+        answersRef.current = rebuilt;
+        moduleExpiredRef.current = true;
+        setResumeChecked(true);
+        return;
+      }
+
+      if (rebuilt.length > 0) {
+        answersRef.current = rebuilt;
+        setAnswers(rebuilt);
+        const answeredIndices = restoredAnswers
+          .map((a, i) => (a !== null && a !== undefined ? i : -1))
+          .filter((i) => i >= 0);
+        if (answeredIndices.length > 0) {
+          setVisited((prev) => {
+            const next = new Set(prev);
+            for (const i of answeredIndices) next.add(i);
+            return next;
+          });
+        }
+      }
+      setResumeChecked(true);
+    })();
+    return () => { cancelled = true; };
+  }, [isCustom, moduleId, pool.length]);
+
+  // Persist the draft on every navigation (next/previous/goTo), not on every
+  // tap — see moduleDraft.ts. Only for custom modules with a moduleId.
+  const persistDraft = useCallback(() => {
+    if (!isCustom || !moduleId || pool.length === 0) return;
+    const answersBySlot = pool.map((q) => {
+      const a = answersRef.current.find((x) => x.qid === q.id);
+      return a?.selected ?? null;
+    });
+    writeModuleDraft({ id: moduleId, answers: answersBySlot });
+  }, [isCustom, moduleId, pool]);
 
   // Per-question timer (guide/direct)
   const [timerEnabled, setTimerEnabled] = useState(true);
@@ -239,6 +352,15 @@ export default function Quiz() {
   const backSubmitRef = useRef(false);         // Back already triggered a submit
   const finishQuizRef = useRef<() => Promise<void>>(async () => {});
   const finishingRef = useRef(false);        // quiz is being submitted — ignore fullscreen/back events
+
+  // Expired module (past the 2hr resume window): auto-submit with whatever
+  // was answered, same as a timeout — never let the live quiz UI accept
+  // further input on a module that's aged out. Placed after finishQuizRef's
+  // declaration since it reads finishQuizRef.current.
+  useEffect(() => {
+    if (!resumeChecked || !moduleExpiredRef.current) return;
+    void finishQuizRef.current();
+  }, [resumeChecked]);
   const trapDepthRef = useRef(0);              // reserve entries currently below the quiz
   const topUpTraps = useCallback((force = false) => {
     // Chrome flags history entries a page adds WITHOUT a user gesture and skips them on Back
@@ -371,6 +493,10 @@ export default function Quiz() {
 
   // ── Load question state when index changes ──
   const question = pool[index];
+
+  useEffect(() => {
+    setVisited((prev) => (prev.has(index) ? prev : new Set(prev).add(index)));
+  }, [index]);
 
   useEffect(() => {
     if (!question) return;
@@ -555,6 +681,7 @@ export default function Quiz() {
     } catch (err) {
       console.error("Could not record answer", err);
     }
+    persistDraft(); // checkpoint: this question is now locked in, don't lose it on close
   }
 
   const finishQuiz = useCallback(async () => {
@@ -587,6 +714,33 @@ export default function Quiz() {
       console.error("saveQuizResult failed", err);
     }
 
+    // Fold the finished module into its history row (created up-front in
+    // ModuleBuilderSolve) — final answers + counts, no longer resumable.
+    if (isCustom && moduleId) {
+      try {
+        const existing = await getCustomModuleHistoryEntry(moduleId);
+        const correctCount = finalAnswers.filter((a) => a.correct).length;
+        const incorrectCount = finalAnswers.filter((a) => a.selected !== null && !a.correct).length;
+        const skippedCount = finalAnswers.filter((a) => a.selected === null).length;
+        await saveCustomModuleHistory({
+          id: moduleId,
+          exam: examId,
+          mode: existing?.mode ?? (isQuizMode ? "quiz" : "guide"),
+          startedAt: existing?.startedAt ?? moduleId, // preserve original start time — moduleId itself was set from it, as a fallback
+          finishedAt: new Date().toISOString(),
+          subjectLabel: existing?.subjectLabel ?? "Custom module",
+          questionIds: pool.map((q) => q.id),
+          answers: finalAnswers.map((a) => a.selected),
+          correctCount,
+          incorrectCount,
+          skippedCount,
+        });
+      } catch (err) {
+        console.error("saveCustomModuleHistory failed", err);
+      }
+      clearModuleDraft(moduleId);
+    }
+
     // Navigate FIRST, leave fullscreen afterwards. Exiting fullscreen while the quiz
     // page is still mounted resizes the viewport and can leave a black frame on Android.
     navigate(`/result/${examId}`, {
@@ -600,7 +754,7 @@ export default function Quiz() {
       },
     });
     window.setTimeout(exitFS, 150);
-  }, [pool, examId, isCustom, startedAt, navigate]);
+  }, [pool, examId, isCustom, startedAt, navigate, moduleId]);
   finishQuizRef.current = finishQuiz;
 
   // In quiz mode, save/update the current question's selection into answersRef.
@@ -692,6 +846,7 @@ export default function Quiz() {
         applyQuestionState(pool[index + 1]);
         setIndex((i) => i + 1);
         window.scrollTo({ top: 0, behavior: "auto" });
+        persistDraft();
       }
       return;
     }
@@ -699,7 +854,8 @@ export default function Quiz() {
     applyQuestionState(pool[index + 1]);
     setIndex((i) => i + 1);
     window.scrollTo({ top: 0, behavior: "auto" });
-  }, [isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState]);
+    persistDraft();
+  }, [isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
 
   const previous = useCallback(() => {
     if (isQuizMode) {
@@ -708,12 +864,43 @@ export default function Quiz() {
       applyQuestionState(pool[index - 1]);
       setIndex((i) => i - 1);
       window.scrollTo({ top: 0, behavior: "auto" });
+      persistDraft();
       return;
     }
     if (!submittedRef.current || index <= 0) return;
     applyQuestionState(pool[index - 1]);
     setIndex((i) => i - 1);
-  }, [isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState]);
+    persistDraft();
+  }, [isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
+
+  // Jump directly to a question via the legend navigator.
+  const goTo = useCallback((target: number) => {
+    if (target < 0 || target >= pool.length || target === index) {
+      setNavigatorOpen(false);
+      return;
+    }
+    if (isQuizMode) {
+      flushCurrentQuizSelection();
+    } else if (!submittedRef.current) {
+      // Guide/direct: current question isn't submitted yet — nothing to flush,
+      // just allow the jump (answer stays unrecorded, same as skipping via Next).
+    }
+    applyQuestionState(pool[target]);
+    setIndex(target);
+    setNavigatorOpen(false);
+    window.scrollTo({ top: 0, behavior: "auto" });
+    persistDraft();
+  }, [pool, index, isQuizMode, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
+
+  const toggleReview = useCallback(() => {
+    if (!question) return;
+    setReviewMarked((prev) => {
+      const next = new Set(prev);
+      if (next.has(question.id)) next.delete(question.id);
+      else next.add(question.id);
+      return next;
+    });
+  }, [question]);
 
   const handleSubmit = () => {
     if (submittedRef.current || !timerEnabled) return;
@@ -807,6 +994,18 @@ export default function Quiz() {
     (q) => !answersRef.current.find((a) => a.qid === q.id && a.selected !== null)
   ).length;
 
+  // ─── Navigator grid statuses ───────────────────────────────────────────────
+  const navStatuses: NavStatus[] = pool.map((q, i) => {
+    const ans = answers.find((a) => a.qid === q.id);
+    const isAnswered = Boolean(ans && ans.selected !== null);
+    const isReview = reviewMarked.has(q.id);
+    if (isAnswered && isReview) return "answered-review";
+    if (isReview) return "review";
+    if (isAnswered) return "answered";
+    if (visited.has(i)) return "not-answered";
+    return "not-visited";
+  });
+
   if (!startIndexReady || !poolReady || !pool.length) {
     if (!startIndexReady || !poolReady) {
       return (
@@ -876,6 +1075,14 @@ export default function Quiz() {
               >
                 <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
               </button>
+              <button
+                type="button"
+                onClick={() => setNavigatorOpen(true)}
+                className="rounded-lg p-2 text-slate-500 transition-colors hover:text-slate-200"
+                aria-label="Question navigator"
+              >
+                <LayoutGrid size={21} strokeWidth={1.8} />
+              </button>
             </div>
           </div>
         </div>
@@ -895,9 +1102,21 @@ export default function Quiz() {
           </div>
 
           <div className="mb-2 flex items-center justify-between gap-2 px-1">
-            <span className="text-xs font-medium text-slate-500">
-              {index + 1}/{pool.length}
-            </span>
+            {!isCustom && !isSolveLink ? (
+              <button
+                type="button"
+                onClick={() => navigate(-1)}
+                className="inline-flex items-center gap-1 text-xs font-medium text-slate-500 hover:text-slate-300"
+                aria-label="Back"
+              >
+                <ChevronLeft size={14} />
+                {index + 1}/{pool.length}
+              </button>
+            ) : (
+              <span className="text-xs font-medium text-slate-500">
+                {index + 1}/{pool.length}
+              </span>
+            )}
             <div className="flex items-center gap-2">
               <div
                 className={`inline-flex items-center overflow-hidden rounded-lg border ${
@@ -927,6 +1146,16 @@ export default function Quiz() {
               >
                 <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
               </button>
+              {!isSolveLink && (
+                <button
+                  type="button"
+                  onClick={() => setNavigatorOpen(true)}
+                  className="rounded-lg p-2 text-slate-500 transition-colors hover:text-slate-200"
+                  aria-label="Question navigator"
+                >
+                  <LayoutGrid size={21} strokeWidth={1.8} />
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -1099,9 +1328,43 @@ export default function Quiz() {
         </Modal>
       )}
 
+      {/* ── Question navigator (legend grid bottom sheet) ── */}
+      <QuestionNavigator
+        open={navigatorOpen}
+        onClose={() => setNavigatorOpen(false)}
+        total={pool.length}
+        currentIndex={index}
+        statuses={navStatuses}
+        onJump={goTo}
+        onFinalSubmit={isSolveLink ? undefined : () => { setNavigatorOpen(false); requestFinalSubmit(); }}
+        finalSubmitLabel={isCustom ? "SUMMARY" : "FINAL SUBMIT"}
+      />
+
       {/* ── Fixed bottom navigation ── */}
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-page-deep/95 px-1.5 py-2 backdrop-blur sm:px-2">
         <div className="mx-auto flex max-w-4xl items-stretch gap-2">
+
+          {/* Mark-for-review square: far left, every layout variant except solve-links */}
+          {!isSolveLink && (
+            <button
+              type="button"
+              onClick={toggleReview}
+              className={`w-12 shrink-0 rounded-xl border px-2 ${
+                question && reviewMarked.has(question.id)
+                  ? "border-violet-600 bg-violet-900/40 text-violet-300"
+                  : "border-slate-700 bg-slate-800 text-slate-400"
+              }`}
+              aria-label={question && reviewMarked.has(question.id) ? "Unmark for review" : "Mark for review"}
+              aria-pressed={Boolean(question && reviewMarked.has(question.id))}
+            >
+              <Flag
+                className="mx-auto"
+                size={20}
+                strokeWidth={1.8}
+                fill={question && reviewMarked.has(question.id) ? "currentColor" : "none"}
+              />
+            </button>
+          )}
 
           {isQuizMode ? (
             // Quiz mode: always PREVIOUS | NEXT (or FINAL SUBMIT at last)
@@ -1134,11 +1397,11 @@ export default function Quiz() {
                 <button
                   type="button"
                   onClick={requestFinalSubmit}
-                  className={`flex-1 ${actionClass}`}
+                  className={`flex-1 ${actionClass} px-2 sm:px-4`}
                 >
-                  <span className="flex items-center justify-center gap-2">
-                    <ClipboardCheck size={20} strokeWidth={2.1} />
-                    FINAL SUBMIT
+                  <span className="flex items-center justify-center gap-1.5 whitespace-nowrap">
+                    <ClipboardCheck size={20} strokeWidth={2.1} className="shrink-0" />
+                    {isCustom ? "SUMMARY" : "FINAL SUBMIT"}
                   </span>
                 </button>
               )}
@@ -1149,7 +1412,7 @@ export default function Quiz() {
               type="button"
               onClick={handleSubmit}
               disabled={!timerEnabled}
-              className={`w-full ${actionClass} disabled:cursor-not-allowed disabled:opacity-100`}
+              className={`${isSolveLink ? "w-full" : "flex-1"} ${actionClass} disabled:cursor-not-allowed disabled:opacity-100`}
             >
               SUBMIT
             </button>
@@ -1220,11 +1483,11 @@ export default function Quiz() {
               <button
                 type="button"
                 onClick={requestFinalSubmit}
-                className={`flex-1 ${actionClass}`}
+                className={`flex-1 ${actionClass} px-2 sm:px-4`}
               >
-                <span className="flex items-center justify-center gap-2">
-                  <ClipboardCheck size={22} strokeWidth={2.1} />
-                  FINAL SUBMIT
+                <span className="flex items-center justify-center gap-1.5 whitespace-nowrap">
+                  <ClipboardCheck size={20} strokeWidth={2.1} className="shrink-0" />
+                  {isCustom ? "SUMMARY" : "FINAL SUBMIT"}
                 </span>
               </button>
             </>
