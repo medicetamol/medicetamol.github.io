@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Streak from "../components/Streak";
 import InstallButton from "../components/InstallButton";
+import VisitorCount from "../components/VisitorCount";
 import { getDailyQuestion } from "../data/dailyQuestion";
 import type { PYQQuestion } from "../types";
 
@@ -91,6 +92,9 @@ export default function Home() {
         >
           About mediCetamol
         </Link>
+        <div className="mt-4 flex justify-center">
+          <VisitorCount />
+        </div>
       </footer>
     </main>
   );

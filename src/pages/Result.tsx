@@ -1,7 +1,9 @@
 import { useState, useMemo, useEffect } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import type { PYQQuestion, QuizAnswer } from "../types";
-import { loadExplanations } from "../data/questions";
+import { getAllBookmarks } from "../lib/db";
+import { SUBJECTS } from "../constants";
 
 // ─── Donut chart ───
 function DonutChart({
@@ -67,133 +69,51 @@ function DonutChart({
   );
 }
 
-// ─── Read-only question review card ─────────────────────
-function ReviewCard({
-  question,
-  answer,
-  examId,
+function StatBox({
+  label,
+  value,
+  color,
 }: {
-  question: PYQQuestion;
-  answer: QuizAnswer | undefined;
-  examId: string;
+  label: string;
+  value: number;
+  color: string;
 }) {
-  const [explanations, setExplanations] = useState<Awaited<ReturnType<typeof loadExplanations>>>([]);
-
-  useEffect(() => {
-    let cancelled = false;
-    loadExplanations(examId as Parameters<typeof loadExplanations>[0], question.subjectId)
-      .then((result) => { if (!cancelled) setExplanations(result); })
-      .catch(() => { if (!cancelled) setExplanations([]); });
-    return () => { cancelled = true; };
-  }, [examId, question.subjectId]);
-
-  const explanation = explanations.find((x) => x.id === question.id);
-
-  const selectedIdx = answer?.selected ?? null;
-  const skipped = answer === undefined || selectedIdx === null;
-
   return (
-    <div className="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-4 sm:px-5">
-      {/* question text */}
-      <p className="text-sm font-semibold leading-6 text-slate-100">{question.question}</p>
-
-      {/* options */}
-      <div className="mt-3 space-y-2">
-        {question.options.map((opt, idx) => {
-          const isCorrect = idx === question.answer;
-          const isSelected = idx === selectedIdx;
-          const isWrong = isSelected && !isCorrect;
-
-          let cls =
-            "flex w-full items-start gap-3 rounded-xl border p-3 text-left text-sm ";
-          if (isCorrect && !skipped)
-            cls += "border-emerald-500/70 bg-emerald-500/10 text-emerald-100";
-          else if (isCorrect && skipped)
-            cls += "border-sky-700/50 bg-sky-950/30 text-sky-200";
-          else if (isWrong)
-            cls += "border-red-500/70 bg-red-500/10 text-red-100";
-          else
-            cls += "border-slate-800 bg-slate-950/50 text-slate-400";
-
-          return (
-            <div key={idx} className={cls}>
-              <span
-                className={`grid h-7 w-7 shrink-0 place-items-center rounded-lg text-xs font-bold ${
-                  isCorrect && !skipped
-                    ? "bg-emerald-500/20 text-emerald-300"
-                    : isWrong
-                    ? "bg-red-500/20 text-red-300"
-                    : "bg-slate-800 text-slate-400"
-                }`}
-              >
-                {String.fromCharCode(65 + idx)}
-              </span>
-              <span className="min-w-0 flex-1 pt-1">{opt}</span>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* status badge */}
-      <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500">
-        <span>{question.id}</span>
-        <span>•</span>
-        <span>{question.year}</span>
-        {question.topicName && (
-          <>
-            <span>•</span>
-            <span>{question.topicName}</span>
-          </>
-        )}
-        <span>•</span>
-        <span
-          className={
-            skipped
-              ? "text-slate-400"
-              : answer?.correct
-              ? "text-emerald-400"
-              : "text-red-400"
-          }
-        >
-          {skipped ? "Skipped" : answer?.correct ? "Correct" : "Incorrect"}
-        </span>
-      </div>
-
-      {/* explanation */}
-      <div className="mt-3 border-t border-slate-800 pt-3">
-        <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Explanation
-        </p>
-        {explanation ? (
-          <p className="text-sm leading-6 text-slate-300">{explanation.e}</p>
-        ) : (
-          <p className="text-sm leading-6 text-slate-500">Explanation not available yet.</p>
-        )}
-      </div>
+    <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
+      <p className="text-xs text-slate-500">{label}</p>
+      <p className={`mt-1 text-lg font-bold ${color}`}>{value}</p>
     </div>
   );
 }
 
 // ─── Main Summary page ───────────────────────────────
-type SummaryFilter = "all" | "correct" | "incorrect" | "skipped";
 
 interface ResultState {
   total: number;
   answers: QuizAnswer[];
   questions: PYQQuestion[];
   custom: boolean;
+  reviewedQids?: string[];
+  guessedQids?: string[];
 }
 
 export default function Result() {
   const { exam } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const state = location.state as ResultState | null;
 
-  const [filter, setFilter] = useState<SummaryFilter>("all");
+  const [bookmarkedQids, setBookmarkedQids] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    getAllBookmarks().then((rows) => setBookmarkedQids(new Set(rows.map((b) => b.qid))));
+  }, []);
 
   const total = state?.total ?? 0;
   const answers = Array.isArray(state?.answers) ? state!.answers : [];
   const questions = Array.isArray(state?.questions) ? state!.questions : [];
+  const reviewedQids = state?.reviewedQids ?? [];
+  const guessedQids = state?.guessedQids ?? [];
 
   const correct = answers.filter((a) => a.correct).length;
   const incorrect = answers.filter((a) => !a.correct && a.selected !== null).length;
@@ -208,49 +128,76 @@ export default function Result() {
     [answers]
   );
 
-  const filteredQuestions = useMemo(() => {
-    return questions.filter((q) => {
-      const a = answerMap.get(q.id);
-      if (filter === "all") return true;
-      if (filter === "correct") return a?.correct === true;
-      if (filter === "incorrect") return a !== undefined && !a.correct && a.selected !== null;
-      if (filter === "skipped") return a === undefined || a.selected === null;
-      return true;
-    });
-  }, [questions, answerMap, filter]);
+  // ── Analysis grouping: subject-wise (multi-subject) or topic-wise (single) ──
+  const subjectIds = useMemo(
+    () => new Set(questions.map((q) => q.subjectId)),
+    [questions]
+  );
+  const isMultiSubject = subjectIds.size > 1;
 
-  const tabs: Array<{ key: SummaryFilter; label: string; count: number }> = [
-    { key: "all", label: "All", count: total },
-    { key: "correct", label: "Correct", count: correct },
-    { key: "incorrect", label: "Incorrect", count: incorrect },
-    { key: "skipped", label: "Skipped", count: skipped },
-  ];
+  type AnalysisGroup = { key: string; label: string; total: number; correct: number; questions: PYQQuestion[] };
+
+  const analysisGroups = useMemo<AnalysisGroup[]>(() => {
+    const groups = new Map<string, AnalysisGroup>();
+    for (const q of questions) {
+      const key = isMultiSubject ? q.subjectId : (q.topicId || "misc");
+      const label = isMultiSubject
+        ? SUBJECTS.find((s) => s.id === q.subjectId)?.name ?? q.subjectId
+        : (q.topicName || "Miscellaneous");
+      if (!groups.has(key)) {
+        groups.set(key, { key, label, total: 0, correct: 0, questions: [] });
+      }
+      const g = groups.get(key)!;
+      g.total += 1;
+      g.questions.push(q);
+      const a = answerMap.get(q.id);
+      if (a?.correct) g.correct += 1;
+    }
+    return Array.from(groups.values()).sort((a, b) => b.total - a.total);
+  }, [questions, isMultiSubject, answerMap]);
+
+  // ── Opening the Quiz in attempted/read-only state ──
+  // Filtering (Correct/Incorrect/Skipped/Reviewed/Guessing/Bookmark) and the
+  // Hide-Option toggle both live INSIDE that read-only view now (its own
+  // hybrid legend+filter sheet) — Result always hands off the full subset
+  // and lets the reader narrow it down from there.
+  const openAttempted = (subset: PYQQuestion[]) => {
+    if (subset.length === 0) return;
+    const ids = subset.map((q) => q.id);
+    const selections = subset.map((q) => answerMap.get(q.id)?.selected ?? null);
+    const subsetReviewed = subset.filter((q) => reviewedQids.includes(q.id)).map((q) => q.id);
+    const subsetGuessed = subset.filter((q) => guessedQids.includes(q.id)).map((q) => q.id);
+    navigate(`/quiz/${exam}/custom?source=custom&readonly=1&ids=${ids.join(",")}`, {
+      state: {
+        answers: selections,
+        reviewedQids: subsetReviewed,
+        guessedQids: subsetGuessed,
+        bookmarkedQids: subset.filter((q) => bookmarkedQids.has(q.id)).map((q) => q.id),
+      },
+    });
+  };
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-10 sm:py-14">
-      {/* ── Top card ── */}
+      {/* ── Top card (unchanged) ── */}
       <div className="relative rounded-3xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
         <p className="text-xs uppercase tracking-wider text-slate-500">Summary</p>
 
-        {/* Donut — absolute top-right inside the card */}
         <div className="absolute right-6 top-6 sm:right-8 sm:top-8">
           <DonutChart correct={correct} incorrect={incorrect} skipped={skipped} />
         </div>
 
-        {/* Headline — sits left, donut floats top-right via absolute */}
         <div className="mt-3 pr-36">
           <h1 className="text-3xl font-bold">{correct}/{total}</h1>
           <p className="mt-1 text-sm text-slate-500">{accuracy}% accuracy</p>
         </div>
 
-        {/* C / I / S boxes — full width, below headline, not affected by donut */}
         <div className="mt-7 grid grid-cols-3 gap-2">
           <StatBox label="Correct" value={correct} color="text-emerald-400" />
           <StatBox label="Incorrect" value={incorrect} color="text-red-400" />
           <StatBox label="Skipped" value={skipped} color="text-slate-400" />
         </div>
 
-        {/* Actions */}
         <div className="mt-7 flex gap-2">
           <Link
             to={`/pyqs/${exam}`}
@@ -267,73 +214,53 @@ export default function Result() {
         </div>
       </div>
 
-      {/* ── View Summary section ── */}
       {questions.length > 0 && (
-        <section className="mt-6">
-          <h2 className="mb-3 text-base font-bold text-slate-100">View Summary</h2>
+        <>
+          {/* ── See Explanations card ── */}
+          <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+            <h2 className="text-base font-bold text-slate-100">All questions</h2>
+            <p className="mt-1 text-sm text-slate-500">
+              {questions.length} question{questions.length === 1 ? "" : "s"}
+            </p>
+            <button
+              type="button"
+              onClick={() => openAttempted(questions)}
+              className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3 text-sm font-bold text-slate-950"
+            >
+              See Explanations
+              <ChevronRight size={16} />
+            </button>
+          </section>
 
-          {/* Filter tabs */}
-          <div className="flex overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-1">
-            {tabs.map(({ key, label, count }) => {
-              const active = filter === key;
-              return (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => setFilter(key)}
-                  className={`min-w-fit flex-1 rounded-lg px-3 py-2 text-xs font-semibold transition ${
-                    active
-                      ? "bg-slate-800 text-slate-50"
-                      : "text-slate-500 hover:text-slate-300"
-                  }`}
-                >
-                  {label}
-                  <span
-                    className={`ml-1 ${active ? "text-slate-300" : "text-slate-600"}`}
+          {/* ── Analysis section ── */}
+          <section className="mt-6">
+            <h2 className="mb-3 text-base font-bold text-slate-100">
+              {isMultiSubject ? "Subject-wise analysis" : "Topic-wise analysis"}
+            </h2>
+            <div className="space-y-2">
+              {analysisGroups.map((g) => {
+                const pct = g.total > 0 ? Math.round((g.correct / g.total) * 100) : 0;
+                return (
+                  <button
+                    key={g.key}
+                    type="button"
+                    onClick={() => openAttempted(g.questions)}
+                    className="flex w-full items-center justify-between gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3.5 text-left hover:border-slate-700"
                   >
-                    {count}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Question review cards */}
-          <div className="mt-3 space-y-4">
-            {filteredQuestions.length === 0 ? (
-              <p className="py-6 text-center text-sm text-slate-500">
-                No questions in this category.
-              </p>
-            ) : (
-              filteredQuestions.map((q) => (
-                <ReviewCard
-                  key={q.id}
-                  question={q}
-                  answer={answerMap.get(q.id)}
-                  examId={exam ?? "NEET-PG"}
-                />
-              ))
-            )}
-          </div>
-        </section>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-semibold text-slate-100">{g.label}</p>
+                      <p className="mt-0.5 text-xs text-slate-500">
+                        {g.correct}/{g.total} correct &middot; {pct}%
+                      </p>
+                    </div>
+                    <ChevronRight size={18} className="shrink-0 text-slate-600" />
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        </>
       )}
     </main>
-  );
-}
-
-function StatBox({
-  label,
-  value,
-  color,
-}: {
-  label: string;
-  value: number;
-  color: string;
-}) {
-  return (
-    <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
-      <p className="text-xs text-slate-500">{label}</p>
-      <p className={`mt-1 text-lg font-bold ${color}`}>{value}</p>
-    </div>
   );
 }

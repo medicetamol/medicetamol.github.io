@@ -1,5 +1,5 @@
 import { Check, Share, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import React, { lazy, useEffect, useState } from 'react';
 import type { PYQQuestion } from "../types";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
 
@@ -13,6 +13,10 @@ interface Props {
   onBookmark: () => void;
   hasDetailedExplanation?: boolean;
   onShareFeedback?: (message: string) => void;
+  // When true, suppress ALL option coloring (correct/incorrect/selected) —
+  // a "blind re-attempt" view. The explanation section is unaffected; it's
+  // driven by `submitted` alone, not by this prop.
+  hideMarking?: boolean;
 }
 
 export default function QuestionCard({
@@ -23,6 +27,7 @@ export default function QuestionCard({
   onSelect,
   hasDetailedExplanation = false,
   onShareFeedback,
+  hideMarking = false,
 }: Props) {
   const [imgModal, setImgModal] = useState(false);
 
@@ -84,9 +89,9 @@ export default function QuestionCard({
       
       <div className="mt-4 space-y-2 pb-3">
         {question.options.map((option, index) => {
-          const isCorrect = submitted && index === question.answer;
-          const isWrong = submitted && selected === index && index !== question.answer;
-          const isSelected = selected === index;
+          const isCorrect = !hideMarking && submitted && index === question.answer;
+          const isWrong = !hideMarking && submitted && selected === index && index !== question.answer;
+          const isSelected = !hideMarking && selected === index;
 
           const correctClass =
             timedOut && selected === null

@@ -5,13 +5,17 @@ import {
   ClipboardCheck,
   CornerRightUp,
   Flag,
+  HelpCircle,
   LayoutGrid,
   Pause,
   Play,
   Sparkles,
 } from "lucide-react";
 import QuestionNavigator, { type NavStatus } from "../components/QuestionNavigator";
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import ReadOnlyNavigator, { type ReadOnlyQuestionMeta, type ReadOnlyStatus } from "../components/ReadOnlyNavigator";
+import type { StatusFilter } from "../types";
+import { useHeaderAction } from "../components/Layout";
+import { Link, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import {
   findQuestion,
   loadQuestions,
@@ -32,7 +36,7 @@ import {
   RESUME_WINDOW_MS,
 } from "../lib/db";
 import { readModuleDraft, writeModuleDraft, clearModuleDraft } from "../lib/moduleDraft";
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import QuestionCard from "../components/QuestionCard";
 import MarkdownContent from "../components/MarkdownContent";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
@@ -127,12 +131,28 @@ export default function Quiz() {
   const examId = ((exam as Exam | undefined) ?? targetQuestion?.exam ?? "NEET-PG") as Exam;
   const isSolveLink = Boolean(questionId);
 
+  // Read-only attempted-state view: opened from Result ("See Explanations" /
+  // an Analysis card). Every question is pre-answered from stored data, no
+  // live input, no timer, no submit — just browse with PREV/NEXT or swipe.
+  const isReadOnly = search.get("readonly") === "1";
+  const location = useLocation();
+  const readOnlyState = location.state as {
+    answers?: (number | null)[];
+    reviewedQids?: string[];
+    guessedQids?: string[];
+    bookmarkedQids?: string[];
+  } | null;
+  const readOnlyAnswers = readOnlyState?.answers ?? [];
+  const readOnlyReviewedQids = useMemo(() => new Set(readOnlyState?.reviewedQids ?? []), [readOnlyState]);
+  const readOnlyGuessedQids = useMemo(() => new Set(readOnlyState?.guessedQids ?? []), [readOnlyState]);
+  const readOnlyBookmarkedQids = useMemo(() => new Set(readOnlyState?.bookmarkedQids ?? []), [readOnlyState]);
+
   // source: custom vs direct
   const source = search.get("source") === "custom" ? "custom" : "direct";
   // mode: quiz vs guide (only relevant for custom modules)
   const moduleMode = (search.get("mode") ?? "guide") as "quiz" | "guide";
   const isCustom = source === "custom";
-  const isQuizMode = isCustom && moduleMode === "quiz";
+  const isQuizMode = isCustom && moduleMode === "quiz" && !isReadOnly;
   const isGuideMode = !isQuizMode; // direct PYQ + guide custom both behave the same inside
 
   const ids = (search.get("ids") ?? "").split(",").filter(Boolean);
@@ -194,6 +214,19 @@ export default function Quiz() {
       if (cancelled) return;
       setPool(result);
       setPoolReady(true);
+
+      // Read-only view: seed every question's answer up front from the data
+      // Result handed off, so the whole pool renders pre-answered/locked
+      // immediately — no per-question fetch, no live timer, no re-submit.
+      if (isReadOnly && readOnlyAnswers.length === result.length) {
+        const seeded: QuizAnswer[] = result.map((q, i) => {
+          const sel = readOnlyAnswers[i];
+          return { qid: q.id, selected: sel, correct: sel !== null && sel === q.answer };
+        });
+        answersRef.current = seeded;
+        setAnswers(seeded);
+        setVisited(new Set(seeded.map((_, i) => i)));
+      }
     })();
 
     return () => { cancelled = true; };
@@ -250,11 +283,36 @@ export default function Quiz() {
   const [bookmarked, setBookmarked] = useState(false);
   const [feedback, setFeedback] = useState("");
 
-  // Marked-for-review (session-only, not persisted to DB yet — storage/expiry TBD)
+  // Marked-for-review (persisted into CustomModuleHistoryEntry on finish)
   const [reviewMarked, setReviewMarked] = useState<Set<string>>(new Set());
+
+  // Guessing-answer self-tag (same persistence path as reviewMarked)
+  const [guessMarked, setGuessMarked] = useState<Set<string>>(new Set());
 
   // Question navigator (legend grid bottom sheet)
   const [navigatorOpen, setNavigatorOpen] = useState(false);
+
+  // Read-only view's hybrid filter+legend sheet state
+  const [readOnlyFilter, setReadOnlyFilter] = useState<StatusFilter>("all");
+  const [hideOption, setHideOption] = useState(false);
+
+  // Legend icon lives in the top navbar (universal placement across every
+  // quiz-related page), not in this page's own header row. Registered here
+  // so it's available as soon as the button might be tapped, unregistered
+  // automatically on unmount/navigation away.
+  useHeaderAction(
+    !isSolveLink ? (
+      <button
+        type="button"
+        onClick={() => setNavigatorOpen(true)}
+        className="rounded-lg p-2 text-slate-300 hover:bg-slate-900"
+        aria-label="Question navigator"
+      >
+        <LayoutGrid size={20} strokeWidth={1.8} />
+      </button>
+    ) : null,
+    [isSolveLink]
+  );
 
   // Not-visited tracking: every question index reached so far. Needed
   // because "not-answered" and "not-visited" both mean selected === null
@@ -269,7 +327,7 @@ export default function Quiz() {
   const moduleExpiredRef = useRef(false);
 
   useEffect(() => {
-    if (!isCustom || !moduleId || pool.length === 0) return;
+    if (isReadOnly || !isCustom || !moduleId || pool.length === 0) return;
     let cancelled = false;
     (async () => {
       const entry = await getCustomModuleHistoryEntry(moduleId);
@@ -318,13 +376,13 @@ export default function Quiz() {
   // Persist the draft on every navigation (next/previous/goTo), not on every
   // tap — see moduleDraft.ts. Only for custom modules with a moduleId.
   const persistDraft = useCallback(() => {
-    if (!isCustom || !moduleId || pool.length === 0) return;
+    if (isReadOnly || !isCustom || !moduleId || pool.length === 0) return;
     const answersBySlot = pool.map((q) => {
       const a = answersRef.current.find((x) => x.qid === q.id);
       return a?.selected ?? null;
     });
     writeModuleDraft({ id: moduleId, answers: answersBySlot });
-  }, [isCustom, moduleId, pool]);
+  }, [isReadOnly, isCustom, moduleId, pool]);
 
   // Per-question timer (guide/direct)
   const [timerEnabled, setTimerEnabled] = useState(true);
@@ -415,8 +473,11 @@ export default function Quiz() {
   // of re-trapping the URL, send them to the homepage.
   useEffect(() => {
     if (!pool.length) return;
-    // Direct PYQ: allow native back navigation
+    // Direct PYQ, and the read-only attempted-state view: allow native back
+    // navigation — nothing to protect (readOnly has no live progress, no
+    // timer, no submit to guard against an accidental exit).
     if (!isCustom && !isSolveLink) return;
+    if (isReadOnly) return;
 
     if (isSolveLink) {
       const state = { mediCetamolQuiz: true };
@@ -473,11 +534,11 @@ export default function Quiz() {
       window.removeEventListener("popstate", onBack);
       document.removeEventListener("click", onClick, true);
     };
-  }, [pool.length, index, isCustom, isSolveLink, isQuizMode, navigate, topUpTraps]);
+  }, [pool.length, index, isCustom, isSolveLink, isQuizMode, isReadOnly, navigate, topUpTraps]);
 
-  // ── Fullscreen management (custom modules only) ──
+  // ── Fullscreen management (custom modules only, never in read-only view) ──
   useEffect(() => {
-    if (!isCustom || isStandalone()) return; // installed app never enters fullscreen
+    if (!isCustom || isStandalone() || isReadOnly) return; // installed app never enters fullscreen
     const onFSChange = () => {
       if (finishingRef.current) return; // we exited fullscreen ourselves on submit
       if (!isFullscreen()) {
@@ -489,7 +550,7 @@ export default function Quiz() {
     };
     document.addEventListener("fullscreenchange", onFSChange);
     return () => document.removeEventListener("fullscreenchange", onFSChange);
-  }, [isCustom, isQuizMode]);
+  }, [isCustom, isQuizMode, isReadOnly]);
 
   // ── Load question state when index changes ──
   const question = pool[index];
@@ -516,6 +577,20 @@ export default function Quiz() {
 
     // Guide / direct: restore prior answer if any
     const previousAnswer = answersRef.current.find((a) => a.qid === question.id);
+
+    if (isReadOnly) {
+      // Already fully seeded when the pool loaded — just reflect it, no
+      // IndexedDB fetch, no timer, always "submitted" (locked/explanatory view).
+      const sel = previousAnswer?.selected ?? null;
+      selectedRef.current = sel;
+      submittedRef.current = true;
+      setSelected(sel);
+      setSubmitted(true);
+      setTimedOut(sel === null);
+      setTimerEnabled(false);
+      setFeedback("");
+      return;
+    }
 
     // For direct PYQ, also check IndexedDB to restore persisted answers.
     // Guard against stale async: if the question changes before this resolves, discard the result.
@@ -731,6 +806,8 @@ export default function Quiz() {
           subjectLabel: existing?.subjectLabel ?? "Custom module",
           questionIds: pool.map((q) => q.id),
           answers: finalAnswers.map((a) => a.selected),
+          reviewedQids: pool.map((q) => q.id).filter((qid) => reviewMarked.has(qid)),
+          guessedQids: pool.map((q) => q.id).filter((qid) => guessMarked.has(qid)),
           correctCount,
           incorrectCount,
           skippedCount,
@@ -751,10 +828,12 @@ export default function Quiz() {
         questions: pool,
         custom: isCustom,
         examFinished: true,
+        reviewedQids: Array.from(reviewMarked),
+        guessedQids: Array.from(guessMarked),
       },
     });
     window.setTimeout(exitFS, 150);
-  }, [pool, examId, isCustom, startedAt, navigate, moduleId]);
+  }, [pool, examId, isCustom, startedAt, navigate, moduleId, isQuizMode, reviewMarked, guessMarked]);
   finishQuizRef.current = finishQuiz;
 
   // In quiz mode, save/update the current question's selection into answersRef.
@@ -838,7 +917,62 @@ export default function Quiz() {
     }
   }, [isQuizMode]);
 
+  // ─── Read-only navigator meta (C/I/S + review/guessing/bookmark flags) ────
+  // Declared here (before next/previous, which depend on it) rather than near
+  // the grid render further down — a useCallback's dependency array is
+  // evaluated immediately during render, unlike an effect body, so anything
+  // it references must already be declared above it in the same render pass.
+  const readOnlyMeta: ReadOnlyQuestionMeta[] = pool.map((q) => {
+    const ans = answers.find((a) => a.qid === q.id);
+    const status: ReadOnlyStatus =
+      ans === undefined || ans.selected === null ? "skipped" : ans.correct ? "correct" : "incorrect";
+    return {
+      status,
+      reviewed: readOnlyReviewedQids.has(q.id),
+      guessing: readOnlyGuessedQids.has(q.id),
+      bookmarked: readOnlyBookmarkedQids.has(q.id),
+    };
+  });
+
+  const readOnlyMatchesFilter = (m: ReadOnlyQuestionMeta) => {
+    if (readOnlyFilter === "all") return true;
+    if (readOnlyFilter === "correct") return m.status === "correct";
+    if (readOnlyFilter === "incorrect") return m.status === "incorrect";
+    if (readOnlyFilter === "skipped") return m.status === "skipped";
+    if (readOnlyFilter === "reviewed") return m.reviewed;
+    if (readOnlyFilter === "guessing") return m.guessing;
+    if (readOnlyFilter === "bookmark") return m.bookmarked;
+    return true;
+  };
+  // Indices into the full pool that pass the active filter — PREV/NEXT/swipe
+  // and the grid all navigate within this filtered subset when read-only.
+  const readOnlyVisibleIndices = readOnlyMeta
+    .map((m, i) => ({ m, i }))
+    .filter(({ m }) => readOnlyMatchesFilter(m))
+    .map(({ i }) => i);
+
+  // If the current question doesn't match a newly-picked filter, auto-jump
+  // to the first question that does, so PREV/NEXT never end up softlocked.
+  useEffect(() => {
+    if (!isReadOnly || pool.length === 0) return;
+    if (readOnlyVisibleIndices.includes(index)) return;
+    if (readOnlyVisibleIndices.length === 0) return; // nothing matches — grid will show the empty state
+    const target = readOnlyVisibleIndices[0];
+    applyQuestionState(pool[target]);
+    setIndex(target);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [readOnlyFilter]);
+
   const next = useCallback(() => {
+    if (isReadOnly) {
+      const pos = readOnlyVisibleIndices.indexOf(index);
+      if (pos === -1 || pos >= readOnlyVisibleIndices.length - 1) return;
+      const target = readOnlyVisibleIndices[pos + 1];
+      applyQuestionState(pool[target]);
+      setIndex(target);
+      window.scrollTo({ top: 0, behavior: "auto" });
+      return;
+    }
     if (isQuizMode) {
       // In quiz mode: save current selection then move on (no submit requirement)
       flushCurrentQuizSelection();
@@ -855,9 +989,18 @@ export default function Quiz() {
     setIndex((i) => i + 1);
     window.scrollTo({ top: 0, behavior: "auto" });
     persistDraft();
-  }, [isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
+  }, [isReadOnly, readOnlyVisibleIndices, isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
 
   const previous = useCallback(() => {
+    if (isReadOnly) {
+      const pos = readOnlyVisibleIndices.indexOf(index);
+      if (pos <= 0) return;
+      const target = readOnlyVisibleIndices[pos - 1];
+      applyQuestionState(pool[target]);
+      setIndex(target);
+      window.scrollTo({ top: 0, behavior: "auto" });
+      return;
+    }
     if (isQuizMode) {
       if (index <= 0) return;
       flushCurrentQuizSelection();
@@ -871,7 +1014,28 @@ export default function Quiz() {
     applyQuestionState(pool[index - 1]);
     setIndex((i) => i - 1);
     persistDraft();
-  }, [isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
+  }, [isReadOnly, readOnlyVisibleIndices, isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
+
+  // Swipe navigation for read-only attempted-state view (left = next, right =
+  // previous). A horizontal-dominant swipe past SWIPE_THRESHOLD px triggers
+  // navigation; anything smaller/vertical is treated as a scroll, not a swipe.
+  const SWIPE_THRESHOLD = 60;
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const handleSwipeStart = useCallback((e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touchStartRef.current = { x: t.clientX, y: t.clientY };
+  }, []);
+  const handleSwipeEnd = useCallback((e: React.TouchEvent) => {
+    const start = touchStartRef.current;
+    touchStartRef.current = null;
+    if (!start) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) return;
+    if (dx < 0) next();
+    else previous();
+  }, [next, previous]);
 
   // Jump directly to a question via the legend navigator.
   const goTo = useCallback((target: number) => {
@@ -895,6 +1059,16 @@ export default function Quiz() {
   const toggleReview = useCallback(() => {
     if (!question) return;
     setReviewMarked((prev) => {
+      const next = new Set(prev);
+      if (next.has(question.id)) next.delete(question.id);
+      else next.add(question.id);
+      return next;
+    });
+  }, [question]);
+
+  const toggleGuessing = useCallback(() => {
+    if (!question) return;
+    setGuessMarked((prev) => {
       const next = new Set(prev);
       if (next.has(question.id)) next.delete(question.id);
       else next.add(question.id);
@@ -1075,14 +1249,6 @@ export default function Quiz() {
               >
                 <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
               </button>
-              <button
-                type="button"
-                onClick={() => setNavigatorOpen(true)}
-                className="rounded-lg p-2 text-slate-500 transition-colors hover:text-slate-200"
-                aria-label="Question navigator"
-              >
-                <LayoutGrid size={21} strokeWidth={1.8} />
-              </button>
             </div>
           </div>
         </div>
@@ -1091,15 +1257,17 @@ export default function Quiz() {
       {/* ── Per-question timer bar (guide/direct) ── */}
       {!isQuizMode && (
         <div className={!submitted ? "sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
-          <div
-            className={`mb-2 h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
-            aria-label={`Time remaining ${mm}:${ss}`}
-          >
+          {!isReadOnly && (
             <div
-              className={`h-full transition-[width] duration-1000 ease-linear ${danger ? "bg-red-500" : "bg-slate-500"}`}
-              style={{ width: `${timerProgress}%` }}
-            />
-          </div>
+              className={`mb-2 h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
+              aria-label={`Time remaining ${mm}:${ss}`}
+            >
+              <div
+                className={`h-full transition-[width] duration-1000 ease-linear ${danger ? "bg-red-500" : "bg-slate-500"}`}
+                style={{ width: `${timerProgress}%` }}
+              />
+            </div>
+          )}
 
           <div className="mb-2 flex items-center justify-between gap-2 px-1">
             {!isCustom && !isSolveLink ? (
@@ -1118,26 +1286,28 @@ export default function Quiz() {
               </span>
             )}
             <div className="flex items-center gap-2">
-              <div
-                className={`inline-flex items-center overflow-hidden rounded-lg border ${
-                  danger
-                    ? "border-red-900/70 bg-red-950/30 text-red-400"
-                    : "border-slate-800 text-slate-400"
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => setTimerEnabled((v) => !v)}
-                  disabled={submitted}
-                  className="flex min-h-10 items-center px-2.5 py-2 disabled:cursor-not-allowed disabled:opacity-40"
-                  aria-label={timerEnabled ? "Pause timer" : "Resume timer"}
+              {!isReadOnly && (
+                <div
+                  className={`inline-flex items-center overflow-hidden rounded-lg border ${
+                    danger
+                      ? "border-red-900/70 bg-red-950/30 text-red-400"
+                      : "border-slate-800 text-slate-400"
+                  }`}
                 >
-                  {timerEnabled ? <Pause size={13} /> : <Play size={13} />}
-                </button>
-                <span className="border-l border-slate-800 px-2.5 py-2 text-xs font-medium">
-                  {mm}:{ss}
-                </span>
-              </div>
+                  <button
+                    type="button"
+                    onClick={() => setTimerEnabled((v) => !v)}
+                    disabled={submitted}
+                    className="flex min-h-10 items-center px-2.5 py-2 disabled:cursor-not-allowed disabled:opacity-40"
+                    aria-label={timerEnabled ? "Pause timer" : "Resume timer"}
+                  >
+                    {timerEnabled ? <Pause size={13} /> : <Play size={13} />}
+                  </button>
+                  <span className="border-l border-slate-800 px-2.5 py-2 text-xs font-medium">
+                    {mm}:{ss}
+                  </span>
+                </div>
+              )}
               <button
                 type="button"
                 onClick={bookmark}
@@ -1146,16 +1316,6 @@ export default function Quiz() {
               >
                 <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
               </button>
-              {!isSolveLink && (
-                <button
-                  type="button"
-                  onClick={() => setNavigatorOpen(true)}
-                  className="rounded-lg p-2 text-slate-500 transition-colors hover:text-slate-200"
-                  aria-label="Question navigator"
-                >
-                  <LayoutGrid size={21} strokeWidth={1.8} />
-                </button>
-              )}
             </div>
           </div>
         </div>
@@ -1166,6 +1326,8 @@ export default function Quiz() {
         className={`transition-[filter] duration-300 ${
           isBlurred || (isQuizMode && !globalTimerRunning) ? "blur-sm pointer-events-none select-none" : ""
         }`}
+        onTouchStart={isReadOnly ? handleSwipeStart : undefined}
+        onTouchEnd={isReadOnly ? handleSwipeEnd : undefined}
       >
         <QuestionCard
           key={question.id}
@@ -1177,7 +1339,26 @@ export default function Quiz() {
           onSelect={handleOptionSelect}
           onBookmark={bookmark}
           onShareFeedback={showFeedback}
+          hideMarking={isReadOnly && hideOption}
         />
+
+        {/* Guessing Answer: self-tag, outside/below the question card, available
+            anytime, independent of selection/submit state */}
+        {!isSolveLink && !isReadOnly && question && (
+          <button
+            type="button"
+            onClick={toggleGuessing}
+            aria-pressed={guessMarked.has(question.id)}
+            className={`mt-3 flex w-full items-center justify-center gap-2 rounded-xl border px-3 py-2.5 text-sm font-medium transition ${
+              guessMarked.has(question.id)
+                ? "border-amber-600 bg-amber-900/30 text-amber-300"
+                : "border-slate-800 bg-slate-950/50 text-slate-500 hover:border-slate-700 hover:text-slate-300"
+            }`}
+          >
+            <HelpCircle size={16} strokeWidth={2} />
+            {guessMarked.has(question.id) ? "Marked as guessing answer" : "Mark as guessing answer"}
+          </button>
+        )}
 
         {/* Explanation (guide/direct only) */}
         {!isQuizMode && submitted && question && (
@@ -1329,20 +1510,65 @@ export default function Quiz() {
       )}
 
       {/* ── Question navigator (legend grid bottom sheet) ── */}
-      <QuestionNavigator
-        open={navigatorOpen}
-        onClose={() => setNavigatorOpen(false)}
-        total={pool.length}
-        currentIndex={index}
-        statuses={navStatuses}
-        onJump={goTo}
-        onFinalSubmit={isSolveLink ? undefined : () => { setNavigatorOpen(false); requestFinalSubmit(); }}
-        finalSubmitLabel={isCustom ? "SUMMARY" : "FINAL SUBMIT"}
-      />
+      {isReadOnly ? (
+        <ReadOnlyNavigator
+          open={navigatorOpen}
+          onClose={() => setNavigatorOpen(false)}
+          meta={readOnlyMeta}
+          currentIndex={index}
+          onJump={goTo}
+          filter={readOnlyFilter}
+          onFilterChange={setReadOnlyFilter}
+          hideOption={hideOption}
+          onToggleHideOption={() => setHideOption((v) => !v)}
+        />
+      ) : (
+        <QuestionNavigator
+          open={navigatorOpen}
+          onClose={() => setNavigatorOpen(false)}
+          total={pool.length}
+          currentIndex={index}
+          statuses={navStatuses}
+          onJump={goTo}
+          onFinalSubmit={isSolveLink ? undefined : () => { setNavigatorOpen(false); requestFinalSubmit(); }}
+          finalSubmitLabel={isCustom ? "SUMMARY" : "FINAL SUBMIT"}
+        />
+      )}
 
       {/* ── Fixed bottom navigation ── */}
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-page-deep/95 px-1.5 py-2 backdrop-blur sm:px-2">
         <div className="mx-auto flex max-w-4xl items-stretch gap-2">
+        {isReadOnly ? (
+          // Read-only attempted-state view: just browse, nothing to submit or mark.
+          // PREV/NEXT move within the active filter's subset (see readOnlyVisibleIndices).
+          <>
+            <button
+              type="button"
+              onClick={previous}
+              disabled={readOnlyVisibleIndices.indexOf(index) <= 0}
+              className={`flex-1 ${actionClass} disabled:cursor-not-allowed disabled:opacity-40`}
+              aria-label="Previous question"
+            >
+              <span className="flex items-center justify-center gap-2">
+                <ChevronLeft size={18} />
+                PREV
+              </span>
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              disabled={readOnlyVisibleIndices.indexOf(index) >= readOnlyVisibleIndices.length - 1}
+              className={`flex-1 ${actionClass} disabled:cursor-not-allowed disabled:opacity-40`}
+              aria-label="Next question"
+            >
+              <span className="flex items-center justify-center gap-2">
+                NEXT
+                <ChevronRight size={18} />
+              </span>
+            </button>
+          </>
+        ) : (
+          <>
 
           {/* Mark-for-review square: far left, every layout variant except solve-links */}
           {!isSolveLink && (
@@ -1492,6 +1718,8 @@ export default function Quiz() {
               </button>
             </>
           )}
+          </>
+        )}
         </div>
       </div>
     </main>

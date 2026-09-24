@@ -1,5 +1,5 @@
 export type Exam = "NEET-PG" | "INI-CET" | "FMGE";
-export type StatusFilter = "all" | "incorrect" | "correct" | "bookmark";
+export type StatusFilter = "all" | "incorrect" | "correct" | "bookmark" | "skipped" | "reviewed" | "guessing";
 
 export interface Topic {
   id: string;
@@ -73,6 +73,8 @@ export interface CustomModuleHistoryEntry {
   subjectLabel: string; // e.g. "Anatomy, Biochem, Physio" or "All subjects" — display-only, computed once at save time
   questionIds: string[];
   answers: (number | null)[]; // parallel to questionIds; null = skipped
+  reviewedQids: string[]; // subset of questionIds marked for review during the live quiz
+  guessedQids: string[]; // subset of questionIds self-tagged as a guess during the live quiz
   correctCount: number;
   incorrectCount: number;
   skippedCount: number;

@@ -93,6 +93,8 @@ export default function ModuleBuilderSolve() {
       subjectLabel: subjectSummary || "Custom module",
       questionIds: ids,
       answers: ids.map(() => null),
+      reviewedQids: [],
+      guessedQids: [],
       correctCount: 0,
       incorrectCount: 0,
       skippedCount: ids.length,
