@@ -38,10 +38,11 @@ import {
 import { readModuleDraft, writeModuleDraft, clearModuleDraft } from "../lib/moduleDraft";
 import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import QuestionCard from "../components/QuestionCard";
+import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 import { SUBJECTS } from "../constants";
-import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
+import { formatQuestionForShare, getSiteUrl } from "../lib/sharing";
 import { isStandalone } from "../lib/pwa";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
@@ -291,6 +292,7 @@ export default function Quiz() {
 
   // Question navigator (legend grid bottom sheet)
   const [navigatorOpen, setNavigatorOpen] = useState(false);
+  const [askAiOpen, setAskAiOpen] = useState(false);
 
   // Read-only view's hybrid filter+legend sheet state
   const [readOnlyFilter, setReadOnlyFilter] = useState<StatusFilter>("all");
@@ -1106,17 +1108,14 @@ export default function Quiz() {
     setShowDetails(true);
   };
 
-  const askAI = async () => {
+  const askAI = () => {
     if (!question) return;
-    const aiUrl = getSiteUrl(`/ai/${question.id}`);
-    const text = `Explain this PYQ using the\nmediceTaMol AI prompt.\n\n${formatQuestionForShare(question, { includeBranding: false })}\n\nUse this prompt to solve this:\n${aiUrl}`;
-    const result = await shareOrCopy({ title: "Share with AI • mediceTaMol", text });
-    showFeedback(
-      result === "copied" ? "AI prompt link copied"
-      : result === "shared" ? "Share sheet opened"
-      : "Unable to share"
-    );
+    setAskAiOpen(true);
   };
+
+  const askAiText = question
+    ? `Explain this PYQ using the\nmediceTaMol AI prompt.\n\n${formatQuestionForShare(question, { includeBranding: false })}\n\nUse this prompt to solve this:\n${getSiteUrl(`/ai/${question.id}`)}`
+    : "";
 
   const bookmark = async () => {
     if (!question) return;
@@ -1534,6 +1533,15 @@ export default function Quiz() {
           finalSubmitLabel={isCustom ? "SUMMARY" : "FINAL SUBMIT"}
         />
       )}
+
+      {/* ── Ask AI (per-app picker bottom sheet) ── */}
+      <AskAiSheet
+        open={askAiOpen}
+        onClose={() => setAskAiOpen(false)}
+        text={askAiText}
+        shareTitle="Share with AI • mediceTaMol"
+        onFeedback={showFeedback}
+      />
 
       {/* ── Fixed bottom navigation ── */}
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-page-deep/95 px-1.5 py-2 backdrop-blur sm:px-2">

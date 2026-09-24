@@ -22,8 +22,9 @@ import {
 } from "../data/questions";
 import { getAllBookmarks, recordDailyActivity, toggleBookmark } from "../lib/db";
 import QuestionCard from "../components/QuestionCard";
+import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
-import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
+import { formatQuestionForShare, getSiteUrl } from "../lib/sharing";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 
 const SECONDS_PER_QUESTION = 60;
@@ -195,6 +196,7 @@ function ReviewSession({
   const [feedback, setFeedback] = useState("");
 
   const [navigatorOpen, setNavigatorOpen] = useState(false);
+  const [askAiOpen, setAskAiOpen] = useState(false);
   const [visited, setVisited] = useState<Set<number>>(() => new Set([0]));
 
   const [timerEnabled, setTimerEnabled] = useState(true);
@@ -376,17 +378,14 @@ function ReviewSession({
     setShowDetails(true);
   };
 
-  const askAI = async () => {
+  const askAI = () => {
     if (!question) return;
-    const aiUrl = getSiteUrl(`/ai/${question.id}`);
-    const text = `Explain this PYQ using the\nmediceTaMol AI prompt.\n\n${formatQuestionForShare(question, { includeBranding: false })}\n\nUse this prompt to solve this:\n${aiUrl}`;
-    const result = await shareOrCopy({ title: "Share with AI • mediceTaMol", text });
-    showFeedback(
-      result === "copied" ? "AI prompt link copied"
-      : result === "shared" ? "Share sheet opened"
-      : "Unable to share"
-    );
+    setAskAiOpen(true);
   };
+
+  const askAiText = question
+    ? `Explain this PYQ using the\nmediceTaMol AI prompt.\n\n${formatQuestionForShare(question, { includeBranding: false })}\n\nUse this prompt to solve this:\n${getSiteUrl(`/ai/${question.id}`)}`
+    : "";
 
   const bookmark = async () => {
     if (!question) return;
@@ -587,6 +586,15 @@ function ReviewSession({
         statuses={navStatuses}
         onJump={goTo}
         showReviewLegend={false}
+      />
+
+      {/* ── Ask AI (per-app picker bottom sheet) ── */}
+      <AskAiSheet
+        open={askAiOpen}
+        onClose={() => setAskAiOpen(false)}
+        text={askAiText}
+        shareTitle="Share with AI • mediceTaMol"
+        onFeedback={showFeedback}
       />
 
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-page-deep/95 px-1.5 py-2 backdrop-blur sm:px-2">
