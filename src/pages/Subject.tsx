@@ -1,12 +1,12 @@
 import { ArrowLeft, Play, Trash2 } from "lucide-react";
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { EXAMS, getSubject } from "../constants";
 import { loadQuestions } from "../data/questions";
 import manifest from "../data/manifest.json";
 import EmptyState from "../components/EmptyState";
 import React, { useEffect, useMemo, useState } from 'react';
 import { getAllAnswers, getAllBookmarks } from "../lib/db";
-import type { PYQQuestion } from "../types";
+import type { PYQQuestion, QuestionAnswer } from "../types";
 
 type SubjectManifest = { total: number; topics: Record<string, number> };
 type Manifest = Record<string, Record<string, SubjectManifest>>;
@@ -14,6 +14,7 @@ const manifestCounts = manifest as Manifest;
 
 export default function Subject() {
   const { exam, subjectId } = useParams();
+  const navigate = useNavigate();
   const subject = getSubject(subjectId ?? "");
   const examId = exam as "NEET-PG" | "INI-CET" | "FMGE";
 
@@ -38,6 +39,7 @@ export default function Subject() {
 
   // Progress stats for this subject
   const [attemptedIds, setAttemptedIds] = useState<Set<string>>(new Set());
+  const [subjectAnswers, setSubjectAnswers] = useState<QuestionAnswer[]>([]);
   const [correctCount, setCorrectCount] = useState(0);
   const [bookmarkCount, setBookmarkCount] = useState(0);
   const [progressLoaded, setProgressLoaded] = useState(false);
@@ -58,6 +60,7 @@ export default function Subject() {
       const correct = subjectAnswers.filter((a) => a.incorrect === undefined).length;
       const bookmarks = allBookmarks.filter((b) => subjectQids.has(b.qid)).length;
       setAttemptedIds(attempted);
+      setSubjectAnswers(subjectAnswers);
       setCorrectCount(correct);
       setBookmarkCount(bookmarks);
       setProgressLoaded(true);
@@ -207,12 +210,35 @@ export default function Subject() {
             <span className="text-sm text-slate-400">
               {selectedCount} question{selectedCount === 1 ? "" : "s"} selected
             </span>
-            <Link
-              to={`/quiz/${exam}/${subjectId}?source=direct&topic=${selectedTopic}`}
-              className="inline-flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 text-xs font-bold text-slate-950"
-            >
-              <Play size={15} /> Start
-            </Link>
+            {filtered.length > 0 && filtered.every((q) => attemptedIds.has(q.id)) ? (
+              // Every question in this topic already has a stored answer —
+              // open the read-only attempted-state view instead of a live quiz.
+              <button
+                type="button"
+                onClick={() => {
+                  const answerByQid = new Map(subjectAnswers.map((a) => [a.qid, a]));
+                  const ids = filtered.map((q) => q.id);
+                  const selections = filtered.map((q) => {
+                    const a = answerByQid.get(q.id);
+                    if (!a) return null;
+                    return a.incorrect === undefined ? q.answer : a.incorrect;
+                  });
+                  navigate(`/quiz/${exam}/custom?source=custom&readonly=1&ids=${ids.join(",")}`, {
+                    state: { answers: selections },
+                  });
+                }}
+                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 text-xs font-bold text-slate-950"
+              >
+                <Play size={15} /> Start
+              </button>
+            ) : (
+              <Link
+                to={`/quiz/${exam}/${subjectId}?source=direct&topic=${selectedTopic}`}
+                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 text-xs font-bold text-slate-950"
+              >
+                <Play size={15} /> Start
+              </Link>
+            )}
           </div>
 
           {/* Progress section — always rendered so the page layout never shifts: the
