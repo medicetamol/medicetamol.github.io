@@ -777,6 +777,23 @@ export default function Quiz() {
       return { qid: q.id, selected: null, correct: false };
     });
 
+    // Quiz mode records nothing per-question (see flushCurrentQuizSelection —
+    // it only updates local state), so the whole module's daily-activity
+    // credit has to land here, in bulk, on finish. Guide mode already
+    // recorded each question via submitCurrent as it was answered, so this
+    // only runs for isQuizMode to avoid double-counting.
+    if (isQuizMode) {
+      try {
+        for (const a of finalAnswers) {
+          if (a.selected !== null) {
+            await recordDailyActivity(a.correct);
+          }
+        }
+      } catch (err) {
+        console.error("Could not record quiz-mode daily activity", err);
+      }
+    }
+
     // Saving must never block the user from seeing their result.
     try {
       await saveQuizResult({
