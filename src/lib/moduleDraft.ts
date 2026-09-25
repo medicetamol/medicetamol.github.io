@@ -10,6 +10,7 @@ const DRAFT_KEY = "medicetamol-module-draft";
 export interface ModuleDraft {
   id: string; // matches CustomModuleHistoryEntry.id (== startedAt)
   answers: (number | null)[]; // parallel to the entry's questionIds
+  lastIndex: number; // question the user was last on — resume lands here, not on a derived guess
 }
 
 export function readModuleDraft(id: string): ModuleDraft | null {

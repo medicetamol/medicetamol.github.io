@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import type { PYQQuestion, QuizAnswer } from "../types";
@@ -93,6 +93,7 @@ interface ResultState {
   answers: QuizAnswer[];
   questions: PYQQuestion[];
   custom: boolean;
+  examFinished?: boolean;
   reviewedQids?: string[];
   guessedQids?: string[];
 }
@@ -108,6 +109,43 @@ export default function Result() {
   useEffect(() => {
     getAllBookmarks().then((rows) => setBookmarkedQids(new Set(rows.map((b) => b.qid))));
   }, []);
+
+  // ── Back button (only right after finishing a custom quiz) ──
+  // A finished custom quiz leaves its history-trap entries (pushed in Quiz.tsx to
+  // guard the in-progress attempt) sitting underneath this page, so native Back
+  // would otherwise land back on the quiz URL and remount it as if unsolved.
+  // Intercept the first Back press and send the user to where the module was
+  // built instead. Gated on `examFinished` (only Quiz.tsx's finishQuiz sets it),
+  // not just `custom` — viewing an already-solved module from Solved Modules
+  // also sets `custom: true` but has no leftover trap entries, so Back there
+  // should behave normally (return to Solved Modules).
+  // The shadow history entry is pushed via `navigate` (not a raw pushState)
+  // carrying this page's own state, so that leaving for "See Explanations"
+  // and then coming straight Back still shows the real result, not a blank
+  // 0/0 summary — a raw pushState entry loses React Router's state wrapper.
+  const isTrapResult = state
+    ? Boolean(state.custom && state.examFinished)
+    : sessionStorage.getItem("mcResultTrap") === exam;
+  const trapPushedRef = useRef(false);
+  useEffect(() => {
+    if (!exam) return;
+    if (!isTrapResult) {
+      sessionStorage.removeItem("mcResultTrap");
+      return;
+    }
+    sessionStorage.setItem("mcResultTrap", exam);
+    if (!trapPushedRef.current) {
+      trapPushedRef.current = true;
+      navigate(`${location.pathname}${location.search}`, { replace: false, state });
+    }
+    const onBack = () => {
+      sessionStorage.removeItem("mcResultTrap");
+      navigate(`/module/${exam}`, { replace: true });
+    };
+    window.addEventListener("popstate", onBack);
+    return () => window.removeEventListener("popstate", onBack);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isTrapResult, exam, navigate]);
 
   const total = state?.total ?? 0;
   const answers = Array.isArray(state?.answers) ? state!.answers : [];

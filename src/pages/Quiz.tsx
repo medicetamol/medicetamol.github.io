@@ -369,6 +369,21 @@ export default function Quiz() {
             return next;
           });
         }
+        // Land back on exactly where the user left off — the draft's
+        // lastIndex — not a derived guess. Only fall back to "first
+        // unanswered" when there's no draft to say where that was (e.g. the
+        // draft was cleared but the DB row still has answers).
+        const validDraftIndex =
+          draft && Number.isInteger(draft.lastIndex) && draft.lastIndex >= 0 && draft.lastIndex < pool.length
+            ? draft.lastIndex
+            : null;
+        if (validDraftIndex !== null) {
+          setIndex(validDraftIndex);
+        } else {
+          const answeredSet = new Set(answeredIndices);
+          const firstUnanswered = pool.findIndex((_, i) => !answeredSet.has(i));
+          setIndex(firstUnanswered >= 0 ? firstUnanswered : 0);
+        }
       }
       setResumeChecked(true);
     })();
@@ -377,13 +392,16 @@ export default function Quiz() {
 
   // Persist the draft on every navigation (next/previous/goTo), not on every
   // tap — see moduleDraft.ts. Only for custom modules with a moduleId.
-  const persistDraft = useCallback(() => {
+  // Takes the index explicitly (the target being navigated to) rather than
+  // reading `index` from closure — this runs in the same tick as setIndex,
+  // before the state update is applied, so the closure value would be stale.
+  const persistDraft = useCallback((atIndex: number) => {
     if (isReadOnly || !isCustom || !moduleId || pool.length === 0) return;
     const answersBySlot = pool.map((q) => {
       const a = answersRef.current.find((x) => x.qid === q.id);
       return a?.selected ?? null;
     });
-    writeModuleDraft({ id: moduleId, answers: answersBySlot });
+    writeModuleDraft({ id: moduleId, answers: answersBySlot, lastIndex: atIndex });
   }, [isReadOnly, isCustom, moduleId, pool]);
 
   // Per-question timer (guide/direct)
@@ -407,11 +425,12 @@ export default function Quiz() {
   const [showFSExitModal, setShowFSExitModal] = useState(false);
 
   // Back-button handling reads these from inside a long-lived popstate listener.
-  const fsModalOpenRef = useRef(false);        // is the "Continue where you left" modal open?
+  const fsModalOpenRef = useRef(false);        // is the exit-confirm modal open?
   const fsModalOpenedAtRef = useRef(0);        // when it opened (ms)
-  const backSubmitRef = useRef(false);         // Back already triggered a submit
+  const backExitRef = useRef(false);           // Back already triggered a home-exit
   const finishQuizRef = useRef<() => Promise<void>>(async () => {});
-  const finishingRef = useRef(false);        // quiz is being submitted — ignore fullscreen/back events
+  const backToBuilderRef = useRef<() => void>(() => {});
+  const finishingRef = useRef(false);        // quiz is being submitted or exited — ignore fullscreen/back events
 
   // Expired module (past the 2hr resume window): auto-submit with whatever
   // was answered, same as a timeout — never let the live quiz UI accept
@@ -496,13 +515,13 @@ export default function Quiz() {
     const onClick = () => topUpTraps();
 
     const onBack = (e: PopStateEvent) => {
-      if (finishingRef.current) return; // submitting — let navigation proceed untouched
+      if (finishingRef.current) return; // submitting or exiting — let navigation proceed untouched
       // Back consumed one reserve entry — work out how many remain from where we landed.
       const landed = e.state as TrapState;
       trapDepthRef.current = landed?.mediCetamolQuiz ? (landed.depth ?? 0) : 0;
 
-      // Back while the "Continue where you left" modal is already open: submit the module
-      // instead of leaving the page, which would throw away every answer.
+      // Back while the exit-confirm modal is already open: treat it as a second
+      // Back press and send the user to the module builder (module stays resumable — not submitted).
       if (fsModalOpenRef.current) {
         // Leaving fullscreen with Back can also deliver a popstate in the same gesture —
         // ignore anything arriving right after the modal opened.
@@ -510,15 +529,15 @@ export default function Quiz() {
           if (trapDepthRef.current === 0) topUpTraps(true);
           return;
         }
-        if (!backSubmitRef.current) {
-          backSubmitRef.current = true;
-          void finishQuizRef.current();
+        if (!backExitRef.current) {
+          backExitRef.current = true;
+          backToBuilderRef.current();
         }
         return;
       }
 
       // No fullscreen to exit (installed app, or fullscreen unavailable): the first Back
-      // opens the same modal — timer pauses, Exit submits the module, Go Back resumes.
+      // opens the same modal — timer pauses, Back exits to the module builder, Continue resumes.
       // (While in fullscreen, leaving fullscreen is what opens it.)
       if (isStandalone() || !isFullscreen()) {
         if (isQuizMode) setGlobalTimerRunning(false);
@@ -527,7 +546,7 @@ export default function Quiz() {
       }
 
       // Nothing left in reserve: last resort so the next Back is still caught. Normally the
-      // reserve is refilled by the next tap ("Go Back" included), which is gesture-backed.
+      // reserve is refilled by the next tap ("Continue" included), which is gesture-backed.
       if (trapDepthRef.current === 0) topUpTraps(true);
     };
     window.addEventListener("popstate", onBack);
@@ -631,7 +650,7 @@ export default function Quiz() {
     setFeedback("");
 
     return () => { cancelled = true; };
-  }, [index, question?.id, isQuizMode, isCustom, isSolveLink]);
+  }, [index, question?.id, isQuizMode, isCustom, isSolveLink, resumeChecked]);
 
   useEffect(() => {
     setDetailedExplanation(null);
@@ -758,7 +777,7 @@ export default function Quiz() {
     } catch (err) {
       console.error("Could not record answer", err);
     }
-    persistDraft(); // checkpoint: this question is now locked in, don't lose it on close
+    persistDraft(index); // checkpoint: this question is now locked in, don't lose it on close
   }
 
   const finishQuiz = useCallback(async () => {
@@ -999,7 +1018,7 @@ export default function Quiz() {
         applyQuestionState(pool[index + 1]);
         setIndex((i) => i + 1);
         window.scrollTo({ top: 0, behavior: "auto" });
-        persistDraft();
+        persistDraft(index + 1);
       }
       return;
     }
@@ -1007,7 +1026,7 @@ export default function Quiz() {
     applyQuestionState(pool[index + 1]);
     setIndex((i) => i + 1);
     window.scrollTo({ top: 0, behavior: "auto" });
-    persistDraft();
+    persistDraft(index + 1);
   }, [isReadOnly, readOnlyVisibleIndices, isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
 
   const previous = useCallback(() => {
@@ -1026,13 +1045,13 @@ export default function Quiz() {
       applyQuestionState(pool[index - 1]);
       setIndex((i) => i - 1);
       window.scrollTo({ top: 0, behavior: "auto" });
-      persistDraft();
+      persistDraft(index - 1);
       return;
     }
     if (!submittedRef.current || index <= 0) return;
     applyQuestionState(pool[index - 1]);
     setIndex((i) => i - 1);
-    persistDraft();
+    persistDraft(index - 1);
   }, [isReadOnly, readOnlyVisibleIndices, isQuizMode, index, pool, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
 
   // Swipe navigation for read-only attempted-state view (left = next, right =
@@ -1072,7 +1091,7 @@ export default function Quiz() {
     setIndex(target);
     setNavigatorOpen(false);
     window.scrollTo({ top: 0, behavior: "auto" });
-    persistDraft();
+    persistDraft(target);
   }, [pool, index, isQuizMode, flushCurrentQuizSelection, applyQuestionState, persistDraft]);
 
   const toggleReview = useCallback(() => {
@@ -1140,16 +1159,25 @@ export default function Quiz() {
     setBookmarked(result.bookmarked);
   };
 
-  const handleFSGoBack = () => {
+  const handleFSContinue = () => {
     setShowFSExitModal(false);
     requestFS();
     if (isQuizMode) setGlobalTimerRunning(true);
     else setTimerEnabled(true);
   };
 
-  const handleFSExit = () => {
-    void finishQuiz();
-  };
+  // Leaves without submitting — the module's skeleton history row (saved up-front
+  // in ModuleBuilderSolve) is left as-is, so it stays resumable like a closed tab.
+  const handleBackToBuilder = useCallback(() => {
+    if (finishingRef.current) return; // double-fire guard (modal button + trapped back)
+    finishingRef.current = true;
+    setShowFSExitModal(false);
+    setGlobalTimerRunning(false);
+    setTimerEnabled(false);
+    navigate(`/module/${examId}`, { replace: true });
+    window.setTimeout(exitFS, 150);
+  }, [navigate, examId]);
+  backToBuilderRef.current = handleBackToBuilder;
 
   const handleGlobalPauseToggle = () => {
     setGlobalTimerRunning((v) => !v);
@@ -1497,29 +1525,29 @@ export default function Quiz() {
         </Modal>
       )}
 
-      {/* ── Modal: Fullscreen exit ── */}
+      {/* ── Modal: exit confirm ── */}
       {showFSExitModal && (
         <Modal>
           <h2 className="text-center text-lg font-semibold text-slate-100">
-            Continue where you left
+            Leave this module?
           </h2>
           <p className="mt-1 text-center text-xs text-slate-500">
-            Exiting will submit your module
+            Your progress is saved — resume anytime within 2 hours
           </p>
           <div className="mt-5 grid grid-cols-2 gap-3">
             <button
               type="button"
-              onClick={handleFSExit}
+              onClick={handleBackToBuilder}
               className="rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 text-sm font-semibold text-slate-100"
             >
-              Exit
+              Back
             </button>
             <button
               type="button"
-              onClick={handleFSGoBack}
+              onClick={handleFSContinue}
               className="rounded-xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm font-bold text-slate-950"
             >
-              Go Back
+              Continue
             </button>
           </div>
         </Modal>
