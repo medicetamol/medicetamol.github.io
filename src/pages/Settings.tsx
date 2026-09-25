@@ -2,14 +2,23 @@ import { Check, Download, Moon, Share, Smartphone, Sun } from "lucide-react";
 import { useInstall } from "../lib/pwa";
 import { setTheme, useTheme } from "../lib/theme";
 import type { Theme } from "../lib/theme";
+import { setFontScale, useFontScale } from "../lib/fontScale";
+import type { FontScale } from "../lib/fontScale";
 
 const THEMES: Array<{ id: Theme; label: string; icon: typeof Sun }> = [
   { id: "dark", label: "Dark", icon: Moon },
   { id: "light", label: "Light", icon: Sun }
 ];
 
+const FONT_SCALES: Array<{ id: FontScale; label: string; sample: string }> = [
+  { id: "small", label: "Small", sample: "13px" },
+  { id: "default", label: "Default", sample: "15px" },
+  { id: "large", label: "Large", sample: "17px" }
+];
+
 export default function Settings() {
   const theme = useTheme();
+  const fontScale = useFontScale();
   const { canPrompt, installed, isIOS, promptInstall } = useInstall();
 
   return (
@@ -44,6 +53,39 @@ export default function Settings() {
               >
                 <Icon size={15} />
                 {label}
+              </button>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Text size */}
+      <section className="mt-4 rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+        <h2 className="text-sm font-bold text-slate-200">Text size</h2>
+        <p className="mt-1 text-xs text-slate-500">Adjust the font size across the app.</p>
+
+        <div
+          role="radiogroup"
+          aria-label="Text size"
+          className="mt-4 flex gap-1 rounded-xl border border-slate-800 bg-slate-950 p-1"
+        >
+          {FONT_SCALES.map(({ id, label, sample }) => {
+            const active = fontScale === id;
+            return (
+              <button
+                key={id}
+                type="button"
+                role="radio"
+                aria-checked={active}
+                onClick={() => setFontScale(id)}
+                className={`flex flex-1 flex-col items-center justify-center gap-1 rounded-lg px-3 py-2.5 transition ${
+                  active ? "bg-slate-800 text-slate-50" : "text-slate-500 hover:text-slate-300"
+                }`}
+              >
+                <span className="font-bold" style={{ fontSize: sample }}>
+                  A
+                </span>
+                <span className="text-[11px] font-semibold">{label}</span>
               </button>
             );
           })}

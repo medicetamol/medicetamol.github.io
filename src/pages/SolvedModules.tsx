@@ -31,7 +31,7 @@ function ScoreDonut({ entry }: { entry: CustomModuleHistoryEntry }) {
       <circle cx="27" cy="27" r={r} fill="none" stroke="currentColor" className="text-slate-800" strokeWidth="7" />
       {entry.incorrectCount > 0 && (
         <circle
-          cx="27" cy="27" r={r} fill="none" stroke="#E24B4A" strokeWidth="7"
+          cx="27" cy="27" r={r} fill="none" stroke="#ef4444" strokeWidth="7"
           strokeDasharray={`${incorrectLen} ${circumference}`}
           strokeDashoffset="0"
           transform="rotate(-90 27 27)"
@@ -39,7 +39,7 @@ function ScoreDonut({ entry }: { entry: CustomModuleHistoryEntry }) {
       )}
       {entry.skippedCount > 0 && (
         <circle
-          cx="27" cy="27" r={r} fill="none" stroke="#7F77DD" strokeWidth="7"
+          cx="27" cy="27" r={r} fill="none" stroke="rgb(var(--slate-600))" strokeWidth="7"
           strokeDasharray={`${skippedLen} ${circumference}`}
           strokeDashoffset={-incorrectLen}
           transform="rotate(-90 27 27)"
@@ -47,7 +47,7 @@ function ScoreDonut({ entry }: { entry: CustomModuleHistoryEntry }) {
       )}
       {entry.correctCount > 0 && (
         <circle
-          cx="27" cy="27" r={r} fill="none" stroke="#639922" strokeWidth="7"
+          cx="27" cy="27" r={r} fill="none" stroke="#22c55e" strokeWidth="7"
           strokeDasharray={`${correctLen} ${circumference}`}
           strokeDashoffset={-(incorrectLen + skippedLen)}
           transform="rotate(-90 27 27)"

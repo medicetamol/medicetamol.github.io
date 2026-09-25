@@ -105,7 +105,7 @@ export default function ReadOnlyNavigator({
 
         {/* Hide marked option toggle */}
         <div className="mb-3 flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/50 px-3.5 py-3">
-          <span className="text-sm text-slate-300">Hide my selected option</span>
+          <span className="text-sm text-slate-300">Hide Selected Options</span>
           <button
             type="button"
             role="switch"

@@ -1,4 +1,4 @@
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft, History, Sparkles } from "lucide-react";
 import { Link, useParams } from 'react-router-dom';
 import { SUBJECTS, EXAMS, EXAM_PREFIX } from "../constants";
 import manifest from "../data/manifest.json";
@@ -41,14 +41,23 @@ export default function SubjectSelect() {
         <p className="mt-1 text-sm text-slate-500">Choose a subject.</p>
       </div>
 
-      {/* Create custom module — full-width banner */}
-      <Link
-        to={`/module/${examId}`}
-        className="mb-4 flex items-center gap-3 rounded-2xl border border-slate-700 bg-slate-900/60 px-5 py-4 hover:border-slate-500 hover:bg-slate-800/60"
-      >
-        <Sparkles size={17} className="shrink-0 text-slate-400" />
-        <span className="text-sm font-semibold text-slate-200">Create custom module</span>
-      </Link>
+      {/* Create custom module — full-width banner, plus a square shortcut to its history */}
+      <div className="mb-4 flex items-stretch gap-3">
+        <Link
+          to={`/module/${examId}`}
+          className="flex flex-1 items-center gap-3 rounded-2xl border border-slate-700 bg-slate-900/60 px-5 py-4 hover:border-slate-500 hover:bg-slate-800/60"
+        >
+          <Sparkles size={17} className="shrink-0 text-slate-400" />
+          <span className="text-sm font-semibold text-slate-200">Create custom module</span>
+        </Link>
+        <Link
+          to="/modules/history"
+          aria-label="Custom module history"
+          className="flex w-14 shrink-0 items-center justify-center rounded-2xl border border-slate-700 bg-slate-900/60 hover:border-slate-500 hover:bg-slate-800/60"
+        >
+          <History size={18} className="text-slate-400" />
+        </Link>
+      </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
         {SUBJECTS.map((subject) => {

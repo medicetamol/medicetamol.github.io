@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#0b0f14" />
 
     <title>mediCetamol</title>
@@ -44,8 +44,9 @@
     <meta name="apple-mobile-web-app-title" content="mediCetamol" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <!-- Apply the saved theme before first paint (avoids a dark → light flash).
-         Key must match THEME_STORAGE_KEY in src/lib/theme.ts. -->
+    <!-- Apply the saved theme and text size before first paint (avoids a flash of the
+         wrong look). Keys must match THEME_STORAGE_KEY in src/lib/theme.ts and
+         FONT_SCALE_STORAGE_KEY in src/lib/fontScale.ts. -->
     <script>
       (function () {
         try {
@@ -53,6 +54,13 @@
             document.documentElement.setAttribute("data-theme", "light");
             var m = document.querySelector('meta[name="theme-color"]');
             if (m) m.setAttribute("content", "#f1f5f9");
+          }
+        } catch (e) {}
+        try {
+          var scale = localStorage.getItem("medicetamol-font-scale");
+          if (scale === "small" || scale === "large") {
+            document.documentElement.setAttribute("data-font-scale", scale);
+            document.documentElement.style.fontSize = scale === "small" ? "87.5%" : "112.5%";
           }
         } catch (e) {}
       })();

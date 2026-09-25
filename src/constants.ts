@@ -53,7 +53,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "pathology", name: "Pathology", code: "PT", short: "Path",
+    id: "pathology", name: "Pathology", code: "PT", short: "Patho",
     topics: [
       { id: "CIN", name: "Cell Injury & Adaptation" },
       { id: "INF", name: "Inflammation & Repair" },
@@ -151,7 +151,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
   {
-    id: "medicine", name: "Medicine", code: "GM", short: "Medicine",
+    id: "medicine", name: "Medicine", code: "GM", short: "Med",
     topics: [
       { id: "CAD", name: "Cardiology" },
       { id: "PUL", name: "Pulmonology" },
@@ -204,7 +204,7 @@ export const SUBJECTS: Subject[] = [
     ]
   },
     {
-    id: "pediatrics", name: "Pediatrics", code: "PD", short: "Peds",
+    id: "pediatrics", name: "Pediatrics", code: "PD", short: "Ped",
     topics: [
       { id: "GRW", name: "Growth & Development" },
       { id: "NEN", name: "Neonatology" },
