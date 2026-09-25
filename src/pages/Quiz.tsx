@@ -1575,7 +1575,7 @@ export default function Quiz() {
           statuses={navStatuses}
           onJump={goTo}
           onFinalSubmit={isSolveLink ? undefined : () => { setNavigatorOpen(false); requestFinalSubmit(); }}
-          finalSubmitLabel={isCustom ? "SUMMARY" : "FINAL SUBMIT"}
+          finalSubmitLabel="FINAL SUBMIT"
         />
       )}
 
@@ -1680,7 +1680,7 @@ export default function Quiz() {
                 >
                   <span className="flex items-center justify-center gap-1.5 whitespace-nowrap">
                     <ClipboardCheck size={20} strokeWidth={2.1} className="shrink-0" />
-                    {isCustom ? "SUMMARY" : "FINAL SUBMIT"}
+                    {isCustom ? "SUBMIT" : "FINAL SUBMIT"}
                   </span>
                 </button>
               )}
@@ -1766,7 +1766,7 @@ export default function Quiz() {
               >
                 <span className="flex items-center justify-center gap-1.5 whitespace-nowrap">
                   <ClipboardCheck size={20} strokeWidth={2.1} className="shrink-0" />
-                  {isCustom ? "SUMMARY" : "FINAL SUBMIT"}
+                  {isCustom ? "SUBMIT" : "FINAL SUBMIT"}
                 </span>
               </button>
             </>

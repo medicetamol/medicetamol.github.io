@@ -86,7 +86,7 @@ export default function ReadOnlyNavigator({
       onClick={onClose}
     >
       <div
-        className="max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-t-2xl border-t border-slate-700 bg-slate-900 px-4 pb-6 pt-3 shadow-2xl"
+        className="h-[92dvh] w-full max-w-4xl overflow-y-auto rounded-t-2xl border-t border-slate-700 bg-slate-900 px-4 pb-6 pt-3 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mx-auto mb-3 h-1 w-9 rounded-full bg-slate-700" />
@@ -111,13 +111,13 @@ export default function ReadOnlyNavigator({
             role="switch"
             aria-checked={hideOption}
             onClick={onToggleHideOption}
-            className={`relative h-6 w-11 shrink-0 rounded-full transition-colors ${
+            className={`relative h-6 w-11 shrink-0 overflow-hidden rounded-full transition-colors ${
               hideOption ? "bg-sky-600" : "bg-slate-700"
             }`}
           >
             <span
-              className={`absolute top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
-                hideOption ? "translate-x-5" : "translate-x-0.5"
+              className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                hideOption ? "translate-x-[18px]" : "translate-x-0"
               }`}
             />
           </button>
@@ -155,28 +155,6 @@ export default function ReadOnlyNavigator({
           )}
         </div>
 
-        {/* Legend */}
-        <div className="mb-4 flex flex-wrap gap-x-3 gap-y-2 text-xs text-slate-400">
-          <span className="flex items-center gap-1.5">
-            <span className="inline-block h-2.5 w-2.5 rounded-sm bg-emerald-800/80" /> Correct
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="inline-block h-2.5 w-2.5 rounded-sm bg-red-900/70" /> Incorrect
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="inline-block h-2.5 w-2.5 rounded-sm bg-sky-900/60" /> Skipped
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="relative inline-block h-2.5 w-2.5 rounded-sm bg-emerald-800/80">
-              <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full bg-violet-400" />
-            </span>
-            Reviewed
-          </span>
-          <span className="flex items-center gap-1.5">
-            <HelpCircle size={12} className="text-amber-400" /> Guessing
-          </span>
-        </div>
-
         {/* Grid — filtered subset only */}
         {visiblePoolIndices.length === 0 ? (
           <p className="py-6 text-center text-sm text-slate-500">No questions match this filter.</p>
@@ -208,6 +186,28 @@ export default function ReadOnlyNavigator({
             })}
           </div>
         )}
+
+        {/* Legend */}
+        <div className="mb-1 mt-4 flex flex-wrap gap-x-3 gap-y-2 text-xs text-slate-400">
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-2.5 w-2.5 rounded-sm bg-emerald-800/80" /> Correct
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-2.5 w-2.5 rounded-sm bg-red-900/70" /> Incorrect
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-2.5 w-2.5 rounded-sm bg-sky-900/60" /> Skipped
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="relative inline-block h-2.5 w-2.5 rounded-sm bg-emerald-800/80">
+              <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full bg-violet-400" />
+            </span>
+            Reviewed
+          </span>
+          <span className="flex items-center gap-1.5">
+            <HelpCircle size={12} className="text-amber-400" /> Guessing
+          </span>
+        </div>
       </div>
     </div>
   );
