@@ -1,0 +1,93 @@
+[
+  {
+    "id": "INPH001",
+    "y": 2026,
+    "t": "ENR",
+    "q": "Which of the following is a respiratory effect of progesterone during pregnancy?",
+    "o": [
+      "Increased respiratory drive (hyperventilation)",
+      "Decreased tidal volume",
+      "Decreased arterial PO2",
+      "Increased arterial PCO2"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH002",
+    "y": 2026,
+    "t": "REN",
+    "q": "Renin secretion from the juxtaglomerular apparatus is stimulated in response to:",
+    "o": [
+      "Elevated sodium delivery to the macula densa",
+      "Elevated renal perfusion pressure",
+      "Reduced renal perfusion pressure",
+      "Increased extracellular fluid volume"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPH003",
+    "y": 2026,
+    "t": "SPS",
+    "q": "Hyperpolarization of the receptor cell on stimulation is characteristically seen with which of the following sensory modalities?",
+    "o": [
+      "Olfactory",
+      "Visual",
+      "Taste",
+      "Tactile"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH004",
+    "y": 2026,
+    "t": "NPH",
+    "q": "In which region of the adult human brain can neurons regenerate and increase in number (adult neurogenesis)?",
+    "o": [
+      "Ventral part of spinal cord",
+      "Dentate gyrus of the hippocampus",
+      "Substantia nigra",
+      "Locus ceruleus"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH005",
+    "y": 2026,
+    "t": "REN",
+    "q": "The graph shows the relative filterability of molecules across the glomerular capillary wall plotted against effective molecular radius, for three curves A, B and C carrying different charges. Based on charge, which molecule is filtered most readily? (Refer to the figure; for a given molecular radius, filterability order A > B > C, with C marked as anions.)",
+    "o": [
+      "A (cation)",
+      "B (neutral)",
+      "C (anion)",
+      "All are filtered equally"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH006",
+    "y": 2026,
+    "t": "GIT",
+    "q": "Which intestinal membrane transporter is exploited in the therapeutic management (oral rehydration) of secretory diarrhea?",
+    "o": [
+      "CFTR chloride channel",
+      "SGLT (sodium-glucose cotransporter)",
+      "Na /K ATPase pump",
+      "Aquaporin-2 water channel"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH007",
+    "y": 2026,
+    "t": "CVS",
+    "q": "Regarding the pattern of coronary blood flow, how does flow in the right coronary artery (RCA) differ from that in the left coronary artery (LCA) during the cardiac cycle?",
+    "o": [
+      "RCA receives appreciable flow in both systole and diastole (biphasic), whereas LCA flow occurs predominantly in diastole",
+      "RCA flow occurs almost entirely in diastole, while LCA flow is biphasic",
+      "Both RCA and LCA are perfused only during systole",
+      "Both RCA and LCA are perfused only during diastole"
+    ],
+    "a": 0
+  }
+]

@@ -7,8 +7,179 @@
   },
   "INI-CET": {
     "anatomy": {
+      "total": 7,
+      "topics": {
+        "HIS": 1,
+        "NEU": 4,
+        "ABP": 1,
+        "THX": 1
+      }
+    },
+    "anesthesiology": {
       "total": 0,
       "topics": {}
+    },
+    "biochemistry": {
+      "total": 5,
+      "topics": {
+        "LIP": 1,
+        "MOL": 1,
+        "PRO": 1,
+        "CAR": 2
+      }
+    },
+    "community-medicine": {
+      "total": 11,
+      "topics": {
+        "EPI": 6,
+        "NHP": 1,
+        "FPD": 1,
+        "VAC": 3
+      }
+    },
+    "dermatology": {
+      "total": 8,
+      "topics": {
+        "BLA": 2,
+        "SKT": 2,
+        "STI": 1,
+        "FVI": 2,
+        "MSD": 1
+      }
+    },
+    "ent": {
+      "total": 2,
+      "topics": {
+        "LRY": 1,
+        "EAR": 1
+      }
+    },
+    "forensic-medicine": {
+      "total": 10,
+      "topics": {
+        "TOX": 3,
+        "TRM": 5,
+        "SXO": 1,
+        "THA": 1
+      }
+    },
+    "medicine": {
+      "total": 9,
+      "topics": {
+        "NRL": 1,
+        "RHU": 1,
+        "MSM": 3,
+        "END": 1,
+        "IFD": 1,
+        "CAD": 1,
+        "HML": 1
+      }
+    },
+    "microbiology": {
+      "total": 9,
+      "topics": {
+        "BAC": 5,
+        "GEN": 1,
+        "MYC": 2,
+        "PAR": 1
+      }
+    },
+    "obstetrics-gynecology": {
+      "total": 8,
+      "topics": {
+        "PLF": 1,
+        "MNA": 1,
+        "FTP": 1,
+        "PPP": 1,
+        "NPA": 1,
+        "HRP": 1,
+        "LBD": 1,
+        "IFR": 1
+      }
+    },
+    "ophthalmology": {
+      "total": 1,
+      "topics": {
+        "RFQ": 1
+      }
+    },
+    "orthopedics": {
+      "total": 4,
+      "topics": {
+        "FRG": 2,
+        "FLL": 2
+      }
+    },
+    "pathology": {
+      "total": 10,
+      "topics": {
+        "GIP": 1,
+        "GNC": 1,
+        "CVP": 2,
+        "LVR": 1,
+        "HAM": 2,
+        "IMP": 2,
+        "RNP": 1
+      }
+    },
+    "pediatrics": {
+      "total": 9,
+      "topics": {
+        "GRW": 1,
+        "NEN": 3,
+        "PEM": 1,
+        "PCR": 2,
+        "PGS": 2
+      }
+    },
+    "pharmacology": {
+      "total": 20,
+      "topics": {
+        "CNF": 6,
+        "CVF": 2,
+        "GNP": 5,
+        "ANS": 2,
+        "ACI": 1,
+        "AMI": 3,
+        "ANM": 1
+      }
+    },
+    "physiology": {
+      "total": 7,
+      "topics": {
+        "ENR": 1,
+        "REN": 2,
+        "SPS": 1,
+        "NPH": 1,
+        "GIT": 1,
+        "CVS": 1
+      }
+    },
+    "psychiatry": {
+      "total": 3,
+      "topics": {
+        "MOD": 1,
+        "ANX": 1,
+        "SUB": 1
+      }
+    },
+    "radiology": {
+      "total": 5,
+      "topics": {
+        "RDB": 4,
+        "RDN": 1
+      }
+    },
+    "surgery": {
+      "total": 14,
+      "topics": {
+        "GNS": 3,
+        "GIS": 4,
+        "PDS": 1,
+        "TCC": 4,
+        "URO": 1,
+        "VAS": 1
+      }
     }
   },
   "NEET-PG": {

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "INBC001",
+    "y": 2026,
+    "t": "LIP",
+    "q": "High serum triglycerides are seen in all of the following conditions EXCEPT:",
+    "o": [
+      "High fructose intake",
+      "Diabetes mellitus",
+      "Nephrotic syndrome",
+      "Abetalipoproteinemia"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INBC002",
+    "y": 2026,
+    "t": "MOL",
+    "q": "Ultraviolet (UV) radiation causes DNA damage primarily by which of the following mechanisms?",
+    "o": [
+      "Formation of pyrimidine dimers",
+      "Inhibition of p53",
+      "Deamination of cytosine",
+      "Increase in cyclins"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC003",
+    "y": 2026,
+    "t": "PRO",
+    "q": "Which vitamin-derived coenzyme is required for a transamination reaction?",
+    "o": [
+      "Thiamine (Vitamin B1)",
+      "Pyridoxine (Vitamin B6)",
+      "FAD (Riboflavin / Vitamin B2)",
+      "NAD (Niacin / Vitamin B3)"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INBC004",
+    "y": 2026,
+    "t": "CAR",
+    "q": "Which of the following enzymes is active in its dephosphorylated state?",
+    "o": [
+      "Glycogen synthase",
+      "Glycogen phosphorylase",
+      "PFK-2 (phosphofructokinase-2)",
+      "Fructose-2,6-bisphosphatase"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC005",
+    "y": 2026,
+    "t": "CAR",
+    "q": "Which of the following carbohydrates is a NON-reducing sugar and therefore gives a NEGATIVE Benedict’s (and Fehling’s) test?",
+    "o": [
+      "Sucrose",
+      "Maltose",
+      "Lactose",
+      "Glucose"
+    ],
+    "a": 0
+  }
+]

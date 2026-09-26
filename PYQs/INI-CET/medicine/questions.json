@@ -1,0 +1,119 @@
+[
+  {
+    "id": "INGM001",
+    "y": 2026,
+    "t": "NRL",
+    "q": "Among the following neurodegenerative disorders, which one has a distinct (potentially curable) treatment?",
+    "o": [
+      "Pantothenate kinase-associated neurodegeneration (PKAN)",
+      "Wilson disease",
+      "Progressive multifocal leukoencephalopathy (PML)",
+      "PLA2G6-associated neurodegeneration"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM002",
+    "y": 2026,
+    "t": "RHU",
+    "q": "Which cardiac abnormality is most characteristically associated with systemic sclerosis (scleroderma)?",
+    "o": [
+      "Aortic regurgitation (AR)",
+      "Mitral stenosis (MS)",
+      "Pericarditis / pericardial effusion",
+      "Dilated cardiomyopathy (DCM) from myocardial fibrosis"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM003",
+    "y": 2026,
+    "t": "MSM",
+    "q": "Which of the following is the least likely direct cause of falls in the elderly?",
+    "o": [
+      "Balance disturbance",
+      "Rheumatoid arthritis",
+      "Muscle weakness",
+      "Hearing impairment"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM004",
+    "y": 2026,
+    "t": "MSM",
+    "q": "Frailty in the elderly is most directly characterised/affected by which of the following?",
+    "o": [
+      "Age",
+      "Sarcopenia",
+      "Male gender",
+      "Gait alone"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM005",
+    "y": 2026,
+    "t": "END",
+    "q": "A patient has symptomatic hypercalcemia due to malignancy. Which of the following is the most appropriate first step in acute management?",
+    "o": [
+      "Administration of bisphosphonates",
+      "Intravenous fluids (isotonic saline volume expansion)",
+      "Loop diuretics",
+      "Find the source of exogenous calcium"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM006",
+    "y": 2026,
+    "t": "MSM",
+    "q": "In refeeding syndrome, which electrolyte abnormality is the most important and characteristic?",
+    "o": [
+      "Hypocalcemia",
+      "Hypophosphatemia",
+      "Hypokalemia",
+      "Hyponatremia"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM007",
+    "y": 2026,
+    "t": "IFD",
+    "q": "A patient with HIV and a CD4 count <40 cells/mm³ presents with a ring- enhancing lesion in the brain on contrast imaging. What is the most likely diagnosis?",
+    "o": [
+      "Lymphoma",
+      "Toxoplasma",
+      "Tuberculosis",
+      "Progressive multifocal leukoencephalopathy (PML)"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM008",
+    "y": 2026,
+    "t": "CAD",
+    "q": "[Image: ECG showing ST-segment elevation in leads II, III and aVF]\nA patient presents with acute chest pain. Which coronary artery is most likely occluded?",
+    "o": [
+      "Right coronary artery (RCA)",
+      "Left anterior descending artery (LAD)",
+      "Left circumflex artery (LCx)",
+      "Left main coronary artery"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM009",
+    "y": 2026,
+    "t": "HML",
+    "q": "In the Ann Arbor staging of Hodgkin lymphoma, a mediastinal mass is designated “bulky” (the X modifier) when its maximum width exceeds what proportion of the intrathoracic diameter on chest radiograph?",
+    "o": [
+      "Greater than one-third (>1/3) of the maximum intrathoracic diameter",
+      "Greater than one-half (>1/2) of the maximum intrathoracic diameter",
+      "Greater than one-quarter (>1/4) of the maximum intrathoracic diameter",
+      "Greater than two-thirds (>2/3) of the maximum intrathoracic diameter"
+    ],
+    "a": 0
+  }
+]

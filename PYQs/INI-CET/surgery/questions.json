@@ -1,0 +1,184 @@
+[
+  {
+    "id": "INGS001",
+    "y": 2026,
+    "t": "GNS",
+    "q": "In laparoscopic (TAPP/TEP) inguinal hernia repair, what is the minimum distance of dissection below the inguinal ligament required to adequately expose the entire myopectineal orifice of Fruchaud?",
+    "o": [
+      "0.5 cm",
+      "1 cm",
+      "2 cm",
+      "10 cm"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGS002",
+    "y": 2026,
+    "t": "GIS",
+    "q": "Which clinical feature best differentiates mechanical small intestinal obstruction from paralytic ileus?",
+    "o": [
+      "Colicky pain",
+      "Tachycardia",
+      "Abdominal distension",
+      "Vomiting"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS003",
+    "y": 2026,
+    "t": "PDS",
+    "q": "[Image: Bilateral defect of the upper lip with associated nasal deformity, with clefts on both sides of the midline and an isolated central segment]\nIdentify the facial anomaly depicted.",
+    "o": [
+      "Bilateral cleft lip",
+      "Midline cleft lip",
+      "Cleft palate",
+      "Oblique facial cleft"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS004",
+    "y": 2026,
+    "t": "GIS",
+    "q": "Total Mesorectal Excision (TME), the standard operation for rectal cancer, is best described as:",
+    "o": [
+      "Excision of only the peritumoral fat",
+      "Sharp dissection of the entire mesorectum as a single intact unit",
+      "Blunt dissection of the mesorectum",
+      "Ligation of the internal iliac artery"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS005",
+    "y": 2026,
+    "t": "TCC",
+    "q": "In the modern trauma resuscitation protocol used for a patient with exsanguinating external hemorrhage, what is the correct order of priorities?",
+    "o": [
+      "Catastrophic hemorrhage control to Airway to Breathing to Circulation to Disability to Exposure (C-ABCDE)",
+      "Airway to Breathing to Circulation to Disability to Exposure (ABCDE)",
+      "Circulation to Airway to Breathing to Disability to Exposure (CABDE)",
+      "Disability to Airway to Breathing to Circulation to Exposure"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS006",
+    "y": 2026,
+    "t": "URO",
+    "q": "A prostate biopsy reports a Gleason score of 4+4. Which ISUP/WHO Grade Group does this correspond to?",
+    "o": [
+      "Grade Group 1",
+      "Grade Group 2",
+      "Grade Group 3",
+      "Grade Group 4"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGS007",
+    "y": 2026,
+    "t": "GIS",
+    "q": "All of the following are sphincter-preserving surgical techniques for anal fistula EXCEPT:",
+    "o": [
+      "LIFT (Ligation of Intersphincteric Fistula Tract)",
+      "FiLaC (Fistula-tract Laser Closure)",
+      "VAAFT (Video-Assisted Anal Fistula Treatment)",
+      "Fistulectomy"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGS008",
+    "y": 2026,
+    "t": "TCC",
+    "q": "The \"lethal triad\" (deadly triad) associated with massive blood transfusion classically comprises hypothermia, coagulopathy and acidosis. Which of the following is NOT a component of this classic lethal triad?",
+    "o": [
+      "Hyperkalemia",
+      "Coagulopathy",
+      "Hypothermia",
+      "Hypocalcemia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS009",
+    "y": 2026,
+    "t": "GIS",
+    "q": "[Image: Ultrasound with colour Doppler showing a non-compressible, blind-ending tubular structure over 6 mm in diameter with a target (bull's-eye) pattern, peri-appendiceal fluid, and increased colour-Doppler flow in the wall]\nA patient presents with right iliac fossa (RIF) pain of 48 hours' duration. What is the most appropriate next step in management?",
+    "o": [
+      "Surgery (appendicectomy)",
+      "CECT abdomen",
+      "USG-guided drainage",
+      "Conservative management with antibiotics only"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS010",
+    "y": 2026,
+    "t": "GNS",
+    "q": "When should a prophylactic antibiotic be administered before elective entry into the GI tract (e.g., elective cholecystectomy)?",
+    "o": [
+      "Within 1 hour before incision",
+      "4 hours before incision",
+      "6 hours before incision",
+      "At the time of skin closure"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS011",
+    "y": 2026,
+    "t": "TCC",
+    "q": "According to the AAST (American Association for the Surgery of Trauma) Colon Injury Scale, a laceration involving more than 50% of the bowel circumference (without transection) corresponds to which grade?",
+    "o": [
+      "Grade I",
+      "Grade II",
+      "Grade III",
+      "Grade IV"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGS012",
+    "y": 2026,
+    "t": "TCC",
+    "q": "A trauma patient opens his eyes only to painful stimulus, makes incomprehensible sounds, and localises to pain. What is his total Glasgow Coma Scale (GCS) score?",
+    "o": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS013",
+    "y": 2026,
+    "t": "VAS",
+    "q": "An elderly man with a history of atrial fibrillation presents with sudden severe abdominal pain that is out of proportion to physical findings. Which laboratory finding most strongly supports the diagnosis of acute mesenteric ischemia?",
+    "o": [
+      "Raised serum lactate (and LDH)",
+      "Raised serum amylase only",
+      "Hypocalcaemia",
+      "Raised serum bilirubin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS014",
+    "y": 2026,
+    "t": "GNS",
+    "q": "A post-splenectomy patient is at greatest risk of overwhelming sepsis from which organism?",
+    "o": [
+      "Streptococcus pneumoniae",
+      "Staphylococcus aureus",
+      "Escherichia coli",
+      "Pseudomonas aeruginosa"
+    ],
+    "a": 0
+  }
+]

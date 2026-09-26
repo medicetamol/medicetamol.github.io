@@ -1,0 +1,41 @@
+[
+  {
+    "id": "INPS001",
+    "y": 2026,
+    "t": "MOD",
+    "q": "A divorced, alcoholic man with major depression presents stating, \"What is the point in living?\" What is the most appropriate next step in management?",
+    "o": [
+      "Hospitalize",
+      "Cognitive behavioural therapy (CBT)",
+      "Antidepressant",
+      "Reassure that it is a normal part of life"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPS002",
+    "y": 2026,
+    "t": "ANX",
+    "q": "Which of the following statements best describes classical conditioning?",
+    "o": [
+      "Unconditioned stimulus producing an unconditioned response",
+      "Conditioned stimulus producing a conditioned response",
+      "Association between a conditioned stimulus and a conditioned response",
+      "Association between an unconditioned stimulus and an unconditioned response"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPS003",
+    "y": 2026,
+    "t": "SUB",
+    "q": "A chronic alcoholic with thiamine deficiency develops a memory disturbance in which he is unable to form new memories, though older memories are relatively preserved. This Korsakoff syndrome is characterised by which type of memory deficit?",
+    "o": [
+      "Anterograde amnesia",
+      "Retrograde amnesia",
+      "Transient global amnesia",
+      "Dissociative amnesia"
+    ],
+    "a": 0
+  }
+]

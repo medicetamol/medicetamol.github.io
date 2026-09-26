@@ -1,0 +1,145 @@
+[
+  {
+    "id": "INCM001",
+    "y": 2026,
+    "t": "EPI",
+    "q": "A propagated (progressive) epidemic showing multiple peaks separated by the incubation period is characteristically seen in which of the following diseases?",
+    "o": [
+      "Measles",
+      "Staphylococcal food poisoning",
+      "Typhoid fever (common-source)",
+      "Salmonella food poisoning (salmonellosis)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM002",
+    "y": 2026,
+    "t": "NHP",
+    "q": "Under the RMNCAH+ (Reproductive, Maternal, Newborn, Child and Adolescent Health) framework, districts are colour-coded for performance. Which of the following indicators, when meeting the stated criterion, would be marked as a RED card (poor performance)?",
+    "o": [
+      "IMR less than 20%",
+      "TFR more than 20%",
+      "MMR <20%",
+      "Children receiving healthcare <20%"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INCM003",
+    "y": 2026,
+    "t": "FPD",
+    "q": "The Pearl Index, used to express contraceptive failure rate, is defined as:",
+    "o": [
+      "Number of accidental pregnancies per woman year",
+      "Number of accidental pregnancies per 100 woman-years of exposure",
+      "Number of pregnancies over number of losses per 100 woman-years",
+      "Number of accidental pregnancies per 1000 women per year"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INCM004",
+    "y": 2026,
+    "t": "EPI",
+    "q": "If X percent of stroke in a population is attributable to hypertension, and removing hypertension from the population would prevent this proportion of strokes, this scenario is an example of:",
+    "o": [
+      "Relative risk",
+      "Attributable risk",
+      "Population attributable risk",
+      "Odds ratio"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM005",
+    "y": 2026,
+    "t": "EPI",
+    "q": "In a meta-analysis, assessing heterogeneity (e.g. using the statistic or Cochran's Q test):",
+    "o": [
+      "Evaluates the variation between the included studies",
+      "Detects publication bias directly",
+      "Measures confounding within a single study",
+      "Quantifies the precision of an individual study"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM006",
+    "y": 2026,
+    "t": "VAC",
+    "q": "Regarding the HPV vaccine, which of the following statements is INCORRECT?",
+    "o": [
+      "It guarantees 100% complete protection against cervical cancer",
+      "The primary target group for vaccination is girls aged 9-14 years",
+      "A single-dose schedule is now endorsed by WHO and national guidelines for the targeted age group",
+      "It is highly immunogenic, with high seroconversion rates in the target age group"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM007",
+    "y": 2026,
+    "t": "EPI",
+    "q": "A researcher plots the average per-capita alcohol intake of 10 different countries against the cirrhosis mortality rate of each of those countries, using one data point per country, to look for an association. Which type of epidemiological study design does this represent?",
+    "o": [
+      "Ecological study",
+      "Cohort study",
+      "Case-control study",
+      "Cross-sectional study"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM008",
+    "y": 2026,
+    "t": "EPI",
+    "q": "In a case-control study, among the cases there are 60 exposed and 20 unexposed individuals, while among the controls there are 40 exposed and 80 unexposed individuals. What is the odds ratio of exposure?",
+    "o": [
+      "6",
+      "3",
+      "1.5",
+      "0.17"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM009",
+    "y": 2026,
+    "t": "EPI",
+    "q": "A new screening test is applied. It yields 90 true positives and 50 false positives. What is the positive predictive value (PPV) of the test?",
+    "o": [
+      "64.3%",
+      "90%",
+      "50%",
+      "35.7%"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM010",
+    "y": 2026,
+    "t": "VAC",
+    "q": "An influenza vaccine shows 90% efficacy in a randomized controlled trial but only 85% performance when used in the routine community programme. Which value represents the effectiveness of the vaccine?",
+    "o": [
+      "85% (performance in real-world field conditions)",
+      "90% (performance in the ideal trial setting)",
+      "5% (difference between the two values)",
+      "87.5% (average of the two values)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM011",
+    "y": 2026,
+    "t": "VAC",
+    "q": "An influenza vaccine is evaluated in a well-conducted randomized controlled trial and again during routine community use. The trial value is 90% and the field value is 85%. Which value represents the efficacy of the vaccine?",
+    "o": [
+      "90% (performance in the ideal trial setting)",
+      "85% (performance in real-world field conditions)",
+      "5% (difference between the two values)",
+      "87.5% (average of the two values)"
+    ],
+    "a": 0
+  }
+]

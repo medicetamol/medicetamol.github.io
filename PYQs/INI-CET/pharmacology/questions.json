@@ -1,0 +1,262 @@
+[
+  {
+    "id": "INPM001",
+    "y": 2026,
+    "t": "CNF",
+    "q": "Lamotrigine is a broad-spectrum antiepileptic. For which of the following seizure types is lamotrigine particularly useful and a recognised first/adjunctive choice?",
+    "o": [
+      "Generalised tonic-clonic seizures (GTCS)",
+      "Myoclonic seizures",
+      "Absence seizures",
+      "Atonic seizures"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM002",
+    "y": 2026,
+    "t": "CVF",
+    "q": "Cilnidipine is unique among dihydropyridine calcium channel blockers in not causing reflex tachycardia. This is because, in addition to L-type channels, it also blocks which type of voltage-gated calcium channel located on sympathetic nerve endings?",
+    "o": [
+      "T-type",
+      "R-type",
+      "N-type",
+      "L-type"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPM003",
+    "y": 2026,
+    "t": "GNP",
+    "q": "All of the following are ligand-gated ion channel (ionotropic) receptors EXCEPT:",
+    "o": [
+      "5-HT3 receptor",
+      "Nicotinic acetylcholine receptor",
+      "GABA-A receptor",
+      "Histamine H2 receptor"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPM004",
+    "y": 2026,
+    "t": "ANS",
+    "q": "Regarding nicotine replacement therapy (NRT), which of the following statements is correct?",
+    "o": [
+      "Acidic foods/beverages should be avoided for about 15 minutes before using nicotine gum or lozenge",
+      "Nicotine gum delivers more nicotine than an equivalent lozenge",
+      "Varenicline carries a black box warning for cardiovascular risk",
+      "Swallowed nicotine is well absorbed from the gastrointestinal tract"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM005",
+    "y": 2026,
+    "t": "GNP",
+    "q": "Which of the following receptors is coupled to the stimulatory G protein (Gs)?",
+    "o": [
+      "M2 muscarinic receptor",
+      "M1 muscarinic receptor",
+      "Beta-adrenergic receptor",
+      "Alpha-2-adrenergic receptor"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPM006",
+    "y": 2026,
+    "t": "ACI",
+    "q": "Match each targeted anticancer drug with its molecular target. Which of the following pairings is entirely correct?",
+    "o": [
+      "Sunitinib - c-KIT/VEGFR; Nilotinib - BCR-ABL; Trastuzumab - HER2; Gefitinib - EGFR",
+      "Sunitinib - HER2; Nilotinib - EGFR; Trastuzumab - BCR-ABL; Gefitinib - c-KIT",
+      "Sunitinib - BCR-ABL; Nilotinib - c-KIT; Trastuzumab - EGFR; Gefitinib - HER2",
+      "Sunitinib - EGFR; Nilotinib - HER2; Trastuzumab - c-KIT; Gefitinib - BCR-ABL"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM007",
+    "y": 2026,
+    "t": "GNP",
+    "q": "Regarding anti-ageing/longevity drugs and their molecular targets, which of the following pairs is incorrectly matched?",
+    "o": [
+      "Rapamycin - mTOR inhibitor",
+      "Metformin - AMPK activator",
+      "Resveratrol - Sirtuin (SIRT1) activator",
+      "Spermidine - decreases autophagy"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPM008",
+    "y": 2026,
+    "t": "CNF",
+    "q": "A child with Dravet syndrome is started on fenfluramine for seizure control. Which of the following must be specifically monitored during therapy?",
+    "o": [
+      "Cardiovascular status (echocardiography for valvulopathy/pulmonary hypertension)",
+      "Agranulocytosis",
+      "Hepatic failure",
+      "Renal failure"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM009",
+    "y": 2026,
+    "t": "AMI",
+    "q": "Which of the following antifungal agents is NOT effective for the treatment of mucormycosis?",
+    "o": [
+      "Isavuconazole",
+      "Posaconazole",
+      "Voriconazole",
+      "Amphotericin B"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPM010",
+    "y": 2026,
+    "t": "ANS",
+    "q": "In organophosphate (OP) poisoning, which drug reverses the inhibited activity of acetylcholinesterase (AChE)?",
+    "o": [
+      "Atropine",
+      "Pralidoxime",
+      "Flumazenil",
+      "Naloxone"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPM011",
+    "y": 2026,
+    "t": "CVF",
+    "q": "Which of the following statements about ticagrelor is TRUE?",
+    "o": [
+      "It is a reversible P2Y12 receptor inhibitor",
+      "It is a prodrug requiring hepatic activation",
+      "It causes more cerebral bleeding than clopidogrel",
+      "It is given once daily"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM012",
+    "y": 2026,
+    "t": "GNP",
+    "q": "From the quantal dose-response curves shown, the median toxic dose is 400 mg and the median effective dose is 100 mg. Calculate the therapeutic index. (Refer to the figure.)",
+    "o": [
+      "4",
+      "0.25",
+      "1",
+      "500"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM013",
+    "y": 2026,
+    "t": "CNF",
+    "q": "Which adverse effect is most characteristically associated with the antiepileptic drug lamotrigine?",
+    "o": [
+      "Severe cutaneous reactions including Stevens-Johnson syndrome / dizziness",
+      "Marked dose-independent hepatotoxicity",
+      "Gingival hyperplasia",
+      "Irreversible visual field constriction"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM014",
+    "y": 2026,
+    "t": "CNF",
+    "q": "Which of the following is a novel (newer) antidepressant that acts as a serotonin partial agonist and reuptake inhibitor (SPARI)?",
+    "o": [
+      "Vilazodone",
+      "Trazodone",
+      "Imipramine",
+      "Amitriptyline"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM015",
+    "y": 2026,
+    "t": "CNF",
+    "q": "What is the specific antidote used in acute opioid (e.g. heroin, morphine) poisoning?",
+    "o": [
+      "Naloxone",
+      "Flumazenil",
+      "Atropine",
+      "N-acetylcysteine"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM016",
+    "y": 2026,
+    "t": "GNP",
+    "q": "The plasma drug-concentration versus time curve shown declines such that the half-life remains constant regardless of the starting concentration, and a constant fraction of drug is eliminated per unit time. This pattern best represents which type of elimination kinetics?",
+    "o": [
+      "First-order kinetics",
+      "Zero-order kinetics",
+      "Michaelis-Menten (saturation) kinetics at saturating dose",
+      "Mixed-order kinetics"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM017",
+    "y": 2026,
+    "t": "AMI",
+    "q": "Pretomanid, a nitroimidazole used in the BPaL/BPaLM regimen for drug-resistant tuberculosis, acts mainly by which mechanism?",
+    "o": [
+      "Inhibition of mycolic acid synthesis (and generation of reactive nitrogen species), impairing cell-wall formation and anaerobic respiration",
+      "Inhibition of the RNA polymerase beta-subunit (rpoB)",
+      "Inhibition of mycobacterial ATP synthase",
+      "Inhibition of DNA gyrase (topoisomerase II)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM018",
+    "y": 2026,
+    "t": "AMI",
+    "q": "Which class of antibiotics characteristically shows concentration-dependent killing?",
+    "o": [
+      "Aminoglycosides",
+      "Beta-lactams (penicillins)",
+      "Glycopeptides (vancomycin)",
+      "Macrolides (erythromycin)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM019",
+    "y": 2026,
+    "t": "ANM",
+    "q": "Which is the most characteristic cardiovascular effect of the inhalational anaesthetic halothane?",
+    "o": [
+      "Dose-dependent fall in cardiac output and blood pressure (often a 20-30 mm Hg drop) from myocardial depression",
+      "Increase in cardiac output with reflex tachycardia",
+      "Rise in systemic vascular resistance with hypertension",
+      "No measurable effect on cardiac output or blood pressure"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM020",
+    "y": 2026,
+    "t": "CNF",
+    "q": "A patient is brought to the emergency department with pin-point pupils, depressed respiration, and a reduced level of consciousness following suspected opioid (e.g., morphine/heroin) overdose. Which drug is the specific antidote?",
+    "o": [
+      "Naloxone",
+      "Flumazenil",
+      "Atropine",
+      "N-acetylcysteine"
+    ],
+    "a": 0
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "INRD001",
+    "y": 2026,
+    "t": "RDB",
+    "q": "According to ACR guidelines, a Group II gadolinium-based contrast agent (lowest risk of nephrogenic systemic fibrosis) can be safely administered in which of the following?",
+    "o": [
+      "A patient with GFR <50 mL/min/1.73m²",
+      "A 30-year-old with no renal function test done",
+      "A 60-year-old with no renal function test done",
+      "A child with normal renal function"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD002",
+    "y": 2026,
+    "t": "RDB",
+    "q": "A 12-year-old child presents with an uncomplicated upper respiratory tract infection (URTI). What is the most appropriate next radiological investigation?",
+    "o": [
+      "No radiological investigation",
+      "HRCT chest",
+      "CECT chest",
+      "Chest X-ray"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD003",
+    "y": 2026,
+    "t": "RDB",
+    "q": "A Group II gadolinium-based contrast agent (per ACR/RCR guidance, lowest risk of nephrogenic systemic fibrosis) can be safely administered in which of the following patients?",
+    "o": [
+      "A patient with GFR <50 mL/min/1.73m²",
+      "A 30-year-old with no renal function test done",
+      "A 60-year-old with no renal function test done",
+      "A patient with normal renal function tests"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD004",
+    "y": 2026,
+    "t": "RDB",
+    "q": "A 12-year-old child presents with an uncomplicated upper respiratory tract infection (URTI). What should be the next step regarding radiological imaging?",
+    "o": [
+      "No radiological investigation",
+      "HRCT chest",
+      "CECT chest",
+      "Chest X-ray"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD005",
+    "y": 2026,
+    "t": "RDN",
+    "q": "A 70-year-old man with a past history of pulmonary tuberculosis, currently on anti-tubercular therapy (ATT), presents with back pain. An MRI of the spine is performed and shows a vertebral lesion. What is the next investigation of choice to reach a definitive diagnosis?",
+    "o": [
+      "Mantoux test",
+      "Biopsy",
+      "Serum protein electrophoresis",
+      "CT chest"
+    ],
+    "a": 1
+  }
+]

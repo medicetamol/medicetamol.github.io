@@ -1,0 +1,15 @@
+[
+  {
+    "id": "INOP001",
+    "y": 2026,
+    "t": "RFQ",
+    "q": "What is the approximate amplitude (power) of accommodation in a 7-year-old child?",
+    "o": [
+      "+14 D",
+      "+10 D",
+      "+5 D",
+      "+2 D"
+    ],
+    "a": 0
+  }
+]

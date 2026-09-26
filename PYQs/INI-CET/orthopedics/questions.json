@@ -1,0 +1,54 @@
+[
+  {
+    "id": "INOR001",
+    "y": 2026,
+    "t": "FRG",
+    "q": "[Image: X-ray of the limb showing a long-bone fracture]\nA young adult sustains chest trauma with haemodynamic instability and bilateral femur and tibia fractures. Once the patient has been resuscitated and is haemodynamically stabilized, what is the most appropriate definitive management of the fractures?",
+    "o": [
+      "Intramedullary nailing of both femurs and external fixation of the tibiae",
+      "Plating of the tibiae and external fixation of the femurs",
+      "Nailing / plating / external fixation chosen by whichever procedure the surgeon can perform fastest",
+      "External fixation of both femurs and both tibiae"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOR002",
+    "y": 2026,
+    "t": "FRG",
+    "q": "A young adult presents with chest trauma, haemodynamic instability and fractures of bilateral femur and tibia. After the patient has been resuscitated and rendered haemodynamically stable, what is the most appropriate definitive management of the long-bone fractures?",
+    "o": [
+      "Intramedullary nailing of the femurs and external fixation of the tibiae",
+      "Plating of the tibiae and external fixation of the femurs",
+      "Nailing / plating / external fixation as per whichever procedure the surgeon can perform fastest",
+      "External fixation of both femurs and both tibiae"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOR003",
+    "y": 2026,
+    "t": "FLL",
+    "q": "[Image: AP X-ray of both lower limbs showing bowing of one leg compared with the other]\nWhat is the most likely cause of unilateral genu varum (bow-leg deformity of one leg) in a patient with a history of a previous injury to that limb?",
+    "o": [
+      "Malunion of a previous fracture",
+      "Rickets",
+      "Non-ossifying fibroma",
+      "Osteofibrous dysplasia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOR004",
+    "y": 2026,
+    "t": "FLL",
+    "q": "[Image: Sagittal fat-saturated ankle MRI showing discontinuity of the Achilles tendon]\nAn athlete presents with sudden pain in the back of the ankle after a push-off, with weakness of plantarflexion. Imaging suggests Achilles tendon rupture. Which of the following is the relevant clinical finding/sign for this condition?",
+    "o": [
+      "Positive Thompson (Simmonds) test",
+      "Positive McMurray test",
+      "Steroid injection",
+      "Plaster cast immobilisation"
+    ],
+    "a": 0
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "INOG001",
+    "y": 2026,
+    "t": "PLF",
+    "q": "On defecography, a rectocele is considered significant when the anterior bulging of the rectal wall into the posterior vaginal wall exceeds:",
+    "o": [
+      "1 cm",
+      "2 cm",
+      "5 cm",
+      "7 cm"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOG002",
+    "y": 2026,
+    "t": "MNA",
+    "q": "Which of the following correctly matches a gynaecological cause of amenorrhoea with its mechanism?",
+    "o": [
+      "Asherman syndrome - intrauterine adhesions (endometrial scarring after curettage)",
+      "PCOD - hypogonadotropic hypogonadism with low LH",
+      "Sheehan syndrome - primary ovarian (gonadal) failure",
+      "Premature ovarian failure (POF) - outflow tract obstruction with normal FSH"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG003",
+    "y": 2026,
+    "t": "FTP",
+    "q": "Which of the following is NOT a complication of a monochorionic diamniotic (MCDA) twin pregnancy?",
+    "o": [
+      "Cord entanglement",
+      "Selective fetal growth restriction (sFGR)",
+      "Congenital deformities",
+      "Need for first-trimester medical termination of pregnancy (MTP)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG004",
+    "y": 2026,
+    "t": "PPP",
+    "q": "A woman develops a painful, tense, fluctuant swelling in the vulvovaginal region following a forceps delivery, along with difficulty in passing urine. The most likely diagnosis is:",
+    "o": [
+      "Vulvovaginal hematoma",
+      "Urethral diverticulum",
+      "Cervical tear",
+      "Local infection / abscess"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG005",
+    "y": 2026,
+    "t": "NPA",
+    "q": "Which of the following is a probable sign of pregnancy?",
+    "o": [
+      "Hegar sign",
+      "Braxton Hicks contractions",
+      "Osiander sign",
+      "Goodell sign"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INOG006",
+    "y": 2026,
+    "t": "HRP",
+    "q": "In a woman at high risk because of a past history of pre-eclampsia, which is the best method to prevent pre-eclampsia in the current pregnancy?",
+    "o": [
+      "Low-dose aspirin started from 12 weeks of gestation",
+      "Aspirin combined with low-molecular-weight heparin (LMWH)",
+      "Strict salt (sodium) restriction",
+      "Calcium supplementation"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG007",
+    "y": 2026,
+    "t": "LBD",
+    "q": "In the management of shoulder dystocia, after calling for help the first/next manoeuvre to be performed is:",
+    "o": [
+      "McRoberts manoeuvre (with suprapubic pressure)",
+      "Zavanelli manoeuvre",
+      "Wood's corkscrew manoeuvre",
+      "Symphysiotomy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG008",
+    "y": 2026,
+    "t": "IFR",
+    "q": "A phenotypic female presents with primary amenorrhoea, an absent uterus, normally developed breasts and sparse/absent pubic and axillary hair. What is the most likely diagnosis?",
+    "o": [
+      "Androgen insensitivity syndrome (complete AIS)",
+      "Mayer-Rokitansky-Küster-Hauser (MRKH) syndrome",
+      "Turner syndrome (45,XO)",
+      "Kallmann syndrome"
+    ],
+    "a": 0
+  }
+]

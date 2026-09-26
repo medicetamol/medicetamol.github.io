@@ -1,0 +1,28 @@
+[
+  {
+    "id": "INEN001",
+    "y": 2026,
+    "t": "LRY",
+    "q": "The posterior cricoarytenoid (PCA) muscle of the larynx is the only muscle that performs which action on the vocal cords?",
+    "o": [
+      "Abduction (opening) of the vocal cords",
+      "Adduction (closing) of the vocal cords",
+      "Tensing (lengthening) of the vocal cords",
+      "Relaxation (shortening) of the vocal cords"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INEN002",
+    "y": 2026,
+    "t": "EAR",
+    "q": "Sudden sensorineural hearing loss (SSNHL) is defined as >= 30 dB of SNHL over at least three contiguous frequencies developing within 3 days. What is the mainstay of treatment?",
+    "o": [
+      "Corticosteroids (systemic, with intratympanic steroids as salvage)",
+      "Oral antiviral therapy alone",
+      "Immediate cochlear implantation",
+      "Broad-spectrum intravenous antibiotics"
+    ],
+    "a": 0
+  }
+]

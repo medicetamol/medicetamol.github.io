@@ -1,0 +1,119 @@
+[
+  {
+    "id": "INMB001",
+    "y": 2026,
+    "t": "BAC",
+    "q": "Regarding Extended-Spectrum Beta-Lactamase (ESBL)-producing organisms, which of the following statements are TRUE?",
+    "o": [
+      "Carbapenems can be used for treatment",
+      "Resistance is plasmid-transmitted",
+      "Piperacillin-tazobactam is the reliable drug of choice",
+      "Third-generation cephalosporins can be used"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB002",
+    "y": 2026,
+    "t": "GEN",
+    "q": "Which bacterium possesses two circular chromosomes?",
+    "o": [
+      "Escherichia coli",
+      "Vibrio cholerae",
+      "Mycobacterium tuberculosis",
+      "Mycoplasma genitalium"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INMB003",
+    "y": 2026,
+    "t": "MYC",
+    "q": "A middle-aged woman from Assam presents with chronic cough, fever, weight loss and cavitary lung lesions. Lung biopsy shows granulomatous inflammation with caseous necrosis and histiocyte-rich infiltrates. Which of the following should be strongly considered in the differential diagnosis?",
+    "o": [
+      "Sarcoidosis",
+      "Aspergillosis",
+      "Histoplasmosis",
+      "Granulomatosis with polyangiitis"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INMB004",
+    "y": 2026,
+    "t": "BAC",
+    "q": "Which of the following are advantages/benefits of non-treponemal tests (e.g., VDRL, RPR) in the diagnosis and follow-up of syphilis? (Select all that apply)",
+    "o": [
+      "They can be used to monitor response to treatment",
+      "A standard dilution is used",
+      "They remain positive for life",
+      "They are quantitative"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB005",
+    "y": 2026,
+    "t": "BAC",
+    "q": "Which of the following bacterial toxins acts by inhibiting elongation factor 2 (EF- 2)?",
+    "o": [
+      "Diphtheria toxin",
+      "Cholera toxin",
+      "Tetanospasmin",
+      "Heat-labile toxin of E. coli"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB006",
+    "y": 2026,
+    "t": "BAC",
+    "q": "A patient presents with septic arthritis. Culture grows a Gram-positive coccus that is catalase positive and cefoxitin sensitive. What is the drug of choice?",
+    "o": [
+      "Cloxacillin",
+      "Penicillin",
+      "Vancomycin",
+      "Linezolid"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB007",
+    "y": 2026,
+    "t": "MYC",
+    "q": "A poorly controlled diabetic patient presents with facial pain and a black eschar over the nasal/palatal region. Which organism is most likely responsible?",
+    "o": [
+      "Rhizopus species (mucormycosis)",
+      "Aspergillus species",
+      "Candida species",
+      "Cryptococcus neoformans"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB008",
+    "y": 2026,
+    "t": "BAC",
+    "q": "In Bacillus anthracis, the poly-D-glutamic acid (poly- -D-glutamate) capsule is encoded by which plasmid?",
+    "o": [
+      "pXO1 (toxin plasmid)",
+      "pXO2 (capsule plasmid)",
+      "Chromosomal genes only",
+      "pXO1 and pXO2 jointly"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INMB009",
+    "y": 2026,
+    "t": "PAR",
+    "q": "What is the mode of infection (route of entry into the human host) of Necator americanus (New World hookworm)?",
+    "o": [
+      "Skin penetration by filariform larvae",
+      "Ingestion of embryonated eggs",
+      "Bite of an infected female sandfly",
+      "Ingestion of undercooked pork containing cysts"
+    ],
+    "a": 0
+  }
+]

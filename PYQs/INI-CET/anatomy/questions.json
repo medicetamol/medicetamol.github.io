@@ -1,0 +1,93 @@
+[
+  {
+    "id": "INAN001",
+    "y": 2026,
+    "t": "HIS",
+    "q": "Which of the following intercellular junctions seals the paracellular space and is classified as a tight (occluding) junction?",
+    "o": [
+      "Fascia adherens",
+      "Desmosome (macula adherens)",
+      "Gap junction",
+      "Zonula occludens"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INAN002",
+    "y": 2026,
+    "t": "NEU",
+    "q": "Lesion at which site is associated with impaired emotional prosody (loss of emotional tone/melody of speech)?",
+    "o": [
+      "Cingulate gyrus",
+      "Superior temporal gyrus",
+      "Parietal lobe",
+      "Precentral gyrus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN003",
+    "y": 2026,
+    "t": "NEU",
+    "q": "Neuropraxia (the mildest grade of nerve injury) is best described as:",
+    "o": [
+      "A reversible physiological conduction block with intact axon",
+      "Cut/disruption of the endoneurium",
+      "Cut/disruption of the nerve sheath (epineurium)",
+      "Complete transection of the whole nerve trunk"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN004",
+    "y": 2026,
+    "t": "NEU",
+    "q": "Neurapraxia is best described as:",
+    "o": [
+      "Physiological conduction block with intact axon",
+      "Endoneurium and axon cut",
+      "Nerve sheath (perineurium) cut",
+      "Complete transection of the whole nerve trunk"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN005",
+    "y": 2026,
+    "t": "NEU",
+    "q": "Hand-eye coordination, integration of visual and somatosensory information, and spatial awareness are mainly functions of which lobe of the cerebral cortex?",
+    "o": [
+      "Parietal lobe",
+      "Frontal lobe",
+      "Occipital lobe",
+      "Temporal lobe"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN006",
+    "y": 2026,
+    "t": "ABP",
+    "q": "The inguinal ligament (Poupart’s ligament), forming the floor of the inguinal canal, is a modification of the lower border of the aponeurosis of which muscle?",
+    "o": [
+      "External oblique muscle of the abdomen",
+      "Internal oblique muscle of the abdomen",
+      "Transversus abdominis muscle",
+      "Rectus abdominis muscle"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN007",
+    "y": 2026,
+    "t": "THX",
+    "q": "An inhaled foreign body more commonly lodges in the right main bronchus than the left. Which set of features of the right main bronchus BEST explains this tendency?",
+    "o": [
+      "It is wider, shorter and more vertical (in line with the trachea), and the right lung has three lobes",
+      "It is narrower, longer and more horizontal, and the right lung has two lobes",
+      "It is wider but more horizontal, and the right lung has two lobes",
+      "It is narrower and more vertical, and the right lung has three lobes"
+    ],
+    "a": 0
+  }
+]

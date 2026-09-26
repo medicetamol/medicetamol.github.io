@@ -1,0 +1,119 @@
+[
+  {
+    "id": "INPD001",
+    "y": 2026,
+    "t": "GRW",
+    "q": "A 20-month-old child says only one word and is otherwise developmentally normal in motor and social domains. What is the most appropriate next step?",
+    "o": [
+      "Reassure the parents",
+      "Speech and hearing evaluation",
+      "Diagnose as autism",
+      "Reassess at 5 years of age"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD002",
+    "y": 2026,
+    "t": "NEN",
+    "q": "A 6-week-old infant presents with bacterial meningitis. Which organism is the most likely cause?",
+    "o": [
+      "Staphylococcus aureus",
+      "Streptococcus pneumoniae",
+      "Haemophilus influenzae",
+      "Listeria monocytogenes"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPD003",
+    "y": 2026,
+    "t": "PEM",
+    "q": "A neonate presents with prolonged jaundice and an umbilical hernia. The most likely diagnosis is:",
+    "o": [
+      "Down syndrome",
+      "Congenital hypothyroidism",
+      "Cerebral palsy",
+      "Biliary atresia"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD004",
+    "y": 2026,
+    "t": "PCR",
+    "q": "Differential cyanosis (pink upper limbs with cyanosed lower limbs) is characteristically seen in:",
+    "o": [
+      "Patent ductus arteriosus (PDA) with reversal of shunt / Eisenmenger",
+      "Osler-Weber-Rendu syndrome",
+      "Peripheral arterial disease",
+      "Transposition of great arteries (simple)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPD005",
+    "y": 2026,
+    "t": "PGS",
+    "q": "An infant girl shows normal early development followed by regression of acquired milestones at around 6-18 months, with deceleration of head growth and loss of purposeful hand use replaced by stereotyped hand-wringing movements. The most likely diagnosis is:",
+    "o": [
+      "Rett syndrome",
+      "Childhood disintegrative disorder (Heller syndrome)",
+      "Classic autism spectrum disorder",
+      "Attention-deficit/hyperactivity disorder"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPD006",
+    "y": 2026,
+    "t": "PGS",
+    "q": "[Image: Slit-lamp view showing multiple small tan-colored iris nodules; skin photograph showing flat light-brown patches, in a child with neurofibromatosis type 1 (NF1)]\nWhich cutaneous lesion is the earliest and most characteristic feature of NF1?",
+    "o": [
+      "Café-au-lait macules",
+      "Ash-leaf (hypopigmented) macules",
+      "Port-wine stain",
+      "Shagreen patch"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPD007",
+    "y": 2026,
+    "t": "PCR",
+    "q": "Which of the following is NOT a feature of Kawasaki disease?",
+    "o": [
+      "Purulent conjunctivitis",
+      "Bilateral non-exudative conjunctival injection",
+      "Strawberry tongue and cracked lips",
+      "Cervical lymphadenopathy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPD008",
+    "y": 2026,
+    "t": "NEN",
+    "q": "A term neonate has a blood glucose of 36 mg/dL. The infant is feeding well and has no clinical signs. Which characteristic of this neonate favours continued breastfeeding (with monitoring) rather than immediate intravenous dextrose infusion?",
+    "o": [
+      "The neonate is asymptomatic",
+      "The neonate is symptomatic with jitteriness",
+      "The neonate is having seizures",
+      "The neonate is lethargic and not feeding"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPD009",
+    "y": 2026,
+    "t": "NEN",
+    "q": "Transplacental transfer of maternal anti-Ro (SS-A) and anti-La (SS-B) antibodies is most characteristically associated with which neonatal condition?",
+    "o": [
+      "Neonatal lupus erythematosus (with congenital complete heart block)",
+      "Neonatal myasthenia gravis",
+      "Haemolytic disease of the newborn",
+      "Neonatal Graves’ (thyrotoxicosis)"
+    ],
+    "a": 0
+  }
+]

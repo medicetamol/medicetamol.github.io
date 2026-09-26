@@ -1,0 +1,132 @@
+[
+  {
+    "id": "INFM001",
+    "y": 2026,
+    "t": "TOX",
+    "q": "In poisoning with which of the following is central respiratory depression not a feature?",
+    "o": [
+      "Strychnine",
+      "Opium (opioids)",
+      "Barbiturates",
+      "Datura (atropine-type)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM002",
+    "y": 2026,
+    "t": "TOX",
+    "q": "Match the poison with its characteristic feature. Which of the following is correctly matched?",
+    "o": [
+      "Cyanide - bitter almond smell",
+      "Carbon monoxide - cherry red discolouration",
+      "Phosphorus - garlic odour",
+      "Organophosphate - excessive secretions"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM003",
+    "y": 2026,
+    "t": "TRM",
+    "q": "Which of the following is a type of blunt-force mechanical injury produced without a break in the continuity of the skin?",
+    "o": [
+      "Stab wound of the abdomen",
+      "Laceration",
+      "Bomb blast injury",
+      "Contusion"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INFM004",
+    "y": 2026,
+    "t": "SXO",
+    "q": "A 16-year-old girl raped by a neighbour presents at 16 weeks of gestation. Which of the following is NOT a part of her management?",
+    "o": [
+      "Inform the police",
+      "Preserve fetal tissue for DNA analysis",
+      "Take consent from the parents/guardian",
+      "MTP can be done on the opinion of a single doctor"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INFM005",
+    "y": 2026,
+    "t": "TOX",
+    "q": "An Afghan national arriving at the airport is found to have swallowed multiple well-sealed, professionally prepared condoms/packets filled with narcotic drugs for the purpose of international trafficking. This practice is termed:",
+    "o": [
+      "Body packing",
+      "Body stuffing",
+      "Masking",
+      "Body pushing"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM006",
+    "y": 2026,
+    "t": "THA",
+    "q": "[Image: Skin photograph showing a permanent tattoo (ink pigment marking)]\nIn which layer of the skin is the tattoo pigment chiefly deposited and retained?",
+    "o": [
+      "Dermis",
+      "Stratum corneum of the epidermis",
+      "Subcutaneous fat",
+      "Deep fascia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM007",
+    "y": 2026,
+    "t": "TRM",
+    "q": "A firearm wound shows an entry with an abraded collar and a grease (dirt) collar, but there is NO tattooing (no gunpowder stippling), no soot blackening, and no burning around the wound. What is the range of fire?",
+    "o": [
+      "Distant range",
+      "Contact range",
+      "Close range",
+      "Near (intermediate) range"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM008",
+    "y": 2026,
+    "t": "TRM",
+    "q": "A victim of a bomb blast sustains burns to the chest and face caused by the fireball and the heat of the explosion (not by the blast wave, flying fragments, or being thrown against a structure). This burn injury is best classified as which category of blast injury?",
+    "o": [
+      "Quaternary blast injury",
+      "Primary blast injury",
+      "Secondary blast injury",
+      "Tertiary blast injury"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM009",
+    "y": 2026,
+    "t": "TRM",
+    "q": "An entry firearm wound demonstrates an abrasion collar and a grease collar but completely lacks gunpowder tattooing (stippling), soot, and singeing of hair. The most appropriate interpretation of the firing distance is:",
+    "o": [
+      "Distant range",
+      "Contact (tight) range",
+      "Close range",
+      "Intermediate (near) range"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM010",
+    "y": 2026,
+    "t": "TRM",
+    "q": "A characteristic pattern of multiple radiating, brush-like abrasions resembling a bird’s foot (“sparrow-foot” or crow-foot marks) is found on the skin of a deceased. This injury pattern is most characteristic of:",
+    "o": [
+      "Motor vehicle (road traffic) accident",
+      "Fall from height onto a flat surface",
+      "Firearm injury",
+      "Electrocution"
+    ],
+    "a": 0
+  }
+]

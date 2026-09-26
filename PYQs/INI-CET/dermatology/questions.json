@@ -1,0 +1,106 @@
+[
+  {
+    "id": "INDR001",
+    "y": 2026,
+    "t": "BLA",
+    "q": "A 2-day-old neonate presents with blistering/erosive skin lesions over the face and abdomen. There is no fever and no mucosal involvement. The mother has a history of an autoimmune blistering disorder. What is the most likely diagnosis?",
+    "o": [
+      "Neonatal pemphigus from transplacental transfer of maternal antibodies",
+      "Staphylococcal scalded skin syndrome (SSSS)",
+      "Bullous pemphigoid (BP)",
+      "Epidermolysis bullosa (EB)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INDR002",
+    "y": 2026,
+    "t": "BLA",
+    "q": "Match the clinical sign with the correct dermatological condition and select the correctly matched pair(s): (i) Positive Nikolsky sign - Pemphigus vulgaris (ii) Negative/absent Nikolsky sign - Bullous pemphigoid (iii) Pseudo-Nikolsky sign - Stevens-Johnson syndrome / Toxic epidermal necrolysis (iv) Cerebriform tongue - Pemphigus vegetans",
+    "o": [
+      "Positive Nikolsky - Pemphigus vulgaris",
+      "Negative/absent Nikolsky - Bullous pemphigoid",
+      "Pseudo-Nikolsky - Stevens-Johnson syndrome",
+      "Cerebriform tongue - Pemphigus vegetans"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INDR003",
+    "y": 2026,
+    "t": "SKT",
+    "q": "[Image: Irregular black pigmented lesion on the heel/sole]\nWhich is the investigation of choice to establish the diagnosis?",
+    "o": [
+      "Biopsy",
+      "KOH mount",
+      "Gram stain",
+      "Tzanck smear"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INDR004",
+    "y": 2026,
+    "t": "STI",
+    "q": "A patient presents with painful grouped vesicles over the penile/genital region associated with fever and malaise. What is the most likely causative organism?",
+    "o": [
+      "Herpes simplex virus (HSV)",
+      "Haemophilus ducreyi",
+      "Human papillomavirus (HPV)",
+      "Treponema pallidum (Syphilis)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INDR005",
+    "y": 2026,
+    "t": "FVI",
+    "q": "[Image: Scalp lesion]\nThe lesion shown is consistent with tinea capitis. What is the treatment of choice?",
+    "o": [
+      "Oral antifungals",
+      "Antibiotics",
+      "Methotrexate",
+      "Topical steroids"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INDR006",
+    "y": 2026,
+    "t": "FVI",
+    "q": "[Image: Scalp lesion]\nThe clinical photograph shows a scalp lesion consistent with tinea capitis. What is the treatment of choice?",
+    "o": [
+      "Oral antifungals",
+      "Antibiotics",
+      "Methotrexate",
+      "Topical steroids"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INDR007",
+    "y": 2026,
+    "t": "MSD",
+    "q": "An infant presents with intensely itchy erythematous papules and vesicles distributed over the palms, soles and umbilical region, with similar lesions in family members. The most likely diagnosis is:",
+    "o": [
+      "Scabies",
+      "Psoriasis",
+      "Atopic dermatitis",
+      "Seborrhoeic dermatitis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INDR008",
+    "y": 2026,
+    "t": "SKT",
+    "q": "A patient has an irregular black pigmented lesion on the heel/sole suspicious for acral melanoma. The most appropriate confirmatory investigation is:",
+    "o": [
+      "Excisional / full-thickness biopsy with histopathology",
+      "KOH mount / Gram stain",
+      "Tzanck smear",
+      "Wood's lamp examination"
+    ],
+    "a": 0
+  }
+]

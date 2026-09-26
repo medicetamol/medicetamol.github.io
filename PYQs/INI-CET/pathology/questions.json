@@ -1,0 +1,132 @@
+[
+  {
+    "id": "INPT001",
+    "y": 2026,
+    "t": "GIP",
+    "q": "[Image: Lower esophageal mucosa showing columnar (intestinal-type) epithelium with goblet cells replacing the normal stratified squamous epithelium]\nWhich condition does this represent?",
+    "o": [
+      "Barrett's esophagus",
+      "Squamous cell carcinoma",
+      "Adenocarcinoma",
+      "Low grade dysplasia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT002",
+    "y": 2026,
+    "t": "GNC",
+    "q": "Which pedigree pattern best characterises a trait showing INCOMPLETE PENETRANCE?",
+    "o": [
+      "A generation appears skipped - an obligate carrier is unaffected so affected individuals occur in alternate generations",
+      "Only one gender is ever affected",
+      "None of the family members are affected",
+      "Every individual in all generations is affected"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT003",
+    "y": 2026,
+    "t": "CVP",
+    "q": "Which of the following is a classic example of a MEDIUM-vessel vasculitis?",
+    "o": [
+      "Leukocytoclastic (cutaneous small-vessel) vasculitis",
+      "Polyarteritis nodosa (PAN)",
+      "Granulomatosis with polyangiitis (GPA)",
+      "Microscopic polyangiitis (MPA)"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPT004",
+    "y": 2026,
+    "t": "LVR",
+    "q": "Which special stain is used to demonstrate fibrosis (collagen deposition) in a liver biopsy?",
+    "o": [
+      "Masson trichrome",
+      "Periodic acid-Schiff (PAS)",
+      "Gomori methenamine silver (GMS)",
+      "Gram stain"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT005",
+    "y": 2026,
+    "t": "HAM",
+    "q": "Regarding the pathophysiology of beta-thalassemia major, which of the following correctly describes the disease mechanism?",
+    "o": [
+      "Ineffective (defective) erythropoiesis",
+      "Hepcidin is markedly increased",
+      "Hepcidin is suppressed, causing iron overload",
+      "Predominantly intravascular hemolysis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT006",
+    "y": 2026,
+    "t": "HAM",
+    "q": "A patient has Hb 9 g/dL, MCV 68 fL and a low serum ferritin. The most likely type of anemia is:",
+    "o": [
+      "Iron deficiency anemia",
+      "Megaloblastic anemia",
+      "Aplastic anemia",
+      "Hemolytic anemia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT007",
+    "y": 2026,
+    "t": "IMP",
+    "q": "Which technique is best suited for identifying a specific protein in a formalin-fixed paraffin-embedded (FFPE) tissue section?",
+    "o": [
+      "Immunohistochemistry (IHC)",
+      "Fluorescence in situ hybridization (FISH)",
+      "Western blot",
+      "Flow cytometry"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT008",
+    "y": 2026,
+    "t": "IMP",
+    "q": "A patient with long-standing rheumatoid arthritis develops nephrotic-range proteinuria. Renal biopsy with Congo red stain shows apple-green birefringence under polarised light. Which type of amyloid protein is most likely deposited?",
+    "o": [
+      "AA (serum amyloid A-derived) amyloid",
+      "AL (immunoglobulin light chain) amyloid",
+      "Abeta₂-microglobulin amyloid",
+      "ATTR (transthyretin) amyloid"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT009",
+    "y": 2026,
+    "t": "RNP",
+    "q": "A child develops cola-coloured urine, periorbital oedema and hypertension two weeks after a sore throat. Urine microscopy shows red blood cell casts. On electron microscopy of the renal biopsy, which finding is characteristic of this condition?",
+    "o": [
+      "Subepithelial electron-dense “humps”",
+      "Subendothelial deposits with “tram-track” basement membrane splitting",
+      "Diffuse effacement of podocyte foot processes with no deposits",
+      "Linear ribbon-like deposits along the glomerular basement membrane"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT010",
+    "y": 2026,
+    "t": "CVP",
+    "q": "A histology slide of myocardium is taken from a patient who died 1-3 days after an acute myocardial infarction. Which of the following cellular changes is MOST characteristic of this time interval?",
+    "o": [
+      "Dense neutrophilic (polymorphonuclear) infiltration of necrotic myocardium",
+      "Coagulative necrosis with wavy fibres and contraction bands only",
+      "Macrophage infiltration with phagocytosis of dead myocytes",
+      "Dense collagenous scar with few cells"
+    ],
+    "a": 0
+  }
+]
