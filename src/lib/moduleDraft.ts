@@ -11,6 +11,9 @@ export interface ModuleDraft {
   id: string; // matches CustomModuleHistoryEntry.id (== startedAt)
   answers: (number | null)[]; // parallel to the entry's questionIds
   lastIndex: number; // question the user was last on — resume lands here, not on a derived guess
+  globalSecondsLeft?: number; // Exam mode only: countdown remaining at last checkpoint, restored as-is on resume (not recomputed from wall-clock elapsed)
+  reviewedQids?: string[]; // Reviewed self-tags at last checkpoint — entry.reviewedQids only gets written at finish, so this draft is the only place an in-progress module's tags live
+  guessedQids?: string[]; // Guessing self-tags at last checkpoint, same reasoning as reviewedQids
 }
 
 export function readModuleDraft(id: string): ModuleDraft | null {

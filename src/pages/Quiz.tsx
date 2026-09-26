@@ -284,11 +284,17 @@ export default function Quiz() {
   const [bookmarked, setBookmarked] = useState(false);
   const [feedback, setFeedback] = useState("");
 
-  // Marked-for-review (persisted into CustomModuleHistoryEntry on finish)
+  // Marked-for-review (persisted into CustomModuleHistoryEntry on finish,
+  // and checkpointed into the draft along the way — see moduleDraft.ts —
+  // so a resumed module doesn't lose its tags).
   const [reviewMarked, setReviewMarked] = useState<Set<string>>(new Set());
+  const reviewMarkedRef = useRef<Set<string>>(new Set());
+  useEffect(() => { reviewMarkedRef.current = reviewMarked; }, [reviewMarked]);
 
   // Guessing-answer self-tag (same persistence path as reviewMarked)
   const [guessMarked, setGuessMarked] = useState<Set<string>>(new Set());
+  const guessMarkedRef = useRef<Set<string>>(new Set());
+  useEffect(() => { guessMarkedRef.current = guessMarked; }, [guessMarked]);
 
   // Question navigator (legend grid bottom sheet)
   const [navigatorOpen, setNavigatorOpen] = useState(false);
@@ -346,7 +352,10 @@ export default function Quiz() {
         })
         .filter((a): a is QuizAnswer => a !== null);
 
-      const withinWindow = Date.now() - new Date(entry.startedAt).getTime() < RESUME_WINDOW_MS;
+      // Guide mode has no resume time limit — only Exam mode's 2hr window applies.
+      const withinWindow = entry.mode !== "quiz"
+        ? true
+        : Date.now() - new Date(entry.startedAt).getTime() < RESUME_WINDOW_MS;
       if (!withinWindow) {
         // Expired: still load whatever was answered so the imminent
         // auto-submit (below) has real data instead of an empty pool.
@@ -355,6 +364,24 @@ export default function Quiz() {
         setResumeChecked(true);
         return;
       }
+
+      // Exam mode: restore the countdown exactly where it was left (last
+      // checkpoint), not the full pool.length * SECONDS_PER_QUESTION budget.
+      // Background/away time is NOT deducted — leaving is treated like a pause.
+      if (isQuizMode && draft && typeof draft.globalSecondsLeft === "number") {
+        setGlobalSecondsLeft(draft.globalSecondsLeft);
+      }
+
+      // Restore review/guessing self-tags. entry.reviewedQids/guessedQids
+      // only get written at finish, so the draft is the only place an
+      // in-progress module's tags live — without this they silently reset
+      // to empty on every resume.
+      const restoredReviewed = new Set(draft?.reviewedQids ?? entry.reviewedQids ?? []);
+      const restoredGuessed = new Set(draft?.guessedQids ?? entry.guessedQids ?? []);
+      reviewMarkedRef.current = restoredReviewed;
+      guessMarkedRef.current = restoredGuessed;
+      setReviewMarked(restoredReviewed);
+      setGuessMarked(restoredGuessed);
 
       if (rebuilt.length > 0) {
         answersRef.current = rebuilt;
@@ -388,7 +415,18 @@ export default function Quiz() {
       setResumeChecked(true);
     })();
     return () => { cancelled = true; };
-  }, [isCustom, moduleId, pool.length]);
+  }, [isCustom, moduleId, pool.length, isQuizMode]);
+
+  // Per-question timer (guide/direct)
+  const [timerEnabled, setTimerEnabled] = useState(true);
+  const [secondsLeft, setSecondsLeft] = useState(SECONDS_PER_QUESTION);
+
+  // Global timer for quiz mode
+  const totalSeconds = pool.length * SECONDS_PER_QUESTION;
+  const [globalSecondsLeft, setGlobalSecondsLeft] = useState(totalSeconds);
+  const [globalTimerRunning, setGlobalTimerRunning] = useState(true);
+  const globalSecondsLeftRef = useRef(totalSeconds);
+  useEffect(() => { globalSecondsLeftRef.current = globalSecondsLeft; }, [globalSecondsLeft]);
 
   // Persist the draft on every navigation (next/previous/goTo), not on every
   // tap — see moduleDraft.ts. Only for custom modules with a moduleId.
@@ -401,17 +439,18 @@ export default function Quiz() {
       const a = answersRef.current.find((x) => x.qid === q.id);
       return a?.selected ?? null;
     });
-    writeModuleDraft({ id: moduleId, answers: answersBySlot, lastIndex: atIndex });
-  }, [isReadOnly, isCustom, moduleId, pool]);
-
-  // Per-question timer (guide/direct)
-  const [timerEnabled, setTimerEnabled] = useState(true);
-  const [secondsLeft, setSecondsLeft] = useState(SECONDS_PER_QUESTION);
-
-  // Global timer for quiz mode
-  const totalSeconds = pool.length * SECONDS_PER_QUESTION;
-  const [globalSecondsLeft, setGlobalSecondsLeft] = useState(totalSeconds);
-  const [globalTimerRunning, setGlobalTimerRunning] = useState(true);
+    writeModuleDraft({
+      id: moduleId,
+      answers: answersBySlot,
+      lastIndex: atIndex,
+      // Read via refs (not the state values) so this callback's identity
+      // doesn't change every second the exam timer ticks, or every review/
+      // guess tap.
+      ...(isQuizMode ? { globalSecondsLeft: globalSecondsLeftRef.current } : {}),
+      reviewedQids: Array.from(reviewMarkedRef.current),
+      guessedQids: Array.from(guessMarkedRef.current),
+    });
+  }, [isReadOnly, isCustom, moduleId, pool, isQuizMode]);
 
   // pool loads asynchronously — totalSeconds is 0 on first render (pool still empty),
   // so the useState initializer above locks in 0 permanently unless we resync here.
@@ -540,7 +579,7 @@ export default function Quiz() {
       // opens the same modal — timer pauses, Back exits to the module builder, Continue resumes.
       // (While in fullscreen, leaving fullscreen is what opens it.)
       if (isStandalone() || !isFullscreen()) {
-        if (isQuizMode) setGlobalTimerRunning(false);
+        if (isQuizMode) { setGlobalTimerRunning(false); persistDraft(index); }
         else setTimerEnabled(false);
         setShowFSExitModal(true);
       }
@@ -555,7 +594,7 @@ export default function Quiz() {
       window.removeEventListener("popstate", onBack);
       document.removeEventListener("click", onClick, true);
     };
-  }, [pool.length, index, isCustom, isSolveLink, isQuizMode, isReadOnly, navigate, topUpTraps]);
+  }, [pool.length, index, isCustom, isSolveLink, isQuizMode, isReadOnly, navigate, topUpTraps, persistDraft]);
 
   // ── Fullscreen management (custom modules only, never in read-only view) ──
   useEffect(() => {
@@ -564,14 +603,14 @@ export default function Quiz() {
       if (finishingRef.current) return; // we exited fullscreen ourselves on submit
       if (!isFullscreen()) {
         // User exited fullscreen
-        if (isQuizMode) setGlobalTimerRunning(false);
+        if (isQuizMode) { setGlobalTimerRunning(false); persistDraft(index); }
         else setTimerEnabled(false);
         setShowFSExitModal(true);
       }
     };
     document.addEventListener("fullscreenchange", onFSChange);
     return () => document.removeEventListener("fullscreenchange", onFSChange);
-  }, [isCustom, isQuizMode, isReadOnly]);
+  }, [isCustom, isQuizMode, isReadOnly, persistDraft, index]);
 
   // ── Load question state when index changes ──
   const question = pool[index];
@@ -1096,23 +1135,23 @@ export default function Quiz() {
 
   const toggleReview = useCallback(() => {
     if (!question) return;
-    setReviewMarked((prev) => {
-      const next = new Set(prev);
-      if (next.has(question.id)) next.delete(question.id);
-      else next.add(question.id);
-      return next;
-    });
-  }, [question]);
+    const next = new Set(reviewMarkedRef.current);
+    if (next.has(question.id)) next.delete(question.id);
+    else next.add(question.id);
+    reviewMarkedRef.current = next; // update ref synchronously so the persistDraft call below reads the new value, not last render's
+    setReviewMarked(next);
+    persistDraft(index); // checkpoint immediately — don't wait for the next nav to save this tag
+  }, [question, index, persistDraft]);
 
   const toggleGuessing = useCallback(() => {
     if (!question) return;
-    setGuessMarked((prev) => {
-      const next = new Set(prev);
-      if (next.has(question.id)) next.delete(question.id);
-      else next.add(question.id);
-      return next;
-    });
-  }, [question]);
+    const next = new Set(guessMarkedRef.current);
+    if (next.has(question.id)) next.delete(question.id);
+    else next.add(question.id);
+    guessMarkedRef.current = next;
+    setGuessMarked(next);
+    persistDraft(index);
+  }, [question, index, persistDraft]);
 
   const handleSubmit = () => {
     if (submittedRef.current || !timerEnabled) return;
@@ -1180,7 +1219,10 @@ export default function Quiz() {
   backToBuilderRef.current = handleBackToBuilder;
 
   const handleGlobalPauseToggle = () => {
-    setGlobalTimerRunning((v) => !v);
+    setGlobalTimerRunning((v) => {
+      if (v) persistDraft(index); // pausing: checkpoint the exact time left
+      return !v;
+    });
   };
 
   // ─── Derived display values ───────────────────────────────────────────────
@@ -1223,6 +1265,9 @@ export default function Quiz() {
     if (visited.has(i)) return "not-answered";
     return "not-visited";
   });
+  const navGuessedIndices = new Set(
+    pool.map((q, i) => (guessMarked.has(q.id) ? i : -1)).filter((i) => i >= 0)
+  );
 
   if (!startIndexReady || !poolReady || !pool.length) {
     if (!startIndexReady || !poolReady) {
@@ -1574,6 +1619,7 @@ export default function Quiz() {
           currentIndex={index}
           statuses={navStatuses}
           onJump={goTo}
+          guessedIndices={isSolveLink ? undefined : navGuessedIndices}
           onFinalSubmit={isSolveLink ? undefined : () => { setNavigatorOpen(false); requestFinalSubmit(); }}
           finalSubmitLabel="FINAL SUBMIT"
         />

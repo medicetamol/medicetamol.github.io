@@ -1,4 +1,4 @@
-import { ClipboardCheck, X } from "lucide-react";
+import { ClipboardCheck, HelpCircle, X } from "lucide-react";
 
 // ─── Per-question status for the navigator grid ──────────────────────────────
 // "review" and "answered-review" only ever occur where markForReview is used
@@ -34,6 +34,7 @@ export default function QuestionNavigator({
   statuses,
   onJump,
   showReviewLegend = true,
+  guessedIndices,
   onFinalSubmit,
   finalSubmitLabel = "FINAL SUBMIT",
 }: {
@@ -44,6 +45,11 @@ export default function QuestionNavigator({
   statuses: NavStatus[]; // length === total
   onJump: (index: number) => void;
   showReviewLegend?: boolean;
+  // Positions marked as a guessing answer — independent of `statuses` so it
+  // can overlay any status (answered, review, etc.) rather than needing a
+  // combinatorial NavStatus variant per pairing. Omit entirely for sessions
+  // that don't support guess-tagging (e.g. BookmarkQuiz).
+  guessedIndices?: Set<number>;
   // When provided, renders a Final Submit button at the bottom of the sheet —
   // same handler as the bottom bar's button, just reachable from here too.
   onFinalSubmit?: () => void;
@@ -65,6 +71,7 @@ export default function QuestionNavigator({
     },
     { answered: 0, review: 0, skipped: 0, notVisited: 0 }
   );
+  const guessCount = guessedIndices?.size ?? 0;
 
   return (
     <div
@@ -103,6 +110,11 @@ export default function QuestionNavigator({
               {label}
             </span>
           ))}
+          {guessedIndices !== undefined && (
+            <span className="flex items-center gap-1.5">
+              <HelpCircle size={12} className="text-amber-400" /> Guessing
+            </span>
+          )}
         </div>
 
         <div className="grid grid-cols-7 gap-2 sm:grid-cols-8">
@@ -124,6 +136,9 @@ export default function QuestionNavigator({
                 {status === "answered-review" && (
                   <span className="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-violet-400" />
                 )}
+                {guessedIndices?.has(i) && (
+                  <HelpCircle size={10} className="absolute bottom-0.5 left-0.5 text-amber-300" strokeWidth={2.5} />
+                )}
               </button>
             );
           })}
@@ -132,6 +147,7 @@ export default function QuestionNavigator({
         <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 border-t border-slate-800 pt-3 text-xs text-slate-400">
           <span>Answered: {counts.answered}</span>
           {showReviewLegend && <span>Review: {counts.review}</span>}
+          {guessedIndices !== undefined && <span>Guessing: {guessCount}</span>}
           <span>Skipped: {counts.skipped}</span>
           <span>Not visited: {counts.notVisited}</span>
         </div>

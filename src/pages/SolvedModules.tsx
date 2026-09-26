@@ -29,11 +29,20 @@ function ScoreDonut({ entry }: { entry: CustomModuleHistoryEntry }) {
   return (
     <svg width="54" height="54" viewBox="0 0 54 54" className="shrink-0">
       <circle cx="27" cy="27" r={r} fill="none" stroke="currentColor" className="text-slate-800" strokeWidth="7" />
+      {/* C/I/S draw order, matching Result.tsx's DonutChart */}
+      {entry.correctCount > 0 && (
+        <circle
+          cx="27" cy="27" r={r} fill="none" stroke="#22c55e" strokeWidth="7"
+          strokeDasharray={`${correctLen} ${circumference}`}
+          strokeDashoffset="0"
+          transform="rotate(-90 27 27)"
+        />
+      )}
       {entry.incorrectCount > 0 && (
         <circle
           cx="27" cy="27" r={r} fill="none" stroke="#ef4444" strokeWidth="7"
           strokeDasharray={`${incorrectLen} ${circumference}`}
-          strokeDashoffset="0"
+          strokeDashoffset={-correctLen}
           transform="rotate(-90 27 27)"
         />
       )}
@@ -41,15 +50,7 @@ function ScoreDonut({ entry }: { entry: CustomModuleHistoryEntry }) {
         <circle
           cx="27" cy="27" r={r} fill="none" stroke="rgb(var(--slate-600))" strokeWidth="7"
           strokeDasharray={`${skippedLen} ${circumference}`}
-          strokeDashoffset={-incorrectLen}
-          transform="rotate(-90 27 27)"
-        />
-      )}
-      {entry.correctCount > 0 && (
-        <circle
-          cx="27" cy="27" r={r} fill="none" stroke="#22c55e" strokeWidth="7"
-          strokeDasharray={`${correctLen} ${circumference}`}
-          strokeDashoffset={-(incorrectLen + skippedLen)}
+          strokeDashoffset={-(correctLen + incorrectLen)}
           transform="rotate(-90 27 27)"
         />
       )}
@@ -68,37 +69,57 @@ function formatDateTime(iso: string): string {
     year: "numeric",
     hour: "numeric",
     minute: "2-digit",
+    hour12: true, // force 12hr AM/PM regardless of device locale (was defaulting to the OS locale, 24hr on some Android builds)
   });
 }
 
-function formatTimeLeft(startedAt: string): string {
-  const elapsed = Date.now() - new Date(startedAt).getTime();
+// Exam mode only — Guide mode has no resume time limit (see resumableId).
+function formatTimeLeft(startedAt: string, now: number): string {
+  const elapsed = now - new Date(startedAt).getTime();
   const remainingMs = Math.max(0, RESUME_WINDOW_MS - elapsed);
-  const totalMinutes = Math.floor(remainingMs / 60000);
-  const h = Math.floor(totalMinutes / 60);
-  const m = totalMinutes % 60;
-  if (h > 0) return `${h}h ${m}m left`;
-  return `${m}m left`;
+  const totalSeconds = Math.floor(remainingMs / 1000);
+  const h = Math.floor(totalSeconds / 3600);
+  const m = Math.floor((totalSeconds % 3600) / 60);
+  const s = totalSeconds % 60;
+  if (h > 0) return `${h}h ${m}m ${s}s left`;
+  if (m > 0) return `${m}m ${s}s left`;
+  return `${s}s left`;
 }
 
 export default function SolvedModules() {
   const navigate = useNavigate();
   const [entries, setEntries] = useState<CustomModuleHistoryEntry[] | null>(null);
   const [opening, setOpening] = useState<string | null>(null); // entry id currently loading questions for view
+  const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
     getCustomModuleHistory().then(setEntries);
   }, []);
 
+  // Tick every second while there's a live Exam-mode countdown to show —
+  // keeps the resume window actually counting down instead of a static
+  // number that only changes on page refresh, and lets resumability itself
+  // flip off the moment the window expires without needing a reload.
+  useEffect(() => {
+    if (!entries || entries.length === 0) return;
+    const [latest] = entries;
+    if (latest.finishedAt !== null || latest.mode !== "quiz") return;
+    const t = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(t);
+  }, [entries]);
+
   // Only the single most-recent entry can ever be resumable, and only while
-  // unfinished and inside the 2hr window.
+  // unfinished. The 2hr window is Exam mode only — Guide mode has no resume
+  // time limit.
   const resumableId = useMemo(() => {
     if (!entries || entries.length === 0) return null;
     const [latest] = entries; // getCustomModuleHistory returns newest-first
     if (latest.finishedAt !== null) return null;
-    const withinWindow = Date.now() - new Date(latest.startedAt).getTime() < RESUME_WINDOW_MS;
+    const withinWindow = latest.mode === "quiz"
+      ? now - new Date(latest.startedAt).getTime() < RESUME_WINDOW_MS
+      : true;
     return withinWindow ? latest.id : null;
-  }, [entries]);
+  }, [entries, now]);
 
   const openEntry = async (entry: CustomModuleHistoryEntry) => {
     if (entry.id === resumableId) {
@@ -126,6 +147,11 @@ export default function SolvedModules() {
           answers,
           questions,
           custom: true,
+          // Carry the entry's Reviewed/Guessing tags through so "See
+          // Explanations" shows the same R dot / guessing-icon overlay on
+          // the question grid that a freshly-finished module gets.
+          reviewedQids: entry.reviewedQids,
+          guessedQids: entry.guessedQids,
         },
       });
     } finally {
@@ -175,7 +201,12 @@ export default function SolvedModules() {
                     <p className="text-sm font-semibold text-slate-100">{entry.subjectLabel}</p>
                     <p className="mt-0.5 text-xs text-slate-400">{formatDateTime(entry.startedAt)}</p>
                     <p className="mt-0.5 text-xs text-slate-500">
-                      {entry.questionIds.length} questions &middot; {formatTimeLeft(entry.startedAt)}
+                      {entry.questionIds.length} questions
+                      {entry.mode === "quiz" && (
+                        <>
+                          {" "}&middot; <span className="font-semibold text-red-400">{formatTimeLeft(entry.startedAt, now)}</span>
+                        </>
+                      )}
                     </p>
                     <button
                       type="button"
