@@ -1,5 +1,6 @@
-import { Check, Share, X } from "lucide-react";
+import { Check, MessageSquareWarning, Share, X } from "lucide-react";
 import React, { lazy, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import type { PYQQuestion } from "../types";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
 
@@ -30,6 +31,7 @@ export default function QuestionCard({
   hideMarking = false,
 }: Props) {
   const [imgModal, setImgModal] = useState(false);
+  const navigate = useNavigate();
 
   const solveUrl = getSiteUrl(`/solve/${question.id}`);
 
@@ -141,6 +143,16 @@ export default function QuestionCard({
               )}
             </div>
           </div>
+
+          <button
+            type="button"
+            onClick={() => navigate(`/report/${question.id}`)}
+            className="shrink-0 self-center rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-slate-100"
+            aria-label="Report an error"
+            title="Report an error"
+          >
+            <MessageSquareWarning size={19} strokeWidth={1.9} />
+          </button>
 
           <button
             type="button"

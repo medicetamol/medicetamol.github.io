@@ -1,0 +1,31 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /bugReports/{reportId} {
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.keys().hasAll([
+          "category", "description", "userId", "status", "createdAt"
+        ])
+        && request.resource.data.category in
+          ["question", "explanation", "factual", "technical"]
+        && request.resource.data.description is string
+        && request.resource.data.description.size() > 0
+        && request.resource.data.description.size() < 5000;
+      allow read, update, delete: if false;
+    }
+
+    match /stats/visitorCount {
+      allow read: if true;
+      allow write: if request.resource.data.diff(resource.data).affectedKeys()
+        .hasOnly(["count"])
+        && request.resource.data.count == resource.data.count + 1;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

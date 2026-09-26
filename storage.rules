@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    match /bugReports/{userId}/{fileName} {
+      // Only the signed-in owner can upload into their own folder, and only
+      // images under 5MB (matches the client-side check in reportError.ts).
+      allow write: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+
+      // Read is needed so the Cloud Function (Admin SDK, bypasses rules) and
+      // the uploader's own browser preview can fetch it via download URL.
+      // download URLs are unguessable tokens, so this stays reasonably safe
+      // without full auth-gated reads.
+      allow read: if true;
+      allow delete: if false;
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

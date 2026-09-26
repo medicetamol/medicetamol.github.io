@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "medicetamol-pyq"
+  },
+  "targets": {
+    "medicetamol-pyq": {
+      "storage": {
+        "rules": [
+          "medicetamol-pyq.firebasestorage.app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

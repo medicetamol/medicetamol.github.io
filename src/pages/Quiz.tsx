@@ -34,7 +34,12 @@ import {
   getCustomModuleHistoryEntry,
   toggleBookmark,
   RESUME_WINDOW_MS,
+  getDailyActivity,
+  computeStreak,
 } from "../lib/db";
+import { useAuth } from "../lib/AuthContext";
+import { checkDqbMilestone, checkStreakMilestone } from "../lib/authPrompt";
+import AuthPromptModal from "../components/AuthPromptModal";
 import { readModuleDraft, writeModuleDraft, clearModuleDraft } from "../lib/moduleDraft";
 import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import QuestionCard from "../components/QuestionCard";
@@ -283,6 +288,8 @@ export default function Quiz() {
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
   const [bookmarked, setBookmarked] = useState(false);
   const [feedback, setFeedback] = useState("");
+  const { user } = useAuth();
+  const [showSoftAuthPrompt, setShowSoftAuthPrompt] = useState(false);
 
   // Marked-for-review (persisted into CustomModuleHistoryEntry on finish,
   // and checkpointed into the draft along the way — see moduleDraft.ts —
@@ -821,11 +828,19 @@ export default function Quiz() {
     try {
       if (!isCustom && !isSolveLink) {
         await recordDirectAnswer(question.id, correct, choice);
+        if (!user) {
+          const total = (await getAllAnswers()).length;
+          if (checkDqbMilestone(total)) setShowSoftAuthPrompt(true);
+        }
       }
       // Daily streak counts an actual attempt in any mode — Direct QBank,
       // custom module, or a shared /solve/:id link — but never a skip/timeout.
       if (choice !== null) {
         await recordDailyActivity(correct);
+        if (!user) {
+          const info = computeStreak(await getDailyActivity());
+          if (checkStreakMilestone(info.days)) setShowSoftAuthPrompt(true);
+        }
       }
     } catch (err) {
       console.error("Could not record answer", err);
@@ -860,6 +875,10 @@ export default function Quiz() {
           if (a.selected !== null) {
             await recordDailyActivity(a.correct);
           }
+        }
+        if (!user) {
+          const info = computeStreak(await getDailyActivity());
+          if (checkStreakMilestone(info.days)) setShowSoftAuthPrompt(true);
         }
       } catch (err) {
         console.error("Could not record quiz-mode daily activity", err);
@@ -924,7 +943,7 @@ export default function Quiz() {
       },
     });
     window.setTimeout(exitFS, 150);
-  }, [pool, examId, isCustom, startedAt, navigate, moduleId, isQuizMode, reviewMarked, guessMarked]);
+  }, [pool, examId, isCustom, startedAt, navigate, moduleId, isQuizMode, reviewMarked, guessMarked, user]);
   finishQuizRef.current = finishQuiz;
 
   // In quiz mode, save/update the current question's selection into answersRef.
@@ -1835,6 +1854,15 @@ export default function Quiz() {
         )}
         </div>
       </div>
+
+      {showSoftAuthPrompt && (
+        <AuthPromptModal
+          variant="soft"
+          reason="Keep your progress safe"
+          onSignedIn={() => setShowSoftAuthPrompt(false)}
+          onDismiss={() => setShowSoftAuthPrompt(false)}
+        />
+      )}
     </main>
   );
 }

@@ -2,8 +2,11 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import type { PYQQuestion, QuizAnswer } from "../types";
-import { getAllBookmarks } from "../lib/db";
+import { getAllBookmarks, getCustomModuleHistory } from "../lib/db";
 import { SUBJECTS } from "../constants";
+import { useAuth } from "../lib/AuthContext";
+import { checkCustomModuleMilestone } from "../lib/authPrompt";
+import AuthPromptModal from "../components/AuthPromptModal";
 
 // ─── Donut chart ───
 function DonutChart({
@@ -105,6 +108,8 @@ export default function Result() {
   const state = location.state as ResultState | null;
 
   const [bookmarkedQids, setBookmarkedQids] = useState<Set<string>>(new Set());
+  const { user } = useAuth();
+  const [showSoftAuthPrompt, setShowSoftAuthPrompt] = useState(false);
 
   useEffect(() => {
     getAllBookmarks().then((rows) => setBookmarkedQids(new Set(rows.map((b) => b.qid))));
@@ -199,7 +204,7 @@ export default function Result() {
   // Hide-Option toggle both live INSIDE that read-only view now (its own
   // hybrid legend+filter sheet) — Result always hands off the full subset
   // and lets the reader narrow it down from there.
-  const openAttempted = (subset: PYQQuestion[]) => {
+  const navigateToAttempted = (subset: PYQQuestion[]) => {
     if (subset.length === 0) return;
     const ids = subset.map((q) => q.id);
     const selections = subset.map((q) => answerMap.get(q.id)?.selected ?? null);
@@ -213,6 +218,33 @@ export default function Result() {
         bookmarkedQids: subset.filter((q) => bookmarkedQids.has(q.id)).map((q) => q.id),
       },
     });
+  };
+
+  const [pendingExplanations, setPendingExplanations] = useState<PYQQuestion[] | null>(null);
+
+  // "See Explanations" — the one button gated by the custom-module milestone
+  // prompt. Other explanation entry points (analysis groups) navigate
+  // straight through via navigateToAttempted, unprompted.
+  const openAttempted = async (subset: PYQQuestion[]) => {
+    if (subset.length === 0) return;
+
+    // Custom-module milestone: fires on "See Explanations" specifically for
+    // custom modules (state.custom), at the 3rd/6th/9th... completed module.
+    if (state?.custom && !user) {
+      try {
+        const history = await getCustomModuleHistory();
+        const completedCount = history.filter((h) => h.finishedAt !== null).length;
+        if (checkCustomModuleMilestone(completedCount)) {
+          setPendingExplanations(subset);
+          setShowSoftAuthPrompt(true);
+          return;
+        }
+      } catch (err) {
+        console.error("Could not check custom module milestone", err);
+      }
+    }
+
+    navigateToAttempted(subset);
   };
 
   return (
@@ -282,7 +314,7 @@ export default function Result() {
                   <button
                     key={g.key}
                     type="button"
-                    onClick={() => openAttempted(g.questions)}
+                    onClick={() => navigateToAttempted(g.questions)}
                     className="flex w-full items-center justify-between gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3.5 text-left hover:border-slate-700"
                   >
                     <div className="min-w-0 flex-1">
@@ -298,6 +330,23 @@ export default function Result() {
             </div>
           </section>
         </>
+      )}
+
+      {showSoftAuthPrompt && (
+        <AuthPromptModal
+          variant="soft"
+          reason="Keep your progress safe"
+          onSignedIn={() => {
+            setShowSoftAuthPrompt(false);
+            if (pendingExplanations) navigateToAttempted(pendingExplanations);
+            setPendingExplanations(null);
+          }}
+          onDismiss={() => {
+            setShowSoftAuthPrompt(false);
+            if (pendingExplanations) navigateToAttempted(pendingExplanations);
+            setPendingExplanations(null);
+          }}
+        />
       )}
     </main>
   );

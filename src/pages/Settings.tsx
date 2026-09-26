@@ -1,9 +1,12 @@
-import { Check, Download, Moon, Share, Smartphone, Sun } from "lucide-react";
+import { Check, Download, LogOut, Moon, Share, Smartphone, Sun, User } from "lucide-react";
+import { useState } from "react";
 import { useInstall } from "../lib/pwa";
 import { setTheme, useTheme } from "../lib/theme";
 import type { Theme } from "../lib/theme";
 import { setFontScale, useFontScale } from "../lib/fontScale";
 import type { FontScale } from "../lib/fontScale";
+import { useAuth } from "../lib/AuthContext";
+import { signInWithGoogle, signOutUser } from "../lib/auth";
 
 const THEMES: Array<{ id: Theme; label: string; icon: typeof Sun }> = [
   { id: "dark", label: "Dark", icon: Moon },
@@ -20,6 +23,33 @@ export default function Settings() {
   const theme = useTheme();
   const fontScale = useFontScale();
   const { canPrompt, installed, isIOS, promptInstall } = useInstall();
+  const { user } = useAuth();
+  const [authBusy, setAuthBusy] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
+
+  const handleSignIn = async () => {
+    setAuthError(null);
+    setAuthBusy(true);
+    try {
+      await signInWithGoogle();
+    } catch (err) {
+      setAuthError("Sign-in was cancelled or failed. Please try again.");
+      console.error(err);
+    } finally {
+      setAuthBusy(false);
+    }
+  };
+
+  const handleSignOut = async () => {
+    setAuthBusy(true);
+    try {
+      await signOutUser();
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setAuthBusy(false);
+    }
+  };
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
@@ -28,8 +58,49 @@ export default function Settings() {
         <p className="mt-1 text-sm text-slate-500">Preferences are saved on this device.</p>
       </div>
 
-      {/* Appearance */}
+      {/* Account */}
       <section className="rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
+        <div className="flex items-start gap-3">
+          <User size={18} className="mt-0.5 shrink-0 text-slate-400" />
+          <div className="min-w-0 flex-1">
+            <h2 className="text-sm font-bold text-slate-200">Account</h2>
+
+            {user ? (
+              <>
+                <p className="mt-2 flex items-center gap-1.5 text-xs text-emerald-300">
+                  <Check size={14} /> Signed in as {user.displayName ?? user.email}
+                </p>
+                <button
+                  type="button"
+                  onClick={handleSignOut}
+                  disabled={authBusy}
+                  className="mt-4 inline-flex items-center gap-2 rounded-xl border border-slate-700 px-5 py-3 text-sm font-bold text-slate-100 hover:bg-slate-800 disabled:opacity-60"
+                >
+                  <LogOut size={16} /> Sign out
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="mt-1 text-xs leading-5 text-slate-500">
+                  Sign in with Google to report errors and keep your progress safe.
+                </p>
+                <button
+                  type="button"
+                  onClick={handleSignIn}
+                  disabled={authBusy}
+                  className="mt-4 inline-flex items-center gap-2 rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-50 disabled:opacity-60"
+                >
+                  {authBusy ? "Signing in…" : "Sign in with Google"}
+                </button>
+                {authError && <p className="mt-2 text-xs text-red-400">{authError}</p>}
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Appearance */}
+      <section className="mt-4 rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
         <h2 className="text-sm font-bold text-slate-200">Appearance</h2>
         <p className="mt-1 text-xs text-slate-500">Choose how mediCetamol looks.</p>
 
