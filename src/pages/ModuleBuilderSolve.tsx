@@ -5,8 +5,8 @@ import { getSiteUrl, shareOrCopy } from "../lib/sharing";
 import { encodeModuleParams, subjectNamesFromIds } from "../lib/moduleShareCode";
 import { clearModuleBuilderState } from "../lib/moduleBuilderState";
 import { isStandalone } from "../lib/pwa";
-import { saveCustomModuleHistory } from "../lib/db";
-import { clearModuleDraft } from "../lib/moduleDraft";
+import { saveCustomModuleHistory, getCustomModuleHistoryEntry } from "../lib/db";
+import { clearModuleDraft, readAnyModuleDraft } from "../lib/moduleDraft";
 import type { Exam } from "../types";
 import ModuleFooterBar from "../components/ModuleFooterBar";
 
@@ -71,7 +71,7 @@ export default function ModuleBuilderSolve() {
     }
   };
 
-  const beginQuiz = () => {
+  const beginQuiz = async () => {
     clearModuleBuilderState(examId);
 
     const startedAt = new Date().toISOString();
@@ -99,6 +99,32 @@ export default function ModuleBuilderSolve() {
       incorrectCount: 0,
       skippedCount: ids.length,
     });
+
+    // Close out a leftover draft belonging to a DIFFERENT, still-unfinished
+    // module — otherwise it's abandoned mid-progress and its history row
+    // stays frozen at the all-zero/all-skipped state it was created with,
+    // instead of showing what was actually solved (finishQuiz never runs
+    // for a module you never return to finish).
+    const staleDraft = readAnyModuleDraft();
+    if (staleDraft && staleDraft.id !== startedAt) {
+      try {
+        const staleEntry = await getCustomModuleHistoryEntry(staleDraft.id);
+        if (staleEntry && staleEntry.finishedAt === null) {
+          await saveCustomModuleHistory({
+            ...staleEntry,
+            finishedAt: new Date().toISOString(), // abandoned — closed out when this new module started
+            answers: staleDraft.answers,
+            reviewedQids: staleDraft.reviewedQids ?? staleEntry.reviewedQids,
+            guessedQids: staleDraft.guessedQids ?? staleEntry.guessedQids,
+            correctCount: staleDraft.correctCount ?? staleEntry.correctCount,
+            incorrectCount: staleDraft.incorrectCount ?? staleEntry.incorrectCount,
+            skippedCount: staleDraft.skippedCount ?? staleEntry.skippedCount,
+          });
+        }
+      } catch (err) {
+        console.error("Could not close out the previous module", err);
+      }
+    }
     clearModuleDraft(); // any stale draft from a previous (now-expired) module
 
     const el = document.documentElement;

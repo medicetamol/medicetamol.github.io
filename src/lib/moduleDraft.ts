@@ -14,6 +14,14 @@ export interface ModuleDraft {
   globalSecondsLeft?: number; // Exam mode only: countdown remaining at last checkpoint, restored as-is on resume (not recomputed from wall-clock elapsed)
   reviewedQids?: string[]; // Reviewed self-tags at last checkpoint — entry.reviewedQids only gets written at finish, so this draft is the only place an in-progress module's tags live
   guessedQids?: string[]; // Guessing self-tags at last checkpoint, same reasoning as reviewedQids
+  // Score snapshot at last checkpoint. entry.correctCount/incorrectCount/skippedCount
+  // in IndexedDB are ONLY ever written at creation (all zero/skipped) and at
+  // finishQuiz — an abandoned module (superseded by a new one, or left past its
+  // resume window and never reopened) never reaches finishQuiz, so without this
+  // the history row is stuck showing 0% solved forever instead of real progress.
+  correctCount?: number;
+  incorrectCount?: number;
+  skippedCount?: number;
 }
 
 export function readModuleDraft(id: string): ModuleDraft | null {
@@ -22,6 +30,19 @@ export function readModuleDraft(id: string): ModuleDraft | null {
     if (!raw) return null;
     const parsed = JSON.parse(raw) as ModuleDraft;
     return parsed.id === id ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+// Unlike readModuleDraft, doesn't filter by id — used to detect a leftover
+// draft belonging to a DIFFERENT (presumably abandoned) module, e.g. right
+// before a new module's beginQuiz overwrites/clears the single draft slot.
+export function readAnyModuleDraft(): ModuleDraft | null {
+  try {
+    const raw = window.localStorage.getItem(DRAFT_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as ModuleDraft;
   } catch {
     return null;
   }

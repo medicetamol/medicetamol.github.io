@@ -439,6 +439,17 @@ export default function Quiz() {
       const a = answersRef.current.find((x) => x.qid === q.id);
       return a?.selected ?? null;
     });
+    // Score snapshot, using the SAME per-question .correct flags answersRef
+    // already carries (set at selection time) — not re-derived here, so this
+    // can never disagree with what finishQuiz itself would have computed.
+    let correctCount = 0, skippedCount = 0;
+    for (let i = 0; i < pool.length; i++) {
+      const sel = answersBySlot[i];
+      if (sel === null) { skippedCount++; continue; }
+      const a = answersRef.current.find((x) => x.qid === pool[i].id);
+      if (a?.correct) correctCount++;
+    }
+    const incorrectCount = pool.length - correctCount - skippedCount;
     writeModuleDraft({
       id: moduleId,
       answers: answersBySlot,
@@ -449,6 +460,9 @@ export default function Quiz() {
       ...(isQuizMode ? { globalSecondsLeft: globalSecondsLeftRef.current } : {}),
       reviewedQids: Array.from(reviewMarkedRef.current),
       guessedQids: Array.from(guessMarkedRef.current),
+      correctCount,
+      incorrectCount,
+      skippedCount,
     });
   }, [isReadOnly, isCustom, moduleId, pool, isQuizMode]);
 

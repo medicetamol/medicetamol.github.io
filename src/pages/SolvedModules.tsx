@@ -1,8 +1,9 @@
 import { LayoutGrid, Play } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getCustomModuleHistory, RESUME_WINDOW_MS } from "../lib/db";
+import { getCustomModuleHistory, saveCustomModuleHistory, RESUME_WINDOW_MS } from "../lib/db";
 import { findQuestion } from "../data/questions";
+import { readModuleDraft } from "../lib/moduleDraft";
 import type { CustomModuleHistoryEntry, PYQQuestion, QuizAnswer } from "../types";
 
 // ─── Score donut: correct/incorrect/skipped ring with center %. Pure SVG,
@@ -93,7 +94,40 @@ export default function SolvedModules() {
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
-    getCustomModuleHistory().then(setEntries);
+    getCustomModuleHistory().then(async (rows) => {
+      // The newest entry may have aged out of its resume window without
+      // ever being reopened (so Quiz.tsx's own expiry auto-submit never got
+      // a chance to run) — close it out here too, using its draft's last
+      // checkpoint, so it doesn't sit frozen at 0% forever. Only the newest
+      // row can ever have a matching draft (see moduleDraft.ts — single slot).
+      const [latest] = rows;
+      if (latest && latest.finishedAt === null) {
+        const expired = latest.mode === "quiz"
+          && Date.now() - new Date(latest.startedAt).getTime() >= RESUME_WINDOW_MS;
+        if (expired) {
+          const draft = readModuleDraft(latest.id);
+          if (draft) {
+            try {
+              const closed: CustomModuleHistoryEntry = {
+                ...latest,
+                finishedAt: new Date().toISOString(),
+                answers: draft.answers,
+                reviewedQids: draft.reviewedQids ?? latest.reviewedQids,
+                guessedQids: draft.guessedQids ?? latest.guessedQids,
+                correctCount: draft.correctCount ?? latest.correctCount,
+                incorrectCount: draft.incorrectCount ?? latest.incorrectCount,
+                skippedCount: draft.skippedCount ?? latest.skippedCount,
+              };
+              await saveCustomModuleHistory(closed);
+              rows = [closed, ...rows.slice(1)];
+            } catch (err) {
+              console.error("Could not close out the expired module", err);
+            }
+          }
+        }
+      }
+      setEntries(rows);
+    });
   }, []);
 
   // Tick every second while there's a live Exam-mode countdown to show —
