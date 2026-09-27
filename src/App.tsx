@@ -15,7 +15,6 @@ import SolvedModules from "./pages/SolvedModules";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 import Progress from "./pages/Progress";
-import AIPrompt from "./pages/AIPrompt";
 import Bookmarks from "./pages/Bookmarks";
 import BookmarkQuiz from "./pages/BookmarkQuiz";
 import About from "./pages/About";
@@ -66,7 +65,6 @@ export default function App() {
         <Route path="/quiz/:exam/custom" element={<Quiz />} />
         {/* Shared solve link */}
         <Route path="/solve/:questionId" element={<Quiz />} />
-        <Route path="/ai/:questionId" element={<AIPrompt />} />
         {/* Summary (formerly Result) */}
         <Route path="/result/:exam" element={<Result />} />
         <Route path="/progress" element={<Progress />} />

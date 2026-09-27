@@ -50,7 +50,6 @@ export default function QuestionCard({
       window.removeEventListener("keydown", onKey);
     };
   }, [imgModal]);
-  const aiUrl = getSiteUrl(`/ai/${question.id}`);
 
   const shareQuestion = async () => {
     const result = await shareOrCopy({

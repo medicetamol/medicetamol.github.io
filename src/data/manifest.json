@@ -16,8 +16,11 @@
       }
     },
     "anesthesiology": {
-      "total": 0,
-      "topics": {}
+      "total": 5,
+      "topics": {
+        "AIV": 4,
+        "ARG": 1
+      }
     },
     "biochemistry": {
       "total": 5,
