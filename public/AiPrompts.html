@@ -5,6 +5,36 @@
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mediCetamol AI Prompts</title>
+<style>
+  body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.55;
+  }
+  h1 {
+    font-size: 18px;
+    margin: 36px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+  }
+  h1:first-of-type { margin-top: 0; }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background: #f6f6f6;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>
 </head>
 <body>
 
@@ -20,7 +50,7 @@ Solve the following MCQ using the approach described below.
 
 2. Key clues only (max 3–5 bullets): highlight the discriminators; ignore fluff.
 
-3. Solve the question using an elimination-first approach as if you do NOT know the correct answer. Do not answer according to any colour marked in the question. Justify every elimination using exam-relevant logic.
+3. Solve the question using an elimination-first approach as if you do NOT know the correct answer. Justify every elimination using exam-relevant logic.
 
 4. Stepwise elimination of options: eliminate options one by one with crisp reasons; include "why tempting but wrong" for close distractors.
 
@@ -31,11 +61,40 @@ Use standard medical terminology.
 
 <h1>Short Elimination</h1>
 <pre>
-Solve this MCQ as if you don't know the answer (ignore any marked/highlighted option). Use standard medical terminology, be concise.
+Solve this MCQ as if you don't know the answer. Use standard medical terminology, be concise.
 
 1. One-line case summary: age/sex + key symptom/discriminator(s).
 2. Key clues (3–5 bullets max), ignore fluff.
 3. Eliminate each option with exam-logic reasoning; for close distractors, explain why tempting but wrong.
+</pre>
+
+<h1>Normal Explanation</h1>
+<pre>
+Use this prompt to explain the following MCQ.
+
+You are teaching a medical student preparing for a PG entrance exam (NEET PG & INICET).
+
+Explain the following MCQ using the approach described below.
+
+1. One-line problem representation: age/sex + key symptom/sign + key discriminator(s).
+
+2. Core concept: identify the underlying concept, mechanism, or principle this question is testing. Explain it clearly using standard medical terminology.
+
+3. Explain how the correct answer follows directly from that concept — connect the clinical clues to the underlying mechanism step by step.
+
+4. Briefly address the other options: what concept each one relates to, and why it does not fit this case (not a line-by-line elimination — just enough to clarify the distinction).
+
+Keep the response focused on building conceptual understanding, not just identifying the answer.
+</pre>
+
+<h1>Brief Explanation</h1>
+<pre>
+Explain this MCQ by teaching the concept behind it, in standard medical terminology, concisely.
+
+1. One-line case summary: age/sex + key symptom/discriminator(s).
+2. Core concept being tested, explained clearly.
+3. How the correct answer follows from that concept.
+4. One line each on why the other options don't fit.
 </pre>
 
 </body>

@@ -24,7 +24,6 @@ import { getAllBookmarks, recordDailyActivity, toggleBookmark } from "../lib/db"
 import QuestionCard from "../components/QuestionCard";
 import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
-import { formatQuestionForShare, getSiteUrl } from "../lib/sharing";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 
 const SECONDS_PER_QUESTION = 60;
@@ -383,9 +382,7 @@ function ReviewSession({
     setAskAiOpen(true);
   };
 
-  const askAiText = question
-    ? `Explain this PYQ using the\nmediceTaMol AI prompt.\n\n${formatQuestionForShare(question, { includeBranding: false })}\n\nUse this prompt to solve this:\n${getSiteUrl(`/ai/${question.id}`)}`
-    : "";
+
 
   const bookmark = async () => {
     if (!question) return;
@@ -592,7 +589,7 @@ function ReviewSession({
       <AskAiSheet
         open={askAiOpen}
         onClose={() => setAskAiOpen(false)}
-        text={askAiText}
+        question={question ?? null}
         shareTitle="Share with AI • mediceTaMol"
         onFeedback={showFeedback}
       />

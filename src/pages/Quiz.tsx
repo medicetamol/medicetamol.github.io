@@ -47,7 +47,6 @@ import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 import { SUBJECTS } from "../constants";
-import { formatQuestionForShare, getSiteUrl } from "../lib/sharing";
 import { isStandalone } from "../lib/pwa";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
@@ -1221,9 +1220,7 @@ export default function Quiz() {
     setAskAiOpen(true);
   };
 
-  const askAiText = question
-    ? `Explain this PYQ using the\nmediceTaMol AI prompt.\n\n${formatQuestionForShare(question, { includeBranding: false })}\n\nUse this prompt to solve this:\n${getSiteUrl(`/ai/${question.id}`)}`
-    : "";
+
 
   const bookmark = async () => {
     if (!question) return;
@@ -1662,7 +1659,7 @@ export default function Quiz() {
       <AskAiSheet
         open={askAiOpen}
         onClose={() => setAskAiOpen(false)}
-        text={askAiText}
+        question={question ?? null}
         shareTitle="Share with AI • mediceTaMol"
         onFeedback={showFeedback}
       />
