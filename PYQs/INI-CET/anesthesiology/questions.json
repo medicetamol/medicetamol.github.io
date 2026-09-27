@@ -1,1 +1,67 @@
-{}
+[
+  {
+    "id": "INIAS001",
+    "y": 2026,
+    "t": "AIV",
+    "q": "A 40-year-old female is scheduled for parotid surgery and is administered general anaesthesia. Approximately 10 minutes into the procedure, the following findings are noted: rise in end-tidal CO2 (EtCO2), temperature 104°F (40°C), heart rate 150 bpm, blood pressure 180/110 mmHg. What is the most likely diagnosis?",
+    "o": [
+      "Heat stroke",
+      "Malignant hyperthermia",
+      "Heat cramps",
+      "Heat pyrexia"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INIAS002",
+    "y": 2026,
+    "t": "AIV",
+    "q": "Regarding the hemodynamic effects of halothane anaesthesia, which of the following statements are correct?\n1. Halothane causes direct myocardial depression, reducing cardiac output\n2. Blood pressure initially falls after induction and subsequently plateaus at a lower level\n3. Blood pressure progressively decreases throughout surgery, irrespective of anaesthetic depth\n4. Halothane increases myocardial sensitivity to catecholamines, increasing arrhythmia risk",
+    "o": [
+      "1, 3, 4",
+      "1, 2, 3",
+      "1, 2, 4",
+      "2, 3, 4"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INIAS003",
+    "y": 2026,
+    "t": "ARG",
+    "q": "During a lumbar puncture, the following structures are pierced:\n1. Ligamentum flavum\n2. Dura mater\n3. Interspinous ligament\n4. Arachnoid mater\n5. Supraspinous ligament\nWhich option correctly represents the order in which they are pierced?",
+    "o": [
+      "5 -> 3 -> 1 -> 2 -> 4",
+      "3 -> 5 -> 1 -> 2 -> 4",
+      "5 -> 1 -> 3 -> 2 -> 4",
+      "5 -> 3 -> 2 -> 1 -> 4"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INIAS004",
+    "y": 2026,
+    "t": "AIV",
+    "q": "Which of the following drugs does NOT typically cause respiratory paralysis/depression in overdose?",
+    "o": [
+      "Phenobarbitone",
+      "Opioids",
+      "Thiopentone",
+      "Ketamine"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INIAS005",
+    "y": 2026,
+    "t": "AIV",
+    "q": "Which is the most characteristic cardiovascular effect of the inhalational anaesthetic halothane?",
+    "o": [
+      "Dose-dependent fall in cardiac output and blood pressure (often a 20-30 mm Hg drop) from myocardial depression",
+      "Increase in cardiac output with reflex tachycardia",
+      "Rise in systemic vascular resistance with hypertension",
+      "No measurable effect on cardiac output or blood pressure"
+    ],
+    "a": 0
+  }
+]
