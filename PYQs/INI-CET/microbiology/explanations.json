@@ -1,1 +1,38 @@
-{}
+[
+  {
+    "id": "INMB001",
+    "e": "ESBLs hydrolyse penicillins/cephalosporins but spare carbapenems → carbapenems remain the reliable treatment."
+  },
+  {
+    "id": "INMB002",
+    "e": "Vibrio cholerae uniquely possesses two circular chromosomes (chromosome I & II)."
+  },
+  {
+    "id": "INMB003",
+    "e": "Assam + chronic cough + cavitary lung + caseating granulomas → consider histoplasmosis, a river-valley-endemic TB mimic."
+  },
+  {
+    "id": "INMB004",
+    "e": "Non-treponemal titres (VDRL/RPR) fall c̅ treatment, making them useful for monitoring disease response."
+  },
+  {
+    "id": "INMB005",
+    "e": "Diphtheria toxin ADP-ribosylates & inactivates elongation factor-2, halting host protein synthesis."
+  },
+  {
+    "id": "INMB006",
+    "e": "Catalase-positive GPC that's cefoxitin-sensitive = MSSA → cloxacillin is the drug of choice."
+  },
+  {
+    "id": "INMB007",
+    "e": "Poorly controlled diabetic c̅ facial pain & black nasal/palatal eschar → mucormycosis (Rhizopus)."
+  },
+  {
+    "id": "INMB008",
+    "e": "Poly-D-glutamate capsule of B. anthracis is encoded on the pXO2 plasmid.\npXO1 instead encodes the toxin genes."
+  },
+  {
+    "id": "INMB009",
+    "e": "Necator americanus infects via skin penetration by filariform larvae (soil contact, e.g. bare feet)."
+  }
+]

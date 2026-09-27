@@ -1,1 +1,42 @@
-{}
+[
+  {
+    "id": "INFM001",
+    "e": "Strychnine kills via tetanic muscular convulsions → asphyxia, not by central respiratory depression."
+  },
+  {
+    "id": "INFM002",
+    "e": "Cyanide poisoning classically gives a bitter-almond odour on the breath."
+  },
+  {
+    "id": "INFM003",
+    "e": "Contusion (bruise) is blunt-force injury c̅ skin continuity intact — no external break."
+  },
+  {
+    "id": "INFM004",
+    "e": "MTP beyond 12 weeks legally needs the opinion of two registered doctors — a single doctor's opinion isn't sufficient here."
+  },
+  {
+    "id": "INFM005",
+    "e": "Swallowing well-sealed drug packets for trafficking = body packing (vs. body stuffing = hastily swallowing to hide evidence)."
+  },
+  {
+    "id": "INFM006",
+    "e": "Tattoo pigment is deposited & permanently retained in the dermis, taken up by dermal macrophages."
+  },
+  {
+    "id": "INFM007",
+    "e": "Abraded + grease collar c̅ no tattooing, soot or singeing = distant-range firearm wound."
+  },
+  {
+    "id": "INFM008",
+    "e": "Quaternary blast injury = burns/thermal & toxic effects from the explosion itself (not the pressure wave, fragments, or displacement)."
+  },
+  {
+    "id": "INFM009",
+    "e": "Abraded + grease collar c̅ no tattooing, soot or singeing = distant-range firearm wound."
+  },
+  {
+    "id": "INFM010",
+    "e": "Radiating bird's-foot/crow's-foot abrasions are described as a patterned injury seen c̅ blunt impact/dragging in road traffic accidents."
+  }
+]

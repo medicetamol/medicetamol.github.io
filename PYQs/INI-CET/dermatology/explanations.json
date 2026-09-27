@@ -1,1 +1,34 @@
-{}
+[
+  {
+    "id": "INDR001",
+    "e": "Maternal anti-desmoglein IgG crosses the placenta → transient neonatal pemphigus in a pemphigus-affected mother."
+  },
+  {
+    "id": "INDR002",
+    "e": "Pemphigus vegetans → hypertrophic papillomatous plaques c̅ a characteristic cerebriform tongue."
+  },
+  {
+    "id": "INDR003",
+    "e": "Any pigmented acral lesion suspicious for melanoma requires biopsy for histopathological confirmation."
+  },
+  {
+    "id": "INDR004",
+    "e": "HSV → painful grouped genital vesicles c̅ fever/malaise (primary herpes genitalis)."
+  },
+  {
+    "id": "INDR005",
+    "e": "Tinea capitis needs oral antifungals — topical agents can't penetrate the hair follicle/shaft."
+  },
+  {
+    "id": "INDR006",
+    "e": "Tinea capitis needs oral antifungals — topical agents can't penetrate the hair follicle/shaft."
+  },
+  {
+    "id": "INDR007",
+    "e": "Itchy papulovesicles on palms, soles & umbilicus c̅ similar lesions in family contacts = scabies."
+  },
+  {
+    "id": "INDR008",
+    "e": "Suspected acral melanoma → excisional/full-thickness biopsy c̅ histopathology is the confirmatory test."
+  }
+]

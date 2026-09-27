@@ -1,1 +1,30 @@
-{}
+[
+  {
+    "id": "INAN001",
+    "e": "Zonula occludens (tight junction) seals paracellular space via claudins/occludins, blocking free diffusion between cells."
+  },
+  {
+    "id": "INAN002",
+    "e": "Cingulate gyrus lesion → impaired emotional prosody (limbic contribution to affective tone of speech)."
+  },
+  {
+    "id": "INAN003",
+    "e": "Neuropraxia = reversible physiological conduction block c̅ axon & nerve sheath intact (mildest Seddon grade)."
+  },
+  {
+    "id": "INAN004",
+    "e": "Neurapraxia = physiological conduction block, axon & sheath both intact — recovers fully once block resolves."
+  },
+  {
+    "id": "INAN005",
+    "e": "Parietal lobe integrates vision + somatosensation → hand-eye coordination & spatial awareness."
+  },
+  {
+    "id": "INAN006",
+    "e": "Inguinal ligament is the rolled-under free lower border of the external oblique aponeurosis."
+  },
+  {
+    "id": "INAN007",
+    "e": "Right main bronchus is wider, shorter & more vertical (in line c̅ trachea) → foreign bodies lodge here more often."
+  }
+]

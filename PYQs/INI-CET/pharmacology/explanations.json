@@ -1,1 +1,82 @@
-{}
+[
+  {
+    "id": "INPM001",
+    "e": "Lamotrigine is a recognised first/adjunctive choice for GTCS; it can worsen myoclonic seizures."
+  },
+  {
+    "id": "INPM002",
+    "e": "Cilnidipine additionally blocks N-type Ca²⁺ channels on sympathetic nerve terminals → ↓es NE release → avoids reflex tachycardia."
+  },
+  {
+    "id": "INPM003",
+    "e": "Histamine H2 receptor is a metabotropic GPCR, not a ligand-gated ion channel like 5-HT3, nicotinic-ACh or GABA-A receptors."
+  },
+  {
+    "id": "INPM004",
+    "e": "Acidic beverages ↓es buccal pH → ↓es nicotine absorption from gum/lozenge, so should be avoided ~15 min before use."
+  },
+  {
+    "id": "INPM005",
+    "e": "β-adrenergic receptors couple to Gs protein → ↑es adenylate cyclase/cAMP."
+  },
+  {
+    "id": "INPM006",
+    "e": "Sunitinib – c-KIT/VEGFR\nNilotinib – BCR-ABL\nTrastuzumab – HER2\nGefitinib – EGFR."
+  },
+  {
+    "id": "INPM007",
+    "e": "Spermidine actually ↑es autophagy (its proposed longevity mechanism) — the stated pairing (decreases autophagy) is reversed/incorrect."
+  },
+  {
+    "id": "INPM008",
+    "e": "Fenfluramine carries valvulopathy/pulmonary hypertension risk → needs monitoring c̅ serial echocardiography."
+  },
+  {
+    "id": "INPM009",
+    "e": "Voriconazole has no activity against Mucorales, making it ineffective in mucormycosis."
+  },
+  {
+    "id": "INPM010",
+    "e": "Pralidoxime reactivates AChE that has been phosphorylated by organophosphates (before enzyme 'ageing')."
+  },
+  {
+    "id": "INPM011",
+    "e": "Ticagrelor is a reversible, direct-acting (non-prodrug) P2Y12 inhibitor given twice daily."
+  },
+  {
+    "id": "INPM012",
+    "e": "Therapeutic index = TD50/ED50 = 400/100 = 4."
+  },
+  {
+    "id": "INPM013",
+    "e": "Lamotrigine's characteristic adverse effect is a severe cutaneous reaction (SJS/TEN risk), especially c̅ rapid dose escalation or valproate co-therapy."
+  },
+  {
+    "id": "INPM014",
+    "e": "Vilazodone is a serotonin partial agonist & reuptake inhibitor (SPARI) — a newer-generation antidepressant."
+  },
+  {
+    "id": "INPM015",
+    "e": "Naloxone is the specific opioid-receptor antagonist antidote for opioid overdose."
+  },
+  {
+    "id": "INPM016",
+    "e": "First-order kinetics: half-life stays constant and a constant fraction (not amount) of drug is eliminated per unit time, regardless of dose."
+  },
+  {
+    "id": "INPM017",
+    "e": "Pretomanid ↓es mycolic acid synthesis and generates reactive nitrogen species, impairing anaerobic mycobacterial metabolism."
+  },
+  {
+    "id": "INPM018",
+    "e": "Aminoglycosides show concentration-dependent killing — higher peak levels give greater bactericidal effect (basis of once-daily dosing)."
+  },
+  {
+    "id": "INPM019",
+    "e": "Halothane causes dose-dependent myocardial depression → ↓es cardiac output & blood pressure."
+  },
+  {
+    "id": "INPM020",
+    "e": "Naloxone reverses the opioid toxidrome (miosis, ↓es respiration, ↓es consciousness)."
+  }
+]

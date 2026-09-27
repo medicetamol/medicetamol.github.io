@@ -1,1 +1,42 @@
-{}
+[
+  {
+    "id": "INPT001",
+    "e": "Squamous-to-columnar (intestinal) metaplasia c̅ goblet cells defines Barrett's esophagus."
+  },
+  {
+    "id": "INPT002",
+    "e": "Incomplete penetrance → an obligate carrier remains unaffected, giving the appearance of a skipped generation."
+  },
+  {
+    "id": "INPT003",
+    "e": "Polyarteritis nodosa is the classic example of a medium-vessel vasculitis."
+  },
+  {
+    "id": "INPT004",
+    "e": "Masson trichrome selectively stains collagen/fibrosis (blue-green) against red-staining muscle."
+  },
+  {
+    "id": "INPT005",
+    "e": "β-thalassemia major: imbalanced globin chain synthesis → precipitated α-chains cause marrow precursor apoptosis → ineffective erythropoiesis."
+  },
+  {
+    "id": "INPT006",
+    "e": "Microcytic anemia (MCV 68) c̅ low ferritin = iron deficiency anemia."
+  },
+  {
+    "id": "INPT007",
+    "e": "IHC uses labelled antibodies to detect specific antigens/proteins directly in FFPE tissue sections."
+  },
+  {
+    "id": "INPT008",
+    "e": "RA c̅ nephrotic-range proteinuria + apple-green birefringence = secondary (AA) amyloidosis from chronic inflammation."
+  },
+  {
+    "id": "INPT009",
+    "e": "Post-streptococcal GN: EM shows subepithelial electron-dense 'humps' (immune complex deposits)."
+  },
+  {
+    "id": "INPT010",
+    "e": "1-3 days post-MI: coagulative necrosis c̅ dense neutrophilic infiltration is the dominant histological finding."
+  }
+]

@@ -1,1 +1,46 @@
-{}
+[
+  {
+    "id": "INCM001",
+    "e": "Propagated (person-to-person) epidemics show repeated peaks, each ~1 incubation period apart, e.g. measles.\nCommon-source outbreaks (food poisoning, typhoid) give a single sharp peak."
+  },
+  {
+    "id": "INCM002",
+    "e": "A district is flagged 'red' when key RMNCAH+ coverage/outcome indicators fail to cross the defined performance threshold."
+  },
+  {
+    "id": "INCM003",
+    "e": "Pearl Index = number of accidental pregnancies per 100 woman-years of contraceptive exposure."
+  },
+  {
+    "id": "INCM004",
+    "e": "Population attributable risk = the proportion of disease in the whole population attributable to (and preventable by removing) the exposure."
+  },
+  {
+    "id": "INCM005",
+    "e": "I²/Cochran's Q in meta-analysis quantifies statistical heterogeneity — variation in effect size between included studies."
+  },
+  {
+    "id": "INCM006",
+    "e": "HPV vaccine ↓es cervical cancer risk markedly but doesn't cover every oncogenic HPV type, so it can't guarantee 100% protection."
+  },
+  {
+    "id": "INCM007",
+    "e": "One data point per population/country (group-level exposure vs outcome) defines an ecological study."
+  },
+  {
+    "id": "INCM008",
+    "e": "Odds ratio of exposure = (a×d)/(b×c) = (60×80)/(20×40) = 6."
+  },
+  {
+    "id": "INCM009",
+    "e": "PPV = TP/(TP+FP) = 90/(90+50) = 64.3%."
+  },
+  {
+    "id": "INCM010",
+    "e": "Effectiveness = vaccine performance under real-world/routine field conditions (85%)."
+  },
+  {
+    "id": "INCM011",
+    "e": "Efficacy = vaccine performance under ideal, controlled trial conditions (90%)."
+  }
+]

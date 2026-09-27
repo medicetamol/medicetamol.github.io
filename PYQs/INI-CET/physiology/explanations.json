@@ -1,1 +1,30 @@
-{}
+[
+  {
+    "id": "INPH001",
+    "e": "Progesterone ↑es central respiratory drive → hyperventilation in pregnancy."
+  },
+  {
+    "id": "INPH002",
+    "e": "↓es renal perfusion pressure → ↑es renin release from JG cells (baroreceptor-mediated)."
+  },
+  {
+    "id": "INPH003",
+    "e": "Photoreceptors are unique among sensory receptors in hyperpolarizing (not depolarizing) on stimulation by light."
+  },
+  {
+    "id": "INPH004",
+    "e": "Dentate gyrus of the hippocampus is a recognised site of adult neurogenesis."
+  },
+  {
+    "id": "INPH005",
+    "e": "The negatively-charged glomerular basement membrane repels anions → cations filtered most readily at a given radius."
+  },
+  {
+    "id": "INPH006",
+    "e": "SGLT1 co-transports Na⁺ c̅ glucose, driving water absorption independent of the defective CFTR channel — the basis of oral rehydration therapy."
+  },
+  {
+    "id": "INPH007",
+    "e": "RCA flow is biphasic (systole + diastole) since RV pressure stays low throughout the cycle.\nLCA flow is mainly diastolic, as high LV systolic pressure compresses intramural vessels."
+  }
+]

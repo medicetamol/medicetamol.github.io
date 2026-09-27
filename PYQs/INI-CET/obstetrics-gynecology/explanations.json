@@ -1,1 +1,34 @@
-{}
+[
+  {
+    "id": "INOG001",
+    "e": "Rectocele on defecography is significant once anterior rectal wall bulge exceeds 2 cm."
+  },
+  {
+    "id": "INOG002",
+    "e": "Asherman syndrome = intrauterine adhesions/endometrial scarring, classically post-curettage."
+  },
+  {
+    "id": "INOG003",
+    "e": "Cord entanglement is a monoamniotic-twin risk (shared sac); MCDA twins have a dividing membrane so this isn't typical."
+  },
+  {
+    "id": "INOG004",
+    "e": "Forceps delivery → painful vulvovaginal hematoma, c̅ urinary retention from local pressure on the urethra."
+  },
+  {
+    "id": "INOG005",
+    "e": "Goodell sign (cervical softening) is classified as a probable sign of pregnancy."
+  },
+  {
+    "id": "INOG006",
+    "e": "Low-dose aspirin started from 12 weeks is the best evidence-based method to ↓es pre-eclampsia recurrence."
+  },
+  {
+    "id": "INOG007",
+    "e": "After calling for help, McRoberts manoeuvre c̅ suprapubic pressure is the first step in shoulder dystocia."
+  },
+  {
+    "id": "INOG008",
+    "e": "CAIS: 46XY c̅ testes present, AMH suppresses Müllerian structures (no uterus), but androgen resistance → female phenotype c̅ scanty pubic/axillary hair despite normal breast development."
+  }
+]

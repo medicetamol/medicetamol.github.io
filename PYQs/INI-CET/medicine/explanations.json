@@ -1,1 +1,38 @@
-{}
+[
+  {
+    "id": "INGM001",
+    "e": "Wilson disease is a treatable/reversible copper-storage disorder (chelation) — unlike the other progressive neurodegenerations listed."
+  },
+  {
+    "id": "INGM002",
+    "e": "Systemic sclerosis → patchy myocardial fibrosis from microvascular disease → dilated-cardiomyopathy-like picture, its most characteristic cardiac lesion."
+  },
+  {
+    "id": "INGM003",
+    "e": "Hearing impairment contributes least directly to falls compared to balance disturbance, muscle weakness or joint disease."
+  },
+  {
+    "id": "INGM004",
+    "e": "Frailty is driven mainly by sarcopenia — ↓es muscle mass & strength."
+  },
+  {
+    "id": "INGM005",
+    "e": "First step in malignancy-related hypercalcemia = aggressive isotonic saline volume expansion before bisphosphonates."
+  },
+  {
+    "id": "INGM006",
+    "e": "Refeeding syndrome: insulin surge drives phosphate intracellularly → hypophosphatemia is the key, most characteristic abnormality."
+  },
+  {
+    "id": "INGM007",
+    "e": "CD4 <40 c̅ ring-enhancing brain lesion → toxoplasma encephalitis is the most likely (usually multiple lesions, vs solitary in lymphoma)."
+  },
+  {
+    "id": "INGM008",
+    "e": "ST elevation in II, III, aVF = inferior MI → right coronary artery occlusion (supplies inferior wall in most people)."
+  },
+  {
+    "id": "INGM009",
+    "e": "Ann Arbor 'bulky' (X) modifier = mediastinal mass width >1/3 of the maximum intrathoracic diameter on CXR."
+  }
+]

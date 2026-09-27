@@ -1,1 +1,22 @@
-{}
+[
+  {
+    "id": "INBC001",
+    "e": "Abetalipoproteinemia → absent apoB → no chylomicron/VLDL assembly → ↓es triglycerides, unlike the other options which ↑es TG."
+  },
+  {
+    "id": "INBC002",
+    "e": "UV light forms covalent pyrimidine (thymine-thymine) dimers, distorting the DNA helix."
+  },
+  {
+    "id": "INBC003",
+    "e": "Transamination requires PLP (active vitamin B6) as coenzyme to shuttle the amino group."
+  },
+  {
+    "id": "INBC004",
+    "e": "Glycogen synthase is active in its dephosphorylated state.\nGlycogen phosphorylase is active in its phosphorylated state (opposite regulation)."
+  },
+  {
+    "id": "INBC005",
+    "e": "Sucrose's glycosidic bond involves both anomeric carbons → no free reducing end → negative Benedict's/Fehling's."
+  }
+]

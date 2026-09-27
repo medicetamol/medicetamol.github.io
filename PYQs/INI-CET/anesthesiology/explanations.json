@@ -1,1 +1,22 @@
-{}
+[
+  {
+    "id": "INIAS001",
+    "e": "↑es EtCO2 + hyperthermia + tachycardia + hypertension intra-op = malignant hyperthermia (triggered by volatile agents/succinylcholine)."
+  },
+  {
+    "id": "INIAS002",
+    "e": "Halothane: direct myocardial depression ↓es CO\nBP falls after induction then plateaus (doesn't keep falling irrespective of depth)\n↑es myocardial catecholamine sensitivity → arrhythmias."
+  },
+  {
+    "id": "INIAS003",
+    "e": "LP needle path: supraspinous ligament → interspinous ligament → ligamentum flavum → dura mater → arachnoid mater."
+  },
+  {
+    "id": "INIAS004",
+    "e": "Ketamine largely preserves respiratory drive & airway reflexes even in overdose, unlike barbiturates/opioids."
+  },
+  {
+    "id": "INIAS005",
+    "e": "Halothane → dose-dependent myocardial depression → ↓es cardiac output & blood pressure."
+  }
+]

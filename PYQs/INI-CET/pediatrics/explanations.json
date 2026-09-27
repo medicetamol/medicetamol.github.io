@@ -1,1 +1,38 @@
-{}
+[
+  {
+    "id": "INPD001",
+    "e": "Single word at 20 months c̅ otherwise normal motor/social milestones = isolated expressive language delay → refer for speech & hearing evaluation."
+  },
+  {
+    "id": "INPD002",
+    "e": "Listeria monocytogenes is a classic late-neonatal (beyond first week) meningitis pathogen."
+  },
+  {
+    "id": "INPD003",
+    "e": "Prolonged jaundice + umbilical hernia → congenital hypothyroidism."
+  },
+  {
+    "id": "INPD004",
+    "e": "PDA c̅ reversed (R→L)/Eisenmenger shunt sends deoxygenated blood to the lower body → differential cyanosis."
+  },
+  {
+    "id": "INPD005",
+    "e": "Regression at 6-18 months, ↓es head growth & stereotypic hand-wringing = Rett syndrome."
+  },
+  {
+    "id": "INPD006",
+    "e": "Café-au-lait macules are the earliest, most characteristic cutaneous sign of NF1."
+  },
+  {
+    "id": "INPD007",
+    "e": "Kawasaki disease → bilateral non-exudative/non-purulent conjunctival injection, NOT purulent discharge."
+  },
+  {
+    "id": "INPD008",
+    "e": "Asymptomatic neonatal hypoglycemia c̅ good feeding → continue breastfeeding & monitor rather than IV dextrose."
+  },
+  {
+    "id": "INPD009",
+    "e": "Transplacental anti-Ro/anti-La → neonatal lupus erythematosus c̅ congenital complete heart block."
+  }
+]
