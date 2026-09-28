@@ -178,7 +178,15 @@ export default function Result() {
   );
   const isMultiSubject = subjectIds.size > 1;
 
-  type AnalysisGroup = { key: string; label: string; total: number; correct: number; questions: PYQQuestion[] };
+  type AnalysisGroup = {
+    key: string;
+    label: string;
+    total: number;
+    correct: number;
+    incorrect: number;
+    skipped: number;
+    questions: PYQQuestion[];
+  };
 
   const analysisGroups = useMemo<AnalysisGroup[]>(() => {
     const groups = new Map<string, AnalysisGroup>();
@@ -188,15 +196,24 @@ export default function Result() {
         ? SUBJECTS.find((s) => s.id === q.subjectId)?.name ?? q.subjectId
         : (q.topicName || "Miscellaneous");
       if (!groups.has(key)) {
-        groups.set(key, { key, label, total: 0, correct: 0, questions: [] });
+        groups.set(key, { key, label, total: 0, correct: 0, incorrect: 0, skipped: 0, questions: [] });
       }
       const g = groups.get(key)!;
       g.total += 1;
       g.questions.push(q);
       const a = answerMap.get(q.id);
       if (a?.correct) g.correct += 1;
+      else if (a && a.selected !== null) g.incorrect += 1;
+      else g.skipped += 1;
     }
-    return Array.from(groups.values()).sort((a, b) => b.total - a.total);
+    // Weakest areas first: the incorrect rate is the actionable number here,
+    // so the subject/topic that needs the most revision surfaces at the top.
+    return Array.from(groups.values()).sort((a, b) => {
+      const aRate = a.total > 0 ? a.incorrect / a.total : 0;
+      const bRate = b.total > 0 ? b.incorrect / b.total : 0;
+      if (bRate !== aRate) return bRate - aRate;
+      return b.total - a.total;
+    });
   }, [questions, isMultiSubject, answerMap]);
 
   // ── Opening the Quiz in attempted/read-only state ──
@@ -259,7 +276,7 @@ export default function Result() {
 
         <div className="mt-3 pr-36">
           <h1 className="text-3xl font-bold">{correct}/{total}</h1>
-          <p className="mt-1 text-sm text-slate-500">{accuracy}% accuracy</p>
+          <p className="mt-1 text-sm text-slate-500">{accuracy}% Accuracy</p>
         </div>
 
         <div className="mt-7 grid grid-cols-3 gap-2">
@@ -288,9 +305,9 @@ export default function Result() {
         <>
           {/* ── See Explanations card ── */}
           <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-            <h2 className="text-base font-bold text-slate-100">All questions</h2>
+            <h2 className="text-base font-bold text-slate-100">All Questions</h2>
             <p className="mt-1 text-sm text-slate-500">
-              {questions.length} question{questions.length === 1 ? "" : "s"}
+              {questions.length} Question{questions.length === 1 ? "" : "s"}
             </p>
             <button
               type="button"
@@ -305,11 +322,12 @@ export default function Result() {
           {/* ── Analysis section ── */}
           <section className="mt-6">
             <h2 className="mb-3 text-base font-bold text-slate-100">
-              {isMultiSubject ? "Subject-wise analysis" : "Topic-wise analysis"}
+              {isMultiSubject ? "Subjectwise Analysis" : "Topicwise Analysis"}
             </h2>
             <div className="space-y-2">
               {analysisGroups.map((g) => {
-                const pct = g.total > 0 ? Math.round((g.correct / g.total) * 100) : 0;
+                const attempted = g.correct + g.incorrect;
+                const accuracyPct = attempted > 0 ? Math.round((g.correct / attempted) * 100) : 0;
                 return (
                   <button
                     key={g.key}
@@ -319,8 +337,8 @@ export default function Result() {
                   >
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-semibold text-slate-100">{g.label}</p>
-                      <p className="mt-0.5 text-xs text-slate-500">
-                        {g.correct}/{g.total} correct &middot; {pct}%
+                      <p className="mt-1 text-xs text-slate-400">
+                        {g.correct} Correct &middot; {g.incorrect} Incorrect &middot; {accuracyPct}% Accuracy
                       </p>
                     </div>
                     <ChevronRight size={18} className="shrink-0 text-slate-600" />

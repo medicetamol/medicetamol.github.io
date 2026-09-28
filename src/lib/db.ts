@@ -1,24 +1,21 @@
-import type { Bookmark, CustomModuleHistoryEntry, DailyActivity, LifetimeStats, QuestionAnswer, QuizResult } from "../types";
+import type { Bookmark, CustomModuleHistoryEntry, DailyActivity, LifetimeStats, QuestionAnswer } from "../types";
 
 const DB_NAME = "medicetamol-db";
-const DB_VERSION = 5;
+const DB_VERSION = 6;
 const BOOKMARKS = "bookmarks";
 const ANSWERS = "answers";
 const ACTIVITY = "dailyActivity";
 const LIFETIME = "lifetimeStats";
-const QUIZZES = "quizResults";
 const MODULE_HISTORY = "customModuleHistory";
-// v2 store name, only used during migration
-const LEGACY_PROGRESS = "questionProgress";
+// v5 store, unused (no code ever read from it) — dropped in v6.
+const LEGACY_QUIZZES = "quizResults";
 
 function openDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const req = indexedDB.open(DB_NAME, DB_VERSION);
 
-    req.onupgradeneeded = (event) => {
+    req.onupgradeneeded = () => {
       const db = req.result;
-      const oldVersion = event.oldVersion;
-      const transaction = req.transaction;
 
       if (!db.objectStoreNames.contains(BOOKMARKS)) {
         db.createObjectStore(BOOKMARKS, { keyPath: "qid" });
@@ -32,58 +29,12 @@ function openDB(): Promise<IDBDatabase> {
       if (!db.objectStoreNames.contains(LIFETIME)) {
         db.createObjectStore(LIFETIME, { keyPath: "id" });
       }
-      if (!db.objectStoreNames.contains(QUIZZES)) {
-        const store = db.createObjectStore(QUIZZES, { keyPath: "finishedAt" });
-        store.createIndex("startedAt", "startedAt");
-      }
       if (!db.objectStoreNames.contains(MODULE_HISTORY)) {
         const store = db.createObjectStore(MODULE_HISTORY, { keyPath: "id" });
         store.createIndex("startedAt", "startedAt");
       }
-
-      // Migrate v2 questionProgress rows into the new bookmarks/answers stores,
-      // then drop the legacy store. Preserves existing user data on upgrade.
-      if (oldVersion < 3 && db.objectStoreNames.contains(LEGACY_PROGRESS) && transaction) {
-        const legacyStore = transaction.objectStore(LEGACY_PROGRESS);
-        const bookmarksStore = transaction.objectStore(BOOKMARKS);
-        const answersStore = transaction.objectStore(ANSWERS);
-
-        legacyStore.getAll().onsuccess = (e) => {
-          const rows = (e.target as IDBRequest).result as Array<{
-            qid: string;
-            bookmarked?: boolean;
-            attempts?: number;
-            directCorrect?: boolean;
-          }>;
-          for (const row of rows) {
-            if (row.bookmarked) {
-              bookmarksStore.put({ qid: row.qid } satisfies Bookmark);
-            }
-            if ((row.attempts ?? 0) > 0) {
-              // We don't know the exact wrong option from legacy data, so a
-              // previously-incorrect question migrates as answered-correct.
-              // This only affects historical resume-highlight styling, not counts going forward.
-              answersStore.put({ qid: row.qid } satisfies QuestionAnswer);
-            }
-          }
-        };
-
-        db.deleteObjectStore(LEGACY_PROGRESS);
-      }
-
-      // Seed lifetime totals once, from whatever dailyActivity already exists,
-      // so upgrading users don't start back at 0.
-      if (oldVersion < 4 && db.objectStoreNames.contains(ACTIVITY) && transaction) {
-        const activityStore = transaction.objectStore(ACTIVITY);
-        const lifetimeStore = transaction.objectStore(LIFETIME);
-        activityStore.getAll().onsuccess = (e) => {
-          const rows = (e.target as IDBRequest).result as DailyActivity[];
-          const totalSolved = rows.reduce((n, r) => n + r.correct + r.incorrect, 0);
-          const totalCorrect = rows.reduce((n, r) => n + r.correct, 0);
-          if (totalSolved > 0) {
-            lifetimeStore.put({ id: "lifetime", totalSolved, totalCorrect } satisfies LifetimeStats);
-          }
-        };
+      if (db.objectStoreNames.contains(LEGACY_QUIZZES)) {
+        db.deleteObjectStore(LEGACY_QUIZZES);
       }
     };
 
@@ -179,6 +130,16 @@ export async function recordDirectAnswer(qid: string, correct: boolean, selected
 export const STREAK_DAILY_GOAL = 5;
 
 export async function recordDailyActivity(correct: boolean): Promise<void> {
+  return recordDailyActivityBatch(correct ? 1 : 0, 1);
+}
+
+// Folds N solved questions (correctCount of them correct) into a single
+// read-modify-write on the day's row and lifetimeStats, instead of one
+// round trip per question. Use this whenever crediting more than one
+// question at once (e.g. a whole finished quiz-mode module).
+export async function recordDailyActivityBatch(correctCount: number, totalCount: number): Promise<void> {
+  if (totalCount === 0) return;
+
   const date = new Date().toISOString().slice(0, 10);
   const current = await tx<DailyActivity | null>(ACTIVITY, "readonly", (store, resolve, reject) => {
     const req = store.get(date);
@@ -187,15 +148,15 @@ export async function recordDailyActivity(correct: boolean): Promise<void> {
   });
 
   const next: DailyActivity = current ?? { date, correct: 0, incorrect: 0 };
-  if (correct) next.correct += 1;
-  else next.incorrect += 1;
+  next.correct += correctCount;
+  next.incorrect += totalCount - correctCount;
 
   await tx<void>(ACTIVITY, "readwrite", (store, resolve) => {
     store.put(next);
     resolve();
   });
 
-  await bumpLifetimeStats(correct);
+  await bumpLifetimeStatsBatch(correctCount, totalCount);
 }
 
 export async function getDailyActivity(): Promise<DailyActivity[]> {
@@ -209,7 +170,7 @@ export async function getDailyActivity(): Promise<DailyActivity[]> {
 // ─── Lifetime stats (never decreases, survives subject-clear and any future
 // dailyActivity pruning) ────────────────────────────────────────────────────
 
-async function bumpLifetimeStats(correct: boolean): Promise<void> {
+async function bumpLifetimeStatsBatch(correctCount: number, totalCount: number): Promise<void> {
   const current = await tx<LifetimeStats | null>(LIFETIME, "readonly", (store, resolve, reject) => {
     const req = store.get("lifetime");
     req.onsuccess = () => resolve((req.result as LifetimeStats | undefined) ?? null);
@@ -217,8 +178,8 @@ async function bumpLifetimeStats(correct: boolean): Promise<void> {
   });
 
   const next: LifetimeStats = current ?? { id: "lifetime", totalSolved: 0, totalCorrect: 0 };
-  next.totalSolved += 1;
-  if (correct) next.totalCorrect += 1;
+  next.totalSolved += totalCount;
+  next.totalCorrect += correctCount;
 
   await tx<void>(LIFETIME, "readwrite", (store, resolve) => {
     store.put(next);
@@ -247,7 +208,7 @@ export interface StreakInfo {
 
 /**
  * Computes the current streak from daily activity. A day "counts" once
- * correct+incorrect >= STREAK_DAILY_GOAL. Today is never a hard break by
+ * count >= STREAK_DAILY_GOAL. Today is never a hard break by
  * itself — if today hasn't hit the goal yet, the streak still shows
  * yesterday's count (dimmed, at risk) rather than resetting to 0. The streak
  * only resets when a full past day is found that didn't hit the goal.
@@ -256,7 +217,7 @@ export function computeStreak(activity: DailyActivity[]): StreakInfo {
   const byDate = new Map(activity.map((a) => [a.date, a]));
   const todayKey = new Date().toISOString().slice(0, 10);
   const today = byDate.get(todayKey);
-  const todayCount = (today?.correct ?? 0) + (today?.incorrect ?? 0);
+  const todayCount = today ? today.correct + today.incorrect : 0;
   const completedToday = todayCount >= STREAK_DAILY_GOAL;
 
   let days = 0;
@@ -268,30 +229,13 @@ export function computeStreak(activity: DailyActivity[]): StreakInfo {
   while (true) {
     const key = cursor.toISOString().slice(0, 10);
     const row = byDate.get(key);
-    const count = (row?.correct ?? 0) + (row?.incorrect ?? 0);
+    const count = row ? row.correct + row.incorrect : 0;
     if (count < STREAK_DAILY_GOAL) break;
     days++;
     cursor.setDate(cursor.getDate() - 1);
   }
 
   return { days, completedToday, todayCount };
-}
-
-// ─── Quiz results ────────────────────────────────────────────────────────────
-
-export async function saveQuizResult(result: QuizResult): Promise<void> {
-  return tx<void>(QUIZZES, "readwrite", (store, resolve) => {
-    store.put(result);
-    resolve();
-  });
-}
-
-export async function getQuizResults(): Promise<QuizResult[]> {
-  return tx<QuizResult[]>(QUIZZES, "readonly", (store, resolve, reject) => {
-    const req = store.getAll();
-    req.onsuccess = () => resolve(req.result as QuizResult[]);
-    req.onerror = () => reject(req.error);
-  });
 }
 
 /**
@@ -373,4 +317,70 @@ async function pruneCustomModuleHistory(): Promise<void> {
         transaction.onerror = () => reject(transaction.error);
       })
   );
+}
+
+// ─── Bulk helpers for cloud sync (see syncEngine.ts) ────────────────────────
+// Sync reads whole stores and, on download, replaces them wholesale.
+
+/** Everything the cloud copy is built from, read in one go. */
+export interface LocalSnapshot {
+  answers: QuestionAnswer[];
+  bookmarks: Bookmark[];
+  activity: DailyActivity[];
+  lifetime: LifetimeStats;
+  modules: CustomModuleHistoryEntry[];
+}
+
+export async function getLocalSnapshot(): Promise<LocalSnapshot> {
+  const [answers, bookmarks, activity, lifetime, modules] = await Promise.all([
+    getAllAnswers(),
+    getAllBookmarks(),
+    getDailyActivity(),
+    getLifetimeStats(),
+    getCustomModuleHistory(),
+  ]);
+  // Only finished modules sync — an unfinished one is a local-only resumable draft.
+  return { answers, bookmarks, activity, lifetime, modules: modules.filter((m) => m.finishedAt !== null) };
+}
+
+/** True when the device holds no progress at all. */
+export function isSnapshotEmpty(s: LocalSnapshot): boolean {
+  return (
+    s.answers.length === 0 &&
+    s.bookmarks.length === 0 &&
+    s.activity.length === 0 &&
+    s.lifetime.totalSolved === 0 &&
+    s.modules.length === 0
+  );
+}
+
+/** Wipe every store. Used on sign-out and before filling from the cloud. */
+export async function clearAllLocalData(): Promise<void> {
+  const db = await openDB();
+  const names = [BOOKMARKS, ANSWERS, ACTIVITY, LIFETIME, MODULE_HISTORY];
+  await new Promise<void>((resolve, reject) => {
+    const transaction = db.transaction(names, "readwrite");
+    for (const name of names) transaction.objectStore(name).clear();
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error);
+    transaction.onabort = () => reject(transaction.error);
+  });
+}
+
+/** Replace all local data with a snapshot (clears first, then fills, atomically). */
+export async function replaceLocalData(s: LocalSnapshot): Promise<void> {
+  const db = await openDB();
+  const names = [BOOKMARKS, ANSWERS, ACTIVITY, LIFETIME, MODULE_HISTORY];
+  await new Promise<void>((resolve, reject) => {
+    const transaction = db.transaction(names, "readwrite");
+    for (const name of names) transaction.objectStore(name).clear();
+    for (const b of s.bookmarks) transaction.objectStore(BOOKMARKS).put(b);
+    for (const a of s.answers) transaction.objectStore(ANSWERS).put(a);
+    for (const d of s.activity) transaction.objectStore(ACTIVITY).put(d);
+    if (s.lifetime.totalSolved > 0) transaction.objectStore(LIFETIME).put(s.lifetime);
+    for (const m of s.modules) transaction.objectStore(MODULE_HISTORY).put(m);
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error);
+    transaction.onabort = () => reject(transaction.error);
+  });
 }

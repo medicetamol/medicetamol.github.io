@@ -24,6 +24,18 @@ service cloud.firestore {
         && request.resource.data.count == resource.data.count + 1;
     }
 
+    // One progress document per user; only its owner can touch it, and the
+    // size cap keeps a buggy client from writing something huge.
+    match /users/{uid}/data/progress {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(
+          ["answers", "bookmark", "activity", "lifetime", "modules", "updatedAt"]
+        );
+      allow delete: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

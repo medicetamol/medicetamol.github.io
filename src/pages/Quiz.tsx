@@ -28,8 +28,8 @@ import {
   getAllAnswers,
   isBookmarked,
   recordDailyActivity,
+  recordDailyActivityBatch,
   recordDirectAnswer,
-  saveQuizResult,
   saveCustomModuleHistory,
   getCustomModuleHistoryEntry,
   toggleBookmark,
@@ -38,6 +38,7 @@ import {
   computeStreak,
 } from "../lib/db";
 import { useAuth } from "../lib/AuthContext";
+import { syncAfterModuleFinish } from "../lib/syncEngine";
 import { checkDqbMilestone, checkStreakMilestone } from "../lib/authPrompt";
 import AuthPromptModal from "../components/AuthPromptModal";
 import { readModuleDraft, writeModuleDraft, clearModuleDraft } from "../lib/moduleDraft";
@@ -870,11 +871,8 @@ export default function Quiz() {
     // only runs for isQuizMode to avoid double-counting.
     if (isQuizMode) {
       try {
-        for (const a of finalAnswers) {
-          if (a.selected !== null) {
-            await recordDailyActivity(a.correct);
-          }
-        }
+        const answered = finalAnswers.filter((a) => a.selected !== null);
+        await recordDailyActivityBatch(answered.filter((a) => a.correct).length, answered.length);
         if (!user) {
           const info = computeStreak(await getDailyActivity());
           if (checkStreakMilestone(info.days)) setShowSoftAuthPrompt(true);
@@ -882,20 +880,6 @@ export default function Quiz() {
       } catch (err) {
         console.error("Could not record quiz-mode daily activity", err);
       }
-    }
-
-    // Saving must never block the user from seeing their result.
-    try {
-      await saveQuizResult({
-        exam: examId,
-        questionIds: pool.map((q) => q.id),
-        answers: finalAnswers,
-        customModule: isCustom,
-        startedAt,
-        finishedAt: new Date().toISOString(),
-      });
-    } catch (err) {
-      console.error("saveQuizResult failed", err);
     }
 
     // Fold the finished module into its history row (created up-front in
@@ -921,6 +905,9 @@ export default function Quiz() {
           incorrectCount,
           skippedCount,
         });
+        // Signed-in users: push this finished module to the cloud (1 write).
+        // Not awaited — the user shouldn't wait on the network to see results.
+        void syncAfterModuleFinish();
       } catch (err) {
         console.error("saveCustomModuleHistory failed", err);
       }

@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { subscribeToAuth, type User } from "./auth";
 import { clearAuthPromptState } from "./authPrompt";
+import { reconcileOnSignIn, syncIfDue } from "./syncEngine";
 
 interface AuthState {
   user: User | null;
@@ -14,12 +15,37 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Which uid we've already reconciled this page load. Firebase restores a
+    // saved session on refresh (also firing this callback), and in that case
+    // local data is already the account's, so only a genuinely fresh sign-in
+    // (no reconcile recorded for this tab session) pulls from the cloud.
+    let reconciledUid: string | null = null;
+
     const unsubscribe = subscribeToAuth((u) => {
       setUser(u);
       setLoading(false);
       // Once signed in, nothing left to nag about — drop all milestone
       // tracking so a future sign-out doesn't resume mid-sequence oddly.
       if (u) clearAuthPromptState();
+
+      if (!u) {
+        reconciledUid = null;
+        return;
+      }
+      if (reconciledUid === u.uid) return;
+      reconciledUid = u.uid;
+
+      const key = `medicetamol:reconciled:${u.uid}`;
+      if (localStorage.getItem(key)) {
+        // Returning session on this device: local is already this account's data.
+        void syncIfDue(u.uid);
+      } else {
+        void reconcileOnSignIn(u.uid).then((replaced) => {
+          localStorage.setItem(key, "1");
+          // Pages that already read IndexedDB on mount would show stale data.
+          if (replaced) window.location.reload();
+        });
+      }
     });
     return unsubscribe;
   }, []);

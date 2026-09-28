@@ -6,7 +6,9 @@ import type { Theme } from "../lib/theme";
 import { setFontScale, useFontScale } from "../lib/fontScale";
 import type { FontScale } from "../lib/fontScale";
 import { useAuth } from "../lib/AuthContext";
-import { signInWithGoogle, signOutUser } from "../lib/auth";
+import { signInWithGoogle } from "../lib/auth";
+import { useSyncStatus } from "../lib/syncEngine";
+import SignOutModal from "../components/SignOutModal";
 
 const THEMES: Array<{ id: Theme; label: string; icon: typeof Sun }> = [
   { id: "dark", label: "Dark", icon: Moon },
@@ -26,6 +28,8 @@ export default function Settings() {
   const { user } = useAuth();
   const [authBusy, setAuthBusy] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
+  const [showSignOut, setShowSignOut] = useState(false);
+  const sync = useSyncStatus();
 
   const handleSignIn = async () => {
     setAuthError(null);
@@ -34,17 +38,6 @@ export default function Settings() {
       await signInWithGoogle();
     } catch (err) {
       setAuthError("Sign-in was cancelled or failed. Please try again.");
-      console.error(err);
-    } finally {
-      setAuthBusy(false);
-    }
-  };
-
-  const handleSignOut = async () => {
-    setAuthBusy(true);
-    try {
-      await signOutUser();
-    } catch (err) {
       console.error(err);
     } finally {
       setAuthBusy(false);
@@ -70,9 +63,15 @@ export default function Settings() {
                 <p className="mt-2 flex items-center gap-1.5 text-xs text-emerald-300">
                   <Check size={14} /> Signed in as {user.displayName ?? user.email}
                 </p>
+                <p className="mt-1 text-xs text-slate-500">
+                  {sync.status === "syncing" && "Your progress is syncing…"}
+                  {sync.status === "synced" && "Your progress is synced."}
+                  {sync.status === "error" && "Couldn't sync your progress. It will retry later."}
+                  {sync.status === "idle" && "Your progress syncs to your account."}
+                </p>
                 <button
                   type="button"
-                  onClick={handleSignOut}
+                  onClick={() => setShowSignOut(true)}
                   disabled={authBusy}
                   className="mt-4 inline-flex items-center gap-2 rounded-xl border border-slate-700 px-5 py-3 text-sm font-bold text-slate-100 hover:bg-slate-800 disabled:opacity-60"
                 >
@@ -211,6 +210,7 @@ export default function Settings() {
           </div>
         </div>
       </section>
+      {showSignOut && <SignOutModal onClose={() => setShowSignOut(false)} />}
     </main>
   );
 }
