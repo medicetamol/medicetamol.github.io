@@ -31,7 +31,7 @@ service cloud.firestore {
       allow create, update: if request.auth != null
         && request.auth.uid == uid
         && request.resource.data.keys().hasOnly(
-          ["answers", "bookmark", "activity", "lifetime", "modules", "updatedAt"]
+          ["answers", "bookmark", "activity", "lifetime", "modules", "clearedAt", "updatedAt"]
         );
       allow delete: if false;
     }

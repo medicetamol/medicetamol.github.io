@@ -905,8 +905,7 @@ export default function Quiz() {
           incorrectCount,
           skippedCount,
         });
-        // Signed-in users: push this finished module to the cloud (1 write).
-        // Not awaited — the user shouldn't wait on the network to see results.
+        // Signed-in users: push this finished module to the cloud (not awaited).
         void syncAfterModuleFinish();
       } catch (err) {
         console.error("saveCustomModuleHistory failed", err);

@@ -7,8 +7,8 @@ import { setFontScale, useFontScale } from "../lib/fontScale";
 import type { FontScale } from "../lib/fontScale";
 import { useAuth } from "../lib/AuthContext";
 import { signInWithGoogle } from "../lib/auth";
-import { useSyncStatus } from "../lib/syncEngine";
 import SignOutModal from "../components/SignOutModal";
+import SyncButton from "../components/SyncButton";
 
 const THEMES: Array<{ id: Theme; label: string; icon: typeof Sun }> = [
   { id: "dark", label: "Dark", icon: Moon },
@@ -29,7 +29,6 @@ export default function Settings() {
   const [authBusy, setAuthBusy] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
   const [showSignOut, setShowSignOut] = useState(false);
-  const sync = useSyncStatus();
 
   const handleSignIn = async () => {
     setAuthError(null);
@@ -63,12 +62,9 @@ export default function Settings() {
                 <p className="mt-2 flex items-center gap-1.5 text-xs text-emerald-300">
                   <Check size={14} /> Signed in as {user.displayName ?? user.email}
                 </p>
-                <p className="mt-1 text-xs text-slate-500">
-                  {sync.status === "syncing" && "Your progress is syncing…"}
-                  {sync.status === "synced" && "Your progress is synced."}
-                  {sync.status === "error" && "Couldn't sync your progress. It will retry later."}
-                  {sync.status === "idle" && "Your progress syncs to your account."}
-                </p>
+                <div className="mt-3">
+                  <SyncButton />
+                </div>
                 <button
                   type="button"
                   onClick={() => setShowSignOut(true)}

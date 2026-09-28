@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { subscribeToAuth, type User } from "./auth";
 import { clearAuthPromptState } from "./authPrompt";
-import { reconcileOnSignIn, syncIfDue } from "./syncEngine";
+import { pullAndPush, pushOnBackground, reconcileOnSignIn } from "./syncEngine";
 
 interface AuthState {
   user: User | null;
@@ -37,8 +37,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       const key = `medicetamol:reconciled:${u.uid}`;
       if (localStorage.getItem(key)) {
-        // Returning session on this device: local is already this account's data.
-        void syncIfDue(u.uid);
+        // Returning session on this device: pick up what other devices did,
+        // then push our own queued changes (if the 15-minute gate allows).
+        void pullAndPush(u.uid).then((changed) => {
+          if (changed) window.location.reload();
+        });
       } else {
         void reconcileOnSignIn(u.uid).then((replaced) => {
           localStorage.setItem(key, "1");
@@ -47,7 +50,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         });
       }
     });
-    return unsubscribe;
+
+    // Closest thing the web has to "app closed": the page going to the
+    // background (tab switch, app switch, screen lock). Gated to once per 15
+    // minutes and only when something changed, so this is cheap.
+    const onVisibility = () => {
+      if (document.visibilityState === "hidden") void pushOnBackground();
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+
+    return () => {
+      unsubscribe();
+      document.removeEventListener("visibilitychange", onVisibility);
+    };
   }, []);
 
   return (

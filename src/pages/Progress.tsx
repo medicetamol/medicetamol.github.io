@@ -4,6 +4,9 @@ import { useLocation } from "react-router-dom";
 import { getAllAnswers, getAllBookmarks, getDailyActivity, getLifetimeStats, clearSubjectProgress, computeStreak, STREAK_DAILY_GOAL } from "../lib/db";
 import { SUBJECTS, EXAM_PREFIX, EXAMS } from "../constants";
 import Streak from "../components/Streak";
+import SyncButton from "../components/SyncButton";
+import { useAuth } from "../lib/AuthContext";
+import { syncAfterClear } from "../lib/syncEngine";
 import manifest from "../data/manifest.json";
 import type { DailyActivity, LifetimeStats, QuestionAnswer, Exam } from "../types";
 
@@ -65,6 +68,7 @@ function ClearConfirmModal({
 // ─── Main page ────────────────────────────────────────────────────────────────
 
 export default function Progress() {
+  const { user } = useAuth();
   const location = useLocation();
   const locationState = location.state as {
     scrollToSubjects?: boolean;
@@ -169,6 +173,8 @@ export default function Progress() {
     const subject = subjectStats.find((s) => s.id === clearTarget.subjectId);
     if (subject) {
       await clearSubjectProgress(subject.qids);
+      // A clear is a major change: tell the cloud (and so other devices) now.
+      void syncAfterClear();
     }
 
     // Refresh answers (bookmarks are untouched by a subject clear)
@@ -184,6 +190,11 @@ export default function Progress() {
         <h1 className="text-2xl font-bold">Progress</h1>
         <p className="mt-1 text-sm text-slate-500">Your overall performance and activity.</p>
         <p className="mt-1 text-sm text-slate-500">Let's get 1% better each day.</p>
+        {user && (
+          <div className="mt-4">
+            <SyncButton />
+          </div>
+        )}
       </div>
 
       {/* Metrics */}

@@ -33,8 +33,7 @@ export default function SignOutModal({ onClose }: { onClose: () => void }) {
     const uid = auth.currentUser?.uid;
     setPhase("signingOut");
     try {
-      await wipeLocalAfterSignOut();
-      if (uid) localStorage.removeItem(`medicetamol:reconciled:${uid}`);
+      await wipeLocalAfterSignOut(uid);
       await signOutUser();
       // Any open page still holds the wiped data in memory.
       window.location.assign("/");

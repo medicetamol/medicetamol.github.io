@@ -1,4 +1,11 @@
 import type { Bookmark, CustomModuleHistoryEntry, DailyActivity, LifetimeStats, QuestionAnswer } from "../types";
+import {
+  recordActivityPending,
+  recordAnswerPending,
+  recordBookmarkPending,
+  recordClearPending,
+  recordModuleFinishPending,
+} from "./pending";
 
 const DB_NAME = "medicetamol-db";
 const DB_VERSION = 6;
@@ -80,6 +87,7 @@ export async function toggleBookmark(qid: string): Promise<{ bookmarked: boolean
     else store.put({ qid } satisfies Bookmark);
     resolve();
   });
+  recordBookmarkPending(qid, !wasBookmarked);
   return { bookmarked: !wasBookmarked };
 }
 
@@ -118,6 +126,7 @@ export async function recordDirectAnswer(qid: string, correct: boolean, selected
     store.put(record);
     resolve();
   });
+  recordAnswerPending(record.qid, record.incorrect);
   return record;
 }
 
@@ -157,6 +166,7 @@ export async function recordDailyActivityBatch(correctCount: number, totalCount:
   });
 
   await bumpLifetimeStatsBatch(correctCount, totalCount);
+  recordActivityPending(date, correctCount, totalCount);
 }
 
 export async function getDailyActivity(): Promise<DailyActivity[]> {
@@ -244,6 +254,18 @@ export function computeStreak(activity: DailyActivity[]): StreakInfo {
  * Called from Progress.tsx when the user double-taps and confirms a subject wipe.
  */
 export async function clearSubjectProgress(qids: string[]): Promise<void> {
+  await clearSubjectProgressLocal(qids);
+  const seen = new Set<string>();
+  for (const qid of qids) {
+    const key = qid.slice(0, 4); // exam(2) + subject(2)
+    if (key.length === 4 && !seen.has(key)) {
+      seen.add(key);
+      recordClearPending(key.slice(0, 2), key.slice(2, 4));
+    }
+  }
+}
+
+async function clearSubjectProgressLocal(qids: string[]): Promise<void> {
   return openDB().then(
     (db) =>
       new Promise<void>((resolve, reject) => {
@@ -274,6 +296,8 @@ export async function saveCustomModuleHistory(entry: CustomModuleHistoryEntry): 
     resolve();
   });
   await pruneCustomModuleHistory();
+  // Only a finished module syncs; an unfinished one is a local-only draft.
+  if (entry.finishedAt !== null) recordModuleFinishPending();
 }
 
 export async function getCustomModuleHistory(): Promise<CustomModuleHistoryEntry[]> {
@@ -383,4 +407,88 @@ export async function replaceLocalData(s: LocalSnapshot): Promise<void> {
     transaction.onerror = () => reject(transaction.error);
     transaction.onabort = () => reject(transaction.error);
   });
+}
+
+/**
+ * Same-account, multi-device pull: fold what other devices did into this
+ * device's data. Union only. Nothing local is removed, except subjects that
+ * another device explicitly cleared (`clearedPrefixes`, e.g. "PGAN").
+ * Returns true if anything local changed. Does NOT touch the pending log:
+ * merged-in data already lives in the cloud.
+ */
+export async function mergeCloudIntoLocal(
+  cloud: LocalSnapshot,
+  clearedPrefixes: string[],
+): Promise<boolean> {
+  const local = await getLocalSnapshot();
+  const db = await openDB();
+  let changed = false;
+
+  const localAnswers = new Map(local.answers.map((a) => [a.qid, a]));
+  const localBookmarks = new Set(local.bookmarks.map((b) => b.qid));
+  const localActivity = new Map(local.activity.map((d) => [d.date, d]));
+
+  await new Promise<void>((resolve, reject) => {
+    const names = [ANSWERS, BOOKMARKS, ACTIVITY, LIFETIME];
+    const transaction = db.transaction(names, "readwrite");
+
+    // 1. subjects cleared on another device: drop the local copies
+    for (const prefix of clearedPrefixes) {
+      for (const qid of localAnswers.keys()) {
+        if (qid.startsWith(prefix)) {
+          transaction.objectStore(ANSWERS).delete(qid);
+          localAnswers.delete(qid);
+          changed = true;
+        }
+      }
+    }
+
+    // 2. answers: add anything we don't have (an answer is write-once)
+    for (const a of cloud.answers) {
+      if (!localAnswers.has(a.qid)) {
+        transaction.objectStore(ANSWERS).put(a);
+        changed = true;
+      }
+    }
+
+    // 3. bookmarks: union
+    for (const b of cloud.bookmarks) {
+      if (!localBookmarks.has(b.qid)) {
+        transaction.objectStore(BOOKMARKS).put(b);
+        changed = true;
+      }
+    }
+
+    // 4. activity: per day, keep the larger counts
+    for (const d of cloud.activity) {
+      const mine = localActivity.get(d.date);
+      if (!mine || d.correct > mine.correct || d.incorrect > mine.incorrect) {
+        transaction.objectStore(ACTIVITY).put({
+          date: d.date,
+          correct: Math.max(d.correct, mine?.correct ?? 0),
+          incorrect: Math.max(d.incorrect, mine?.incorrect ?? 0),
+        } satisfies DailyActivity);
+        changed = true;
+      }
+    }
+
+    // 5. lifetime: never goes down
+    if (
+      cloud.lifetime.totalSolved > local.lifetime.totalSolved ||
+      cloud.lifetime.totalCorrect > local.lifetime.totalCorrect
+    ) {
+      transaction.objectStore(LIFETIME).put({
+        id: "lifetime",
+        totalSolved: Math.max(cloud.lifetime.totalSolved, local.lifetime.totalSolved),
+        totalCorrect: Math.max(cloud.lifetime.totalCorrect, local.lifetime.totalCorrect),
+      } satisfies LifetimeStats);
+      changed = true;
+    }
+
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error);
+    transaction.onabort = () => reject(transaction.error);
+  });
+
+  return changed;
 }
