@@ -1,4 +1,54 @@
 import { Fragment } from "react";
+import { Ban, Brain, Lightbulb, Target, type LucideIcon } from "lucide-react";
+
+type SectionStyle = {
+  icon: LucideIcon;
+  label: string;
+  border: string;
+  tint: string;
+  text: string;
+};
+
+// Matched by exact heading text (case-insensitive). Anything else (custom
+// table headings like "Muscles of Mastication") falls through to the plain
+// heading style below, unstyled and uncoloured.
+const SECTION_STYLES: Record<string, SectionStyle> = {
+  "trigger point": {
+    icon: Target,
+    label: "Trigger Point",
+    border: "#378ADD",
+    tint: "rgba(55,138,221,0.10)",
+    text: "#85B7EB",
+  },
+  "why not the other options?": {
+    icon: Ban,
+    label: "Why Not the Other Options?",
+    border: "#E24B4A",
+    tint: "rgba(226,75,74,0.08)",
+    text: "#F09595",
+  },
+  "why the others are true": {
+    icon: Ban,
+    label: "Why the Others Are True",
+    border: "#E24B4A",
+    tint: "rgba(226,75,74,0.08)",
+    text: "#F09595",
+  },
+  "mind capsule": {
+    icon: Lightbulb,
+    label: "Mind Capsule",
+    border: "#EF9F27",
+    tint: "rgba(239,159,39,0.10)",
+    text: "#FAC775",
+  },
+  "memory hook": {
+    icon: Brain,
+    label: "Memory Hook",
+    border: "#7F77DD",
+    tint: "rgba(127,119,221,0.10)",
+    text: "#AFA9EC",
+  },
+};
 
 function inlineParts(text: string) {
   const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g);
@@ -56,8 +106,9 @@ function splitTableRow(line: string): string[] {
     .map((cell) => cell.trim());
 }
 
-export default function MarkdownContent({ content }: { content: string }) {
-  const lines = content.replace(/\r\n/g, "\n").split("\n");
+// Renders everything that isn't a top-level `#`/`##` heading: paragraphs,
+// blockquotes, tables, lists, code blocks, and standalone reference images.
+function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
   const blocks: JSX.Element[] = [];
   let i = 0;
 
@@ -79,7 +130,7 @@ export default function MarkdownContent({ content }: { content: string }) {
       }
       i++;
       blocks.push(
-        <pre key={blocks.length} className="overflow-x-auto rounded-xl bg-slate-950 p-3 text-xs leading-6 text-slate-300">
+        <pre key={`${keyPrefix}-${blocks.length}`} className="overflow-x-auto rounded-xl bg-slate-950 p-3 text-xs leading-6 text-slate-300">
           <code data-language={language || undefined}>{code.join("\n")}</code>
         </pre>
       );
@@ -97,7 +148,7 @@ export default function MarkdownContent({ content }: { content: string }) {
             ? "text-base font-bold text-slate-100"
             : "text-sm font-semibold text-slate-200";
       blocks.push(
-        <Tag key={blocks.length} className={className}>
+        <Tag key={`${keyPrefix}-${blocks.length}`} className={className}>
           {inlineParts(heading[2])}
         </Tag>
       );
@@ -105,16 +156,54 @@ export default function MarkdownContent({ content }: { content: string }) {
       continue;
     }
 
+    // Standalone reference image: `![caption text](url)` alone on its own
+    // line. The bracket text becomes a visible caption under the image,
+    // not just the alt attribute. No heading needed above it.
+    const standaloneImage = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (standaloneImage) {
+      const [, caption, src] = standaloneImage;
+      i++;
+      blocks.push(
+        <figure
+          key={`${keyPrefix}-${blocks.length}`}
+          className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900"
+        >
+          <img
+            src={src}
+            alt={caption}
+            loading="lazy"
+            className="max-h-[28rem] w-full object-contain"
+          />
+          {caption ? (
+            <figcaption className="border-t border-slate-800 px-3 py-2 text-center text-xs italic text-slate-500">
+              {caption}
+            </figcaption>
+          ) : null}
+        </figure>
+      );
+      continue;
+    }
+
     if (line.startsWith("> ")) {
+      const quoteLines: string[] = [line.slice(2)];
+      i++;
+      while (i < lines.length && lines[i].trim().startsWith("> ")) {
+        quoteLines.push(lines[i].trim().slice(2));
+        i++;
+      }
       blocks.push(
         <blockquote
-          key={blocks.length}
+          key={`${keyPrefix}-${blocks.length}`}
           className="border-l-2 border-slate-600 pl-3 text-sm italic leading-6 text-slate-300"
         >
-          {inlineParts(line.slice(2))}
+          {quoteLines.map((quoteLine, qIndex) => (
+            <Fragment key={qIndex}>
+              {qIndex > 0 ? <br /> : null}
+              {inlineParts(quoteLine)}
+            </Fragment>
+          ))}
         </blockquote>
       );
-      i++;
       continue;
     }
 
@@ -131,7 +220,7 @@ export default function MarkdownContent({ content }: { content: string }) {
         i++;
       }
       blocks.push(
-        <div key={blocks.length} className="overflow-x-auto rounded-xl border border-slate-800">
+        <div key={`${keyPrefix}-${blocks.length}`} className="overflow-x-auto rounded-xl border border-slate-800">
           <table className="w-full min-w-max text-left text-xs">
             <thead className="bg-slate-900 text-slate-300">
               <tr>
@@ -164,7 +253,7 @@ export default function MarkdownContent({ content }: { content: string }) {
         i++;
       }
       blocks.push(
-        <ul key={blocks.length} className="list-disc space-y-1 pl-5 text-sm leading-6 text-slate-300">
+        <ul key={`${keyPrefix}-${blocks.length}`} className="list-disc space-y-1 pl-5 text-sm leading-6 text-slate-300">
           {items.map((item, index) => <li key={index}>{inlineParts(item)}</li>)}
         </ul>
       );
@@ -178,7 +267,7 @@ export default function MarkdownContent({ content }: { content: string }) {
         i++;
       }
       blocks.push(
-        <ol key={blocks.length} className="list-decimal space-y-1 pl-5 text-sm leading-6 text-slate-300">
+        <ol key={`${keyPrefix}-${blocks.length}`} className="list-decimal space-y-1 pl-5 text-sm leading-6 text-slate-300">
           {items.map((item, index) => <li key={index}>{inlineParts(item)}</li>)}
         </ol>
       );
@@ -191,6 +280,7 @@ export default function MarkdownContent({ content }: { content: string }) {
       i < lines.length &&
       lines[i].trim() &&
       !/^(#{1,3})\s+/.test(lines[i].trim()) &&
+      !/^!\[([^\]]*)\]\(([^)]+)\)$/.test(lines[i].trim()) &&
       !/^[-*]\s+/.test(lines[i].trim()) &&
       !/^\d+\.\s+/.test(lines[i].trim()) &&
       !lines[i].trim().startsWith("> ") &&
@@ -200,11 +290,90 @@ export default function MarkdownContent({ content }: { content: string }) {
       i++;
     }
     blocks.push(
-      <p key={blocks.length} className="text-sm leading-6 text-slate-300">
+      <p key={`${keyPrefix}-${blocks.length}`} className="text-sm leading-6 text-slate-300">
         {inlineParts(paragraph.join(" "))}
       </p>
     );
   }
 
-  return <div className="space-y-4">{blocks}</div>;
+  return blocks;
+}
+
+type Section = {
+  level: 0 | 1 | 2;
+  title?: string;
+  body: string[];
+};
+
+function splitIntoSections(lines: string[]): Section[] {
+  const sections: Section[] = [];
+  let current: Section = { level: 0, body: [] };
+
+  for (const raw of lines) {
+    const match = raw.trim().match(/^(#{1,2})\s+(.+)$/);
+    if (match) {
+      sections.push(current);
+      current = { level: match[1].length as 1 | 2, title: match[2], body: [] };
+    } else {
+      current.body.push(raw);
+    }
+  }
+  sections.push(current);
+
+  return sections.filter((section) => section.title || section.body.some((l) => l.trim()));
+}
+
+export default function MarkdownContent({ content }: { content: string }) {
+  const lines = content.replace(/\r\n/g, "\n").split("\n");
+  const sections = splitIntoSections(lines);
+
+  return (
+    <div className="space-y-4">
+      {sections.map((section, index) => {
+        const keyPrefix = `s${index}`;
+
+        if (section.level === 1) {
+          return (
+            <div key={keyPrefix} className="space-y-4">
+              <h1 className="text-lg font-bold text-slate-100">{inlineParts(section.title ?? "")}</h1>
+              {renderBlocks(section.body, keyPrefix)}
+            </div>
+          );
+        }
+
+        if (section.level === 2) {
+          const style = SECTION_STYLES[(section.title ?? "").trim().toLowerCase()];
+          if (style) {
+            const Icon = style.icon;
+            return (
+              <div
+                key={keyPrefix}
+                className="space-y-2 rounded-none border-l-[3px] p-3"
+                style={{ borderColor: style.border, backgroundColor: style.tint }}
+              >
+                <div className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: style.text }}>
+                  <Icon size={15} aria-hidden="true" />
+                  {style.label}
+                </div>
+                {renderBlocks(section.body, keyPrefix)}
+              </div>
+            );
+          }
+
+          // Custom / topic-named section (e.g. a reference table): plain
+          // heading, no colour, no icon.
+          return (
+            <div key={keyPrefix} className="space-y-2">
+              <h2 className="text-base font-bold text-slate-100">{inlineParts(section.title ?? "")}</h2>
+              {renderBlocks(section.body, keyPrefix)}
+            </div>
+          );
+        }
+
+        // level 0: content before the first heading (shouldn't normally occur,
+        // since every file starts with "# Heading").
+        return <Fragment key={keyPrefix}>{renderBlocks(section.body, keyPrefix)}</Fragment>;
+      })}
+    </div>
+  );
 }
