@@ -89,5 +89,96 @@
       "Both RCA and LCA are perfused only during diastole"
     ],
     "a": 0
+  },
+  {
+    "id": "INPH008",
+    "y": 2026,
+    "t": "REN",
+    "q": "Damage to the glomerular capillary wall causes which of the following to appear in urine?",
+    "o": [
+      "Uric acid",
+      "Glucose",
+      "Ketones",
+      "Proteins"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPH009",
+    "y": 2026,
+    "t": "REN",
+    "q": "Which structure in the nephron functions as the counter-current multiplier to help concentrate urine?",
+    "o": [
+      "Thick ascending loop of Henle",
+      "Thin ascending loop of Henle",
+      "Collecting duct",
+      "Vasa recta"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH010",
+    "y": 2026,
+    "t": "ENR",
+    "q": "Following a bolus administration of insulin, which of the following occurs?",
+    "o": [
+      "Glucose uptake into the liver via GLUT4",
+      "Glucose uptake into muscle via GLUT4",
+      "Glucose uptake into muscle via GLUT2",
+      "Glucose uptake into the liver via GLUT2"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH011",
+    "y": 2026,
+    "t": "ENR",
+    "q": "If a patient is on testosterone therapy, what changes can one see in LH and FSH levels?",
+    "o": [
+      "Increased LH, decreased FSH",
+      "Decreased LH, increased FSH",
+      "Increased LH, increased FSH",
+      "Decreased LH, decreased FSH"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPH012",
+    "y": 2026,
+    "t": "NPH",
+    "q": "[Image: Histology/diagram of a skin receptor (encapsulated sensory nerve ending in the dermis)]\nIdentify the skin receptor shown in the image.",
+    "o": [
+      "Pacinian corpuscle",
+      "Merkel disc",
+      "Ruffini ending",
+      "Meissner corpuscle"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH013",
+    "y": 2026,
+    "t": "CVS",
+    "q": "The intercalated disc is composed of:\n1. Cadherins\n2. Desmosomes\n3. Gap junctions\n4. Tight junctions",
+    "o": [
+      "1, 2 and 3",
+      "2, 3 and 4",
+      "1, 3 and 4",
+      "1, 2, 3 and 4"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH014",
+    "y": 2026,
+    "t": "ENR",
+    "q": "Which of the following statements regarding hormones and their metabolic actions are correct?\nA. Insulin increases protein synthesis\nB. Thyroxine decreases basal metabolic rate\nC. Insulin decreases blood glucose levels\nD. Epinephrine increases glycogenolysis\nE. Glucagon increases gluconeogenesis",
+    "o": [
+      "A, B and C only",
+      "A, C and D only",
+      "A, C, D and E only",
+      "All of the above"
+    ],
+    "a": 2
   }
 ]

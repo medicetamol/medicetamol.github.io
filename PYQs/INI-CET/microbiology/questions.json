@@ -115,5 +115,70 @@
       "Ingestion of undercooked pork containing cysts"
     ],
     "a": 0
+  },
+  {
+    "id": "INMB010",
+    "y": 2026,
+    "t": "GEN",
+    "q": "[Image: Photograph of a sterilisation equipment (autoclave)]\nThe image shown depicts a piece of sterilisation equipment. Which of the following statements regarding its sterilisation properties is INCORRECT?",
+    "o": [
+      "It is a method of moist heat sterilisation operating above 100 degrees C",
+      "Bowie-Dick test positive",
+      "Prions are destroyed at 121 degrees C for 15 minutes",
+      "It is commonly used for sterilising culture media"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INMB011",
+    "y": 2026,
+    "t": "BAC",
+    "q": "Which of the following reagents is used for the digestion and decontamination of a sputum sample collected for tuberculosis diagnosis?",
+    "o": [
+      "HCl with NAC",
+      "H2SO4 with NAC",
+      "HNO3 with NALC",
+      "NaOH with NALC"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INMB012",
+    "y": 2026,
+    "t": "MYC",
+    "q": "A patient presents with fever, headache, and neck stiffness suggestive of meningitis. CSF examination is performed, and Nigrosin stain reveals encapsulated budding yeast cells. Which of the following organisms is the most likely causative agent?",
+    "o": [
+      "Aspergillus fumigatus",
+      "Pneumocystis jirovecii",
+      "Histoplasma capsulatum",
+      "Cryptococcus neoformans"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INMB013",
+    "y": 2026,
+    "t": "BAC",
+    "q": "A female presents with high-grade fever, diffuse erythematous rash and hypotension. She is currently menstruating and using tampons. The toxin responsible acts by?",
+    "o": [
+      "MHC class I molecule only",
+      "CD4 receptor only",
+      "B-cell receptor and IgG",
+      "Vbeta region of the T-cell receptor and MHC class II molecule"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INMB014",
+    "y": 2026,
+    "t": "PAR",
+    "q": "A 38-year-old man with advanced HIV infection (CD4 count: 60 cells/mm3) presents with chronic watery diarrhea for 2 months, significant weight loss, intermittent fever, and fatigue. Colonoscopy is performed, and biopsy from the colonic mucosa demonstrates trophozoites with RBCs. What is the most likely causative organism?",
+    "o": [
+      "Giardia lamblia",
+      "Cryptococcus neoformans",
+      "Cryptosporidium parvum",
+      "Entamoeba histolytica"
+    ],
+    "a": 3
   }
 ]

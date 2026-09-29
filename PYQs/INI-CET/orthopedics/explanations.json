@@ -14,5 +14,9 @@
   {
     "id": "INOR004",
     "e": "Achilles tendon rupture → positive Thompson (Simmonds) test (no plantarflexion on calf squeeze)."
+  },
+  {
+    "id": "INOR005",
+    "e": "Compartment syndrome → emergency fasciotomy; absent pulse is a late sign."
   }
 ]

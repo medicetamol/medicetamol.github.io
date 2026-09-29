@@ -24,5 +24,18 @@
       "Broad-spectrum intravenous antibiotics"
     ],
     "a": 0
+  },
+  {
+    "id": "INEN003",
+    "y": 2026,
+    "t": "EAR",
+    "q": "A patient is evaluated for a rare orofacial syndrome. Which of the following is NOT a component of the Melkersson-Rosenthal syndrome triad?",
+    "o": [
+      "Lower motor neuron facial palsy",
+      "Proptosis (forward displacement of the eyeball)",
+      "Orofacial granulomatous oedema",
+      "Fissured (scrotal) tongue"
+    ],
+    "a": 1
   }
 ]

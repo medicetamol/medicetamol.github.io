@@ -180,5 +180,18 @@
       "Pseudomonas aeruginosa"
     ],
     "a": 0
+  },
+  {
+    "id": "INGS015",
+    "y": 2026,
+    "t": "ENS",
+    "q": "A patient with a thyroid nodule undergoes FNAC, which yields a result suggestive of follicular carcinoma. What is the most appropriate next step in management?",
+    "o": [
+      "Hemithyroidectomy",
+      "Total thyroidectomy",
+      "Radioactive iodine therapy",
+      "Repeat FNAC"
+    ],
+    "a": 0
   }
 ]

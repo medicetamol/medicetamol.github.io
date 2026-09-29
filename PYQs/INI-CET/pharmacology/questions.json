@@ -258,5 +258,18 @@
       "N-acetylcysteine"
     ],
     "a": 0
+  },
+  {
+    "id": "INPM021",
+    "y": 2026,
+    "t": "GRF",
+    "q": "What is the mechanism of action of Resmetirom?",
+    "o": [
+      "Blockage at NPC1L1 transporter",
+      "Activation of PPAR-gamma",
+      "Blockage of Acetyl-CoA carboxylase",
+      "Stimulation of Thyroid Hormone Receptor-beta"
+    ],
+    "a": 3
   }
 ]

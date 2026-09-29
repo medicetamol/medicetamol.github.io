@@ -42,5 +42,9 @@
   {
     "id": "INCM011",
     "e": "Efficacy = vaccine performance under ideal, controlled trial conditions (90%)."
+  },
+  {
+    "id": "INCM012",
+    "e": "Nested case-control: controls sampled from the parent cohort → incidence rates derivable, and OR approximates RR.\nBoth statements true, but R does not explain A."
   }
 ]

@@ -11,5 +11,18 @@
       "+2 D"
     ],
     "a": 0
+  },
+  {
+    "id": "INOP002",
+    "y": 2026,
+    "t": "UVO",
+    "q": "A patient has a sudden, painful loss of vision with RAPD but a normal-appearing optic disc on fundoscopy. What is the diagnosis?",
+    "o": [
+      "AION",
+      "Central retinal artery occlusion",
+      "Retrobulbar neuritis",
+      "Papilledema"
+    ],
+    "a": 2
   }
 ]

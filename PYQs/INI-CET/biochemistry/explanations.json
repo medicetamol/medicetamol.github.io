@@ -18,5 +18,37 @@
   {
     "id": "INBC005",
     "e": "Sucrose's glycosidic bond involves both anomeric carbons → no free reducing end → negative Benedict's/Fehling's."
+  },
+  {
+    "id": "INBC006",
+    "e": "CRISPR-Cas9 = guide RNA directs Cas9 nuclease to cut target DNA → gene editing."
+  },
+  {
+    "id": "INBC007",
+    "e": "Ethylene glycol poisoning → metabolic acidosis; pyloric stenosis (vomiting) → metabolic alkalosis.\nBronchopneumonia → respiratory acidosis; hyperventilation → respiratory alkalosis."
+  },
+  {
+    "id": "INBC008",
+    "e": "Linoleic acid = most essential fatty acid; safflower oil is rich in EFA.\nAA score = protein scoring system; NPU = protein quality c̅ digestibility."
+  },
+  {
+    "id": "INBC009",
+    "e": "Glycans are not template-driven and branch c̅ variable linkages → diversity exceeds proteins; R explains A."
+  },
+  {
+    "id": "INBC010",
+    "e": "Primase (a DNA-dependent RNA polymerase) synthesises the RNA primer; DNA pol III then extends it."
+  },
+  {
+    "id": "INBC011",
+    "e": "Cysteine = uncharged polar; lysine = basic.\nHistidine is basic (not nonpolar); proline is nonpolar (not basic)."
+  },
+  {
+    "id": "INBC012",
+    "e": "Zellweger syndrome (peroxisomal biogenesis defect) → VLCFA accumulation c̅ hypotonia, seizures, craniofacial dysmorphism."
+  },
+  {
+    "id": "INBC013",
+    "e": "Uncoupler dissipates the proton gradient → O2 consumption ↑es, heat ↑es, ATP synthesis ↓es."
   }
 ]

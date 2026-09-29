@@ -63,5 +63,18 @@
       "CT chest"
     ],
     "a": 1
+  },
+  {
+    "id": "INRD006",
+    "y": 2026,
+    "t": "RDW",
+    "q": "An elderly female patient presents to the emergency department with acute onset left flank pain radiating to the groin. What is the most appropriate imaging protocol for initial evaluation?",
+    "o": [
+      "Direct MRI of the abdomen and pelvis",
+      "Ultrasound of the abdomen followed by CT if inconclusive",
+      "Plain X-ray of the abdomen followed by CT urogram",
+      "Non-contrast CT (NCCT) followed by contrast-enhanced CT (CECT)"
+    ],
+    "a": 1
   }
 ]

@@ -18,5 +18,9 @@
   {
     "id": "INRD005",
     "e": "New vertebral lesion on ATT c̅ back pain needs biopsy for definitive tissue diagnosis (rule out relapse/malignancy)."
+  },
+  {
+    "id": "INRD006",
+    "e": "Ultrasound = radiation-free first-line for flank pain/renal colic (detects hydronephrosis); CT if inconclusive."
   }
 ]

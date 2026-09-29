@@ -1,6 +1,6 @@
 [
   {
-    "id": "INIAS001",
+    "id": "INAS001",
     "y": 2026,
     "t": "AIV",
     "q": "A 40-year-old female is scheduled for parotid surgery and is administered general anaesthesia. Approximately 10 minutes into the procedure, the following findings are noted: rise in end-tidal CO2 (EtCO2), temperature 104°F (40°C), heart rate 150 bpm, blood pressure 180/110 mmHg. What is the most likely diagnosis?",
@@ -13,7 +13,7 @@
     "a": 1
   },
   {
-    "id": "INIAS002",
+    "id": "INAS002",
     "y": 2026,
     "t": "AIV",
     "q": "Regarding the hemodynamic effects of halothane anaesthesia, which of the following statements are correct?\n1. Halothane causes direct myocardial depression, reducing cardiac output\n2. Blood pressure initially falls after induction and subsequently plateaus at a lower level\n3. Blood pressure progressively decreases throughout surgery, irrespective of anaesthetic depth\n4. Halothane increases myocardial sensitivity to catecholamines, increasing arrhythmia risk",
@@ -26,7 +26,7 @@
     "a": 2
   },
   {
-    "id": "INIAS003",
+    "id": "INAS003",
     "y": 2026,
     "t": "ARG",
     "q": "During a lumbar puncture, the following structures are pierced:\n1. Ligamentum flavum\n2. Dura mater\n3. Interspinous ligament\n4. Arachnoid mater\n5. Supraspinous ligament\nWhich option correctly represents the order in which they are pierced?",
@@ -39,7 +39,7 @@
     "a": 0
   },
   {
-    "id": "INIAS004",
+    "id": "INAS004",
     "y": 2026,
     "t": "AIV",
     "q": "Which of the following drugs does NOT typically cause respiratory paralysis/depression in overdose?",
@@ -52,7 +52,7 @@
     "a": 3
   },
   {
-    "id": "INIAS005",
+    "id": "INAS005",
     "y": 2026,
     "t": "AIV",
     "q": "Which is the most characteristic cardiovascular effect of the inhalational anaesthetic halothane?",

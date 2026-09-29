@@ -34,5 +34,25 @@
   {
     "id": "INMB009",
     "e": "Necator americanus infects via skin penetration by filariform larvae (soil contact, e.g. bare feet)."
+  },
+  {
+    "id": "INMB010",
+    "e": "Prions are NOT destroyed at 121°C for 15 min; need 134°C for ≥18 min (or NaOH exposure)."
+  },
+  {
+    "id": "INMB011",
+    "e": "NALC-NaOH method: NALC = mucolytic (digests), NaOH = decontaminant for sputum AFB."
+  },
+  {
+    "id": "INMB012",
+    "e": "Cryptococcus neoformans: encapsulated budding yeast, capsule shown c̅ India ink/nigrosin; meningitis in immunocompromised."
+  },
+  {
+    "id": "INMB013",
+    "e": "Toxic shock syndrome toxin-1 is a superantigen: binds Vβ region of TCR + MHC II → massive T-cell activation and cytokine storm."
+  },
+  {
+    "id": "INMB014",
+    "e": "Trophozoites c̅ ingested RBCs = Entamoeba histolytica (invasive colitis).\nCryptosporidium shows acid-fast oocysts, not RBC-containing trophozoites."
   }
 ]

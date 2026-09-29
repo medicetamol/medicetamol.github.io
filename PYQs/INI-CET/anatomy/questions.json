@@ -89,5 +89,83 @@
       "It is narrower and more vertical, and the right lung has three lobes"
     ],
     "a": 0
+  },
+  {
+    "id": "INAN008",
+    "y": 2026,
+    "t": "HNK",
+    "q": "Which muscle attaches to the cartilaginous portion of the Eustachian tube and also blends with the soft palate?",
+    "o": [
+      "Stylopharyngeus",
+      "Tensor veli palatini",
+      "Levator veli palatini",
+      "Palatopharyngeus"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INAN009",
+    "y": 2026,
+    "t": "EMB",
+    "q": "Match each of the following organs with its correct embryological tissue of origin:\nA. Thyroid gland\nB. Adrenal medulla\nC. Kidney\n1. Neural crest cells\n2. Intermediate mesoderm\n3. Endoderm",
+    "o": [
+      "A-3, B-1, C-2",
+      "A-1, B-3, C-2",
+      "A-2, B-1, C-3",
+      "A-1, B-2, C-3"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN010",
+    "y": 2026,
+    "t": "HIS",
+    "q": "Match each of the following gastrointestinal organs with its distinctive histological feature:\n1. Ileum\n2. Transverse colon\n3. Oesophagus\n4. Duodenum\na. Taenia coli\nb. Villi\nc. Peyer's patches\nd. Non-keratinised stratified squamous epithelium",
+    "o": [
+      "1-c, 2-a, 3-d, 4-b",
+      "1-a, 2-c, 3-d, 4-b",
+      "1-c, 2-b, 3-a, 4-d",
+      "1-d, 2-a, 3-c, 4-b"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN011",
+    "y": 2026,
+    "t": "EMB",
+    "q": "A developmental remnant of the embryological hindgut persisting in the retrorectal (presacral) space is most likely to give rise to which of the following lesions?",
+    "o": [
+      "Chondroma",
+      "Tailgut cyst",
+      "Epidermoid cyst",
+      "Dermoid cyst"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INAN012",
+    "y": 2026,
+    "t": "HIS",
+    "q": "[Image: Histological section of a gland showing predominantly serous acini]\nThe histological section shown, characterised by predominantly serous acini, is best identified as which organ?",
+    "o": [
+      "Sublingual salivary gland",
+      "Pancreas",
+      "Parotid gland",
+      "Liver"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INAN013",
+    "y": 2026,
+    "t": "EMB",
+    "q": "A failure of fusion of the maxillary process with the medial nasal process during embryonic development results in which type of cleft anomaly?",
+    "o": [
+      "Oblique cleft lip",
+      "Midline cleft lip",
+      "Bilateral cleft",
+      "Cleft palate"
+    ],
+    "a": 1
   }
 ]

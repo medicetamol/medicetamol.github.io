@@ -1,22 +1,22 @@
 [
   {
-    "id": "INIAS001",
-    "e": "↑es EtCO2 + hyperthermia + tachycardia + hypertension intra-op = malignant hyperthermia (triggered by volatile agents/succinylcholine)."
+    "id": "INAS001",
+    "e": "Malignant hyperthermia: EtCO2 ↑es, tachycardia and hyperpyrexia after a volatile agent/succinylcholine → treat c̅ dantrolene."
   },
   {
-    "id": "INIAS002",
-    "e": "Halothane: direct myocardial depression ↓es CO\nBP falls after induction then plateaus (doesn't keep falling irrespective of depth)\n↑es myocardial catecholamine sensitivity → arrhythmias."
+    "id": "INAS002",
+    "e": "Halothane depresses the myocardium (CO ↓es); BP falls then plateaus.\nIt sensitises the heart to catecholamines → arrhythmias."
   },
   {
-    "id": "INIAS003",
-    "e": "LP needle path: supraspinous ligament → interspinous ligament → ligamentum flavum → dura mater → arachnoid mater."
+    "id": "INAS003",
+    "e": "Skin → supraspinous → interspinous → ligamentum flavum → dura → arachnoid (5→3→1→2→4)."
   },
   {
-    "id": "INIAS004",
-    "e": "Ketamine largely preserves respiratory drive & airway reflexes even in overdose, unlike barbiturates/opioids."
+    "id": "INAS004",
+    "e": "Ketamine (dissociative) preserves respiratory drive and airway reflexes.\nBarbiturates and opioids depress respiration."
   },
   {
-    "id": "INIAS005",
-    "e": "Halothane → dose-dependent myocardial depression → ↓es cardiac output & blood pressure."
+    "id": "INAS005",
+    "e": "Halothane: dose-dependent myocardial depression → CO ↓es and BP ↓es."
   }
 ]

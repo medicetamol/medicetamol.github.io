@@ -50,5 +50,18 @@
       "Plaster cast immobilisation"
     ],
     "a": 0
+  },
+  {
+    "id": "INOR005",
+    "y": 2026,
+    "t": "FRG",
+    "q": "A 30-year-old female post-RTA has persistent pain uncontrolled by analgesics. Compartment pressure is 90 mmHg with absent pulse. What is the treatment?",
+    "o": [
+      "Emergency fasciotomy",
+      "Observation",
+      "Increase IV analgesics",
+      "External fixation"
+    ],
+    "a": 0
   }
 ]

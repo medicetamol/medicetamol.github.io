@@ -6,5 +6,9 @@
   {
     "id": "INEN002",
     "e": "SSNHL mainstay = urgent systemic corticosteroids, c̅ intratympanic steroids reserved as salvage."
+  },
+  {
+    "id": "INEN003",
+    "e": "Melkersson-Rosenthal triad = recurrent LMN facial palsy + orofacial granulomatous oedema + fissured tongue; proptosis is not part of it."
   }
 ]

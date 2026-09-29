@@ -63,5 +63,109 @@
       "Glucose"
     ],
     "a": 0
+  },
+  {
+    "id": "INBC006",
+    "y": 2026,
+    "t": "MOL",
+    "q": "[Image: Schematic of a molecular biotechnology technique (gene-editing/nucleic acid system)]\nWhich molecular biotechnology is depicted in the image shown?",
+    "o": [
+      "Microarray analysis",
+      "In situ hybridisation",
+      "CRISPR-Cas9 gene editing system",
+      "DNA sequencing"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INBC007",
+    "y": 2026,
+    "t": "MSC",
+    "q": "Match the following:\n1. Metabolic acidosis\n2. Metabolic alkalosis\n3. Respiratory acidosis\n4. Respiratory alkalosis\na. Hyperventilation\nb. Bronchopneumonia\nc. Pyloric stenosis\nd. Glycol poisoning",
+    "o": [
+      "1-c, 2-d, 3-b, 4-a",
+      "1-c, 2-d, 3-a, 4-b",
+      "1-a, 2-c, 3-b, 4-d",
+      "1-d, 2-c, 3-b, 4-a"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INBC008",
+    "y": 2026,
+    "t": "MSC",
+    "q": "Match the following:\n1. Most essential fatty acid\n2. Amino acid (AA) score\n3. Oil rich in essential fatty acids\n4. Net Protein Utilisation (NPU)\na. Safflower oil\nb. Protein scoring system\nc. Protein quality + digestibility\nd. Linoleic acid",
+    "o": [
+      "1-d, 2-c, 3-a, 4-b",
+      "1-b, 2-d, 3-c, 4-a",
+      "1-d, 2-b, 3-a, 4-c",
+      "1-a, 2-b, 3-d, 4-c"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INBC009",
+    "y": 2026,
+    "t": "CAR",
+    "q": "Assertion: The structural diversity of glycans exceeds that of proteins.\nReason: Glycans are not assembled using a genetic template and can form branched chains with variable linkages.",
+    "o": [
+      "A is true, but R is false",
+      "A is false, but R is true",
+      "Both A and R are true, and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INBC010",
+    "y": 2026,
+    "t": "MOL",
+    "q": "In DNA replication, which enzyme synthesises RNA primers?",
+    "o": [
+      "Topoisomerase",
+      "DNA polymerase II",
+      "DNA polymerase III",
+      "Primase"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INBC011",
+    "y": 2026,
+    "t": "PRO",
+    "q": "Which of the following amino acid classifications are correctly matched?\n1. Uncharged polar AA - Cysteine\n2. Nonpolar AA - Histidine\n3. Basic AA - Proline\n4. Basic AA - Lysine",
+    "o": [
+      "1 and 2",
+      "3 and 4",
+      "2 and 3",
+      "1 and 4"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INBC012",
+    "y": 2026,
+    "t": "MSC",
+    "q": "A newborn presents with craniofacial abnormalities, severely reduced muscle tone, and seizures. Biochemical analysis reveals elevated very long-chain fatty acids in serum. What is the most likely underlying cause?",
+    "o": [
+      "Mitochondrial inheritance",
+      "Lysosomal storage disorder",
+      "Peroxisomal biogenesis defect",
+      "Simultaneously activate multiple tumour suppressor genes"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INBC013",
+    "y": 2026,
+    "t": "MSC",
+    "q": "A laboratory worker accidentally inhales fumes of an oxidative phosphorylation uncoupling agent. Which of the following physiological changes is most likely to occur?",
+    "o": [
+      "Decreased O2 consumption, increased body temperature, increased ATP production",
+      "Increased O2 consumption, increased body temperature, decreased ATP production",
+      "Increased O2 consumption, decreased body temperature, increased ATP production",
+      "Decreased O2 consumption, decreased body temperature, decreased ATP production"
+    ],
+    "a": 1
   }
 ]

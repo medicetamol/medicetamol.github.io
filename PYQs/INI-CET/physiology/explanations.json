@@ -26,5 +26,33 @@
   {
     "id": "INPH007",
     "e": "RCA flow is biphasic (systole + diastole) since RV pressure stays low throughout the cycle.\nLCA flow is mainly diastolic, as high LV systolic pressure compresses intramural vessels."
+  },
+  {
+    "id": "INPH008",
+    "e": "Damaged glomerular filtration barrier → proteinuria (albumin leaks into urine)."
+  },
+  {
+    "id": "INPH009",
+    "e": "Thick ascending limb (NKCC2) actively pumps out NaCl but is water-impermeable → counter-current multiplier.\nVasa recta = counter-current exchanger."
+  },
+  {
+    "id": "INPH010",
+    "e": "Insulin ↑es GLUT4 translocation in skeletal muscle (and adipose).\nLiver uses GLUT2, which is insulin-independent."
+  },
+  {
+    "id": "INPH011",
+    "e": "Exogenous testosterone → negative feedback on hypothalamus/pituitary → LH ↓es and FSH ↓es."
+  },
+  {
+    "id": "INPH012",
+    "e": "Pacinian corpuscle = onion-like lamellated encapsulated ending in the deep dermis; senses vibration and deep pressure."
+  },
+  {
+    "id": "INPH013",
+    "e": "Intercalated disc = fascia adherens (cadherins) + desmosomes + gap junctions; tight junctions are absent."
+  },
+  {
+    "id": "INPH014",
+    "e": "Insulin ↑es protein synthesis and ↓es blood glucose; epinephrine ↑es glycogenolysis; glucagon ↑es gluconeogenesis.\nThyroxine ↑es (not ↓es) BMR."
   }
 ]

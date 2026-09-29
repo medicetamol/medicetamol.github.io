@@ -141,5 +141,18 @@
       "87.5% (average of the two values)"
     ],
     "a": 0
+  },
+  {
+    "id": "INCM012",
+    "y": 2026,
+    "t": "EPI",
+    "q": "Assertion: In a nested case-control study, incidence rates can be derived from the parent cohort.\nReason: Nested case-control studies can estimate relative risk accurately.",
+    "o": [
+      "Both assertion and reason are correct, and the reason is the correct explanation of the assertion",
+      "Both assertion and reason are correct, but they are unrelated",
+      "The assertion is correct, but the reason is incorrect",
+      "The assertion is incorrect, but the reason is correct"
+    ],
+    "a": 1
   }
 ]
