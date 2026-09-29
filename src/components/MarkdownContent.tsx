@@ -51,9 +51,14 @@ const SECTION_STYLES: Record<string, SectionStyle> = {
 };
 
 function inlineParts(text: string) {
-  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g);
+  const parts = text
+    .replace(/<br\s*\/?>/gi, "\n")
+    .split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\]\([^)]+\)|\n)/g);
 
   return parts.map((part, index) => {
+    if (part === "\n") {
+      return <br key={index} />;
+    }
     if (part.startsWith("**") && part.endsWith("**")) {
       return <strong key={index}>{part.slice(2, -2)}</strong>;
     }
@@ -221,11 +226,11 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
       }
       blocks.push(
         <div key={`${keyPrefix}-${blocks.length}`} className="overflow-x-auto rounded-xl border border-slate-800">
-          <table className="w-full min-w-max text-left text-xs">
+          <table className="w-full table-fixed text-left text-xs">
             <thead className="bg-slate-900 text-slate-300">
               <tr>
                 {headers.map((cell, index) => (
-                  <th key={index} className="px-3 py-2 font-semibold">{inlineParts(cell)}</th>
+                  <th key={index} className="break-words px-3 py-2 font-semibold">{inlineParts(cell)}</th>
                 ))}
               </tr>
             </thead>
@@ -233,7 +238,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
               {rows.map((row, rowIndex) => (
                 <tr key={rowIndex} className="border-t border-slate-800">
                   {headers.map((_, cellIndex) => (
-                    <td key={cellIndex} className="px-3 py-2 align-top text-slate-400">
+                    <td key={cellIndex} className="break-words px-3 py-2 align-top text-slate-400">
                       {inlineParts(row[cellIndex] ?? "")}
                     </td>
                   ))}
@@ -328,7 +333,7 @@ export default function MarkdownContent({ content }: { content: string }) {
   const sections = splitIntoSections(lines);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-7">
       {sections.map((section, index) => {
         const keyPrefix = `s${index}`;
 
@@ -348,7 +353,7 @@ export default function MarkdownContent({ content }: { content: string }) {
             return (
               <div
                 key={keyPrefix}
-                className="space-y-2 rounded-none border-l-[3px] p-3"
+                className="space-y-2 rounded-r-md border-l-[3px] p-3"
                 style={{ borderColor: style.border, backgroundColor: style.tint }}
               >
                 <div className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: style.text }}>
