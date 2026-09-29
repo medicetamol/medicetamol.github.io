@@ -2,6 +2,7 @@ import { Check, MessageSquareWarning, Share, X } from "lucide-react";
 import React, { lazy, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { PYQQuestion } from "../types";
+import ImageZoomModal from "./ImageZoomModal";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
 
 interface Props {
@@ -166,31 +167,9 @@ export default function QuestionCard({
       )}
     </section>
 
-    {/* Full screen image modal */}
+    {/* Full screen image modal (own pinch / double-tap zoom; page zoom is locked app-wide) */}
     {imgModal && question.image && (
-      <div
-        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm"
-        style={{ touchAction: "pan-x pan-y pinch-zoom" }}
-        onClick={() => setImgModal(false)}
-      >
-        <button
-          type="button"
-          onClick={() => setImgModal(false)}
-          className="absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full bg-black/60 text-white backdrop-blur"
-          aria-label="Close image"
-        >
-          <X size={20} />
-        </button>
-
-        <img
-          src={question.image}
-          alt="Question"
-          draggable={false}
-          onClick={(e) => e.stopPropagation()}
-          style={{ touchAction: "pan-x pan-y pinch-zoom" }}
-          className="absolute inset-0 m-auto max-h-full max-w-full object-contain"
-        />
-      </div>
+      <ImageZoomModal src={question.image} onClose={() => setImgModal(false)} />
     )}
     </>
   );

@@ -1,4 +1,4 @@
-import { LayoutGrid, Play } from "lucide-react";
+import { ChevronLeft, LayoutGrid, Play } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCustomModuleHistory, saveCustomModuleHistory, RESUME_WINDOW_MS } from "../lib/db";
@@ -203,6 +203,15 @@ export default function SolvedModules() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+      <button
+        type="button"
+        onClick={() => navigate(-1)}
+        className="mb-4 inline-flex items-center gap-1 text-xs font-medium text-slate-500 hover:text-slate-300"
+        aria-label="Back"
+      >
+        <ChevronLeft size={14} />
+        Back
+      </button>
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Custom Modules</h1>
         <p className="mt-1 text-sm text-slate-500">Your last {entries.length} attempted modules.</p>
@@ -277,13 +286,13 @@ export default function SolvedModules() {
       {entries.length > 0 && (
         <div className="mt-5 flex flex-wrap gap-4 border-t border-slate-800 pt-4 text-xs text-slate-400">
           <span className="flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#639922]" /> Correct
+            <span className="h-2 w-2 rounded-full bg-[#22c55e]" /> Correct
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#E24B4A]" /> Incorrect
+            <span className="h-2 w-2 rounded-full bg-[#ef4444]" /> Incorrect
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#7F77DD]" /> Skipped
+            <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "rgb(var(--slate-600))" }} /> Skipped
           </span>
         </div>
       )}

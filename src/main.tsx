@@ -3,9 +3,14 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { AuthProvider } from "./lib/AuthContext";
+import { installAutoRefresh } from "./lib/autoRefresh";
+import { installViewportLock } from "./lib/lockZoom";
 import "./lib/pwa"; // starts listening for the browser install prompt immediately
 import "./theme.css";
 import "./index.css";
+
+installAutoRefresh(); // reload after 6h+ away (pull-to-refresh is off)
+installViewportLock(); // no page zoom / rubber-band pull (iOS ignores user-scalable=no)
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

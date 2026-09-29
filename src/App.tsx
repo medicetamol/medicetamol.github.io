@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { refreshIfStale } from "./lib/autoRefresh";
 import { useEffect } from "react";
 import Layout from "./components/Layout";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -28,6 +29,7 @@ function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
+    refreshIfStale(pathname); // deferred 6h+ refresh, once the user is on a safe page
   }, [pathname]);
   return null;
 }

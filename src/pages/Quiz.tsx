@@ -1288,8 +1288,33 @@ export default function Quiz() {
   if (!startIndexReady || !poolReady || !pool.length) {
     if (!startIndexReady || !poolReady) {
       return (
-        <main className="mx-auto max-w-3xl px-3 py-12 text-center">
-          <p className="text-sm text-slate-500">Loading…</p>
+        <main
+          className="relative mx-auto min-h-screen w-full max-w-4xl px-1 pb-24 sm:px-2"
+          aria-busy="true"
+          aria-label="Loading question"
+        >
+          <div className="mb-2 mt-1 flex items-center justify-between gap-2 px-1">
+            <span className="h-4 w-12 animate-pulse rounded bg-slate-800" />
+            <span className="h-8 w-24 animate-pulse rounded-lg bg-slate-800/70" />
+          </div>
+          <section className="w-full rounded-xl border border-slate-800 bg-slate-900/70 px-2.5 py-3 sm:px-4 sm:py-5">
+            <div className="space-y-2">
+              <p className="h-4 w-full animate-pulse rounded bg-slate-800" />
+              <p className="h-4 w-11/12 animate-pulse rounded bg-slate-800" />
+              <p className="h-4 w-2/3 animate-pulse rounded bg-slate-800/70" />
+            </div>
+            <div className="mt-4 space-y-2 pb-3">
+              {[0, 1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="flex w-full items-start gap-3 rounded-xl border border-slate-800 p-3"
+                >
+                  <span className="h-7 w-7 shrink-0 animate-pulse rounded-lg bg-slate-800" />
+                  <span className="mt-1.5 h-4 w-3/4 animate-pulse rounded bg-slate-800/70" />
+                </div>
+              ))}
+            </div>
+          </section>
         </main>
       );
     }
@@ -1375,7 +1400,7 @@ export default function Quiz() {
           )}
 
           <div className="mb-2 flex items-center justify-between gap-2 px-1">
-            {!isCustom && !isSolveLink ? (
+            {(!isCustom && !isSolveLink) || isReadOnly ? (
               <button
                 type="button"
                 onClick={() => navigate(-1)}
