@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from "
 import { subscribeToAuth, type User } from "./auth";
 import { clearAuthPromptState } from "./authPrompt";
 import { pullAndPush, pushOnBackground, reconcileOnSignIn } from "./syncEngine";
+import { afterFirstPaint } from "./afterFirstPaint";
 
 interface AuthState {
   user: User | null;
@@ -20,35 +21,40 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // local data is already the account's, so only a genuinely fresh sign-in
     // (no reconcile recorded for this tab session) pulls from the cloud.
     let reconciledUid: string | null = null;
+    let unsubscribe: (() => void) | undefined;
 
-    const unsubscribe = subscribeToAuth((u) => {
-      setUser(u);
-      setLoading(false);
-      // Once signed in, nothing left to nag about — drop all milestone
-      // tracking so a future sign-out doesn't resume mid-sequence oddly.
-      if (u) clearAuthPromptState();
+    // Deferred so the auth iframe handshake doesn't compete with the
+    // initial paint on first load — see afterFirstPaint.ts.
+    const cancel = afterFirstPaint(() => {
+      unsubscribe = subscribeToAuth((u) => {
+        setUser(u);
+        setLoading(false);
+        // Once signed in, nothing left to nag about — drop all milestone
+        // tracking so a future sign-out doesn't resume mid-sequence oddly.
+        if (u) clearAuthPromptState();
 
-      if (!u) {
-        reconciledUid = null;
-        return;
-      }
-      if (reconciledUid === u.uid) return;
-      reconciledUid = u.uid;
+        if (!u) {
+          reconciledUid = null;
+          return;
+        }
+        if (reconciledUid === u.uid) return;
+        reconciledUid = u.uid;
 
-      const key = `medicetamol:reconciled:${u.uid}`;
-      if (localStorage.getItem(key)) {
-        // Returning session on this device: pick up what other devices did,
-        // then push our own queued changes (if the 15-minute gate allows).
-        void pullAndPush(u.uid).then((changed) => {
-          if (changed) window.location.reload();
-        });
-      } else {
-        void reconcileOnSignIn(u.uid).then((replaced) => {
-          localStorage.setItem(key, "1");
-          // Pages that already read IndexedDB on mount would show stale data.
-          if (replaced) window.location.reload();
-        });
-      }
+        const key = `medicetamol:reconciled:${u.uid}`;
+        if (localStorage.getItem(key)) {
+          // Returning session on this device: pick up what other devices did,
+          // then push our own queued changes (if the 15-minute gate allows).
+          void pullAndPush(u.uid).then((changed) => {
+            if (changed) window.location.reload();
+          });
+        } else {
+          void reconcileOnSignIn(u.uid).then((replaced) => {
+            localStorage.setItem(key, "1");
+            // Pages that already read IndexedDB on mount would show stale data.
+            if (replaced) window.location.reload();
+          });
+        }
+      });
     });
 
     // Closest thing the web has to "app closed": the page going to the
@@ -60,7 +66,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     document.addEventListener("visibilitychange", onVisibility);
 
     return () => {
-      unsubscribe();
+      cancel();
+      unsubscribe?.();
       document.removeEventListener("visibilitychange", onVisibility);
     };
   }, []);
