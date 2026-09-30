@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#0b0f14" />
 
+    <!-- Warm the connections to origins the deferred Firebase Auth + Firestore
+         calls will hit right after first paint, so those cross-origin TLS
+         handshakes aren't paid serially, one discovered after another. -->
+    <link rel="preconnect" href="https://medicetamol-pyq.firebaseapp.com" />
+    <link rel="preconnect" href="https://www.googleapis.com" />
+    <link rel="preconnect" href="https://apis.google.com" />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+
     <title>mediCetamol</title>
     <meta
       name="description"
