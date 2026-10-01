@@ -414,5 +414,317 @@
       "Septic arthritis"
     ],
     "a": 1
+  },
+  {
+    "id": "PGGM033",
+    "y": 2025,
+    "t": "NEP",
+    "q": "Patient came with severe headache and seizures. Sodium on admission was 98 meq/L. We have started correction with 3% saline and now after 24 hours of infusion sodium is 110 meq/L. Patient develops mutism and altered sensorium. Which investigation will you perform now?",
+    "o": [
+      "MRI Head",
+      "LP for CSF biochemistry",
+      "Brainstem evoked potentials",
+      "EEG"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM034",
+    "y": 2025,
+    "t": "CAD",
+    "q": "A 30-year-old man with 6 month past history of PND and SOB. On examination, JVP is elevated with irregularly irregular pulse and tender hepatomegaly and MDM. past medical history of ARF. Which of the following is not seen in this patient?",
+    "o": [
+      "Presystolic accentuation of mid-diastolic murmur is hallmark feature",
+      "Patient has increased risk of embolic stroke",
+      "Absent a wave in JVP",
+      "Right heart failure"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM035",
+    "y": 2025,
+    "t": "CAD",
+    "q": "A patient presents with palpitations and an irregularly irregular pulse. He presents within 2 hours of symptom onset, and has no history of diabetes or other comorbidities. What is the most appropriate initial management?",
+    "o": [
+      "TEE for starting anticoagulation",
+      "Cardioversion",
+      "Control ventricular rate with verapamil",
+      "Wait and watch"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGM036",
+    "y": 2025,
+    "t": "NRL",
+    "q": "A patient presents with sudden onset aphasia and right sided arm weakness for past 4 hours. Which of the following investigations will be done to determine etiology of this case presentation?",
+    "o": [
+      "Transthoracic echocardiography",
+      "Carotid doppler",
+      "Transesophageal echocardiography",
+      "MRI brain"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGM037",
+    "y": 2025,
+    "t": "END",
+    "q": "A patient presents with salt wasting, craving, hyperkalemia, metabolic acidosis, and skin pigmentation. What is the most likely diagnosis?",
+    "o": [
+      "Addison’s disease",
+      "Cushing’s syndrome",
+      "Conn’s syndrome",
+      "Pheochromocytoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM038",
+    "y": 2025,
+    "t": "END",
+    "q": "A known type 1 diabetic presents with glucose 799 mg/dL, Na 128 mEq/L, Cl 88 mEq/L, ⁺⁻ and signs of dehydration. Which of the following is NOT used in the initial management?",
+    "o": [
+      "0.9% Normal saline",
+      "3% Saline",
+      "IV infusion insulin",
+      "Potassium monitoring"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM039",
+    "y": 2025,
+    "t": "NEP",
+    "q": "Patient in hospital was given IVF and patient develops hyperchloremic metabolic acidosis. Which fluid will cause this?",
+    "o": [
+      "RL",
+      "NS",
+      "DNS",
+      "5% dextrose"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM040",
+    "y": 2025,
+    "t": "IFD",
+    "q": "Patient came with fever headache and nuchal rigidity. LP shows gram negative diplococci in gram stain. Which of the following will be used for chemoprophylaxis in close contacts of a patient with meningococcal meningitis?",
+    "o": [
+      "Amoxicillin",
+      "Doxycycline",
+      "Ethambutol",
+      "Rifampicin"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGM041",
+    "y": 2025,
+    "t": "RHU",
+    "q": "A patient presents with morning stiffness and tests positive for anti-CCP antibodies. Which of the following histological features is most characteristic of the underlying disease?",
+    "o": [
+      "Pannus formation and erosive joint damage",
+      "Non-caseating granulomas",
+      "Subepidermal blister with IgA deposits",
+      "Tophi with monosodium urate crystals"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM042",
+    "y": 2025,
+    "t": "END",
+    "q": "Hyperpigmentation in Addison’s disease is due to increased secretion of:",
+    "o": [
+      "Cortisol",
+      "ACTH",
+      "Aldosterone",
+      "Renin"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM043",
+    "y": 2025,
+    "t": "PUL",
+    "q": "Patient presents with dry cough, dyspnea and stridor. HPE of hilar LN shows stellate granulomas with giant cells and circular lamellated concretions on histopathology. Which of the following is the most likely diagnosis?",
+    "o": [
+      "Sarcoidosis",
+      "Tuberculosis",
+      "GPA",
+      "Hypersensitivity pneumonitis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM044",
+    "y": 2025,
+    "t": "NEP",
+    "q": "A 55-year-old man presents with altered sensorium and deep labored breathing. ABG is given below. What is the most likely acid-base disorder? pH: 7.20 pCO: 31 mmHg ₂ HCO:16 mEq/L ₃⁻ Na: 130 mEq/L ⁺ Cl: 84 mEq/L ⁻ PaO: 80 mmHg ₂",
+    "o": [
+      "Metabolic acidosis",
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Respiratory alkalosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM045",
+    "y": 2025,
+    "t": "PUL",
+    "q": "Old man underwent joint replacement surgery 3 days ago. Today he develops SOB with chest pain. O/E : pulse 100/min, BP 100/70 mm Hg, RR28/min and sp02: 85% room air. D- dimer is elevated. Which is the next best test",
+    "o": [
+      "V/Q scan",
+      "ECG",
+      "CXR",
+      "CTPA"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGM046",
+    "y": 2025,
+    "t": "END",
+    "q": "A 56-year-old diabetic patient is currently on Metformin and Insulin Glargine. His HbA1c is 8.2%, indicating suboptimal glycemic control. Echocardiography reveals a reduced ejection fraction (EF) of 35%. Which of the following is the most appropriate agent to add to his current regimen?",
+    "o": [
+      "Pioglitazone",
+      "Glimepiride",
+      "Sitagliptin",
+      "Empagliflozin"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGM047",
+    "y": 2025,
+    "t": "NEP",
+    "q": "A 60-year-old man with chronic kidney disease presents with complaints of increasing fatigue, dyspnea on exertion, and signs of congestive heart failure. On evaluation, he is found to have anemia. What is the most appropriate next step in management?",
+    "o": [
+      "Oral iron therapy",
+      "Intravenous iron infusion",
+      "Blood transfusion",
+      "Darbepoetin alfa"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM048",
+    "y": 2025,
+    "t": "PUL",
+    "q": "Patient with COPD presents with progressive dyspnea. ABG shows pH:7.32, pCO2 60 mm Hg and HCO3. which of the following is seen in",
+    "o": [
+      "Acute respiratory acidosis",
+      "Chronic respiratory acidosis",
+      "Metabolic acidosis",
+      "Metabolic alkalosis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM049",
+    "y": 2025,
+    "t": "CAD",
+    "q": "Patient arrives at the emergency department with sudden onset palpitations and chest tightness. ECG confirms a diagnosis of PSVT . Which of the following is the most appropriate preventive treatment?",
+    "o": [
+      "IV lignocaine",
+      "Oral Verapamil",
+      "IV Adenosine",
+      "Oral Nifedipine"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM050",
+    "y": 2025,
+    "t": "RHU",
+    "q": "A young man presents with chronic lower back pain and morning stiffness and pain on bending that improves with activity. X ray of LS spine is normal. Ocular examination shows anterior uveitis. Which diagnostic modality will pick up the disease process at the earliest?",
+    "o": [
+      "Anti CCP antibody",
+      "MRI of the sacroiliac joints",
+      "CT scan of the sacroiliac joints",
+      "Bone scan"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM051",
+    "y": 2025,
+    "t": "PUL",
+    "q": "A patient with a known history of bronchial asthma is currently on salbutamol and ipratropium via MDI. He now presents with nocturnal worsening of symptoms and night time awakening. What is the next best step in management?",
+    "o": [
+      "Start L.A.B.A + inhaled corticosteroids",
+      "Increase the dose of salbutamol",
+      "Add theophylline",
+      "Add Montelukast"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM052",
+    "y": 2025,
+    "t": "GAS",
+    "q": "The patient presents with fatigue and pruritus. LFT shows gross SALP elevation and elevated conjugated bilirubin. AMA is seen with liver biopsy shows florid bile ductular lesions. Diagnosis is",
+    "o": [
+      "PBC",
+      "PSC",
+      "UC",
+      "CD"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM053",
+    "y": 2025,
+    "t": "END",
+    "q": "A 30-year-old man develops an increase in shoe size with coarse facies and large hands. IGF- 1 is elevated. What is the investigation of choice?",
+    "o": [
+      "IGF-1 levels",
+      "Failure to suppress GH by OGTT",
+      "Failure to suppress IGF-1 by OGTT",
+      "GH levels"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGM054",
+    "y": 2025,
+    "t": "NEP",
+    "q": "A patient on hydrochlorothiazide develops renal stones. What explains this adverse effect?",
+    "o": [
+      "Increase urinary calcium",
+      "Decrease urinary calcium",
+      "Decreased urinary citrate",
+      "Increased urinary citrate"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGGM076",
+    "y": 2025,
+    "t": "PUL",
+    "q": "A patient collapses with breathlessness and pink frothy sputum. Autopsy shows hemosiderin-laden macrophages. In which condition is this not seen?",
+    "o": [
+      "Protein-losing enteropathy",
+      "Right heart failure",
+      "Volume overload",
+      "Pulmonary vein obstruction"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGM077",
+    "y": 2025,
+    "t": "IFD",
+    "q": "A patient arrives with hypotension, fever, joint pain, petechiae on limbs, and respiratory distress. Which of the following is the most likely diagnosis?",
+    "o": [
+      "Disseminated gonococcal infection",
+      "Septic shock",
+      "Rheumatoid arthritis",
+      "Septic arthritis"
+    ],
+    "a": 1
   }
 ]

@@ -115,5 +115,96 @@
       "De Clerambault syndrome"
     ],
     "a": 0
+  },
+  {
+    "id": "PGPS010",
+    "y": 2025,
+    "t": "ANX",
+    "q": "A female patient presents with flashbacks and a history of forgetting about her father's death in a road traffic accident 2 weeks ago. What is the most likely diagnosis?",
+    "o": [
+      "Acute Stress Disorder (ASD)",
+      "Post-Traumatic Stress Disorder (PTSD)",
+      "Dissociative Amnesia",
+      "Adjustment Disorder"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPS011",
+    "y": 2025,
+    "t": "ANX",
+    "q": "A person was found in a bizarre location, appearing confused. The caretaker reports he had no memory of how he got there, and the patient is unaware of his travel to the location. What is the most likely diagnosis?",
+    "o": [
+      "Dissociative fugue",
+      "Dissociative identity disorder",
+      "Dissociative amnesia",
+      "Psychotic episode"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPS012",
+    "y": 2025,
+    "t": "PRS",
+    "q": "A man is extremely particular about being on time and consistently shows a strong need for order, control, and perfectionism. Which personality disorder does this behavior most likely suggest?",
+    "o": [
+      "Obsessive-Compulsive Personality Disorder",
+      "Paranoid Personality Disorder",
+      "Narcissistic Personality Disorder",
+      "Schizoid Personality Disorder"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPS013",
+    "y": 2025,
+    "t": "SCH",
+    "q": "A man reports that he is receiving orders from God to follow white birds in a specific direction. What is the most appropriate description of this symptom?",
+    "o": [
+      "Delusional perception",
+      "Visual hallucination",
+      "Thought insertion",
+      "Passivity phenomenon"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPS014",
+    "y": 2025,
+    "t": "FOP",
+    "q": "A man killed a person and is being questioned about what actions will be taken against him. What is the first step in managing such a case?",
+    "o": [
+      "Psychiatric evaluation",
+      "Immediate trial of the case",
+      "Declared not guilty",
+      "Sentenced for murder"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPS015",
+    "y": 2025,
+    "t": "ANX",
+    "q": "A 25-year-old male was injured during an earthquake. A social worker reports that he was later found in another town, and the man has no memory of how he got there or of his personal identity. What is the most likely diagnosis?",
+    "o": [
+      "Dissociative fugue",
+      "Dissociative identity disorder",
+      "Acute stress disorder",
+      "PTSD"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPS016",
+    "y": 2025,
+    "t": "PSF",
+    "q": "A patient on long-term antipsychotics develops involuntary mouth and lip movements (perioral dyskinesia). What is the best treatment?",
+    "o": [
+      "Increase the antipsychotic dose",
+      "Start benzodiazepines",
+      "Stop antipsychotic and give tetrabenazine",
+      "Give anticholinergics"
+    ],
+    "a": 2
   }
 ]

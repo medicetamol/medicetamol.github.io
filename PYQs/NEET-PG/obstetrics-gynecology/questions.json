@@ -531,6 +531,317 @@
       "Excessive venous pooling at the feet"
     ],
     "a": 1
+  },
+  {
+    "id": "PGOG042",
+    "y": 2025,
+    "t": "MNA",
+    "q": "In a woman with a regular 28-day menstrual cycle, which of the following best describes the typical hormonal profile during days 21 to 25 of the cycle?",
+    "o": [
+      "Low estrogen, high progesterone, low LH and FSH",
+      "Low estrogen, low progesterone, low LH and FSH",
+      "Low estrogen, high progesterone, high LH and FSH",
+      "High estrogen, high progesterone"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG043",
+    "y": 2025,
+    "t": "LBD",
+    "q": "[Image: Illustration of a vaginal delivery showing one gloved hand pressing firmly just above the pubic bone while the other hand applies gentle, steady downward-and-outward traction using an instrument clamped on the umbilical cord at the vaginal opening] During a full-term vaginal delivery, an obstetrics resident is seen applying counterpressure above the pubic symphysis with one hand while gently pulling on the umbilical cord with the other. Which maneuver is being demonstrated in the image?",
+    "o": [
+      "Controlled cord traction",
+      "Manual removal of placenta",
+      "Uterine massage",
+      "Bimanual uterine compression"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG044",
+    "y": 2025,
+    "t": "LBD",
+    "q": "A 38-week pregnant woman in active labor with 5 cm cervical dilatation and regular contractions suddenly develops umbilical cord prolapse. What is the most appropriate immediate management?",
+    "o": [
+      "Wait and observe",
+      "Manually elevate the presenting part, fill the bladder retrogradely, and prepare for emergency cesarean section",
+      "Perform vaginal packing to protect the cord",
+      "Administer oxytocin to expedite labor"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG045",
+    "y": 2025,
+    "t": "MNA",
+    "q": "A 46-year-old woman presents with complaints of irregular menstrual cycles and heavy vaginal bleeding for several months. Transvaginal ultrasound reveals an endometrial thickness of 16 mm. What is the most appropriate next step in management?",
+    "o": [
+      "Hysterectomy",
+      "Start combined oral contraceptive pills",
+      "Observe and reassess after a few months",
+      "Perform an endometrial biopsy"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOG046",
+    "y": 2025,
+    "t": "HRP",
+    "q": "A 36-week pregnant woman is diagnosed with preeclampsia and started on magnesium sulfate therapy. According to the Pritchard regimen, what is the total loading dose of magnesium sulfate administered initially?",
+    "o": [
+      "4 grams",
+      "10 grams",
+      "14 grams",
+      "5 grams"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG047",
+    "y": 2025,
+    "t": "PPP",
+    "q": "A woman develops atonic postpartum hemorrhage (PPH) after vaginal delivery that does not respond to initial medical management. What is the next best step in management in the labour room?",
+    "o": [
+      "Compression sutures",
+      "Bakri balloon tamponade",
+      "Devascularization surgery",
+      "Immediate hysterectomy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG048",
+    "y": 2025,
+    "t": "GYM",
+    "q": "A 65-year-old postmenopausal woman presents with painless vaginal bleeding. She has no history of hormone replacement therapy. What is the most likely diagnosis?",
+    "o": [
+      "Endometrial carcinoma",
+      "Adenomyosis",
+      "Uterine fibroid",
+      "Endometriosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG049",
+    "y": 2025,
+    "t": "LBD",
+    "q": "A 32-year-old G2P1 woman with a previous cesarean section is undergoing a trial of vaginal delivery at 39 weeks. She is in active labor with 8 cm cervical dilation and fetal station at -1. Continuous fetal monitoring reveals fetal bradycardia, and maternal pulse is 110/min. What is the most appropriate next step in management?",
+    "o": [
+      "Emergency cesarean section",
+      "Continue monitoring and wait",
+      "Administer oxytocin to augment labor",
+      "Perform operative vaginal delivery"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG050",
+    "y": 2025,
+    "t": "LBD",
+    "q": "In managing shoulder dystocia during vaginal delivery, which of the following is the correct sequence of maneuvers?",
+    "o": [
+      "Zavanelli → Gaskin → Rubin → McRoberts",
+      "McRoberts → Rubin → Gaskin → Zavanelli",
+      "Rubin → McRoberts → Zavanelli → Gaskin",
+      "Gaskin → McRoberts → Rubin → Zavanelli"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG051",
+    "y": 2025,
+    "t": "LBD",
+    "q": "In the repair of a mediolateral episiotomy, what is the correct order of tissue closure?",
+    "o": [
+      "Skin → Muscle → Mucosa",
+      "Muscle → Mucosa → Skin",
+      "Mucosa → Muscle → Skin",
+      "Mucosa → Skin → Muscle"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG052",
+    "y": 2025,
+    "t": "FBE",
+    "q": "[Image: Sagittal pelvic MRI showing a diffusely enlarged uterus with thickening and blurring of the junctional zone between the endometrium and myometrium] A 42-year-old woman presents with chronic lower abdominal pain and dysmenorrhea. MRI is as shown. What is the most likely diagnosis?",
+    "o": [
+      "Uterine fibroid",
+      "Adenomyosis",
+      "Endometriosis",
+      "Endometrial carcinoma"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG053",
+    "y": 2025,
+    "t": "GYM",
+    "q": "A 62-year-old postmenopausal woman with a history of hypertension presents with vaginal bleeding. Her blood pressure is 170/100 mmHg. What is the most appropriate next step in management?",
+    "o": [
+      "Reassure her that this is normal at her age",
+      "Immediate pelvic examination, Pap smear, and transvaginal ultrasound",
+      "Refer her to cardiology before any further evaluation",
+      "Start antihypertensives and observe for 1 week"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG054",
+    "y": 2025,
+    "t": "IFR",
+    "q": "A 36-year-old woman presents with secondary amenorrhea for the past 8 months. Laboratory investigations reveal FSH of 36 IU/L and AMH of 0.05 ng/mL. What is the most likely diagnosis?",
+    "o": [
+      "Polycystic ovary syndrome (PCOS)",
+      "Hyperprolactinemia",
+      "Premature ovarian insufficiency (POI)",
+      "Hypothalamic amenorrhea"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG055",
+    "y": 2025,
+    "t": "NPA",
+    "q": "A woman presents for her first antenatal visit and reports that her LMP was approximately 2 months ago. Which ultrasound parameter is the most accurate for dating the pregnancy at this stage?",
+    "o": [
+      "Biparietal diameter",
+      "Mean gestational sac diameter",
+      "Abdominal circumference",
+      "Crown-rump length"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOG056",
+    "y": 2025,
+    "t": "IFR",
+    "q": "A woman is diagnosed with a pituitary microadenoma and has elevated serum prolactin levels. She presents with secondary amenorrhea and infertility. What is the most likely mechanism by which hyperprolactinemia causes these symptoms?",
+    "o": [
+      "Antagonism of estrogen receptors",
+      "Decreased GnRH secretion from the hypothalamus",
+      "Increased pulsatile FSH secretion",
+      "Increased LH secretion from the pituitary"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG057",
+    "y": 2025,
+    "t": "GYM",
+    "q": "A woman diagnosed with cervical cancer is found to have unilateral hydroureteronephrosis on imaging due to tumor invasion. What is the FIGO stage of her disease?",
+    "o": [
+      "Stage IIB",
+      "Stage IIIA",
+      "Stage IIIB",
+      "Stage IIIC"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG058",
+    "y": 2025,
+    "t": "LBD",
+    "q": "A pregnant woman is undergoing a vaginal breech delivery. After delivering the baby’s body up to the umbilicus, the obstetrician notices winging of the baby’s scapula. To facilitate safe delivery of the baby’s shoulders and head, which of the following maneuvers is most appropriate?",
+    "o": [
+      "Pinard maneuver",
+      "Burns Marshall maneuver",
+      "Lovset maneuver",
+      "Mauriceau-Smellie-Veit maneuver"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG059",
+    "y": 2025,
+    "t": "NPA",
+    "q": "A woman comes to the clinic with breast tenderness, presence of linea nigra on her abdomen, and a bluish discoloration of the cervix. What is the most likely clinical interpretation of these findings?",
+    "o": [
+      "Probable pregnancy",
+      "Confirmed pregnancy",
+      "Normal menstrual cycle",
+      "Menopause"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG060",
+    "y": 2025,
+    "t": "PPP",
+    "q": "A 28-year-old primigravida woman with a history of preeclampsia undergoes a cesarean section at term. Her BMI is 37. She is currently stable in the postnatal ward.Which of the following is the most appropriate prophylaxis to prevent thrombosis for this patient?",
+    "o": [
+      "Warfarin",
+      "Clopidogrel",
+      "Aspirin",
+      "LMWH"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOG061",
+    "y": 2025,
+    "t": "FTP",
+    "q": "During a clinical examination, a senior resident asks an intern to examine the umbilical cord. How many arteries and veins are normally present in a healthy umbilical cord?",
+    "o": [
+      "1 artery and 2 veins",
+      "1 vein and 2 arteries",
+      "1 artery and 1 vein",
+      "2 arteries and 2 veins"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOG071",
+    "y": 2025,
+    "t": "IST",
+    "q": "A woman in her first trimester of pregnancy has a history of previous toxoplasmosis and now tests IgG positive. What is the advice?",
+    "o": [
+      "Continue pregnancy, no risk",
+      "Abort - high risk",
+      "Continue, risk exists",
+      "Repeat IgM serology"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG072",
+    "y": 2025,
+    "t": "FTP",
+    "q": "A child is born with an absent finger. What is the likely diagnosis?",
+    "o": [
+      "Amniotic band syndrome",
+      "Arthrogryposis multiplex",
+      "Polyhydramnios",
+      "Congenital constriction ring"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOG073",
+    "y": 2025,
+    "t": "PLF",
+    "q": "A G2L2 woman delivered at home by a trained dai presents with uterine prolapse. Which structure is weak?",
+    "o": [
+      "Round ligament",
+      "Broad ligament",
+      "Cardinal ligament",
+      "Uterosacral ligament"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOG074",
+    "y": 2025,
+    "t": "GYM",
+    "q": "Gross image shows a cystadenocarcinoma, CA-125 positive, with heaviness in the abdomen. What is the diagnosis?",
+    "o": [
+      "Serous cystadenocarcinoma",
+      "Mucinous carcinoma",
+      "Dysgerminoma",
+      "Yolk sac tumour"
+    ],
+    "a": 0
   }
 ]
-  

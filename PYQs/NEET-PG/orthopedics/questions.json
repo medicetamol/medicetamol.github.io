@@ -180,5 +180,96 @@
       "Aneurysmal bone cyst"
     ],
     "a": 2
+  },
+  {
+    "id": "PGOR015",
+    "y": 2025,
+    "t": "SPN",
+    "q": "[Image: Lateral lumbar spine X-ray with arrows marking forward displacement of one vertebral body relative to the vertebra below it, with malalignment of the anterior and posterior vertebral margins] A 56-year-old female presents with chronic lower back pain. A lateral lumbar spine X-ray is provided. Based on the radiological findings, which of the following is the most likely diagnosis?",
+    "o": [
+      "Spondylitis",
+      "Spondylolisthesis",
+      "Osteosarcoma",
+      "Vertebral fracture"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR016",
+    "y": 2025,
+    "t": "ARJ",
+    "q": "A 40-year-old man presents with discomfort in one of his joints. Synovial fluid aspiration reveals rhomboid-shaped, positively birefringent crystals under polarized light microscopy. Which of the following is the most likely diagnosis?",
+    "o": [
+      "Gout",
+      "Rheumatoid arthritis",
+      "Pseudogout",
+      "Osteoarthritis"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGOR017",
+    "y": 2025,
+    "t": "ARJ",
+    "q": "A 20-year-old man presents with chronic back pain that is worse in the morning and improves with physical activity. He also has a history of anterior uveitis. A lumbar spine X-ray shows no abnormalities. Which of the following is the most appropriate next investigation for early diagnosis?",
+    "o": [
+      "CT spine",
+      "MRI sacroiliac joints",
+      "X-ray thoracolumbar spine",
+      "Bone scan"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR018",
+    "y": 2025,
+    "t": "NMM",
+    "q": "A 60-year-old patient presents with pain in multiple bones and a history of increased hat size. On examination, some bones feel warm to touch. Biochemical investigations show normal serum calcium, phosphate, and parathyroid hormone (PTH) levels, but markedly elevated alkaline phosphatase (ALP). What is the most likely diagnosis?",
+    "o": [
+      "Paget’s disease of bone",
+      "Osteosarcoma",
+      "Multiple myeloma",
+      "Osteomalacia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOR019",
+    "y": 2025,
+    "t": "FLL",
+    "q": "A 25-year-old man presents to the emergency department following a motorbike accident and is found to have a closed midshaft fracture of the left tibia. Six hours later, he develops severe leg pain that is disproportionate to the injury and worsens with passive dorsiflexion of the foot. The pain is not relieved by analgesics. On examination, dorsalis pedis and posterior tibial pulses are present, but there is no sensation over the first dorsal webspace. What is the most appropriate next step in management?",
+    "o": [
+      "Elevate the limb and observe",
+      "Immediate fasciotomy",
+      "Administer opioid analgesics and continue observation",
+      "Apply cast and follow up"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGOR023",
+    "y": 2025,
+    "t": "PDO",
+    "q": "An 11-year-old boy presented with a complaint of painless limp. An X-ray was done. What is the most likely diagnosis?",
+    "o": [
+      "Perthes disease",
+      "Developmental dysplasia of the hip",
+      "TB hip",
+      "Slipped capital femoral epiphysis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOR024",
+    "y": 2025,
+    "t": "FRG",
+    "q": "A male patient sustains a road traffic accident with closed midshaft fractures of the femur and tibia. Two days later, he develops breathlessness, tachycardia, and a petechial rash on the chest and conjunctiva. What is the most probable diagnosis?",
+    "o": [
+      "Disseminated intravascular coagulation",
+      "Fat embolism syndrome",
+      "Pulmonary embolism",
+      "Sepsis"
+    ],
+    "a": 1
   }
 ]

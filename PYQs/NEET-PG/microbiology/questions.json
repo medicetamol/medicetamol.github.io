@@ -324,6 +324,147 @@
       "Triatomine bug"
     ],
     "a": 0
+  },
+  {
+    "id": "PGMB026",
+    "y": 2025,
+    "t": "BAC",
+    "q": "Group A Streptococcus is the most common cause of bacterial pharyngitis in school-aged children. Which of the following bacterial components is primarily responsible for its attachment to fibronectin on the epithelial lining of the pharynx?",
+    "o": [
+      "Lipoprotein",
+      "Lipoteichoic acid",
+      "Capsule",
+      "Flagella"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGMB027",
+    "y": 2025,
+    "t": "BAC",
+    "q": "A 25-year-old sewage worker presents with fever for 1 week and weakness for 1 day. Laboratory evaluation reveals elevated bilirubin and decreased urine output. Conjunctival redness? What is the most likely diagnosis?",
+    "o": [
+      "Brucellosis",
+      "Weil's disease",
+      "Enteric fever"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGMB028",
+    "y": 2025,
+    "t": "BAC",
+    "q": "In a village, several people developed dysentery after consuming raw milk. On laboratory examination, gram-negative, curved rods with polymorphonuclear infiltration were found in stool samples. Which of the following is the most likely causative organism?",
+    "o": [
+      "Clostridium perfringens",
+      "Staphylococcus aureus",
+      "Vibrio parahaemolyticus",
+      "Campylobacter jejuni"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGMB029",
+    "y": 2025,
+    "t": "PAR",
+    "q": "[Image: Adhesive-tape microscopy image showing a single oval structure with one flattened side and a thin outer shell, containing an early developing structure inside] A 5-year-old child presents with nocturnal perianal itching. The image below shows the organism identified on an adhesive tape test. Mother saw a worm?? What is the most likely causative agent?",
+    "o": [
+      "Enterobius vermicularis",
+      "Ancylostoma duodenale",
+      "Hymenolepis nana",
+      "Trichuris trichiura"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGMB030",
+    "y": 2025,
+    "t": "MYC",
+    "q": "[Image: Photomicrograph of branching fungal filaments bearing round structures with multiple short spike-like projections radiating from the surface, some occurring in pairs] A patient presents with low-grade fever, chronic cough, and weight loss. Fungal culture from respiratory secretions shows the following organism with narrow-based budding on microscopy. What is the most likely diagnosis?",
+    "o": [
+      "Blastomycosis",
+      "Histoplasmosis",
+      "Cryptococcosis",
+      "Coccidioidomycosis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGMB031",
+    "y": 2025,
+    "t": "BAC",
+    "q": "A patient presents with a history of chronic meningitis. Laboratory findings shows Gram- positive, filamentous branching bacteria, Positive ZN stain, Growth on paraffin bait culture. Which of the following is the most likely causative organism?",
+    "o": [
+      "Actinomyces israelii",
+      "Mycobacterium tuberculosis",
+      "Nocardia asteroides",
+      "Cryptococcus neoformans"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGMB032",
+    "y": 2025,
+    "t": "MYC",
+    "q": "A male patient presents with fever, cough, and hemoptysis. Bronchoalveolar lavage (BAL) fluid examination shows septate hyphae with acute angle (dichotomous) branching under microscopy. What is the most likely diagnosis?",
+    "o": [
+      "Mucormycosis",
+      "Histoplasmosis",
+      "Aspergillosis",
+      "Candidiasis"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGMB033",
+    "y": 2025,
+    "t": "VIR",
+    "q": "A young adult presents with facial pain and painful vesicular lesions in the mouth. Tzanck smear reveals multinucleated giant cells with intranuclear inclusions. What is the most likely causative organism?",
+    "o": [
+      "Adenovirus",
+      "Cytomegalovirus",
+      "Herpes simplex virus",
+      "Epstein-Barr virus"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGMB034",
+    "y": 2025,
+    "t": "IMM",
+    "q": "A patient presents with recurrent infections with Neisseria gonorrhoeae. Which of the following investigations is most appropriate to evaluate the underlying immunodeficiency?",
+    "o": [
+      "C1 esterase inhibitor assay",
+      "Quantitative immunoglobulin levels",
+      "Nitroblue tetrazolium test",
+      "Terminal complement (C5–C9) assay"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGMB035",
+    "y": 2025,
+    "t": "BAC",
+    "q": "A farmer presents with an ulcerative skin lesion showing signs of necrosis. Smear from the ulcer stained with polychrome methylene blue reveals capsulated bacilli that are McFadyean reaction positive. What is the most likely causative organism?",
+    "o": [
+      "Clostridium perfringens",
+      "Bacillus anthracis",
+      "Yersinia pestis",
+      "Francisella tularensis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGMB036",
+    "y": 2025,
+    "t": "PAR",
+    "q": "[Image: Peripheral blood smear (Giemsa stain) showing a long, thread-like, coiled organism with tapering pointed ends, stained blue-violet against the background of blood cells] A middle-aged man from an endemic region presents with progressive swelling of the lower limb. A peripheral blood smear shows the following structure. What is the most likely cause of his limb swelling?",
+    "o": [
+      "Hypoalbuminemia",
+      "Lymphatic obstruction",
+      "Hypoproteinemia",
+      "increased hydrostatic pressure"
+    ],
+    "a": 1
   }
-
 ]

@@ -557,5 +557,187 @@
       "Cervical lymph node"
     ],
     "a": 1
+  },
+  {
+    "id": "PGGS044",
+    "y": 2025,
+    "t": "PLB",
+    "q": "[Image: Photograph of a severely burned lower limb with dark, dry, leathery-looking skin and a long linear surgical incision made along the length of the limb] A 30-year-old female was brought to EMR after fire on examination of lower limb full- thickness burns and deep partial-thickness burns were present involving it Circumferentially, procedure was performed as given below, identify the procedure?",
+    "o": [
+      "Escharotomy",
+      "Debridement",
+      "Excised to healthy tissue fat/fascia",
+      "Early skin grafting"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS045",
+    "y": 2025,
+    "t": "GIS",
+    "q": "[Image: Coronal line diagram of the anal canal and surrounding sphincter muscles showing a tract that passes through the plane between the internal and external anal sphincter before opening near the anal verge] Identify the fistula according to park’s classification?",
+    "o": [
+      "Intersphincteric",
+      "Supra-sphincteric",
+      "Extra-sphincteric",
+      "Trans-sphincteric high"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS046",
+    "y": 2025,
+    "t": "GNS",
+    "q": "[Image: Line drawing of a surgical knot showing two intertwined loops made on the first throw, followed by a single crossing loop on the second throw] identify the knot?",
+    "o": [
+      "Granny’s knot",
+      "Reef knot",
+      "Double Knot",
+      "Surgeons knot"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGGS047",
+    "y": 2025,
+    "t": "BRS",
+    "q": "[Image: Clinical photograph of the breast showing diffusely thickened, pitted, dimpled ('orange-peel') skin texture over the breast with a darkened areola] A 43-year-old female present to OPD due changes in breast changes in breast and a lump in breast as given below, what is the diagnosis?",
+    "o": [
+      "T4d",
+      "T4a",
+      "T1c",
+      "T3"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS048",
+    "y": 2025,
+    "t": "VAS",
+    "q": "[Image: Clinical photograph of the lower leg showing dilated, tortuous, bluish veins running just beneath the skin surface with mild surrounding skin discoloration] A 56 years old man presents with the following pathology, which of the following is correct?",
+    "o": [
+      "Sclerotherapy is  the best treatment",
+      "Lipodermatosclerosis/eczema can occurs",
+      "Telangiectasia is rare",
+      "No possibility of venous ulcer"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS049",
+    "y": 2025,
+    "t": "GNS",
+    "q": "[Image: Photograph of a suture packet labelled 'Polydioxanone', USP 3/0, with a 1/2 circle round-bodied needle] What is correct regarding this suture?",
+    "o": [
+      "Non absorbable",
+      "Monoflament",
+      "Braided multiflament",
+      "Collagen derived"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS050",
+    "y": 2025,
+    "t": "URO",
+    "q": "[Image: Close-up clinical photograph of the tip of the foreskin showing a narrow, pinpoint opening with the foreskin appearing distended/ballooned just proximal to it] A 3-year-old child was brought to OPD with complaint of dysuria and ballooning on micturition and examination as given below, what is the diagnosis?",
+    "o": [
+      "Balanitis xerotica obliterans",
+      "True phimosis",
+      "Recurrent balanoposthitis",
+      "Recurrent urinary tract infections"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS051",
+    "y": 2025,
+    "t": "HNS",
+    "q": "[Image: Digital subtraction angiogram of the neck showing splaying (widening) of a major vessel bifurcation with an abnormal tangle of small vessels filling the space between the two branches] History of pulsatile mass in the neck. Digital angiography image shown. Not filling on carotid compression. But refilling on releasing pressure. What is the diagnosis?",
+    "o": [
+      "Carotid Aneurysm",
+      "Carotid Body tumour",
+      "AV fistula",
+      "Haemangioma"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS052",
+    "y": 2025,
+    "t": "NRS",
+    "q": "[Image: Axial brain MRI showing a well-circumscribed, rounded mass lying against the inner surface of the skull, causing compression of the adjacent brain tissue] 30-year male old patient presents to OPD with complaints of recurrent headache and nausea, MRI brain shown. What is the diagnosis?",
+    "o": [
+      "Meningioma",
+      "Glioma",
+      "Ependymoma",
+      "Pilocytic astrocytoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS053",
+    "y": 2025,
+    "t": "TCC",
+    "q": "A 25-year old patient who had a Road traffic accident was initially conscious but later became unconscious and subsequently died. On postmortem examination, multiple petechial Others hemorrhages are seen in the corpus callosum, what is the probable diagnosis?",
+    "o": [
+      "EDH",
+      "Diffuse axonal injury",
+      "Subdural hematoma",
+      "SDH"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS061",
+    "y": 2025,
+    "t": "ENS",
+    "q": "A 35-year-old man diagnosed with pheochromocytoma is scheduled for surgery. Which medication should be given as preoperative preparation?",
+    "o": [
+      "Clonidine",
+      "Phenoxybenzamine",
+      "Esmolol",
+      "Aspirin"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS062",
+    "y": 2025,
+    "t": "GIS",
+    "q": "During a complex duodenal surgery, a vessel posterior to the duodenum is cut, resulting in massive bleeding and blood collection. Which vessel is most likely injured?",
+    "o": [
+      "Superior mesenteric artery",
+      "Inferior vena cava",
+      "Aorta",
+      "Portal vein"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGGS063",
+    "y": 2025,
+    "t": "VAS",
+    "q": "A patient presents with the fingertip changes shown in the image. What is the most likely diagnosis?",
+    "o": [
+      "Wet gangrene",
+      "Raynaud's phenomenon",
+      "Dry gangrene",
+      "Frostbite"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGGS064",
+    "y": 2025,
+    "t": "GIS",
+    "q": "A known case of anal carcinoma with a mass near the anal opening comes for a follow-up. Which of the following lymph nodes are most likely involved?",
+    "o": [
+      "Superficial inguinal lymph nodes",
+      "Deep inguinal lymph nodes",
+      "External iliac lymph nodes",
+      "Internal iliac lymph nodes"
+    ],
+    "a": 0
   }
 ]

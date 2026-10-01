@@ -232,6 +232,96 @@
       "Scorpion"
     ],
     "a": 0
+  },
+  {
+    "id": "PGFM019",
+    "y": 2025,
+    "t": "TOX",
+    "q": "A patient is brought to the emergency department with acute onset of severe abdominal pain, throat irritation followed by vomiting that contains blood and bile, and diarrhea that initially appears bloody but later becomes colorless, odorless, and rice-water-like. On examination, a distinct garlicky odor is noted in the breath.Which of the following is the most likely agent responsible for the poisoning?",
+    "o": [
+      "Arsenic",
+      "Phosphorus",
+      "Aluminium phosphide",
+      "Croton seeds"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGFM020",
+    "y": 2025,
+    "t": "JUR",
+    "q": "A 16-year-old girl and a 23-year-old boy undergo medical examination following allegations of rape made by the girl’s parents. The girl states the sexual act was consensual, and no injuries are found on examination. According to the law, what is the legal status of the consent in this case?",
+    "o": [
+      "Consent is invalid as the girl is under 18 years",
+      "No punishment since the act was consensual",
+      "No punishment since there are no injuries",
+      "Parents must prove that the act was non-consensual"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGFM021",
+    "y": 2025,
+    "t": "ASP",
+    "q": "During autopsy, a body shows curved scratch marks below the right angle of the mandible, three grouped bruises on the left side of the neck below the thyroid cartilage, and additional bruises over the head, posterior shoulder, backside of the trunk, and hip crests. Fracture of the superior horn of the thyroid cartilage present. What is the most likely cause of death?",
+    "o": [
+      "Throttling",
+      "Garroting",
+      "Mugging",
+      "Ligature strangulation"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGFM022",
+    "y": 2025,
+    "t": "THA",
+    "q": "What is the Zasko phenomenon?",
+    "o": [
+      "Tendon reflex occurring after death",
+      "Seeping of blood through wounds around the time of death",
+      "Clotting of blood after death",
+      "Gaping of wound along skin tension lines"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGFM023",
+    "y": 2025,
+    "t": "FSP",
+    "q": "A man kills his office colleague and later claims he was experiencing delusions of persecution and other psychotic features at the time of the act. He now asserts that he is not guilty by reason of insanity.What is the most appropriate next step under medico-legal protocol?",
+    "o": [
+      "Refer for psychiatric evaluation to assess if he is fit for trial",
+      "Enroll in an anger management program",
+      "He should be sent directly to jail",
+      "Declare him not guilty and release immediately"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGFM024",
+    "y": 2025,
+    "t": "JUR",
+    "q": "The Protection of Children from Sexual Offences (POCSO) Act covers which of the following groups?",
+    "o": [
+      "Girls below 18 years",
+      "All children below 18 years",
+      "Girls below 16 years",
+      "All children below 16 years"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGFM028",
+    "y": 2025,
+    "t": "JUR",
+    "q": "A 68-year-old female presented with breathlessness and poor health status. She also has multiple metastases. On examination, she is awake and anxious. The doctors believed that aggressive chemotherapy, radiotherapy and ICU admission would not be helpful. However, her daughter insists on 'trying everything'. How should the attending doctor handle such a scenario?",
+    "o": [
+      "Convene with family members and consider the patient's needs",
+      "Shift to the ICU and start aggressive treatment",
+      "Discharge the patient and shift to palliative care",
+      "Give placebo care to relieve anxiety"
+    ],
+    "a": 0
   }
 ]
- 

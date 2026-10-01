@@ -232,5 +232,148 @@
       "Congenital cytomegalovirus infection"
     ],
     "a": 3
+  },
+  {
+    "id": "PGPD019",
+    "y": 2025,
+    "t": "PGS",
+    "q": "A child presents with developmental delay and coarsefacial features. Enzyme assay reveals a deficiency of α-L-iduronidase. Which of the following substances is most likely to accumulate in this condition?",
+    "o": [
+      "Dermatan sulfate + Chondroitin sulfate",
+      "Only Dermatan sulfate",
+      "Dermatan sulfate + Heparan sulfate",
+      "Heparan sulfate + Chondroitin sulfate"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPD020",
+    "y": 2025,
+    "t": "PGS",
+    "q": "A 6-month-old infant presents with recurrent infections and failure to thrive. Laboratory investigations reveal a deficiency of adenosine deaminase (ADA). Which of the following immunodeficiency disorders is most likely associated?",
+    "o": [
+      "Severe Combined Immunodeficiency (SCID)",
+      "Hypogammaglobulinemia",
+      "DiGeorge Syndrome",
+      "Wiskott-Aldrich Syndrome"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD021",
+    "y": 2025,
+    "t": "PKI",
+    "q": "An HIV-positive mother with a viral load of 1200 copies/mL delivers a baby. What is the most appropriate antiretroviral prophylaxis for the newborn?",
+    "o": [
+      "Nevirapine for 6 weeks",
+      "Nevirapine + Zidovudine for 6 weeks",
+      "Nevirapine for 12 weeks",
+      "Zidovudine for 4 weeks"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD022",
+    "y": 2025,
+    "t": "PRR",
+    "q": "A 5-year-old child with chronic kidney disease (CKD) presents with bow legs. Laboratory investigations reveal: Serum Calcium: 9.1 mg/dL (normal) Serum Phosphate: 6.9 mg/dL (elevated) Alkaline Phosphatase: Elevated 25(OH) Vitamin D: Low What is the most appropriate next step in management?",
+    "o": [
+      "Calcium supplementation",
+      "Phosphate binder",
+      "Oral calcium + Vitamin D",
+      "Growth hormone therapy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD023",
+    "y": 2025,
+    "t": "PNR",
+    "q": "A 3-year-old child is brought to the emergency room with a generalized seizure following a high-grade fever. What is the first-line drug of choice for seizure control in this acute febrile setting?",
+    "o": [
+      "Diazepam",
+      "Valproate",
+      "Fosphenytoin",
+      "Doxycycline / Amoxicillin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPD024",
+    "y": 2025,
+    "t": "NEN",
+    "q": "[Image: Neonatal chest X-ray showing multiple rounded, bubble-like lucencies occupying one side of the chest, with the heart and mediastinal shadow displaced toward the opposite side] A 24-hour-old baby with severe respiratory distress was admitted to the ICU. A chest X-ray of the neonate is given. What is the most probable diagnosis?",
+    "o": [
+      "Congenital Pulmonary Airway Malformation (CPAM)",
+      "Congenital Diaphragmatic Hernia (CDH)",
+      "Congenital lobar emphysema",
+      "Neonatal pneumonia"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD025",
+    "y": 2025,
+    "t": "PGS",
+    "q": "A child presents with neurodegeneration and a cherry-red spot on fundus examination. Enzyme assay reveals hexosaminidase A deficiency. What is the most likely diagnosis?",
+    "o": [
+      "GM1 gangliosidosis",
+      "GM2 gangliosidosis",
+      "Niemann-Pick disease",
+      "Gaucher disease"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD026",
+    "y": 2025,
+    "t": "PGS",
+    "q": "[Image: Three-generation family pedigree chart; affected individuals (filled circles/squares) are seen only among the children of affected mothers, while the children of affected fathers in the pedigree are unaffected] The pedigree diagram of a family is shown below. Affected individuals present with progressive external ophthalmoplegia, pigmentary retinopathy, and cardiac conduction defects. Based on the pedigree and clinical features, what is the most likely diagnosis?",
+    "o": [
+      "Duchenne Muscular Dystrophy",
+      "Kearns-Sayre Syndrome",
+      "Friedreich Ataxia",
+      "Myotonic Dystrophy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD027",
+    "y": 2025,
+    "t": "PIM",
+    "q": "[Image: Four vaccine vials with pink caps are shown side by side, each bearing a circular heat-sensitive indicator: vials 1 and 2 show an inner square clearly lighter than the surrounding circle, vial 3 shows an inner square that is a shade darker, and vial 4 shows an inner square as dark as or darker than the surrounding circle] Which of the following vials, as shown in the image, can be used for administering vaccines?",
+    "o": [
+      "1, 2, 3, 4",
+      "1, 2",
+      "Only 1",
+      "2, 4"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPD042",
+    "y": 2025,
+    "t": "PRR",
+    "q": "A 2-year-old child has choked on a peanut. What is the most appropriate immediate management?",
+    "o": [
+      "Chest compressions",
+      "Back blows",
+      "Abdominal thrusts",
+      "Endotracheal intubation"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPD043",
+    "y": 2025,
+    "t": "NUM",
+    "q": "A 7-month-old infant has just started complementary feeding using the 'katori method.' What is the recommended quantity and frequency of feeding during the first day?",
+    "o": [
+      "½-1 katori, 4 times daily",
+      "½-1 katori, 5 times daily",
+      "½-1 katori, 6 times daily",
+      "½-1 katori, 8 times daily"
+    ],
+    "a": 0
   }
 ]

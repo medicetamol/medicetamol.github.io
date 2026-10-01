@@ -466,5 +466,213 @@
       "Recommended dietary allowance"
     ],
     "a": 3
+  },
+  {
+    "id": "PGCM037",
+    "y": 2025,
+    "t": "EPI",
+    "q": "A diabetic patient with COVID-19 dies in the hospital. Which type of surveillance does this death report fall under?",
+    "o": [
+      "Passive surveillance",
+      "Active surveillance",
+      "Sentinel surveillance",
+      "Syndromic surveillance"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM038",
+    "y": 2025,
+    "t": "FPD",
+    "q": "In the “De facto” method of census data collection, information is collected based on which of the following?",
+    "o": [
+      "Place of birth",
+      "Location at the time of enumeration",
+      "Usual place of residence",
+      "Place of employment"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM039",
+    "y": 2025,
+    "t": "ENV",
+    "q": "During a Health Mela organized by a medical college, the Nalgonda technique for water purification was demonstrated. Which two chemicals are used in this technique?",
+    "o": [
+      "Alum and Gypsum",
+      "Alum and Charcoal",
+      "Alum and Lime",
+      "Charcoal and Lime"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM040",
+    "y": 2025,
+    "t": "EPI",
+    "q": "Which of the following is the correct sequence of steps in a Randomized Controlled Trial (RCT)?",
+    "o": [
+      "Follow-up → Manipulation → Assessment → Randomisation",
+      "Randomisation → Manipulation → Follow-up → Assessment",
+      "Assessment → Randomisation → Follow-up → Manipulation",
+      "Manipulation → Assessment → Follow-up → Randomisation"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM041",
+    "y": 2025,
+    "t": "ENV",
+    "q": "A 20-year-old resident of Andhra Pradesh presents with outward bending of the lower limbs and signs of osteoporosis. His diet mainly consists of rice and jowar roti. What should not be done in the management of this patient?",
+    "o": [
+      "Provision of running surface water for drinking",
+      "Change the water source",
+      "Fluoride supplementation",
+      "Add lime and alum to drinking water"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM042",
+    "y": 2025,
+    "t": "NHP",
+    "q": "An urban city has a population of 70,00,000, with 30% residing in slum areas. According to NUHM (National Urban Health Mission) norms, how many Urban Primary Health Centres (UPHCs) are required for the slum population?",
+    "o": [
+      "22",
+      "32",
+      "42",
+      "52"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM043",
+    "y": 2025,
+    "t": "EPI",
+    "q": "A study is conducted to compare the mean hemoglobin (Hb) levels between two independent groups. Which statistical test is most appropriate?",
+    "o": [
+      "Paired t-test",
+      "Unpaired t-test",
+      "Chi-square test",
+      "ANOVA"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM044",
+    "y": 2025,
+    "t": "CMD",
+    "q": "Which mosquito larva has no siphon and rests parallel to the water surface?",
+    "o": [
+      "Anopheles",
+      "Culex",
+      "Aedes",
+      "Mansonia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM045",
+    "y": 2025,
+    "t": "NUT",
+    "q": "A 3-year-old child presents with difficulty in walking, bowing of legs, is underweight, and has minimal sun exposure. Which of the following government schemes addresses nutritional deficiencies in children under 6 years of age?",
+    "o": [
+      "Mid-Day Meal Scheme",
+      "Anemia Mukt Bharat",
+      "Integrated Child Development Services (ICDS)",
+      "National Nutritional Deficiency Control Programme"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGCM046",
+    "y": 2025,
+    "t": "NHP",
+    "q": "Under the Weekly Iron and Folic Acid Supplementation (WIFS) scheme, what is the composition of IFA tablets given to children aged 10–19 years?",
+    "o": [
+      "60 mg elemental iron + 100 µg folic acid",
+      "100 mg elemental iron + 500 µg folic acid",
+      "100 mg elemental iron + 100 µg folic acid",
+      "60 mg elemental iron + 500 µg folic acid"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM047",
+    "y": 2025,
+    "t": "NCD",
+    "q": "According to the population strategy for prevention of coronary artery disease, what is the recommended dietary cholesterol intake limit per day?",
+    "o": [
+      "100 mg / 1000 kcal",
+      "200 mg / 1000 kcal",
+      "400 mg / 1000 kcal",
+      "500 mg / 1000 kcal"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM048",
+    "y": 2025,
+    "t": "HAD",
+    "q": "Which of the following is used to measure the degree of objective and target achievement, and assess the quality of results obtained in a health program?",
+    "o": [
+      "Planning",
+      "Surveillance",
+      "Monitoring",
+      "Evaluation"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM049",
+    "y": 2025,
+    "t": "EPI",
+    "q": "A new community intervention is initiated to reduce prenatal sepsis. Researchers allocate 20 Primary Health Centres (PHCs) to receive standard care and 20 PHCs to receive a community- based intervention. What type of study design is this?",
+    "o": [
+      "Cross-sectional study",
+      "Case-control study",
+      "Quasi-experimental study",
+      "Cluster-randomized control trial"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGCM050",
+    "y": 2025,
+    "t": "EPI",
+    "q": "The time interval between acquiring an infection and reaching the period of maximum infectivity is known as?",
+    "o": [
+      "Generation time",
+      "Communicable period",
+      "Incubation period",
+      "Serial interval"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGCM051",
+    "y": 2025,
+    "t": "EPI",
+    "q": "In a district-level survey, the introduction of breast cancer screening showed an increased 5- year survival rate, but autopsy data revealed no change in mortality. What type of bias does this represent?",
+    "o": [
+      "Survival bias",
+      "Lead time bias",
+      "Berksonian bias",
+      "Detection bias •"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGCM061",
+    "y": 2025,
+    "t": "ENV",
+    "q": "Toxic fumes are released after an industrial explosion. What advice should be given to the residents?",
+    "o": [
+      "Use the telephone and call friends",
+      "Seal the cracks and close the windows",
+      "Open the window for ventilation",
+      "Use a mask"
+    ],
+    "a": 1
   }
 ]

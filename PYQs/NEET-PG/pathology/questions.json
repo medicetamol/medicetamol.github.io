@@ -271,6 +271,161 @@
       "Mycosis Fungoides"
     ],
     "a": 0
+  },
+  {
+    "id": "PGPT022",
+    "y": 2025,
+    "t": "CIN",
+    "q": "Which of the following types of cell death involves activation of caspase enzymes?",
+    "o": [
+      "Necrosis and Apoptosis",
+      "Apoptosis and Pyroptosis",
+      "Apoptosis and necroptosis",
+      "Apoptosis only"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPT023",
+    "y": 2025,
+    "t": "HAM",
+    "q": "[Image: Peripheral blood smear showing a single large atypical cell with abundant dense purple-staining granular cytoplasm and an irregular nucleus, surrounded by red blood cells] A 68-year-old man presents with bleeding manifestations. Peripheral smear shows the presence of cells shown below. Which of the following is the most common chromosomal abnormality seen in this condition?",
+    "o": [
+      "t(8;21)",
+      "t(15;17)",
+      "t(14;18)",
+      "inv(16)"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPT024",
+    "y": 2025,
+    "t": "HAM",
+    "q": "A lymphoma characterized by the presence of centrocytes and centroblasts, along with BCL2 positivity and CD10 expression, is most commonly associated with which chromosomal translocation?",
+    "o": [
+      "t(2;5)",
+      "t(11;14)",
+      "t(14;18)",
+      "t(11;14)"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPT025",
+    "y": 2025,
+    "t": "RPD",
+    "q": "[Image: Photomicrograph showing sheets of uniform, monotonous round cells with pale/clear cytoplasm and distinct cell borders, admixed with scattered lymphocytes] A 30-year-old man presents with a painless testicular mass. An ultrasound shows a well- circumscribed, homogeneous, non-hemorrhagic testicular tumor. Which of the following is the most likely diagnosis?",
+    "o": [
+      "Yolk sac tumor",
+      "Choriocarcinoma",
+      "Teratoma",
+      "Seminoma"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPT026",
+    "y": 2025,
+    "t": "CNS",
+    "q": "A child presents with visual disturbances and delayed growth. Imaging reveals a suprasellar mass, and histopathology shows the presence of \"wet keratin\" (compact, eosinophilic anucleate keratin). What is the most likely diagnosis?",
+    "o": [
+      "Craniopharyngioma",
+      "Medulloblastoma",
+      "Glioma",
+      "Pituitary adenoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPT027",
+    "y": 2025,
+    "t": "HAM",
+    "q": "A 16-year-old boy presents with jaundice and splenomegaly. His father had a similar illness during adolescence. MCHC : high? What is the most likely diagnosis?",
+    "o": [
+      "IDA",
+      "Hereditary spherocytosis",
+      "Thalassemia major",
+      "AIHA"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPT028",
+    "y": 2025,
+    "t": "IMP",
+    "q": "Which of the following laboratory techniques is most commonly used to compare and quantify CD markers on cells?",
+    "o": [
+      "ELISA",
+      "Western blot",
+      "Flow cytometry",
+      "Immunohistochemistry"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPT029",
+    "y": 2025,
+    "t": "ENP",
+    "q": "A patient presents with a mass in the front of the neck, along with odynophagia and dyspnea. Histopathology reveals tumor cells positive for TTF-1, synaptophysin, and chromogranin, and there is evidence of amyloid deposition. What is the most likely diagnosis?",
+    "o": [
+      "Papillary thyroid carcinoma",
+      "Follicular thyroid carcinoma",
+      "Medullary thyroid carcinoma",
+      "Anaplastic thyroid carcinoma"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPT030",
+    "y": 2025,
+    "t": "RNP",
+    "q": "[Image: Photomicrograph showing a multilayered epithelium with dome-shaped surface cells covering several layers of rounded to polygonal cells beneath, similar in appearance to a urinary-tract lining] This type of epithelium is most likely found lining which of the following structures?",
+    "o": [
+      "Esophagus",
+      "Urinary bladder/ ureter",
+      "Small intestine",
+      "Trachea"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPT031",
+    "y": 2025,
+    "t": "GNC",
+    "q": "Which of the following conditions is most likely to follow this pattern of inheritance?",
+    "o": [
+      "Duchenne muscular dystrophy",
+      "Huntington's disease",
+      "Kearns-Sayre syndrome",
+      "Marfan syndrome"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPT032",
+    "y": 2025,
+    "t": "IMP",
+    "q": "A middle-aged woman presents with dry eyes and dry mouth. Laboratory tests reveal positive anti-Ro (SSA) and anti-La (SSB) antibodies. What is the most likely underlying pathological mechanism?",
+    "o": [
+      "Destruction of exocrine glands by neutrophils",
+      "IgE-mediated hypersensitivity reaction",
+      "Lymphocytic infiltration and destruction of salivary and lacrimal glands",
+      "Deposition of amyloid in salivary glands"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPT041",
+    "y": 2025,
+    "t": "LVR",
+    "q": "A 35-year-old woman undergoes abdominal imaging for nonspecific RUQ pain. A liver mass is identified and surgically excised. What is the most likely diagnosis?",
+    "o": [
+      "Hepatocellular carcinoma",
+      "Focal nodular hyperplasia",
+      "Hepatic adenoma",
+      "Metastasis"
+    ],
+    "a": 1
   }
-  
 ]

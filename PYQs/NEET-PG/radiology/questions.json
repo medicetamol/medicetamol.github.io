@@ -297,5 +297,57 @@
       "Loculated pleural effusion"
     ],
     "a": 1
+  },
+  {
+    "id": "PGRD024",
+    "y": 2025,
+    "t": "RDW",
+    "q": "[Image: Plain X-ray of the abdomen and pelvis showing contrast material outlining both kidneys, the ureters, and the urinary bladder] What is true about the investigation shown below?",
+    "o": [
+      "Invasive procedure.",
+      "Non invasive procedure to visualize ureteropelvic junction",
+      "Gold standard for bladder cancer",
+      "Done percutaneously"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD025",
+    "y": 2025,
+    "t": "RDG",
+    "q": "[Image: Barium contrast X-ray of the chest showing a dilated, tubular oesophagus that tapers smoothly to a narrow, beak-like end near the lower oesophageal sphincter] \"Based on the image provided, what is the most appropriate confirmatory investigation?\"",
+    "o": [
+      "Manometry",
+      "pH monitoring",
+      "Upper GI Endoscopy",
+      "Barium swallow study"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD026",
+    "y": 2025,
+    "t": "RDR",
+    "q": "[Image: Chest X-ray showing volume loss in the right upper lung zone with upward displacement of the horizontal fissure and increased opacity in that region] What is the most probable diagnosis based on the image provided?",
+    "o": [
+      "RUL collapse.",
+      "RUL consolidation",
+      "Bronchogenic carcinoma",
+      "Lung abscess"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGRD027",
+    "y": 2025,
+    "t": "RDM",
+    "q": "Which is the earliest imaging modality used to detect ankylosing spondylitis?",
+    "o": [
+      "MRI sacroiliac joint",
+      "CT sacroiliac joint",
+      "X ray",
+      "Bone scan"
+    ],
+    "a": 0
   }
 ]

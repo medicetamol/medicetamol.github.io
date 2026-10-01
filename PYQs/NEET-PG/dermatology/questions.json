@@ -141,6 +141,57 @@
       "Basal cell carcinoma"
     ],
     "a": 2
+  },
+  {
+    "id": "PGDR012",
+    "y": 2025,
+    "t": "BLA",
+    "q": "[Image: Direct immunofluorescence image of skin showing bright green granular staining concentrated at the tips of the dermal papillae along the basement membrane zone] A woman presents with pruritic rash on the elbows, buttocks with recent diagnosis of gluten sensitive enteropathy. On immunofluorescence IgA deposition is seen as shown in the image. What is the most likely diagnosis?",
+    "o": [
+      "Dermatitis herpetiformis",
+      "Pemphigus vulgaris",
+      "Bullous pemphigoid",
+      "Psoriasis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGDR013",
+    "y": 2025,
+    "t": "PGH",
+    "q": "A 20-year-old patient presents with a non-progressive hypopigmented lesion on the trunk. On Wood’s lamp examination, there is white accentuation. Diascopy is negative. What is the most likely diagnosis?",
+    "o": [
+      "Vitiligo",
+      "Nevus depigmentosus",
+      "Nevus anemicus",
+      "Indeterminate leprosy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGDR014",
+    "y": 2025,
+    "t": "BKI",
+    "q": "[Image: Clinical photograph of the cheek showing a large, irregular, reddish-brown indurated plaque with central scarring/atrophy and surface crusting] A patient presents with an indurated plaque on the cheek with central atrophy. Chest X-ray reveals apical calcification. Which of the following tests is most appropriate to confirm the diagnosis?",
+    "o": [
+      "Mantoux test",
+      "Slit skin smear",
+      "PCR",
+      "Probe test"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGDR015",
+    "y": 2025,
+    "t": "FVI",
+    "q": "A patient presents with irregular swelling over the foot, multiple discharging sinuses, and black granules. A KOH mount is performed on the discharge. What is the most likely observation?",
+    "o": [
+      "Arthrospores",
+      "Slender dematiaceous fungi",
+      "Yeast",
+      "Septate hyphae 4-5"
+    ],
+    "a": 1
   }
 ]
-  

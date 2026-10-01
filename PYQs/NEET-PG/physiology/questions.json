@@ -193,5 +193,83 @@
       "Metabolic Alkalosis"
     ],
     "a": 1
+  },
+  {
+    "id": "PGPH016",
+    "y": 2025,
+    "t": "REN",
+    "q": "By what primary mechanism does hydrochlorothiazide help prevent the formation of calcium stones?",
+    "o": [
+      "It increases the urinary excretion of citrate, which acts as a chelating agent.",
+      "It increases calcium reabsorption in the distal convoluted tubule, leading to a decrease in urinary calcium excretion.",
+      "It increases the filtration of calcium at the glomerulus, thereby reducing serum calcium levels.",
+      "It directly dissolves existing calcium stones by altering urinary pH and increasing their solubility."
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPH017",
+    "y": 2025,
+    "t": "GNM",
+    "q": "[Image: Length-tension graph of a sarcomere with an ascending limb, plateau and descending limb; point C is marked at the top of the ascending limb near the plateau (region of near-maximal tension). Below the graph are four labelled diagrams (1-4) of a sarcomere showing thick and thin filaments with differing degrees of overlap - ranging from wide separation, to moderate overlap with visible cross-bridges, to increasing overlap, to thin filaments overlapping each other at the centre] At point c what is the length tension relationship of sarcomere",
+    "o": [
+      "Diagram showing thick and thin filaments widely separated with minimal overlap",
+      "Diagram showing thick and thin filaments with moderate, optimal overlap and visible cross-bridges",
+      "Diagram showing thick and thin filaments with increased overlap, thinner zone of overlap shown lighter",
+      "Diagram showing thin filaments overlapping each other at the centre of the sarcomere (maximal shortening)"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPH018",
+    "y": 2025,
+    "t": "GNM",
+    "q": "Which of the following is Mitochondrial inheritance disorder",
+    "o": [
+      "Kearns-Sayre syndrome",
+      "Williams syndrome",
+      "Achondroplasia",
+      "Cystic fibrosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPH019",
+    "y": 2025,
+    "t": "RES",
+    "q": "A man is climbing a mountain for trekking. Based on his physiological response to the high altitude, what is the most likely primary acid-base abnormality in his blood?",
+    "o": [
+      "Metabolic acidosis",
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Respiratory alkalosis"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPH020",
+    "y": 2025,
+    "t": "RES",
+    "q": "A 68-year-old male with a history of COPD presents to the emergency room with severe dyspnea and altered mental status. An arterial blood gas (ABG) is drawn with the following results: pH: 7.28 PaCO2: 60 mmHg HCO3-: 28 mEq/L Na+: 142 mEq/L Cl-: 100 mEq/L Based on these results, what is the calculated anion gap?",
+    "o": [
+      "10 mEq/L",
+      "14 mEq/L",
+      "18 mEq/L",
+      "24 mEq/L"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPH028",
+    "y": 2025,
+    "t": "CVS",
+    "q": "A patient has the following Starling forces measured at the capillary level: Capillary hydrostatic pressure: 18 mmHg, Capillary oncotic pressure: 27 mmHg, Interstitial oncotic pressure: 7 mmHg. If there is no net movement of fluid across the capillary wall, what is the value of the interstitial hydrostatic pressure?",
+    "o": [
+      "0 mmHg",
+      "+1 mmHg",
+      "+2 mmHg",
+      "-2 mmHg"
+    ],
+    "a": 3
   }
-  ]
+]

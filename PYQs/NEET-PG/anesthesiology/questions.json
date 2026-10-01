@@ -64,7 +64,7 @@
     ],
     "a": 1
   },
-    {
+  {
     "id": "PGAS006",
     "y": 2023,
     "t": "AVC",
@@ -102,6 +102,44 @@
       "Unconsciousness with pulse absent and breathing present"
     ],
     "a": 2
+  },
+  {
+    "id": "PGAS009",
+    "y": 2025,
+    "t": "AIV",
+    "q": "A 35-year-old male undergoing abdominal surgery under general anesthesia develops sudden generalized muscle rigidity, rapid increase in body temperature, and tachycardia shortly after administration of sevoflurane and succinylcholine. His end-tidal CO is rising despite ₂ controlled ventilation. What is the most appropriate immediate treatment?",
+    "o": [
+      "Dantrolene",
+      "Diazepam",
+      "Pancuronium",
+      "Vecuronium"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAS010",
+    "y": 2025,
+    "t": "AOP",
+    "q": "A patient undergoing surgery receives a muscle relaxant and soon develops flushing and rashes over the neck and anterior chest. Which of the following muscle relaxants is most commonly associated with this reaction?",
+    "o": [
+      "Atracurium",
+      "Cisatracurium",
+      "Vecuronium",
+      "Pancuronium"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAS011",
+    "y": 2025,
+    "t": "AAW",
+    "q": "[Image: Photograph of an airway-training mannequin with a needle/cannula being inserted through the front of the neck at the level between the thyroid and cricoid cartilage] After a building collapse, a patient presents with airway obstruction and mouth filled with concrete debris. BP is 90/60 mmHg, HR 105/min. The given procedure is performed (image shown). Which of the following statements regarding this procedure is true?",
+    "o": [
+      "It provides adequate ventilation for up to 6 hours",
+      "It must be followed by a formal tracheostomy",
+      "It allows for removal of large foreign bodies from the airway",
+      "It can be safely used for prolonged airway management without further intervention"
+    ],
+    "a": 1
   }
 ]
-

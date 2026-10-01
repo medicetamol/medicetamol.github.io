@@ -245,5 +245,147 @@
       "Inhibit clot formation"
     ],
     "a": 2
+  },
+  {
+    "id": "PGPM020",
+    "y": 2025,
+    "t": "GRF",
+    "q": "Benralizumab acts on which receptor?",
+    "o": [
+      "IL 5",
+      "IL4",
+      "IL1",
+      "TNF alpha"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM021",
+    "y": 2025,
+    "t": "CNF",
+    "q": "A woman diagnosed with migraine and has a family history of coronary artery disease has previously been treated with sumatriptan. What is the drug of choice for migraine prophylaxis?",
+    "o": [
+      "Propranolol",
+      "Topiramate",
+      "Ergotamine",
+      "Naratriptan"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM022",
+    "y": 2025,
+    "t": "AUT",
+    "q": "A patient with tumor lysis syndrome has elevated uric acid levels. What is the mechanism of action of pegloticase?",
+    "o": [
+      "Xanthine oxidase inhibition",
+      "Urat-1 receptor inhibition",
+      "Oxidises uric acid",
+      "Excretion of uric acid"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGPM023",
+    "y": 2025,
+    "t": "GRF",
+    "q": "A patient presents with GERD. Which drug helps in contraction of LES and increases gastric emptying?",
+    "o": [
+      "Metoclopramide",
+      "Pantoprazole",
+      "Vonoprazan",
+      "Sodium alginate"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM024",
+    "y": 2025,
+    "t": "CVF",
+    "q": "A patient is started on hydrochlorothiazide for hypertension and later develops renal stones. What could be the probable cause?",
+    "o": [
+      "Increased calcium excretion",
+      "Decreased calcium excretion",
+      "Increased oxalate absorption",
+      "Decreased citrate excretion"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPM025",
+    "y": 2025,
+    "t": "AMI",
+    "q": "A patient with HIV develops tuberculosis. When should ART be initiated?",
+    "o": [
+      "Start ATT, then ART after 2 weeks",
+      "Start ART and ATT simultaneously",
+      "Start ART followed by ATT",
+      "ART alone"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM026",
+    "y": 2025,
+    "t": "AMI",
+    "q": "A patient with HIV is newly diagnosed with multidrug-resistant tuberculosis. Which of the following is the appropriate regimen, and what should the patient be monitored for?",
+    "o": [
+      "BPaLM; monitor for immune reconstitution syndrome",
+      "INH + Levofloxacin + Pyrazinamide + ethambutol, monitor for hepatotoxicity",
+      "INH + Levofloxacin + Streptomycin + Ethionamide, monitor for pyridoxine deficiency",
+      "INH + Clarithromycin + Pyrazinamide + Ethambutol, monitor for optic neuritis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGPM027",
+    "y": 2025,
+    "t": "CNF",
+    "q": "A patient on haloperidol for 2 years presents with orofacial dyskinesia and extrapyramidal symptoms. What is the appropriate treatment?",
+    "o": [
+      "Acute dystonia - ropinirole",
+      "Tardive dyskinesia - valbenazine",
+      "Akathisia - propranolol"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPM028",
+    "y": 2025,
+    "t": "CVF",
+    "q": "A patient with paroxysmal supraventricular tachycardia (PSVT) requires treatment for prophylaxis. Which drug is appropriate?",
+    "o": [
+      "IV adenosine",
+      "IV esmolol",
+      "Oral phenytoin",
+      "Verapamil"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGPM029",
+    "y": 2025,
+    "t": "GRF",
+    "q": "A patient is on salbutamol and ipratropium but continues to have nocturnal exacerbations of asthma. What is the next step?",
+    "o": [
+      "Oral corticosteroids",
+      "Laba plus inhalation steroids",
+      "Montelukast",
+      "Increase the dose of salbutamol"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGPM038",
+    "y": 2025,
+    "t": "CVF",
+    "q": "A 60-year-old man with ischemic cardiomyopathy and palpitations is started on amiodarone. Which phase of the cardiac action potential is its primary site of action?",
+    "o": [
+      "Phase 0 - Rapid depolarisation",
+      "Phase 2 - Plateau",
+      "Phase 3 - Repolarisation",
+      "Phase 4 - Resting potential"
+    ],
+    "a": 2
   }
 ]

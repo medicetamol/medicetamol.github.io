@@ -245,5 +245,96 @@
       "Positional myopia"
     ],
     "a": 0
+  },
+  {
+    "id": "PGOP020",
+    "y": 2025,
+    "t": "LNC",
+    "q": "An elderly patient presents with white, dandruff-like deposits on the anterior lens surface, seen during slit-lamp examination. What is the most likely diagnosis?",
+    "o": [
+      "Pseudoexfoliation syndrome",
+      "Iris cyst",
+      "Persistent pupillary membrane",
+      "Pigment dispersion syndrome"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP021",
+    "y": 2025,
+    "t": "CJC",
+    "q": "[Image: Anterior eye photograph showing a thin curved ring segment embedded within the peripheral clear corneal tissue surrounding the iris and pupil] Which condition is treated using an Intacs ring, as shown in the image?",
+    "o": [
+      "Keratoconus",
+      "Cataract",
+      "Corneal ulcer",
+      "Glaucoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP022",
+    "y": 2025,
+    "t": "ORL",
+    "q": "A 15-year-old female presents with a painless, gradually increasing mass located lateral to the lateral canthus, present for the past 10 years. On examination, the mass is non-tender and slowly progressive. What is the most likely diagnosis?",
+    "o": [
+      "Dermoid cyst",
+      "Capillary hemangioma",
+      "Lacrimal gland tumor",
+      "Epidermoid cyst"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP023",
+    "y": 2025,
+    "t": "CJC",
+    "q": "A patient presents with guttate lesions in one eye and bullous keratopathy in the other eye. What is the most likely diagnosis?",
+    "o": [
+      "Fuchs' endothelial dystrophy",
+      "Interstitial keratitis",
+      "Viral corneal ulcer",
+      "Keratoconjunctivitis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP024",
+    "y": 2025,
+    "t": "RFQ",
+    "q": "Binocular single vision consists of the following components:",
+    "o": [
+      "a. SMP   b. Fusion",
+      "a. Stereopsis  b. Fusion",
+      "a. Fusion   b. SMP",
+      "a. SMP   b. Stereopsis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGOP025",
+    "y": 2025,
+    "t": "ORL",
+    "q": "Which of the following is true about orbital cellulitis?",
+    "o": [
+      "It is present anterior to the orbital septum",
+      "Treated effectively with topical antibiotics",
+      "Presents with proptosis, orbital swelling, normal pupil, and extraocular movements",
+      "Ethmoid sinusitis is the most common etiology"
+    ],
+    "a": 3
+  },
+  {
+    "id": "PGOP026",
+    "y": 2025,
+    "t": "LNC",
+    "q": "A 15-year-old tall boy with long limbs presents to the OPD. On ocular examination, bilateral ectopia lentis is noted. Which gene is most likely affected in this inherited disorder?",
+    "o": [
+      "COL5A",
+      "PAX6",
+      "TGFβR2",
+      "FBN1 (Fibrillin-1)"
+    ],
+    "a": 3
   }
 ]

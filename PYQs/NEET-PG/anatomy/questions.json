@@ -167,6 +167,135 @@
       "Popliteal vein"
     ],
     "a": 0
+  },
+  {
+    "id": "PGAN014",
+    "y": 2025,
+    "t": "HNK",
+    "q": "[Image: Base of the skull viewed from inside/below showing a large irregular foramen at the junction between the petrous temporal bone and the occipital bone, near the posterior fossa] The image below highlights the jugular foramen. Which of the following does NOT pass through this foramen?",
+    "o": [
+      "Hypoglossal nerve",
+      "Accessory nerve",
+      "Glossopharyngeal nerve",
+      "Vagus nerve"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN015",
+    "y": 2025,
+    "t": "EMB",
+    "q": "[Image: Diagram of the heart showing a persistent vascular channel connecting the pulmonary artery and the aorta, with blood flow marked across this channel] The image shows a congenital cardiac defect. Abnormal development of which branch of aortic arch leads to this defect?",
+    "o": [
+      "Right 4th aortic arch",
+      "Left 6th aortic arch",
+      "Right 6th aortic arch",
+      "Left 4th aortic arch"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGAN016",
+    "y": 2025,
+    "t": "HNK",
+    "q": "[Image: Neck dissection photograph with a nerve identified and marked with a probe running vertically along the carotid sheath in the lateral neck] During a neck dissection, a nerve was identified and marked that is most likely the vagus nerve (CN X). Which of the following is NOT a functional component of the vagus nerve?",
+    "o": [
+      "General visceral afferent",
+      "General somatic efferent",
+      "General visceral efferent",
+      "General somatic afferent"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGAN017",
+    "y": 2025,
+    "t": "HNK",
+    "q": "[Image: Anterolateral neck illustration with two nerves labelled A and B; nerve A courses superficial to a muscle near the angle of the jaw, while nerve B runs more medially near the floor of the mouth] What is the correct nerve supply to the muscles labelled as A and B?",
+    "o": [
+      "A - facial nerve, B- Nerve to mylohyoid",
+      "A - facial nerve, B- spinal accessory nerve",
+      "A- Mandibular, B-Facial Nerve",
+      "A - Spinal Accessory, B-Mandibular nerve"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGAN018",
+    "y": 2025,
+    "t": "LWL",
+    "q": "[Image: Lumbosacral plexus diagram showing nerve roots T12 to L5, with four different branches labelled A, B, C and D arising from different levels of the plexus] A patient present with meralgia paresthetica, Based on the diagram, identify the nerve involved in this condition.",
+    "o": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGAN019",
+    "y": 2025,
+    "t": "LWL",
+    "q": "A Patients presents with ankle pain and swelling after a forceful eversion injury. Based on the mechanism of injury, which ligament is most likely to be damaged?",
+    "o": [
+      "Anterior talofibular ligament",
+      "Calcaneofibular ligament",
+      "Deltoid ligament",
+      "Posterior talofibular ligament"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGAN020",
+    "y": 2025,
+    "t": "UPL",
+    "q": "During hyperextension, the long head of triceps gets detached from which site?",
+    "o": [
+      "Infraglenoid tubercle",
+      "Supraglenoid tubercle",
+      "Shaft of humerus",
+      "Olecranon process"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN021",
+    "y": 2025,
+    "t": "HIS",
+    "q": "[Image: Photomicrograph showing a multilayered epithelium with rounded, dome-shaped 'umbrella' cells at the free surface and several layers of smaller cells beneath] Which of the following organs does this epithelium most likely belong to?",
+    "o": [
+      "Ureter",
+      "Gallbladder",
+      "Trachea",
+      "Intestine"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN026",
+    "y": 2025,
+    "t": "NEU",
+    "q": "A patient presents with muscle wasting, reduced tone, and weakness in the left hand. Fine motor movements, such as dough kneading, are impaired. Which of the following structures is most likely affected?",
+    "o": [
+      "Right anterior horn cells in the spinal cord",
+      "Pyramidal lesion",
+      "Internal capsule",
+      "Left corticospinal tract in the cervical cord"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGAN027",
+    "y": 2025,
+    "t": "HNK",
+    "q": "During resection of the submandibular gland, there is accidental injury to a structure running superior to the posterior belly of the digastric muscle. Which of the following structures is likely to be injured?",
+    "o": [
+      "Lingual nerve",
+      "Marginal mandibular nerve",
+      "Trigeminal nerve",
+      "Hypoglossal nerve"
+    ],
+    "a": 1
   }
 ]
-

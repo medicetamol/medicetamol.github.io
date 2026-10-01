@@ -297,5 +297,174 @@
       "Tyrosine Transaminase"
     ],
     "a": 0
+  },
+  {
+    "id": "PGBC024",
+    "y": 2025,
+    "t": "VIT",
+    "q": "A child presents with a history of fractures, multiple petechiae, perifollicular hemorrhages, and gum bleeding. Which of the following enzyme defects is involved?",
+    "o": [
+      "Lysyl oxidase",
+      "Prolyl hydroxylase",
+      "Tyrosinase",
+      "Alkaline phosphatase"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC025",
+    "y": 2025,
+    "t": "VIT",
+    "q": "A person with jaundice presented with a history of bleeding and symptoms normalised after giving Vitamin K injection. The probable cause is?",
+    "o": [
+      "Biliary obstruction",
+      "Alpha antitrypsin deficiency",
+      "Autoimmune hepatitis",
+      "Factor XI deficiency"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC026",
+    "y": 2025,
+    "t": "LIP",
+    "q": "A man is trapped in a tunnel for 5 consecutive days without access to food but survives. What is the primary source of energy for his brain during this period?",
+    "o": [
+      "Gluconeogenesis",
+      "Glycogenolysis",
+      "Ketosis",
+      "Lipolysis"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC027",
+    "y": 2025,
+    "t": "PRO",
+    "q": "A patient has elevated phenylalanine levels (40 mg/dL), but phenylalanine hydroxylase enzyme levels are normal. Which cofactor deficiency is most likely responsible for this condition?",
+    "o": [
+      "Tetrahydrofolate",
+      "Tetrahydrobiopterin (BH4)",
+      "Thiamine",
+      "Pyridoxine"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC028",
+    "y": 2025,
+    "t": "VIT",
+    "q": "A patient presents with anemia, positive Romberg sign, and other neurological findings suggestive of vitamin B12 deficiency. Laboratory findings show elevated homocysteine levels. Which amino acid is likely to be deficient in this patient?",
+    "o": [
+      "Cysteine",
+      "Methionine",
+      "Tyrosine",
+      "Glutamate"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC029",
+    "y": 2025,
+    "t": "LIP",
+    "q": "A neonate presents with seizures and is found to have a cherry red spot on fundus examination. Enzyme assay reveals deficiency of hexosaminidase A. Which of the following substances is most likely to be accumulated in this patient?",
+    "o": [
+      "GM1 ganglioside",
+      "GM2 ganglioside",
+      "Sphingomyelin",
+      "Glucocerebroside"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC030",
+    "y": 2025,
+    "t": "VIT",
+    "q": "A patient on long-term hydrochlorothiazide therapy presents with features of neuropathy, heart failure, and symmetrical tingling sensations. Which of the following nutrient deficiencies is most likely responsible?",
+    "o": [
+      "Selenium",
+      "Thiamine",
+      "Vitamin B12",
+      "Zinc"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC031",
+    "y": 2025,
+    "t": "MOL",
+    "q": "A frameshift mutation occurs due to the insertion of a new nucleotide at the 4th position of an mRNA sequence with 900 nucleotides. What is the most likely outcome of this mutation?",
+    "o": [
+      "No change in the final protein",
+      "Partial protein production",
+      "Complete change in protein production",
+      "No change due to RNA editing"
+    ],
+    "a": 2
+  },
+  {
+    "id": "PGBC032",
+    "y": 2025,
+    "t": "MOL",
+    "q": "A patient presents with skin cancer and hyperpigmentation that worsens with sunlight exposure. Which of the following DNA repair mechanisms is most likely defective in this condition?",
+    "o": [
+      "Nucleotide excision repair",
+      "Base excision repair",
+      "Non-homologous end joining (NHEJ)",
+      "Mismatch repair"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC033",
+    "y": 2025,
+    "t": "MOL",
+    "q": "A 22-year-old tall male presents with long limbs, increased arm span, hypermobile joints, and high-arched palate. On examination, he has lens subluxation and a diastolic murmur suggestive of aortic root dilation. Which of the following genes is most likely mutated in this condition?",
+    "o": [
+      "Fibrillin-1 (FBN1)",
+      "COL4A5",
+      "COL1A1",
+      "Elastin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC034",
+    "y": 2025,
+    "t": "LIP",
+    "q": "A patient presents with orange-colored tonsils. Laboratory investigations reveal triglyceride level of 140 mg/dL and HDL cholesterol of 5 mg/dL. What is the most likely diagnosis?",
+    "o": [
+      "Familial hypercholesterolemia",
+      "Tangier disease",
+      "Type I hyperlipoproteinemia",
+      "Abetalipoproteinemia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGBC035",
+    "y": 2025,
+    "t": "LIP",
+    "q": "A patient presents with elevated total cholesterol, subcutaneous xanthomas, and a positive family history of similar findings. Triglyceride levels are normal (<140 mg/dL). What is the most likely type of familial dyslipidemia?",
+    "o": [
+      "Type I",
+      "Type IIa",
+      "Type IIb",
+      "Type II"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGBC041",
+    "y": 2025,
+    "t": "MOL",
+    "q": "To diagnose a syndromic illness like meningitis, which PCR technique is most appropriate?",
+    "o": [
+      "Multiplex PCR",
+      "Uniplex PCR",
+      "Attributed PCR",
+      "Nested PCR"
+    ],
+    "a": 0
   }
-  ]
+]

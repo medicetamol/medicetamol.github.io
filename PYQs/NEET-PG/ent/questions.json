@@ -89,7 +89,7 @@
       "Foliate"
     ],
     "a": 2
-  },  
+  },
   {
     "id": "PGEN008",
     "y": 2023,
@@ -167,6 +167,122 @@
       "Auricular branch of the vagus nerve"
     ],
     "a": 0
+  },
+  {
+    "id": "PGEN014",
+    "y": 2025,
+    "t": "NOS",
+    "q": "A 2-year-old male with a history of recurrent epistaxis presents with nasal obstruction for the past 1 year. On examination the presence of nasal mass and investigation shows bowing of the posterior wall of maxillary sinus. What is the probable diagnosis?",
+    "o": [
+      "Nasopharyngeal angiofibroma",
+      "Antrochoanal polyp",
+      "Rhinoscleroma",
+      "Rhinosporidiosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN015",
+    "y": 2025,
+    "t": "LRY",
+    "q": "A 72-year-old female smoker presents with a long history of hoarseness and difficulty swallowing. Laryngoscopy and biopsy confirm a large, advanced squamous cell carcinoma that involves both vocal cords and extends into the subglottic region and the thyroid cartilage. The tumor is not amenable to radiation therapy alone. Based on the extent and location of the tumor, which of the following surgical procedures is most appropriate to ensure complete tumor removal with adequate margins and control the disease?",
+    "o": [
+      "Partial laryngectomy",
+      "Total laryngectomy",
+      "Emergency tracheostomy",
+      "Submental tracheostomy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGEN016",
+    "y": 2025,
+    "t": "EAR",
+    "q": "[Image: Otoscopic photograph of the tympanic membrane showing a rounded perforation located in the central part of the membrane, with pink mucosa visible at the margins] A 30-year-old male presents to the clinic with a history of recurrent ear infections and a recent \"popping\" sensation in his left ear. Otoscopic examination of the left ear reveals a central perforation of the tympanic membrane. The pure tone audiometry (PTA) results show the following: Right Ear: Air conduction and bone conduction thresholds are within normal limits. Left Ear: A significant air-bone gap is present, with bone conduction thresholds within the normal range. Based on these findings, what is the most likely diagnosis regarding the type of hearing loss?",
+    "o": [
+      "Left conductive hearing loss",
+      "Left sensorineural hearing loss",
+      "Right conductive hearing loss",
+      "Right sensorineural hearing loss"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN017",
+    "y": 2025,
+    "t": "NOS",
+    "q": "A patient presents to the emergency department with significant nasal trauma after a fall. Examination reveals a deviated nasal pyramid and palpation confirms crepitus and mobility of the nasal bones. A lateral nasal bone X-ray confirms a displaced nasal bone fracture. Which of the following instruments is specifically designed for the closed reduction of a displaced nasal bone fracture?",
+    "o": [
+      "Tilley's forceps",
+      "Walsham forceps",
+      "Luc's forceps",
+      "Bayonet forceps"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGEN018",
+    "y": 2025,
+    "t": "EAR",
+    "q": "[Image: Photomicrograph (H&E stain) showing spindle-shaped cells arranged in interlacing wavy fascicles with elongated nuclei, on a pink (eosinophilic) background] A 45-year-old female presents with a 2-year history of progressive unilateral hearing loss, tinnitus, and unsteadiness. An MRI scan reveals a well-defined tumor located in the cerebellopontine angle (CPA). A surgical resection is performed, and subsequent histopathological examination of the tumor tissue is given below. Based on these histopathological findings, what is the most likely diagnosis?",
+    "o": [
+      "Schwannoma",
+      "Ependymoma",
+      "Meningioma",
+      "Neurofibroma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN019",
+    "y": 2025,
+    "t": "EAR",
+    "q": "A patient presents to the clinic with a history of chronic ear drainage and hearing loss for several months. Otoscopic examination reveals a central perforation of the tympanic membrane. Pure tone audiometry confirms a conductive hearing loss. Based on these findings, what is the most appropriate next step in the definitive management of this patient's condition?",
+    "o": [
+      "Myringoplasty",
+      "Modified radical mastoidectomy",
+      "Exploratory tympanostomy",
+      "Immediate commencement of broad-spectrum oral antibiotics"
+    ],
+    "a": 0
+  },
+  {
+    "id": "PGEN020",
+    "y": 2025,
+    "t": "NOS",
+    "q": "A 40-year-old patient presents with recurrent and severe nosebleeds from the anterior nasal septum. The bleeding has been refractory to nasal packing and chemical cautery. A decision is made to proceed with surgical ligation to control the bleeding. Which of the following arteries is the primary target for ligation in the management of this patient's anterior epistaxis?",
+    "o": [
+      "Sphenopalatine artery",
+      "Anterior ethmoidal artery",
+      "Facial artery",
+      "Internal maxillary artery"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGEN021",
+    "y": 2025,
+    "t": "PHR",
+    "q": "Most common cause of squamous cell carcinoma at the base of the tongue is:",
+    "o": [
+      "EBV",
+      "HPV",
+      "HCV",
+      "CMV"
+    ],
+    "a": 1
+  },
+  {
+    "id": "PGEN027",
+    "y": 2025,
+    "t": "PHR",
+    "q": "What is the marked structure?",
+    "o": [
+      "Thyroid cartilage",
+      "Pyriform sinus",
+      "Epiglottis",
+      "Vallecula"
+    ],
+    "a": 1
   }
 ]
-
