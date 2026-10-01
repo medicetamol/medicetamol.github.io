@@ -1,25 +1,33 @@
-# 2 cm
+# Rectocele >2 cm
 
-On **defecography**, a **rectocele** (anterior bulging of the rectal wall into the vagina during straining) is considered **clinically significant when it exceeds 2 cm** in depth. Smaller bulges are common and often asymptomatic.
+A rectocele is an **anterior protrusion of the rectal wall** into the posterior vaginal wall, caused by weakness of the **rectovaginal septum**.   
+On defecography (evacuation proctography), the depth of the bulge beyond the expected line of the anterior anorectal wall is measured during straining and evacuation.  
+Small bulges are common in asymptomatic women.  
+A bulge **>2 cm** crosses the standard radiological cutoff for an abnormal rectocele.
 
-## Trigger Point
+## Rectocele Grading on Defecography
 
-> Rectocele **significant** when anterior bulging exceeds a given depth: 2 cm is the accepted threshold.
+| Depth of bulge | Grade |
+|---|---|
+| <2 cm | Small <br />commonly seen in asymptomatic women and generally insignificant. |
+| 2-4 cm | Moderate <br /> **>2 cm = abnormal / significant threshold** |
+| >4 cm | Large |
 
 ## Why Not the Other Options?
 
-**B. 1 cm**
-Too small a threshold; minor bulges under 2 cm are frequently seen in asymptomatic women.
-This would over-diagnose clinically insignificant findings.
+**A. 1 cm**
+Usually within the range of small/physiological bulging 
 
 **C. 5 cm**
-Too large; this would under-call many genuinely significant rectoceles.
-This is well above the accepted cut-off.
+Represents a large rectocele, not the diagnostic threshold.
 
 **D. 7 cm**
-Far larger than the standard threshold used in practice.
-Even more likely to miss clinically relevant cases.
+Very large defect.
 
 ## Mind Capsule
 
-> Rectocele on defecography = significant if depth exceeds 2 cm.
+> Rectocele on defecography: <2 cm small, 2-4 cm moderate, >4 cm large; **>2 cm = significant**.
+
+## Extra Edge
+
+> Clinical correlation matters more than size alone: symptoms, barium trapping and obstructed defecation decide management.
