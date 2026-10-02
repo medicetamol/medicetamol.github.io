@@ -1,1 +1,134 @@
-{}
+[
+  {
+    "id": "PGPT001",
+    "e": "≈ 2/3 of Mendelian disorders are autosomal dominant; AR next, X-linked & Y-linked are fewer"
+  },
+  {
+    "id": "PGPT002",
+    "e": "Hereditary spherocytosis: spherocytes c̅ ↑ MCHC, positive family history; confirm c̅ osmotic fragility test (↑ fragility)"
+  },
+  {
+    "id": "PGPT003",
+    "e": "Burkitt lymphoma: t(8;14) → c-MYC; 'starry sky' (tingible-body macrophages); endemic form → jaw, EBV"
+  },
+  {
+    "id": "PGPT004",
+    "e": "Post-streptococcal GN: subepithelial 'humps' on EM; lumpy-bumpy IF"
+  },
+  {
+    "id": "PGPT005",
+    "e": "TACO: transfusion circulatory overload → pulmonary edema (fissural thickening) within hours; treat c̅ diuretics"
+  },
+  {
+    "id": "PGPT006",
+    "e": "Membranous nephropathy: 'spike and dome' on silver stain, subepithelial deposits; HBV-associated"
+  },
+  {
+    "id": "PGPT007",
+    "e": "Lymphocytic (viral) myocarditis: interstitial lymphocytic infiltrate c̅ myocyte injury (e.g., Coxsackie B)"
+  },
+  {
+    "id": "PGPT008",
+    "e": "Squamous cell carcinoma of lung (smokers): PTHrP → hypercalcemia; keratin pearls/intercellular bridges"
+  },
+  {
+    "id": "PGPT009",
+    "e": "CLL: small mature lymphocytes c̅ smudge cells → flow cytometry (CD5+, CD19+, CD23+) confirms"
+  },
+  {
+    "id": "PGPT010",
+    "e": "APL (AML-M3): t(15;17) PML-RARA; hypergranular promyelocytes c̅ Auer rods, DIC (↑ PT, aPTT)"
+  },
+  {
+    "id": "PGPT011",
+    "e": "Hemophilia A/B (factor VIII/IX): hemarthrosis & deep bleeds (retroperitoneal) c̅ no mucosal bleeding.\nvWD → mucosal bleeding"
+  },
+  {
+    "id": "PGPT012",
+    "e": "Asbestos exposure (asbestos-cement) → mesothelioma; smoking does not ↑ mesothelioma risk"
+  },
+  {
+    "id": "PGPT013",
+    "e": "Benzene → marrow suppression, aplastic anemia & leukemia (AML)"
+  },
+  {
+    "id": "PGPT014",
+    "e": "Mallory-Denk bodies (alcoholic hepatitis): eosinophilic inclusions of cytokeratin 8/18 = intermediate filaments"
+  },
+  {
+    "id": "PGPT015",
+    "e": "IDA: ↓ transferrin saturation, ↓ ferritin; ↑ TIBC, ↑ sTfR, ↑ EPO"
+  },
+  { 
+    "id": "PGPT016",
+    "e": "Dysplasia: disordered (disorganized) growth c̅ hyperchromatic, pleomorphic nuclei & loss of polarity; no invasion.\nCarcinoma needs invasion" 
+  },
+  {
+    "id": "PGPT017",
+    "e": "↑ β2-microglobulin is a poor prognostic marker in myeloma (ISS staging)"
+  },
+  {
+    "id": "PGPT018",
+    "e": "Aschoff body (central fibrinoid necrosis c̅ Anitschkow cells) = rheumatic heart disease"
+  },
+  {
+    "id": "PGPT019",
+    "e": "Aplastic anemia: pancytopenia c̅ ↓ reticulocytes, hypocellular marrow (absent megakaryocytes), no blasts"
+  },
+  {
+    "id": "PGPT020",
+    "e": "HNPCC (Lynch syndrome) = DNA mismatch repair gene defect (MLH1, MSH2) → microsatellite instability"
+  },
+  {
+    "id": "PGPT021",
+    "e": "Follicular lymphoma: t(14;18) → BCL2; CD10+, BCL2+, effaced architecture c̅ cleaved (indented) cells"
+  },
+  {
+    "id": "PGPT022",
+    "e": "Caspases drive apoptosis (caspase-3/8/9) and pyroptosis (caspase-1/4/5/11).\nNecroptosis is caspase-independent (RIPK3–MLKL)"
+  },
+  {
+    "id": "PGPT023",
+    "e": "APL (hypergranular promyelocytes): t(15;17) → PML–RARα"
+  },
+  {
+    "id": "PGPT024",
+    "e": "Follicular lymphoma (centrocytes + centroblasts, CD10+, BCL2+): t(14;18) → BCL2 overexpression"
+  },
+  {
+    "id": "PGPT025",
+    "e": "Seminoma: uniform cells c̅ clear cytoplasm & lymphocytic infiltrate; homogeneous, non-hemorrhagic mass.\nChoriocarcinoma is hemorrhagic"
+  },
+  {
+    "id": "PGPT026",
+    "e": "Craniopharyngioma (adamantinomatous): suprasellar mass from Rathke's pouch remnants, wet keratin, calcification; visual defects"
+  },
+  {
+    "id": "PGPT027",
+    "e": "Hereditary spherocytosis (AD, spectrin/ankyrin defect): jaundice, splenomegaly, ↑ MCHC, family history"
+  },
+  {
+    "id": "PGPT028",
+    "e": "Flow cytometry quantifies CD markers on cells using fluorescent-labelled antibodies"
+  },
+  {
+    "id": "PGPT029",
+    "e": "Medullary thyroid carcinoma (parafollicular C cells): calcitonin, chromogranin/synaptophysin +, amyloid stroma; RET/MEN 2"
+  },
+  {
+    "id": "PGPT030",
+    "e": "Transitional epithelium (urothelium) c̅ umbrella cells lines the ureter & urinary bladder"
+  },
+  {
+    "id": "PGPT031",
+    "e": "Kearns–Sayre = mitochondrial inheritance (maternal): Affected mothers pass the trait to all their offspring, no paternal transmission"
+  },
+  {
+    "id": "PGPT032",
+    "e": "Sjögren syndrome: autoimmune lymphocytic infiltration & destruction of lacrimal/salivary glands; anti-Ro/La; ↑ risk of MALT lymphoma"
+  },
+  {
+    "id": "PGPT041",
+    "e": "Hepatic adenoma: young woman c̅ OCP use; benign tumour c̅ risk of rupture, so resected.\nFNH: central stellate scar, not OCP-related"
+  }
+]

@@ -1,1 +1,122 @@
-{}
+[
+  {
+    "id": "PGPM001",
+    "e": "Tocilizumab: monoclonal antibody blocking the IL-6 receptor (IL-6R) → RA, cytokine release syndrome"
+  },
+  {
+    "id": "PGPM002",
+    "e": "Methotrexate inhibits DHFR → ↓ THF → ↓ purine & thymidylate synthesis (S-phase specific); leucovorin rescue"
+  },
+  {
+    "id": "PGPM003",
+    "e": "Rifampicin = CYP450 inducer → ↑ OCP metabolism → contraceptive failure"
+  },
+  {
+    "id": "PGPM004",
+    "e": "Clarithromycin inhibits P-gp & gut flora that inactivate digoxin → ↑ digoxin levels (toxicity)"
+  },
+  {
+    "id": "PGPM005",
+    "e": "Metronidazole + alcohol → disulfiram-like reaction (flushing, vomiting, palpitations)"
+  },
+  {
+    "id": "PGPM006",
+    "e": "Topiramate: antiepileptic c̅ a role in migraine prophylaxis; side effects: weight loss, kidney stones, paresthesia"
+  },
+  {
+    "id": "PGPM007",
+    "e": "Liraglutide (GLP-1 agonist) is approved for long-term obesity management.\nSibutramine & fenfluramine were withdrawn"
+  },
+  {
+    "id": "PGPM008",
+    "e": "Oral candidiasis (thrush) after inhaled steroids → topical azole (clotrimazole).\nGriseofulvin & terbinafine are for dermatophytes"
+  },
+  {
+    "id": "PGPM009",
+    "e": "Carboprost (PGF2α) causes bronchospasm → avoid in asthma.\nMethylergometrine: avoid in hypertension"
+  },
+  {
+    "id": "PGPM010",
+    "e": "Omapatrilat: vasopeptidase inhibitor → blocks ACE + neprilysin; angioedema limited its use.\nSacubitril: neprilysin only"
+  },
+  {
+    "id": "PGPM011",
+    "e": "Amiodarone: pulmonary fibrosis, hypothyroidism (fatigue, weight gain), corneal deposits, bluish skin"
+  },
+  {
+    "id": "PGPM012",
+    "e": "Salicylate poisoning: sodium bicarbonate alkalinizes urine → ↑ salicylate excretion (ion trapping)"
+  },
+  {
+    "id": "PGPM013",
+    "e": "Abrupt clonidine withdrawal → sympathetic surge → rebound hypertension (headache)"
+  },
+  {
+    "id": "PGPM014",
+    "e": "Allopurinol inhibits xanthine oxidase → ↓ uric acid synthesis.\nProbenecid = uricosuric; colchicine = acute attack"
+  },
+  {
+    "id": "PGPM015",
+    "e": "Oprelvekin (IL-11) ↑es platelet production.\nFilgrastim → neutrophils; EPO → RBCs"
+  },
+  {
+    "id": "PGPM016",
+    "e": "Losartan also blocks thromboxane A2 receptors → ↓ platelet aggregation (plus uricosuric action)"
+  },
+  {
+    "id": "PGPM017",
+    "e": "4 → 1 needs 2 half-lives (4 → 2 → 1) = 2 × 40 = 80 hours"
+  },
+  {
+    "id": "PGPM018",
+    "e": "Atropine toxicity → anticholinergic hyperthermia (hot, dry, flushed skin, mydriasis)"
+  },
+  {
+    "id": "PGPM019",
+    "e": "tPA converts plasminogen → plasmin → fibrin degradation (fibrinolysis)"
+  },
+  {
+    "id": "PGPM020",
+    "e": "Benralizumab: anti-IL-5Rα antibody → eosinophil depletion (severe eosinophilic asthma).\nMepolizumab/reslizumab bind IL-5 itself"
+  },
+  {
+    "id": "PGPM021",
+    "e": "Propranolol is a first-line migraine prophylactic.\nTriptans/ergots are vasoconstrictors → avoided in CAD"
+  },
+  {
+    "id": "PGPM022",
+    "e": "Pegloticase = recombinant uricase → oxidizes uric acid to soluble allantoin"
+  },
+  {
+    "id": "PGPM023",
+    "e": "Metoclopramide (D2 antagonist, 5-HT4 agonist) ↑es LES tone & gastric emptying"
+  },
+  {
+    "id": "PGPM024",
+    "e": "Loop diuretics (furosemide) waste Ca²⁺ → urinary Ca²⁺ ↑es → stones.\nThiazides: opposite (urinary Ca²⁺ ↓es)"
+  },
+  {
+    "id": "PGPM025",
+    "e": "Start ATT first, add ART after ~2 weeks once ATT is tolerated → balances IRIS risk c̅ mortality"
+  },
+  {
+    "id": "PGPM026",
+    "e": "BPaLM (Bedaquiline, Pretomanid, Linezolid, Moxifloxacin) = 6-month regimen for MDR/RR-TB; monitor for IRIS in HIV"
+  },
+  {
+    "id": "PGPM027",
+    "e": "Tardive dyskinesia (chronic antipsychotic use) → VMAT2 inhibitors (valbenazine, deutetrabenazine).\nAcute dystonia → anticholinergics; akathisia → propranolol"
+  },
+  {
+    "id": "PGPM028",
+    "e": "Verapamil (oral) used for PSVT prophylaxis (AV nodal block).\nIV adenosine = acute termination"
+  },
+  {
+    "id": "PGPM029",
+    "e": "Persistent nocturnal symptoms on SABA ± SAMA → step up to ICS + LABA (controller therapy)"
+  },
+  {
+    "id": "PGPM038",
+    "e": "Amiodarone (class III) blocks K⁺ channels → prolongs phase 3 repolarization"
+  }
+]

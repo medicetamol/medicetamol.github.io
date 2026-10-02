@@ -3,14 +3,14 @@
     "id": "PGPH001",
     "y": 2023,
     "t": "RES",
-    "q": "[Image: Spirometry volume-time graph showing tidal breathing with a marked region between the end of normal expiration and maximal expiration] Identify the marked region in the given spirometry.",
+    "q": "[Image: Spirometry volume-time graph showing tidal breathing with a marked region between the end of normal expiration and maximal expiration]\nIdentify the marked region in the given spirometry.",
     "o": [
       "Functional residual capacity",
       "Tidal volume",
       "Expiratory reserve volume",
       "Expiratory capacity"
     ],
-    "a": 0
+    "a": 2
   },
   {
     "id": "PGPH002",

@@ -1,1 +1,146 @@
-{}
+[
+  {
+    "id": "PGBC001",
+    "e": "Vit K-dependent γ-carboxylation: factors II, VII, IX, X (+ proteins C & S) – mnemonic 1972"
+  },
+  {
+    "id": "PGBC002",
+    "e": "Pellagra = 3 Ds (Diarrhea, Dermatitis, Dementia) → niacin (B3) deficiency"
+  },
+  {
+    "id": "PGBC003",
+    "e": "McArdle (GSD V): muscle glycogen phosphorylase deficiency → exercise-induced cramps, no lactate rise, 'second-wind' phenomenon"
+  },
+  {
+    "id": "PGBC004",
+    "e": "Polished rice → thiamine deficiency (beriberi); ↓ RBC transketolase activity"
+  },
+  {
+    "id": "PGBC005",
+    "e": "Wernicke's encephalopathy (confusion, ataxia, ophthalmoplegia) in alcoholics = thiamine (B1) deficiency"
+  },
+  {
+    "id": "PGBC006",
+    "e": "Absent liver glycogen c̅ fasting hypoglycemia relieved by feeding → glycogen synthase deficiency (GSD 0)"
+  },
+  {
+    "id": "PGBC007",
+    "e": "Pedal edema + cardiomegaly = wet beriberi → Thiamine (B1) deficiency"
+  },
+  {
+    "id": "PGBC008",
+    "e": "Alcohol ↑es NADH/NAD⁺ → ↑ lactate, which competes c̅ urate for renal excretion; ↑ ATP breakdown also ↑es urate → gout"
+  },
+  {
+    "id": "PGBC009",
+    "e": "Zinc deficiency (acrodermatitis enteropathica): perioral/acral dermatitis, alopecia, diarrhea, poor wound healing"
+  },
+  {
+    "id": "PGBC010",
+    "e": "Vit C is the cofactor for prolyl/lysyl hydroxylase → defective collagen → fragile capillaries → bleeding gums, bruising"
+  },
+  {
+    "id": "PGBC011",
+    "e": "↓ Insulin:glucagon (fasting) → hormone-sensitive lipase active (lipolysis).\nFed state: ↑ LPL, glycogen synthase, PFK-1"
+  },
+  {
+    "id": "PGBC012",
+    "e": "Alkaptonuria: homogentisate oxidase deficiency → homogentisic acid → urine darkens on standing, ochronosis"
+  },
+  {
+    "id": "PGBC013",
+    "e": "Raw egg white avidin binds biotin → biotin deficiency: alopecia & scaly dermatitis"
+  },
+  {
+    "id": "PGBC014",
+    "e": "Cherry-red spot c̅ no organomegaly → Tay-Sachs (hexosaminidase A).\nNiemann-Pick & Gaucher have hepatosplenomegaly"
+  },
+  {
+    "id": "PGBC015",
+    "e": "Gaucher: glucocerebrosidase deficiency → 'crumpled tissue paper' macrophages, hepatosplenomegaly, bone pain"
+  },
+  {
+    "id": "PGBC016",
+    "e": "Maize → low available niacin & tryptophan → pellagra (diarrhea, dermatitis, dementia)"
+  },
+  {
+    "id": "PGBC017",
+    "e": "Vit A deficiency → xerophthalmia: dry eye, Bitot's spots, keratomalacia (corneal softening)"
+  },
+  {
+    "id": "PGBC018",
+    "e": "CBS deficiency (homocystinuria): cysteine can't be made from methionine → cysteine becomes essential.\nMethionine is restricted"
+  },
+  {
+    "id": "PGBC019",
+    "e": "Keratan sulfate I is the major corneal GAG, maintaining transparency"
+  },
+  {
+    "id": "PGBC020",
+    "e": "Mismatch repair defect → HNPCC (Lynch syndrome): MLH1, MSH2, MSH6, PMS2, microsatellite instability.\nMUTYH → base excision repair"
+  },
+  {
+    "id": "PGBC021",
+    "e": "After ~11 h overnight fast, liver glycogenolysis maintains blood glucose.\nMuscle lacks glucose-6-phosphatase, so it can't release glucose"
+  },
+  {
+    "id": "PGBC022",
+    "e": "Type II (familial hypercholesterolemia): LDL receptor defect → ↑ LDL, tendon xanthomas, premature CAD.\nType I → chylomicrons ↑; Type III → remnants ↑"
+  },
+  {
+    "id": "PGBC023",
+    "e": "Alkaptonuria: homogentisate oxidase (tyrosine pathway) deficiency → black urine on standing, otherwise normal growth in childhood"
+  },
+  {
+    "id": "PGBC024",
+    "e": "Scurvy: vit C-dependent prolyl hydroxylase defect → defective collagen → perifollicular hemorrhage, gum bleeding, bone fragility"
+  },
+  {
+    "id": "PGBC025",
+    "e": "Obstructive jaundice → ↓ bile salts → vit K malabsorption → bleeding; corrects c̅ parenteral vit K.\nHepatocellular failure does not correct"
+  },
+  {
+    "id": "PGBC026",
+    "e": "Prolonged starvation (days): ketone bodies become the main brain fuel, sparing muscle protein"
+  },
+  {
+    "id": "PGBC027",
+    "e": "↑ Phe c̅ normal PAH → BH4 deficiency (malignant PKU).\nBH4 is the cofactor for PAH, tyrosine & tryptophan hydroxylase"
+  },
+  {
+    "id": "PGBC028",
+    "e": "B12 deficiency → methionine synthase ↓es → homocysteine ↑es, methionine ↓es"
+  },
+  {
+    "id": "PGBC029",
+    "e": "Hexosaminidase A deficiency (Tay-Sachs) → GM2 ganglioside accumulates in neurons (cherry-red spot, no organomegaly)"
+  },
+  {
+    "id": "PGBC030",
+    "e": "Long-term diuretics ↑ urinary thiamine loss → thiamine deficiency: neuropathy (dry beriberi) + heart failure (wet beriberi)"
+  },
+  {
+    "id": "PGBC031",
+    "e": "Insertion at the 4th nucleotide shifts the reading frame of nearly all downstream codons → completely altered protein"
+  },
+  {
+    "id": "PGBC032",
+    "e": "Xeroderma pigmentosum: defective nucleotide excision repair (UV thymine dimers not removed) → photosensitivity, hyperpigmentation, skin cancers"
+  },
+  {
+    "id": "PGBC033",
+    "e": "Marfan syndrome: FBN1 (fibrillin-1) mutation → arachnodactyly, ectopia lentis, aortic root dilatation"
+  },
+  {
+    "id": "PGBC034",
+    "e": "Familial hypercholesterolemia: LDL receptor defect → ↑ LDL cholesterol, xanthomas, premature CAD"
+  },
+  {
+    "id": "PGBC035",
+    "e": "Tangier disease: ABCA1 defect → impaired cholesterol efflux to apoA-I → HDL ↓↓ (very low), cholesterol-laden macrophages → orange tonsils"
+  },
+  {
+    "id": "PGBC041",
+    "e": "Multiplex PCR: several primer sets amplify multiple pathogens in one reaction → syndromic panels like meningitis.\nNested PCR ↑es sensitivity/specificity"
+  }
+]

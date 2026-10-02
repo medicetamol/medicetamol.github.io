@@ -36,7 +36,7 @@
       "LASIK",
       "Spherical Specs"
     ],
-    "a": 0
+    "a": 3
   },
   {
     "id": "PGOP004",
@@ -302,7 +302,7 @@
     "id": "PGOP024",
     "y": 2025,
     "t": "RFQ",
-    "q": "Binocular single vision consists of the following components:",
+    "q": "Binocular single vision consists of the following components, corresponding to Image A & Image B, respectively",
     "o": [
       "a. SMP   b. Fusion",
       "a. Stereopsis  b. Fusion",

@@ -5,7 +5,14 @@ const DIST = path.resolve(__dirname, "..", "dist");
 const BASE_URL = "https://medicetamol.github.io";
 const IMAGE = `${BASE_URL}/og-image.jpg`;
 
+const EXAMS = ["INI-CET", "NEET-PG", "FMGE"];
+
 const PAGES = [
+  ...EXAMS.map((exam) => ({
+    route: `pyqs/${exam}`,
+    title: `${exam} PYQs | mediceTaMol`,
+    description: "Solve Subjectwise PYQs with explanations.",
+  })),
   {
     route: "custom/module",
     title: "mediCetamol",

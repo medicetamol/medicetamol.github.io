@@ -1,1 +1,86 @@
-{}
+[
+  {
+    "id": "PGPH001",
+    "e": "ERV = volume expired after a normal expiration down to maximal expiration.\nFRC = ERV + RV (lungs' volume at end of normal expiration)"
+  },
+  {
+    "id": "PGPH002",
+    "e": "Heat stroke (>40°C): thermoregulation fails → classically anhidrosis, hot dry red skin.\nTachypnea & hypotension are seen; sweating is not"
+  },
+  {
+    "id": "PGPH003",
+    "e": "Inulin clearance = GFR, constant (filtered only).\nPAH clearance (~RPF) is highest at low plasma levels & falls once secretory Tm is saturated.\nGlucose/HCO₃⁻: fully reabsorbed (clearance ≈ 0) until their threshold is crossed"
+  },
+  {
+    "id": "PGPH004",
+    "e": "Refractory period = from threshold (start of depolarization) till end of repolarization.\nAbsolute RP: no stimulus works (Na⁺ channel inactivation); relative RP: stronger stimulus needed"
+  },
+  {
+    "id": "PGPH005",
+    "e": "Facilitated diffusion: via carrier/channel protein, down the gradient, no ATP, saturable (e.g., GLUT).\nSimple diffusion needs no protein"
+  },
+  {
+    "id": "PGPH006",
+    "e": "Preterm RDS = ↓ surfactant → ↑ surface tension → alveolar collapse & ↓ compliance"
+  },
+  {
+    "id": "PGPH007",
+    "e": "↑ ECF K⁺ ↓es the K⁺ gradient → less K⁺ efflux → RMP becomes less negative (depolarized)"
+  },
+  {
+    "id": "PGPH008",
+    "e": "Lateral dorsal column = fasciculus cuneatus (upper limb) → ipsilateral arm proprioception lost.\nMedial = fasciculus gracilis (lower limb)"
+  },
+  {
+    "id": "PGPH009",
+    "e": "Plateau (phase 2) = slow, prolonged L-type Ca²⁺ influx balancing K⁺ efflux → long refractory period"
+  },
+  {
+    "id": "PGPH010",
+    "e": "β2 → Gs protein → adenylyl cyclase ↑es cAMP → bronchial smooth muscle relaxation"
+  },
+  {
+    "id": "PGPH011",
+    "e": "SGLT1 = Na⁺–glucose cotransporter of the intestinal brush border (secondary active) → basis of ORS.\nSGLT2 = renal PCT"
+  },
+  {
+    "id": "PGPH012",
+    "e": "Giant 'a' wave = right atrium contracting against a stenosed tricuspid valve.\nTR → giant c-v wave instead"
+  },
+  {
+    "id": "PGPH013",
+    "e": "ICF: K⁺ (~140) is the main cation, very low Na⁺ & Cl⁻.\nECF: Na⁺ ~140, Cl⁻ ~100, K⁺ ~4"
+  },
+  {
+    "id": "PGPH014",
+    "e": "Stress incontinence: ↑ intra-abdominal pressure (cough/strain) overcomes a weak sphincter/pelvic floor → leakage c̅ no urge"
+  },
+  {
+    "id": "PGPH015",
+    "e": "Hyperventilation (resp. alkalosis) ↑es albumin-bound Ca → ↓ ionized Ca²⁺ → tetany, perioral numbness, seizures, laryngospasm"
+  },
+  {
+    "id": "PGPH016",
+    "e": "Thiazides ↑ Ca²⁺ reabsorption in the DCT → ↓ urinary Ca²⁺ → prevents Ca stones.\nLoop diuretics do the opposite (↑ Ca excretion)"
+  },
+  {
+    "id": "PGPH017",
+    "e": "Optimal sarcomere length (~2.2 µm): maximal thick–thin overlap & cross-bridges → peak tension.\nToo stretched or too short → ↓ tension"
+  },
+  {
+    "id": "PGPH018",
+    "e": "Kearns–Sayre = mitochondrial DNA deletion (maternal inheritance).\nWilliams = 7q deletion; achondroplasia = AD; CF = AR"
+  },
+  {
+    "id": "PGPH019",
+    "e": "High altitude → hypoxia → hyperventilation → ↓ PaCO₂ → respiratory alkalosis (renal HCO₃⁻ loss compensates later)"
+  },
+  {
+    "id": "PGPH020",
+    "e": "AG = Na⁺ − (Cl⁻ + HCO₃⁻) = 142 − (100 + 28) = 14 mEq/L"
+  },
+  {
+    "id": "PGPH028",
+    "e": "Net filtration = (Pc − Pi) − (πc − πi) = 0\n(18 − Pi) − (27 − 7) = 0 → Pi = −2 mmHg"
+  }
+]

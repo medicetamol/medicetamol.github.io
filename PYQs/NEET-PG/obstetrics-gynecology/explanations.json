@@ -1,1 +1,262 @@
-{}
+[
+  {
+    "id": "PGOG001",
+    "e": "G2 = current + previous pregnancy.\nP1 = twins count as one parity (para counts deliveries ≥20 wk, not babies)"
+  },
+  {
+    "id": "PGOG002",
+    "e": "ACE inhibitors are teratogenic (fetal renal dysgenesis, oligohydramnios, skull defects) → stop before conception.\nSafe: methyldopa, labetalol, nifedipine"
+  },
+  {
+    "id": "PGOG003",
+    "e": "Lactational amenorrhoea: suckling ↑es prolactin → ↓es GnRH → anovulation.\nβ-hCG is negative (not pregnant) & TSH is normal"
+  },
+  {
+    "id": "PGOG004",
+    "e": "Didelphys → transverse lie/malpresentation, preterm labour, recurrent abortion.\nEndometriosis is not a typical feature of the anomaly itself"
+  },
+  {
+    "id": "PGOG005",
+    "e": "Septate uterus: treated by resection of the septum, indicated in recurrent pregnancy loss/poor obstetric outcome"
+  },
+  {
+    "id": "PGOG006",
+    "e": "Hysteroscopy = direct endoscopic view of the uterine cavity (diagnostic + operative); no radio-opaque dye is used"
+  },
+  {
+    "id": "PGOG007",
+    "e": "Unruptured ectopic, β-hCG <5000, no rupture/haemodynamic instability → single-dose methotrexate (50 mg/m²)"
+  },
+  {
+    "id": "PGOG008",
+    "e": "Cornual fibroids obstructing the tubal ostia → myomectomy is the corrective option when ovulation & semen analysis are normal"
+  },
+  {
+    "id": "PGOG009",
+    "e": "OCP suppresses ovulation → LMP unreliable.\nCRL in the 1st trimester is the most accurate dating parameter"
+  },
+  {
+    "id": "PGOG010",
+    "e": "Stepwise devascularisation in PPH: uterine → ovarian → internal iliac artery ligation"
+  },
+  {
+    "id": "PGOG011",
+    "e": "Cannonball lung mets = metastatic GTN → multi-agent EMA-CO.\nSingle-agent methotrexate is for low-risk disease"
+  },
+  {
+    "id": "PGOG012",
+    "e": "Active genital herpes at labour → acyclovir + elective LSCS to prevent neonatal herpes"
+  },
+  {
+    "id": "PGOG013",
+    "e": "OP position: back is posterior, limbs anterior → infraumbilical flattening.\nFHS is heard laterally (in the flank)"
+  },
+  {
+    "id": "PGOG014",
+    "e": "Superfecundation = 2 ova of the same cycle fertilised by sperm from separate coital acts (can be different fathers).\nSuperfoetation = conceptions in different cycles"
+  },
+  {
+    "id": "PGOG015",
+    "e": "Obstructive anomaly → retrograde menstruation → endometriosis (cyclical/chronic pelvic pain)"
+  },
+  {
+    "id": "PGOG016",
+    "e": "Mid-cycle ↑ estrogen → profuse, clear, non-itchy cervical mucus = physiological discharge (around ovulation)"
+  },
+  {
+    "id": "PGOG017",
+    "e": "Syphilis causes mid-trimester (>16 wk) fetal loss via transplacental spread once the placenta is mature"
+  },
+  {
+    "id": "PGOG018",
+    "e": "Missed active OCPs early in the pack → continue the current pack c̅ additional (barrier) contraception for the next days"
+  },
+  {
+    "id": "PGOG019",
+    "e": "Warfarin crosses the placenta (embryopathy, fetal/neonatal bleeding) → shift to LMW heparin near term"
+  },
+  {
+    "id": "PGOG020",
+    "e": "Indomethacin ↓es prostaglandins → premature closure of the ductus arteriosus (late pregnancy)"
+  },
+  {
+    "id": "PGOG021",
+    "e": "Prolapse + leak on cough = ↑ intra-abdominal pressure overcoming weak urethral support → stress incontinence"
+  },
+  {
+    "id": "PGOG022",
+    "e": "Umbilical arteries (2): deoxygenated blood fetus → placenta.\nUmbilical vein (1): oxygenated blood placenta → fetus"
+  },
+  {
+    "id": "PGOG023",
+    "e": "Mid-cycle ↑ estrogen → profuse, clear, non-itchy cervical mucus = physiological discharge (around ovulation)"
+  },
+  {
+    "id": "PGOG024",
+    "e": "Declining FHR + dilatation crossing the action line despite oxytocin → fetal distress/labour arrest → LSCS"
+  },
+  {
+    "id": "PGOG025",
+    "e": "Polyhydramnios: SFH > gestational age (41 cm at 36 wk), tense abdomen, fetal parts not palpable, muffled FHS"
+  },
+  {
+    "id": "PGOG026",
+    "e": "Asherman (intrauterine adhesions): hysteroscopic adhesiolysis is diagnostic + therapeutic.\nSubserosal fibroid lies outside the cavity"
+  },
+  {
+    "id": "PGOG027",
+    "e": "Established anaemia in pregnancy needs therapeutic iron rather than waiting for the routine prophylaxis window (after the 1st trimester)"
+  },
+  {
+    "id": "PGOG028",
+    "e": "Infertility = no conception after 12 months of regular unprotected intercourse; only 6 months → reassure & review"
+  },
+  {
+    "id": "PGOG029",
+    "e": "Lateral parametrial involvement = FIGO IIB → chemoradiation (cisplatin + EBRT + brachytherapy).\nSurgery is for early-stage disease"
+  },
+  {
+    "id": "PGOG030",
+    "e": "Genital TB: chronic low-grade pelvic pain, scanty discharge, menstrual irregularity/intermenstrual bleeding"
+  },
+  {
+    "id": "PGOG031",
+    "e": "Laparoscopic energy devices can cause unrecognised thermal injury (bowel/ureter) with delayed presentation.\nAdvantages: ↓es pain, ↓es bleeding, faster recovery"
+  },
+  {
+    "id": "PGOG032",
+    "e": "Transverse lie at 36-37 wk, adequate liquor, normal placenta, multipara → ECV can be attempted"
+  },
+  {
+    "id": "PGOG033",
+    "e": "Unruptured ectopic, stable, hCG <5000, mass <3.5 cm → single-dose IM methotrexate"
+  },
+  {
+    "id": "PGOG034",
+    "e": "HMG induction + abdominal pain, vomiting, breathlessness + enlarged multicystic ovary → OHSS (↑ VEGF → ↑ vascular permeability → third-spacing)"
+  },
+  {
+    "id": "PGOG035",
+    "e": "Absorption of distension fluid → volume overload → pulmonary oedema (immediate); dilutional hyponatraemia c̅ hypotonic fluids"
+  },
+  {
+    "id": "PGOG036",
+    "e": "Tender red swelling at the lower labia = Bartholin duct blockage + infection → Bartholin abscess"
+  },
+  {
+    "id": "PGOG037",
+    "e": "Cervical cancer is HPV-driven (16/18), not hereditary → HPV vaccine for the daughter"
+  },
+  {
+    "id": "PGOG038",
+    "e": "No breast/pubic/axillary hair c̅ absent ovaries → gonadal failure → ↓es sex steroids → ↑es FSH/LH (hypergonadotropic hypogonadism)"
+  },
+  {
+    "id": "PGOG039",
+    "e": "Primary amenorrhoea c̅ cyclical pain & bulging introital mass → haematocolpos from imperforate hymen"
+  },
+  {
+    "id": "PGOG040",
+    "e": "G2 = current + previous pregnancy.\nP1 = twin delivery counts as one parity"
+  },
+  {
+    "id": "PGOG041",
+    "e": "Supine hypotension syndrome: gravid uterus compresses the IVC → ↓es venous return; relieved by left lateral position"
+  },
+  {
+    "id": "PGOG042",
+    "e": "Luteal phase: corpus luteum ↑es progesterone (peak ~day 21-22) → negative feedback ↓es LH & FSH"
+  },
+  {
+    "id": "PGOG043",
+    "e": "Controlled cord traction (Brandt-Andrews): suprapubic counter-pressure c̅ steady cord traction, part of AMTSL"
+  },
+  {
+    "id": "PGOG044",
+    "e": "Cord prolapse: relieve cord compression (elevate presenting part, retrograde bladder filling) → emergency LSCS as cervix is not fully dilated"
+  },
+  {
+    "id": "PGOG045",
+    "e": "AUB c̅ thickened endometrium at ≥45 yr → endometrial biopsy to exclude hyperplasia/carcinoma"
+  },
+  {
+    "id": "PGOG046",
+    "e": "Pritchard: 4 g IV + 10 g IM (5 g each buttock) = 14 g loading.\nMaintenance: 5 g IM 4-hourly, alternate buttocks"
+  },
+  {
+    "id": "PGOG047",
+    "e": "Atonic PPH unresponsive to uterotonics → uterine balloon tamponade (Bakri) before surgical options"
+  },
+  {
+    "id": "PGOG048",
+    "e": "Postmenopausal painless bleeding = endometrial carcinoma until proved otherwise"
+  },
+  {
+    "id": "PGOG049",
+    "e": "VBAC c̅ fetal bradycardia + maternal tachycardia = suspected scar rupture → immediate emergency LSCS"
+  },
+  {
+    "id": "PGOG050",
+    "e": "Shoulder dystocia: McRoberts → Rubin → Gaskin → Zavanelli (Zavanelli = last resort)"
+  },
+  {
+    "id": "PGOG051",
+    "e": "Episiotomy repair: vaginal mucosa → perineal muscle → skin"
+  },
+  {
+    "id": "PGOG052",
+    "e": "Adenomyosis: MRI shows thickened/blurred junctional zone (>12 mm) c̅ globular uterus"
+  },
+  {
+    "id": "PGOG053",
+    "e": "Postmenopausal bleeding needs work-up first: pelvic exam, Pap smear & TVS (± endometrial biopsy); hypertension doesn't explain it"
+  },
+  {
+    "id": "PGOG054",
+    "e": "Age <40 c̅ amenorrhoea, FSH >25 IU/L & very low AMH = premature ovarian insufficiency"
+  },
+  {
+    "id": "PGOG055",
+    "e": "1st-trimester dating: CRL is the most accurate (±5-7 days).\nBPD/AC are used later"
+  },
+  {
+    "id": "PGOG056",
+    "e": "↑ Prolactin ↓es GnRH pulsatility → ↓es LH/FSH → anovulation, amenorrhoea & infertility"
+  },
+  {
+    "id": "PGOG057",
+    "e": "Hydronephrosis/non-functioning kidney due to tumour = FIGO IIIB"
+  },
+  {
+    "id": "PGOG058",
+    "e": "Løvset: 180° rotation of the trunk, delivering the arms/shoulders one by one.\nMauriceau-Smellie-Veit is for the after-coming head"
+  },
+  {
+    "id": "PGOG059",
+    "e": "Chadwick's sign (bluish cervix) is a probable sign of pregnancy.\nConfirmed pregnancy needs fetal heart/parts/USG"
+  },
+  {
+    "id": "PGOG060",
+    "e": "High-risk caesarean (BMI >35 + preeclampsia) → LMWH thromboprophylaxis"
+  },
+  {
+    "id": "PGOG061",
+    "e": "Normal cord: 2 arteries + 1 vein (in Wharton's jelly).\nSingle umbilical artery → associated anomalies"
+  },
+  {
+    "id": "PGOG071",
+    "e": "Fetal toxoplasmosis risk is mainly from primary infection in pregnancy; IgG/IgM/avidity dating decides the risk"
+  },
+  {
+    "id": "PGOG072",
+    "e": "Amniotic band syndrome: fibrous bands entangle fetal parts → limb/digit amputation, constriction rings"
+  },
+  {
+    "id": "PGOG073",
+    "e": "Cardinal (Mackenrodt) ligament = main uterine support; weakness → uterine prolapse (multiparity, unskilled delivery)"
+  },
+  {
+    "id": "PGOG074",
+    "e": "Serous cystadenocarcinoma: commonest epithelial ovarian cancer, CA-125 ↑es, often bilateral, psammoma bodies"
+  }
+]

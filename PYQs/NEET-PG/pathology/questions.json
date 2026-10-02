@@ -400,7 +400,8 @@
       "Kearns-Sayre syndrome",
       "Marfan syndrome"
     ],
-    "a": 2
+    "a": 2,
+    "img": true
   },
   {
     "id": "PGPT032",
@@ -419,13 +420,13 @@
     "id": "PGPT041",
     "y": 2025,
     "t": "LVR",
-    "q": "A 35-year-old woman undergoes abdominal imaging for nonspecific RUQ pain. A liver mass is identified and surgically excised. What is the most likely diagnosis?",
+    "q": "A 35-year-old woman with a history of long-term oral contraceptive use undergoes abdominal imaging for RUQ pain. A liver mass is identified and surgically excised. What is the most likely diagnosis?",
     "o": [
       "Hepatocellular carcinoma",
       "Focal nodular hyperplasia",
       "Hepatic adenoma",
       "Metastasis"
     ],
-    "a": 1
+    "a": 2
   }
 ]

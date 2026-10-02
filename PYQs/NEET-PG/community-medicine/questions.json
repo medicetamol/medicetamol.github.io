@@ -10,7 +10,7 @@
       "Vitamin D deficiency",
       "None"
     ],
-    "a": 0
+    "a": 1
   },
   {
     "id": "PGCM002",
@@ -49,7 +49,7 @@
       "Moderate malnutrition-teach mother on how to feed",
       "Severe malnutrition: refer to NRC"
     ],
-    "a": 3
+    "a": 0
   },
   {
     "id": "PGCM005",
@@ -187,12 +187,12 @@
     "t": "VAC",
     "q": "A child known case of HIV. His CD count is 50. Which vaccine is avoided in him/her?",
     "o": [
-      "MMR",
+      "Rabies",
       "TT",
       "DPT",
       "BCG"
     ],
-    "a": 0
+    "a": 3
   },
   {
     "id": "PGCM016",
@@ -270,7 +270,7 @@
       "She is immune to chicken pox",
       "She is immune to zoster"
     ],
-    "a": 0
+    "a": 1
   },
   {
     "id": "PGCM022",

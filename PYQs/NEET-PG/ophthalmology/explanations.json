@@ -1,1 +1,106 @@
-{}
+[
+  {
+    "id": "PGOP001",
+    "e": "Right homonymous hemianopia = left optic tract lesion (retrochiasmal, contralateral)\nOptic nerve = monocular loss; chiasma = bitemporal"
+  },
+  {
+    "id": "PGOP002",
+    "e": "Giant papillary conjunctivitis: large papillae on upper tarsal conjunctiva (contact lens/prosthesis)\nTrachoma = follicles"
+  },
+  {
+    "id": "PGOP003",
+    "e": "Refractive surgery (LASIK/ICL) avoided <18 yrs (unstable refraction)\nSpherical-equivalent specs better tolerated than cylindrical"
+  },
+  {
+    "id": "PGOP004",
+    "e": "Hammer–chisel injury = metallic (magnetic) IOFB → MRI contraindicated\nX-ray/CT/B-scan are safe"
+  },
+  {
+    "id": "PGOP005",
+    "e": "Flexner–Wintersteiner rosettes + leukocoria in a child = retinoblastoma (RB1 gene)"
+  },
+  {
+    "id": "PGOP006",
+    "e": "Epiphora + ↑ corneal diameter in infant = buphthalmos (congenital glaucoma)"
+  },
+  {
+    "id": "PGOP007",
+    "e": "Yellow-white macular deposits = hard exudates of diabetic maculopathy\nSoft exudates = cotton-wool spots"
+  },
+  {
+    "id": "PGOP008",
+    "e": "Dry, rough cornea (xerophthalmia) = vitamin A (retinoic acid) deficiency"
+  },
+  {
+    "id": "PGOP009",
+    "e": "Homocystinuria (cystathionine synthase deficiency): cysteine becomes essential\nEctopia lentis downward (Marfan: upward)"
+  },
+  {
+    "id": "PGOP010",
+    "e": "Lagophthalmos (incomplete lid closure) → exposure keratitis"
+  },
+  {
+    "id": "PGOP011",
+    "e": "Prostaglandin analogue (latanoprost) has no bronchospasm risk\nβ-blockers (timolol) contraindicated in asthma"
+  },
+  {
+    "id": "PGOP012",
+    "e": "Right homonymous hemianopia → left optic tract lesion (contralateral, retrochiasmal)"
+  },
+  {
+    "id": "PGOP013",
+    "e": "Painless ↓ vision c̅ grey-white pupillary opacity in elderly = senile cataract → phaco + IOL\nSugar control alone doesn't clear the lens"
+  },
+  {
+    "id": "PGOP014",
+    "e": "Limbal dermoid: congenital choristoma at limbus (often inferotemporal), seen in children"
+  },
+  {
+    "id": "PGOP015",
+    "e": "KF ring = Wilson disease → serum ceruloplasmin (↓es)"
+  },
+  {
+    "id": "PGOP016",
+    "e": "Fluorescein stains corneal epithelial defects\nSeen under cobalt blue filter (green fluorescence)"
+  },
+  {
+    "id": "PGOP017",
+    "e": "Streaky, radiating light = astigmatism (different power in meridians → no single focus)"
+  },
+  {
+    "id": "PGOP018",
+    "e": "Congenital glaucoma: epiphora, photophobia, blepharospasm c̅ hazy enlarged cornea (Haab's striae)"
+  },
+  {
+    "id": "PGOP019",
+    "e": "Distance vision ↓es but near improves without glasses = index myopia (nuclear sclerosis ↑es refractive index)"
+  },
+  {
+    "id": "PGOP020",
+    "e": "Pseudoexfoliation: dandruff-like deposits on anterior lens capsule\nRisk of glaucoma & zonular weakness"
+  },
+  {
+    "id": "PGOP021",
+    "e": "Intacs = intrastromal corneal ring segments → keratoconus (flatten the cone)"
+  },
+  {
+    "id": "PGOP022",
+    "e": "Painless slow-growing mass at lateral canthus since birth = dermoid cyst"
+  },
+  {
+    "id": "PGOP023",
+    "e": "Guttae + bullous keratopathy = Fuchs' endothelial dystrophy (endothelial failure → corneal oedema)"
+  },
+  {
+    "id": "PGOP024",
+    "e": "A: two dissimilar pictures (dog + cage) seen together = simultaneous macular perception (SMP)\nB: two similar pictures blended into one = fusion\nStereopsis = 3rd grade (depth)"
+  },
+  {
+    "id": "PGOP025",
+    "e": "Orbital cellulitis = posterior to orbital septum; ethmoid sinusitis is the most common source\nPainful ophthalmoplegia + proptosis; needs IV antibiotics"
+  },
+  {
+    "id": "PGOP026",
+    "e": "Marfan: tall, long limbs, ectopia lentis (upward) → FBN1 (fibrillin-1) mutation\nCOL5A = Ehlers–Danlos"
+  }
+]

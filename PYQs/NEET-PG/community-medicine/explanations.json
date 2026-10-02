@@ -1,1 +1,210 @@
-{}
+[
+  {
+    "id": "PGCM001",
+    "e": "Macrocytic anaemia (MCV 120) c̅ no fruits/vegetables in diet = folic acid deficiency\nFolate stores last only ~3–4 months; B12 stores last years"
+  },
+  {
+    "id": "PGCM002",
+    "e": "Buboes = bubonic plague (Yersinia pestis)\nVector = Xenopsylla cheopis (rat flea)"
+  },
+  {
+    "id": "PGCM003",
+    "e": "GHI indicators: undernourishment, child stunting, child wasting, under-5 mortality\nIMR is not included"
+  },
+  {
+    "id": "PGCM004",
+    "e": "Weight between median and -2SD = normal on WHO chart → no malnutrition, reassure mother\nMalnutrition starts <-2SD; SAM <-3SD → NRC"
+  },
+  {
+    "id": "PGCM005",
+    "e": "Height-for-age <-2SD = stunting = chronic malnutrition\nWeight-for-height ↓es = wasting (acute)"
+  },
+  {
+    "id": "PGCM006",
+    "e": "Photosensitive dermatitis + glossitis c̅ maize diet = pellagra (niacin/tryptophan deficiency)\n3Ds: dermatitis, diarrhoea, dementia"
+  },
+  {
+    "id": "PGCM007",
+    "e": "Casal's necklace = pellagra\nAsk dietary history (maize) + diarrhoea + dementia (3Ds)"
+  },
+  {
+    "id": "PGCM008",
+    "e": "Recurrent infections from 3 months = primary immunodeficiency (SCID) → live vaccines (MMR) contraindicated\nTT/DPT/killed IPV are safe"
+  },
+  {
+    "id": "PGCM009",
+    "e": "School health programme: Td at 10 & 16 yrs (replaces TT)"
+  },
+  {
+    "id": "PGCM010",
+    "e": "Encephalitis outbreak → JE vaccine: live attenuated (SA-14-14-2), given subcutaneously"
+  },
+  {
+    "id": "PGCM011",
+    "e": "Kata thermometer = low air velocity (cooling power)\nGlobe = radiant heat; wet bulb = humidity"
+  },
+  {
+    "id": "PGCM012",
+    "e": "School health services are delivered through the PHC (medical officer + team)"
+  },
+  {
+    "id": "PGCM013",
+    "e": "AQI: 0–50 good, 51–100 satisfactory, 101–200 moderate, 201–300 poor, 301–400 very poor, 401–500 severe"
+  },
+  {
+    "id": "PGCM014",
+    "e": "RR >1 and rising c̅ increasing CRP levels = dose-response → CRP ↑es risk"
+  },
+  {
+    "id": "PGCM015",
+    "e": "CD4 50 = severe immunosuppression → live vaccine BCG avoided\nTT/DPT/rabies = inactivated, safe"
+  },
+  {
+    "id": "PGCM016",
+    "e": "Outcome (recovery, case fatality) reflects effectiveness of clinical management\nStructure = resources; Process = activities"
+  },
+  {
+    "id": "PGCM017",
+    "e": "Learning a skill/steps (hand washing) = psychomotor domain\nCognitive = knowledge; affective = attitude"
+  },
+  {
+    "id": "PGCM018",
+    "e": "Illuminance SI unit = lux (lumen/m²)\nCandela = luminous intensity; lumen = luminous flux"
+  },
+  {
+    "id": "PGCM019",
+    "e": "SGLT-1 = Na⁺–glucose co-transporter in intestine → basis of ORS"
+  },
+  {
+    "id": "PGCM020",
+    "e": "Lathyrism (khesari dal, BOAA) → spastic paraparesis; ask dietary history"
+  },
+  {
+    "id": "PGCM021",
+    "e": "VZV IgG negative = non-immune → susceptible to chickenpox (primary varicella)\nZoster needs prior infection; exposed pregnant woman → VZIG within 10 days"
+  },
+  {
+    "id": "PGCM022",
+    "e": "Neurolathyrism (ODAP, khesari dal) → spastic scissoring gait\nSubclinical vit C deficiency predisposes; vit C is protective"
+  },
+  {
+    "id": "PGCM023",
+    "e": "Exposure & outcome already occurred; data from past records = retrospective cohort\nExposed vs unexposed compared for outcome"
+  },
+  {
+    "id": "PGCM024",
+    "e": "Tracking = persistence of BP rank/percentile from childhood to adulthood"
+  },
+  {
+    "id": "PGCM025",
+    "e": "ASHA = community-level worker for counselling & nutrition of pregnant women\nNight blindness = vit A deficiency (papaya, mango are rich)"
+  },
+  {
+    "id": "PGCM026",
+    "e": "Cervicitis (discharge + cervical erosion) → Grey kit (cefixime + azithromycin)"
+  },
+  {
+    "id": "PGCM027",
+    "e": "YPLL = years lost due to premature death (before expected life span)"
+  },
+  {
+    "id": "PGCM028",
+    "e": "School health programme: Td at 10 & 16 yrs (replaces TT)"
+  },
+  {
+    "id": "PGCM029",
+    "e": "Colombo Plan (cancer) helped set up cobalt (teletherapy) units"
+  },
+  {
+    "id": "PGCM030",
+    "e": "BOAA (ODAP) in Lathyrus sativus → neurolathyrism (spastic paraparesis)\nAflatoxin = hepatotoxic; ergot = ergotism"
+  },
+  {
+    "id": "PGCM031",
+    "e": "Clean minor wound c̅ last full course ≥10 yrs ago → single-dose tetanus toxoid booster\nNo TIG needed"
+  },
+  {
+    "id": "PGCM032",
+    "e": "Bacteriological sample: flame the tap, run water 1–2 min, collect from gentle stream to avoid splashing"
+  },
+  {
+    "id": "PGCM033",
+    "e": "Varicella cases: isolate until lesions crust (~6 days after rash onset)\nVZIG is for exposed susceptible contacts, not cases"
+  },
+  {
+    "id": "PGCM034",
+    "e": "Smear-negative c̅ suggestive CXR → CBNAAT (NAAT) for rapid diagnosis & rifampicin resistance"
+  },
+  {
+    "id": "PGCM035",
+    "e": "IMR = sensitive index of healthcare availability, utilisation & effectiveness"
+  },
+  {
+    "id": "PGCM036",
+    "e": "RDA = EAR + 2SD → covers 97–98% individuals\nEAR covers 50%"
+  },
+  {
+    "id": "PGCM037",
+    "e": "Routine hospital death/case reports sent to the health system = passive surveillance"
+  },
+  {
+    "id": "PGCM038",
+    "e": "De facto = counted where physically present at time of census\nDe jure = usual residence"
+  },
+  {
+    "id": "PGCM039",
+    "e": "Nalgonda technique (defluoridation) = alum + lime (c̅ bleaching powder)"
+  },
+  {
+    "id": "PGCM040",
+    "e": "RCT sequence: Randomisation → Manipulation (intervention) → Follow-up → Assessment"
+  },
+  {
+    "id": "PGCM041",
+    "e": "Skeletal fluorosis (genu valgum, endemic Andhra): avoid fluoride; fluoride supplementation contraindicated\nChange water source/defluoridate"
+  },
+  {
+    "id": "PGCM042",
+    "e": "NUHM: 1 UPHC per 50,000 slum population\n70 lakh × 30% = 21 lakh ÷ 50,000 = 42"
+  },
+  {
+    "id": "PGCM043",
+    "e": "Means of 2 independent groups = unpaired t-test\nPaired = same subjects before/after; ANOVA = >2 groups"
+  },
+  {
+    "id": "PGCM044",
+    "e": "Anopheles larva: no siphon, lies parallel to water surface\nCulex/Aedes have siphon, hang at an angle"
+  },
+  {
+    "id": "PGCM045",
+    "e": "ICDS targets children <6 yrs (supplementary nutrition, immunisation, check-ups)\nMid-Day Meal = school children"
+  },
+  {
+    "id": "PGCM046",
+    "e": "Weekly blue IFA tablet (10–19 yrs): 60 mg elemental iron + 500 µg folic acid (current NHM/AMB dose)"
+  },
+  {
+    "id": "PGCM047",
+    "e": "Population strategy for CAD: dietary cholesterol <100 mg/1000 kcal/day"
+  },
+  {
+    "id": "PGCM048",
+    "e": "Evaluation = degree of objective achievement & quality of results\nMonitoring = ongoing tracking of activities"
+  },
+  {
+    "id": "PGCM049",
+    "e": "Clusters (PHCs) randomly allocated to intervention vs control = cluster RCT"
+  },
+  {
+    "id": "PGCM050",
+    "e": "Generation time = infection → maximum infectivity of host\nSerial interval = onset of primary → onset of secondary case"
+  },
+  {
+    "id": "PGCM051",
+    "e": "Screening gives earlier diagnosis → ↑es survival without ↓es mortality = lead time bias"
+  },
+  {
+    "id": "PGCM061",
+    "e": "Toxic fumes: shelter in place – seal cracks, close windows/doors"
+  }
+]

@@ -68,7 +68,7 @@
     "id": "PGPM006",
     "y": 2021,
     "t": "CNF",
-    "q": "Topiramate is used in the treatment of",
+    "q": "Topiramate is used in the prophylaxis of",
     "o": [
       "Migraine",
       "LGS",
@@ -302,7 +302,7 @@
     "id": "PGPM024",
     "y": 2025,
     "t": "CVF",
-    "q": "A patient is started on hydrochlorothiazide for hypertension and later develops renal stones. What could be the probable cause?",
+    "q": "A patient is started on furosemide for hypertension and later develops renal stones. What could be the probable cause?",
     "o": [
       "Increased calcium excretion",
       "Decreased calcium excretion",
@@ -345,7 +345,8 @@
     "o": [
       "Acute dystonia - ropinirole",
       "Tardive dyskinesia - valbenazine",
-      "Akathisia - propranolol"
+      "Akathisia - propranolol",
+      "Parkinsonism - levodopa"
     ],
     "a": 1
   },

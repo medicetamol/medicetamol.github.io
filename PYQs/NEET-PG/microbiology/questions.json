@@ -342,11 +342,12 @@
     "id": "PGMB027",
     "y": 2025,
     "t": "BAC",
-    "q": "A 25-year-old sewage worker presents with fever for 1 week and weakness for 1 day. Laboratory evaluation reveals elevated bilirubin and decreased urine output. Conjunctival redness? What is the most likely diagnosis?",
+    "q": "A 25-year-old sewage worker presents with fever for 1 week and weakness for 1 day. Laboratory evaluation reveals elevated bilirubin, decreased urine output and conjunctival redness. What is the most likely diagnosis?",
     "o": [
       "Brucellosis",
       "Weil's disease",
-      "Enteric fever"
+      "Enteric fever",
+      "Dengue fever"
     ],
     "a": 1
   },

@@ -211,14 +211,14 @@
     "id": "PGAN017",
     "y": 2025,
     "t": "HNK",
-    "q": "[Image: Anterolateral neck illustration with two nerves labelled A and B; nerve A courses superficial to a muscle near the angle of the jaw, while nerve B runs more medially near the floor of the mouth] What is the correct nerve supply to the muscles labelled as A and B?",
+    "q": "[Image: Anterolateral side of neck with two nerves; nerve A courses superficial to a muscle near the angle of the jaw, while nerve B runs more medially near the floor of the mouth]\nWhat is the correct nerve supply to the muscles, A and B?",
     "o": [
       "A - facial nerve, B- Nerve to mylohyoid",
       "A - facial nerve, B- spinal accessory nerve",
       "A- Mandibular, B-Facial Nerve",
       "A - Spinal Accessory, B-Mandibular nerve"
     ],
-    "a": 2
+    "a": 0
   },
   {
     "id": "PGAN018",
@@ -278,7 +278,7 @@
     "t": "NEU",
     "q": "A patient presents with muscle wasting, reduced tone, and weakness in the left hand. Fine motor movements, such as dough kneading, are impaired. Which of the following structures is most likely affected?",
     "o": [
-      "Right anterior horn cells in the spinal cord",
+      "Left anterior horn cells in the spinal cord",
       "Pyramidal lesion",
       "Internal capsule",
       "Left corticospinal tract in the cervical cord"
