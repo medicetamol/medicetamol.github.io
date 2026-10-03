@@ -309,7 +309,8 @@
       "a. Fusion   b. SMP",
       "a. SMP   b. Stereopsis"
     ],
-    "a": 0
+    "a": 0,
+    "img": true
   },
   {
     "id": "PGOP025",

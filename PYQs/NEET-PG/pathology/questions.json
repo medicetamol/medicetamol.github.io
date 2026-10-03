@@ -205,7 +205,7 @@
       "Hypertrophy",
       "Carcinoma"
     ],
-    "a": 3
+    "a": 0
   },
   {
     "id": "PGPT017",
@@ -304,10 +304,10 @@
     "t": "HAM",
     "q": "A lymphoma characterized by the presence of centrocytes and centroblasts, along with BCL2 positivity and CD10 expression, is most commonly associated with which chromosomal translocation?",
     "o": [
-      "t(2;5)",
-      "t(11;14)",
-      "t(14;18)",
-      "t(11;14)"
+      "t(2:5)",
+      "t(11:14)",
+      "t(14:18)",
+      "t(8:14)"
     ],
     "a": 2
   },
