@@ -432,12 +432,23 @@ export async function mergeCloudIntoLocal(
     const names = [ANSWERS, BOOKMARKS, ACTIVITY, LIFETIME];
     const transaction = db.transaction(names, "readwrite");
 
-    // 1. subjects cleared on another device: drop the local copies
+    // 1. subjects cleared on another device: drop the local copies the cloud no
+    // longer has. If the cloud still holds an answer (it was solved again after
+    // the clear), keep it: only take the cloud's version when it truly differs.
+    // (Deleting then re-adding the same answer on every app open used to report
+    // a change each time, which forced a needless page refresh.)
+    const cloudAnswers = new Map(cloud.answers.map((a) => [a.qid, a]));
     for (const prefix of clearedPrefixes) {
-      for (const qid of localAnswers.keys()) {
-        if (qid.startsWith(prefix)) {
+      for (const qid of [...localAnswers.keys()]) {
+        if (!qid.startsWith(prefix)) continue;
+        const theirs = cloudAnswers.get(qid);
+        if (!theirs) {
           transaction.objectStore(ANSWERS).delete(qid);
           localAnswers.delete(qid);
+          changed = true;
+        } else if (localAnswers.get(qid)?.incorrect !== theirs.incorrect) {
+          transaction.objectStore(ANSWERS).put(theirs);
+          localAnswers.set(qid, theirs);
           changed = true;
         }
       }

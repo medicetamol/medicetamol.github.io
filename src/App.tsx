@@ -1,26 +1,27 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { refreshIfStale } from "./lib/autoRefresh";
-import { useEffect } from "react";
+import { useDataVersion } from "./lib/dataVersion";
+import { lazy, Suspense, useEffect } from "react";
 import Layout from "./components/Layout";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
-import ExamSelect from "./pages/ExamSelect";
-import SubjectSelect from "./pages/SubjectSelect";
-import Subject from "./pages/Subject";
-import ModuleBuilder from "./pages/ModuleBuilder";
-import ModuleBuilderTopics from "./pages/ModuleBuilderTopics";
-import ModuleBuilderCraft from "./pages/ModuleBuilderCraft";
-import ModuleBuilderSolve from "./pages/ModuleBuilderSolve";
-import SharedModule from "./pages/SharedModule";
-import SolvedModules from "./pages/SolvedModules";
-import Quiz from "./pages/Quiz";
-import Result from "./pages/Result";
-import Progress from "./pages/Progress";
-import Bookmarks from "./pages/Bookmarks";
-import BookmarkQuiz from "./pages/BookmarkQuiz";
-import About from "./pages/About";
-import Settings from "./pages/Settings";
-import ReportError from "./pages/ReportError";
+const ExamSelect = lazy(() => import("./pages/ExamSelect"));
+const SubjectSelect = lazy(() => import("./pages/SubjectSelect"));
+const Subject = lazy(() => import("./pages/Subject"));
+const ModuleBuilder = lazy(() => import("./pages/ModuleBuilder"));
+const ModuleBuilderTopics = lazy(() => import("./pages/ModuleBuilderTopics"));
+const ModuleBuilderCraft = lazy(() => import("./pages/ModuleBuilderCraft"));
+const ModuleBuilderSolve = lazy(() => import("./pages/ModuleBuilderSolve"));
+const SharedModule = lazy(() => import("./pages/SharedModule"));
+const SolvedModules = lazy(() => import("./pages/SolvedModules"));
+const Quiz = lazy(() => import("./pages/Quiz"));
+const Result = lazy(() => import("./pages/Result"));
+const Progress = lazy(() => import("./pages/Progress"));
+const Bookmarks = lazy(() => import("./pages/Bookmarks"));
+const BookmarkQuiz = lazy(() => import("./pages/BookmarkQuiz"));
+const About = lazy(() => import("./pages/About"));
+const Settings = lazy(() => import("./pages/Settings"));
+const ReportError = lazy(() => import("./pages/ReportError"));
 
 // React Router doesn't reset scroll position on navigation by default, so a
 // scrolled-down page (e.g. reading the bottom of Home) leaves new pages
@@ -36,11 +37,13 @@ function ScrollToTop() {
 
 export default function App() {
   const { pathname } = useLocation();
+  const dataVersion = useDataVersion();
   return (
     <Layout>
       <ScrollToTop />
       {/* key={pathname}: after a crash, navigating anywhere resets the boundary. */}
-      <ErrorBoundary key={pathname}>
+      <ErrorBoundary key={`${pathname}:${dataVersion}`}>
+      <Suspense fallback={<div className="min-h-[60vh]" aria-hidden="true" />}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -75,6 +78,7 @@ export default function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/report/:questionId?" element={<ReportError />} />
       </Routes>
+      </Suspense>
       </ErrorBoundary>
     </Layout>
   );

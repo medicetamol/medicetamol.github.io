@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Users } from "lucide-react";
-import { countVisitIfNeeded, subscribeVisitorCount } from "../lib/visitorCount";
 import { afterFirstPaint } from "../lib/afterFirstPaint";
 
 export default function VisitorCount() {
@@ -8,13 +7,21 @@ export default function VisitorCount() {
 
   useEffect(() => {
     let unsubscribe: (() => void) | undefined;
+    let disposed = false;
     // Deferred so the Firestore write + live listener don't compete with
-    // the initial paint — see afterFirstPaint.ts.
+    // the initial paint — see afterFirstPaint.ts. Firestore is loaded here
+    // (dynamic import) so it stays out of the entry bundle.
     const cancel = afterFirstPaint(() => {
-      countVisitIfNeeded();
-      unsubscribe = subscribeVisitorCount(setCount);
+      void import("../lib/visitorCount")
+        .then(({ countVisitIfNeeded, subscribeVisitorCount }) => {
+          if (disposed) return;
+          countVisitIfNeeded();
+          unsubscribe = subscribeVisitorCount(setCount);
+        })
+        .catch(() => {});
     });
     return () => {
+      disposed = true;
       cancel();
       unsubscribe?.();
     };

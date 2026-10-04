@@ -7,12 +7,14 @@
   },
   "INI-CET": {
     "anatomy": {
-      "total": 7,
+      "total": 13,
       "topics": {
-        "HIS": 1,
+        "HIS": 3,
         "NEU": 4,
         "ABP": 1,
-        "THX": 1
+        "THX": 1,
+        "HNK": 1,
+        "EMB": 3
       }
     },
     "anesthesiology": {
@@ -23,18 +25,19 @@
       }
     },
     "biochemistry": {
-      "total": 5,
+      "total": 13,
       "topics": {
         "LIP": 1,
-        "MOL": 1,
-        "PRO": 1,
-        "CAR": 2
+        "MOL": 3,
+        "PRO": 2,
+        "CAR": 3,
+        "MSC": 4
       }
     },
     "community-medicine": {
-      "total": 11,
+      "total": 12,
       "topics": {
-        "EPI": 6,
+        "EPI": 7,
         "NHP": 1,
         "FPD": 1,
         "VAC": 3
@@ -51,10 +54,10 @@
       }
     },
     "ent": {
-      "total": 2,
+      "total": 3,
       "topics": {
         "LRY": 1,
-        "EAR": 1
+        "EAR": 2
       }
     },
     "forensic-medicine": {
@@ -79,12 +82,12 @@
       }
     },
     "microbiology": {
-      "total": 9,
+      "total": 14,
       "topics": {
-        "BAC": 5,
-        "GEN": 1,
-        "MYC": 2,
-        "PAR": 1
+        "BAC": 7,
+        "GEN": 2,
+        "MYC": 3,
+        "PAR": 2
       }
     },
     "obstetrics-gynecology": {
@@ -101,15 +104,16 @@
       }
     },
     "ophthalmology": {
-      "total": 1,
+      "total": 2,
       "topics": {
-        "RFQ": 1
+        "RFQ": 1,
+        "UVO": 1
       }
     },
     "orthopedics": {
-      "total": 4,
+      "total": 5,
       "topics": {
-        "FRG": 2,
+        "FRG": 3,
         "FLL": 2
       }
     },
@@ -136,7 +140,7 @@
       }
     },
     "pharmacology": {
-      "total": 20,
+      "total": 21,
       "topics": {
         "CNF": 6,
         "CVF": 2,
@@ -144,18 +148,19 @@
         "ANS": 2,
         "ACI": 1,
         "AMI": 3,
-        "ANM": 1
+        "ANM": 1,
+        "GRF": 1
       }
     },
     "physiology": {
-      "total": 7,
+      "total": 14,
       "topics": {
-        "ENR": 1,
-        "REN": 2,
+        "ENR": 4,
+        "REN": 4,
         "SPS": 1,
-        "NPH": 1,
+        "NPH": 2,
         "GIT": 1,
-        "CVS": 1
+        "CVS": 2
       }
     },
     "psychiatry": {
@@ -167,260 +172,279 @@
       }
     },
     "radiology": {
-      "total": 5,
+      "total": 6,
       "topics": {
         "RDB": 4,
-        "RDN": 1
+        "RDN": 1,
+        "RDW": 1
       }
     },
     "surgery": {
-      "total": 14,
+      "total": 15,
       "topics": {
         "GNS": 3,
         "GIS": 4,
         "PDS": 1,
         "TCC": 4,
         "URO": 1,
-        "VAS": 1
+        "VAS": 1,
+        "ENS": 1
       }
     }
   },
   "NEET-PG": {
     "anatomy": {
-      "total": 13,
+      "total": 23,
       "topics": {
         "ABP": 2,
-        "HNK": 3,
-        "HIS": 1,
+        "HNK": 7,
+        "HIS": 2,
         "THX": 1,
-        "EMB": 2,
-        "LWL": 2,
-        "UPL": 2
+        "EMB": 3,
+        "LWL": 4,
+        "UPL": 3,
+        "NEU": 1
       }
     },
     "anesthesiology": {
-      "total": 8,
+      "total": 11,
       "topics": {
         "AMM": 1,
-        "AAW": 1,
+        "AAW": 2,
         "ARG": 2,
-        "AIV": 1,
+        "AIV": 2,
         "AVC": 2,
-        "AGL": 1
+        "AGL": 1,
+        "AOP": 1
       }
     },
     "biochemistry": {
-      "total": 23,
+      "total": 36,
       "topics": {
-        "VIT": 10,
+        "VIT": 14,
         "CAR": 4,
         "ENZ": 1,
-        "LIP": 4,
-        "PRO": 3,
-        "MOL": 1
+        "LIP": 8,
+        "PRO": 4,
+        "MOL": 5
       }
     },
     "community-medicine": {
-      "total": 36,
+      "total": 52,
       "topics": {
-        "NUT": 10,
-        "CMD": 4,
+        "NUT": 11,
+        "CMD": 5,
         "VAC": 7,
-        "ENV": 4,
-        "HAD": 3,
-        "EPI": 5,
-        "NCD": 2,
-        "INT": 1
+        "ENV": 7,
+        "HAD": 4,
+        "EPI": 11,
+        "NCD": 3,
+        "INT": 1,
+        "FPD": 1,
+        "NHP": 2
       }
     },
     "dermatology": {
-      "total": 11,
+      "total": 15,
       "topics": {
-        "BKI": 4,
-        "BLA": 1,
-        "PGH": 1,
+        "BKI": 5,
+        "BLA": 2,
+        "PGH": 2,
         "MSD": 4,
-        "STI": 1
+        "STI": 1,
+        "FVI": 1
       }
     },
     "ent": {
-      "total": 13,
+      "total": 22,
       "topics": {
-        "NOS": 3,
+        "NOS": 6,
         "INS": 1,
-        "PHR": 6,
-        "EAR": 2,
-        "LRY": 1
+        "PHR": 8,
+        "EAR": 5,
+        "LRY": 2
       }
     },
     "forensic-medicine": {
-      "total": 18,
+      "total": 25,
       "topics": {
-        "TOX": 6,
-        "THA": 6,
+        "TOX": 7,
+        "THA": 7,
         "TRM": 1,
-        "JUR": 2,
-        "SXO": 3
+        "JUR": 5,
+        "SXO": 3,
+        "ASP": 1,
+        "FSP": 1
       }
     },
     "medicine": {
-      "total": 32,
+      "total": 56,
       "topics": {
-        "NRL": 6,
-        "CAD": 5,
-        "IFD": 2,
+        "NRL": 7,
+        "CAD": 8,
+        "IFD": 4,
         "HML": 2,
-        "END": 3,
-        "NEP": 5,
-        "PUL": 4,
-        "RHU": 3,
-        "GAS": 1,
+        "END": 8,
+        "NEP": 10,
+        "PUL": 9,
+        "RHU": 5,
+        "GAS": 2,
         "MSM": 1
       }
     },
     "microbiology": {
-      "total": 25,
+      "total": 36,
       "topics": {
-        "VIR": 5,
-        "PAR": 8,
-        "MYC": 2,
-        "BAC": 7,
+        "VIR": 6,
+        "PAR": 10,
+        "MYC": 4,
+        "BAC": 12,
         "GEN": 2,
-        "IMM": 1
+        "IMM": 2
       }
     },
     "obstetrics-gynecology": {
-      "total": 41,
+      "total": 65,
       "topics": {
-        "NPA": 4,
-        "HRP": 8,
-        "MNA": 4,
-        "FTP": 3,
+        "NPA": 6,
+        "HRP": 9,
+        "MNA": 6,
+        "FTP": 5,
         "IPR": 4,
-        "IFR": 3,
+        "IFR": 5,
         "CNT": 2,
-        "PPP": 1,
+        "PPP": 3,
         "GTD": 1,
-        "IST": 3,
-        "LBD": 3,
-        "FBE": 1,
-        "PLF": 2,
-        "GYM": 2
+        "IST": 4,
+        "LBD": 9,
+        "FBE": 2,
+        "PLF": 3,
+        "GYM": 6
       }
     },
     "ophthalmology": {
-      "total": 19,
+      "total": 26,
       "topics": {
         "NRO": 2,
-        "CJC": 5,
-        "RFQ": 3,
+        "CJC": 7,
+        "RFQ": 4,
         "TRM": 1,
         "RTV": 2,
         "GLC": 3,
-        "LNC": 2,
-        "ORL": 1
+        "LNC": 4,
+        "ORL": 3
       }
     },
     "orthopedics": {
-      "total": 14,
+      "total": 21,
       "topics": {
-        "SPN": 4,
-        "NMM": 5,
-        "FLL": 3,
-        "PDO": 1,
-        "BNT": 1
+        "SPN": 5,
+        "NMM": 6,
+        "FLL": 4,
+        "PDO": 2,
+        "BNT": 1,
+        "ARJ": 2,
+        "FRG": 1
       }
     },
     "pathology": {
-      "total": 21,
+      "total": 33,
       "topics": {
-        "GNC": 2,
-        "HAM": 11,
-        "RNP": 2,
+        "GNC": 3,
+        "HAM": 14,
+        "RNP": 3,
         "CVP": 2,
         "RSP": 2,
-        "LVR": 1,
-        "RPD": 1
+        "LVR": 2,
+        "RPD": 2,
+        "CIN": 1,
+        "CNS": 1,
+        "IMP": 2,
+        "ENP": 1
       }
     },
     "pediatrics": {
-      "total": 18,
+      "total": 29,
       "topics": {
         "PEM": 1,
-        "PIM": 1,
-        "NUM": 1,
-        "PNR": 1,
-        "PGS": 1,
+        "PIM": 2,
+        "NUM": 2,
+        "PNR": 2,
+        "PGS": 5,
         "PCR": 1,
-        "PRR": 6,
+        "PRR": 8,
         "GRW": 2,
-        "PKI": 4
+        "PKI": 5,
+        "NEN": 1
       }
     },
     "pharmacology": {
-      "total": 19,
+      "total": 30,
       "topics": {
         "ACI": 2,
-        "AMI": 3,
-        "CVF": 7,
-        "CNF": 1,
-        "GRF": 1,
+        "AMI": 5,
+        "CVF": 10,
+        "CNF": 3,
+        "GRF": 4,
         "GNP": 2,
-        "AUT": 2,
+        "AUT": 3,
         "ANS": 1
       }
     },
     "physiology": {
-      "total": 15,
+      "total": 21,
       "topics": {
-        "RES": 2,
-        "GNM": 5,
-        "REN": 4,
+        "RES": 4,
+        "GNM": 7,
+        "REN": 5,
         "NPH": 1,
-        "CVS": 2,
+        "CVS": 3,
         "GIT": 1
       }
     },
     "psychiatry": {
-      "total": 9,
+      "total": 16,
       "topics": {
         "MOD": 2,
         "SUB": 2,
-        "SCH": 2,
+        "SCH": 3,
         "ORG": 1,
-        "ANX": 1,
-        "SSE": 1
+        "ANX": 4,
+        "SSE": 1,
+        "PRS": 1,
+        "FOP": 1,
+        "PSF": 1
       }
     },
     "radiology": {
-      "total": 23,
+      "total": 27,
       "topics": {
-        "RDM": 5,
+        "RDM": 6,
         "RDC": 2,
-        "RDG": 4,
-        "RDW": 5,
+        "RDG": 5,
+        "RDW": 6,
         "RDI": 1,
         "RDB": 1,
         "RDN": 2,
-        "RDR": 2,
+        "RDR": 3,
         "RDT": 1
       }
     },
     "surgery": {
-      "total": 43,
+      "total": 57,
       "topics": {
-        "GIS": 10,
-        "BRS": 2,
-        "GNS": 5,
-        "TCC": 2,
-        "ENS": 2,
-        "VAS": 4,
-        "HNS": 1,
-        "URO": 4,
+        "GIS": 13,
+        "BRS": 3,
+        "GNS": 7,
+        "TCC": 3,
+        "ENS": 3,
+        "VAS": 6,
+        "HNS": 2,
+        "URO": 5,
         "HBP": 5,
         "PDS": 1,
-        "PLB": 4,
-        "NRS": 2,
+        "PLB": 5,
+        "NRS": 3,
         "GYM": 1
       }
     }
