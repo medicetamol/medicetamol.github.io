@@ -24,6 +24,12 @@ export default {
           DEFAULT: "rgb(var(--page) / <alpha-value>)",
           deep: "rgb(var(--page-deep) / <alpha-value>)"
         },
+        accent: {
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          soft: "rgb(var(--accent-soft) / <alpha-value>)",
+          ink: "rgb(var(--accent-ink) / <alpha-value>)",
+          text: "rgb(var(--accent-text) / <alpha-value>)"
+        },
         slate: themed("slate"),
         red: themed("red"),
         emerald: themed("emerald"),

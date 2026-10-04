@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Activity, BarChart3, Bookmark, BookOpen, Menu, Settings, X } from "lucide-react";
+import { BarChart3, Bookmark, BookOpen, Menu, Settings, X } from "lucide-react";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 // ─── Header actions slot ────────────────────────────────────────────────────
@@ -45,9 +45,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Logo — non-functional during custom module */}
             {isCustomQuiz ? (
               <span className="flex cursor-default items-center gap-2.5 select-none">
-                <span className="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-page">
-                  <Activity size={20} strokeWidth={2.5} />
-                </span>
+                <img src="/logo.svg" alt="" width={36} height={36} className="h-9 w-9 rounded-xl" />
                 <span className="text-lg font-bold tracking-tight text-slate-300">
                   mediCetamol
                 </span>
@@ -58,9 +56,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 className="flex items-center gap-2.5"
                 onClick={() => setOpen(false)}
               >
-                <span className="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-page">
-                  <Activity size={20} strokeWidth={2.5} />
-                </span>
+                <img src="/logo.svg" alt="" width={36} height={36} className="h-9 w-9 rounded-xl" />
                 <span className="text-lg font-bold tracking-tight">mediCetamol</span>
               </Link>
             )}

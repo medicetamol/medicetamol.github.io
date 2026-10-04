@@ -17,6 +17,12 @@
   --page: 11 15 20;        /* #0b0f14 */
   --page-deep: 8 11 16;    /* #080b10 — sticky quiz bars */
 
+  /* brand accent: turquoise (bg-accent, text-accent-text, bg-accent-soft, text-accent-ink) */
+  --accent: 45 212 191;       /* #2dd4bf */
+  --accent-soft: 15 42 41;    /* tinted chips / icon tiles */
+  --accent-ink: 4 32 30;      /* text on top of the accent colour */
+  --accent-text: 45 212 191;  /* accent used as text on the page */
+
   /* native <option> popups */
   --option-bg: 16 22 30;   /* #10161e */
   --option-fg: 248 250 252;
@@ -100,6 +106,11 @@
 
   --page: 241 245 249;     /* #f1f5f9 */
   --page-deep: 248 250 252;
+
+  --accent: 45 212 191;
+  --accent-soft: 204 251 241;
+  --accent-ink: 4 47 46;
+  --accent-text: 15 118 110;  /* darker teal so small text stays readable on white */
 
   --option-bg: 255 255 255;
   --option-fg: 15 23 42;
