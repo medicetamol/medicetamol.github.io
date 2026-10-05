@@ -55,14 +55,14 @@
     "id": "INOG005",
     "y": 2026,
     "t": "NPA",
-    "q": "Which of the following is not a probable sign of pregnancy?",
+    "q": "Which of the following is a probable sign of pregnancy?",
     "o": [
       "Hegar sign",
       "Braxton Hicks contractions",
       "Osiander sign",
       "Goodell sign"
     ],
-    "a": 1
+    "a": 3
   },
   {
     "id": "INOG006",

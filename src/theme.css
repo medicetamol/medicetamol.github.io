@@ -188,3 +188,87 @@
   --orange-900: 253 186 116;
   --orange-950: 254 215 170;
 }
+
+/* ---- accent themes (chosen in Settings; data-accent on <html>) ----
+ * Turquoise is the default (tokens above). Dark variants may also tint the page and
+ * card surfaces; light variants only swap the accent set (darker text shade for contrast). */
+:root:not([data-theme="light"])[data-accent="lime"] {
+  --accent: 198 244 50;
+  --accent-soft: 26 36 16;
+  --accent-ink: 11 15 20;
+  --accent-text: 198 244 50;
+}
+:root:not([data-theme="light"])[data-accent="orange"] {
+  --page: 23 17 13;
+  --page-deep: 17 12 9;
+  --slate-950: 14 10 7;
+  --slate-900: 36 26 20;
+  --slate-800: 58 42 32;
+  --accent: 255 138 76;
+  --accent-soft: 58 37 23;
+  --accent-ink: 26 15 8;
+  --accent-text: 255 150 94;
+}
+:root:not([data-theme="light"])[data-accent="indigo"] {
+  --page: 13 15 28;
+  --page-deep: 9 10 20;
+  --slate-950: 8 9 22;
+  --slate-900: 21 24 51;
+  --slate-800: 38 42 78;
+  --accent: 129 140 248;
+  --accent-soft: 30 32 70;
+  --accent-ink: 15 17 45;
+  --accent-text: 165 180 252;
+}
+:root:not([data-theme="light"])[data-accent="rose"] {
+  --page: 20 12 16;
+  --page-deep: 14 8 11;
+  --slate-950: 12 6 9;
+  --slate-900: 32 18 25;
+  --slate-800: 58 36 46;
+  --accent: 251 113 133;
+  --accent-soft: 61 22 32;
+  --accent-ink: 40 8 16;
+  --accent-text: 253 164 175;
+}
+:root:not([data-theme="light"])[data-accent="amber"] {
+  --page: 19 15 9;
+  --page-deep: 13 10 6;
+  --slate-950: 11 8 4;
+  --slate-900: 31 24 16;
+  --slate-800: 54 43 28;
+  --accent: 251 191 36;
+  --accent-soft: 56 40 10;
+  --accent-ink: 38 24 2;
+  --accent-text: 252 211 77;
+}
+:root[data-theme="light"][data-accent="lime"] {
+  --accent: 163 230 53;
+  --accent-soft: 236 252 203;
+  --accent-ink: 26 46 5;
+  --accent-text: 63 98 18;
+}
+:root[data-theme="light"][data-accent="orange"] {
+  --accent: 255 138 76;
+  --accent-soft: 255 237 213;
+  --accent-ink: 67 20 7;
+  --accent-text: 194 65 12;
+}
+:root[data-theme="light"][data-accent="indigo"] {
+  --accent: 79 70 229;
+  --accent-soft: 224 231 255;
+  --accent-ink: 255 255 255;
+  --accent-text: 67 56 202;
+}
+:root[data-theme="light"][data-accent="rose"] {
+  --accent: 225 29 72;
+  --accent-soft: 255 228 230;
+  --accent-ink: 255 255 255;
+  --accent-text: 190 18 60;
+}
+:root[data-theme="light"][data-accent="amber"] {
+  --accent: 245 158 11;
+  --accent-soft: 254 243 199;
+  --accent-ink: 69 26 3;
+  --accent-text: 180 83 9;
+}

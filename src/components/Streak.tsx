@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
+import { Flame } from "lucide-react";
 import { computeStreak, getDailyActivity, STREAK_DAILY_GOAL } from "../lib/db";
 import type { StreakInfo } from "../lib/db";
 
@@ -13,9 +14,12 @@ import type { StreakInfo } from "../lib/db";
  */
 export default function Streak({
   size = "md",
+  variant = "stack",
   linkToProgress = false,
 }: {
   size?: "sm" | "md";
+  /** "pill" = compact "4 day streak" chip used on Home; "stack" = flame + count (Progress). */
+  variant?: "stack" | "pill";
   /** When true, wraps the widget in a Link to /progress (used on Home; Progress itself skips this). */
   linkToProgress?: boolean;
 }) {
@@ -42,6 +46,41 @@ export default function Streak({
   const hasStreak = info.days > 0;
   const pendingToday = hasStreak && !info.completedToday;
   const completedActive = hasStreak && info.completedToday;
+
+  if (variant === "pill") {
+    const label = hasStreak ? `${info.days} day streak` : "Build your Streak";
+    const pill = (
+      <span
+        className={`inline-flex items-center gap-1.5 rounded-full text-sm font-semibold ${
+          hasStreak
+            ? "bg-accent-soft text-accent-text"
+            : "border border-slate-800 bg-slate-900/60 text-slate-400"
+        } ${pendingToday ? "py-1 pl-1.5 pr-3" : "px-3 py-1.5"}`}
+      >
+        {pendingToday ? (
+          // at risk: dotted ring + blinking flame
+          <span className="grid h-7 w-7 place-items-center rounded-full border-2 border-dotted border-red-500">
+            <Flame size={15} fill="currentColor" className="flame-blink" aria-hidden="true" />
+          </span>
+        ) : (
+          <Flame
+            size={16}
+            fill={hasStreak ? "currentColor" : "none"}
+            className={hasStreak ? "" : "text-slate-500"}
+            aria-hidden="true"
+          />
+        )}
+        {label}
+      </span>
+    );
+    return linkToProgress ? (
+      <Link to="/progress" aria-label={`${label}. View progress`} className="rounded-full">
+        {pill}
+      </Link>
+    ) : (
+      pill
+    );
+  }
 
   const dims = size === "sm" ? "h-9 w-9 text-2xl" : "h-14 w-14 text-4xl";
 

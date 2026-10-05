@@ -36,34 +36,34 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
-      <section className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/60 p-6 sm:p-10">
-        <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-accent/10" />
-        <div aria-hidden="true" className="pointer-events-none absolute right-12 top-14 h-20 w-20 rounded-full bg-accent/10" />
+    <main className="relative mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
+      {/* soft circles sit behind the hero, on the page itself (no card box) */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-[440px] overflow-hidden">
+        <div className="absolute -right-24 -top-28 h-72 w-72 rounded-full bg-accent/10" />
+        <div className="absolute right-8 top-24 h-24 w-24 rounded-full bg-accent/10" />
+      </div>
 
-        <div className="relative">
-          <div className="flex items-start justify-between gap-4">
-            <p className="text-sm text-slate-400">{hello}, Doctor</p>
-            <Streak size="sm" linkToProgress />
-          </div>
+      <section className="relative p-5">
+        <p className="text-sm text-slate-400">{hello}, Doctor</p>
 
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
-            Let&apos;s solve some <span className="text-accent-text">PYQs</span> today
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-400 sm:text-base">
-            Solve real previous year questions, bookmark the important ones, and track your actual QBank performance.
-          </p>
-
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link
-              to="/pyqs"
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-sm font-bold text-accent-ink hover:brightness-110 sm:py-3.5"
-            >
-              Proceed to PYQs <ArrowRight size={17} />
-            </Link>
-            <InstallButton />
-          </div>
+        {/* min height reserves the pill's space while the streak loads */}
+        <div className="mt-2 flex min-h-[36px] justify-end">
+          <Streak variant="pill" linkToProgress />
         </div>
+
+        <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
+          Let&apos;s solve some <span className="text-accent-text">PYQs</span> today
+        </h1>
+        <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-400 sm:text-base">
+          Solve real previous year questions, bookmark the important ones, and track your actual QBank performance.
+        </p>
+
+        <Link
+          to="/pyqs"
+          className="mt-7 flex items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-sm font-bold text-accent-ink hover:brightness-110 sm:inline-flex sm:py-3.5"
+        >
+          Proceed to PYQs <ArrowRight size={17} />
+        </Link>
       </section>
 
       {daily === undefined ? (
@@ -101,6 +101,10 @@ export default function Home() {
           </Link>
         ))}
       </section>
+
+      <div className="mt-8 flex flex-col items-center gap-3 empty:hidden">
+        <InstallButton />
+      </div>
 
       <footer className="mt-10 border-t border-slate-800/90 pt-8 text-center">
         <p className="text-xs text-slate-500">One place to solve, track, and actually improve.</p>

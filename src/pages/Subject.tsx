@@ -1,4 +1,4 @@
-import { ArrowLeft, Play, Trash2 } from "lucide-react";
+import { ChevronLeft, Play, Trash2 } from "lucide-react";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { EXAMS, getSubject } from "../constants";
 import { loadQuestions } from "../data/questions";
@@ -125,22 +125,22 @@ export default function Subject() {
     <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
       <Link
         to={`/pyqs/${exam}`}
-        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
+        className="mb-6 inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> {EXAMS.find((e) => e.id === examId)?.name}
+        <ChevronLeft size={16} /> {EXAMS.find((e) => e.id === examId)?.name}
       </Link>
 
       {/* Header with inline progress bar */}
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">{subject.name}</h1>
+        <h1 className="text-3xl font-bold tracking-tight">{subject.name}</h1>
         <div
           className="mt-2 overflow-hidden rounded-full"
           style={{
-            background: `linear-gradient(to right, rgb(var(--slate-400) / 0.3) ${solvedPct}%, rgb(var(--slate-400) / 0.04) ${solvedPct}%)`,
-            border: "1px solid rgb(var(--slate-400) / 0.2)",
+            background: `linear-gradient(to right, rgb(var(--accent) / 0.4) ${solvedPct}%, rgb(var(--accent) / 0.06) ${solvedPct}%)`,
+            border: "1px solid rgb(var(--accent) / 0.3)",
           }}
         >
-          <p className="px-3 py-1.5 text-xs text-slate-400">
+          <p className="px-3 py-1.5 text-xs text-slate-300">
             {totalCount} PYQ{totalCount === 1 ? "" : "s"}
             {attemptedCount > 0 && (
               <span className="ml-1.5">· {solvedPct}% solved</span>
@@ -154,15 +154,15 @@ export default function Subject() {
       ) : (
         <>
           {/* Topic filter */}
-          <div className="rounded-2xl border border-slate-800 bg-transparent p-4">
+          <div className="rounded-3xl border border-slate-800 bg-slate-900/40 p-4">
             <div className="flex flex-wrap gap-2">
               {/* All topics pill */}
               <button
                 onClick={() => setSelectedTopic("all")}
-                className="relative overflow-hidden rounded-lg px-3 py-2 text-xs font-semibold"
+                className="relative overflow-hidden rounded-xl px-3 py-2 text-xs font-semibold"
                 style={
                   selectedTopic === "all"
-                    ? { background: "rgb(var(--slate-100))", color: "rgb(var(--slate-900))", border: "1px solid transparent" }
+                    ? { background: "rgb(var(--accent))", color: "rgb(var(--accent-ink))", border: "1px solid transparent" }
                     : { background: "rgb(var(--slate-400) / 0.06)", color: "rgb(var(--slate-300))", border: "1px solid rgb(var(--slate-400) / 0.1)" }
                 }
               >
@@ -180,12 +180,12 @@ export default function Subject() {
                   <button
                     key={id}
                     onClick={() => setSelectedTopic(id)}
-                    className="relative overflow-hidden rounded-lg px-3 py-2 text-xs font-semibold"
+                    className="relative overflow-hidden rounded-xl px-3 py-2 text-xs font-semibold"
                     style={
                       isActive
-                        ? { background: "rgb(var(--slate-100))", color: "rgb(var(--slate-900))", border: "1px solid transparent" }
+                        ? { background: "rgb(var(--accent))", color: "rgb(var(--accent-ink))", border: "1px solid transparent" }
                         : {
-                            background: `linear-gradient(to right, rgb(var(--slate-400) / 0.3) ${topicPct}%, rgb(var(--slate-400) / 0.04) ${topicPct}%)`,
+                            background: `linear-gradient(to right, rgb(var(--accent) / 0.22) ${topicPct}%, rgb(var(--slate-400) / 0.04) ${topicPct}%)`,
                             border: "1px solid rgb(var(--slate-400) / 0.2)",
                             color: "rgb(var(--slate-300))",
                           }
@@ -194,7 +194,7 @@ export default function Subject() {
                     {name}
                     <span
                       className={`ml-1.5 rounded px-1 text-[10px] font-normal ${
-                        isActive ? "text-slate-600" : "text-slate-600"
+                        isActive ? "opacity-70" : "text-slate-500"
                       }`}
                     >
                       {stats.total}
@@ -206,8 +206,8 @@ export default function Subject() {
           </div>
 
           {/* Start bar */}
-          <div className="mt-4 flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950 px-4 py-3">
-            <span className="text-sm text-slate-400">
+          <div className="mt-4 flex items-center justify-between rounded-2xl bg-accent-soft px-4 py-3">
+            <span className="text-sm text-slate-300">
               {selectedCount} question{selectedCount === 1 ? "" : "s"} selected
             </span>
             {filtered.length > 0 && filtered.every((q) => attemptedIds.has(q.id)) ? (
@@ -227,14 +227,14 @@ export default function Subject() {
                     state: { answers: selections },
                   });
                 }}
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 text-xs font-bold text-slate-950"
+                className="inline-flex items-center gap-2 rounded-xl bg-accent px-4 py-2.5 text-xs font-bold text-accent-ink hover:brightness-110"
               >
                 <Play size={15} /> Start
               </button>
             ) : (
               <Link
                 to={`/quiz/${exam}/${subjectId}?source=direct&topic=${selectedTopic}`}
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 text-xs font-bold text-slate-950"
+                className="inline-flex items-center gap-2 rounded-xl bg-accent px-4 py-2.5 text-xs font-bold text-accent-ink hover:brightness-110"
               >
                 <Play size={15} /> Start
               </Link>
@@ -260,7 +260,7 @@ export default function Subject() {
                   <circle
                     cx="36" cy="36" r={radius}
                     fill="none"
-                    style={{ stroke: "rgb(var(--slate-400) / 0.55)" }}
+                    style={{ stroke: "rgb(var(--accent-text) / 0.85)" }}
                     strokeWidth="7"
                     strokeDasharray={`${solvedArc} ${circumference}`}
                     strokeLinecap="round"

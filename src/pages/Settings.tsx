@@ -1,7 +1,7 @@
 import { Check, Download, LogOut, Moon, Share, Smartphone, Sun, User } from "lucide-react";
 import { useState } from "react";
 import { useInstall } from "../lib/pwa";
-import { setTheme, useTheme } from "../lib/theme";
+import { ACCENTS, setAccent, setTheme, useAccent, useTheme } from "../lib/theme";
 import type { Theme } from "../lib/theme";
 import { setFontScale, useFontScale } from "../lib/fontScale";
 import type { FontScale } from "../lib/fontScale";
@@ -23,6 +23,7 @@ const FONT_SCALES: Array<{ id: FontScale; label: string; sample: string }> = [
 
 export default function Settings() {
   const theme = useTheme();
+  const accent = useAccent();
   const fontScale = useFontScale();
   const { canPrompt, installed, isIOS, promptInstall } = useInstall();
   const { user } = useAuth();
@@ -119,6 +120,50 @@ export default function Settings() {
               >
                 <Icon size={15} />
                 {label}
+              </button>
+            );
+          })}
+        </div>
+
+        <p className="mt-5 text-xs font-medium text-slate-400">Choose theme</p>
+        <div role="radiogroup" aria-label="Colour theme" className="mt-2 grid grid-cols-3 gap-3">
+          {ACCENTS.map((a) => {
+            const active = accent === a.id;
+            const p = theme === "light" ? a.light : a.dark;
+            return (
+              <button
+                key={a.id}
+                type="button"
+                role="radio"
+                aria-checked={active}
+                aria-label={a.label}
+                onClick={() => setAccent(a.id)}
+                className="text-center"
+              >
+                <span
+                  className="relative block h-[62px] rounded-2xl p-2"
+                  style={{
+                    background: p.bg,
+                    border: active ? `1.5px solid ${p.accent}` : "1px solid rgb(var(--slate-700))",
+                  }}
+                >
+                  <span className="block h-4 rounded-md" style={{ background: p.card }} />
+                  <span className="mt-1.5 flex items-center gap-1">
+                    <span className="h-2 w-6 rounded-full" style={{ background: p.accent }} />
+                    <span className="h-2 w-2 rounded-full opacity-50" style={{ background: p.accent }} />
+                  </span>
+                  {active && (
+                    <span
+                      className="absolute -right-1 -top-1 grid h-[18px] w-[18px] place-items-center rounded-full"
+                      style={{ background: p.accent, color: p.ink }}
+                    >
+                      <Check size={12} strokeWidth={3} />
+                    </span>
+                  )}
+                </span>
+                <span className={`mt-1.5 block text-[11px] ${active ? "font-semibold text-slate-100" : "text-slate-400"}`}>
+                  {a.label}
+                </span>
               </button>
             );
           })}
