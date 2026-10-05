@@ -1,4 +1,4 @@
-import { ArrowLeft, Check } from "lucide-react";
+import { ChevronLeft, Check } from "lucide-react";
 import { Link, useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { getSubject } from "../constants";
@@ -63,14 +63,14 @@ export default function ModuleBuilderTopics() {
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
       <Link
         to={`/module/${examId}`}
-        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> Back to Selecting Subjects
+        <ChevronLeft size={16} /> Back to Selecting Subjects
       </Link>
 
       <div className="mb-6">
         <h1 className="text-2xl font-bold">{subject.name}</h1>
-        <p className="mt-1 text-sm text-slate-500">Choose topics, or leave all selected.</p>
+        <p className="mt-1 text-sm text-slate-400">Choose topics, or leave all selected.</p>
       </div>
 
       <div className="overflow-hidden rounded-2xl border border-slate-800">
@@ -83,7 +83,7 @@ export default function ModuleBuilderTopics() {
         >
           <span
             className={`grid h-5 w-5 shrink-0 place-items-center rounded border ${
-              isAll ? "border-slate-300 bg-slate-100 text-slate-950" : "border-slate-600"
+              isAll ? "border-accent bg-accent text-accent-ink" : "border-slate-600"
             }`}
           >
             {isAll && <Check size={14} strokeWidth={3} />}
@@ -104,7 +104,7 @@ export default function ModuleBuilderTopics() {
             >
               <span
                 className={`grid h-5 w-5 shrink-0 place-items-center rounded border ${
-                  active ? "border-slate-300 bg-slate-100 text-slate-950" : "border-slate-600"
+                  active ? "border-accent bg-accent text-accent-ink" : "border-slate-600"
                 }`}
               >
                 {active && <Check size={14} strokeWidth={3} />}

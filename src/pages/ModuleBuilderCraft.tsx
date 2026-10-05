@@ -1,4 +1,4 @@
-import { ArrowLeft, Minus, Plus } from "lucide-react";
+import { ChevronLeft, Minus, Plus } from "lucide-react";
 import { useNavigate, useParams } from 'react-router-dom';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { SUBJECTS } from "../constants";
@@ -124,7 +124,7 @@ function ModeToggle({
               type="button"
               onClick={() => onChange(m)}
               className={`flex-1 py-3 text-sm font-semibold transition ${
-                active ? "bg-slate-800 text-slate-100" : "text-slate-500 hover:text-slate-300"
+                active ? "bg-slate-800 text-slate-100" : "text-slate-400 hover:text-slate-300"
               }`}
             >
               {m === "guide" ? "Guide Mode" : "Exam Mode"}
@@ -263,15 +263,15 @@ export default function ModuleBuilderCraft() {
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> BACK
+        <ChevronLeft size={16} /> BACK
       </button>
 
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Crafting Module</h1>
         {subjectSummary && (
-          <p className="mt-1 text-sm text-slate-500">From {subjectSummary}.</p>
+          <p className="mt-1 text-sm text-slate-400">From {subjectSummary}.</p>
         )}
       </div>
 
@@ -286,12 +286,12 @@ export default function ModuleBuilderCraft() {
       {/* Choices — available immediately, independent of fetch */}
       <div className="space-y-4">
         <div>
-          <p className="mb-2 text-xs text-slate-500">Status</p>
+          <p className="mb-2 text-xs text-slate-400">Status</p>
           <FilterBar value={statuses} onChange={setStatuses} />
         </div>
 
         <div>
-          <p className="mb-2 text-xs text-slate-500">Mode</p>
+          <p className="mb-2 text-xs text-slate-400">Mode</p>
           <ModeToggle mode={mode} onChange={(m) => { setMode(m); setModeError(false); }} showError={modeError} />
         </div>
       </div>
@@ -324,7 +324,7 @@ export default function ModuleBuilderCraft() {
           type="button"
           disabled={dataLoading || matchingCount === 0 || creating}
           onClick={handleCreate}
-          className="py-3 flex-1 rounded-xl bg-slate-100 px-5 text-xs font-bold text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
+          className="py-3 flex-1 rounded-xl bg-accent px-5 text-xs font-bold text-accent-ink disabled:cursor-not-allowed disabled:opacity-40"
         >
           {dataLoading
             ? "LOADING…"

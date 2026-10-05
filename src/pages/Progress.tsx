@@ -39,7 +39,7 @@ function ClearConfirmModal({
           <br />
           Once cleared, it can't be revived.
           <br />
-          <span className="text-slate-500">
+          <span className="text-slate-400">
             But you can solve again, and progress will be updated.
           </span>
         </p>
@@ -188,8 +188,8 @@ export default function Progress() {
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
       <div className="mb-7">
         <h1 className="text-2xl font-bold">Progress</h1>
-        <p className="mt-1 text-sm text-slate-500">Your overall performance and activity.</p>
-        <p className="mt-1 text-sm text-slate-500">Let's get 1% better each day.</p>
+        <p className="mt-1 text-sm text-slate-400">Your overall performance and activity.</p>
+        <p className="mt-1 text-sm text-slate-400">Let's get 1% better each day.</p>
         {user && (
           <div className="mt-4">
             <SyncButton />
@@ -208,12 +208,12 @@ export default function Progress() {
       </div>
 
       <div className="mt-3 rounded-xl border border-slate-800 bg-slate-950/70 p-4 text-center">
-        <p className="text-xs uppercase tracking-wide text-slate-500">Daily Target</p>
+        <p className="text-xs uppercase tracking-wide text-slate-400">Daily Target</p>
         <p className="mt-1 text-sm font-semibold text-slate-200">
           {streakGoalMet ? "Streak complete" : `${todayCount}/${STREAK_DAILY_GOAL} Questions Completed`}
         </p>
         {!streakGoalMet && (
-          <p className={`mt-1 text-xs ${streakAtRisk ? "font-medium text-red-400" : "text-slate-500"}`}>
+          <p className={`mt-1 text-xs ${streakAtRisk ? "font-medium text-red-400" : "text-slate-400"}`}>
             {streakAtRisk
               ? "Your Streak is at Risk - complete today's target to maintain it"
               : "Complete today's target to start your streak"}
@@ -226,9 +226,9 @@ export default function Progress() {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="font-bold">This week</h2>
-            <p className="mt-1 text-xs text-slate-500">PYQs solved per day</p>
+            <p className="mt-1 text-xs text-slate-400">PYQs solved per day</p>
           </div>
-          <BarChart3 size={19} className="text-slate-500" />
+          <BarChart3 size={19} className="text-slate-400" />
         </div>
 
         <div className="mt-6 flex h-36 items-end gap-2">
@@ -240,7 +240,7 @@ export default function Progress() {
                 key={day.date}
                 className="flex h-full flex-1 flex-col items-center justify-end gap-2"
               >
-                <span className="text-[10px] text-slate-500">{day.total || ""}</span>
+                <span className="text-[10px] text-slate-400">{day.total || ""}</span>
                 <div
                   className="w-full rounded-t-md bg-slate-700"
                   style={{ height: `${height}%` }}
@@ -256,7 +256,7 @@ export default function Progress() {
       <section className="mt-5 grid gap-3 sm:grid-cols-2">
         <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
           <h2 className="font-bold">Performance</h2>
-          <p className="mt-1 text-xs text-slate-500">Direct QBank only</p>
+          <p className="mt-1 text-xs text-slate-400">Direct QBank only</p>
           <div className="mt-4 space-y-3">
             <Row icon={CheckCircle2} label="Correct attempts" value={directCorrect} />
             <Row icon={XCircle} label="Incorrect attempts" value={directIncorrect} />
@@ -277,7 +277,7 @@ export default function Progress() {
                 className={`flex-1 rounded-lg px-3 py-2 text-xs font-semibold transition ${
                   selectedExam === exam.id
                     ? "bg-slate-800 text-slate-50"
-                    : "text-slate-500 hover:text-slate-300"
+                    : "text-slate-400 hover:text-slate-300"
                 }`}
               >
                 {exam.name}
@@ -286,7 +286,7 @@ export default function Progress() {
           </div>
 
           {subjectStats.length === 0 ? (
-            <p className="mt-3 text-sm leading-6 text-slate-500">
+            <p className="mt-3 text-sm leading-6 text-slate-400">
               Subject-level performance will appear after you solve {EXAMS.find((e) => e.id === selectedExam)?.name} PYQs directly from
               the QBank.
             </p>
@@ -314,7 +314,7 @@ export default function Progress() {
                       }`}
                     >
                       <span className="flex-1 text-sm text-slate-300">{s.name}</span>
-                      <span className="text-xs text-slate-500">{s.attempts} Q</span>
+                      <span className="text-xs text-slate-400">{s.attempts} Q</span>
                       <b className="text-xs">{s.solvedPercent}% solved</b>
                       <Trash2 size={15} className="ml-1 shrink-0 text-red-400/70" strokeWidth={1.8} />
                     </button>
@@ -349,8 +349,8 @@ function Metric({
 }) {
   return (
     <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
-      <Icon size={18} className="text-slate-500" />
-      <p className="mt-4 text-xs text-slate-500">{label}</p>
+      <Icon size={18} className="text-slate-400" />
+      <p className="mt-4 text-xs text-slate-400">{label}</p>
       <p className="mt-1 text-xl font-bold">{value}</p>
     </div>
   );
@@ -367,7 +367,7 @@ function Row({
 }) {
   return (
     <div className="flex items-center gap-3 rounded-xl bg-slate-950 p-3">
-      <Icon size={17} className="text-slate-500" />
+      <Icon size={17} className="text-slate-400" />
       <span className="flex-1 text-sm text-slate-400">{label}</span>
       <b className="text-sm">{value}</b>
     </div>

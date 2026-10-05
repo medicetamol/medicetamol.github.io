@@ -32,7 +32,7 @@ export default function SubjectSelect() {
 
       <div className="mb-7">
         <h1 className="text-3xl font-bold tracking-tight">{currentExam?.name ?? "PYQs"}</h1>
-        <p className="mt-1 text-sm text-slate-400">Choose a subject.</p>
+        <p className="mt-1 text-sm text-slate-400">Choose a Subject.</p>
       </div>
 
       {/* Create custom module — full-width banner, plus a square shortcut to its history */}
@@ -44,7 +44,7 @@ export default function SubjectSelect() {
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-accent-ink/15">
             <Sparkles size={18} />
           </span>
-          <span className="text-sm font-bold">Create custom module</span>
+          <span className="text-sm font-bold">Create Custom Module</span>
         </Link>
         <Link
           to="/modules/history"

@@ -51,7 +51,7 @@ export default class ErrorBoundary extends Component<Props, State> {
         <button
           type="button"
           onClick={this.leave}
-          className="mt-6 inline-block rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950"
+          className="mt-6 inline-block rounded-xl bg-accent px-5 py-3 text-sm font-bold text-accent-ink"
         >
           Go to Home
         </button>

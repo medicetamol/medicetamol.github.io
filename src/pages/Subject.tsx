@@ -143,7 +143,7 @@ export default function Subject() {
           <p className="px-3 py-1.5 text-xs text-slate-300">
             {totalCount} PYQ{totalCount === 1 ? "" : "s"}
             {attemptedCount > 0 && (
-              <span className="ml-1.5">· {solvedPct}% solved</span>
+              <span className="ml-1.5">· {solvedPct}% Solved</span>
             )}
           </p>
         </div>
@@ -208,7 +208,7 @@ export default function Subject() {
           {/* Start bar */}
           <div className="mt-4 flex items-center justify-between rounded-2xl bg-accent-soft px-4 py-3">
             <span className="text-sm text-slate-300">
-              {selectedCount} question{selectedCount === 1 ? "" : "s"} selected
+              {selectedCount} Question{selectedCount === 1 ? "" : "s"} Selected
             </span>
             {filtered.length > 0 && filtered.every((q) => attemptedIds.has(q.id)) ? (
               // Every question in this topic already has a stored answer —
@@ -299,7 +299,7 @@ export default function Subject() {
           className="inline-flex items-center gap-1.5 text-xs text-slate-600 underline underline-offset-4 decoration-slate-700 hover:text-slate-400 transition-colors"
         >
           <Trash2 size={12} />
-          Clear {subject.name} progress
+          Clear {subject.name} Progress
         </Link>
       </div>
     </main>

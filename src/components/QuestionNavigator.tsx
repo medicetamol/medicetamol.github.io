@@ -127,7 +127,7 @@ export default function QuestionNavigator({
                 type="button"
                 onClick={() => onJump(i)}
                 className={`relative aspect-square rounded-lg text-sm font-semibold transition-colors ${STATUS_STYLE[status]} ${
-                  isCurrent ? "ring-2 ring-sky-400" : ""
+                  isCurrent ? "ring-2 ring-accent" : ""
                 }`}
                 aria-label={`Go to question ${i + 1}`}
                 aria-current={isCurrent ? "true" : undefined}

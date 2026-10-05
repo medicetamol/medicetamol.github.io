@@ -1,4 +1,4 @@
-import { ArrowLeft, Check, Copy, Share2 } from "lucide-react";
+import { ChevronLeft, Check, Copy, Share2 } from "lucide-react";
 import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import React, { useMemo, useState } from 'react';
 import { getSiteUrl, shareOrCopy } from "../lib/sharing";
@@ -140,20 +140,20 @@ export default function ModuleBuilderSolve() {
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> BACK
+        <ChevronLeft size={16} /> BACK
       </button>
 
       <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-        <p className="text-xs uppercase tracking-wider text-slate-500">Custom Module</p>
+        <p className="text-xs uppercase tracking-wider text-slate-400">Custom Module</p>
         <h1 className="mt-2 text-2xl font-bold">
           {ids.length} PYQ{ids.length === 1 ? "" : "s"}
         </h1>
         {subjectSummary && (
           <p className="mt-1 text-sm leading-6 text-slate-400">From {subjectSummary}</p>
         )}
-        <p className="mt-3 text-xs text-slate-500">
+        <p className="mt-3 text-xs text-slate-400">
           {mode === "quiz" ? "Exam Mode" : "Guide Mode"}
         </p>
 
@@ -182,7 +182,7 @@ export default function ModuleBuilderSolve() {
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-slate-100 px-4 py-2.5 text-xs font-bold text-slate-950"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-xs font-bold text-accent-ink"
                 >
                   <Share2 size={14} /> Share
                 </button>
@@ -205,7 +205,7 @@ export default function ModuleBuilderSolve() {
         <button
           type="button"
           onClick={beginQuiz}
-          className="w-full rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-50"
+          className="w-full rounded-xl bg-accent px-5 py-3 text-sm font-bold text-accent-ink hover:brightness-110"
         >
           Solve Module
         </button>

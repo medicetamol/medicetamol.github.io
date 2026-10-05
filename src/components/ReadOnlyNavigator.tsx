@@ -112,7 +112,7 @@ export default function ReadOnlyNavigator({
             aria-checked={hideOption}
             onClick={onToggleHideOption}
             className={`relative h-6 w-11 shrink-0 overflow-hidden rounded-full transition-colors ${
-              hideOption ? "bg-sky-600" : "bg-slate-700"
+              hideOption ? "bg-accent" : "bg-slate-700"
             }`}
           >
             <span
@@ -169,7 +169,7 @@ export default function ReadOnlyNavigator({
                   type="button"
                   onClick={() => onJump(poolIndex)}
                   className={`relative aspect-square rounded-lg text-sm font-semibold transition-colors ${STATUS_STYLE[m.status]} ${
-                    isCurrent ? "ring-2 ring-sky-400" : ""
+                    isCurrent ? "ring-2 ring-accent" : ""
                   }`}
                   aria-label={`Go to question ${poolIndex + 1}`}
                   aria-current={isCurrent ? "true" : undefined}

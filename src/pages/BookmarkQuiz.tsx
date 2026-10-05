@@ -1,5 +1,4 @@
 import {
-  ArrowLeft,
   Bookmark,
   ChevronLeft,
   ChevronRight,
@@ -98,19 +97,19 @@ export default function BookmarkQuiz() {
       <button
         type="button"
         onClick={() => navigate("/bookmarks")}
-        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> Bookmarks
+        <ChevronLeft size={16} /> Bookmarks
       </button>
 
       <div className="mb-6">
         <h1 className="text-2xl font-bold">{subject.name}</h1>
         {loadState === "loading" ? (
-          <p className="mt-1 flex items-center gap-2 text-sm text-slate-500">
+          <p className="mt-1 flex items-center gap-2 text-sm text-slate-400">
             <Loader2 size={14} className="animate-spin" /> Crafting QBank only for you…
           </p>
         ) : (
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-slate-400">
             {bundle.length} bookmarked PYQ{bundle.length === 1 ? "" : "s"}
           </p>
         )}
@@ -120,7 +119,7 @@ export default function BookmarkQuiz() {
         <div className="rounded-2xl border border-dashed border-slate-800 bg-slate-950/40 p-8 text-center">
           <Bookmark className="mx-auto text-slate-600" size={30} />
           <h3 className="mt-3 font-semibold text-slate-200">No bookmarks found</h3>
-          <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-slate-500">
+          <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-slate-400">
             This subject has no bookmarked questions right now.
           </p>
         </div>
@@ -133,7 +132,7 @@ export default function BookmarkQuiz() {
               <button
                 onClick={() => setSelectedTopic("all")}
                 disabled={loadState === "loading"}
-                className={`rounded-lg px-3 py-2 text-xs font-semibold disabled:opacity-40 ${selectedTopic === "all" ? "bg-slate-100 text-slate-950" : "bg-slate-800 text-slate-300"}`}
+                className={`rounded-lg px-3 py-2 text-xs font-semibold disabled:opacity-40 ${selectedTopic === "all" ? "bg-accent text-accent-ink" : "bg-slate-800 text-slate-300"}`}
               >
                 All topics
               </button>
@@ -141,7 +140,7 @@ export default function BookmarkQuiz() {
                 <button
                   key={id}
                   onClick={() => setSelectedTopic(id)}
-                  className={`rounded-lg px-3 py-2 text-xs font-semibold ${selectedTopic === id ? "bg-slate-100 text-slate-950" : "bg-slate-800 text-slate-300"}`}
+                  className={`rounded-lg px-3 py-2 text-xs font-semibold ${selectedTopic === id ? "bg-accent text-accent-ink" : "bg-slate-800 text-slate-300"}`}
                 >
                   {name}
                 </button>
@@ -157,7 +156,7 @@ export default function BookmarkQuiz() {
               type="button"
               onClick={() => setStarted(true)}
               disabled={loadState === "loading" || filtered.length === 0}
-              className="inline-flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 text-xs font-bold text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
+              className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-xs font-bold text-accent-ink disabled:cursor-not-allowed disabled:opacity-40"
             >
               {loadState === "loading" ? <Loader2 size={15} className="animate-spin" /> : <Play size={15} />}
               Solve Module
@@ -418,7 +417,7 @@ function ReviewSession({
         <button
           type="button"
           onClick={onExit}
-          className="mt-5 inline-flex rounded-lg bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950"
+          className="mt-5 inline-flex rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-ink"
         >
           Back
         </button>
@@ -435,7 +434,7 @@ function ReviewSession({
           aria-label={`Time remaining ${mm}:${ss}`}
         >
           <div
-            className={`h-full transition-[width] duration-1000 ease-linear ${danger ? "bg-red-500" : "bg-slate-500"}`}
+            className={`h-full transition-[width] duration-1000 ease-linear ${danger ? "bg-red-500" : "bg-accent"}`}
             style={{ width: `${timerProgress}%` }}
           />
         </div>
@@ -444,7 +443,7 @@ function ReviewSession({
           <button
             type="button"
             onClick={onExit}
-            className="inline-flex items-center gap-1 text-xs font-medium text-slate-500 hover:text-slate-300"
+            className="inline-flex items-center gap-1 text-xs font-medium text-slate-400 hover:text-slate-300"
             aria-label="Back to bookmarks"
           >
             <ChevronLeft size={14} />
@@ -474,7 +473,7 @@ function ReviewSession({
             <button
               type="button"
               onClick={bookmark}
-              className="rounded-lg p-2 text-sky-400 transition-colors hover:text-sky-300"
+              className="rounded-lg p-2 text-accent-text transition-colors hover:brightness-125"
               aria-label={bookmarked ? "Remove bookmark" : "Bookmark"}
             >
               <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
@@ -482,7 +481,7 @@ function ReviewSession({
             <button
               type="button"
               onClick={() => setNavigatorOpen(true)}
-              className="rounded-lg p-2 text-slate-500 transition-colors hover:text-slate-200"
+              className="rounded-lg p-2 text-slate-400 transition-colors hover:text-slate-200"
               aria-label="Question navigator"
             >
               <LayoutGrid size={21} strokeWidth={1.8} />
@@ -508,7 +507,7 @@ function ReviewSession({
         {submitted && question && (
           <section className="mt-6 w-full rounded-xl border border-slate-800 bg-slate-900/60 px-3.5 py-4 sm:px-5">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                 Explanation
               </p>
               <button
@@ -526,14 +525,14 @@ function ReviewSession({
               <p className="mt-2 text-sm leading-6 text-slate-300">{explanation.e}</p>
             ) : (
               <div className="mt-3">
-                <p className="text-sm leading-6 text-slate-500">Explanation not available yet.</p>
+                <p className="text-sm leading-6 text-slate-400">Explanation not available yet.</p>
                 <button
                   type="button"
                   onClick={askAI}
                   className="group mt-1.5 flex w-full items-end justify-end gap-1 text-right"
                   aria-label="Get an AI explanation for this question"
                 >
-                  <span className="text-xs italic leading-5 text-slate-500 underline decoration-slate-700 decoration-dotted underline-offset-4 transition-colors group-hover:text-slate-300 group-hover:decoration-slate-500">
+                  <span className="text-xs italic leading-5 text-slate-400 underline decoration-slate-700 decoration-dotted underline-offset-4 transition-colors group-hover:text-slate-300 group-hover:decoration-slate-500">
                     Get an AI explanation for this question
                   </span>
                   <CornerRightUp

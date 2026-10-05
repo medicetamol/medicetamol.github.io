@@ -1,4 +1,4 @@
-import { ArrowLeft, BookOpen, ShieldCheck, Sparkles } from "lucide-react";
+import { ChevronLeft, BookOpen, ShieldCheck, Sparkles } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export default function About() {
@@ -8,7 +8,7 @@ export default function About() {
         to="/"
         className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> Home
+        <ChevronLeft size={16} /> Home
       </Link>
 
       <h1 className="text-2xl font-bold sm:text-3xl">About mediCetamol</h1>

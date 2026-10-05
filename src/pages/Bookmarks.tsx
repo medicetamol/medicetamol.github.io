@@ -1,4 +1,4 @@
-import { ArrowRight, Bookmark } from "lucide-react";
+import { ChevronRight, Bookmark } from "lucide-react";
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SUBJECTS } from "../constants";
@@ -59,7 +59,7 @@ export default function Bookmarks() {
   if (bookmarkedQids === null) {
     return (
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
-        <p className="text-sm text-slate-500">Loading…</p>
+        <p className="text-sm text-slate-400">Loading…</p>
       </main>
     );
   }
@@ -68,19 +68,19 @@ export default function Bookmarks() {
     <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
       <div className="mb-7">
         <h1 className="text-2xl font-bold">Bookmarks</h1>
-        <p className="mt-1 text-sm text-slate-500">Review your bookmarked PYQs by subject.</p>
+        <p className="mt-1 text-sm text-slate-400">Review your bookmarked PYQs by subject.</p>
       </div>
 
       {subjectRows.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-slate-800 bg-slate-950/40 p-8 text-center">
           <Bookmark className="mx-auto text-slate-600" size={30} />
           <h3 className="mt-3 font-semibold text-slate-200">No bookmarks yet</h3>
-          <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-slate-500">
+          <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-slate-400">
             Bookmark questions while solving to revisit them here.
           </p>
           <Link
             to="/pyqs"
-            className="mt-4 inline-flex rounded-lg bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950"
+            className="mt-4 inline-flex rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-ink"
           >
             Browse PYQs
           </Link>
@@ -96,10 +96,10 @@ export default function Bookmarks() {
             >
               <span className="font-bold">{s.name}</span>
               <span className="flex items-center gap-3">
-                <span className="text-xs text-slate-500">
+                <span className="text-xs text-slate-400">
                   {s.count} Q{s.count === 1 ? "" : "s"}
                 </span>
-                <ArrowRight size={17} className="text-slate-600 transition group-hover:text-slate-200" />
+                <ChevronRight size={17} className="text-slate-500 transition group-hover:text-slate-200" />
               </span>
             </button>
           ))}

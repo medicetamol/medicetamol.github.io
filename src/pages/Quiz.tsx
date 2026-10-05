@@ -1263,7 +1263,7 @@ export default function Quiz() {
   const actionClass =
     "rounded-xl border border-slate-700 bg-slate-800 px-4 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-750";
   const solveMoreClass =
-    "rounded-xl border border-slate-200 bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-950 shadow-lg shadow-slate-200/20 hover:bg-slate-50";
+    "rounded-xl border border-transparent bg-accent px-4 py-3.5 text-sm font-bold text-accent-ink shadow-lg shadow-accent/20 hover:brightness-110";
 
   // ─── Unanswered count (for quiz mode submit) ──────────────────────────────
   const unansweredCount = pool.filter(
@@ -1321,10 +1321,10 @@ export default function Quiz() {
     return (
       <main className="mx-auto max-w-3xl px-3 py-12 text-center">
         <h1 className="text-xl font-bold">No questions available</h1>
-        <p className="mt-2 text-sm text-slate-500">Add verified PYQs to this section first.</p>
+        <p className="mt-2 text-sm text-slate-400">Add verified PYQs to this section first.</p>
         <Link
           to={`/pyqs/${exam}`}
-          className="mt-5 inline-flex rounded-lg bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950"
+          className="mt-5 inline-flex rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-ink"
         >
           Back to PYQs
         </Link>
@@ -1342,12 +1342,12 @@ export default function Quiz() {
             className={`mb-2 h-1 overflow-hidden rounded-full ${globalDanger ? "bg-red-950/70" : "bg-slate-900"}`}
           >
             <div
-              className={`h-full transition-[width] duration-1000 ease-linear ${globalDanger ? "bg-red-500" : "bg-slate-500"}`}
+              className={`h-full transition-[width] duration-1000 ease-linear ${globalDanger ? "bg-red-500" : "bg-accent"}`}
               style={{ width: `${globalTimerProgress}%` }}
             />
           </div>
           <div className="mb-2 flex items-center justify-between gap-2 px-1">
-            <span className="text-xs font-medium text-slate-500">
+            <span className="text-xs font-medium text-slate-400">
               {index + 1}/{pool.length}
             </span>
             <div className="flex items-center gap-2">
@@ -1374,7 +1374,7 @@ export default function Quiz() {
               <button
                 type="button"
                 onClick={bookmark}
-                className="rounded-lg p-2 text-slate-500 transition-colors hover:text-slate-200"
+                className="rounded-lg p-2 text-slate-400 transition-colors hover:text-slate-200"
                 aria-label={bookmarked ? "Remove bookmark" : "Bookmark"}
               >
                 <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
@@ -1393,7 +1393,7 @@ export default function Quiz() {
               aria-label={`Time remaining ${mm}:${ss}`}
             >
               <div
-                className={`h-full transition-[width] duration-1000 ease-linear ${danger ? "bg-red-500" : "bg-slate-500"}`}
+                className={`h-full transition-[width] duration-1000 ease-linear ${danger ? "bg-red-500" : "bg-accent"}`}
                 style={{ width: `${timerProgress}%` }}
               />
             </div>
@@ -1404,14 +1404,14 @@ export default function Quiz() {
               <button
                 type="button"
                 onClick={() => navigate(-1)}
-                className="inline-flex items-center gap-1 text-xs font-medium text-slate-500 hover:text-slate-300"
+                className="inline-flex items-center gap-1 text-xs font-medium text-slate-400 hover:text-slate-300"
                 aria-label="Back"
               >
                 <ChevronLeft size={14} />
                 {index + 1}/{pool.length}
               </button>
             ) : (
-              <span className="text-xs font-medium text-slate-500">
+              <span className="text-xs font-medium text-slate-400">
                 {index + 1}/{pool.length}
               </span>
             )}
@@ -1441,7 +1441,7 @@ export default function Quiz() {
               <button
                 type="button"
                 onClick={bookmark}
-                className="rounded-lg p-2 text-slate-500 transition-colors hover:text-slate-200"
+                className="rounded-lg p-2 text-slate-400 transition-colors hover:text-slate-200"
                 aria-label={bookmarked ? "Remove bookmark" : "Bookmark"}
               >
                 <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
@@ -1475,26 +1475,29 @@ export default function Quiz() {
         {/* Guessing Answer: self-tag, outside/below the question card, available
             anytime, independent of selection/submit state */}
         {!isSolveLink && !isReadOnly && question && (
-          <button
-            type="button"
-            onClick={toggleGuessing}
-            aria-pressed={guessMarked.has(question.id)}
-            className={`mt-3 flex w-full items-center justify-center gap-2 rounded-xl border px-3 py-2.5 text-sm font-medium transition ${
-              guessMarked.has(question.id)
-                ? "border-amber-600 bg-amber-900/30 text-amber-300"
-                : "border-slate-800 bg-slate-950/50 text-slate-500 hover:border-slate-700 hover:text-slate-300"
-            }`}
-          >
-            <HelpCircle size={16} strokeWidth={2} />
-            {guessMarked.has(question.id) ? "Marked as guessing answer" : "Mark as guessing answer"}
-          </button>
+          <div className="mt-3 flex items-center gap-2.5">
+            <button
+              type="button"
+              onClick={toggleGuessing}
+              aria-pressed={guessMarked.has(question.id)}
+              aria-label={guessMarked.has(question.id) ? "Unmark guessing answer" : "Mark as guessing answer"}
+              className={`grid h-9 w-9 place-items-center rounded-full transition-colors ${
+                guessMarked.has(question.id)
+                  ? "bg-amber-900/30 text-amber-300 ring-1 ring-amber-600"
+                  : "text-slate-500 hover:bg-slate-800/60 hover:text-slate-300"
+              }`}
+            >
+              <HelpCircle size={22} strokeWidth={2} />
+            </button>
+            <span className="text-sm text-slate-400">Guessing Answer</span>
+          </div>
         )}
 
         {/* Explanation (guide/direct only) */}
         {!isQuizMode && submitted && question && (
           <section className="mt-6 w-full rounded-xl border border-slate-800 bg-slate-900/60 px-3.5 py-4 sm:px-5">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                 Explanation
               </p>
               <button
@@ -1512,14 +1515,14 @@ export default function Quiz() {
               <p className="mt-2 text-sm leading-6 text-slate-300">{explanation.e}</p>
             ) : (
               <div className="mt-3">
-                <p className="text-sm leading-6 text-slate-500">Explanation not available yet.</p>
+                <p className="text-sm leading-6 text-slate-400">Explanation not available yet.</p>
                 <button
                   type="button"
                   onClick={askAI}
                   className="group mt-1.5 flex w-full items-end justify-end gap-1 text-right"
                   aria-label="Get an AI explanation for this question"
                 >
-                  <span className="text-xs italic leading-5 text-slate-500 underline decoration-slate-700 decoration-dotted underline-offset-4 transition-colors group-hover:text-slate-300 group-hover:decoration-slate-500">
+                  <span className="text-xs italic leading-5 text-slate-400 underline decoration-slate-700 decoration-dotted underline-offset-4 transition-colors group-hover:text-slate-300 group-hover:decoration-slate-500">
                     Get an AI explanation for this question
                   </span>
                   <CornerRightUp
@@ -1617,7 +1620,7 @@ export default function Quiz() {
           <h2 className="text-center text-lg font-semibold text-slate-100">
             Leave this module?
           </h2>
-          <p className="mt-1 text-center text-xs text-slate-500">
+          <p className="mt-1 text-center text-xs text-slate-400">
             Your progress is saved — resume anytime within 2 hours
           </p>
           <div className="mt-5 grid grid-cols-2 gap-3">
@@ -1631,7 +1634,7 @@ export default function Quiz() {
             <button
               type="button"
               onClick={handleFSContinue}
-              className="rounded-xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm font-bold text-slate-950"
+              className="rounded-xl border border-transparent bg-accent px-4 py-3 text-sm font-bold text-accent-ink"
             >
               Continue
             </button>

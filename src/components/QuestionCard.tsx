@@ -67,7 +67,7 @@ export default function QuestionCard({
 
   return (
     <>
-    <section className="w-full rounded-xl border border-slate-800 bg-slate-900/70 px-2.5 py-3 sm:px-4 sm:py-5">
+    <section className="w-full rounded-2xl border border-slate-800 bg-slate-900/70 px-2.5 py-3 sm:px-4 sm:py-5">
       <h2 className="text-base font-semibold leading-7 text-slate-100 sm:text-lg">
         {question.question}
       </h2>
@@ -107,16 +107,16 @@ export default function QuestionCard({
               type="button"
               disabled={submitted}
               onClick={() => onSelect(index)}
-              className={`flex w-full items-start gap-3 rounded-xl border p-3 text-left text-sm transition ${
+              className={`flex w-full items-start gap-3 rounded-2xl border p-3 text-left text-sm transition ${
                 isCorrect ? correctClass : isWrong ? wrongClass : isSelected
-                  ? "border-slate-400 bg-slate-800/80 text-slate-100"
+                  ? "border-accent bg-accent-soft text-slate-100"
                   : "border-slate-800 bg-slate-950/50 text-slate-100 hover:border-slate-600"
               }`}
             >
               <span className={`grid h-7 w-7 shrink-0 place-items-center rounded-lg text-xs font-bold ${
                 isCorrect && !(timedOut && selected === null)
                   ? "bg-emerald-500/20 text-emerald-300"
-                  : isWrong ? "bg-red-500/20 text-red-300" : "bg-slate-800 text-slate-300"
+                  : isWrong ? "bg-red-500/20 text-red-300" : isSelected ? "bg-accent text-accent-ink" : "bg-slate-800 text-slate-300"
               }`}>
                 {String.fromCharCode(65 + index)}
               </span>
@@ -131,7 +131,7 @@ export default function QuestionCard({
       {submitted && (
         <div className="mt-4 flex items-center justify-between gap-3 border-t border-slate-800 pt-3">
           <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs leading-5 text-slate-500">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs leading-5 text-slate-400">
               <span>{question.id}</span>
               <span>•</span>
               <span>{question.year}</span>

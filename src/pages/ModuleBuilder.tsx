@@ -1,4 +1,4 @@
-import { ArrowLeft, Check, ChevronRight, History } from "lucide-react";
+import { ChevronLeft, Check, ChevronRight, History } from "lucide-react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { EXAMS, SUBJECTS } from "../constants";
@@ -62,27 +62,27 @@ export default function ModuleBuilder() {
     <main className="mx-auto max-w-3xl px-4 pb-28 pt-8 sm:px-6">
       <Link
         to={`/pyqs/${exam}`}
-        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> {EXAMS.find((e) => e.id === examId)?.name}
+        <ChevronLeft size={16} /> {EXAMS.find((e) => e.id === examId)?.name}
       </Link>
 
       <div className="mb-4">
         <h1 className="text-2xl font-bold">Create Module</h1>
-        <p className="mt-1 text-sm text-slate-500">Choose subjects, then optionally pick topics.</p>
+        <p className="mt-1 text-sm text-slate-400">Choose subjects, then optionally pick topics.</p>
       </div>
 
       <Link
         to="/modules/history"
         className="mb-6 flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/50 px-4 py-3.5 hover:border-slate-600"
       >
-        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-sky-500/10 text-sky-400">
+        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-accent-soft text-accent-text">
           <History size={17} />
         </span>
         <span className="flex-1 text-sm font-semibold text-slate-200">
           View previously solved modules
         </span>
-        <ChevronRight size={16} className="shrink-0 text-slate-500" />
+        <ChevronRight size={16} className="shrink-0 text-slate-400" />
       </Link>
 
       <div className="overflow-hidden rounded-2xl border border-slate-800">
@@ -96,7 +96,7 @@ export default function ModuleBuilder() {
         >
           <span
             className={`grid h-5 w-5 shrink-0 place-items-center rounded border ${
-              allSelected ? "border-slate-300 bg-slate-100 text-slate-950" : "border-slate-600"
+              allSelected ? "border-accent bg-accent text-accent-ink" : "border-slate-600"
             }`}
           >
             {allSelected && <Check size={14} strokeWidth={3} />}
@@ -120,7 +120,7 @@ export default function ModuleBuilder() {
               >
                 <span
                   className={`grid h-5 w-5 shrink-0 place-items-center rounded border ${
-                    active ? "border-slate-300 bg-slate-100 text-slate-950" : "border-slate-600"
+                    active ? "border-accent bg-accent text-accent-ink" : "border-slate-600"
                   }`}
                 >
                   {active && <Check size={14} strokeWidth={3} />}
@@ -131,7 +131,7 @@ export default function ModuleBuilder() {
                 type="button"
                 onClick={() => openTopics(subject.id)}
                 aria-label={`Select topics for ${subject.name}`}
-                className="shrink-0 px-4 py-3.5 text-slate-500 hover:text-slate-200"
+                className="shrink-0 px-4 py-3.5 text-slate-400 hover:text-slate-200"
               >
                 <ChevronRight size={18} />
               </button>
@@ -142,7 +142,7 @@ export default function ModuleBuilder() {
 
       {/* Bottom bar */}
       <ModuleFooterBar>
-        <span className="flex-1 text-xs text-slate-500">
+        <span className="flex-1 text-xs text-slate-400">
           {state.subjects.length === 0
             ? "No subjects selected"
             : allSelected
@@ -153,7 +153,7 @@ export default function ModuleBuilder() {
           type="button"
           disabled={state.subjects.length === 0}
           onClick={() => navigate(`/module/${examId}/craft`)}
-          className="rounded-xl bg-slate-100 px-5 py-3 text-xs font-bold text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
+          className="rounded-xl bg-accent px-5 py-3 text-xs font-bold text-accent-ink disabled:cursor-not-allowed disabled:opacity-40"
         >
           CONTINUE
         </button>

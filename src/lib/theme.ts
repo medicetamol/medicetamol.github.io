@@ -6,7 +6,7 @@ export type Theme = "dark" | "light";
 // theme before first paint so there is no dark → light flash on load).
 export const THEME_STORAGE_KEY = "medicetamol-theme";
 
-export type Accent = "turquoise" | "lime" | "orange" | "indigo" | "rose" | "amber";
+export type Accent = "simple" | "turquoise" | "lime" | "orange" | "indigo" | "rose";
 
 // Must match the key read by the inline script in index.html.
 export const ACCENT_STORAGE_KEY = "medicetamol-accent";
@@ -15,12 +15,12 @@ type Preview = { bg: string; card: string; accent: string; ink: string };
 
 /** Colours used only for the little previews in Settings (the real tokens live in theme.css). */
 export const ACCENTS: Array<{ id: Accent; label: string; dark: Preview; light: Preview }> = [
+  { id: "simple", label: "Simple", dark: { bg: "#0b0f14", card: "#121923", accent: "#f1f5f9", ink: "#0f172a" }, light: { bg: "#f1f5f9", card: "#ffffff", accent: "#0f172a", ink: "#ffffff" } },
   { id: "turquoise", label: "Turquoise", dark: { bg: "#0b0f14", card: "#121923", accent: "#2dd4bf", ink: "#04201e" }, light: { bg: "#f1f5f9", card: "#ffffff", accent: "#2dd4bf", ink: "#042f2e" } },
   { id: "lime", label: "Lime", dark: { bg: "#0b0f14", card: "#121923", accent: "#c6f432", ink: "#0b0f14" }, light: { bg: "#f1f5f9", card: "#ffffff", accent: "#a3e635", ink: "#1a2e05" } },
   { id: "orange", label: "Orange", dark: { bg: "#17110d", card: "#241a14", accent: "#ff8a4c", ink: "#1a0f08" }, light: { bg: "#f1f5f9", card: "#ffffff", accent: "#ff8a4c", ink: "#431407" } },
   { id: "indigo", label: "Indigo", dark: { bg: "#0d0f1c", card: "#151833", accent: "#818cf8", ink: "#0f112d" }, light: { bg: "#f1f5f9", card: "#ffffff", accent: "#4f46e5", ink: "#ffffff" } },
-  { id: "rose", label: "Rose", dark: { bg: "#140c10", card: "#201219", accent: "#fb7185", ink: "#280810" }, light: { bg: "#f1f5f9", card: "#ffffff", accent: "#e11d48", ink: "#ffffff" } },
-  { id: "amber", label: "Amber", dark: { bg: "#130f09", card: "#1f1810", accent: "#fbbf24", ink: "#261802" }, light: { bg: "#f1f5f9", card: "#ffffff", accent: "#f59e0b", ink: "#451a03" } }
+  { id: "rose", label: "Rose", dark: { bg: "#140c10", card: "#201219", accent: "#fb7185", ink: "#280810" }, light: { bg: "#f1f5f9", card: "#ffffff", accent: "#e11d48", ink: "#ffffff" } }
 ];
 
 /** Keep the browser chrome (status bar / address bar) matching the current page colour. */

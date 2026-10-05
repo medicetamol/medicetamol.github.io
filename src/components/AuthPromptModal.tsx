@@ -65,7 +65,7 @@ export default function AuthPromptModal({ variant, reason, onSignedIn, onDismiss
                 type="button"
                 onClick={handleSignIn}
                 disabled={signingIn}
-                className="flex-1 rounded-xl bg-slate-100 px-4 py-2.5 text-sm font-semibold text-page hover:bg-white disabled:opacity-60"
+                className="flex-1 rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-accent-ink hover:brightness-110 disabled:opacity-60"
               >
                 {signingIn ? "Signing in…" : "Sign in"}
               </button>

@@ -66,7 +66,7 @@ function DonutChart({
       </svg>
       <div className="absolute flex flex-col items-center leading-none text-center">
         <span className="text-base font-bold text-slate-100">{pct}%</span>
-        <span className="mt-0.5 text-[10px] text-slate-500">Correct</span>
+        <span className="mt-0.5 text-[10px] text-slate-400">Correct</span>
       </div>
     </div>
   );
@@ -83,7 +83,7 @@ function StatBox({
 }) {
   return (
     <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
-      <p className="text-xs text-slate-500">{label}</p>
+      <p className="text-xs text-slate-400">{label}</p>
       <p className={`mt-1 text-lg font-bold ${color}`}>{value}</p>
     </div>
   );
@@ -268,7 +268,7 @@ export default function Result() {
     <main className="mx-auto max-w-2xl px-4 py-10 sm:py-14">
       {/* ── Top card (unchanged) ── */}
       <div className="relative rounded-3xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-        <p className="text-xs uppercase tracking-wider text-slate-500">Summary</p>
+        <p className="text-xs uppercase tracking-wider text-slate-400">Summary</p>
 
         <div className="absolute right-6 top-6 sm:right-8 sm:top-8">
           <DonutChart correct={correct} incorrect={incorrect} skipped={skipped} />
@@ -276,7 +276,7 @@ export default function Result() {
 
         <div className="mt-3 pr-36">
           <h1 className="text-3xl font-bold">{correct}/{total}</h1>
-          <p className="mt-1 text-sm text-slate-500">{accuracy}% Accuracy</p>
+          <p className="mt-1 text-sm text-slate-400">{accuracy}% Accuracy</p>
         </div>
 
         <div className="mt-7 grid grid-cols-3 gap-2">
@@ -288,7 +288,7 @@ export default function Result() {
         <div className="mt-7 flex gap-2">
           <Link
             to={`/pyqs/${exam}`}
-            className="flex-1 rounded-xl bg-slate-100 px-4 py-3 text-center text-sm font-bold text-slate-950"
+            className="flex-1 rounded-xl bg-accent px-4 py-3 text-center text-sm font-bold text-accent-ink"
           >
             Back to PYQs
           </Link>
@@ -306,13 +306,13 @@ export default function Result() {
           {/* ── See Explanations card ── */}
           <section className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
             <h2 className="text-base font-bold text-slate-100">All Questions</h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-400">
               {questions.length} Question{questions.length === 1 ? "" : "s"}
             </p>
             <button
               type="button"
               onClick={() => openAttempted(questions)}
-              className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3 text-sm font-bold text-slate-950"
+              className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3 text-sm font-bold text-accent-ink"
             >
               See Explanations
               <ChevronRight size={16} />

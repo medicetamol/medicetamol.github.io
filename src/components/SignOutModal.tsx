@@ -97,7 +97,7 @@ export default function SignOutModal({ onClose }: { onClose: () => void }) {
             <button
               type="button"
               onClick={save}
-              className="flex-1 rounded-xl bg-slate-100 px-4 py-3 text-sm font-bold text-slate-950 hover:bg-slate-50"
+              className="flex-1 rounded-xl bg-accent px-4 py-3 text-sm font-bold text-accent-ink hover:brightness-110"
             >
               Retry
             </button>

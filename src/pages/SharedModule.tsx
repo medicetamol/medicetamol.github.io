@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { EXAMS, SUBJECTS } from "../constants";
@@ -144,7 +144,7 @@ export default function SharedModule() {
         <p className="mt-2 text-sm leading-6 text-slate-500">
           This module link looks broken or incomplete. Ask your friend to send it again.
         </p>
-        <Link to="/pyqs" className="mt-6 inline-block rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950">
+        <Link to="/pyqs" className="mt-6 inline-block rounded-xl bg-accent px-5 py-3 text-sm font-bold text-accent-ink">
           Go to PYQs
         </Link>
       </main>
@@ -158,7 +158,7 @@ export default function SharedModule() {
         <p className="mt-2 text-sm leading-6 text-slate-500">
           None of the questions in this link could be found. It may be outdated.
         </p>
-        <Link to="/pyqs" className="mt-6 inline-block rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-950">
+        <Link to="/pyqs" className="mt-6 inline-block rounded-xl bg-accent px-5 py-3 text-sm font-bold text-accent-ink">
           Go to PYQs
         </Link>
       </main>
@@ -191,7 +191,7 @@ export default function SharedModule() {
   return (
     <main className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14">
       <Link to="/pyqs" className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-200">
-        <ArrowLeft size={16} /> {EXAMS.find((e) => e.id === decoded.exam)?.name}
+        <ChevronLeft size={16} /> {EXAMS.find((e) => e.id === decoded.exam)?.name}
       </Link>
 
       <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
@@ -216,7 +216,7 @@ export default function SharedModule() {
           type="button"
           disabled={loading}
           onClick={handleContinue}
-          className="mt-6 w-full rounded-xl bg-slate-100 px-5 py-3.5 text-sm font-bold text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
+          className="mt-6 w-full rounded-xl bg-accent px-5 py-3.5 text-sm font-bold text-accent-ink disabled:cursor-not-allowed disabled:opacity-40"
         >
           {loading ? "LOADING…" : "CONTINUE"}
         </button>

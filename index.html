@@ -68,8 +68,8 @@
         } catch (e) {}
         try {
           var accent = localStorage.getItem("medicetamol-accent");
-          var tints = { orange: "#17110d", indigo: "#0d0f1c", rose: "#140c10", amber: "#130f09" };
-          if (accent && /^(lime|orange|indigo|rose|amber)$/.test(accent)) {
+          var tints = { orange: "#17110d", indigo: "#0d0f1c", rose: "#140c10" };
+          if (accent && /^(simple|lime|orange|indigo|rose)$/.test(accent)) {
             document.documentElement.setAttribute("data-accent", accent);
             if (tints[accent] && localStorage.getItem("medicetamol-theme") !== "light") {
               var mt = document.querySelector('meta[name="theme-color"]');
@@ -115,20 +115,19 @@
         color: #2dd4bf;
       }
       [data-theme="light"] .boot-loader__spinner { color: #0d9488; }
+      html[data-accent="simple"] .boot-loader__spinner { color: #f1f5f9; }
+      html[data-theme="light"][data-accent="simple"] .boot-loader__spinner { color: #0f172a; }
       html[data-accent="lime"] .boot-loader__spinner { color: #c6f432; }
       html[data-accent="orange"] .boot-loader__spinner { color: #ff8a4c; }
       html[data-accent="indigo"] .boot-loader__spinner { color: #818cf8; }
       html[data-accent="rose"] .boot-loader__spinner { color: #fb7185; }
-      html[data-accent="amber"] .boot-loader__spinner { color: #fbbf24; }
       html[data-theme="light"][data-accent="lime"] .boot-loader__spinner { color: #65a30d; }
       html[data-theme="light"][data-accent="orange"] .boot-loader__spinner { color: #ea580c; }
       html[data-theme="light"][data-accent="indigo"] .boot-loader__spinner { color: #4f46e5; }
       html[data-theme="light"][data-accent="rose"] .boot-loader__spinner { color: #e11d48; }
-      html[data-theme="light"][data-accent="amber"] .boot-loader__spinner { color: #d97706; }
       html[data-accent="orange"]:not([data-theme="light"]), html[data-accent="orange"]:not([data-theme="light"]) .boot-loader { background: #17110d; }
       html[data-accent="indigo"]:not([data-theme="light"]), html[data-accent="indigo"]:not([data-theme="light"]) .boot-loader { background: #0d0f1c; }
       html[data-accent="rose"]:not([data-theme="light"]), html[data-accent="rose"]:not([data-theme="light"]) .boot-loader { background: #140c10; }
-      html[data-accent="amber"]:not([data-theme="light"]), html[data-accent="amber"]:not([data-theme="light"]) .boot-loader { background: #130f09; }
       .boot-loader__ring {
         transform-origin: 50% 50%;
         animation: boot-spin 0.8s linear infinite;

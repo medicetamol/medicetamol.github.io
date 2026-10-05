@@ -231,17 +231,6 @@
   --accent-ink: 40 8 16;
   --accent-text: 253 164 175;
 }
-:root:not([data-theme="light"])[data-accent="amber"] {
-  --page: 19 15 9;
-  --page-deep: 13 10 6;
-  --slate-950: 11 8 4;
-  --slate-900: 31 24 16;
-  --slate-800: 54 43 28;
-  --accent: 251 191 36;
-  --accent-soft: 56 40 10;
-  --accent-ink: 38 24 2;
-  --accent-text: 252 211 77;
-}
 :root[data-theme="light"][data-accent="lime"] {
   --accent: 163 230 53;
   --accent-soft: 236 252 203;
@@ -266,9 +255,15 @@
   --accent-ink: 255 255 255;
   --accent-text: 190 18 60;
 }
-:root[data-theme="light"][data-accent="amber"] {
-  --accent: 245 158 11;
-  --accent-soft: 254 243 199;
-  --accent-ink: 69 26 3;
-  --accent-text: 180 83 9;
+:root:not([data-theme="light"])[data-accent="simple"] {
+  --accent: 241 245 249;
+  --accent-soft: 30 41 59;
+  --accent-ink: 15 23 42;
+  --accent-text: 226 232 240;
+}
+:root[data-theme="light"][data-accent="simple"] {
+  --accent: 15 23 42;
+  --accent-soft: 226 232 240;
+  --accent-ink: 255 255 255;
+  --accent-text: 30 41 59;
 }

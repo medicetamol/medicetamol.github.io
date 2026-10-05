@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowLeft, ImagePlus, Loader2, X } from "lucide-react";
+import { AlertTriangle, ChevronLeft, ImagePlus, Loader2, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../lib/AuthContext";
@@ -145,7 +145,7 @@ export default function ReportError() {
         onClick={() => navigate(-1)}
         className="mb-4 flex items-center gap-1.5 text-sm text-slate-400 hover:text-slate-200"
       >
-        <ArrowLeft size={16} /> Back
+        <ChevronLeft size={16} /> Back
       </button>
 
       <h1 className="text-lg font-semibold text-slate-100">Report an error</h1>
@@ -270,7 +270,7 @@ export default function ReportError() {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full rounded-xl bg-slate-100 px-4 py-3 text-sm font-semibold text-page hover:bg-white disabled:opacity-60"
+          className="w-full rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-ink hover:brightness-110 disabled:opacity-60"
         >
           {submitting ? (
             <span className="flex items-center justify-center gap-2">

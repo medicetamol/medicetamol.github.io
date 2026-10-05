@@ -196,7 +196,7 @@ export default function SolvedModules() {
   if (entries === null) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
-        <p className="text-sm text-slate-500">Loading…</p>
+        <p className="text-sm text-slate-400">Loading…</p>
       </main>
     );
   }
@@ -206,7 +206,7 @@ export default function SolvedModules() {
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className="mb-4 inline-flex items-center gap-1 text-xs font-medium text-slate-500 hover:text-slate-300"
+        className="mb-4 inline-flex items-center gap-1 text-xs font-medium text-slate-400 hover:text-slate-300"
         aria-label="Back"
       >
         <ChevronLeft size={14} />
@@ -214,14 +214,14 @@ export default function SolvedModules() {
       </button>
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Custom Modules</h1>
-        <p className="mt-1 text-sm text-slate-500">Your last {entries.length} attempted modules.</p>
+        <p className="mt-1 text-sm text-slate-400">Your last {entries.length} attempted modules.</p>
       </div>
 
       {entries.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-slate-800 bg-slate-950/40 p-8 text-center">
           <LayoutGrid className="mx-auto text-slate-600" size={30} />
           <h3 className="mt-3 font-semibold text-slate-200">No modules yet</h3>
-          <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-slate-500">
+          <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-slate-400">
             Build a custom module to see your attempt history here.
           </p>
         </div>
@@ -233,17 +233,17 @@ export default function SolvedModules() {
               <div
                 key={entry.id}
                 className={`rounded-2xl border p-4 ${
-                  isResumable ? "border-sky-700 bg-sky-950/20" : "border-slate-800 bg-slate-900/60"
+                  isResumable ? "border-accent/50 bg-accent-soft/40" : "border-slate-800 bg-slate-900/60"
                 }`}
               >
                 {isResumable ? (
                   <>
-                    <span className="mb-2 inline-block rounded-md bg-sky-900/60 px-2.5 py-1 text-xs font-semibold text-sky-300">
+                    <span className="mb-2 inline-block rounded-md bg-accent-soft px-2.5 py-1 text-xs font-semibold text-accent-text">
                       Resume available
                     </span>
                     <p className="text-sm font-semibold text-slate-100">{entry.subjectLabel}</p>
                     <p className="mt-0.5 text-xs text-slate-400">{formatDateTime(entry.startedAt)}</p>
-                    <p className="mt-0.5 text-xs text-slate-500">
+                    <p className="mt-0.5 text-xs text-slate-400">
                       {entry.questionIds.length} questions
                       {entry.mode === "quiz" && (
                         <>
@@ -254,7 +254,7 @@ export default function SolvedModules() {
                     <button
                       type="button"
                       onClick={() => openEntry(entry)}
-                      className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-sky-500"
+                      className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-accent-ink hover:brightness-110"
                     >
                       <Play size={15} /> Resume module
                     </button>
@@ -264,7 +264,7 @@ export default function SolvedModules() {
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-semibold text-slate-100">{entry.subjectLabel}</p>
                       <p className="mt-0.5 text-xs text-slate-400">{formatDateTime(entry.startedAt)}</p>
-                      <p className="mt-0.5 text-xs text-slate-500">{entry.questionIds.length} questions</p>
+                      <p className="mt-0.5 text-xs text-slate-400">{entry.questionIds.length} questions</p>
                       <button
                         type="button"
                         onClick={() => openEntry(entry)}

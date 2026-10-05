@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, Bookmark, BookOpen, History, Sparkles, type LucideIcon } from "lucide-react";
+import { ChevronRight, BarChart3, Bookmark, BookOpen, History, Sparkles, type LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Streak from "../components/Streak";
@@ -60,9 +60,9 @@ export default function Home() {
 
         <Link
           to="/pyqs"
-          className="mt-7 flex items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-sm font-bold text-accent-ink hover:brightness-110 sm:inline-flex sm:py-3.5"
+          className="btn-sweep mt-7 flex items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-sm font-bold text-accent-ink hover:brightness-110 sm:inline-flex sm:py-3.5"
         >
-          Proceed to PYQs <ArrowRight size={17} />
+          Proceed to PYQs <ChevronRight size={17} />
         </Link>
       </section>
 
@@ -80,7 +80,7 @@ export default function Home() {
               to={`/solve/${daily.id}`}
               className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-accent-text hover:underline"
             >
-              Solve now <ArrowRight size={15} />
+              Solve now <ChevronRight size={15} />
             </Link>
           </section>
         )
