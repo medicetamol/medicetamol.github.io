@@ -1,1 +1,17 @@
-{}
+[
+  {"id": "PGDR001", "e": "Well-demarcated erythematous swelling = cellulitis/erysipelas (Strep pyogenes ± S. aureus) → Amoxycillin-clavulanate covers both.\nMetronidazole = anaerobes/protozoa only."},
+  {"id": "PGDR002", "e": "Pemphigus vulgaris: flaccid, easily ruptured bullae c̅ suprabasal acantholysis (anti-Dsg3 ± Dsg1).\nFoliaceous = split in granular layer; vegetans = flexural vegetations."},
+  {"id": "PGDR003", "e": "Type 1 lepra reaction c̅ nerve involvement: continue MDT (ALT) + start prednisolone to prevent nerve damage."},
+  {"id": "PGDR004", "e": "Type 1 (reversal) reaction: inflammation of existing lesions + nerve pain/tenderness during MDT.\nENL (type 2) = new tender nodules c̅ fever."},
+  {"id": "PGDR005", "e": "Pellagra (niacin deficiency): photosensitive dermatitis (Casal's necklace) c̅ the 3 Ds – Dermatitis, Diarrhoea, Dementia."},
+  {"id": "PGDR006", "e": "Phrynoderma = follicular hyperkeratosis over elbows/knees of Vit A deficiency; night blindness (nyctalopia) supports it."},
+  {"id": "PGDR007", "e": "Kerion: boggy, tender, pustular scalp swelling c̅ hair loss = inflammatory tinea capitis → oral griseofulvin/terbinafine."},
+  {"id": "PGDR008", "e": "p-Phenylenediamine (PPD) = hair-dye allergen → allergic contact dermatitis (type IV hypersensitivity)."},
+  {"id": "PGDR009", "e": "Isotretinoin/antibiotic-resistant acne in a woman → evaluate for hyperandrogenism (e.g. PCOS)."},
+  {"id": "PGDR010", "e": "Painless indurated genital ulcer + non-tender inguinal nodes = primary syphilis (chancre).\nChancroid = painful ulcer c̅ tender bubo."},
+  {"id": "PGDR011", "e": "Pigmented papillomatous/nevoid lesions carry ↑ risk of malignant melanoma."},
+  {"id": "PGDR012", "e": "Dermatitis herpetiformis: itchy extensor vesicles c̅ celiac disease; granular IgA at dermal papillary tips on DIF → dapsone + gluten-free diet."},
+  {"id": "PGDR013", "e": "Stable hypopigmented patch c̅ Wood's lamp accentuation and negative diascopy → nevus depigmentosus.\nNevus anemicus = vascular, disappears on diascopy."},
+  {"id": "PGDR014", "e": "Lupus vulgaris (cutaneous TB) is paucibacillary → PCR is the most sensitive/specific confirmatory test here."},
+  {"id": "PGDR015", "e": "Foot swelling + sinuses + black granules = eumycetoma → KOH shows slender septate dematiaceous hyphae.\nActinomycetoma = thin branching filamentous bacteria."}
+]

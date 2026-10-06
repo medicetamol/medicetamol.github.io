@@ -1,1 +1,18 @@
-{}
+[
+  {"id": "PGPS001", "e": "Elevated mood + flight of ideas + ↑ libido + over-familiarity c̅ psychotic features (pseudohallucinations) = Mania.\nHypomania has no psychotic symptoms."},
+  {"id": "PGPS002", "e": "Delirium tremens: 48–72 h after last drink → agitation, clouded sensorium, hallucinations, autonomic hyperactivity.\nWernicke's = confusion, ataxia, ophthalmoplegia."},
+  {"id": "PGPS003", "e": "Derailment (loosening of association) = disorder of form of thought.\nObsession, delusion = content; thought insertion = possession."},
+  {"id": "PGPS004", "e": "Countertransference = therapist's conscious + unconscious feelings toward the patient.\nTransference = patient's feelings toward the therapist."},
+  {"id": "PGPS005", "e": "Clozapine = drug for treatment-resistant schizophrenia; causes sialorrhoea, hyperglycaemia, hyperlipidaemia.\nAlso agranulocytosis, seizures, myocarditis."},
+  {"id": "PGPS006", "e": "Postpartum blues: onset day 3–5, tearfulness + mood lability, self-limiting (≤2 weeks) → reassurance only."},
+  {"id": "PGPS007", "e": "Panic disorder: recurrent discrete attacks c̅ palpitations, sweating, chest pain, impending doom (peak ~10 min).\nGAD = persistent worry ≥6 months, not episodic."},
+  {"id": "PGPS008", "e": "Squeeze technique (Masters–Johnson; also Semans' stop-start) = behavioural therapy for premature ejaculation.\nSensate focus = ED/desire disorders; ERP = OCD."},
+  {"id": "PGPS009", "e": "Wernicke's encephalopathy: confusion + ataxia + ophthalmoplegia/nystagmus (6th nerve palsy) from thiamine deficiency → give thiamine before glucose.\nKorsakoff = amnesia c̅ confabulation."},
+  {"id": "PGPS010", "e": "Acute stress disorder: trauma-linked flashbacks/amnesia lasting 3 days–1 month.\nPTSD needs symptoms >1 month."},
+  {"id": "PGPS011", "e": "Dissociative fugue: sudden unplanned travel away from home c̅ amnesia; patient unaware how he reached the place."},
+  {"id": "PGPS012", "e": "OCPD: preoccupation c̅ order, punctuality, perfectionism and control; ego-syntonic, no true obsessions/compulsions."},
+  {"id": "PGPS013", "e": "Delusional perception: a normal percept (white birds) is given a delusional meaning (orders from God).\nPrimary delusion; first-rank symptom of schizophrenia."},
+  {"id": "PGPS014", "e": "Accused c̅ suspected mental illness → first step is psychiatric evaluation (fitness to stand trial/criminal responsibility; Sec 84 IPC / BNS 22)."},
+  {"id": "PGPS015", "e": "Dissociative fugue: stress/trauma → purposeful travel away c̅ amnesia for identity/past.\nASD/PTSD lack this wandering c̅ identity loss."},
+  {"id": "PGPS016", "e": "Tardive dyskinesia (perioral dyskinesia): stop offending antipsychotic + VMAT-2 inhibitor (tetrabenazine/valbenazine).\nAnticholinergics worsen TD."}
+]

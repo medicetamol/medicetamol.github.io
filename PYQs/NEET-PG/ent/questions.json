@@ -88,7 +88,8 @@
       "Filiform",
       "Foliate"
     ],
-    "a": 2
+    "a": 0,
+    "img": true
   },
   {
     "id": "PGEN008",
@@ -172,7 +173,7 @@
     "id": "PGEN014",
     "y": 2025,
     "t": "NOS",
-    "q": "A 2-year-old male with a history of recurrent epistaxis presents with nasal obstruction for the past 1 year. On examination the presence of nasal mass and investigation shows bowing of the posterior wall of maxillary sinus. What is the probable diagnosis?",
+    "q": "A 12-year-old male with a history of recurrent epistaxis presents with nasal obstruction for the past 1 year. On examination the presence of nasal mass and investigation shows bowing of the posterior wall of maxillary sinus. What is the probable diagnosis?",
     "o": [
       "Nasopharyngeal angiofibroma",
       "Antrochoanal polyp",
@@ -283,6 +284,7 @@
       "Epiglottis",
       "Vallecula"
     ],
-    "a": 1
+    "a": 1,
+    "img": true
   }
 ]

@@ -1,1 +1,23 @@
-{}
+[
+  {"id": "PGOR001", "e": "Ankylosing spondylitis: young male, inflammatory back pain, morning stiffness, ↓ chest expansion, uveitis (HLA-B27)."},
+  {"id": "PGOR002", "e": "Teriparatide (anabolic) is not given before bisphosphonates; it is for severe osteoporosis and an antiresorptive follows it to retain gains.\nCa 1200 mg/day + Vit D₃ is standard."},
+  {"id": "PGOR003", "e": "Posterior hip dislocation (commonest): limb shortened, flexed, adducted, internally rotated; sciatic nerve at risk.\nAnterior = abduction + external rotation."},
+  {"id": "PGOR004", "e": "AS: chronic inflammatory back pain, early morning stiffness in <40 y; bilateral heel pain = enthesitis."},
+  {"id": "PGOR005", "e": "Bilateral sacroiliitis + syndesmophytes (marginal bony bridges) → bamboo spine = ankylosing spondylitis."},
+  {"id": "PGOR006", "e": "Teriparatide (anabolic) is not given before bisphosphonates; it is for severe osteoporosis and an antiresorptive follows it to retain gains.\nCa 1200 mg/day + Vit D₃ is standard."},
+  {"id": "PGOR007", "e": "Posterior hip dislocation (commonest): limb shortened, flexed, adducted, internally rotated; sciatic nerve at risk.\nAnterior = abduction + external rotation."},
+  {"id": "PGOR008", "e": "AS: chronic inflammatory back pain, early morning stiffness in <40 y; bilateral heel pain = enthesitis."},
+  {"id": "PGOR009", "e": "Rickets (Vit D deficiency): bowed legs c̅ widened, frayed, cupped metaphyses."},
+  {"id": "PGOR010", "e": "Radial nerve palsy → wrist drop; cock-up (dynamic) wrist splint c̅ finger-extension outriggers is used."},
+  {"id": "PGOR011", "e": "Bipartite patella: smooth, well-corticated superolateral fragment, often bilateral → X-ray other knee; no fixation.\nFracture has sharp, non-corticated edges."},
+  {"id": "PGOR012", "e": "Carpal tunnel syndrome (median nerve): nocturnal lateral 3½-digit tingling relieved by hanging arm; Durkan's (carpal compression) test.\nFroment's = ulnar nerve."},
+  {"id": "PGOR013", "e": "Fibrous dysplasia: ground-glass expansile bone, shepherd's crook deformity + café-au-lait spots (McCune–Albright)."},
+  {"id": "PGOR014", "e": "GCT: eccentric epiphyseal–metaphyseal lesion in 20–40 y, commonly around the knee.\nChondroblastoma occurs in open physis (<20 y)."},
+  {"id": "PGOR015", "e": "Spondylolisthesis: forward slip of one vertebra over the one below → malalignment of vertebral margins on lateral view."},
+  {"id": "PGOR016", "e": "Pseudogout (CPPD): rhomboid, weakly positively birefringent crystals.\nGout = needle-shaped, negatively birefringent MSU."},
+  {"id": "PGOR017", "e": "Early axial spondyloarthritis (X-ray normal) → MRI SI joints (bone marrow oedema) detects earliest sacroiliitis."},
+  {"id": "PGOR018", "e": "Paget's disease: ↑ hat size, warm bones, bone pain; ALP markedly ↑ c̅ normal Ca, PO₄, PTH."},
+  {"id": "PGOR019", "e": "Compartment syndrome (pain out of proportion, pain on passive stretch, ↓ sensation) → immediate fasciotomy; pulses may be present."},
+  {"id": "PGOR023", "e": "Perthes disease: painless limp in a child due to idiopathic AVN of femoral head; X-ray: sclerosis, flattening, fragmentation."},
+  {"id": "PGOR024", "e": "Fat embolism syndrome (long-bone fracture, 24–72 h): hypoxia, petechiae over chest/conjunctiva, confusion."}
+]

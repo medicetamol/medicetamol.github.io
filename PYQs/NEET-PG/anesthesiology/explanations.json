@@ -1,1 +1,13 @@
-{}
+[
+  {"id": "PGAS001", "e": "Capnography (sustained EtCO₂ waveform) = best/gold-standard confirmation of tracheal tube placement.\nCXR confirms depth, not first-line."},
+  {"id": "PGAS002", "e": "Head tilt–chin lift: one hand on forehead tilts head back, other lifts chin → opens airway (avoid in suspected C-spine injury)."},
+  {"id": "PGAS003", "e": "Bupivacaine toxicity (LAST) c̅ cardiac arrest → CPR + 20% lipid emulsion (Intralipid) bolus."},
+  {"id": "PGAS004", "e": "LP needle path: skin → supraspinous → interspinous → ligamentum flavum → epidural space → dura → arachnoid → CSF.\nArachnoid is the last barrier before CSF."},
+  {"id": "PGAS005", "e": "Halothane + suxamethonium = classic triggers of malignant hyperthermia (RYR1 defect).\nNon-depolarisers (D-TC, cisatracurium, rocuronium) are safe."},
+  {"id": "PGAS006", "e": "Head tilt–chin lift: one hand tilts head back via forehead, other lifts the chin.\nJaw thrust is done c̅ both hands at the mandibular angles."},
+  {"id": "PGAS007", "e": "Cefazolin = antibiotic of choice for cardiac-surgery prophylaxis (covers skin flora, Staph/Strep).\nVancomycin if MRSA/β-lactam allergy."},
+  {"id": "PGAS008", "e": "Recovery position = unconscious patient c̅ pulse and breathing present (protects airway, ↓es aspiration).\nNo pulse → CPR."},
+  {"id": "PGAS009", "e": "Malignant hyperthermia (volatile agent + succinylcholine): rigidity, hyperthermia, ↑ EtCO₂ → IV dantrolene (RyR1 blocker)."},
+  {"id": "PGAS010", "e": "Atracurium releases histamine (benzylisoquinoline) → flushing, rash, hypotension.\nCisatracurium is histamine-sparing."},
+  {"id": "PGAS011", "e": "Needle cricothyroidotomy is only a temporary bridge (~30–45 min, hypercarbia) → must be followed by a definitive airway (formal tracheostomy)."}
+]
