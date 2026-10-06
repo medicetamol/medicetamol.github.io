@@ -2,10 +2,6 @@
 
 A **vestibular schwannoma** in the cerebellopontine angle causes **unilateral hearing loss, tinnitus and unsteadiness**. Histology shows **spindle cells with palisading nuclei and Verocay bodies (Antoni A)** and loose areas (Antoni B).
 
-## Key Finding
-
-> Spindle cells in interlacing wavy fascicles with elongated nuclei.
-
 ## Trigger Point
 
 > **CPA tumour** + progressive **unilateral hearing loss** and tinnitus.

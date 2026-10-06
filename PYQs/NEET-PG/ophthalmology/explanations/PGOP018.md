@@ -2,10 +2,6 @@
 
 In an infant, **epiphora, photophobia and blepharospasm** with a **hazy, enlarged cornea** indicate **congenital (primary infantile) glaucoma**. Breaks in Descemet's membrane (Haab's striae) cause the cloudiness.
 
-## Key Finding
-
-> One eye larger, with a hazy cornea and tearing.
-
 ## Trigger Point
 
 > Infant with **watering, photophobia** and an **enlarged, hazy eye**.

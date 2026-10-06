@@ -2,10 +2,6 @@
 
 The image shows **Casal's necklace**, a symmetric, pigmented, scaly photosensitive dermatitis around the neck, which is the hallmark of **pellagra**. The most informative history covers the **diet (maize or millet staple)** and the other two Ds, **diarrhoea and dementia**.
 
-## Key Finding
-
-> Symmetric thickened, hyperpigmented scaly skin around the neck and upper chest = Casal's necklace.
-
 ## Trigger Point
 
 > Symmetric pigmented scaly rash on the **neck and upper chest** (sun-exposed).

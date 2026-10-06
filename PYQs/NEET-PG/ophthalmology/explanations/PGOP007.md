@@ -2,10 +2,6 @@
 
 **Hard exudates** are **yellow-white lipid deposits** in the outer plexiform layer, often arranged in rings around the macula (**diabetic maculopathy**).
 
-## Key Finding
-
-> Yellow-white deposits clustered around the macula.
-
 ## Trigger Point
 
 > **Yellow-white** deposits at the **macula**.

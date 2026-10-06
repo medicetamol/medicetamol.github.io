@@ -2,10 +2,6 @@
 
 **Binocular single vision (BSV)** has **three grades**: **simultaneous macular perception (SMP)**, **fusion** and **stereopsis**. Image A (dog and kennel, dissimilar pictures) tests SMP, and image B (two similar rabbit pictures) tests fusion.
 
-## Key Finding
-
-> A: two dissimilar pictures, a dog and a kennel, seen together as the dog inside the kennel. B: two similar rabbit pictures blended into one.
-
 ## Trigger Point
 
 > Image A has **dissimilar pictures** seen together, image B has **similar pictures** to be blended.

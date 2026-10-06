@@ -2,10 +2,6 @@
 
 After **total laryngectomy**, the airway is **separated from the upper aerodigestive tract**, so the patient breathes through a **permanent end tracheostoma** in the neck.
 
-## Key Finding
-
-> Permanent round stoma in the neck opening directly into the airway.
-
 ## Trigger Point
 
 > **Permanent stoma** after surgery for laryngeal carcinoma.

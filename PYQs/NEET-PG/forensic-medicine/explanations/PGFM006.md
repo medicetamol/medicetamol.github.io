@@ -2,10 +2,6 @@
 
 **Prolonged immersion** produces **pale, wrinkled, macerated skin** of the palms and soles, the so-called **washerwoman's hands and feet**, as the epidermis absorbs water. It is a sign of the body having been in water for hours.
 
-## Key Finding
-
-> Pale, wrinkled, waterlogged skin with deep creases over the soles.
-
 ## Trigger Point
 
 > **Waterlogged, wrinkled skin** with creases on the soles.

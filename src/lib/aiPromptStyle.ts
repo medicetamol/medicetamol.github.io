@@ -98,7 +98,11 @@ export function buildAskAiText(question: PYQQuestion, selection: AiPromptSelecti
     ? `Explain this PYQ using the\nmediceTaMol AI ${instruction.sectionName} prompt.`
     : `Explain this PYQ using the\nmediceTaMol AI prompt.`;
 
-  const body = `${headline}\n\n${formatQuestionForShare(question, { includeBranding: false })}`;
+  const imageNote = question.image
+    ? "\n\nThis question has an image. If not pasted, ask me to provide the image."
+    : "";
+
+  const body = `${headline}\n\n${formatQuestionForShare(question, { includeBranding: false })}${imageNote}`;
 
   if (!instruction) return body;
 

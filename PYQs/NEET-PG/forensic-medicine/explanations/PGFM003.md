@@ -2,10 +2,6 @@
 
 **Marbling** is a **putrefactive change** in which **bacteria** (mainly *Clostridium welchii*) **produce hydrogen sulphide**. It combines with haemoglobin to form **sulphaemoglobin**, which stains the walls of superficial veins **greenish-black** and gives a branching pattern.
 
-## Key Finding
-
-> Branching dark discolouration following the course of superficial veins = marbling.
-
 ## Trigger Point
 
 > **Branching dark discolouration along superficial veins** of a limb.

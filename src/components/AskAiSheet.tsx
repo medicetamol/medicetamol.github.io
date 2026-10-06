@@ -56,6 +56,11 @@ interface Props {
   /** Title used only for the "Others" native share sheet fallback. */
   shareTitle: string;
   onFeedback: (message: string) => void;
+  /**
+   * Pre-fetched image file for image-based questions (question.image set),
+   * fetched once when the sheet opens. Undefined/null for text-only questions.
+   */
+  imageFile?: File | null;
 }
 
 const APPS: {
@@ -77,10 +82,12 @@ const APPROACH_ROWS: { id: AiApproach; label: string; hasStyle: boolean }[] = [
   { id: "non-specific", label: "Non-specific", hasStyle: false },
 ];
 
-export default function AskAiSheet({ open, onClose, question, shareTitle, onFeedback }: Props) {
+export default function AskAiSheet({ open, onClose, question, shareTitle, onFeedback, imageFile }: Props) {
   const [selection, setSelection] = useState<AiPromptSelection>(() => getAiPromptSelection());
 
   if (!open) return null;
+
+  const isImageQuestion = Boolean(question?.image);
 
   const updateSelection = (next: AiPromptSelection) => {
     setSelection(next);
@@ -99,7 +106,7 @@ export default function AskAiSheet({ open, onClose, question, shareTitle, onFeed
     if (!question) return;
     const text = buildAskAiText(question, selection);
     onClose();
-    const result = await openAiApp(app, { text, shareTitle });
+    const result = await openAiApp(app, { text, shareTitle, imageFile });
     onFeedback(result.message);
   };
 
@@ -129,6 +136,12 @@ export default function AskAiSheet({ open, onClose, question, shareTitle, onFeed
           </button>
         </div>
 
+        {isImageQuestion && (
+          <p className="mb-3 text-xs font-medium text-red-400">
+            Paste the image to the AI, if not sent automatically. Use Others to function smoothly.
+          </p>
+        )}
+
         <div className="flex justify-between gap-1 border-b border-slate-800 pb-4">
           {APPS.map(({ id, label, icon: Icon, tint }) => (
             <button
@@ -147,7 +160,7 @@ export default function AskAiSheet({ open, onClose, question, shareTitle, onFeed
         </div>
 
         <div className="pt-3">
-          <p className="mb-1.5 px-0.5 text-xs text-slate-500">Prompt style</p>
+          <p className="mb-1.5 px-0.5 text-xs text-slate-500">Explanation Response Style</p>
           <div className="flex flex-col gap-1.5">
             {APPROACH_ROWS.map(({ id, label, hasStyle }) => {
               const active = selection.approach === id;
@@ -202,7 +215,7 @@ export default function AskAiSheet({ open, onClose, question, shareTitle, onFeed
                       })}
                     </span>
                   ) : (
-                    <span className="text-[11px] text-slate-500">No prompt link</span>
+                    <span className="text-[11px] text-slate-500">Normal Response</span>
                   )}
                 </button>
               );

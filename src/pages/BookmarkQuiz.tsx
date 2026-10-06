@@ -23,6 +23,7 @@ import { getAllBookmarks, recordDailyActivity, toggleBookmark } from "../lib/db"
 import QuestionCard from "../components/QuestionCard";
 import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
+import { fetchImageFile } from "../lib/sharing";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 
 const SECONDS_PER_QUESTION = 60;
@@ -195,6 +196,7 @@ function ReviewSession({
 
   const [navigatorOpen, setNavigatorOpen] = useState(false);
   const [askAiOpen, setAskAiOpen] = useState(false);
+  const [askAiImageFile, setAskAiImageFile] = useState<File | null>(null);
   const [visited, setVisited] = useState<Set<number>>(() => new Set([0]));
 
   const [timerEnabled, setTimerEnabled] = useState(true);
@@ -243,6 +245,7 @@ function ReviewSession({
     setDetailedExplanation(null);
     setShowDetails(false);
     setLoadingDetails(false);
+    setAskAiImageFile(null);
   }, [question?.id]);
 
   useEffect(() => {
@@ -379,6 +382,9 @@ function ReviewSession({
   const askAI = () => {
     if (!question) return;
     setAskAiOpen(true);
+    if (question.image && !askAiImageFile) {
+      void fetchImageFile(question.image, `${question.id}.webp`).then(setAskAiImageFile);
+    }
   };
 
 
@@ -594,6 +600,7 @@ function ReviewSession({
         question={question ?? null}
         shareTitle="Share with AI • mediceTaMol"
         onFeedback={showFeedback}
+        imageFile={askAiImageFile}
       />
 
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-page-deep/95 px-1.5 py-2 backdrop-blur sm:px-2">

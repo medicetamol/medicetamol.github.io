@@ -2,10 +2,6 @@
 
 The **marking nut** (*Semecarpus anacardium*, bhela) has a vesicant juice containing **bhilawanol** and semecarpol. It causes severe contact dermatitis and, when ingested, gastrointestinal irritation.
 
-## Key Finding
-
-> Dark, rough, irregular nuts = marking nut.
-
 ## Trigger Point
 
 > **Dark, rough, irregular nuts**; "active principle".

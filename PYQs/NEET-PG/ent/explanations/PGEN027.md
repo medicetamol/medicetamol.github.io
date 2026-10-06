@@ -2,10 +2,6 @@
 
 The **pyriform sinus (fossa)** is a mucosal recess of the **hypopharynx**, **lateral to the aryepiglottic fold**. It is the **commonest site of hypopharyngeal carcinoma**.
 
-## Key Finding
-
-> Arrow A points to the recess lateral to the aryepiglottic fold.
-
 ![Pharynx, posterior view with labelled structures](../images/PGEN027e.webp)
 
 ## Trigger Point

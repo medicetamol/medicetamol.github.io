@@ -2,10 +2,6 @@
 
 **Circumvallate papillae** are **large, dome-shaped** papillae (8-12) at the **V-shaped sulcus terminalis**, each **surrounded by a trench**. **Taste buds** lie on the **lateral walls**, and **von Ebner's serous glands** open into the trench.
 
-## Key Finding
-
-> Large rounded papilla surrounded by a trench with taste buds on the walls and von Ebner's glands at the base.
-
 ![Comparison of tongue papillae types](../images/PGEN007e.webp)
 
 ## Trigger Point

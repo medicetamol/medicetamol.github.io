@@ -2,10 +2,6 @@
 
 Incomplete eyelid closure (**lagophthalmos**) leaves the cornea unprotected, so it dries and develops **exposure keratitis**.
 
-## Key Finding
-
-> Incomplete lid closure with widened palpebral fissure and exposed ocular surface.
-
 ## Trigger Point
 
 > **Incomplete eyelid closure** with exposed eye surface.

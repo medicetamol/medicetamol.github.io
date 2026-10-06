@@ -2,10 +2,6 @@
 
 **Intacs** are **intrastromal corneal ring segments** placed in the corneal periphery to **flatten the cone** in **keratoconus**.
 
-## Key Finding
-
-> A thin curved ring segment embedded in the peripheral cornea.
-
 ## Trigger Point
 
 > **Intacs ring** in the corneal stroma.

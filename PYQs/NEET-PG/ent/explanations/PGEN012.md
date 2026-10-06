@@ -2,10 +2,6 @@
 
 The device is a **tracheostomy tube** with **three parts**: outer tube, inner tube and obturator. It is placed into the trachea and is **not an instrument for examining the upper airway**.
 
-## Key Finding
-
-> A curved plastic tube-shaped device made of three component parts.
-
 ## Trigger Point
 
 > Curved tube with **three components**; instrument **not used** for...

@@ -2,10 +2,6 @@
 
 **Mitomycin C** is an **antifibroblastic agent**. Applied topically, it **reduces scarring** and is used in **subglottic and laryngotracheal stenosis** (also in DCR and choanal atresia surgery).
 
-## Key Finding
-
-> Two small glass vials containing white powder (mitomycin C).
-
 ## Trigger Point
 
 > Vials of white powder; "**topical use**" of the drug.

@@ -2,10 +2,6 @@
 
 **Otogenic intracranial abscesses** most often occur in the **temporal lobe** (from the middle ear roof) and cerebellum. CT shows a **ring lesion with central low density**.
 
-## Key Finding
-
-> Well-defined ring lesion with central hypodensity in the temporal region.
-
 ## Trigger Point
 
 > **Ring lesion** in the **temporal region** on CT.

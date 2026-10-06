@@ -30,20 +30,25 @@ interface SharePayload {
   title: string;
   text: string;
   url?: string;
+  /** Attached as a native file share (e.g. an image) when the platform supports it. */
+  files?: File[];
 }
 
 export async function shareOrCopy({
   title,
   text,
   url,
+  files,
 }: SharePayload): Promise<ShareResult> {
   const shareText = url ? `${text}\n${url}` : text;
 
   try {
-    if (navigator.share) {
+    const canShareFiles = files?.length && navigator.canShare?.({ files });
+    if (navigator.share && (!files?.length || canShareFiles)) {
       await navigator.share({
         title,
         text: shareText,
+        ...(canShareFiles ? { files } : {}),
       });
       return "shared";
     }
@@ -58,5 +63,21 @@ export async function shareOrCopy({
     return "copied";
   } catch {
     return "failed";
+  }
+}
+
+/**
+ * Best-effort fetch of a same-origin question/explanation image as a File,
+ * ready to attach to a native share or write to the clipboard. Returns null
+ * on any failure (offline, 404, unsupported) — callers degrade gracefully.
+ */
+export async function fetchImageFile(imageUrl: string, fileName = "question-image.webp"): Promise<File | null> {
+  try {
+    const response = await fetch(imageUrl);
+    if (!response.ok) return null;
+    const blob = await response.blob();
+    return new File([blob], fileName, { type: blob.type || "image/webp" });
+  } catch {
+    return null;
   }
 }

@@ -2,10 +2,6 @@
 
 A **central tympanic membrane perforation** with an **air-bone gap and normal bone conduction** in the same ear means **conductive hearing loss** of the **left ear**.
 
-## Key Finding
-
-> Central perforation in the left tympanic membrane with pink mucosa at the margins.
-
 ## Trigger Point
 
 > **Left ear air-bone gap**, **bone conduction normal**.

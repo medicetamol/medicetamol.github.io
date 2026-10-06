@@ -46,6 +46,7 @@ import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import QuestionCard from "../components/QuestionCard";
 import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
+import { fetchImageFile } from "../lib/sharing";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 import { SUBJECTS } from "../constants";
 import { isStandalone } from "../lib/pwa";
@@ -306,6 +307,7 @@ export default function Quiz() {
   // Question navigator (legend grid bottom sheet)
   const [navigatorOpen, setNavigatorOpen] = useState(false);
   const [askAiOpen, setAskAiOpen] = useState(false);
+  const [askAiImageFile, setAskAiImageFile] = useState<File | null>(null);
 
   // Read-only view's hybrid filter+legend sheet state
   const [readOnlyFilter, setReadOnlyFilter] = useState<StatusFilter>("all");
@@ -716,6 +718,7 @@ export default function Quiz() {
     setDetailedExplanation(null);
     setShowDetails(false);
     setLoadingDetails(false);
+    setAskAiImageFile(null);
   }, [question?.id]);
 
   // ── Per-question timer (guide mode + direct) ──
@@ -1204,6 +1207,11 @@ export default function Quiz() {
   const askAI = () => {
     if (!question) return;
     setAskAiOpen(true);
+    // Pre-fetch the image once per question so it's ready before any app tap
+    // (fetch, not clipboard copy — the copy itself happens per-app on tap).
+    if (question.image && !askAiImageFile) {
+      void fetchImageFile(question.image, `${question.id}.webp`).then(setAskAiImageFile);
+    }
   };
 
 
@@ -1679,6 +1687,7 @@ export default function Quiz() {
         question={question ?? null}
         shareTitle="Share with AI • mediceTaMol"
         onFeedback={showFeedback}
+        imageFile={askAiImageFile}
       />
 
       {/* ── Fixed bottom navigation ── */}

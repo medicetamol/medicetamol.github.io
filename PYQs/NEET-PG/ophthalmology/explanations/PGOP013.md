@@ -2,10 +2,6 @@
 
 A **65-year-old** with **painless loss of vision** and a **grey-white opacity in the pupil** has **age-related (senile) cataract**. Treatment is surgical: **phacoemulsification with IOL implantation**.
 
-## Key Finding
-
-> Central whitish-grey cloudy opacity in the pupil, normal iris and lashes.
-
 ## Trigger Point
 
 > **Elderly woman** with **painless** visual loss and pupillary opacity.

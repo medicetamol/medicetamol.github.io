@@ -2,10 +2,6 @@
 
 An **incised-looking laceration** is a **tear caused by blunt force** (for example over a bony prominence) that resembles a clean-cut wound at first look. Careful examination shows **tissue bridging** and bruised or abraded margins, so it is a laceration despite its appearance.
 
-## Key Finding
-
-> Irregular wound with elongated lacerated appearance.
-
 ## Trigger Point
 
 > **Irregular margins** with an **elongated lacerated** look.
