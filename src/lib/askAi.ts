@@ -6,8 +6,9 @@ export interface AskAiParams {
   text: string;
   shareTitle: string;
   /**
-   * Pre-fetched image file for image-based questions (fetched once when the
-   * sheet opens, reused across every app tap). Undefined for text-only questions.
+   * Pre-built branded share-card PNG for image-based questions (built once
+   * when the sheet opens, reused across every app tap). Undefined for
+   * text-only questions.
    */
   imageFile?: File | null;
 }
@@ -26,19 +27,46 @@ function copyTextBestEffort(text: string): void {
   navigator.clipboard?.writeText(text).catch(() => {});
 }
 
+// Chrome's Clipboard API only accepts image/png (plus text types) as a
+// ClipboardItem — writing a .webp file directly throws immediately and fails
+// silently every time. Convert via canvas first (same-origin fetch, so no
+// CORS/taint issue) so the clipboard write actually succeeds.
+async function toPngBlob(file: File): Promise<Blob | null> {
+  try {
+    const bitmap = await createImageBitmap(file);
+    const canvas = document.createElement("canvas");
+    canvas.width = bitmap.width;
+    canvas.height = bitmap.height;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return null;
+    ctx.drawImage(bitmap, 0, 0);
+    return await new Promise((resolve) => canvas.toBlob((b) => resolve(b), "image/png"));
+  } catch {
+    return null;
+  }
+}
+
 // Best-effort image clipboard copy for the four deep-link apps (ChatGPT, Claude,
 // Google, Gemini): none of these can receive a file via URL, so the image is
 // placed on the clipboard for the user to paste manually once the app opens.
-// Silently does nothing on failure/unsupported — the red caption in AskAiSheet
-// tells the user to screenshot-paste as a fallback.
+// Fire-and-forget (not awaited by callers) so the openTab() right after it
+// stays synchronous with the click and isn't popup-blocked. Silently does
+// nothing on failure/unsupported — the red caption in AskAiSheet tells the
+// user to screenshot-paste as a fallback.
 function copyImageBestEffort(imageFile?: File | null): void {
   if (!imageFile || !navigator.clipboard?.write || typeof ClipboardItem === "undefined") return;
-  try {
-    const item = new ClipboardItem({ [imageFile.type]: imageFile });
-    navigator.clipboard.write([item]).catch(() => {});
-  } catch {
-    // best-effort only
-  }
+  void (async () => {
+    try {
+      // buildShareCardFile() already outputs PNG — the webp conversion only
+      // runs as a defensive fallback in case a non-PNG file ever lands here.
+      const pngBlob = imageFile.type === "image/png" ? imageFile : await toPngBlob(imageFile);
+      if (!pngBlob) return;
+      const item = new ClipboardItem({ "image/png": pngBlob });
+      await navigator.clipboard.write([item]);
+    } catch {
+      // best-effort only
+    }
+  })();
 }
 
 export async function openAiApp(app: AiApp, { text, shareTitle, imageFile }: AskAiParams): Promise<AskAiResult> {

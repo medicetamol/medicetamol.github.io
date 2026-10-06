@@ -23,7 +23,7 @@ import { getAllBookmarks, recordDailyActivity, toggleBookmark } from "../lib/db"
 import QuestionCard from "../components/QuestionCard";
 import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
-import { fetchImageFile } from "../lib/sharing";
+import { buildShareCardFile } from "../lib/shareCard";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 
 const SECONDS_PER_QUESTION = 60;
@@ -383,7 +383,7 @@ function ReviewSession({
     if (!question) return;
     setAskAiOpen(true);
     if (question.image && !askAiImageFile) {
-      void fetchImageFile(question.image, `${question.id}.webp`).then(setAskAiImageFile);
+      void buildShareCardFile(question).then(setAskAiImageFile);
     }
   };
 

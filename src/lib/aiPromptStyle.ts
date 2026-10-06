@@ -94,15 +94,23 @@ export function getAiPromptInstruction(selection: AiPromptSelection): {
 export function buildAskAiText(question: PYQQuestion, selection: AiPromptSelection): string {
   const instruction = getAiPromptInstruction(selection);
 
+  // Image questions carry the full question + options inside the attached
+  // share-card image now (see shareCard.ts) — repeating them as text would
+  // be redundant, so this stays short: just the instruction (+ link) and a
+  // fallback note in case the image didn't actually attach/paste.
+  if (question.image) {
+    const imageNote = "If an image is not attached, ask me to paste it.";
+    if (!instruction) {
+      return `Explain this IMAGE Based PYQ using the mediceTaMol AI prompt.\n\n${imageNote}`;
+    }
+    return `Explain this IMAGE Based PYQ using the mediceTaMol AI ${instruction.sectionName} prompt given in link\n${instruction.url}\n\n${imageNote}`;
+  }
+
   const headline = instruction
     ? `Explain this PYQ using the\nmediceTaMol AI ${instruction.sectionName} prompt.`
     : `Explain this PYQ using the\nmediceTaMol AI prompt.`;
 
-  const imageNote = question.image
-    ? "\n\nThis question has an image. If not pasted, ask me to provide the image."
-    : "";
-
-  const body = `${headline}\n\n${formatQuestionForShare(question, { includeBranding: false })}${imageNote}`;
+  const body = `${headline}\n\n${formatQuestionForShare(question, { includeBranding: false })}`;
 
   if (!instruction) return body;
 

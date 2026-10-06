@@ -46,7 +46,7 @@ import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import QuestionCard from "../components/QuestionCard";
 import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
-import { fetchImageFile } from "../lib/sharing";
+import { buildShareCardFile } from "../lib/shareCard";
 import type { Exam, PYQQuestion, QuizAnswer } from "../types";
 import { SUBJECTS } from "../constants";
 import { isStandalone } from "../lib/pwa";
@@ -1207,10 +1207,11 @@ export default function Quiz() {
   const askAI = () => {
     if (!question) return;
     setAskAiOpen(true);
-    // Pre-fetch the image once per question so it's ready before any app tap
-    // (fetch, not clipboard copy — the copy itself happens per-app on tap).
+    // Pre-build the branded share-card (question + image + options) once per
+    // question so it's ready before any app tap — same renderer as the Share
+    // button. Only for image questions; text-only questions stay text-only.
     if (question.image && !askAiImageFile) {
-      void fetchImageFile(question.image, `${question.id}.webp`).then(setAskAiImageFile);
+      void buildShareCardFile(question).then(setAskAiImageFile);
     }
   };
 

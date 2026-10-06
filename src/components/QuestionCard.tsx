@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import type { PYQQuestion } from "../types";
 import ImageZoomModal from "./ImageZoomModal";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
+import { buildShareCardFile } from "../lib/shareCard";
 
 interface Props {
   question: PYQQuestion;
@@ -53,11 +54,21 @@ export default function QuestionCard({
   }, [imgModal]);
 
   const shareQuestion = async () => {
-    const result = await shareOrCopy({
-      title: "Share PYQ • mediceTaMol",
-      text: formatQuestionForShare(question),
-      url: solveUrl,
-    });
+    // Every question (image-based or not) shares as the branded card image,
+    // captioned with just the direct solve link. Falls back to the old
+    // plain-text share if the canvas render fails for any reason.
+    const cardFile = await buildShareCardFile(question);
+    const result = cardFile
+      ? await shareOrCopy({
+          title: "Share PYQ • mediceTaMol",
+          text: `✨ Directly Solve here:\n${solveUrl}`,
+          files: [cardFile],
+        })
+      : await shareOrCopy({
+          title: "Share PYQ • mediceTaMol",
+          text: formatQuestionForShare(question),
+          url: solveUrl,
+        });
     onShareFeedback?.(
       result === "copied" ? "Question copied to clipboard" :
       result === "shared" ? "Share sheet opened" : "Unable to share"
