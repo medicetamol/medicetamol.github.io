@@ -1546,7 +1546,10 @@ export default function Quiz() {
                 </button>
                 {showDetails && detailedExplanation && (
                   <div className="mt-4 border-t border-slate-800 pt-4">
-                    <MarkdownContent content={detailedExplanation} />
+                    <MarkdownContent
+                      content={detailedExplanation}
+                      baseUrl={`/PYQs/${examId}/${question.subjectId}/explanations/${question.id}.md`}
+                    />
                   </div>
                 )}
               </>

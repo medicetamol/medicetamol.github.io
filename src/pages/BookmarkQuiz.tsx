@@ -556,7 +556,10 @@ function ReviewSession({
                 </button>
                 {showDetails && detailedExplanation && (
                   <div className="mt-4 border-t border-slate-800 pt-4">
-                    <MarkdownContent content={detailedExplanation} />
+                    <MarkdownContent
+                      content={detailedExplanation}
+                      baseUrl={`/PYQs/${question.exam}/${question.subjectId}/explanations/${question.id}.md`}
+                    />
                   </div>
                 )}
               </>
