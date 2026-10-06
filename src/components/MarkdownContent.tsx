@@ -50,7 +50,22 @@ const SECTION_STYLES: Record<string, SectionStyle> = {
   },
 };
 
-function inlineParts(text: string) {
+// Resolves an image `src` against the URL of the .md file it came from, so
+// all of these work in an explanation file:
+//   ../images/PGEN007e.webp                       (relative to the .md file)
+//   /PYQs/NEET-PG/ent/images/PGEN007e.webp        (root-relative)
+//   https://medicetamol.github.io/.../x.webp      (full URL, left unchanged)
+// If no baseUrl is given, the src is returned as written.
+function resolveImageSrc(src: string, baseUrl?: string): string {
+  if (!baseUrl) return src;
+  try {
+    return new URL(src, new URL(baseUrl, window.location.href)).href;
+  } catch {
+    return src;
+  }
+}
+
+function inlineParts(text: string, baseUrl?: string) {
   const parts = text
     .replace(/<br\s*\/?>/gi, "\n")
     .split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\]\([^)]+\)|\n)/g);
@@ -77,7 +92,7 @@ function inlineParts(text: string) {
       return (
         <img
           key={index}
-          src={image[2]}
+          src={resolveImageSrc(image[2], baseUrl)}
           alt={image[1]}
           loading="lazy"
           className="max-h-[28rem] w-full rounded-xl object-contain"
@@ -113,7 +128,7 @@ function splitTableRow(line: string): string[] {
 
 // Renders everything that isn't a top-level `#`/`##` heading: paragraphs,
 // blockquotes, tables, lists, code blocks, and standalone reference images.
-function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
+function renderBlocks(lines: string[], keyPrefix: string, baseUrl?: string): JSX.Element[] {
   const blocks: JSX.Element[] = [];
   let i = 0;
 
@@ -154,7 +169,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
             : "text-sm font-semibold text-slate-200";
       blocks.push(
         <Tag key={`${keyPrefix}-${blocks.length}`} className={className}>
-          {inlineParts(heading[2])}
+          {inlineParts(heading[2], baseUrl)}
         </Tag>
       );
       i++;
@@ -174,7 +189,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
           className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900"
         >
           <img
-            src={src}
+            src={resolveImageSrc(src, baseUrl)}
             alt={caption}
             loading="lazy"
             className="max-h-[28rem] w-full object-contain"
@@ -204,7 +219,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
           {quoteLines.map((quoteLine, qIndex) => (
             <Fragment key={qIndex}>
               {qIndex > 0 ? <br /> : null}
-              {inlineParts(quoteLine)}
+              {inlineParts(quoteLine, baseUrl)}
             </Fragment>
           ))}
         </blockquote>
@@ -230,7 +245,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
             <thead className="bg-slate-900 text-slate-300">
               <tr>
                 {headers.map((cell, index) => (
-                  <th key={index} className="break-words px-3 py-2 font-semibold">{inlineParts(cell)}</th>
+                  <th key={index} className="break-words px-3 py-2 font-semibold">{inlineParts(cell, baseUrl)}</th>
                 ))}
               </tr>
             </thead>
@@ -239,7 +254,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
                 <tr key={rowIndex} className="border-t border-slate-800">
                   {headers.map((_, cellIndex) => (
                     <td key={cellIndex} className="break-words px-3 py-2 align-top text-slate-400">
-                      {inlineParts(row[cellIndex] ?? "")}
+                      {inlineParts(row[cellIndex] ?? "", baseUrl)}
                     </td>
                   ))}
                 </tr>
@@ -259,7 +274,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
       }
       blocks.push(
         <ul key={`${keyPrefix}-${blocks.length}`} className="list-disc space-y-1 pl-5 text-sm leading-6 text-slate-300">
-          {items.map((item, index) => <li key={index}>{inlineParts(item)}</li>)}
+          {items.map((item, index) => <li key={index}>{inlineParts(item, baseUrl)}</li>)}
         </ul>
       );
       continue;
@@ -273,7 +288,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
       }
       blocks.push(
         <ol key={`${keyPrefix}-${blocks.length}`} className="list-decimal space-y-1 pl-5 text-sm leading-6 text-slate-300">
-          {items.map((item, index) => <li key={index}>{inlineParts(item)}</li>)}
+          {items.map((item, index) => <li key={index}>{inlineParts(item, baseUrl)}</li>)}
         </ol>
       );
       continue;
@@ -296,7 +311,7 @@ function renderBlocks(lines: string[], keyPrefix: string): JSX.Element[] {
     }
     blocks.push(
       <p key={`${keyPrefix}-${blocks.length}`} className="text-sm leading-6 text-slate-300">
-        {inlineParts(paragraph.join(" "))}
+        {inlineParts(paragraph.join(" "), baseUrl)}
       </p>
     );
   }
@@ -328,7 +343,15 @@ function splitIntoSections(lines: string[]): Section[] {
   return sections.filter((section) => section.title || section.body.some((l) => l.trim()));
 }
 
-export default function MarkdownContent({ content }: { content: string }) {
+export default function MarkdownContent({
+  content,
+  baseUrl,
+}: {
+  content: string;
+  // URL of the .md file (the same one passed to fetch). Used to resolve
+  // relative image paths such as ../images/PGEN007e.webp.
+  baseUrl?: string;
+}) {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
   const sections = splitIntoSections(lines);
 
@@ -340,8 +363,8 @@ export default function MarkdownContent({ content }: { content: string }) {
         if (section.level === 1) {
           return (
             <div key={keyPrefix} className="space-y-4">
-              <h1 className="text-lg font-bold text-slate-100">{inlineParts(section.title ?? "")}</h1>
-              {renderBlocks(section.body, keyPrefix)}
+              <h1 className="text-lg font-bold text-slate-100">{inlineParts(section.title ?? "", baseUrl)}</h1>
+              {renderBlocks(section.body, keyPrefix, baseUrl)}
             </div>
           );
         }
@@ -360,7 +383,7 @@ export default function MarkdownContent({ content }: { content: string }) {
                   <Icon size={15} aria-hidden="true" />
                   {style.label}
                 </div>
-                {renderBlocks(section.body, keyPrefix)}
+                {renderBlocks(section.body, keyPrefix, baseUrl)}
               </div>
             );
           }
@@ -369,15 +392,15 @@ export default function MarkdownContent({ content }: { content: string }) {
           // heading, no colour, no icon.
           return (
             <div key={keyPrefix} className="space-y-2">
-              <h2 className="text-base font-bold text-slate-100">{inlineParts(section.title ?? "")}</h2>
-              {renderBlocks(section.body, keyPrefix)}
+              <h2 className="text-base font-bold text-slate-100">{inlineParts(section.title ?? "", baseUrl)}</h2>
+              {renderBlocks(section.body, keyPrefix, baseUrl)}
             </div>
           );
         }
 
         // level 0: content before the first heading (shouldn't normally occur,
         // since every file starts with "# Heading").
-        return <Fragment key={keyPrefix}>{renderBlocks(section.body, keyPrefix)}</Fragment>;
+        return <Fragment key={keyPrefix}>{renderBlocks(section.body, keyPrefix, baseUrl)}</Fragment>;
       })}
     </div>
   );
