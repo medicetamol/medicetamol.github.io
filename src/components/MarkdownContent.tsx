@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import { Fragment, useState, type MouseEvent } from "react";
+import ImageZoomModal from "./ImageZoomModal";
 import { Ban, Brain, Lightbulb, Target, type LucideIcon } from "lucide-react";
 
 type SectionStyle = {
@@ -95,7 +96,7 @@ function inlineParts(text: string, baseUrl?: string) {
           src={resolveImageSrc(image[2], baseUrl)}
           alt={image[1]}
           loading="lazy"
-          className="max-h-[28rem] w-full rounded-xl object-contain"
+          className="max-h-[28rem] w-full cursor-zoom-in rounded-xl object-contain"
         />
       );
     }
@@ -192,7 +193,7 @@ function renderBlocks(lines: string[], keyPrefix: string, baseUrl?: string): JSX
             src={resolveImageSrc(src, baseUrl)}
             alt={caption}
             loading="lazy"
-            className="max-h-[28rem] w-full object-contain"
+            className="max-h-[28rem] w-full cursor-zoom-in object-contain"
           />
           {caption ? (
             <figcaption className="border-t border-slate-800 px-3 py-2 text-center text-xs italic text-slate-500">
@@ -354,9 +355,17 @@ export default function MarkdownContent({
 }) {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
   const sections = splitIntoSections(lines);
+  const [zoomSrc, setZoomSrc] = useState<string | null>(null);
+
+  // One handler for every image in the explanation (inline or standalone figure).
+  const onImageTap = (e: MouseEvent) => {
+    const el = e.target as HTMLElement;
+    if (el.tagName === "IMG") setZoomSrc((el as HTMLImageElement).currentSrc || (el as HTMLImageElement).src);
+  };
 
   return (
-    <div className="space-y-7">
+    <>
+    <div className="space-y-7" onClick={onImageTap}>
       {sections.map((section, index) => {
         const keyPrefix = `s${index}`;
 
@@ -403,5 +412,7 @@ export default function MarkdownContent({
         return <Fragment key={keyPrefix}>{renderBlocks(section.body, keyPrefix, baseUrl)}</Fragment>;
       })}
     </div>
+    {zoomSrc && <ImageZoomModal src={zoomSrc} onClose={() => setZoomSrc(null)} />}
+    </>
   );
 }

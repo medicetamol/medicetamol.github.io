@@ -73,6 +73,7 @@ export default function Progress() {
   const locationState = location.state as {
     scrollToSubjects?: boolean;
     highlightSubject?: string;
+    exam?: Exam;
   } | null;
 
   const [answers, setAnswers] = useState<QuestionAnswer[]>([]);
@@ -126,7 +127,7 @@ export default function Progress() {
   const streakInfo = computeStreak(activity);
   const streakAtRisk = streakInfo.days > 0 && !streakGoalMet;
 
-  const [selectedExam, setSelectedExam] = useState<Exam>("NEET-PG");
+  const [selectedExam, setSelectedExam] = useState<Exam>(locationState?.exam ?? "NEET-PG");
 
   const subjectStats = SUBJECTS.map((subject) => {
     const examPrefix = EXAM_PREFIX[selectedExam];
@@ -147,8 +148,9 @@ export default function Progress() {
       solvedPercent: totalAvailable ? Math.round((attempts / totalAvailable) * 100) : 0,
     };
   })
-    .filter((s) => s.attempts > 0)
-    .sort((a, b) => a.solvedPercent - b.solvedPercent);
+    // SUBJECTS is already in the order set in constants.ts; keep that order and
+    // hide subjects with no attempts.
+    .filter((s) => s.attempts > 0);
 
   const weekly = [...Array(7)].map((_, i) => {
     const d = new Date();

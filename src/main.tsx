@@ -5,11 +5,19 @@ import App from "./App";
 import { AuthProvider } from "./lib/AuthContext";
 import { installAutoRefresh } from "./lib/autoRefresh";
 import { installViewportLock } from "./lib/lockZoom";
+import { safeReload } from "./lib/reloadGuard";
 import "./lib/pwa"; // starts listening for the browser install prompt immediately
 import "./theme.css";
 import "./index.css";
 
 installAutoRefresh(); // reload after 6h+ away (pull-to-refresh is off)
+// A new deploy replaces the hashed page files; a tab still running the old build then fails
+// to fetch a page chunk. Vite fires this event for that: reload once to pick up the new build.
+window.addEventListener("vite:preloadError", (e) => {
+  e.preventDefault();
+  safeReload();
+});
+
 installViewportLock(); // no page zoom / rubber-band pull (iOS ignores user-scalable=no)
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

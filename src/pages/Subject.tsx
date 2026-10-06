@@ -295,7 +295,7 @@ export default function Subject() {
       <div className="mt-10 border-t border-slate-800/60 pt-5 text-center">
         <Link
           to="/progress"
-          state={{ scrollToSubjects: true, highlightSubject: subjectId }}
+          state={{ scrollToSubjects: true, highlightSubject: subjectId, exam: examId }}
           className="inline-flex items-center gap-1.5 text-xs text-slate-600 underline underline-offset-4 decoration-slate-700 hover:text-slate-400 transition-colors"
         >
           <Trash2 size={12} />
