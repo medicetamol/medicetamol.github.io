@@ -1,1 +1,102 @@
-{}
+[
+  {
+    "id": "PGFM001",
+    "e": "Datura = anticholinergic toxidrome (dry skin, ↑ temp, retention, photophobia)\nAntidote = physostigmine; pralidoxime is for OP poisoning"
+  },
+  {
+    "id": "PGFM002",
+    "e": "Cocaine/sympathomimetic toxidrome: tachycardia, hypertension, hyperthermia, coronary spasm\nBradycardia is not expected"
+  },
+  {
+    "id": "PGFM003",
+    "e": "Marbling = putrefaction; bacterial H₂S + Hb → sulphaemoglobin along superficial veins\nAppears ~36–48 h, not 24 h"
+  },
+  {
+    "id": "PGFM004",
+    "e": "Laceration over bone c̅ sharp-edged force can mimic an incision = incised looking laceration\nTissue bridges/irregular margins give it away"
+  },
+  {
+    "id": "PGFM005",
+    "e": "Leading questions are permitted only in cross-examination\nNot allowed in examination-in-chief (direct) or re-examination"
+  },
+  {
+    "id": "PGFM006",
+    "e": "Washerwoman skin (pale, wrinkled, corrugated soles) = prolonged water immersion"
+  },
+  {
+    "id": "PGFM007",
+    "e": "Superfecundation = 2 ova fertilised by separate coital acts in the same cycle (can have different fathers)\nSuperfetation = ova of different cycles"
+  },
+  {
+    "id": "PGFM008",
+    "e": "Exhibitionism = exposing oneself/nakedness to others for sexual gratification\nVoyeurism = watching others"
+  },
+  {
+    "id": "PGFM009",
+    "e": "Classic heat stroke: hot DRY skin, temp >105°F, hypotension, CNS dysfunction\nSweating is typically absent"
+  },
+  {
+    "id": "PGFM010",
+    "e": "Marking nut (Semecarpus anacardium): active principle = bhilawanol (vesicant)\nAbrin = Abrus; ricin = castor"
+  },
+  {
+    "id": "PGFM011",
+    "e": "Datura = anticholinergic toxidrome (fever, confusion, photophobia, retention)\nAntidote = physostigmine (crosses BBB)"
+  },
+  {
+    "id": "PGFM012",
+    "e": "Letulle = en masse removal of organs (tongue → prostate)\nVirchow = one by one; Rokitansky = in situ; Ghon = en bloc"
+  },
+  {
+    "id": "PGFM013",
+    "e": "Rokitansky (in situ) technique ↓es organ handling → preferred in infectious cases like HIV"
+  },
+  {
+    "id": "PGFM014",
+    "e": "Barberio test = picric acid c̅ semen → yellow needle-shaped spermine picrate crystals\nFlorence = iodine, brown crystals"
+  },
+  {
+    "id": "PGFM015",
+    "e": "Strychnine: convulsions c̅ opisthotonus & clear sensorium between spasms (glycine antagonist)"
+  },
+  {
+    "id": "PGFM016",
+    "e": "IPC 314 = death of the woman by act done c̅ intent to cause miscarriage\n312 = c̅ consent; 313 = without consent"
+  },
+  {
+    "id": "PGFM017",
+    "e": "Septicaemia ↑es postmortem body temperature (also heat stroke, tetanus, pontine haemorrhage)"
+  },
+  {
+    "id": "PGFM018",
+    "e": "Viper venom = haemotoxic: local pain, swelling, blisters, profuse bleeding\nCobra = neurotoxic, little bleeding"
+  },
+  {
+    "id": "PGFM019",
+    "e": "Arsenic: garlicky breath + rice-water diarrhoea (mimics cholera) c̅ severe GI pain\nPhosphorus: garlic breath c̅ luminous vomitus"
+  },
+  {
+    "id": "PGFM020",
+    "e": "Age of consent for sexual acts = 18 yrs → consent of a girl <18 is invalid (POCSO/IPC 375)"
+  },
+  {
+    "id": "PGFM021",
+    "e": "Throttling (manual strangulation): grouped finger bruises, crescentic nail marks, fracture of thyroid superior horn\nLigature strangulation = continuous groove"
+  },
+  {
+    "id": "PGFM022",
+    "e": "Zsako phenomenon = postmortem tendon reflex (muscle contracts on tapping the tendon)"
+  },
+  {
+    "id": "PGFM023",
+    "e": "Plea of insanity (IPC 84) → refer for psychiatric evaluation (fitness to stand trial); court decides"
+  },
+  {
+    "id": "PGFM024",
+    "e": "POCSO 2012 protects all children <18 yrs, boys and girls (gender-neutral)"
+  },
+  {
+    "id": "PGFM028",
+    "e": "Futile aggressive care → family meeting c̅ shared, patient-centred decision (palliative approach)\nNo non-beneficial interventions or placebo"
+  }
+]
