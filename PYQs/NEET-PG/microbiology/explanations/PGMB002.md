@@ -1,20 +1,30 @@
-# Trichomonas vaginalis
+# Twitching Motility on Wet Saline Mount
 
-## 🧠 Basic concept
+*Trichomonas vaginalis* is a flagellated protozoan that exists **only as a trophozoite** (pear-shaped, with four anterior flagella and an undulating membrane). On a fresh wet saline mount of vaginal discharge it shows **jerky, twitching motility**. It is sexually transmitted and treated with metronidazole (both partners).
 
-**Trichomonas vaginalis** is a motile, flagellated protozoan transmitted primarily by sexual contact.
+## Trigger Point
 
-## 🔍 Why is this the answer?
+> Which statement is **true** about *Trichomonas vaginalis*?
 
-A **fresh wet mount** of genital discharge can demonstrate characteristic darting or twitching motility.
+## Diagnosis of *Trichomonas vaginalis*
 
-## 📌 High-yield points
+| Method | Finding |
+|---|---|
+| Wet saline mount | Motile trophozoites with twitching motility |
+| Culture | Diamond's medium (also InPouch TV) |
+| NAAT | Most sensitive test |
 
-- Trophozoite form is the infective and diagnostic form.
-- **Cyst stage is absent.**
-- It is a sexually transmitted infection.
-- Motility is best appreciated in a fresh specimen.
+## Why Not the Other Options?
 
-## 🧠 Exam Pearl
+**A. It cannot be cultured**
+It can be grown in Diamond's medium and InPouch TV culture systems.
 
-> Trichomonas = motile flagellate + no cyst stage.
+**C. Cysts are seen on wet saline mount of vaginal secretions**
+It has no cyst stage. Only trophozoites are seen, so cysts are a feature of other protozoa such as *Giardia* and *Entamoeba*.
+
+**D. It is not a sexually transmitted infection**
+It is one of the commonest non-viral STIs worldwide.
+
+## Mind Capsule
+
+> *Trichomonas vaginalis* = trophozoite only (no cyst) + twitching motility on wet mount + STI.

@@ -242,7 +242,7 @@ function renderBlocks(lines: string[], keyPrefix: string, baseUrl?: string): JSX
       }
       blocks.push(
         <div key={`${keyPrefix}-${blocks.length}`} className="overflow-x-auto rounded-xl border border-slate-800">
-          <table className="w-full table-fixed text-left text-xs">
+          <table className="w-full table-auto text-left text-xs">
             <thead className="bg-slate-900 text-slate-300">
               <tr>
                 {headers.map((cell, index) => (
