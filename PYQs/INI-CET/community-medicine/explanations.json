@@ -46,5 +46,9 @@
   {
     "id": "INCM012",
     "e": "Nested case-control: controls sampled from the parent cohort → incidence rates derivable, and OR approximates RR.\nBoth statements true, but R does not explain A."
+  },
+  { 
+    "id": "INCM013",
+    "e": "Staph food poisoning: preformed enterotoxin → short incubation (1-6 hrs) → common-source (point-source) epidemic c̅ sharp single peak.\nSalmonella/typhoid/measles have longer, variable incubation → wider curve." 
   }
 ]

@@ -128,5 +128,18 @@
       "Electrocution"
     ],
     "a": 0
+  },
+  {
+    "id": "INFM011",
+    "y": 2026,
+    "t": "TOX",
+    "q": "A man in emergency comes with pinpoint pupil, bradycardia, respiratory depression, excessive salivation, sweating, lacrimation after drinking some liquid. Treatment of choice:",
+    "o": [
+      "Pralidoxime",
+      "Atropine",
+      "Flumazenil",
+      "Naloxone"
+    ],
+    "a": 1
   }
 ]

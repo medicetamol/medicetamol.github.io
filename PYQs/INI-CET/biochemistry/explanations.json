@@ -50,5 +50,10 @@
   {
     "id": "INBC013",
     "e": "Uncoupler dissipates the proton gradient → O2 consumption ↑es, heat ↑es, ATP synthesis ↓es."
+  },
+  {
+    "id": "INBC014",
+    "e": "Oncogene addiction = tumour survival depends on one dominant oncogenic pathway 🎯\nBlocking it → apoptosis (e.g., imatinib in BCR-ABL, trastuzumab in HER2)."
   }
+  
 ]

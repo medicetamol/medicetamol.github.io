@@ -154,5 +154,18 @@
       "The assertion is incorrect, but the reason is correct"
     ],
     "a": 1
+  },
+  {
+    "id": "INCM013",
+    "y": 2026,
+    "t": "EPI",
+    "q": "An epidemiologist studying an outbreak notes that all affected individuals develop symptoms within a short interval, with incidence peaking at nearly the same time. Which of the following diseases is most likely to produce such an epidemic curve?",
+    "o": [
+      "Salmonellosis",
+      "Staphylococcal food poisoning",
+      "Measles",
+      "Typhoid fever"
+    ],
+    "a": 1
   }
 ]

@@ -30,5 +30,9 @@
   {
     "id": "INDR008",
     "e": "Suspected acral melanoma → excisional/full-thickness biopsy c̅ histopathology is the confirmatory test."
+  },
+  {
+    "id": "INDR009",
+    "e": "Painless black necrotic eschar c̅ surrounding oedema → confirm by tissue diagnosis (skin biopsy).\nKOH = superficial fungal infection; Tzanck = herpes/vesiculobullous lesions." 
   }
 ]

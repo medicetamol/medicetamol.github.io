@@ -128,5 +128,18 @@
       "Dense collagenous scar with few cells"
     ],
     "a": 0
+  },
+  {
+    "id": "INPT011",
+    "y": 2026,
+    "t": "NEO",
+    "q": "Which of the following is wrongly matched?",
+    "o": [
+      "EBV – Burkitt’s lymphoma",
+      "HHV-8 – Kaposi sarcoma",
+      "HTLV – Adult T-cell lymphoma",
+      "CMV – Nasopharyngeal carcinoma"
+    ],
+    "a": 3
   }
 ]

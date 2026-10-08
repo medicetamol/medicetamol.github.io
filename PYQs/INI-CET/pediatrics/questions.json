@@ -115,5 +115,31 @@
       "Neonatal Graves’ (thyrotoxicosis)"
     ],
     "a": 0
+  },
+  {
+    "id": "INPD010",
+    "y": 2026,
+    "t": "NEN",
+    "q": "A 6-week-old infant, hospitalised since birth due to prematurity and prolonged NICU stay, develops fever, poor feeding, lethargy, and seizures. CSF findings are suggestive of bacterial meningitis. What is the most likely causative organism?",
+    "o": [
+      "Haemophilus influenzae",
+      "Streptococcus pneumoniae",
+      "Staphylococcus aureus",
+      "Listeria monocytogenes"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPD011",
+    "y": 2026,
+    "t": "NEN",
+    "q": "A neonate has a blood sugar of 38 mg/dL and is otherwise asymptomatic. What is the next step in management?",
+    "o": [
+      "Trial of feeds/breastfeeding",
+      "Immediate IV bolus of 10% Dextrose",
+      "Continuous glucose infusion",
+      "Reassurance and discharge"
+    ],
+    "a": 0
   }
 ]

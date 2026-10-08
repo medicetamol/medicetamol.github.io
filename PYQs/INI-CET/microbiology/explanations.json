@@ -54,5 +54,17 @@
   {
     "id": "INMB014",
     "e": "Trophozoites c̅ ingested RBCs = Entamoeba histolytica (invasive colitis).\nCryptosporidium shows acid-fast oocysts, not RBC-containing trophozoites."
+  },
+  {
+    "id": "INMB015",
+    "e": "Rheumatic heart disease follows Group A Streptococcus (S. pyogenes) pharyngitis 🫀\nM-protein molecular mimicry → chronic mitral stenosis (\"fish-mouth\" valve)."
+  },
+  {
+    "id": "INMB016",
+    "e": "Trichomonas vaginalis: motile, pear-shaped flagellated trophozoite c̅ undulating membrane (jerky motility); no cyst stage.\nClue cells = BV (Gardnerella); budding yeast = Candida."
+  },
+  {
+    "id": "INMB017",
+    "e": "Hookworm (Ancylostoma) larvae penetrate skin; animal hookworms (A. braziliense/caninum) cause cutaneous larva migrans.\nTransmission is via skin penetration, not ingestion; Strongyloides shows larvae (not eggs) in stool."
   }
 ]

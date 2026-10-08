@@ -102,5 +102,18 @@
       "Wood's lamp examination"
     ],
     "a": 0
+  },
+  {
+    "id": "INDR009",
+    "y": 2026,
+    "t": "BKI",
+    "q": "A patient presents with a painless black necrotic lesion over the heel with surrounding edema. What is the best investigation to confirm the diagnosis?",
+    "o": [
+      "Skin biopsy",
+      "KOH smear",
+      "Gram stain",
+      "Tzanck smear"
+    ],
+    "a": 0
   }
 ]

@@ -180,5 +180,44 @@
       "Entamoeba histolytica"
     ],
     "a": 3
+  },
+  {
+    "id": "INMB015",
+    "y": 2026,
+    "t": "BAC",
+    "q": "A 40-year-old woman presents with malar telangiectasia, skin tightening suggestive of scleroderma, and progressive dyspnea on exertion. Echocardiography reveals a \"fish-mouth\" appearance of the mitral valve, attributed to chronic rheumatic heart disease. Which of the following microorganisms is most likely implicated in the pathogenesis of this valvular lesion?",
+    "o": [
+      "Streptococcus pyogenes",
+      "Staphylococcus aureus",
+      "Streptococcus pneumoniae",
+      "Corynebacterium diphtheriae"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB016",
+    "y": 2026,
+    "t": "PAR",
+    "q": "A 28-year-old woman presents with greenish vaginal discharge, vulvovaginal irritation, negative Amsel criteria, and positive whiff test (fishy odor). Wet mount examination is performed. What is the most likely morphology of the causative organism?",
+    "o": [
+      "Motile, pear-shaped flagellated trophozoite with an undulating membrane",
+      "Budding yeast forms with pseudohyphae",
+      "Intracellular Gram-negative diplococci within neutrophils",
+      "Clue cells coated with adherent coccobacilli"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB017",
+    "y": 2026,
+    "t": "PAR",
+    "q": "[Image: Stool microscopy showing hookworm ova]\nWhich of the following statements regarding this organism is true?",
+    "o": [
+      "Transmission occurs through ingestion of contaminated food and water",
+      "The image represents eggs of Strongyloides stercoralis",
+      "The image represents eggs of Hymenolepis nana",
+      "The organism can cause cutaneous larva migrans"
+    ],
+    "a": 3
   }
 ]

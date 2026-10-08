@@ -167,5 +167,18 @@
       "Decreased O2 consumption, decreased body temperature, decreased ATP production"
     ],
     "a": 1
+  },
+  {
+    "id": "INBC014",
+    "y": 2026,
+    "t": "MOL",
+    "q": "Oncogene addiction refers to a phenomenon in which cancer cells:",
+    "o": [
+      "Depend predominantly on a single oncogenic pathway for survival, allowing targeted therapy against that pathway",
+      "Become resistant to all forms of chemotherapy",
+      "Develop due to addiction to carcinogenic substances",
+      "Simultaneously activate multiple tumour suppressor genes"
+    ],
+    "a": 0
   }
 ]
