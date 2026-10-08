@@ -127,7 +127,7 @@
       "Manage ABC, NS 10 mL/kg along with insulin 0.1 IU/kg/hr",
       "Manage ABC, NS 10 mL/kg and start insulin after 1 hour"
     ],
-    "a": 0
+    "a": 3
   },
   {
     "id": "PGPD011",
@@ -283,7 +283,7 @@
       "Oral calcium + Vitamin D",
       "Growth hormone therapy"
     ],
-    "a": 0
+    "a": 1
   },
   {
     "id": "PGPD023",
@@ -294,7 +294,7 @@
       "Diazepam",
       "Valproate",
       "Fosphenytoin",
-      "Doxycycline / Amoxicillin"
+      "Oral paracetamol"
     ],
     "a": 0
   },

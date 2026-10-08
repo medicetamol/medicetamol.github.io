@@ -17,11 +17,11 @@
   },
   {
     "id": "PGOG005",
-    "e": "Septate uterus: treated by resection of the septum, indicated in recurrent pregnancy loss/poor obstetric outcome"
+    "e": "Septate uterus: hysteroscopic septum resection (no uterine incision), indicated in recurrent pregnancy loss"
   },
   {
     "id": "PGOG006",
-    "e": "Hysteroscopy = direct endoscopic view of the uterine cavity (diagnostic + operative); no radio-opaque dye is used"
+    "e": "HSG: radio-opaque dye fills the uterine cavity & both tubes (spill = patency); done in the proliferative phase"
   },
   {
     "id": "PGOG007",
@@ -65,7 +65,7 @@
   },
   {
     "id": "PGOG017",
-    "e": "Syphilis causes mid-trimester (>16 wk) fetal loss via transplacental spread once the placenta is mature"
+    "e": "APLA: recurrent fetal loss + early-onset preeclampsia (placental vessel thrombosis) → aspirin + LMWH"
   },
   {
     "id": "PGOG018",
@@ -105,7 +105,7 @@
   },
   {
     "id": "PGOG027",
-    "e": "Established anaemia in pregnancy needs therapeutic iron rather than waiting for the routine prophylaxis window (after the 1st trimester)"
+    "e": "Iron supplementation starts after the 1st trimester (~14 wk): nausea settles & demand ↑es in 2nd-3rd trimester"
   },
   {
     "id": "PGOG028",
@@ -149,7 +149,7 @@
   },
   {
     "id": "PGOG038",
-    "e": "No breast/pubic/axillary hair c̅ absent ovaries → gonadal failure → ↓es sex steroids → ↑es FSH/LH (hypergonadotropic hypogonadism)"
+    "e": "CAIS (46,XY): androgen receptor defect → normal breasts (peripheral aromatisation), scanty pubic/axillary hair, blind vagina, absent uterus, inguinal testes"
   },
   {
     "id": "PGOG039",
@@ -245,7 +245,7 @@
   },
   {
     "id": "PGOG071",
-    "e": "Fetal toxoplasmosis risk is mainly from primary infection in pregnancy; IgG/IgM/avidity dating decides the risk"
+    "e": "Past toxoplasmosis c̅ IgG +ve = immunity; fetal risk is mainly from primary infection during pregnancy"
   },
   {
     "id": "PGOG072",

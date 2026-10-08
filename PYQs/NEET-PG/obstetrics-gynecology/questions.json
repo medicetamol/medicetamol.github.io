@@ -62,7 +62,7 @@
       "Uterine metroplasty",
       "Laparotomy and resection"
     ],
-    "a": 0
+    "a": 1
   },
   {
     "id": "PGOG006",
@@ -75,7 +75,7 @@
       "Hysteroscopy",
       "Saline infusion sonography"
     ],
-    "a": 2
+    "a": 0
   },
   {
     "id": "PGOG007",
@@ -218,7 +218,7 @@
       "TORCH",
       "GDM"
     ],
-    "a": 0
+    "a": 1
   },
   {
     "id": "PGOG018",
@@ -348,7 +348,7 @@
       "After 14 weeks",
       "After 20 weeks"
     ],
-    "a": 1
+    "a": 2
   },
   {
     "id": "PGOG028",
@@ -484,14 +484,14 @@
     "id": "PGOG038",
     "y": 2023,
     "t": "MNA",
-    "q": "A 17-year-old girl is seen for primary amenorrhea. There is no development of breasts or hair in the pubic or axillary region. Her height is 155 cm, and her weight is 48 kg. She has bilateral inguinal masses. The uterus, fallopian tube, and Ovary are absent on ultrasound examination. What is the most likely diagnosis?",
+    "q": "A 17-year-old girl is seen for primary amenorrhea. There is nomal development of breasts, scanty hair in the pubic & axillary region. Her height is 155 cm, and her weight is 48 kg. She has bilateral inguinal masses. The uterus, fallopian tube, and ovary are absent on ultrasound examination. What is the most likely diagnosis?",
     "o": [
       "Complete androgen insensitivity syndrome",
       "Hypergonadotropic hypogonadism",
       "Turner syndrome",
       "Polycystic ovary syndrome"
     ],
-    "a": 1
+    "a": 0
   },
   {
     "id": "PGOG039",
@@ -803,7 +803,7 @@
       "Continue, risk exists",
       "Repeat IgM serology"
     ],
-    "a": 2
+    "a": 0
   },
   {
     "id": "PGOG072",
@@ -814,7 +814,7 @@
       "Amniotic band syndrome",
       "Arthrogryposis multiplex",
       "Polyhydramnios",
-      "Congenital constriction ring"
+      "Thalidomide embryopathy"
     ],
     "a": 0
   },

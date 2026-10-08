@@ -1,1 +1,118 @@
-{}
+[
+  {
+    "id": "PGPD001",
+    "e": "Hypophosphatemic rickets: ↓ phosphate c̅ normal Ca & PTH, ↑ ALP, vit D-resistant (FGF23 ↑es → phosphaturia)"
+  },
+  {
+    "id": "PGPD002",
+    "e": "Recurrent respiratory infections → suspected primary immunodeficiency → live vaccines contraindicated.\nMeasles is live; IPV, DPT, DT are inactivated/toxoid"
+  },
+  {
+    "id": "PGPD003",
+    "e": "Height-for-age < -2 SD = stunting → chronic malnutrition.\nWeight-for-height < -2 SD = wasting → acute"
+  },
+  {
+    "id": "PGPD004",
+    "e": "SSPE: delayed (years) complication of early-childhood measles → myoclonic jerks + cognitive/school decline"
+  },
+  {
+    "id": "PGPD005",
+    "e": "Turner (45,X): webbed neck, low posterior hairline, short stature"
+  },
+  {
+    "id": "PGPD006",
+    "e": "Takayasu (large-vessel arteritis): weak upper-limb pulses ('pulseless disease') c̅ retinal changes"
+  },
+  {
+    "id": "PGPD007",
+    "e": "Nephrotic syndrome: massive proteinuria → oedema, hypoalbuminaemia, ↑ cholesterol"
+  },
+  {
+    "id": "PGPD008",
+    "e": "Scurvy (vit C ↓es collagen synthesis): Wimberger ring, Frankel line, Trümmerfeld zone, Pelkan spur"
+  },
+  {
+    "id": "PGPD009",
+    "e": "RDS = surfactant deficiency; main component dipalmitoylphosphatidylcholine (lecithin). L:S ratio <2 = immature lungs"
+  },
+  {
+    "id": "PGPD010",
+    "e": "ISPAD DKA: NS 10 mL/kg over 30-60 min (20 mL/kg only if shock); insulin 0.05-0.1 U/kg/h started ≥1 h after fluids"
+  },
+  {
+    "id": "PGPD011",
+    "e": "Length ↑es ~25 cm in 1st year (≈50 → 75 cm).\nBirth weight doubles at ~5 mo, triples at 1 yr"
+  },
+  {
+    "id": "PGPD012",
+    "e": "Congenital rubella: PDA + cataract + sensorineural deafness"
+  },
+  {
+    "id": "PGPD013",
+    "e": "Sweat chloride >60 mEq/L = cystic fibrosis (CFTR defect)"
+  },
+  {
+    "id": "PGPD014",
+    "e": "Koplik spots on buccal mucosa = pathognomonic of measles; rash spreads cephalocaudally"
+  },
+  {
+    "id": "PGPD015",
+    "e": "Pertussis (paroxysmal cough ± apnoea, marked lymphocytosis) in young infants → azithromycin"
+  },
+  {
+    "id": "PGPD016",
+    "e": "Biphasic stridor + steeple sign (subglottic narrowing) = croup (laryngotracheobronchitis)"
+  },
+  {
+    "id": "PGPD017",
+    "e": "Conjugated hyperbilirubinaemia + clay stools + periductal proliferation = biliary atresia (Kasai ideally <60 days)"
+  },
+  {
+    "id": "PGPD018",
+    "e": "CMV: periventricular calcification c̅ HSM & thrombocytopenia.\nToxoplasmosis: diffuse/scattered calcification"
+  },
+  {
+    "id": "PGPD019",
+    "e": "α-L-iduronidase deficiency = Hurler (MPS I) → dermatan + heparan sulfate accumulate"
+  },
+  {
+    "id": "PGPD020",
+    "e": "ADA deficiency → toxic dATP → T & B cell failure = SCID (autosomal recessive)"
+  },
+  {
+    "id": "PGPD021",
+    "e": "High-risk exposed infant (maternal VL >1000 copies/mL) → dual prophylaxis: nevirapine + zidovudine for 6 weeks"
+  },
+  {
+    "id": "PGPD022",
+    "e": "CKD-MBD: ↑ phosphate → ↑ PTH, ↓ calcitriol → renal rickets.\nFirst control phosphate: diet restriction + phosphate binder"
+  },
+  {
+    "id": "PGPD023",
+    "e": "Acute febrile seizure: benzodiazepine (diazepam/lorazepam/midazolam) is first-line to abort the seizure"
+  },
+  {
+    "id": "PGPD024",
+    "e": "CDH: bowel-gas bubbles in one hemithorax c̅ mediastinal shift to the opposite side (mc left, Bochdalek)"
+  },
+  {
+    "id": "PGPD025",
+    "e": "Hexosaminidase A deficiency = Tay-Sachs (GM2 gangliosidosis): cherry-red spot + neurodegeneration"
+  },
+  {
+    "id": "PGPD026",
+    "e": "Maternal-only transmission = mitochondrial inheritance.\nKearns-Sayre: PEO + pigmentary retinopathy + cardiac conduction block"
+  },
+  {
+    "id": "PGPD027",
+    "e": "VVM: usable while the inner square is lighter than the outer circle.\nDiscard when it matches or is darker than the circle"
+  },
+  {
+    "id": "PGPD042",
+    "e": "Child >1 yr choking → abdominal thrusts (Heimlich).\nInfant <1 yr → 5 back blows + 5 chest thrusts"
+  },
+  {
+    "id": "PGPD043",
+    "e": "Katori method (7 mo): start ½-1 katori, 4 times daily, then build up gradually"
+  }
+]
