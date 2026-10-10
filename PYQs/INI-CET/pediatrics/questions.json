@@ -141,5 +141,148 @@
       "Reassurance and discharge"
     ],
     "a": 0
+  },
+  {
+    "id": "INPD012",
+    "y": 2025,
+    "t": "NEN",
+    "q": "The term neonate presents with respiratory distress, chest X-ray showed hyperinflation with prominent fissure/bulging of the middle fissure. If the baby got well after 2 hours, what is the likely diagnosis?",
+    "o": [
+      "Transient Tachypnea of Newborn",
+      "Respiratory Distress Syndrome",
+      "Congenital Pneumonia",
+      "Meconium Aspiration Syndrome"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPD013",
+    "y": 2025,
+    "t": "PGS",
+    "q": "A 7-year-old child with stunting is brought for evaluation of short stature. His height is below -2 SD for age. Developmental milestones are normal. On examination, the upper-to-lower segment ratio is 1.4. Which of the following is the most likely diagnosis?",
+    "o": [
+      "Achondroplasia",
+      "Spondyloepiphyseal dysplasia",
+      "Nutritional cause",
+      "GH deficiency"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPD014",
+    "y": 2025,
+    "t": "PGS",
+    "q": "Which of the following features are characteristic of Hirschsprung’s disease?\n1. Failure of migration of ganglia\n2. Causes intestinal obstruction postnatally\n3. Distal segment dilated\n4. Proximal segment constricted",
+    "o": [
+      "1, 2, 3 are correct",
+      "1, 2 are correct",
+      "3, 4, 5 are correct",
+      "3 & 4 are correct"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD015",
+    "y": 2025,
+    "t": "PEM",
+    "q": "A boy is brought for evaluation; he has stunting with excessive weight gain. His height is below -2 SD for age, and his weight is above +2 SD. Developmental milestones are normal. He has a history of recurrent respiratory infections for which he frequently receives oral medications. What is the next best step to take?",
+    "o": [
+      "Promote physical activity as the Child is overweight",
+      "Screen children for Growth hormone deficiency",
+      "Check TFT, as the child has congenital hypothyroidism",
+      "Test for Cushing Syndrome secondary to steroid use"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPD016",
+    "y": 2025,
+    "t": "NEN",
+    "q": "An infant with 3 months of progressive jaundice, pale stools, high colored urine. The child was healthy, gaining weight and feeding well. HIDA scan showed no excretion. What is the next step?",
+    "o": [
+      "Breast milk jaundice, stop for 2 weeks and give formula feed",
+      "Galactosemia, do tests to confirm",
+      "Metabolic condition requiring further testing",
+      "Liver biopsy"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPD017",
+    "y": 2025,
+    "t": "PKI",
+    "q": "A child with fever and abdominal pain tested positive for Dengue on day 5 of fever. His BP was 110/70 mm Hg, platelet counts were 20,000/mm3, but there were no bleeding manifestations. What is the next step?",
+    "o": [
+      "Platelet transfusion",
+      "10 ml/kg/hr RL",
+      "7 ml/kg/hr RL",
+      "20 ml/kg RL"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPD018",
+    "y": 2025,
+    "t": "PRR",
+    "q": "A 10-year-old child presents with generalised oedema. Urinalysis shows +3 proteinuria, and 24-hour urine protein is more than 3.5 g/day. There is no hypertension or hematuria. Serum albumin is low. Kidney biopsy shows segmental fibrosis and hyalinosis. The child shows a poor response to steroids. What is the most likely diagnosis?",
+    "o": [
+      "Minimal Change Disease",
+      "Focal Segmental Glomerulosclerosis",
+      "Membranous Glomerulopathy",
+      "IgA Nephropathy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD019",
+    "y": 2025,
+    "t": "PEM",
+    "q": "A 10-year-old child presented with hyperglycemia. He was diagnosed with Severe DKA, HCO3 of 4, pH of 7.0, RBS of 450, And + 4.5. Management?",
+    "o": [
+      "10 ml/kg NS over 30 min (10% deficit correction) followed by insulin infusion, with KCl 20 mmol/l & bicarbonate",
+      "20 ml/kg NS (10% deficit correction) over 30 min followed by insulin infusion & fluid with KCl 40 mmol/l added",
+      "10 ml/kg RL bolus (7% deficit correction) followed by insulin infusion and KCl",
+      "20 ml/kg RL over 30 min (7% deficit correction) followed by insulin infusion, bicarbonate and KCl"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD020",
+    "y": 2025,
+    "t": "GRW",
+    "q": "Identify the correct match of milestone & corresponding normal age of attainment?",
+    "o": [
+      "Mature Pincer grasp – 9 months",
+      "Making a tower of 2 blocks – 2 years",
+      "Bidextrous approach – 6 months",
+      "Transfers objects from one hand to another – 6 months"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPD021",
+    "y": 2025,
+    "t": "PCR",
+    "q": "A child presents with recurrent pneumonia and respiratory distress but no cyanosis. A continuous murmur is heard below the left clavicle. What is the most probable diagnosis?",
+    "o": [
+      "Ventricular septal defect (VSD)",
+      "Atrial septal defect (ASD)",
+      "CoA",
+      "Patent ductus arteriosus (PDA)"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPD022",
+    "y": 2025,
+    "t": "PNR",
+    "q": "Which is not used in status epilepticus?",
+    "o": [
+      "Valproate",
+      "Ethosuximide",
+      "Fosphenytoin",
+      "Levetiracetam"
+    ],
+    "a": 1
   }
 ]

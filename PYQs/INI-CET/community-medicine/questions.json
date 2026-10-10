@@ -167,5 +167,135 @@
       "Typhoid fever"
     ],
     "a": 1
+  },
+  {
+    "id": "INCM014",
+    "y": 2025,
+    "t": "EPI",
+    "q": "Which of the following is not included in Bradford Hill’s criteria for establishing causation?",
+    "o": [
+      "Temporality",
+      "Dose–response relationship",
+      "Biological plausibility",
+      "Sensitivity"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INCM015",
+    "y": 2025,
+    "t": "HAD",
+    "q": "In an emergency triage scenario, which patient should be attended to first?",
+    "o": [
+      "40-year-old unconscious patient with noisy breathing",
+      "25-year-old woman is breathing rapidly and sweating",
+      "60-year-old man is conscious with blood-soaked trousers",
+      "Child crying loudly and inconsolably"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM016",
+    "y": 2025,
+    "t": "ENV",
+    "q": "PM2.5 particles are considered particularly hazardous to human health because their small size allows them to penetrate deeply into which part of the respiratory tract?",
+    "o": [
+      "Alveoli",
+      "Bronchioles",
+      "Nose",
+      "Trachea"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM017",
+    "y": 2025,
+    "t": "VAC",
+    "q": "A previously vaccinated healthcare worker (HCW) sustains a needle-stick injury from a Hepatitis B surface antigen (HBsAg)–positive patient. The HCW is a known non-responder. What should be done next?",
+    "o": [
+      "Give 1 dose of HBIG and start a complete Hepatitis B vaccination series",
+      "No further action is required",
+      "Give 2 doses of HBIG — one immediately and another after 4 weeks",
+      "Give 2 doses of HBIG immediately, at separate sites"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM018",
+    "y": 2025,
+    "t": "NHP",
+    "q": "As per the National Program for Prevention and Control of Non-Communicable Diseases (NP-NCD), which of the following screening activities are not done at the Sub-Centre (SC) or Primary Health Centre (PHC) level?",
+    "o": [
+      "VIA for cervical cancer screening",
+      "Visual inspection for oral cancer",
+      "Mammography for screening at the primary level",
+      "Screening starts beyond 30 years"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM019",
+    "y": 2025,
+    "t": "FPD",
+    "q": "Which of the following statements about the roles of the family beyond reproduction are incorrect?",
+    "o": [
+      "Providing support during illness",
+      "Influencing cultural and health-related behaviour",
+      "Providing emotional and financial security",
+      "Regulating sexual behaviour and reproduction only"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INCM020",
+    "y": 2025,
+    "t": "HAD",
+    "q": "Which of the following statements about the NITI Aayog Health Index are incorrect?",
+    "o": [
+      "It is used to assess and compare the health performance of different states and UTs.",
+      "It is meant only for evaluating government hospitals.",
+      "It promotes healthy competition among states to improve health outcomes.",
+      "It aids in policy planning to strengthen public health systems, especially primary healthcare."
+    ],
+    "a": 1
+  },
+  {
+    "id": "INCM021",
+    "y": 2025,
+    "t": "EPI",
+    "q": "A community consists of 500 individuals, and over a period of 2 years, 20 new cases of a certain disease were identified. The total observation time amounted to 950 person-years. What is the incidence rate of this disease in the population?",
+    "o": [
+      "2.1 per 1000 person-years",
+      "2.1 per 100 person-years",
+      "4 per 1000 person-years",
+      "2 per 100 person-years"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INCM022",
+    "y": 2025,
+    "t": "EPI",
+    "q": "A research study observes that individuals who exercise regularly have a lower risk of developing heart disease. However, those who work out also tend to maintain a healthier diet, which itself lowers heart disease risk. In this scenario, diet serves as a—",
+    "o": [
+      "Mediator",
+      "Effect modifier",
+      "Confounder",
+      "Independent variable"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM023",
+    "y": 2025,
+    "t": "EPI",
+    "q": "In a research study, a p-value of 0.03 was found. What does this indicate?",
+    "o": [
+      "There is a 3% probability that the observed result occurred due to chance.",
+      "There is 97% confidence that the null hypothesis is true.",
+      "The difference observed is not statistically significant.",
+      "The null hypothesis is rejected because the chance probability is below 2%."
+    ],
+    "a": 0
   }
 ]

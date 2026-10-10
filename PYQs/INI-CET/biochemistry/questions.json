@@ -180,5 +180,200 @@
       "Simultaneously activate multiple tumour suppressor genes"
     ],
     "a": 0
+  },
+  {
+    "id": "INBC015",
+    "y": 2025,
+    "t": "MOL",
+    "q": "Which of the following represents the correct sequence of steps in the polymerase chain reaction (PCR)?",
+    "o": [
+      "Denaturation → Annealing → Extension",
+      "Denaturation → Annealing → Extension → Hybridization",
+      "Annealing → Extension → Denaturation",
+      "Extension → Denaturation → Annealing"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC016",
+    "y": 2025,
+    "t": "MOL",
+    "q": "In rheumatoid arthritis, increased expression of TNF-alpha and IL-6 in synovial tissue is most likely due to which epigenetic mechanism?",
+    "o": [
+      "Activation of DNA methylation",
+      "Inhibition of DNA methylation",
+      "Activation of histone deacetylation",
+      "Inhibition of histone acetylation"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INBC017",
+    "y": 2025,
+    "t": "MOL",
+    "q": "Cancer cells showing an increased RNA transcript length compared to normal cells is most likely due to:",
+    "o": [
+      "Polyadenylation",
+      "Alternative RNA splicing",
+      "Gene amplification",
+      "Gene silencing"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INBC018",
+    "y": 2025,
+    "t": "MOL",
+    "q": "The M13 bacteriophage vector used to identify specific gene sequences (e.g., viral spike proteins) represents which type of expression system?",
+    "o": [
+      "Phage expression",
+      "Bacterial expression",
+      "Yeast expression",
+      "Mammalian expression"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC019",
+    "y": 2025,
+    "t": "MOL",
+    "q": "During B-cell maturation, expression of a single immunoglobulin heavy-chain allele ensuring antigen specificity occurs by which process?",
+    "o": [
+      "V(D)J rearrangement",
+      "Alternate splicing of RNA transcripts",
+      "Alternate polyadenylation sites",
+      "Somatic hypermutation"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC020",
+    "y": 2025,
+    "t": "MSC",
+    "q": "The 2025 Nobel Prize in Medicine was awarded for which discovery?",
+    "o": [
+      "Peripheral immune tolerance",
+      "Micro RNA",
+      "mRNA vaccine technology",
+      "Targeted immunotherapy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC021",
+    "y": 2025,
+    "t": "PRO",
+    "q": "Match the following amino acids with their respective derivatives:\nA. Tyrosine — 1. Thyroid hormone\nB. Tryptophan — 2. Melatonin\nC. Glycine — 3. Taurine\nD. Cysteine — 4. Creatine",
+    "o": [
+      "A-1, B-2, C-3, D-4",
+      "A-1, B-2, C-4, D-3",
+      "A-2, B-1, C-4, D-3",
+      "A-2, B-1, C-3, D-4"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INBC022",
+    "y": 2025,
+    "t": "VIT",
+    "q": "Plasma magnesium levels are primarily maintained through:",
+    "o": [
+      "Renal reabsorption",
+      "Gastrointestinal absorption",
+      "Bone resorption",
+      "Dietary intake"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC023",
+    "y": 2025,
+    "t": "CAR",
+    "q": "Deficiency of which enzyme results in increased 2,3-BPG levels and low glucose values in vitro?",
+    "o": [
+      "Pyruvate kinase",
+      "Phosphoglycerate kinase",
+      "G6PD",
+      "Hexokinase"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INBC024",
+    "y": 2025,
+    "t": "CAR",
+    "q": "A 6-month-old infant presents with hepatomegaly, a doll-like face, lactic acidosis, and anaemia. Liver biopsy reveals hepatocytes packed with glycogen and lipids, suggesting glucose-6-phosphatase deficiency. Which laboratory finding is most characteristic of this disorder?",
+    "o": [
+      "Fasting hypoglycemia",
+      "Elevated cholesterol levels",
+      "Low lactate concentration",
+      "Reduced glutathione levels"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC025",
+    "y": 2025,
+    "t": "LIP",
+    "q": "Which tricarboxylic acid (TCA) cycle intermediate acts as a precursor for fatty acid synthesis?",
+    "o": [
+      "Succinate",
+      "Citrate",
+      "Malate",
+      "Fumarate"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INBC026",
+    "y": 2025,
+    "t": "VIT",
+    "q": "A patient with megaloblastic anaemia is treated with folate alone, after which neurological symptoms worsen instead of improving. Which mechanism best explains this phenomenon?",
+    "o": [
+      "Folate trap",
+      "Homocysteine accumulation",
+      "Masking of vitamin B12 deficiency",
+      "Pernicious anaemia due to intrinsic factor deficiency"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC027",
+    "y": 2025,
+    "t": "LIP",
+    "q": "Which of the following statements about β-oxidation of fatty acids is incorrect?",
+    "o": [
+      "Both CAT I and CAT II transport fatty acids across the mitochondrial membrane",
+      "ATP is required for fatty acid transport across the mitochondrial membrane",
+      "CoA is released in the cytosol during acyl-carnitine formation",
+      "Carnitine is released on the mitochondrial side"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INBC028",
+    "y": 2025,
+    "t": "PRO",
+    "q": "Deficiency of which cofactor shunts 3-OH-Kynurenine to the xanthurenic acid pathway?",
+    "o": [
+      "Thiamine",
+      "Biotin",
+      "Panthenic acid",
+      "Pyridoxine"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INBC029",
+    "y": 2025,
+    "t": "MOL",
+    "q": "Which of the following best describes/true regarding the RAS gene?",
+    "o": [
+      "Constitutive activation of a GTP-binding protein leading to continuous MAP kinase signalling",
+      "Enhanced DNA repair leading to genomic instability",
+      "Inactivation of a tumour suppressor gene resulting in loss of cell cycle checkpoint control",
+      "Increased activity of tyrosine kinase receptors through gene amplification"
+    ],
+    "a": 0
   }
 ]

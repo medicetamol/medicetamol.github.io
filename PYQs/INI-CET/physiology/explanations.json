@@ -54,5 +54,53 @@
   {
     "id": "INPH014",
     "e": "Insulin ↑es protein synthesis and ↓es blood glucose; epinephrine ↑es glycogenolysis; glucagon ↑es gluconeogenesis.\nThyroxine ↑es (not ↓es) BMR."
+  },
+  {
+    "id": "INPH015",
+    "e": "Saliva is hypotonic – lowest Na⁺ among GI secretions."
+  },
+  {
+    "id": "INPH016",
+    "e": "Serotonin is synthesised in the raphe nuclei.\nDA – substantia nigra/VTA; NE – locus ceruleus; ACh – nucleus basalis of Meynert."
+  },
+  {
+    "id": "INPH017",
+    "e": "2025 Nobel (Physiology/Medicine): discovery of peripheral immune tolerance (regulatory T cells, FOXP3)."
+  },
+  {
+    "id": "INPH018",
+    "e": "Arcuate nucleus (NPY/AgRP & POMC neurons) is the primary leptin target – site of leptin resistance."
+  },
+  {
+    "id": "INPH019",
+    "e": "Isovolumetric contraction: all valves closed → pressure ↑es c̅ constant volume."
+  },
+  {
+    "id": "INPH020",
+    "e": "Inspiration ↑es venous return to RV and pools blood in lungs → transient ↓ LV filling → SBP dips slightly."
+  },
+  {
+    "id": "INPH021",
+    "e": "MG: ↓ functional postsynaptic AChRs → safety factor falls → decremental response on RNS.\nLambert-Eaton (presynaptic VGCC) → incremental."
+  },
+  {
+    "id": "INPH022",
+    "e": "Diabetic OGTT: fasting ≥126 mg/dL and 2-h value ≥200 mg/dL – curves B and D."
+  },
+  {
+    "id": "INPH023",
+    "e": "P-glycoprotein (ABC family): ATP-driven efflux pump – primary active transport."
+  },
+  {
+    "id": "INPH024",
+    "e": "Kidney (renal reabsorption, mainly thick ascending limb) is the main regulator of Mg²⁺ balance."
+  },
+  {
+    "id": "INPH025",
+    "e": "Kidney (urine output) adjusts volume, osmolality & electrolytes over the long term.\nRR, SpO₂, HR = short-term responses."
+  },
+  {
+    "id": "INPH026",
+    "e": "↑ Peripheral resistance (afterload) → ↑ peak pressure, ↓ stroke volume (tall, narrow loop)."
   }
 ]

@@ -42,5 +42,65 @@
   {
     "id": "INPT011",
     "e": "Nasopharyngeal carcinoma is linked to EBV, not CMV."
+  },
+  {
+    "id": "INPT012",
+    "e": "PSC: concentric 'onion-skin' periductal fibrosis c̅ beaded bile ducts."
+  },
+  {
+    "id": "INPT013",
+    "e": "Only 4 is correct: Giemsa stains mast cell granules purple.\nPerls – iron (blue); alizarin red – Ca (red); Van Gieson – collagen (red)."
+  },
+  {
+    "id": "INPT014",
+    "e": "Mitochondrial disease hits high-energy tissues – cardiac & skeletal muscle (cardiomyopathy, myopathy)."
+  },
+  {
+    "id": "INPT015",
+    "e": "Major: carditis, chorea, polyarthritis (polyarthralgia in high-risk groups), nodules, erythema marginatum.\nPR prolongation is minor."
+  },
+  {
+    "id": "INPT016",
+    "e": "Peutz-Jeghers: autosomal dominant, STK11 (LKB1) mutation, arborising hamartomatous polyps.\nCHRPE belongs to FAP."
+  },
+  {
+    "id": "INPT017",
+    "e": "Lipids dissolve during routine processing – need frozen section (Oil red O/Sudan)."
+  },
+  {
+    "id": "INPT018",
+    "e": "MCL: t(11;14) → cyclin D1 + SOX11 positive.\nCD200 & CD23 negative (positive in CLL)."
+  },
+  {
+    "id": "INPT019",
+    "e": "Microcytosis (MCV <80): iron deficiency, thalassemia, lead poisoning.\nB12 deficiency → macrocytic."
+  },
+  {
+    "id": "INPT020",
+    "e": "Mentzer index <13 (RBC count ↑) → thalassemia trait; confirm c̅ Hb electrophoresis/HPLC."
+  },
+  {
+    "id": "INPT021",
+    "e": "Gaucher: glucocerebrosidase deficiency (crumpled-tissue-paper macrophages).\nCeramidase deficiency = Farber disease."
+  },
+  {
+    "id": "INPT022",
+    "e": "Rheumatic fever is pancarditis (pericarditis, myocarditis, endocarditis)."
+  },
+  {
+    "id": "INPT023",
+    "e": "Prader-Willi: paternal 15q11-q13 deletion → hypotonia, hyperphagia/obesity, hypogonadism."
+  },
+  {
+    "id": "INPT024",
+    "e": "Nephrotic syndrome: proteinuria >3.5 g/day + hypoalbuminemia (oedema, hyperlipidemia are consequences)."
+  },
+  {
+    "id": "INPT025",
+    "e": "RB: loss-of-function (two-hit) mutation; ↑ risk of osteosarcoma.\nActive RB is hypophosphorylated; 'guardian of the genome' = p53."
+  },
+  {
+    "id": "INPT026",
+    "e": "Microcytic hypochromic anaemia c̅ target cells & normal/↑ RBC count → Hb electrophoresis confirms hemoglobinopathy."
   }
 ]

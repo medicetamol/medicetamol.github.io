@@ -76,5 +76,83 @@
       "Non-contrast CT (NCCT) followed by contrast-enhanced CT (CECT)"
     ],
     "a": 1
+  },
+  {
+    "id": "INRD007",
+    "y": 2025,
+    "t": "RDN",
+    "q": "[Image: CT brain showing a biconvex hyperdense lesion]\nA trauma patient presents with two episodes of vomiting and loss of consciousness. CT brain shows a biconvex hyperdense lesion. What is the next step in management?",
+    "o": [
+      "Craniectomy",
+      "ICU observation",
+      "Conservative management",
+      "Burr hole and evacuation"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INRD008",
+    "y": 2025,
+    "t": "RDR",
+    "q": "[Image: Chest X-ray]\nA patient with retroviral infection presents with low-grade fever, cough, and one episode of hemoptysis. What is the most probable diagnosis based on the chest X-ray findings?",
+    "o": [
+      "Tuberculosis",
+      "Pneumothorax",
+      "Lung abscess",
+      "Pulmonary metastasis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD009",
+    "y": 2025,
+    "t": "RDR",
+    "q": "[Image: Chest X-ray with a suspicious lesion]\nA 60-year-old male with tingling and numbness in the arm develops visual disturbances in one eye. Chest X-ray shows a suspicious lesion. What is the definitive diagnostic investigation?",
+    "o": [
+      "Ultrasound",
+      "Cardiovascular evaluation",
+      "CT-guided biopsy",
+      "Sputum microscopy"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INRD010",
+    "y": 2025,
+    "t": "RDM",
+    "q": "[Image: X-ray of the humerus showing a diaphyseal lesion]\nA 13-year-old presents with upper arm swelling and pain. X-ray reveals a diaphyseal lesion in the humerus with mild ESR elevation. What should be the next investigation?",
+    "o": [
+      "PET scan",
+      "MRI",
+      "Humeral lesion biopsy",
+      "Bone marrow biopsy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INRD011",
+    "y": 2025,
+    "t": "RDN",
+    "q": "[Image: Labelled structure in the image]\nIdentify the labelled structure in the given image?",
+    "o": [
+      "Internal auditory canal",
+      "Aqueduct",
+      "External auditory canal",
+      "Carotid canal"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD012",
+    "y": 2025,
+    "t": "RDR",
+    "q": "[Image: CT thorax showing air in the pleural cavity with partial lung collapse]\nA 36-year-old man presents to the emergency department with sudden shortness of breath. The CT thorax shows evidence of air in the pleural cavity with partial lung collapse. What is the immediate next step in management?",
+    "o": [
+      "Needle decompression",
+      "Intercostal chest tube insertion",
+      "Sputum microscopy and culture",
+      "Thoracic ultrasound"
+    ],
+    "a": 0
   }
 ]

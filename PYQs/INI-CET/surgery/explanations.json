@@ -58,5 +58,65 @@
   {
     "id": "INGS015",
     "e": "FNAC cannot separate follicular adenoma from carcinoma (needs capsular/vascular invasion) → diagnostic hemithyroidectomy."
+  },
+  {
+    "id": "INGS016",
+    "e": "Recurrent ulcers + duodenal nodule → gastrinoma (ZES) → serum gastrin."
+  },
+  {
+    "id": "INGS017",
+    "e": "Inflammatory breast cancer (T4d): neoadjuvant chemotherapy first, then MRM."
+  },
+  {
+    "id": "INGS018",
+    "e": "Appendicular lump: Ochsner-Sherren conservative regimen, interval appendectomy later – not immediate surgery in all."
+  },
+  {
+    "id": "INGS019",
+    "e": "Catgut (natural collagen) provokes the maximum tissue reaction among absorbables."
+  },
+  {
+    "id": "INGS020",
+    "e": "Biliopancreatic diversion (Scopinaro): distal gastrectomy c̅ ileal anastomosis, short common channel → malabsorption."
+  },
+  {
+    "id": "INGS021",
+    "e": "TIGAR-O (Toxic-metabolic, Idiopathic, Genetic, Autoimmune, Recurrent, Obstructive) classifies chronic pancreatitis."
+  },
+  {
+    "id": "INGS022",
+    "e": "Amyand hernia: appendix in the inguinal hernial sac.\nLittre – Meckel's; Garengeot – appendix in femoral hernia."
+  },
+  {
+    "id": "INGS023",
+    "e": "Lap cholecystectomy: pneumoperitoneum → dissect hepatocystic triangle → ligate cystic duct/artery → separate GB from liver bed."
+  },
+  {
+    "id": "INGS024",
+    "e": "Hernioplasty: incision → identify sac & reduce contents → place mesh → close."
+  },
+  {
+    "id": "INGS025",
+    "e": "Angle between the two working instruments = manipulation angle (ideal 60–90°)."
+  },
+  {
+    "id": "INGS026",
+    "e": "Post-cholecystectomy pain c̅ abdominal tube: suspect bile leak → ERCP c̅ sphincterotomy/stent."
+  },
+  {
+    "id": "INGS027",
+    "e": "Choledochal cyst: biliary dilatation c̅ anomalous pancreaticobiliary junction → recurrent pancreatitis."
+  },
+  {
+    "id": "INGS028",
+    "e": "Ileostomy (not colostomy) has the maximum fluid/electrolyte loss."
+  },
+  {
+    "id": "INGS029",
+    "e": "Unconscious c̅ noisy breathing = airway compromise → highest (red) priority."
+  },
+  {
+    "id": "INGS030",
+    "e": "Mucinous cystic neoplasm: ↑ CEA/mucin c̅ low cyst-fluid amylase.\nIPMN/pseudocyst communicate c̅ duct → ↑ amylase."
   }
 ]

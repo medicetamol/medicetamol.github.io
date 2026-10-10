@@ -37,5 +37,57 @@
       "Fissured (scrotal) tongue"
     ],
     "a": 1
+  },
+  {
+    "id": "INEN004",
+    "y": 2025,
+    "t": "EAR",
+    "q": "A 65-year-old male complains of difficulty hearing high-pitched sounds. Which region of the cochlea is primarily damaged?",
+    "o": [
+      "Apex of the cochlea",
+      "Base of the cochlea",
+      "Stria vascularis",
+      "Tectorial membrane"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INEN005",
+    "y": 2025,
+    "t": "LRY",
+    "q": "A patient is diagnosed with carcinoma of the larynx involving the entire right true vocal cord, anterior commissure, and one-third of the left true vocal cord, with extension into the paraglottic space and inner thyroid cortex. The right vocal cord is completely immobile. What is the most likely tumour stage?",
+    "o": [
+      "T1",
+      "T4",
+      "T3",
+      "T2"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INEN006",
+    "y": 2025,
+    "t": "EAR",
+    "q": "Which of the following hearing tests is not performed in infants?",
+    "o": [
+      "OAE (Otoacoustic Emissions)",
+      "BERA (Brainstem Evoked Response Audiometry)",
+      "PTA (Pure Tone Audiometry)",
+      "Free-field audiometry"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INEN007",
+    "y": 2025,
+    "t": "NOS",
+    "q": "Arrange the following steps of Functional Endoscopic Sinus Surgery (FESS) in the proper order:\nA. Uncinectomy\nB. Bullectomy\nC. Open the maxillary sinus\nD. Ethmoidectomy",
+    "o": [
+      "ABDC",
+      "CABD",
+      "ACBD",
+      "CBAD"
+    ],
+    "a": 2
   }
 ]

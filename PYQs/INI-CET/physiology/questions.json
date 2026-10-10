@@ -180,5 +180,161 @@
       "All of the above"
     ],
     "a": 2
+  },
+  {
+    "id": "INPH015",
+    "y": 2025,
+    "t": "GIT",
+    "q": "Which GI secretions have the lowest sodium concentration?",
+    "o": [
+      "Stomach",
+      "Ileac secretions",
+      "Duodenum",
+      "Saliva"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPH016",
+    "y": 2025,
+    "t": "NPH",
+    "q": "Which of the following neurotransmitters is correctly matched with its synthesis site?",
+    "o": [
+      "Acetylcholine- substantia nigra",
+      "Serotonin-Raphe nucleus",
+      "Norepinephrine- Nucleus basalis of Meynert",
+      "Dopamine – Locus ceruleus"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH017",
+    "y": 2025,
+    "t": "GNM",
+    "q": "Which discovery was awarded the Nobel Prize in Physiology for 2025?",
+    "o": [
+      "Peripheral Immune Tolerance",
+      "mRNA’s role in post-translational modifications",
+      "RNA polymerization",
+      "Cancer chemotherapy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH018",
+    "y": 2025,
+    "t": "NPH",
+    "q": "Which hypothalamic nuclei are involved in leptin resistance?",
+    "o": [
+      "Ventromedial nucleus (Satiety centre, decreases hunger)",
+      "Arcuate nucleus",
+      "Paraventricular nucleus (PVN)",
+      "Lateral hypothalamic nucleus"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH019",
+    "y": 2025,
+    "t": "CVS",
+    "q": "[Image: Diagram related to the cardiac cycle]\nIn the cardiac cycle, when pressure increases while volume remains constant, which phase is this?",
+    "o": [
+      "Isovolumetric contraction",
+      "Isovolumetric relaxation",
+      "Rapid ventricular filling",
+      "Ventricular ejection"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH020",
+    "y": 2025,
+    "t": "CVS",
+    "q": "Systolic blood pressure slightly falls during normal inspiration due to?",
+    "o": [
+      "Decreased pulmonary compliance",
+      "Increased left ventricular filling",
+      "Increased venous return to the right heart causes a transient reduction in left ventricular filling",
+      "Increased systemic vascular resistance"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPH021",
+    "y": 2025,
+    "t": "GNM",
+    "q": "In Myasthenia Gravis, why does repetitive nerve stimulation show a decremental response?",
+    "o": [
+      "Decreased release of acetylcholine from the presynaptic terminal",
+      "Increased degradation of acetylcholine by acetylcholinesterase",
+      "Reduced number of functional acetylcholine receptors at the postsynaptic membrane",
+      "Autoantibodies blocking presynaptic calcium channels"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPH022",
+    "y": 2025,
+    "t": "ENR",
+    "q": "[Image: OGTT graphs plotting blood glucose over time, labelled A–D]\nIn an oral glucose tolerance test (OGTT), blood glucose values are plotted over time. Which graph is most consistent with Diabetes Mellitus?",
+    "o": [
+      "A, B, C, D",
+      "B, C, D only",
+      "B, D only",
+      "C, D only"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPH023",
+    "y": 2025,
+    "t": "GNM",
+    "q": "[Image: Diagram of a membrane transport system]\nThe image below is an example of which of the transport systems?",
+    "o": [
+      "Sodium-glucose co-transporter",
+      "Organic anion transporter",
+      "GLUT 4",
+      "P glycoprotein"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPH024",
+    "y": 2025,
+    "t": "REN",
+    "q": "Magnesium is primarily regulated by which of the following processes?",
+    "o": [
+      "Urinary reabsorption",
+      "Intestinal absorption",
+      "Dietary intake",
+      "Bone resorption"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH025",
+    "y": 2025,
+    "t": "GNM",
+    "q": "Which of the following represents the most stable and long-term Homeostasis mechanism in humans?",
+    "o": [
+      "Urine output",
+      "Respiratory rate (RR)",
+      "Oxygen saturation (SpO2)",
+      "Heart rate"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPH026",
+    "y": 2025,
+    "t": "CVS",
+    "q": "[Image: Left ventricular pressure-volume (PV) loop]\nThe below shown left ventricular pressure-volume (PV) loop is seen in –",
+    "o": [
+      "Increased ventricular contractility",
+      "Increased venous return",
+      "Increased peripheral vascular resistance",
+      "Increased aortic compliance"
+    ],
+    "a": 2
   }
 ]

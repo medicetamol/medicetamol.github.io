@@ -18,5 +18,13 @@
   {
     "id": "INAS005",
     "e": "Halothane: dose-dependent myocardial depression → CO ↓es and BP ↓es."
+  },
+  {
+    "id": "INAS006",
+    "e": "Greater palatine nerve block anaesthetises the hard palate (injection near greater palatine foramen)."
+  },
+  {
+    "id": "INAS007",
+    "e": "Both ↑ GABA-A action (BZD ↑ frequency; barbiturate ↑ duration) & add to alcohol sedation.\nThiopentone ends by redistribution; flumazenil reverses only BZDs."
   }
 ]

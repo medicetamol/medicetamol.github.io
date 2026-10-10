@@ -141,5 +141,174 @@
       "Naloxone"
     ],
     "a": 1
+  },
+  {
+    "id": "INFM012",
+    "y": 2025,
+    "t": "TRM",
+    "q": "[Image: Image of skin with crocodile-like appearance]\nCrocodile-like skin is seen in which of the following?",
+    "o": [
+      "Arsenic poisoning",
+      "High voltage shock (10K – 12K)",
+      "Moist burns",
+      "Chemical burns"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INFM013",
+    "y": 2025,
+    "t": "TOX",
+    "q": "A girl was brought to the emergency in an unconscious state with a history of faintness in the bathroom, showing cherry red discolouration. She was declared dead. The bathroom was a poorly ventilated room with a newly installed geyser. Blood toxicology reports show a high concentration of an irritant gas. What could this gas be?",
+    "o": [
+      "CO",
+      "CO2",
+      "Hydrogen sulphide",
+      "Methane"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM014",
+    "y": 2025,
+    "t": "ASP",
+    "q": "A case of hanging has come to the forensic department for autopsy. The autopsy, Dr. notices a ligature mark covering about 1/3rd of the neck, protruding tongue, salivary stains, opened right eye, closed left eye, and both pupils dilated. What is the probable reason for the open right eye?",
+    "o": [
+      "Compression of IJVs",
+      "Compression of ICA",
+      "Compression of the Cervical sympathetic chain",
+      "Compression of Vagus"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INFM015",
+    "y": 2025,
+    "t": "FSP",
+    "q": "A person killed his friend because of his belief that he would poison him & later he was diagnosed as a case of schizophrenia. He was taken to court. Based on McNaughten’s rule, how is a person liable for a crime?",
+    "o": [
+      "Partially guilty",
+      "Guilty",
+      "Not guilty",
+      "Guilty, if the act was committed with knowing it is wrong"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INFM016",
+    "y": 2025,
+    "t": "TRM",
+    "q": "[Image: Burn injury image for grading]\nIdentify the grading burn Injuries:",
+    "o": [
+      "Superficial burns",
+      "Deep burns",
+      "Full-thickness burns",
+      "Partial thickness burns"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INFM017",
+    "y": 2025,
+    "t": "SXO",
+    "q": "Sexual pleasures by non-living inanimate objects are called?",
+    "o": [
+      "Fetischism",
+      "Voyeurism",
+      "Exhibitionism",
+      "Froutterism"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM018",
+    "y": 2025,
+    "t": "TRM",
+    "q": "[Image: CT scan of the brain]\nIdentify the condition shown in CT",
+    "o": [
+      "EDH",
+      "SDH",
+      "SAH",
+      "ICH"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM019",
+    "y": 2025,
+    "t": "TOX",
+    "q": "Match the following poisoning with its treatment:\n1. Arsenic — A. Naloxone\n2. Methanol — B. Fomepizole\n3. Benzodiazepine — C. Flumnazenil\n4. Opioid — D. BAL",
+    "o": [
+      "1-D, 2-C, 3-B, 4-A",
+      "1-D, 2-B, 3-C, 4-A",
+      "1-A, 2-B, 3-C, 4-D",
+      "1-B, 2-C, 3-A, 4-D"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INFM020",
+    "y": 2025,
+    "t": "TOX",
+    "q": "Match the following poisoning with its agents:\n1. Deliriant — A. Alcohol\n2. Inebriant — B. LSD\n3. Hallucinogenic — C. Opium\n4. Somniferous — D. Datura",
+    "o": [
+      "1-D, 2-A, 3-B, 4-C",
+      "1-D, 2-B, 3-C, 4-A",
+      "1-A, 2-B, 3-C, 4-D",
+      "1-B, 2-C, 3-A, 4-D"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM021",
+    "y": 2025,
+    "t": "TRM",
+    "q": "A patient comes to OPD with soddened burn injury over his right thigh with erythema, blisters & line of demarcation. Which of the following is true of this case?",
+    "o": [
+      "Moist burn",
+      "Chemical burn",
+      "Dry burn",
+      "Electric burn"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM022",
+    "y": 2025,
+    "t": "THA",
+    "q": "A 17-year-old juvenile is brought by police, and as alleged by police, the school certificate shows the age as 17, but there is evidence of overwriting in the certificate. According to the police, the age is 19 years. Which X-rays will you recommend to prove the age is>18 years?",
+    "o": [
+      "Pelvis, sternum",
+      "Pelvis, skull",
+      "Wrist, medial end of clavicle & pelvis",
+      "Elbow, shoulder"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INFM023",
+    "y": 2025,
+    "t": "SXO",
+    "q": "An 18-year-old girl was brought to the hospital by her mother with a history of sexual assault by her 24-year-old coworker in the factory. The mother doesn’t want to inform the police. What will you do as the doctor in charge?",
+    "o": [
+      "Ask the guardian for permission to do a medicolegal examination",
+      "Do a medicolegal examination with the consent of the victim",
+      "Do not collect materials required as forensic evidence",
+      "Do not inform the police"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INFM024",
+    "y": 2025,
+    "t": "SXO",
+    "q": "Which of the following is not a seminal test in a case of rape?",
+    "o": [
+      "Barberio test",
+      "Acid phosphate test",
+      "Reineche test",
+      "Florence test"
+    ],
+    "a": 2
   }
 ]

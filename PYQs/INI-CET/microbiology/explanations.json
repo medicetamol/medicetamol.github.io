@@ -66,5 +66,73 @@
   {
     "id": "INMB017",
     "e": "Hookworm (Ancylostoma) larvae penetrate skin; animal hookworms (A. braziliense/caninum) cause cutaneous larva migrans.\nTransmission is via skin penetration, not ingestion; Strongyloides shows larvae (not eggs) in stool."
+  },
+  {
+    "id": "INMB018",
+    "e": "Norovirus is the commonest cause of viral diarrhoea in adults.\nRotavirus – in young children."
+  },
+  {
+    "id": "INMB019",
+    "e": "C. albicans: germ-tube positive (Reynolds-Braude phenomenon); chlamydospores on cornmeal agar."
+  },
+  {
+    "id": "INMB020",
+    "e": "Dermatophytes infect only keratinised layers – not implanted by thorn prick.\nSporotrichosis, chromoblastomycosis, mycetoma follow traumatic implantation."
+  },
+  {
+    "id": "INMB021",
+    "e": "Fasciola hepatica: large, operculated, yellow-brown egg."
+  },
+  {
+    "id": "INMB022",
+    "e": "Necator (hookworm) egg: oval, thin-shelled, colourless, 4–8 blastomeres."
+  },
+  {
+    "id": "INMB023",
+    "e": "Aspergillus: septate hyphae c̅ acute-angle branching, well seen on GMS/silver stain."
+  },
+  {
+    "id": "INMB024",
+    "e": "Pneumococcus is bile soluble (deoxycholate lyses it) – bile solubility test confirms identification."
+  },
+  {
+    "id": "INMB025",
+    "e": "Visceral larva migrans – Toxocara canis; cutaneous larva migrans – Ancylostoma braziliense\nSwimmer's itch – Schistosoma (avian); larva currens – Strongyloides"
+  },
+  {
+    "id": "INMB026",
+    "e": "Black grains in mycetoma → Madurella mycetomatis (eumycetoma).\nNocardia/Actinomyces → pale/yellow grains."
+  },
+  {
+    "id": "INMB027",
+    "e": "HPV life cycle is tied to epithelial differentiation: replication (spinous) → assembly (granular) → release (cornified)."
+  },
+  {
+    "id": "INMB028",
+    "e": "The virus causing the pictured condition is not oncogenic."
+  },
+  {
+    "id": "INMB029",
+    "e": "M. tuberculosis culture work → BSL-3 (aerosol-transmitted)."
+  },
+  {
+    "id": "INMB030",
+    "e": "Diphtheria toxin: phage-coded exotoxin (ADP-ribosylates EF-2), causes myocarditis.\nMost potent toxin known = botulinum toxin."
+  },
+  {
+    "id": "INMB031",
+    "e": "Nipah (paramyxovirus, RNA): fruit-bat reservoir; causes encephalitis."
+  },
+  {
+    "id": "INMB032",
+    "e": "Aspergillus: septate hyphae c̅ acute-angle branching.\nMucorales: aseptate, right-angle branching."
+  },
+  {
+    "id": "INMB033",
+    "e": "Ehrlichia chaffeensis (Rickettsiales) is an obligate intracellular bacterium – forms morulae in monocytes."
+  },
+  {
+    "id": "INMB034",
+    "e": "Wuchereria microfilariae (nocturnal periodicity) sequester in deep lung capillaries by day."
   }
 ]

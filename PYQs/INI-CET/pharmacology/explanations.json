@@ -82,5 +82,73 @@
   {
     "id": "INPM021",
     "e": "Resmetirom = selective thyroid hormone receptor-β agonist in the liver → ↓es hepatic fat (MASH/NASH)."
+  },
+  {
+    "id": "INPM022",
+    "e": "Ketamine: dissociative anaesthetic (NMDA antagonist) c̅ analgesia, sedation & rapid antidepressant effect."
+  },
+  {
+    "id": "INPM023",
+    "e": "Selexipag: oral non-prostanoid selective IP (prostacyclin) receptor agonist.\nAmbrisentan = endothelin antagonist."
+  },
+  {
+    "id": "INPM024",
+    "e": "Dronabinol (synthetic THC, cannabinoid agonist) is hepatically metabolised, not excreted unchanged."
+  },
+  {
+    "id": "INPM025",
+    "e": "Rifampicin is taken on an empty stomach – food ↓es absorption."
+  },
+  {
+    "id": "INPM026",
+    "e": "Ranibizumab: anti-VEGF Fab (intravitreal) for wet AMD.\nPembrolizumab/dostarlimab – PD-1; ipilimumab – CTLA-4."
+  },
+  {
+    "id": "INPM027",
+    "e": "Rimegepant: oral CGRP receptor antagonist (gepant) for acute migraine; no vasoconstriction."
+  },
+  {
+    "id": "INPM028",
+    "e": "Cryptococcal meningitis induction: liposomal amphotericin B + flucytosine, then fluconazole."
+  },
+  {
+    "id": "INPM029",
+    "e": "Linezolid causes peripheral neuropathy & lactic acidosis (mitochondrial toxicity) – withdraw it."
+  },
+  {
+    "id": "INPM030",
+    "e": "β₂ agonists cause hypokalemia (K⁺ shift into cells), not hyperkalemia."
+  },
+  {
+    "id": "INPM031",
+    "e": "Digoxin blocks Na⁺/K⁺-ATPase → ↑ intracellular Na⁺ → ↑ Ca²⁺ via NCX → positive inotropy."
+  },
+  {
+    "id": "INPM032",
+    "e": "HIV-TB: start ATT first, ART within 2 weeks if CD4 <50.\nRifampicin ↓es dolutegravir levels → DTG 50 mg BD."
+  },
+  {
+    "id": "INPM033",
+    "e": "Praziquantel ↑es Ca²⁺ influx → spastic paralysis of trematodes/cestodes."
+  },
+  {
+    "id": "INPM034",
+    "e": "Physostigmine (AChE inhibitor) ↑es ACh at the synapse → upward shift.\nAtropine = competitive antagonist (rightward shift)."
+  },
+  {
+    "id": "INPM035",
+    "e": "Saxagliptin is metabolised by CYP3A4/5 – limit dose c̅ strong inhibitors (ketoconazole)."
+  },
+  {
+    "id": "INPM036",
+    "e": "Ivermectin: drug of choice for onchocerciasis; also used in bancroftian filariasis."
+  },
+  {
+    "id": "INPM037",
+    "e": "HIV PrEP: tenofovir + emtricitabine."
+  },
+  {
+    "id": "INPM038",
+    "e": "Finerenone: nonsteroidal, selective MRA – fewer endocrine effects (gynecomastia) than spironolactone."
   }
 ]

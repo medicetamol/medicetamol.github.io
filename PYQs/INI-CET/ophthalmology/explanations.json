@@ -6,5 +6,29 @@
   {
     "id": "INOP002",
     "e": "Retrobulbar neuritis: painful ↓ vision c̅ RAPD and a normal disc (patient sees nothing, doctor sees nothing)."
+  },
+  {
+    "id": "INOP003",
+    "e": "APACG: sudden pain, halos, mid-dilated fixed pupil, hazy cornea, ↑ IOP."
+  },
+  {
+    "id": "INOP004",
+    "e": "Ring infiltrate in a contact-lens wearer → Acanthamoeba keratitis; calcofluor white stains the cyst wall."
+  },
+  {
+    "id": "INOP005",
+    "e": "Krukenberg spindle (pigment on corneal endothelium) → pigmentary glaucoma."
+  },
+  {
+    "id": "INOP006",
+    "e": "ETDRS needs letter recognition – not for preverbal children (OKN drum, Teller, Cardiff cards are used)."
+  },
+  {
+    "id": "INOP007",
+    "e": "Acute hydrops in keratoconus (Descemet break): intracameral gas (C₃F₈/SF₆) tamponade."
+  },
+  {
+    "id": "INOP008",
+    "e": "Frontal eye field (Brodmann area 8) controls voluntary scanning/saccades."
   }
 ]

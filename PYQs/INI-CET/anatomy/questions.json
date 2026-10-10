@@ -167,5 +167,148 @@
       "Cleft palate"
     ],
     "a": 1
+  },
+  {
+    "id": "INAN014",
+    "y": 2025,
+    "t": "OST",
+    "q": "[Image: Highlighted structure marked in the image]\nThe highlighted structure in the provided image articulates with which bone?",
+    "o": [
+      "Occipital bone",
+      "Temporal bone",
+      "Axis",
+      "Sphenoid bone"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN015",
+    "y": 2025,
+    "t": "HNK",
+    "q": "[Image: Skull base with foramina labelled A, B, C and D]\nThrough which of the following foramina does the nerve supplying the muscles of mastication pass?",
+    "o": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INAN016",
+    "y": 2025,
+    "t": "NEU",
+    "q": "[Image: Brain section with regions numbered 1–4 and structures labelled A–D]\nIn the given image, which region is correctly paired with its corresponding brain structure?\nA. Middle cerebellar peduncle\nB. Fasciculus cuneatus\nC. Superior cerebellar peduncle\nD. Inferior colliculus",
+    "o": [
+      "1-A, 2-B, 3-C, 4-D",
+      "1-B, 2-C, 3-A, 4-D",
+      "1-D, 2-C, 3-A, 4-B",
+      "1-C, 2-D, 3-C, 4-A"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INAN017",
+    "y": 2025,
+    "t": "HNK",
+    "q": "Which of the following muscles is NOT typically associated with dysphagia or dysarthria?",
+    "o": [
+      "Stylopharyngeus",
+      "Tensor veli palatini",
+      "Palatopharyngeus",
+      "Pharyngeal constrictor"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INAN018",
+    "y": 2025,
+    "t": "HNK",
+    "q": "A muscle of mastication involved in opening the mouth exhibits the following characteristics. Identify the incorrect statement about it:",
+    "o": [
+      "Attached to the medial surface of the mandible ramus",
+      "Receives innervation from the mandibular nerve",
+      "Attached close to the temporomandibular joint",
+      "Aids in mandibular protrusion"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN019",
+    "y": 2025,
+    "t": "LWL",
+    "q": "[Image: Image with an area marked by an arrow]\nIn the illustrated image, which of the following structures is NOT associated with the area marked by the arrow?",
+    "o": [
+      "Internal pudendal vessels",
+      "Tendon of the obturator externus",
+      "Ischiococcygeus",
+      "Pudendal nerve"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INAN020",
+    "y": 2025,
+    "t": "EMB",
+    "q": "Match the following embryonic aortic arches with their respective adult derivatives:\nA. 1st Arch — 1. Maxillary artery\nB. 2nd Arch — 2. Common carotid artery\nC. 3rd Arch — 3. Right subclavian artery (on the right side)\nD. 4th Arch — 4. Hyoid and stapedial arteries",
+    "o": [
+      "A-2, B-4, C-1, D-3",
+      "A-1, B-4, C-2, D-3",
+      "A-1, B-4, C-3, D-2",
+      "A-1, B-3, C-2, D-4"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INAN021",
+    "y": 2025,
+    "t": "HIS",
+    "q": "[Image: Four histology images labelled 1–4]\nWhich of the following histology images is not an endocrine structure?",
+    "o": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INAN022",
+    "y": 2025,
+    "t": "NEU",
+    "q": "[Image: Image with a structure marked]\nMarked structure separates which of the following:",
+    "o": [
+      "Third ventricle",
+      "Lateral ventricle",
+      "Fourth ventricle",
+      "Cisterna magna"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INAN023",
+    "y": 2025,
+    "t": "HNK",
+    "q": "[Image: Skull image with bones labelled A–D]\nWhich of the following bones of the skull gives passage to a nerve arising from the brain",
+    "o": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INAN024",
+    "y": 2025,
+    "t": "LWL",
+    "q": "[Image: Image with structures labelled A–D]\nThe muscle that contributes to both hip and knee extension originates from which of the following structures?",
+    "o": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 1
   }
 ]

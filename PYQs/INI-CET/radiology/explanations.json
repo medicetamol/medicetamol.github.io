@@ -22,5 +22,29 @@
   {
     "id": "INRD006",
     "e": "Ultrasound = radiation-free first-line for flank pain/renal colic (detects hydronephrosis); CT if inconclusive."
+  },
+  {
+    "id": "INRD007",
+    "e": "EDH (biconvex hyperdensity) c̅ neurological symptoms → urgent surgical evacuation."
+  },
+  {
+    "id": "INRD008",
+    "e": "HIV c̅ chronic cough, fever & haemoptysis: TB is the most likely CXR diagnosis."
+  },
+  {
+    "id": "INRD009",
+    "e": "Pancoast (apical lung) tumour: tissue diagnosis by CT-guided biopsy."
+  },
+  {
+    "id": "INRD010",
+    "e": "Diaphyseal lesion in an adolescent (e.g. Ewing sarcoma): MRI delineates extent before biopsy."
+  },
+  {
+    "id": "INRD011",
+    "e": "Labelled structure = internal auditory canal (CN VII/VIII)."
+  },
+  {
+    "id": "INRD012",
+    "e": "Pleural air c̅ lung collapse: immediate decompression, followed by intercostal drain."
   }
 ]

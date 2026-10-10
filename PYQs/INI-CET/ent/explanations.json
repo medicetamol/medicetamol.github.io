@@ -10,5 +10,21 @@
   {
     "id": "INEN003",
     "e": "Melkersson-Rosenthal triad = recurrent LMN facial palsy + orofacial granulomatous oedema + fissured tongue; proptosis is not part of it."
+  },
+  {
+    "id": "INEN004",
+    "e": "Cochlear base (high frequencies) degenerates first – presbycusis c̅ high-pitch loss."
+  },
+  {
+    "id": "INEN005",
+    "e": "Glottic T stage depends on cord mobility, commissure involvement and spread to paraglottic space/thyroid cartilage."
+  },
+  {
+    "id": "INEN006",
+    "e": "PTA needs voluntary response – not possible in infants (OAE, BERA used)."
+  },
+  {
+    "id": "INEN007",
+    "e": "FESS sequence: uncinectomy → maxillary antrostomy → bullectomy → ethmoidectomy."
   }
 ]

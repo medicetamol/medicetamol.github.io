@@ -42,5 +42,49 @@
   {
     "id": "INPD011",
     "e": "Asymptomatic neonate c̅ mild hypoglycaemia (glucose ~25-45) → trial of feeds/breastfeeding first, then recheck.\nIV dextrose is for symptomatic or very low (<25 mg/dL) glucose."
+  },
+  {
+    "id": "INPD012",
+    "e": "TTN: delayed lung-fluid clearance → hyperinflation c̅ prominent fissure; self-limiting."
+  },
+  {
+    "id": "INPD013",
+    "e": "Short limbs c̅ ↑ US:LS ratio (1.4) & normal milestones → achondroplasia (FGFR3)."
+  },
+  {
+    "id": "INPD014",
+    "e": "Hirschsprung: failure of neural crest migration → aganglionic distal segment → obstruction.\nProximal normal segment is dilated."
+  },
+  {
+    "id": "INPD015",
+    "e": "Short stature c̅ obesity & frequent oral medicines → exogenous steroid-induced Cushing's."
+  },
+  {
+    "id": "INPD016",
+    "e": "Cholestasis c̅ pale stools & no HIDA excretion → biliary atresia; liver biopsy confirms."
+  },
+  {
+    "id": "INPD017",
+    "e": "Dengue c̅ warning sign (abdominal pain): IV isotonic crystalloid 5–7 ml/kg/hr."
+  },
+  {
+    "id": "INPD018",
+    "e": "FSGS: steroid-resistant nephrotic syndrome c̅ segmental sclerosis & hyalinosis."
+  },
+  {
+    "id": "INPD019",
+    "e": "Severe paediatric DKA: NS bolus, insulin infusion, K⁺ 40 mmol/L when K⁺ normal; avoid bicarbonate."
+  },
+  {
+    "id": "INPD020",
+    "e": "Transfers objects hand to hand at 6 months.\nMature pincer – 12 months; tower of 2 blocks – 15 months."
+  },
+  {
+    "id": "INPD021",
+    "e": "PDA: continuous machinery murmur (left infraclavicular), recurrent pneumonia, acyanotic."
+  },
+  {
+    "id": "INPD022",
+    "e": "Ethosuximide – absence seizures only; not used in status epilepticus."
   }
 ]

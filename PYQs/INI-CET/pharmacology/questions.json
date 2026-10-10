@@ -271,5 +271,226 @@
       "Stimulation of Thyroid Hormone Receptor-beta"
     ],
     "a": 3
+  },
+  {
+    "id": "INPM022",
+    "y": 2025,
+    "t": "ANM",
+    "q": "All of the following are advantages of ketamine except:",
+    "o": [
+      "Dissociative anesthesia",
+      "Relief from pain",
+      "Sedation",
+      "Relief from depression"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM023",
+    "y": 2025,
+    "t": "CVF",
+    "q": "Which of the following drugs used in the treatment of pulmonary hypertension is a prostacyclin receptor agonist?",
+    "o": [
+      "Selexipag",
+      "Ambrisentan",
+      "Epoprostenol",
+      "Iloprost"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM024",
+    "y": 2025,
+    "t": "CNF",
+    "q": "All of the following statements regarding Dronabinol are correct except?",
+    "o": [
+      "It is used for pain relief",
+      "It is excreted unchanged in the urine",
+      "MOA: Cannabinoid receptor agonist",
+      "It is approved for weight loss in AIDS-associated"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPM025",
+    "y": 2025,
+    "t": "AMI",
+    "q": "Which of the following statements about Rifampicin is incorrect?",
+    "o": [
+      "Resistance occurs due to mutations in the rpoB gene.",
+      "It undergoes enterohepatic recirculation.",
+      "It should be administered along with fatty meals.",
+      "Its CNS penetration is limited by P-glycoprotein."
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPM026",
+    "y": 2025,
+    "t": "ACI",
+    "q": "Which of the following medications acts by inhibiting vascular endothelial growth factor (VEGF)?",
+    "o": [
+      "Ranibizumab",
+      "Pembrolizumab",
+      "Ipilimumab",
+      "Dostarlimab"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM027",
+    "y": 2025,
+    "t": "CNF",
+    "q": "Which of the following statements regarding Rimegepant is correct?",
+    "o": [
+      "It is administered subcutaneously",
+      "It is indicated for the acute management of migraine",
+      "It acts as a CGRP1 receptor agonist",
+      "It produces vasoconstriction"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPM028",
+    "y": 2025,
+    "t": "AMI",
+    "q": "Which regimen is considered the preferred treatment for cryptococcal meningitis?",
+    "o": [
+      "Amphotericin B combined with Fluconazole",
+      "Fluconazole monotherapy",
+      "Liposomal Amphotericin B monotherapy",
+      "Liposomal Amphotericin B in combination with Flucytosine"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPM029",
+    "y": 2025,
+    "t": "AMI",
+    "q": "Patient is on 2nd line ATT, now complaining about numbness & acidosis then which drug should be withdrawn?",
+    "o": [
+      "Linezolid",
+      "Bedaquiline",
+      "Delamanid",
+      "Levofloxacin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM030",
+    "y": 2025,
+    "t": "GRF",
+    "q": "Which of the following adverse effects is not associated with the use of inhaled β-adrenergic agonists?",
+    "o": [
+      "Pulmonary vasodilation",
+      "Hyperkalemia",
+      "Palpitations",
+      "Tremors"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPM031",
+    "y": 2025,
+    "t": "CVF",
+    "q": "[Image: Cardiac cell diagram with ion channels labelled; channel “C” marked]\nWhich of the following medications exerts its effect by blocking the channel labelled “C” in the diagram?",
+    "o": [
+      "Calcium channel blocker",
+      "Ivabradine",
+      "Nicorandil",
+      "Digoxin"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPM032",
+    "y": 2025,
+    "t": "AMI",
+    "q": "A patient with HIV presents with a 3-month history of cough and fever, and Miliary tuberculosis is suspected. What should be the next step in management?",
+    "o": [
+      "Start ATT, followed by initiation of ART after 2 weeks, with an increased dose of dolutegravir along with dexamethasone",
+      "Start ART, followed by ATT after 2 weeks, with an increased dose of dolutegravir",
+      "Administer an increased dose of dolutegravir immediately",
+      "Initiate ART and ATT simultaneously with standard doses of dolutegravir"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM033",
+    "y": 2025,
+    "t": "AMI",
+    "q": "[Image: Image of a parasite]\nIdentify the parasite in the image and select the most appropriate drug for its treatment:",
+    "o": [
+      "Praziquantel",
+      "Albendazole",
+      "Niclosamide",
+      "Ivermectin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM034",
+    "y": 2025,
+    "t": "ANS",
+    "q": "[Image: Dose-response curve of acetylcholine with an upward shift after an additional drug]\nThe dose-response curve of acetylcholine (ACh) is shown in the graph. When an additional drug is introduced, the response to ACh increases (shifts upward). Which drug is most likely responsible for this effect?",
+    "o": [
+      "Physostigmine",
+      "Bethanechol",
+      "Adrenaline",
+      "Atropine"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM035",
+    "y": 2025,
+    "t": "ENF",
+    "q": "Which DPP-4 inhibitor requires dosage modification when used with ketoconazole?",
+    "o": [
+      "Saxagliptin",
+      "Linagliptin",
+      "Sitagliptin",
+      "Vildagliptin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM036",
+    "y": 2025,
+    "t": "AMI",
+    "q": "Which of the following parasitic infections is most effectively treated with ivermectin?",
+    "o": [
+      "Strongyloides stercoralis and Trichinella spiralis",
+      "Loa loa and Brugia malayi",
+      "Onchocerca volvulus and Loa loa",
+      "Onchocerca volvulus and Wuchereria bancrofti"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPM037",
+    "y": 2025,
+    "t": "AMI",
+    "q": "Which of these drug combinations is recommended for HIV pre-exposure prophylaxis (PrEP) in individuals at high risk?",
+    "o": [
+      "Tenofovir monotherapy",
+      "Tenofovir + Lamivudine",
+      "Zidovudine + Lamivudine",
+      "Tenofovir + Emtricitabine"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPM038",
+    "y": 2025,
+    "t": "CVF",
+    "q": "False statement about finerenone compared to spironolactone?",
+    "o": [
+      "Spironolactone causes more gynecomastia compared to finerenone.",
+      "Both drugs are mineralocorticoid receptor antagonists, but finerenone is nonsteroidal.",
+      "Finerenone is a nonsteroidal, selective mineralocorticoid receptor antagonist with fewer endocrine side effects.",
+      "Finerenone inhibits aldosterone synthesis."
+    ],
+    "a": 2
   }
 ]

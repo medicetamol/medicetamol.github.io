@@ -141,5 +141,200 @@
       "CMV – Nasopharyngeal carcinoma"
     ],
     "a": 3
+  },
+  {
+    "id": "INPT012",
+    "y": 2025,
+    "t": "LVR",
+    "q": "Where is Onion skin fibrosis seen?",
+    "o": [
+      "Primary biliary cholangitis",
+      "Primary sclerosing cholangitis",
+      "Biliary atresia",
+      "Acute cholecystitis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPT013",
+    "y": 2025,
+    "t": "CIN",
+    "q": "Choose the correct option:\n1. Perls stain, iron, red\n2. Alizarin, Ca, black\n3. Van Gieson, elastin, blue\n4. Giemsa, mast cells, purple",
+    "o": [
+      "2 & 4",
+      "1, 2, 3",
+      "2, 3, 4",
+      "Only 4"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT014",
+    "y": 2025,
+    "t": "GNC",
+    "q": "A female carries an autosomal recessive mitochondrial disorder. Which of the following systems are most likely affected?",
+    "o": [
+      "Immune and skeletal",
+      "Cardiac and skeletal",
+      "Skeletal and neurogenic",
+      "Immune and cardiac"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPT015",
+    "y": 2025,
+    "t": "CVP",
+    "q": "What is included in the major and major criteria of Jones rheumatic fever?\n1. Carditis\n2. Polyarthralgia\n3. Chorea\n4. Shortened PR interval\n5. Erythema nodosum",
+    "o": [
+      "1,2,3",
+      "2,3,4",
+      "1,2,3,5",
+      "4,5"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT016",
+    "y": 2025,
+    "t": "GIP",
+    "q": "What are the correct options regarding Peutz-Jeghers syndrome:\n1. STK 11 mutation\n2. Shows an arborising pattern\n3. Autosomal dominant\n4. Congenital hypertrophy of retinal pigment epithelium",
+    "o": [
+      "1, 2, 3 are correct",
+      "1, 2, 4 are correct",
+      "3 & 4 are correct",
+      "1, 2 are correct"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT017",
+    "y": 2025,
+    "t": "CIN",
+    "q": "Lipid is best visualised on which technique in pathology?",
+    "o": [
+      "Frozen Section",
+      "Paraffin-embedded section",
+      "Immunohistochemistry",
+      "Electron microscopy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT018",
+    "y": 2025,
+    "t": "HAM",
+    "q": "Which of the following findings are associated with Mantle Cell Lymphoma?\n1. Cyclin D1\n2. Sox 11\n3. CD 200\n4. CD 23",
+    "o": [
+      "1, 2, 3",
+      "1, 2, 4",
+      "1 & 2",
+      "1, 2, 5"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPT019",
+    "y": 2025,
+    "t": "HAM",
+    "q": "A patient’s blood report showing MCV = 76 fL visits the OPD. Which of the following conditions is most likely responsible for this result?\nA. Iron deficiency anaemia\nB. Vitamin B12 deficiency\nC. Thalassemia\nD. Lead poisoning",
+    "o": [
+      "A & B",
+      "B & D",
+      "A, C",
+      "A, C, D"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT020",
+    "y": 2025,
+    "t": "HAM",
+    "q": "A patient presents with microcytic anaemia, an elevated RBC count, and a Mentzer index of less than 13. What is the next appropriate investigation?",
+    "o": [
+      "S. Ferritin",
+      "Bone marrow biopsy",
+      "S. Transferrin",
+      "Hb electrophoresis"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT021",
+    "y": 2025,
+    "t": "GNC",
+    "q": "Which of the following is false regarding Gaucher’s disease?",
+    "o": [
+      "Crumpled tissue paper appearance",
+      "Beta-glucocerebrosidase enzyme deficiency",
+      "Ceramidase deficiency",
+      "Bone pain"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPT022",
+    "y": 2025,
+    "t": "CVP",
+    "q": "Which of the following statements about Rheumatic fever is false?",
+    "o": [
+      "2 weeks post-sore throat",
+      "Aschoff bodies seen",
+      "Infection caused by group A, beta streptococcus",
+      "Myocarditis, but no endocarditis"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT023",
+    "y": 2025,
+    "t": "GNC",
+    "q": "A boy presents with developmental delay, obesity, hypotonia, normal neurological development, and hypogonadism. His karyotype shows 46 XY with a deletion of del(15)(q11-q13). What is the most likely diagnosis?",
+    "o": [
+      "Prader-Willi syndrome",
+      "Angelman syndrome",
+      "Patau syndrome",
+      "Cri du chat syndrome"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT024",
+    "y": 2025,
+    "t": "RNP",
+    "q": "Which of the following are the definitive criteria for nephrotic syndrome?\n1. Hyperlipidemia\n2. Proteinuria >3.5 g/day\n3. Creatinine\n4. Hypoalbuminemia",
+    "o": [
+      "1, 2, 3",
+      "1, 2, 3, 4",
+      "1 & 3",
+      "2 & 4"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT025",
+    "y": 2025,
+    "t": "NEO",
+    "q": "Which of the following statements are correct about Retinoblastoma?\nA. It is always unilateral\nB. It is associated with an increased risk of osteosarcoma\nC. The RB protein is inactive (hypophosphorylated)\nD. Oncogenesis occurs through a loss-of-function mutation\nE. The gene involved is called the ‘guardian of the genome’",
+    "o": [
+      "B, D",
+      "A, B, C, D",
+      "C, D, E",
+      "D, E"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT026",
+    "y": 2025,
+    "t": "HAM",
+    "q": "A patient with microcytic hypochromic anaemia, normal or elevated RBC count, and target cells on peripheral smear is suspected of having a hemoglobinopathy. Which test would be most appropriate to confirm the diagnosis?",
+    "o": [
+      "Serum iron and TIBC",
+      "Bone marrow biopsy",
+      "Serum ferritin estimation",
+      "Hb electrophoresis"
+    ],
+    "a": 3
   }
 ]

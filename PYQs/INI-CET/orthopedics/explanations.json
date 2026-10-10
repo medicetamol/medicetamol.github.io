@@ -18,5 +18,25 @@
   {
     "id": "INOR005",
     "e": "Compartment syndrome → emergency fasciotomy; absent pulse is a late sign."
+  },
+  {
+    "id": "INOR006",
+    "e": "Supracondylar fracture → anterior interosseous nerve (median branch) injury → can't make 'OK' sign."
+  },
+  {
+    "id": "INOR007",
+    "e": "Hypercalcemia c̅ diffuse bone loss → primary hyperparathyroidism; sestamibi scan localises the adenoma."
+  },
+  {
+    "id": "INOR008",
+    "e": "Periosteal reaction c̅ medullary involvement: MRI defines extent before biopsy."
+  },
+  {
+    "id": "INOR009",
+    "e": "Anterior shoulder dislocation: arm abducted & externally rotated.\nPosterior: adducted & internally rotated."
+  },
+  {
+    "id": "INOR010",
+    "e": "Equinus – plantar flexion; planus – flat arch\nCavus – high arch (extended dorsally); calcaneus – dorsiflexion"
   }
 ]

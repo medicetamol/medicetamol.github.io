@@ -102,5 +102,135 @@
       "Kallmann syndrome"
     ],
     "a": 0
+  },
+  {
+    "id": "INOG009",
+    "y": 2025,
+    "t": "IPR",
+    "q": "Which of the following instruments are commonly used during a cesarean section?\na. Green amytage forceps\nb. Shirodkars clamp\nc. Doyens retractor\nd. Scalpel with BP holder\ne. Allis forceps\nf. Cusco and Karman",
+    "o": [
+      "a, c, d, e",
+      "b, c, d, f",
+      "a, b, e, f",
+      "a, c, e, f"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG010",
+    "y": 2025,
+    "t": "HRP",
+    "q": "A 36-week pregnant woman is being evaluated for possible eclampsia. Which of the following symptoms are not indicative of imminent eclampsia?",
+    "o": [
+      "Blurred vision",
+      "Headache",
+      "Pedal edema",
+      "Epigastric pain"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOG011",
+    "y": 2025,
+    "t": "APH",
+    "q": "A pregnant woman with placenta previa presents with mild bleeding. There are no uterine contractions, her blood pressure is 110/70 mm Hg, and the fetal heart rate is 140 bpm. What is the best next step in management?",
+    "o": [
+      "Hospitalisation and expectant management",
+      "Oxytocin induction of labour",
+      "Immediate lower segment cesarean section (LSCS)",
+      "ARM"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG012",
+    "y": 2025,
+    "t": "PPP",
+    "q": "A primigravida with a normal vaginal delivery develops postpartum haemorrhage not controlled by uterine massage. What should be the next step in management?",
+    "o": [
+      "Uterine artery embolisation",
+      "Hysterectomy",
+      "Balloon tamponade",
+      "Pelvis-specific embolization"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOG013",
+    "y": 2025,
+    "t": "IST",
+    "q": "[Image: Image of a vaginal infection finding]\nIdentify the condition based on the image provided",
+    "o": [
+      "Trichomoniasis",
+      "Candidiasis",
+      "Bacterial vaginosis",
+      "Chlamydial cervicitis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG014",
+    "y": 2025,
+    "t": "GYM",
+    "q": "A patient presents with intermenstrual bleeding, and the pap smear report shows atypical glandular cells. What is the most appropriate next step in management?",
+    "o": [
+      "Conization of the cervix",
+      "Repeat Pap smear after 6 months",
+      "Colposcopy with endometrial sampling",
+      "Hysterectomy"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOG015",
+    "y": 2025,
+    "t": "GYM",
+    "q": "A 45-year-old postmenopausal woman has an endometrial thickness of 15 mm on transvaginal ultrasound. What should be the next step in management?",
+    "o": [
+      "Endometrial biopsy",
+      "MRI Pelvis",
+      "Hysterectomy",
+      "Repeat transvaginal ultrasound after 6 weeks"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG016",
+    "y": 2025,
+    "t": "CNT",
+    "q": "Postpartum intrauterine contraceptive device (IUCD) insertion should ideally be performed within which of the following time frames?",
+    "o": [
+      "Within 24–48 hours",
+      "Within 10 minutes of placental delivery",
+      "At 4 weeks postpartum",
+      "After 6 weeks postpartum"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOG017",
+    "y": 2025,
+    "t": "PPP",
+    "q": "Which of the following statements about shock is accurate?",
+    "o": [
+      "Uterine inversion in the postpartum period causes neurogenic shock initially",
+      "Gram-positive bacteria cause endotoxic shock",
+      "Severe shock occurs with more than 20% blood loss",
+      "Hypoperfusion with increased cardiac output"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG018",
+    "y": 2025,
+    "t": "IFR",
+    "q": "Which of the following is NOT a test of ovarian reserve during the early follicular phase?",
+    "o": [
+      "FSH",
+      "E2",
+      "AMH",
+      "AFC"
+    ],
+    "a": 1
   }
 ]

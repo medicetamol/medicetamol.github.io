@@ -54,6 +54,65 @@
   {
     "id": "INBC014",
     "e": "Oncogene addiction = tumour survival depends on one dominant oncogenic pathway 🎯\nBlocking it → apoptosis (e.g., imatinib in BCR-ABL, trastuzumab in HER2)."
+  },
+  {
+    "id": "INBC015",
+    "e": "PCR cycle: denaturation → annealing (primers) → extension (Taq polymerase)."
+  },
+  {
+    "id": "INBC016",
+    "e": "RA synovium: DNA hypomethylation (↓ methylation) ↑es TNF-α/IL-6 gene expression."
+  },
+  {
+    "id": "INBC017",
+    "e": "Alternative splicing gives longer/variant mRNA transcripts in cancer cells."
+  },
+  {
+    "id": "INBC018",
+    "e": "M13 phage vector → phage display/expression system."
+  },
+  {
+    "id": "INBC019",
+    "e": "V(D)J rearrangement c̅ allelic exclusion → only one heavy-chain allele expressed per B cell."
+  },
+  {
+    "id": "INBC020",
+    "e": "2025 Nobel Prize: peripheral immune tolerance (Tregs, FOXP3)."
+  },
+  {
+    "id": "INBC021",
+    "e": "Tyrosine → thyroid hormone; Tryptophan → melatonin\nGlycine → creatine; Cysteine → taurine"
+  },
+  {
+    "id": "INBC022",
+    "e": "Plasma Mg²⁺ is maintained mainly by renal reabsorption (kidney fine-tunes excretion)."
+  },
+  {
+    "id": "INBC023",
+    "e": "PGK deficiency: 1,3-BPG accumulates and is shunted via Rapoport-Luebering pathway → 2,3-BPG ↑es."
+  },
+  {
+    "id": "INBC024",
+    "e": "von Gierke (G6Pase deficiency): final step of glycogenolysis/gluconeogenesis blocked → fasting hypoglycemia."
+  },
+  {
+    "id": "INBC025",
+    "e": "Citrate exits mitochondria → ATP-citrate lyase → acetyl-CoA for fatty acid synthesis."
+  },
+  {
+    "id": "INBC026",
+    "e": "B12 lack blocks methionine synthase → folate trapped as N⁵-methyl-THF.\nFolate corrects the anaemia but neurological damage progresses."
+  },
+  {
+    "id": "INBC027",
+    "e": "Carnitine shuttle itself needs no ATP – ATP is used only for acyl-CoA synthetase activation in the cytosol."
+  },
+  {
+    "id": "INBC028",
+    "e": "Pyridoxine (B6) is the cofactor of kynureninase → deficiency shunts 3-OH-kynurenine to xanthurenic acid."
+  },
+  {
+    "id": "INBC029",
+    "e": "RAS mutation → GTPase-defective, constitutively GTP-bound → continuous RAF-MAPK signalling."
   }
-  
 ]

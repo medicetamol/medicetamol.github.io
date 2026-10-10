@@ -24,5 +24,83 @@
       "Papilledema"
     ],
     "a": 2
+  },
+  {
+    "id": "INOP003",
+    "y": 2025,
+    "t": "GLC",
+    "q": "A patient reports a sudden onset of intense eye pain, headache, blurred vision, and colored halos. Examination reveals a mid-dilated fixed pupil, hazy cornea, and markedly raised intraocular pressure. What is the most probable diagnosis?",
+    "o": [
+      "Secondary angle closure due to anterior uveitis",
+      "Acute endophthalmitis",
+      "Orbital cellulitis",
+      "Acute primary angle closure glaucoma"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INOP004",
+    "y": 2025,
+    "t": "CJC",
+    "q": "[Image: Cornea with a ring-shaped infiltrate]\nA contact lens user presents with severe ocular pain, photophobia, and blurred vision. Corneal examination shows a ring-shaped infiltrate, as shown in the image. Which staining technique helps in identifying the causative organism?",
+    "o": [
+      "Zinc stain",
+      "Calcofluor white stain",
+      "Gram stain",
+      "GMS silver stain"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOP005",
+    "y": 2025,
+    "t": "GLC",
+    "q": "Krukenberg spindle formation on the corneal endothelium is a characteristic finding of which type of glaucoma?",
+    "o": [
+      "Pigmentary glaucoma",
+      "Malignant glaucoma",
+      "Acute angle closure glaucoma",
+      "Neovascular glaucoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOP006",
+    "y": 2025,
+    "t": "RFQ",
+    "q": "All of the following are used to assess visual acuity in preverbal children, except:",
+    "o": [
+      "Optokinetic nystagmus drum",
+      "Teller acuity cards",
+      "ETDRS chart",
+      "Cardiff acuity cards"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOP007",
+    "y": 2025,
+    "t": "CJC",
+    "q": "[Image: Eye image showing acute corneal hydrops with intracameral gas injection]\nA young myopic patient with astigmatism presents with acute red eye, history of frequent spectacle change, and eye rubbing. On examination, corneal hydrops is seen, and an intracameral gas injection was performed. What is the likely diagnosis and management procedure shown?",
+    "o": [
+      "Descemet’s stripping endothelial keratoplasty (DSEK)",
+      "Deep anterior lamellar keratoplasty (DALK)",
+      "Intracameral gas injection with C3F8 for acute hydrops",
+      "Collagen cross-linking"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOP008",
+    "y": 2025,
+    "t": "NRO",
+    "q": "[Image: Brain cortex diagram with areas numbered 1–4]\nWhich part of the cortex is responsible for scanning the visual field?",
+    "o": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 0
   }
 ]

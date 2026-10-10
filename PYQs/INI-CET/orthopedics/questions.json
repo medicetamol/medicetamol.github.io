@@ -63,5 +63,70 @@
       "External fixation"
     ],
     "a": 0
+  },
+  {
+    "id": "INOR006",
+    "y": 2025,
+    "t": "FUL",
+    "q": "A 7-year-old boy presents to the emergency department after falling on an outstretched hand. X-ray shows an extension-type supracondylar fracture of the humerus. On examination, he is unable to make an ‘OK’ sign with his thumb and index finger. Which structure is most likely injured?",
+    "o": [
+      "Median nerve",
+      "Ulnar nerve",
+      "Radial nerve",
+      "Brachial artery"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOR007",
+    "y": 2025,
+    "t": "NMM",
+    "q": "A 60-year-old man presents with generalised bone pain and easy fatigability. X-rays show diffuse osteoporosis, and hypercalcemia is noted. Which of the following investigations is most appropriate to confirm the diagnosis?",
+    "o": [
+      "CT scan",
+      "Bone marrow biopsy",
+      "MRI",
+      "Sestamibi scan"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INOR008",
+    "y": 2025,
+    "t": "BNT",
+    "q": "A 13-year-old boy presents with waxing and waning pain and swelling over the mid-shaft of the humerus for 3 weeks—no trauma history. X-ray shows a periosteal reaction with a suggestion of medullary involvement. What is the next best diagnostic investigation?",
+    "o": [
+      "MRI",
+      "Biopsy",
+      "Blood investigation",
+      "CT"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOR009",
+    "y": 2025,
+    "t": "FUL",
+    "q": "[Image: Shoulder X-ray]\nA 30-year-old man presents after a fall. He complains of severe shoulder pain and the inability to move his arm. On examination, the arm is slightly abducted and externally rotated. The X-ray is given. What is the most likely diagnosis?",
+    "o": [
+      "Anterior dislocation",
+      "Posterior dislocation",
+      "Fracture clavicle",
+      "Proximal humerus fracture"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOR010",
+    "y": 2025,
+    "t": "PDO",
+    "q": "Match the following:\nA) Equinus — 1. Longitudinal arch of foot extended dorsally\nB) Planus — 2. Longitudinal arch of foot flattened\nC) Cavus — 3. Foot in dorsiflexion\nD) Calcaneus — 4. Foot in plantar flexion",
+    "o": [
+      "A) 1, B) 2, C) 3, D) 4",
+      "A) 1, B) 4, C) 3, D) 2",
+      "A) 3, B) 1, C) 4, D) 2",
+      "A) 4, B) 2, C) 1, D) 3"
+    ],
+    "a": 3
   }
 ]

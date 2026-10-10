@@ -115,5 +115,83 @@
       "Tzanck smear"
     ],
     "a": 0
+  },
+  {
+    "id": "INDR010",
+    "y": 2025,
+    "t": "MSD",
+    "q": "Match the following:\na. Auspitz sign — 1. Psoriasis\nb. Darier’s sign — 2. Discoid lupus erythematosus\nc. Carpet tack sign — 3. Cutaneous mastocytosis\nd. Flag sign — 4. Kwashiorkor",
+    "o": [
+      "a-3, b-2, c-1, d-4",
+      "a-4, b-3, c-1, d-2",
+      "a-1, b-3, c-2, d-4",
+      "a-1, b-2, c-3, d-4"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INDR011",
+    "y": 2025,
+    "t": "SKT",
+    "q": "The most common site of melanoma in Indians is:",
+    "o": [
+      "Trunk",
+      "Hands and feet",
+      "Genitals",
+      "Face"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INDR012",
+    "y": 2025,
+    "t": "STI",
+    "q": "Which of the following is NOT a part of syndromic management in males?",
+    "o": [
+      "Urethral discharge",
+      "Genital discharge",
+      "Inguinal swelling",
+      "Lower abdominal pain"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INDR013",
+    "y": 2025,
+    "t": "FVI",
+    "q": "[Image: Image of a lesion discharging black granules]\nA farmer presents with a lesion that discharges black-colored granules. What is the causative agent?",
+    "o": [
+      "Madurella mycetomatis",
+      "Actinomadura Madurae",
+      "Nocardia brazilensis",
+      "Streptomyces somaliensis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INDR014",
+    "y": 2025,
+    "t": "MSD",
+    "q": "[Image: Image of a lesion at a site of recurrence]\nA lesion is observed at the same site on three separate occasions. What is the most likely diagnosis?",
+    "o": [
+      "Cutaneous mastocytosis",
+      "Fixed drug eruption",
+      "HSV1",
+      "Erythema multiforme"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INDR015",
+    "y": 2025,
+    "t": "MSD",
+    "q": "A 70-year-old female presents with intense itching and a white plaque in the genital region. Histopathological examination shows loss of rete ridges, abundant collagen, and thinned epithelium. What is the most likely diagnosis?",
+    "o": [
+      "Lichen planus",
+      "Lichen sclerosis",
+      "Candidiasis",
+      "Vulvar leukoplakia"
+    ],
+    "a": 1
   }
 ]

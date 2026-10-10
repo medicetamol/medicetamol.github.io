@@ -34,5 +34,89 @@
   {
     "id": "INGM009",
     "e": "Ann Arbor 'bulky' (X) modifier = mediastinal mass width >1/3 of the maximum intrathoracic diameter on CXR."
+  },
+  {
+    "id": "INGM010",
+    "e": "Boutonniere: PIP flexion c̅ DIP hyperextension (central slip rupture).\nSwan neck: PIP hyperextension c̅ DIP flexion."
+  },
+  {
+    "id": "INGM011",
+    "e": "Horner + facial anhidrosis → lesion proximal to carotid bifurcation (sympathetic chain)."
+  },
+  {
+    "id": "INGM012",
+    "e": "HOCM (asymmetric septal hypertrophy, AD) – commonest cause of sudden death in young athletes; screen relatives."
+  },
+  {
+    "id": "INGM013",
+    "e": "Variceal bleed c̅ hypotension: avoid β-blocker (used for prophylaxis); give octreotide, antibiotics, endoscopy."
+  },
+  {
+    "id": "INGM014",
+    "e": "GOLD: FEV₁ <30% predicted → chronic respiratory failure/resting hypoxemia."
+  },
+  {
+    "id": "INGM015",
+    "e": "Severe COPD exacerbation: bronchodilators + systemic steroids + antibiotics (↑ sputum).\nAntivirals not indicated."
+  },
+  {
+    "id": "INGM016",
+    "e": "COPD: lung compliance ↑es (loss of elastic recoil in emphysema), not decreased."
+  },
+  {
+    "id": "INGM017",
+    "e": "Prolonged febrile neutropenia is the highest-risk setting for invasive aspergillosis."
+  },
+  {
+    "id": "INGM018",
+    "e": "Clonus/hyperreflexia (UMN signs) suggest compressive myelopathy.\nHypotonia/absent Babinski → LMN."
+  },
+  {
+    "id": "INGM019",
+    "e": "Dengue c̅ stable vitals & no bleeding: paracetamol alone; no antibiotics/steroids/platelets."
+  },
+  {
+    "id": "INGM020",
+    "e": "DCM predisposes to LV thrombus & AF → anticoagulation considered (esp. very low EF)."
+  },
+  {
+    "id": "INGM021",
+    "e": "Huntington's: chorea + personality change/dementia; MRI shows caudate atrophy."
+  },
+  {
+    "id": "INGM022",
+    "e": "Tricuspid stenosis → RA enlargement → tall 'giant' P wave.\nMS → broad notched P mitrale."
+  },
+  {
+    "id": "INGM023",
+    "e": "Anemia, fever, thyrotoxicosis → high-output failure; high salt → volume overload."
+  },
+  {
+    "id": "INGM024",
+    "e": "Serum ACTH & cortisol separate causes: low ACTH + low cortisol = exogenous (iatrogenic) steroid excess."
+  },
+  {
+    "id": "INGM025",
+    "e": "Conn's: Na⁺ normal/mildly ↑ (aldosterone escape); hypokalemia, HTN, alkalosis are typical."
+  },
+  {
+    "id": "INGM026",
+    "e": "Most berry aneurysms arise at the anterior communicating/ACA junction."
+  },
+  {
+    "id": "INGM027",
+    "e": "DVT risks: prolonged immobilisation, smoking, OCPs.\nHypothyroidism is not a recognised risk."
+  },
+  {
+    "id": "INGM028",
+    "e": "DKA & starvation ketosis → high anion gap (ketoanions).\nVomiting → metabolic alkalosis."
+  },
+  {
+    "id": "INGM029",
+    "e": "Sjögren (sicca + RTA c̅ hypokalemia): Schirmer's test + anti-Ro/La autoantibodies."
+  },
+  {
+    "id": "INGM030",
+    "e": "Cushingoid features in a child: most commonly exogenous (iatrogenic) steroids."
   }
 ]

@@ -115,5 +115,278 @@
       "Greater than two-thirds (>2/3) of the maximum intrathoracic diameter"
     ],
     "a": 0
+  },
+  {
+    "id": "INGM010",
+    "y": 2025,
+    "t": "RHU",
+    "q": "[Image: Hand of a rheumatoid arthritis patient showing deformity]\nA patient with rheumatoid arthritis (RA) presents with the deformity shown. What is the correct name of the deformity?",
+    "o": [
+      "Piano key sign",
+      "Z deformity",
+      "Boutonniere deformity",
+      "Swan neck"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM011",
+    "y": 2025,
+    "t": "NRL",
+    "q": "A patient presents with Horner’s syndrome and absence of sweating on one side of the face. Which of the following structures is most likely compressed?",
+    "o": [
+      "Sympathetic chain",
+      "Internal carotid plexus",
+      "Vagus nerve",
+      "Common carotid artery"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM012",
+    "y": 2025,
+    "t": "CAD",
+    "q": "[Image: Image related to ventricular hypertrophy]\nA 22-year-old athlete collapses and dies suddenly during a game. Autopsy reveals ventricular hypertrophy. What is the most likely underlying cause?",
+    "o": [
+      "He died of valvular disease",
+      "The image shows features of chronic heart failure",
+      "Coronary artery disease due to increased cholesterol",
+      "HOCM needs to be screened in case of a family history"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM013",
+    "y": 2025,
+    "t": "GAS",
+    "q": "A 45-year-old man with known alcoholic cirrhosis presents with confusion and 3 days of hematemesis. Examination reveals icterus, hepatosplenomegaly, tense ascites, and asterixis. Vitals: BP 100/60 mmHg, pulse 104/min. Which of the following is NOT appropriate in the initial management of this patient?",
+    "o": [
+      "Start propranolol to stop variceal bleeding",
+      "Perform a diagnostic ascitic tap to rule out spontaneous bacterial peritonitis (SBP)",
+      "Start IV antibiotics and IV octreotide infusion",
+      "Give IV albumin after large-volume paracentesis or if renal dysfunction develops"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM014",
+    "y": 2025,
+    "t": "PUL",
+    "q": "According to the GOLD guidelines, what is the FEV1 (% predicted) cutoff associated with clinically significant resting hypoxemia in patients with chronic COPD?",
+    "o": [
+      "50%",
+      "20%",
+      "40%",
+      "30%"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM015",
+    "y": 2025,
+    "t": "PUL",
+    "q": "According to the GOLD guidelines, which of the following is the most appropriate next step in the management of a patient who smokes and has a chronic COPD exacerbation with a respiratory rate of 30/min, pulse of 110/min, with increased sputum, resting SpO2 of 90% on room air, and pCO2 of 80 mm Hg?\nA. Antibiotics\nB. Systemic Corticosteroids\nC. Antiviral treatment\nD. Nebulized bronchodilators\nChoose the correct combination",
+    "o": [
+      "A, B, D",
+      "A, C, D",
+      "B, C, D",
+      "A, B, C, D"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM016",
+    "y": 2025,
+    "t": "PUL",
+    "q": "A patient with chronic productive cough and progressive breathlessness is diagnosed with COPD. He develops type II respiratory failure. Which of the following statements regarding his condition is not true?",
+    "o": [
+      "Bronchial wall inflammation is a characteristic finding",
+      "Increased Reid index",
+      "Lung compliance is decreased",
+      "FEV₁/FVC ratio is <70%"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM017",
+    "y": 2025,
+    "t": "IFD",
+    "q": "Which of the following has the highest risk of causing invasive pulmonary aspergillosis?",
+    "o": [
+      "Febrile neutropenia",
+      "CD4 <50 cells/μL",
+      "Severe protein-energy undernutrition",
+      "Bronchial asthma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM018",
+    "y": 2025,
+    "t": "NRL",
+    "q": "A patient presents to the OPD with the complaint of back pain and weakness in both lower limbs. Which of the following findings would suggest compressive myelopathy?",
+    "o": [
+      "Hypotonia",
+      "Absent Babinski sign",
+      "Normal cremasteric reflex",
+      "Knee clonus"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM019",
+    "y": 2025,
+    "t": "IFD",
+    "q": "A patient comes to the OPD with a history of fever for 4 days, no bleeding manifestations, and stable vitals. Blood work shows Hb = 9 g/dL, platelet count = 20,000/mL. What is the next step in management during the first hour?\nA. PCM\nB. Antibiotics\nC. Platelet transfusion\nD. Steroids",
+    "o": [
+      "A, B, C, D",
+      "A, B, C",
+      "A, B",
+      "A"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM020",
+    "y": 2025,
+    "t": "CAD",
+    "q": "A patient presents with exertional dyspnea and pedal oedema. His echocardiogram shows a dilated left ventricle with reduced systolic function. Which of the following statements regarding this condition is false?",
+    "o": [
+      "Pulmonary hypertension may develop in this patient",
+      "Ejection fraction will be reduced in this condition",
+      "Long-term anticoagulation is not needed for this patient",
+      "Beta blockers are indicated in chronic management"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM021",
+    "y": 2025,
+    "t": "NRL",
+    "q": "[Image: MRI of the brain]\nA 28-year-old male presents with involuntary jerky movements of the face and limbs, along with noticeable personality changes and increasing forgetfulness. An MRI of the brain is shown. What is the most likely diagnosis?",
+    "o": [
+      "Wilson’s disease",
+      "Sydenham’s chorea",
+      "Prion disease",
+      "Huntington’s disease"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM022",
+    "y": 2025,
+    "t": "CAD",
+    "q": "Which of the following conditions is associated with large P waves on an ECG?",
+    "o": [
+      "Mitral stenosis",
+      "Tricuspid stenosis",
+      "Aortic regurgitation",
+      "Systemic hypertension"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM023",
+    "y": 2025,
+    "t": "CAD",
+    "q": "Which of the following conditions does NOT share the same underlying mechanism that contributes to the development of heart failure, as seen in the other conditions?",
+    "o": [
+      "Anemia",
+      "Fever",
+      "High salt intake",
+      "Thyrotoxicosis"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM024",
+    "y": 2025,
+    "t": "END",
+    "q": "A 25-year-old female with systemic lupus erythematosus presents with weight gain, moon facies, buffalo hump, and hirsutism. Which of the following is the most appropriate investigation to confirm the diagnosis?",
+    "o": [
+      "Serum ACTH and low-dose dexamethasone suppression test",
+      "Low-dose dexamethasone suppression test",
+      "High-dose dexamethasone suppression test",
+      "Serum ACTH and cortisol levels"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM025",
+    "y": 2025,
+    "t": "END",
+    "q": "Which of the following findings is NOT typically seen in Conn’s syndrome?",
+    "o": [
+      "Hypernatremia",
+      "Hypokalemia",
+      "Hypertension",
+      "Metabolic alkalosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM026",
+    "y": 2025,
+    "t": "NRL",
+    "q": "What is the most common site of a berry aneurysm in the Circle of Willis?",
+    "o": [
+      "Basilar artery",
+      "Vertebral artery",
+      "Anterior cerebral artery (ACA)",
+      "Middle cerebral artery (MCA)"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM027",
+    "y": 2025,
+    "t": "PUL",
+    "q": "A patient with hypothyroidism recently completed a 13–14-hour flight. Which of the following factors contribute to the risk of developing pulmonary deep vein thrombosis (DVT)?\nA. Prolonged immobilisation due to long flights\nB. Smoking\nC. Hypothyroidism\nD. Oral contraceptive pills (OCP)\nChoose the correct combination:",
+    "o": [
+      "C, D",
+      "A, B",
+      "A, B, D",
+      "A, B, C, D"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM028",
+    "y": 2025,
+    "t": "NEP",
+    "q": "Which of the following clinical conditions are correctly matched with their respective anion gap status?\nA. Starvation – Increased anion gap\nB. Diabetic ketoacidosis – Increased anion gap\nC. Severe vomiting – Increased anion gap",
+    "o": [
+      "Only A is correct",
+      "A and C are correct",
+      "A and B are correct",
+      "Only B is correct"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM029",
+    "y": 2025,
+    "t": "RHU",
+    "q": "A woman with dry mouth, gritty eye sensations, and bilateral salivary gland enlargement presents for evaluation. Laboratory tests show hypokalemia and metabolic acidosis. What is the most appropriate diagnostic test to confirm the diagnosis?",
+    "o": [
+      "Schirmer’s test and autoantibody profile",
+      "Serum acetylcholine receptor antibody",
+      "Salivary gland scintigraphy",
+      "Serum calcium and ACE levels"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM030",
+    "y": 2025,
+    "t": "END",
+    "q": "A child develops signs of central obesity, moon face, and striae. What is the most likely underlying cause?",
+    "o": [
+      "Progression of the disease",
+      "Use of exogenous steroids",
+      "Adrenal hyperplasia",
+      "Pituitary adenoma"
+    ],
+    "a": 1
   }
 ]

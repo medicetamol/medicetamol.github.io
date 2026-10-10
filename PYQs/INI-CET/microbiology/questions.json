@@ -219,5 +219,226 @@
       "The organism can cause cutaneous larva migrans"
     ],
     "a": 3
+  },
+  {
+    "id": "INMB018",
+    "y": 2025,
+    "t": "VIR",
+    "q": "What is the most frequent cause of viral diarrhoea in adults?",
+    "o": [
+      "Rotavirus",
+      "Adenovirus 40/41",
+      "Norovirus",
+      "Astrovirus"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INMB019",
+    "y": 2025,
+    "t": "MYC",
+    "q": "[Image: Image of a microbiological phenomenon for species identification]\nIdentify the species from the given phenomenon below",
+    "o": [
+      "C albicans",
+      "B parapsilosis",
+      "C kruzei",
+      "tropicalis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB020",
+    "y": 2025,
+    "t": "MYC",
+    "q": "Which of the following infections are NOT acquired through a thorn prick injury?",
+    "o": [
+      "Dermatophytosis",
+      "Chromoblastomycosis",
+      "Mycetoma",
+      "Sporotrichosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB021",
+    "y": 2025,
+    "t": "PAR",
+    "q": "[Image: Large operculated egg of a parasitic fluke]\nAn image shows a large operculated egg from a parasitic fluke, identified as belonging to the genus Fasciola. What is the most likely parasite?",
+    "o": [
+      "Fasciola hepatica",
+      "Clonorchis sinensis",
+      "Schistosoma haematobium",
+      "Paragonimus westermani"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB022",
+    "y": 2025,
+    "t": "PAR",
+    "q": "[Image: Parasite egg]\nIdentify the egg from the image below?",
+    "o": [
+      "T solium",
+      "Ascaris lumbricoides",
+      "H nana",
+      "Necator americanus"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INMB023",
+    "y": 2025,
+    "t": "MYC",
+    "q": "[Image: Fungal infection image with silver/Gomori stain]\nA fungal infection of the mitral valve shows positivity on silver/Gomori stain. Which organism is most likely to cause the disease?",
+    "o": [
+      "Mucor",
+      "Histoplasma capsulatum",
+      "Aspergillus fumigatus",
+      "Candida albicans"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INMB024",
+    "y": 2025,
+    "t": "BAC",
+    "q": "A culture of Streptococcus pneumoniae shows alpha-hemolysis and draughtsman colonies on blood agar. Which test is most useful for its identification?",
+    "o": [
+      "No vaccine",
+      "Catalase positive",
+      "Vancomycin sensitivity test",
+      "Bile solubility test"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INMB025",
+    "y": 2025,
+    "t": "PAR",
+    "q": "Match the following parasites with the diseases they cause?\n1. Visceral larva migrans\n2. Cutaneous larva migrans\n3. Swimmer’s itch\n4. Larva currens\n\na. Strongyloides\nb. Schistosomiasis\nc. Toxocara canis\nd. Ancylostoma braziliense",
+    "o": [
+      "1-c, 2-d, 3-b, 4-a",
+      "1-a, 2-b, 3-c, 4-d",
+      "1-d, 2-c, 3-b, 4-a",
+      "1-b, 2-c, 3-d, 4-a"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB026",
+    "y": 2025,
+    "t": "MYC",
+    "q": "A patient presents multiple draining sinuses releasing black granules. Which of the following organisms is most likely responsible?",
+    "o": [
+      "Staphylococcus aureus",
+      "Nocardia asteroides",
+      "Actinomyces israelii",
+      "Madurella mycetomatis"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INMB027",
+    "y": 2025,
+    "t": "VIR",
+    "q": "The viral life cycle that corresponds to the epidermal layers—replication occurring in the spinous layer, assembly in the granular layer, and release in the cornified layer—is characteristic of which of the following viruses?",
+    "o": [
+      "Human papillomavirus (HPV)",
+      "Molluscum contagiosum virus",
+      "Varicella-zoster virus",
+      "Herpes simplex virus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB028",
+    "y": 2025,
+    "t": "VIR",
+    "q": "[Image: Clinical image of the condition]\nWhich of the following is not true about the given condition?",
+    "o": [
+      "Oncogenic virus",
+      "Painful lesions",
+      "RNA virus",
+      "No vaccine available"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB029",
+    "y": 2025,
+    "t": "GEN",
+    "q": "Mycobacterium tuberculosis is handled in which biosafety level (BSL) laboratory?",
+    "o": [
+      "BSL-1",
+      "BSL-2",
+      "BSL-3",
+      "BSL-4"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INMB030",
+    "y": 2025,
+    "t": "BAC",
+    "q": "[Image: Image shown with the question]\nWhat was incorrect about below image shown:",
+    "o": [
+      "Phage coded",
+      "Causes myocarditis",
+      "It is an exotoxin",
+      "It is the most potent toxin known to man"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INMB031",
+    "y": 2025,
+    "t": "VIR",
+    "q": "[Image: Fruit bats (Pteropus species) along with the life cycle of the Nipah virus]\nAn image depicting fruit bats (Pteropus species) along with the life cycle of the Nipah virus was shown. Which of the following statements regarding the Nipah virus is correct?",
+    "o": [
+      "Cause encephalitis",
+      "100% mortality once clinical symptoms appear",
+      "DNA virus",
+      "Humans are the most important reservoir"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB032",
+    "y": 2025,
+    "t": "MYC",
+    "q": "[Image: Image related to a lung infection with hemoptysis]\nClassical case explaining lung infection with hemoptysis.",
+    "o": [
+      "Aspergillus with aseptate branching",
+      "Aspergillus with septate branching",
+      "Rhizopus with septate",
+      "Mucormycosis with septate hyphae"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INMB033",
+    "y": 2025,
+    "t": "BAC",
+    "q": "Which of the following is an obligate intracellular organism?",
+    "o": [
+      "Ehrlichia chaffeensis",
+      "Staphylococcus aureus",
+      "Tropheryma whipplei",
+      "Streptococcus pyogenes"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB034",
+    "y": 2025,
+    "t": "PAR",
+    "q": "Where is Wuchereria present during daytime, when microfilaria are not seen in blood capillaries?",
+    "o": [
+      "Spleen",
+      "Liver",
+      "Lungs",
+      "Kidney"
+    ],
+    "a": 2
   }
 ]

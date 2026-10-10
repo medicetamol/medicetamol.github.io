@@ -37,5 +37,57 @@
       "Dissociative amnesia"
     ],
     "a": 0
+  },
+  {
+    "id": "INPS004",
+    "y": 2025,
+    "t": "PSF",
+    "q": "A patient on Haloperidol develops Neuroleptic Malignant Syndrome (rigidity, fever). What is the most appropriate treatment?",
+    "o": [
+      "Stop the antipsychotic and give dantrolene/bromocriptine",
+      "Give Acetylcholine",
+      "Atropine",
+      "IV fluids and continue the antipsychotic"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPS005",
+    "y": 2025,
+    "t": "ANX",
+    "q": "A patient develops sudden vision loss after a traumatic event. Eye examination is normal, and the patient is unconcerned about blindness. What is the most likely diagnosis?",
+    "o": [
+      "Somatoform Disorder",
+      "Conversion Disorder",
+      "Factitious Disorder",
+      "Malingering"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPS006",
+    "y": 2025,
+    "t": "CHP",
+    "q": "A 7‑year‑old child has had severe recurrent anger outbursts for 1 year, disproportionate to the situation, with persistent irritability between episodes. Most likely diagnosis?",
+    "o": [
+      "Oppositional Defiant Disorder",
+      "Conduct Disorder",
+      "Disruptive Mood Dysregulation Disorder",
+      "Intermittent Explosive Disorder"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPS007",
+    "y": 2025,
+    "t": "SCH",
+    "q": "Match the types of delusions with their descriptions:\nA. Persecution\nB. Grandiosity\nC. Nihilistic\nD. Influence\n\nDescriptions:\n1. False belief of being controlled by external forces\n2. False belief of having great powers or importance\n3. False belief that the body/world does not exist\n4. False belief of being harmed or conspired against",
+    "o": [
+      "A–4, B–2, C–3, D–1",
+      "A–3, B–1, C–4, D–2",
+      "A–2, B–4, C–3, D–1",
+      "A–1, B–2, C–3, D–4"
+    ],
+    "a": 0
   }
 ]

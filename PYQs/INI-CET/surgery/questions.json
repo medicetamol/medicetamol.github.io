@@ -193,5 +193,200 @@
       "Repeat FNAC"
     ],
     "a": 0
+  },
+  {
+    "id": "INGS016",
+    "y": 2025,
+    "t": "GIS",
+    "q": "A patient is diagnosed with recurrent peptic ulcers and a nodule in the first part of the duodenum. Which of the following tests should be done next to confirm the diagnosis?",
+    "o": [
+      "Serum prolactin levels",
+      "Serum gastrin levels",
+      "24-hour urinary catecholamine levels",
+      "Serum parathyroid hormone levels"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS017",
+    "y": 2025,
+    "t": "BRS",
+    "q": "A patient presents with a rapidly growing breast lump (20×15 cm), erythema, and peau d’orange (PDO), with a family history of breast cancer. She is diagnosed with inflammatory breast cancer. What is the appropriate treatment?",
+    "o": [
+      "Neoadjuvant chemotherapy followed by MRM",
+      "MRM followed by chemotherapy",
+      "Neoadjuvant therapy followed by BCT and SLNB",
+      "Palliative care"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS018",
+    "y": 2025,
+    "t": "GIS",
+    "q": "A patient presents with 24 hours of abdominal pain and is diagnosed as acute appendicitis. Which of the following statements are incorrect?",
+    "o": [
+      "McBurney’s point is the classical site of tenderness",
+      "Oschner Sherren is used in the appendicular lump",
+      "Immediate appendectomy is performed after conservative management in all cases",
+      "Ultrasound is the investigation of choice in children"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGS019",
+    "y": 2025,
+    "t": "GNS",
+    "q": "Which of the following absorbable sutures causes the maximum tissue reaction?",
+    "o": [
+      "Polygalactin",
+      "Catgut",
+      "Polypropylene",
+      "Polydioxanone"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS020",
+    "y": 2025,
+    "t": "GIS",
+    "q": "[Image: Surgical diagram of a bariatric procedure showing anastomoses]\nA patient presents for follow-up after obesity treatment, with a surgical image shown. Which procedure was performed?",
+    "o": [
+      "Roux-en-Y gastric bypass",
+      "Mini-gastric bypass",
+      "Duodenal switch",
+      "Biliopancreatic diversion"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGS021",
+    "y": 2025,
+    "t": "HBP",
+    "q": "TIGAR-O classification is used in which type of pancreatitis?",
+    "o": [
+      "Acute pancreatitis",
+      "Chronic pancreatitis",
+      "Autoimmune pancreatitis",
+      "Alcoholic pancreatitis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS022",
+    "y": 2025,
+    "t": "GIS",
+    "q": "[Image: Intraoperative image of an inguinal hernia]\nAn intraoperative image of an inguinal hernia is shown. Which type is depicted?",
+    "o": [
+      "Littre",
+      "Amyand",
+      "Garengeot",
+      "Grynfelt"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS023",
+    "y": 2025,
+    "t": "HBP",
+    "q": "Arrange the following steps of surgery in order:\nA. Creating pneumoperitoneum\nB. Dissection of hepatocystic triangle\nC. Ligation of the cystic duct and artery\nD. Separation of the gallbladder from the liver bed",
+    "o": [
+      "A-B-C-D",
+      "A-C-B-D",
+      "B-A-C-D",
+      "D-A-B-C"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS024",
+    "y": 2025,
+    "t": "GIS",
+    "q": "Arrange the steps of hernioplasty in the correct order:\na. Skin incision\nb. Identify the sac and reduce its content\nc. Place the mesh\nd. Wound closure",
+    "o": [
+      "a-b-c-d",
+      "b-c-a-d",
+      "a-d-c-b",
+      "b-a-d-c"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS025",
+    "y": 2025,
+    "t": "GNS",
+    "q": "[Image: Laparoscopic port placement diagram showing the angle between working ports]\nThe angle of laparoscopy between the left- and right-hand working ports is known as:",
+    "o": [
+      "Manipulation angle",
+      "Azimuth angle",
+      "Elevation angle",
+      "Extreme angle"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS026",
+    "y": 2025,
+    "t": "HBP",
+    "q": "A 60-year-old female with a history of cholecystectomy and abdominal tube insertion 10 days ago presents with abdominal pain. What is the next step in management?",
+    "o": [
+      "Immediate percutaneous drainage",
+      "Exploratory laparotomy",
+      "ERCP and stenting/sphincterotomy",
+      "Conservative management"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGS027",
+    "y": 2025,
+    "t": "HBP",
+    "q": "[Image: USG/MRCP image of the biliary tree and pancreas]\nA 17-year-old presents with recurrent abdominal pain for 3 months. Amylase and lipase are raised. What is the likely diagnosis based on USG and MRCP findings?",
+    "o": [
+      "Choledochal Cyst",
+      "Annular Pancreas",
+      "Pancreas Divisum",
+      "CBD stone"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS028",
+    "y": 2025,
+    "t": "GIS",
+    "q": "Which of the following statements about intestinal stomas is incorrect?",
+    "o": [
+      "The ileostomy loop is generally kept with pouting",
+      "Maximum malabsorption of electrolytes and nutrients is seen with colostomy",
+      "The stoma of a colostomy is everted above skin level",
+      "Only the muscular layer is taken in sutures while creating an ileostomy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS029",
+    "y": 2025,
+    "t": "TCC",
+    "q": "During triage, who should receive the highest priority?",
+    "o": [
+      "6-year-old child crying",
+      "45-year-old unconscious with noisy breathing/grunting sounds",
+      "23-year-old conscious with breathing difficulty",
+      "60-year-old conscious patient with blood-soaked pants"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS030",
+    "y": 2025,
+    "t": "HBP",
+    "q": "A patient presents with abdominal pain and has elevated mucin and CEA levels but normal amylase. What is the most likely diagnosis?",
+    "o": [
+      "Intraductal Papillary Mucinous Neoplasm (IPMN)",
+      "Pancreatic cystic neoplasm",
+      "Mucinous adenoma",
+      "Pancreatic pseudocyst"
+    ],
+    "a": 2
   }
 ]

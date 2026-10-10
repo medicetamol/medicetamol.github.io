@@ -63,5 +63,31 @@
       "No measurable effect on cardiac output or blood pressure"
     ],
     "a": 0
+  },
+  {
+    "id": "INAS006",
+    "y": 2025,
+    "t": "ARG",
+    "q": "[Image: Intraoral image showing a nerve block]\nIdentify the nerve block demonstrated in the given intraoral image?",
+    "o": [
+      "Inferior alveolar nerve block",
+      "Anterior ethmoidal nerve block",
+      "Maxillary nerve block",
+      "Greater palatine nerve block"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INAS007",
+    "y": 2025,
+    "t": "AIV",
+    "q": "For benzodiazepines and barbiturates, which of the following statements are true?\nA. Both act on GABA\nB. Cause additive sedation with alcohol\nC. Thiopentone has a short duration of action due to metabolism\nD. Flumazenil is an antidote for barbiturates",
+    "o": [
+      "Both A & B are correct",
+      "Only A is correct",
+      "Only C is correct",
+      "All are correct"
+    ],
+    "a": 0
   }
 ]
