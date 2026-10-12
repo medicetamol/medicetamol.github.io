@@ -172,7 +172,7 @@
     "id": "INAN014",
     "y": 2025,
     "t": "OST",
-    "q": "[Image: Highlighted structure marked in the image]\nThe highlighted structure in the provided image articulates with which bone?",
+    "q": "The marked structure in the provided image articulates with which bone?",
     "o": [
       "Occipital bone",
       "Temporal bone",
@@ -186,7 +186,7 @@
     "id": "INAN015",
     "y": 2025,
     "t": "HNK",
-    "q": "[Image: Skull base with foramina labelled A, B, C and D]\nThrough which of the following foramina does the nerve supplying the muscles of mastication pass?",
+    "q": "Through which of the following foramina does the nerve supplying the muscles of mastication pass?",
     "o": [
       "A",
       "B",
@@ -200,14 +200,15 @@
     "id": "INAN016",
     "y": 2025,
     "t": "NEU",
-    "q": "[Image: Brain section with regions numbered 1–4 and structures labelled A–D]\nIn the given image, which region is correctly paired with its corresponding brain structure?\nA. Middle cerebellar peduncle\nB. Fasciculus cuneatus\nC. Superior cerebellar peduncle\nD. Inferior colliculus",
+    "q": "In the given image, which region is correctly paired with its corresponding brain structure?\n1. Middle cerebellar peduncle\n2. Fasciculus cuneatus\n3. Superior cerebellar peduncle\n4. Inferior colliculus",
     "o": [
       "1-A, 2-B, 3-C, 4-D",
       "1-B, 2-C, 3-A, 4-D",
       "1-D, 2-C, 3-A, 4-B",
-      "1-C, 2-D, 3-C, 4-A"
+      "1-C, 2-D, 3-B, 4-A"
     ],
-    "a": 2
+    "a": 3,
+    "img": true
   },
   {
     "id": "INAN017",
@@ -239,14 +240,15 @@
     "id": "INAN019",
     "y": 2025,
     "t": "LWL",
-    "q": "[Image: Image with an area marked by an arrow]\nIn the illustrated image, which of the following structures is NOT associated with the area marked by the arrow?",
+    "q": "In the illustrated image, which of the following structures is NOT associated with the area marked by the arrow?",
     "o": [
       "Internal pudendal vessels",
       "Tendon of the obturator externus",
       "Ischiococcygeus",
       "Pudendal nerve"
     ],
-    "a": 1
+    "a": 1,
+    "img": true
   },
   {
     "id": "INAN020",
@@ -265,27 +267,29 @@
     "id": "INAN021",
     "y": 2025,
     "t": "HIS",
-    "q": "[Image: Four histology images labelled 1–4]\nWhich of the following histology images is not an endocrine structure?",
+    "q": "Which of the following histology images is not an endocrine structure?",
     "o": [
       "1",
       "2",
       "3",
       "4"
     ],
-    "a": 3
+    "a": 3,
+    "img": true
   },
   {
     "id": "INAN022",
     "y": 2025,
     "t": "NEU",
-    "q": "[Image: Image with a structure marked]\nMarked structure separates which of the following:",
+    "q": "Marked structure separates which of the following:",
     "o": [
       "Third ventricle",
       "Lateral ventricle",
       "Fourth ventricle",
       "Cisterna magna"
     ],
-    "a": 1
+    "a": 1,
+    "img": true
   },
   {
     "id": "INAN023",
@@ -298,19 +302,21 @@
       "C",
       "D"
     ],
-    "a": 3
+    "a": 3,
+    "img": true
   },
   {
     "id": "INAN024",
     "y": 2025,
     "t": "LWL",
-    "q": "[Image: Image with structures labelled A–D]\nThe muscle that contributes to both hip and knee extension originates from which of the following structures?",
+    "q": "The muscle that contributes to both hip and knee extension originates from which of the following structures?",
     "o": [
       "A",
       "B",
       "C",
       "D"
     ],
-    "a": 1
+    "a": 1,
+    "img": true
   }
 ]

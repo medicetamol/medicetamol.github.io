@@ -81,7 +81,7 @@
     "id": "PGEN007",
     "y": 2021,
     "t": "PHR",
-    "q": "[Image: Histological section showing a large rounded papillary structure with surrounding epithelial folds] Identify the structure.",
+    "q": "Identify the type of Pappila.",
     "o": [
       "Circumvallate",
       "Fungiform",
