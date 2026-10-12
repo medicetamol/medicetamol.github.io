@@ -3,7 +3,7 @@
     "id": "INAN001",
     "y": 2026,
     "t": "HIS",
-    "q": "Which of the following intercellular junctions seals the paracellular space and is classified as a tight (occluding) junction?",
+    "q": "Which of the following intercellular junctions seals the paracellular space and is classified as a tight junction?",
     "o": [
       "Fascia adherens",
       "Desmosome (macula adherens)",
@@ -29,7 +29,7 @@
     "id": "INAN003",
     "y": 2026,
     "t": "NEU",
-    "q": "Neuropraxia (the mildest grade of nerve injury) is best described as:",
+    "q": "Neuropraxia is best described as:",
     "o": [
       "A reversible physiological conduction block with intact axon",
       "Cut/disruption of the endoneurium",
@@ -179,7 +179,8 @@
       "Axis",
       "Sphenoid bone"
     ],
-    "a": 0
+    "a": 0,
+    "img": true
   },
   {
     "id": "INAN015",
@@ -192,7 +193,8 @@
       "C",
       "D"
     ],
-    "a": 2
+    "a": 2,
+    "img": true
   },
   {
     "id": "INAN016",

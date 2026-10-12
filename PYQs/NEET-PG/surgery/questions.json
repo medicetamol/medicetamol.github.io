@@ -104,19 +104,6 @@
     "a": 0
   },
   {
-    "id": "PGGS009",
-    "y": 2021,
-    "t": "GNS",
-    "q": "Which statement is true among all?",
-    "o": [
-      "Associated with mixed aerobic and anaerobic infection",
-      "Orchidectomy should be done",
-      "Anti-gas gangrene serum should always be used",
-      "Urinary diversion done"
-    ],
-    "a": 0
-  },
-  {
     "id": "PGGS010",
     "y": 2021,
     "t": "URO",
@@ -179,7 +166,7 @@
       "Do retrograde urethrogram",
       "CECT pelvis is taken"
     ],
-    "a": 1
+    "a": 2
   },
   {
     "id": "PGGS015",
@@ -679,12 +666,12 @@
     "id": "PGGS053",
     "y": 2025,
     "t": "TCC",
-    "q": "A 25-year old patient who had a Road traffic accident was initially conscious but later became unconscious and subsequently died. On postmortem examination, multiple petechial Others hemorrhages are seen in the corpus callosum, what is the probable diagnosis?",
+    "q": "A 25-year old patient who had a Road traffic accident was initially conscious but later became unconscious and subsequently died. On postmortem examination, multiple petechial hemorrhages are seen in the corpus callosum, what is the probable diagnosis?",
     "o": [
       "EDH",
       "Diffuse axonal injury",
       "Subdural hematoma",
-      "SDH"
+      "Subarachnoid hemorrhage"
     ],
     "a": 1
   },
@@ -718,7 +705,7 @@
     "id": "PGGS063",
     "y": 2025,
     "t": "VAS",
-    "q": "A patient presents with the fingertip changes shown in the image. What is the most likely diagnosis?",
+    "q": "[Image: Photo of fingertips with moist, swollen, dusky black-green discolored tissue. Skin shows blistering with foul-smelling discharge. Surrounding skin is red and edematous, with no clear line of demarcation] \\nA patient presents with the fingertip changes shown in the image. What is the most likely diagnosis?",
     "o": [
       "Wet gangrene",
       "Raynaud's phenomenon",

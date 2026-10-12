@@ -172,7 +172,7 @@
     "id": "PGGM014",
     "y": 2021,
     "t": "NEP",
-    "q": "30 y/F, 70 kg man with serum sodium=120. Calculate total sodium deficit",
+    "q": "A 30 year, 70 kg man with serum sodium=120. Calculate total sodium deficit",
     "o": [
       "420",
       "840",
@@ -205,7 +205,7 @@
       "Aortic stenosis",
       "Mitral stenosis"
     ],
-    "a": 0
+    "a": 1
   },
   {
     "id": "PGGM017",
@@ -372,9 +372,9 @@
       "Parkinson's disease",
       "Prion disease",
       "Huntington's chorea",
-      "Alzheimer's disease"
+      "Lewy body dementia"
     ],
-    "a": 0
+    "a": 3
   },
   {
     "id": "PGGM030",
@@ -614,7 +614,7 @@
     "id": "PGGM048",
     "y": 2025,
     "t": "PUL",
-    "q": "Patient with COPD presents with progressive dyspnea. ABG shows pH:7.32, pCO2 60 mm Hg and HCO3. which of the following is seen in",
+    "q": "Patient with COPD presents with progressive dyspnea. ABG shows pH 7.32, pCO2 60 mm Hg and HCO3 30 mEq/L. Which of the following is seen in",
     "o": [
       "Acute respiratory acidosis",
       "Chronic respiratory acidosis",
@@ -708,7 +708,7 @@
     "q": "A patient collapses with breathlessness and pink frothy sputum. Autopsy shows hemosiderin-laden macrophages. In which condition is this not seen?",
     "o": [
       "Protein-losing enteropathy",
-      "Right heart failure",
+      "Left heart failure",
       "Volume overload",
       "Pulmonary vein obstruction"
     ],

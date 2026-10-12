@@ -8,3 +8,11 @@ dist/
 functions/lib/
 firebase-debug.log
 .firebase/
+admin/
+scripts/append_to_jsons.cjs
+PYQs/flag.json
+PYQs/modified_log.json
+PYQs/*.jsonPYQs/flag.json
+PYQs/modified_log.json
+PYQs/*.json
+scripts/append_to_jsons.cjs

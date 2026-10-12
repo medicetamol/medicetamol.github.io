@@ -1,0 +1,7 @@
+# Treat images as binary so Git never rewrites their bytes (prevents corrupted .webp on push)
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary

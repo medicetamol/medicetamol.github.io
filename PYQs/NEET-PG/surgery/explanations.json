@@ -1,1 +1,226 @@
-{}
+[
+  {
+    "id": "PGGS001",
+    "e": "Thiersch wiring: encirclage (purse-string) of anal canal for rectal prolapse."
+  },
+  {
+    "id": "PGGS002",
+    "e": "Post-MRM (axillary clearance) arm swelling = lymphedema (commonest cause)."
+  },
+  {
+    "id": "PGGS003",
+    "e": "Direct inguinal hernia → tension-free mesh repair (Lichtenstein)."
+  },
+  {
+    "id": "PGGS004",
+    "e": "Tension pneumothorax (RTA, ↓ air entry, hypotension) → immediate needle decompression at 5th ICS, mid-axillary line."
+  },
+  {
+    "id": "PGGS005",
+    "e": "Bilateral RLN palsy → both cords adducted → stridor/airway obstruction after total thyroidectomy."
+  },
+  {
+    "id": "PGGS006",
+    "e": "CEAP: C2 = varicose veins; suffix A = asymptomatic (S = symptomatic)."
+  },
+  {
+    "id": "PGGS007",
+    "e": "Antral Ca c̅ liver metastasis is incurable → palliative gastrojejunostomy to relieve outlet obstruction."
+  },
+  {
+    "id": "PGGS008",
+    "e": "Lingual nerve lies close to the deep part/hilum of submandibular gland → injured c̅ gland surgery.\n(Marginal mandibular & hypoglossal also at risk.)"
+  },
+  {
+    "id": "PGGS010",
+    "e": "Low-risk disease (Gleason 6, PSA <10) in an 85-yr-old c̅ limited life expectancy → active surveillance."
+  },
+  {
+    "id": "PGGS011",
+    "e": "CBD stone >2 yrs after cholecystectomy = primary (de novo) stone; <2 yrs = retained."
+  },
+  {
+    "id": "PGGS012",
+    "e": "Free gas under diaphragm = hollow viscus perforation."
+  },
+  {
+    "id": "PGGS013",
+    "e": "Blunt abdominal trauma c̅ hypotension = unstable → bedside FAST (not CT)."
+  },
+  {
+    "id": "PGGS014",
+    "e": "Straddle injury c̅ meatal blood = urethral injury; no blind Foley → suprapubic catheter drains urine.\nRGU defines the injury later."
+  },
+  {
+    "id": "PGGS015",
+    "e": "Dilated central small-bowel loops c̅ air-fluid levels = intestinal obstruction."
+  },
+  {
+    "id": "PGGS016",
+    "e": "CHPS: persistent vomiting loses HCl → hypochloremic, hyponatremic (hypokalemic) metabolic alkalosis."
+  },
+  {
+    "id": "PGGS017",
+    "e": "Verrucous Ca of glans, N0 → partial penectomy c̅ adequate margin."
+  },
+  {
+    "id": "PGGS018",
+    "e": "Needle driven into bone c̅ tubing = intraosseous access for emergency IV fluids/drugs."
+  },
+  {
+    "id": "PGGS019",
+    "e": "Fournier's gangrene = polymicrobial (mixed aerobic + anaerobic) necrotizing infection; Rx wide debridement + antibiotics."
+  },
+  {
+    "id": "PGGS020",
+    "e": "IMA ligation → injury to sympathetic (superior hypogastric plexus) → retrograde ejaculation + bladder dysfunction.\nParasympathetic (nervi erigentes) injury → impotence."
+  },
+  {
+    "id": "PGGS021",
+    "e": "Scar growing beyond original wound margins = keloid.\nHypertrophic scar stays within margins."
+  },
+  {
+    "id": "PGGS022",
+    "e": "Lateral cutaneous nerve of thigh entrapment → meralgia paresthetica (anterolateral thigh pain)."
+  },
+  {
+    "id": "PGGS023",
+    "e": "GCS: E2 (pain) + V3 (inappropriate words) + M4 (withdrawal) = 9."
+  },
+  {
+    "id": "PGGS024",
+    "e": "Hydatid cyst (Echinococcus granulosus): septated cystic liver lesion; fever/jaundice from biliary rupture."
+  },
+  {
+    "id": "PGGS025",
+    "e": "Alcohol/cirrhosis c̅ weight loss + AFP 600 ng/mL (>400) = hepatocellular carcinoma."
+  },
+  {
+    "id": "PGGS026",
+    "e": "Chronic pancreatitis c̅ dilated duct (≥7 mm) + stones → longitudinal pancreaticojejunostomy (Puestow)."
+  },
+  {
+    "id": "PGGS027",
+    "e": "ER positive = good prognostic factor (hormone-responsive).\nBRCA-1, p53, high Ki-67 = poor."
+  },
+  {
+    "id": "PGGS028",
+    "e": "Tearing chest pain to back + widened mediastinum + arm BP differential = aortic dissection."
+  },
+  {
+    "id": "PGGS029",
+    "e": "Small (<5 cm) amoebic liver abscess after diarrhea → medical therapy (metronidazole)."
+  },
+  {
+    "id": "PGGS030",
+    "e": "Crescent-shaped hyperdense collection c̅ midline shift in alcoholic c̅ head injury = subdural hemorrhage."
+  },
+  {
+    "id": "PGGS031",
+    "e": "Necrotizing fasciitis: repeated radical debridement + antibiotics; hyperbaric O2 is an adjunct, so 'no role' is false."
+  },
+  {
+    "id": "PGGS032",
+    "e": "Direct hernia: weakness of posterior wall of Hesselbach's triangle (conjoint tendon/transversalis fascia)."
+  },
+  {
+    "id": "PGGS033",
+    "e": "Vibration white finger from pneumatic drills/machinery = secondary Raynaud's."
+  },
+  {
+    "id": "PGGS034",
+    "e": "Juvenile (retention) polyp: mucus-filled dilated glands = hamartoma; painless bleeding/prolapse in child."
+  },
+  {
+    "id": "PGGS035",
+    "e": "Painless punched-out ulcer c̅ callus on pressure point of sole = trophic (neuropathic) ulcer."
+  },
+  {
+    "id": "PGGS036",
+    "e": "CEAP: C4a = pigmentation or eczema.\nC4b = lipodermatosclerosis/atrophie blanche."
+  },
+  {
+    "id": "PGGS037",
+    "e": "SAH on CT → angiography (CTA/DSA) next to locate aneurysm for clipping/coiling."
+  },
+  {
+    "id": "PGGS038",
+    "e": "Alkali corrosive injury c̅ complete dysphagia → feeding jejunostomy first; reconstruction later."
+  },
+  {
+    "id": "PGGS039",
+    "e": "Midline neck swelling moving c̅ swallowing AND tongue protrusion = thyroglossal cyst."
+  },
+  {
+    "id": "PGGS040",
+    "e": "qSOFA: SBP ≤100, RR ≥22, altered mentation (GCS <15)."
+  },
+  {
+    "id": "PGGS041",
+    "e": "Neoadjuvant chemo = given before radical surgery to shrink tumour bulk."
+  },
+  {
+    "id": "PGGS042",
+    "e": "Aspirin use c̅ epigastric pain + hematemesis → bleeding peptic ulcer."
+  },
+  {
+    "id": "PGGS043",
+    "e": "Slow-growing mobile swelling below & behind ear lobule = parotid tumour (pleomorphic adenoma)."
+  },
+  {
+    "id": "PGGS044",
+    "e": "Circumferential full-thickness limb burn → long linear incision through eschar = escharotomy."
+  },
+  {
+    "id": "PGGS045",
+    "e": "Tract between internal and external sphincters = intersphincteric fistula (commonest Parks type)."
+  },
+  {
+    "id": "PGGS046",
+    "e": "Surgeon's knot: double throw on first loop, single on second → less slippage."
+  },
+  {
+    "id": "PGGS047",
+    "e": "Peau d'orange c̅ diffuse breast skin thickening = inflammatory carcinoma (T4d)."
+  },
+  {
+    "id": "PGGS048",
+    "e": "Varicose veins (chronic venous insufficiency) → lipodermatosclerosis, eczema, venous ulcer."
+  },
+  {
+    "id": "PGGS049",
+    "e": "Polydioxanone (PDS) = synthetic absorbable monofilament suture."
+  },
+  {
+    "id": "PGGS050",
+    "e": "Pinpoint preputial opening c̅ ballooning on micturition = phimosis."
+  },
+  {
+    "id": "PGGS051",
+    "e": "Splayed carotid bifurcation (lyre sign) c̅ vascular mass = carotid body tumour."
+  },
+  {
+    "id": "PGGS052",
+    "e": "Extra-axial, dural-based, well-circumscribed mass = meningioma."
+  },
+  {
+    "id": "PGGS053",
+    "e": "Petechial hemorrhages in corpus callosum after RTA = diffuse axonal injury (shear injury)."
+  },
+  {
+    "id": "PGGS061",
+    "e": "Pheochromocytoma pre-op: α-blockade first c̅ phenoxybenzamine; β-blocker only after."
+  },
+  {
+    "id": "PGGS062",
+    "e": "IVC lies behind duodenum → injury causes massive retroperitoneal bleed."
+  },
+  {
+    "id": "PGGS063",
+    "e": "Wet gangrene: moist, swollen, infected tissue c̅ blistering/foul discharge and no demarcation."
+  },
+  {
+    "id": "PGGS064",
+    "e": "Anal canal below dentate line (near anal opening) drains to superficial inguinal nodes."
+  }
+]

@@ -1,1 +1,226 @@
-{}
+[
+  {
+    "id": "PGGM001",
+    "e": "Antiemetic (D2 blocker)-induced EPS/acute dystonia → treat c̅ anticholinergic Benzhexol (trihexyphenidyl)."
+  },
+  {
+    "id": "PGGM002",
+    "e": "Rest angina c̅ normal Trop I = unstable angina (NSTE-ACS) → add anticoagulation c̅ LMWH."
+  },
+  {
+    "id": "PGGM003",
+    "e": "Commonest cause of CAP in HIV (even c̅ low CD4) = Strep. pneumoniae.\nP. jirovecii → diffuse bilateral interstitial infiltrates, not lobar consolidation."
+  },
+  {
+    "id": "PGGM004",
+    "e": "Thymoma (thymic neoplasm, anterior mediastinal mass) is the classic cause of pure red cell aplasia."
+  },
+  {
+    "id": "PGGM005",
+    "e": "Macrocytic anemia (MCV 120) c̅ poor intake of fruits/vegetables → folate deficiency."
+  },
+  {
+    "id": "PGGM006",
+    "e": "β-blocker alone → unopposed α-action → hypertensive crisis.\nGive α-blocker (phenoxybenzamine) first, β-blocker later."
+  },
+  {
+    "id": "PGGM007",
+    "e": "Acetaminophen is safe in renal insufficiency; NSAIDs ↓es renal prostaglandins → nephrotoxic."
+  },
+  {
+    "id": "PGGM008",
+    "e": "CURB-65 = 2 (age ≥65, urea >42 mg/dl) → hospital ward admission; no ICU/MV criteria."
+  },
+  {
+    "id": "PGGM009",
+    "e": "Raynaud's (numb fingertips) + tight facial skin + nucleolar ANA = systemic sclerosis."
+  },
+  {
+    "id": "PGGM010",
+    "e": "↑ pH (7.53), ↓ pCO2 (20), normal HCO3 = respiratory alkalosis."
+  },
+  {
+    "id": "PGGM011",
+    "e": "Wheeze + eosinophilia + miliary CXR = tropical pulmonary eosinophilia (filarial; Rx DEC)."
+  },
+  {
+    "id": "PGGM012",
+    "e": "Mid-diastolic murmur c̅ giant 'a' wave in JVP = tricuspid stenosis."
+  },
+  {
+    "id": "PGGM013",
+    "e": "Urine osm (1000) >> plasma osm (250) c̅ CNS features = SIADH → hyponatremia."
+  },
+  {
+    "id": "PGGM014",
+    "e": "Na deficit = TBW × (desired − actual Na) = 0.6 × 70 × (140 − 120) = 840."
+  },
+  {
+    "id": "PGGM015",
+    "e": "Chlorthalidone: thiazide-like diuretic, effective even in CKD; treats HTN + edema."
+  },
+  {
+    "id": "PGGM016",
+    "e": "Marfan habitus → aortic root dilatation → AR \\nMVP → MR is also seen in Marfan, but AR is the classic murmur."
+  },
+  {
+    "id": "PGGM017",
+    "e": "Inflammatory back pain + uveitis + ↓ chest expansion + fused spine/sacroiliitis = ankylosing spondylitis."
+  },
+  {
+    "id": "PGGM018",
+    "e": "Dialysis disequilibrium syndrome (cerebral edema from rapid urea removal) → IV mannitol."
+  },
+  {
+    "id": "PGGM019",
+    "e": "Thyroid storm c̅ AF in an asthmatic: β-blockers contraindicated (bronchospasm) → Diltiazem for rate control."
+  },
+  {
+    "id": "PGGM020",
+    "e": "HBeAg+ c̅ viral load >20,000 IU/mL and ALT >2× ULN → treat; Tenofovir long-term (>40 weeks)."
+  },
+  {
+    "id": "PGGM021",
+    "e": "Exophthalmos + hyperthyroid features = Graves' → diagnostic test is TSH receptor antibody (TRAb)."
+  },
+  {
+    "id": "PGGM022",
+    "e": "Painless violaceous plaques/nodules in HIV = Kaposi sarcoma (HHV-8)."
+  },
+  {
+    "id": "PGGM023",
+    "e": "Rest tremor + rigidity (Parkinsonism) → dopamine loss in basal ganglia (substantia nigra)."
+  },
+  {
+    "id": "PGGM024",
+    "e": "Umbilicated papules + nodular lung infiltrates in advanced HIV, CBNAAT negative = disseminated histoplasmosis."
+  },
+  {
+    "id": "PGGM025",
+    "e": "Fever + seizures + confusion c̅ bitemporal lobe inflammation = HSV encephalitis (Rx IV acyclovir)."
+  },
+  {
+    "id": "PGGM026",
+    "e": "Dorsal column loss + UMN weakness c̅ absent ankle jerk + angular stomatitis = subacute combined degeneration (B12 deficiency)."
+  },
+  {
+    "id": "PGGM027",
+    "e": "Mid-diastolic murmur c̅ prominent 'a' wave in JVP = tricuspid stenosis."
+  },
+  {
+    "id": "PGGM028",
+    "e": "Peaked T waves = hyperkalemia; Spironolactone (K+-sparing) is the culprit.\nHydrochlorothiazide ↓es K+."
+  },
+  {
+    "id": "PGGM029",
+    "e": "Lewy bodies (α-synuclein) + visual hallucinations + progressive cognitive decline = dementia with Lewy bodies. \\nParkinson's disease has motor signs first, dementia comes later."
+  },
+  {
+    "id": "PGGM030",
+    "e": "Hypophysectomy → permanent central DI (↓ ADH) → lifelong DDAVP."
+  },
+  {
+    "id": "PGGM031",
+    "e": "Apical lung mass c̅ Horner's (ptosis) + pain/tingling in ulnar (C8–T1) distribution = Pancoast tumour."
+  },
+  {
+    "id": "PGGM032",
+    "e": "Acute podagra c̅ ↑ synovial WBC = acute gout; serum uric acid may be normal during an attack (alcohol = risk factor)."
+  },
+  {
+    "id": "PGGM033",
+    "e": "Na corrected too fast (12 mEq/L in 24 h) → osmotic demyelination syndrome; MRI head confirms."
+  },
+  {
+    "id": "PGGM034",
+    "e": "MS c̅ AF: atria don't contract → presystolic accentuation (and 'a' wave) is lost."
+  },
+  {
+    "id": "PGGM035",
+    "e": "Hemodynamically stable AF → control ventricular rate first (verapamil/diltiazem/β-blocker)."
+  },
+  {
+    "id": "PGGM036",
+    "e": "Sudden focal deficit = embolic stroke; TEE best detects cardiac source (LA appendage clot, PFO, vegetations).\\nMRI (DWI) confirms the infarct, but doesn't identify etiology.\\nDoppler detects only the large-artery (stenosis) source."
+  },
+  {
+    "id": "PGGM037",
+    "e": "↓ aldosterone (salt wasting, ↑ K+, acidosis) + ↑ ACTH (pigmentation) = Addison's disease."
+  },
+  {
+    "id": "PGGM038",
+    "e": "DKA c̅ low Na is pseudohyponatremia (hyperglycemia) → NS + insulin + K+ monitoring; hypertonic saline not used."
+  },
+  {
+    "id": "PGGM039",
+    "e": "0.9% NS has Cl- 154 mEq/L (> plasma) → hyperchloremic metabolic acidosis."
+  },
+  {
+    "id": "PGGM040",
+    "e": "Chemoprophylaxis for close contacts of meningococcal meningitis = Rifampicin (alt: ciprofloxacin, ceftriaxone)."
+  },
+  {
+    "id": "PGGM041",
+    "e": "RA (anti-CCP+): synovial hyperplasia → pannus → erosive joint damage."
+  },
+  {
+    "id": "PGGM042",
+    "e": "Addison's: ↓ cortisol → ↑ ACTH (POMC) → MSH-like action → hyperpigmentation."
+  },
+  {
+    "id": "PGGM043",
+    "e": "Non-caseating granulomas c̅ Schaumann (lamellated) & asteroid bodies = sarcoidosis."
+  },
+  {
+    "id": "PGGM044",
+    "e": "↓ pH, ↓ HCO3, AG = 130 − 84 − 16 = 30 c̅ appropriate pCO2 fall = high-AG metabolic acidosis."
+  },
+  {
+    "id": "PGGM045",
+    "e": "Post-op PE c̅ hypoxia and borderline BP → CTPA is investigation of choice."
+  },
+  {
+    "id": "PGGM046",
+    "e": "Diabetic c̅ HFrEF → SGLT2 inhibitor (Empagliflozin) ↓es HF hospitalization.\nPioglitazone ↑es HF risk."
+  },
+  {
+    "id": "PGGM047",
+    "e": "CKD anemia c̅ HF → IV iron (oral poorly absorbed); ESA only after iron repletion."
+  },
+  {
+    "id": "PGGM048",
+    "e": "Mild pH fall (7.32) c̅ pCO2 60 = renal compensation (↑ HCO3) → chronic respiratory acidosis of COPD."
+  },
+  {
+    "id": "PGGM049",
+    "e": "Prevention of recurrent PSVT = oral Verapamil (AV nodal blocker).\nAdenosine is for acute termination."
+  },
+  {
+    "id": "PGGM050",
+    "e": "Axial SpA: X-ray normal early; MRI of SI joints picks up sacroiliitis/marrow edema earliest."
+  },
+  {
+    "id": "PGGM051",
+    "e": "Nocturnal symptoms on SABA alone = uncontrolled asthma → step up to ICS + LABA."
+  },
+  {
+    "id": "PGGM052",
+    "e": "AMA+, ↑ ALP, conjugated hyperbilirubinemia, florid duct lesion = primary biliary cholangitis."
+  },
+  {
+    "id": "PGGM053",
+    "e": "Acromegaly: failure of GH to suppress after oral glucose load (OGTT) is the confirmatory test; IGF-1 is for screening."
+  },
+  {
+    "id": "PGGM054",
+    "e": "Thiazide → hypokalemia → intracellular acidosis → ↓ urinary citrate → stones.\\nIt ↓es urinary Ca, which is protective, so that is not the cause."
+  },
+  {
+    "id": "PGGM076",
+    "e": "Hemosiderin-laden macrophages (heart failure cells) follow pulmonary venous congestion, as in LHF, volume overload and pulmonary vein obstruction.\\nProtein-losing enteropathy doesn't cause it."
+  },
+  {
+    "id": "PGGM077",
+    "e": "Hypotension + fever + petechiae + respiratory distress = septic shock."
+  }
+]
