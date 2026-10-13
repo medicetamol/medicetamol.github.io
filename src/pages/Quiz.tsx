@@ -1174,13 +1174,17 @@ export default function Quiz() {
     persistDraft(index);
   }, [question, index, persistDraft]);
 
-  const handleSubmit = () => {
-    if (submittedRef.current || !timerEnabled) return;
-    void submitCurrent(selectedRef.current);
-  };
-
   const handleOptionSelect = (choice: number) => {
     if (!isQuizMode && submittedRef.current) return;
+
+    // Guide / direct: tapping an option locks it in and submits immediately.
+    if (!isQuizMode) {
+      if (!timerEnabled) return; // timer paused
+      selectedRef.current = choice;
+      setSelected(choice);
+      void submitCurrent(choice);
+      return;
+    }
 
     if (selectedRef.current === choice) {
       selectedRef.current = null;
@@ -1191,9 +1195,21 @@ export default function Quiz() {
     setSelected(choice);
   };
 
+  // Background prefetch of the detailed explanation for the question on screen
+  // (guide/direct only). It only fills the cache/state — it never opens the
+  // section; the user still taps VIEW DETAILED EXPLANATION.
+  useEffect(() => {
+    if (isQuizMode || !question || !examId || !detailedAvailable) return;
+    let cancelled = false;
+    loadDetailedExplanation(examId, question.subjectId, question.id)
+      .then((content) => { if (!cancelled && content) setDetailedExplanation(content); })
+      .catch(() => { /* best-effort; the button still loads on tap */ });
+    return () => { cancelled = true; };
+  }, [question?.id, examId, detailedAvailable, isQuizMode]);
+
   const toggleDetails = async () => {
     if (!question || !examId || !detailedAvailable) return;
-    if (showDetails) { setShowDetails(false); return; }
+    if (showDetails) return;
     if (!detailedExplanation) {
       setLoadingDetails(true);
       const content = await loadDetailedExplanation(examId, question.subjectId, question.id);
@@ -1269,6 +1285,9 @@ export default function Quiz() {
   const isBlurred = (isCustom && showFSExitModal) ||
     (isQuizMode && !globalTimerRunning && !showFSExitModal);
 
+  // Guide/direct: bar only appears once the question is answered (tap-to-submit).
+  const showBottomBar = isReadOnly || isQuizMode || submitted;
+
   const actionClass =
     "rounded-xl border border-slate-700 bg-slate-800 px-4 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-750";
   const solveMoreClass =
@@ -1298,7 +1317,7 @@ export default function Quiz() {
     if (!startIndexReady || !poolReady) {
       return (
         <main
-          className="relative mx-auto min-h-screen w-full max-w-4xl px-1 pb-24 sm:px-2"
+          className="relative mx-auto min-h-dvh w-full max-w-4xl px-1 pb-24 sm:px-2"
           aria-busy="true"
           aria-label="Loading question"
         >
@@ -1342,20 +1361,22 @@ export default function Quiz() {
   }
 
   return (
-    <main className="relative mx-auto min-h-screen w-full max-w-4xl px-1 pb-24 sm:px-2">
+    <main className={`relative mx-auto w-full max-w-4xl px-1 sm:px-2 ${showBottomBar ? "pb-24" : "pb-4"}`}>
 
       {/* ── Global timer bar (quiz mode) ── */}
       {isQuizMode && (
+        <>
         <div className="sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur">
           <div
-            className={`mb-2 h-1 overflow-hidden rounded-full ${globalDanger ? "bg-red-950/70" : "bg-slate-900"}`}
+            className={`h-1 overflow-hidden rounded-full ${globalDanger ? "bg-red-950/70" : "bg-slate-900"}`}
           >
             <div
               className={`h-full transition-[width] duration-1000 ease-linear ${globalDanger ? "bg-red-500" : "bg-accent"}`}
               style={{ width: `${globalTimerProgress}%` }}
             />
           </div>
-          <div className="mb-2 flex items-center justify-between gap-2 px-1">
+        </div>
+          <div className="mb-2 mt-1 flex items-center justify-between gap-2 px-1">
             <span className="text-xs font-medium text-slate-400">
               {index + 1}/{pool.length}
             </span>
@@ -1390,15 +1411,16 @@ export default function Quiz() {
               </button>
             </div>
           </div>
-        </div>
+        </>
       )}
 
       {/* ── Per-question timer bar (guide/direct) ── */}
       {!isQuizMode && (
-        <div className={!submitted ? "sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
+        <>
           {!isReadOnly && (
+            <div className="sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur">
             <div
-              className={`mb-2 h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
+              className={`h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
               aria-label={`Time remaining ${mm}:${ss}`}
             >
               <div
@@ -1406,9 +1428,10 @@ export default function Quiz() {
                 style={{ width: `${timerProgress}%` }}
               />
             </div>
+            </div>
           )}
 
-          <div className="mb-2 flex items-center justify-between gap-2 px-1">
+          <div className="mb-2 mt-1 flex items-center justify-between gap-2 px-1">
             {(!isCustom && !isSolveLink) || isReadOnly ? (
               <button
                 type="button"
@@ -1457,7 +1480,7 @@ export default function Quiz() {
               </button>
             </div>
           </div>
-        </div>
+        </>
       )}
 
       {/* ── Question card (blurred in quiz mode when paused/fullscreen exited) ── */}
@@ -1481,24 +1504,45 @@ export default function Quiz() {
           hideMarking={isReadOnly && hideOption}
         />
 
-        {/* Guessing Answer: self-tag, outside/below the question card, available
-            anytime, independent of selection/submit state */}
+        {/* Guessing Answer + Mark to Review: self-tags below the question card.
+            Whole row (icon + text) is tappable. Review row lives here in every
+            mode except Exam mode (there it stays in the bottom bar). */}
         {!isSolveLink && !isReadOnly && question && (
-          <div className="mt-3 flex items-center gap-2.5">
+          <div className="mt-2">
             <button
               type="button"
               onClick={toggleGuessing}
               aria-pressed={guessMarked.has(question.id)}
               aria-label={guessMarked.has(question.id) ? "Unmark guessing answer" : "Mark as guessing answer"}
-              className={`grid h-9 w-9 place-items-center rounded-full transition-colors ${
-                guessMarked.has(question.id)
-                  ? "bg-amber-900/30 text-amber-300 ring-1 ring-amber-600"
-                  : "text-slate-500 hover:bg-slate-800/60 hover:text-slate-300"
-              }`}
+              className="flex w-full items-center gap-2.5 rounded-lg text-left"
             >
-              <HelpCircle size={22} strokeWidth={2} />
+              <span className={`grid h-7 w-9 shrink-0 place-items-center transition-colors ${
+                guessMarked.has(question.id) ? "text-amber-300" : "text-slate-500"
+              }`}>
+                <HelpCircle size={22} strokeWidth={2} />
+              </span>
+              <span className={`text-sm ${guessMarked.has(question.id) ? "text-amber-300" : "text-slate-400"}`}>Guessing Answer</span>
             </button>
-            <span className="text-sm text-slate-400">Guessing Answer</span>
+            {!isQuizMode && (
+              <button
+                type="button"
+                onClick={toggleReview}
+                aria-pressed={reviewMarked.has(question.id)}
+                aria-label={reviewMarked.has(question.id) ? "Unmark for review" : "Mark for review"}
+                className="flex w-full items-center gap-2.5 rounded-lg text-left"
+              >
+                <span className="grid h-7 w-9 shrink-0 place-items-center">
+                  <span className={`grid h-[21px] w-[21px] place-items-center rounded-full border-[2.5px] transition-colors ${
+                    reviewMarked.has(question.id)
+                      ? "border-violet-300 text-violet-300"
+                      : "border-slate-500 text-slate-500"
+                  }`}>
+                    <Flag size={11} strokeWidth={2.4} fill={reviewMarked.has(question.id) ? "currentColor" : "none"} />
+                  </span>
+                </span>
+                <span className={`text-sm ${reviewMarked.has(question.id) ? "text-violet-300" : "text-slate-400"}`}>Mark to Review</span>
+              </button>
+            )}
           </div>
         )}
 
@@ -1545,14 +1589,16 @@ export default function Quiz() {
 
             {explanation && detailedAvailable && (
               <>
+                {!showDetails && (
                 <button
                   type="button"
                   onClick={toggleDetails}
                   disabled={loadingDetails}
                   className="mt-3 inline-flex items-center rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-750 disabled:opacity-60"
                 >
-                  {loadingDetails ? "LOADING..." : showDetails ? "HIDE DETAILS ↑" : "VIEW MORE ↓"}
+                  {loadingDetails ? "LOADING..." : "VIEW DETAILED EXPLANATION ↓"}
                 </button>
+                )}
                 {showDetails && detailedExplanation && (
                   <div className="mt-4 border-t border-slate-800 pt-4">
                     <MarkdownContent
@@ -1692,6 +1738,7 @@ export default function Quiz() {
       />
 
       {/* ── Fixed bottom navigation ── */}
+      {showBottomBar && (
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-900 bg-page-deep/95 px-1.5 py-2 backdrop-blur sm:px-2">
         <div className="mx-auto flex max-w-4xl items-stretch gap-2">
         {isReadOnly ? (
@@ -1727,7 +1774,7 @@ export default function Quiz() {
           <>
 
           {/* Mark-for-review square: far left, every layout variant except solve-links */}
-          {!isSolveLink && (
+          {!isSolveLink && isQuizMode && (
             <button
               type="button"
               onClick={toggleReview}
@@ -1788,16 +1835,6 @@ export default function Quiz() {
                 </button>
               )}
             </>
-          ) : !submitted ? (
-            // Guide/direct: not yet submitted → SUBMIT button
-            <button
-              type="button"
-              onClick={handleSubmit}
-              disabled={!timerEnabled}
-              className={`${isSolveLink ? "w-full" : "flex-1"} ${actionClass} disabled:cursor-not-allowed disabled:opacity-100`}
-            >
-              SUBMIT
-            </button>
           ) : isSolveLink && index === 0 ? (
             // Solve link: first question answered → single full-width SOLVE MORE
             <button
@@ -1878,6 +1915,7 @@ export default function Quiz() {
         )}
         </div>
       </div>
+      )}
 
       {showSoftAuthPrompt && (
         <AuthPromptModal

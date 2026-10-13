@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <HeaderActionsContext.Provider value={setHeaderActionState}>
-      <div className="min-h-screen bg-page text-slate-100">
+      <div className="min-h-dvh bg-page text-slate-100">
         <header className="sticky top-0 z-40 relative border-b border-slate-800/90 bg-page">
           <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
             {/* Logo — non-functional during custom module */}

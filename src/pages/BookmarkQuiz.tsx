@@ -21,6 +21,7 @@ import {
 } from "../data/questions";
 import { getAllBookmarks, recordDailyActivity, toggleBookmark } from "../lib/db";
 import QuestionCard from "../components/QuestionCard";
+import { useHeaderAction } from "../components/Layout";
 import AskAiSheet from "../components/AskAiSheet";
 import MarkdownContent from "../components/MarkdownContent";
 import { buildShareCardFile } from "../lib/shareCard";
@@ -286,6 +287,17 @@ function ReviewSession({
     question && hasDetailedExplanation(question.exam, question.subjectId, question.id)
   );
 
+  // Background prefetch of the detailed explanation for the question on screen.
+  // Fills state only — never opens the section; the user taps to view.
+  useEffect(() => {
+    if (!question || !detailedAvailable) return;
+    let cancelled = false;
+    loadDetailedExplanation(question.exam, question.subjectId, question.id)
+      .then((content) => { if (!cancelled && content) setDetailedExplanation(content); })
+      .catch(() => { /* best-effort; the button still loads on tap */ });
+    return () => { cancelled = true; };
+  }, [question?.id, detailedAvailable]);
+
   const showFeedback = useCallback((message: string) => {
     if (feedbackTimerRef.current !== null) window.clearTimeout(feedbackTimerRef.current);
     setFeedback(message);
@@ -350,25 +362,17 @@ function ReviewSession({
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [questions, index, applyQuestionState]);
 
-  const handleSubmit = () => {
-    if (submittedRef.current || !timerEnabled) return;
-    submitCurrent(selectedRef.current);
-  };
-
+  // Tapping an option locks it in and submits immediately.
   const handleOptionSelect = (choice: number) => {
-    if (submittedRef.current) return;
-    if (selectedRef.current === choice) {
-      selectedRef.current = null;
-      setSelected(null);
-      return;
-    }
+    if (submittedRef.current || !timerEnabled) return;
     selectedRef.current = choice;
     setSelected(choice);
+    submitCurrent(choice);
   };
 
   const toggleDetails = async () => {
     if (!question || !detailedAvailable) return;
-    if (showDetails) { setShowDetails(false); return; }
+    if (showDetails) return;
     if (!detailedExplanation) {
       setLoadingDetails(true);
       const content = await loadDetailedExplanation(question.exam, question.subjectId, question.id);
@@ -399,6 +403,19 @@ function ReviewSession({
       return next;
     });
   };
+
+  // Question-navigator (legend) button lives in the global header, like the main quiz.
+  useHeaderAction(
+    <button
+      type="button"
+      onClick={() => setNavigatorOpen(true)}
+      className="rounded-lg p-2 text-slate-300 hover:bg-slate-900"
+      aria-label="Question navigator"
+    >
+      <LayoutGrid size={20} strokeWidth={1.8} />
+    </button>,
+    []
+  );
 
   const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
   const ss = String(secondsLeft % 60).padStart(2, "0");
@@ -432,11 +449,11 @@ function ReviewSession({
   }
 
   return (
-    <main className="relative mx-auto min-h-screen w-full max-w-4xl px-1 pb-24 sm:px-2">
+    <main className="relative mx-auto w-full max-w-4xl px-1 pb-24 sm:px-2">
 
-      <div className={!submitted ? "sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur" : ""}>
+      <div className="sticky top-14 z-30 -mx-1 bg-page-deep/95 px-1 pb-1 pt-[0.5px] backdrop-blur">
         <div
-          className={`mb-2 h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
+          className={`h-1 overflow-hidden rounded-full ${danger ? "bg-red-950/70" : "bg-slate-900"}`}
           aria-label={`Time remaining ${mm}:${ss}`}
         >
           <div
@@ -444,8 +461,9 @@ function ReviewSession({
             style={{ width: `${timerProgress}%` }}
           />
         </div>
+      </div>
 
-        <div className="mb-2 flex items-center justify-between gap-2 px-1">
+        <div className="mb-2 mt-1 flex items-center justify-between gap-2 px-1">
           <button
             type="button"
             onClick={onExit}
@@ -484,19 +502,10 @@ function ReviewSession({
             >
               <Bookmark size={21} strokeWidth={1.8} fill={bookmarked ? "currentColor" : "none"} />
             </button>
-            <button
-              type="button"
-              onClick={() => setNavigatorOpen(true)}
-              className="rounded-lg p-2 text-slate-400 transition-colors hover:text-slate-200"
-              aria-label="Question navigator"
-            >
-              <LayoutGrid size={21} strokeWidth={1.8} />
-            </button>
           </div>
         </div>
-      </div>
 
-      <div className="mt-2">
+      <div>
         <QuestionCard
           key={question.id}
           question={question}
@@ -552,14 +561,16 @@ function ReviewSession({
 
             {explanation && detailedAvailable && (
               <>
+                {!showDetails && (
                 <button
                   type="button"
                   onClick={toggleDetails}
                   disabled={loadingDetails}
                   className="mt-3 inline-flex items-center rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-750 disabled:opacity-60"
                 >
-                  {loadingDetails ? "LOADING..." : showDetails ? "HIDE DETAILS ↑" : "VIEW MORE ↓"}
+                  {loadingDetails ? "LOADING..." : "VIEW DETAILED EXPLANATION ↓"}
                 </button>
+                )}
                 {showDetails && detailedExplanation && (
                   <div className="mt-4 border-t border-slate-800 pt-4">
                     <MarkdownContent
@@ -609,29 +620,26 @@ function ReviewSession({
             type="button"
             onClick={previous}
             disabled={index === 0}
-            className={`flex-[1] ${actionClass} disabled:cursor-not-allowed disabled:opacity-40 px-2`}
+            className={`flex-1 ${actionClass} disabled:cursor-not-allowed disabled:opacity-40`}
             aria-label="Previous question"
           >
-            <ChevronLeft size={18} className="mx-auto" />
-          </button>
-
-          <button
-            type="button"
-            onClick={handleSubmit}
-            disabled={submitted}
-            className={`flex-[3] ${actionClass} disabled:cursor-not-allowed disabled:opacity-40`}
-          >
-            SUBMIT
+            <span className="flex items-center justify-center gap-2">
+              <ChevronLeft size={18} />
+              PREV
+            </span>
           </button>
 
           <button
             type="button"
             onClick={next}
             disabled={index === questions.length - 1}
-            className={`flex-[1] ${actionClass} disabled:cursor-not-allowed disabled:opacity-40 px-2`}
+            className={`flex-1 ${actionClass} disabled:cursor-not-allowed disabled:opacity-40`}
             aria-label="Next question"
           >
-            <ChevronRight size={18} className="mx-auto" />
+            <span className="flex items-center justify-center gap-2">
+              NEXT
+              <ChevronRight size={18} />
+            </span>
           </button>
         </div>
       </div>
