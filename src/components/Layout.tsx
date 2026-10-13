@@ -63,6 +63,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     };
   }, [open]);
 
+  // Every time the drawer closes (X, backdrop, Escape, or page change), reset the search
+  // so it reopens collapsed, with no autofocus / keyboard popup.
+  useEffect(() => {
+    if (open) return;
+    setQidOpen(false);
+    setQid("");
+    setQidError("");
+  }, [open]);
+
   useEffect(() => {
     if (open && qidOpen) qidInputRef.current?.focus();
   }, [open, qidOpen]);
