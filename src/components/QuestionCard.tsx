@@ -5,6 +5,7 @@ import type { PYQQuestion } from "../types";
 import ImageZoomModal from "./ImageZoomModal";
 import { formatQuestionForShare, getSiteUrl, shareOrCopy } from "../lib/sharing";
 import { buildShareCardFile } from "../lib/shareCard";
+import { parseStem, type StemItem } from "../lib/stem";
 
 interface Props {
   question: PYQQuestion;
@@ -20,6 +21,74 @@ interface Props {
   // a "blind re-attempt" view. The explanation section is unaffected; it's
   // driven by `submitted` alone, not by this prop.
   hideMarking?: boolean;
+}
+
+const Badge = ({ label }: { label: string }) => (
+  <span className="grid h-6 min-w-6 shrink-0 place-items-center rounded-md bg-slate-800 px-1 text-xs font-bold text-slate-300">
+    {label}
+  </span>
+);
+
+const ItemRow = ({ item }: { item: StemItem }) => (
+  <div className="flex items-start gap-2">
+    <Badge label={item.label} />
+    <span className="min-w-0 flex-1 text-[0.95rem] font-medium leading-6 text-slate-100">{item.text}</span>
+  </div>
+);
+
+// List I sizes to its content (capped at 45%), List II takes the rest.
+const MATCH_COLS = "grid grid-cols-[fit-content(45%)_1fr]";
+const HEAD = "bg-slate-900 px-2 py-1.5 text-center text-[0.7rem] font-bold uppercase tracking-wide text-slate-400";
+
+function QuestionStem({ text }: { text: string }) {
+  const blocks = parseStem(text);
+  return (
+    <div className="space-y-3">
+      {blocks.map((b, i) => {
+        if (b.type === "text") {
+          return (
+            <h2 key={i} className="whitespace-pre-line text-base font-semibold leading-7 text-slate-100 sm:text-lg">
+              {b.text}
+            </h2>
+          );
+        }
+        if (b.type === "list") {
+          return (
+            <div key={i} className="space-y-2 rounded-xl border border-slate-800 bg-slate-950/40 p-2.5">
+              {b.items.map((it) => <ItemRow key={it.label} item={it} />)}
+            </div>
+          );
+        }
+        if (b.type === "pairs") {
+          return (
+            <div key={i} className={`${MATCH_COLS} gap-px overflow-hidden rounded-xl border border-slate-800 bg-slate-800`}>
+              <div className={HEAD}>List I</div>
+              <div className={HEAD}>List II</div>
+              {b.rows.map((r) => (
+                <React.Fragment key={r.left.label}>
+                  <div className="bg-slate-950/60 px-2 py-2"><ItemRow item={r.left} /></div>
+                  <div className="bg-slate-950/60 px-2 py-2"><ItemRow item={r.right} /></div>
+                </React.Fragment>
+              ))}
+            </div>
+          );
+        }
+        // match: two separate lists side by side
+        return (
+          <div key={i} className={`${MATCH_COLS} gap-px overflow-hidden rounded-xl border border-slate-800 bg-slate-800`}>
+            {[{ h: "List I", items: b.left }, { h: "List II", items: b.right }].map((col) => (
+              <div key={col.h} className="min-w-0 bg-slate-950/60">
+                <div className={HEAD}>{col.h}</div>
+                <div className="space-y-2.5 px-2 py-2.5">
+                  {col.items.map((it) => <ItemRow key={it.label} item={it} />)}
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export default function QuestionCard({
@@ -79,9 +148,7 @@ export default function QuestionCard({
   return (
     <>
     <section className="w-full rounded-2xl border border-slate-800 bg-slate-900/70 px-2.5 py-3 sm:px-4 sm:py-5">
-      <h2 className="text-base font-semibold leading-7 text-slate-100 sm:text-lg">
-        {question.question}
-      </h2>
+      <QuestionStem text={question.question} />
 
       {question.image && (
         <button
