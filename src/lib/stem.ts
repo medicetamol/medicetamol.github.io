@@ -28,8 +28,8 @@ export function parseStem(stem: string): StemBlock[] {
   type Run = { kind: Kind; items: StemItem[] };
   const blocks: StemBlock[] = [];
   let textBuf: string[] = [];
-  let run: Run | null = null;
-  let prevRun: Run | null = null; // finished run that may pair with the next one
+  let run = null as Run | null;
+  let prevRun = null as Run | null; // finished run that may pair with the next one
   let gap: string[] = []; // blank/heading lines between two runs
 
   const flushText = () => {
