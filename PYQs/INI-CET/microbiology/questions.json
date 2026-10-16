@@ -440,5 +440,122 @@
       "Kidney"
     ],
     "a": 2
+  },
+  {
+    "id": "INMB035",
+    "y": 2025,
+    "t": "GEN",
+    "q": "How many PCR cycles are required to generate half the number of amplified DNA copies that are produced after 27 PCR cycles?",
+    "o": [
+      "25",
+      "26",
+      "13",
+      "12"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INMB036",
+    "y": 2025,
+    "t": "CLM",
+    "q": "Choose the correct statement(s): 1. Weil-Felix test is done for typhus fever 2. Widal test is done in the first week of fever 3. Standard agglutination test is done for brucellosis 4. Microscopic agglutination test is done for leptospirosis",
+    "o": [
+      "1, 2, 3 are correct",
+      "1, 3, 4 are correct",
+      "1, 2, 3, 4 are correct",
+      "1, 4 are correct"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INMB037",
+    "y": 2025,
+    "t": "BAC",
+    "q": "Which of the following is correctly matched for vectors and diseases? (A) Louse - IV Epidemic typhus (B) Mite - I Scrub typhus (C) Flea - II Endemic typhus (D) Tick - III Rocky Mountain spotted fever",
+    "o": [
+      "A-I, B-III, C-IV, D-II",
+      "A-II, B-III, C-IV, D-I",
+      "A-IV, B-I, C-II, D-III",
+      "A-IV, B-III, C-I, D-II"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INMB038",
+    "y": 2025,
+    "t": "BAC",
+    "q": "Which bacteria show the Kanagawa phenomenon when grown on Wagatsuma agar?",
+    "o": [
+      "Burkholderia mallei",
+      "Vibrio cholerae",
+      "Vibrio parahaemolyticus",
+      "Staphylococcus aureus"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INMB039",
+    "y": 2025,
+    "t": "PAR",
+    "q": "Choose the organisms that have two morphological forms: 1. Acanthamoeba 2. Naegleria 3. Giardia 4. Trichomonas",
+    "o": [
+      "1, 2 are correct",
+      "1, 2, 3, 4 are correct",
+      "1, 2, 3 are correct",
+      "1, 4 are correct"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INMB040",
+    "y": 2025,
+    "t": "PAR",
+    "q": "[Image: Microscopic picture of a single oval egg with one flattened side.] A child presents with anal pruritus. Microscopy of the stool sample reveals a plano-convex, kidney-shaped egg. Identify the pathogen.",
+    "o": [
+      "Trichuris",
+      "Enterobius",
+      "Ascaris",
+      "Ancylostoma"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INMB041",
+    "y": 2025,
+    "t": "PAR",
+    "q": "Which parasite among the following is capable of causing autoinfection?",
+    "o": [
+      "Strongyloides stercoralis",
+      "Ancylostoma duodenale",
+      "Ascaris lumbricoides",
+      "Hymenolepis nana"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INMB042",
+    "y": 2025,
+    "t": "MYC",
+    "q": "All of the following are dimorphic fungi except:",
+    "o": [
+      "Coccidioides",
+      "Talaromyces",
+      "Histoplasma",
+      "Cryptococcus"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INMB043",
+    "y": 2025,
+    "t": "BAC",
+    "q": "[Image: Blood agar plate showing colonies growing close to a single streak of another organism.] Identify the organism that demonstrates the satellite phenomenon shown in the image.",
+    "o": [
+      "Streptococcus pneumoniae",
+      "Hemophilus influenzae",
+      "Corynebacterium diphtheriae",
+      "Klebsiella pneumoniae"
+    ],
+    "a": 1
   }
 ]

@@ -89,5 +89,70 @@
       "A–1, B–2, C–3, D–4"
     ],
     "a": 0
+  },
+  {
+    "id": "INPS008",
+    "y": 2025,
+    "t": "MOD",
+    "q": "Which of the following medications are used to treat acute mania? 1. Lithium 2. Valproate 3. Haloperidol 4. Amitriptyline",
+    "o": [
+      "Only 1",
+      "1, 2 & 3",
+      "1, 2 & 4",
+      "2 & 4"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPS009",
+    "y": 2025,
+    "t": "SCH",
+    "q": "A patient with schizophrenia says, “Lord Hanuman was celibate, I am celibate, therefore I am Lord Hanuman.”What type of thought abnormality does this represent?",
+    "o": [
+      "Autistic thinking",
+      "Verbigeration",
+      "Neologism",
+      "Loosening of association"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPS010",
+    "y": 2025,
+    "t": "SUB",
+    "q": "All of the following statements are correct except:",
+    "o": [
+      "Opioid withdrawal is rarely fatal",
+      "Buprenorphine can be used for the management of opioid withdrawal",
+      "Flumazenil is used for the management of long-term alcohol dependence syndrome",
+      "Cannabis withdrawal is associated with minimal physical symptoms"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPS011",
+    "y": 2025,
+    "t": "SUB",
+    "q": "Which of the following statements is incorrect?",
+    "o": [
+      "Alcohol in low dose causes brain stimulation and in higher doses, causes brain suppression",
+      "Cannabis use can result in self-driven, repetitive behaviours",
+      "Opioids are very effective analgesics",
+      "Volatile inhalational agents are mostly toxic to humans"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPS012",
+    "y": 2025,
+    "t": "MOD",
+    "q": "Which of the following is not included in the ICD-10 diagnostic criteria for depression?",
+    "o": [
+      "Low energy levels",
+      "Low mood for most of the day",
+      "Loss of interest in pleasurable things",
+      "Low self-esteem and confidence"
+    ],
+    "a": 3
   }
 ]

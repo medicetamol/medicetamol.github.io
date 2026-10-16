@@ -58,5 +58,33 @@
   {
     "id": "INDR015",
     "e": "Lichen sclerosus: itchy vulvar white plaque; ↓ rete ridges, dermal collagen homogenisation, thin epidermis."
+  },
+  {
+    "id": "INDR016",
+    "e": "Infant scabies: permethrin 5%, benzyl benzoate 25% (diluted), crotamiton; ivermectin avoided (<15 kg)."
+  },
+  {
+    "id": "INDR017",
+    "e": "Topical steroid effects: atrophy, hypertrichosis, acneiform eruption, telangiectasia; blue-green pigmentation is not one."
+  },
+  {
+    "id": "INDR018",
+    "e": "Ceftriaxone is the treatment for gonococcal urethritis, including penicillin-resistant strains."
+  },
+  {
+    "id": "INDR019",
+    "e": "Asymptomatic annular scaly plaque: biopsy and chest X-ray to look for a systemic cause (e.g., sarcoidosis)."
+  },
+  {
+    "id": "INDR020",
+    "e": "Painful oral + recurrent genital vesicles = HSV → acyclovir (Tzanck: multinucleated giant cells)."
+  },
+  {
+    "id": "INDR021",
+    "e": "Palm lesions after a genital chancre = secondary syphilis → serology (VDRL/RPR, TPHA)."
+  },
+  {
+    "id": "INDR022",
+    "e": "Epidermis (ectoderm) regenerates from hair follicles/sebaceous glands; dermis and hypodermis are mesoderm-derived."
   }
 ]

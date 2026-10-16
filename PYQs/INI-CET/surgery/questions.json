@@ -388,5 +388,213 @@
       "Pancreatic pseudocyst"
     ],
     "a": 2
+  },
+  {
+    "id": "INGS031",
+    "y": 2025,
+    "t": "GIS",
+    "q": "A 65-year-old patient undergoes colonoscopy for altered bowel habits, and a 6 cm colonic mass is biopsied. Histology shows adenocarcinoma limited to the mucosa with no lymph node or distant metastasis. What is the most appropriate TNM stage for this tumor?",
+    "o": [
+      "Stage 0",
+      "Stage I",
+      "Stage II",
+      "Stage III"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS032",
+    "y": 2025,
+    "t": "TCC",
+    "q": "A 40-year-old male with head injury presents with respiratory distress and absent breath 8/15. sounds on the right. GCS is What is the most immediate next step in management? A",
+    "o": [
+      "Intercostal chest drain (ICD)",
+      "Contrast-enhanced CT (CECT)",
+      "Secure airway",
+      "Oxygen by nasal prongs"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGS033",
+    "y": 2025,
+    "t": "GIS",
+    "q": "A 25-year-old man has pain that begins near the umbilicus and shifts to the right iliac fossa, along with fever, nausea, and rebound tenderness. His WBC count is 14,000/cmm. What is his Alvarado score?",
+    "o": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGS034",
+    "y": 2025,
+    "t": "BRS",
+    "q": "Which of the following is not included in stage 4B of breast cancer?",
+    "o": [
+      "Ulceration",
+      "Peau d'orange",
+      "Satellite nodule",
+      "Cellulitis/erythema over one-third of the breast (inflammatory breast cancer)"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGS035",
+    "y": 2025,
+    "t": "BRS",
+    "q": "Which of the following is not a contraindication to performing breast-conserving surgery?",
+    "o": [
+      "Scleroderma",
+      "History of radiation",
+      "Multiple cancer in one quadrant",
+      "Persistent positive margin"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGS036",
+    "y": 2025,
+    "t": "GNS",
+    "q": "Which of the following is wrongly matched with its classification?",
+    "o": [
+      "Boston classification - Colon preparation for colonoscopy",
+      "LA classification - Achalasia",
+      "Mannheim classification - Chronic pancreatitis",
+      "Miami classification - Parathyroid adenoma and hyperplasia differentiation"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS037",
+    "y": 2025,
+    "t": "VAS",
+    "q": "At what Ankle–Brachial Pressure Index (ABPI) value is imminent gangrene indicated?",
+    "o": [
+      "0.3",
+      "0.5",
+      "0.7",
+      "0.9"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS038",
+    "y": 2025,
+    "t": "TCC",
+    "q": "A patient with ARDS on mechanical ventilation develops decreased breath sounds on the right and tracheal deviation to the opposite side. What is the most likely diagnosis?",
+    "o": [
+      "Barotrauma",
+      "Increase tidal volume",
+      "Oxygen toxicity",
+      "Endotracheal (ET) malposition"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS039",
+    "y": 2025,
+    "t": "URO",
+    "q": "Which of the following is not a cause of recurrent renal stones?",
+    "o": [
+      "Hypercalciuria",
+      "Hyperoxaluria",
+      "Hypercitraturia",
+      "Hyperuricosuria"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGS040",
+    "y": 2025,
+    "t": "GIS",
+    "q": "[Image: Diagram of a bariatric procedure showing a sleeve-shaped stomach connected to a long limb of small bowel.] Identify the procedure shown in the image.",
+    "o": [
+      "Duodenal switch",
+      "SADI-S",
+      "Roux-en-Y gastric bypass",
+      "Sleeve gastrectomy"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS041",
+    "y": 2025,
+    "t": "PDS",
+    "q": "A 6-week-old infant has non-bilious, non- projectile vomiting and a normal abdominal exam. What is the most likely diagnosis?",
+    "o": [
+      "Gastroesophageal reflux disease (GERD)",
+      "Milk allergy",
+      "Small bowel obstruction",
+      "Congenital hypertrophic pyloric stenosis (CHPS)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS042",
+    "y": 2025,
+    "t": "PLB",
+    "q": "[Image: Step-by-step illustration of a surgical procedure removing a fold of skin.] Identify the procedure shown in the image.",
+    "o": [
+      "Dog ear excision",
+      "Keloid excision",
+      "Z plasty",
+      "Transposition flap"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS043",
+    "y": 2025,
+    "t": "HNS",
+    "q": "A white patch is seen in the oral cavity of an immuno compromised patient. Which microscopic finding is most likely?",
+    "o": [
+      "Branching septate hyphae",
+      "Pseudo-hyphae",
+      "Budding yeast with capsule",
+      "Sulfur granules"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGS044",
+    "y": 2025,
+    "t": "PLB",
+    "q": "What is a true statement about Z plasty?",
+    "o": [
+      "To increase length",
+      "Flap turning",
+      "Zigzag suturing",
+      "Split-thickness skin graft (STSG)"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGS045",
+    "y": 2025,
+    "t": "GNS",
+    "q": "Which statement about Vacuum-Assisted Closure (VAC) therapy is accurate? 1. Negative pressure of -125 mmHg is applied 2. Redressing is done after 4-7 days 3. Increases proliferation of granulation tissue or protein synthetic matrix 4. Can be continuous or intermittent 5. Reduces bacterial proliferation",
+    "o": [
+      "1 and 3 correct",
+      "2 and 4 correct",
+      "1, 2, 3 correct",
+      "All correct"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGS046",
+    "y": 2025,
+    "t": "TCC",
+    "q": "A 40-year-old male presents to the emergency department with severe respiratory distress, BP: 70/59 mmHg, tracheal deviation to the right, distended neck veins, and absent breath sounds on the left side. These findings are suggestive of a tension pneumothorax. What is the most appropriate immediate next step in management?",
+    "o": [
+      "Perform needle thoracostomy immediately",
+      "CT Chest",
+      "Airway, breathing, and circulation (ABC) assessment",
+      "Chest tube insertion"
+    ],
+    "a": 2
   }
 ]

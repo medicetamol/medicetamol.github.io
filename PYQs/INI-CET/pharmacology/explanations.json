@@ -150,5 +150,53 @@
   {
     "id": "INPM038",
     "e": "Finerenone: nonsteroidal, selective MRA – fewer endocrine effects (gynecomastia) than spironolactone."
+  },
+  {
+    "id": "INPM039",
+    "e": "Thalidomide is an immunomodulator/anti-TNF-α (not an antimetabolite); used in ENL and myeloma; teratogenic (phocomelia)."
+  },
+  {
+    "id": "INPM040",
+    "e": "Ceftriaxone (single IM dose) is the drug of choice for gonorrhoea, including penicillin-resistant strains."
+  },
+  {
+    "id": "INPM041",
+    "e": "Bempedoic acid is a prodrug activated in liver; inhibits ATP citrate lyase (upstream of HMG-CoA reductase)."
+  },
+  {
+    "id": "INPM042",
+    "e": "Both have anticholinergic action → additive effects (dry mouth, urinary retention, sedation)."
+  },
+  {
+    "id": "INPM043",
+    "e": "Chloroquine, artesunate, SP = blood schizonticides → clinical cure.\\nPrimaquine = tissue schizonticide (hypnozoites) + gametocidal → radical cure."
+  },
+  {
+    "id": "INPM044",
+    "e": "Flumazenil reverses only benzodiazepines and can precipitate seizures in alcohol withdrawal."
+  },
+  {
+    "id": "INPM045",
+    "e": "Valproate is teratogenic (neural tube defects, ↓es IQ) - avoid in pregnancy."
+  },
+  {
+    "id": "INPM046",
+    "e": "Fenoldopam = selective D1 agonist → renal/mesenteric vasodilation; used in hypertensive emergency."
+  },
+  {
+    "id": "INPM047",
+    "e": "Schedule H = prescription-only drugs; Schedule X = narcotic/psychotropic drugs under strict control."
+  },
+  {
+    "id": "INPM048",
+    "e": "Ketamine (NMDA antagonist) has rapid antidepressant effect; esketamine nasal spray is used in resistant depression."
+  },
+  {
+    "id": "INPM049",
+    "e": "Loading dose = (Cp × Vd)/F; independent of half-life (half-life sets the dosing interval)."
+  },
+  {
+    "id": "INPM050",
+    "e": "Erythromycin inhibits CYP3A4 → carbamazepine levels ↑es → ataxia, dizziness, diplopia."
   }
 ]

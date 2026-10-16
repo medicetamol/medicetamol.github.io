@@ -26,5 +26,29 @@
   {
     "id": "INEN007",
     "e": "FESS sequence: uncinectomy → maxillary antrostomy → bullectomy → ethmoidectomy."
+  },
+  {
+    "id": "INEN008",
+    "e": "Piriform fossa mucosa is supplied by the internal branch of superior laryngeal n. (sensory)."
+  },
+  {
+    "id": "INEN009",
+    "e": "Otitis media complication c̅ fever and neck stiffness → otogenic meningitis."
+  },
+  {
+    "id": "INEN010",
+    "e": "JNA: biopsy is contraindicated (profuse bleeding); diagnosis is by CT/MRI c̅ angiography."
+  },
+  {
+    "id": "INEN011",
+    "e": "Brief positional vertigo c̅ no hearing loss → BPPV (Dix-Hallpike +ve, Epley manoeuvre)."
+  },
+  {
+    "id": "INEN012",
+    "e": "Cochlear implant is for profound SNHL (congenital, post-ototoxic); otosclerosis/ossicular fixation are conductive (stapedectomy/hearing aid)."
+  },
+  {
+    "id": "INEN013",
+    "e": "Laryngomalacia (commonest) and subglottic stenosis cause stridor in infants."
   }
 ]

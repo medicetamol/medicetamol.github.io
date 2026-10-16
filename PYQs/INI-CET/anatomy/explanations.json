@@ -5,7 +5,7 @@
   },
   {
     "id": "INAN002",
-    "e": "Cingulate gyrus lesion → impaired emotional prosody (limbic contribution to affective tone of speech)."
+    "e": "Superior temporal gyrus (Wernicke's) lesion → sensory aprosodia (can't comprehend emotional tone).\\nInferior frontal gyrus (Broca's) → motor aprosodia (flat, monotone speech)."
   },
   {
     "id": "INAN003",
@@ -94,5 +94,61 @@
   {
     "id": "INAN024",
     "e": "The muscle acting on both hip & knee extension arises from structure B."
+  },
+  {
+    "id": "INAN025",
+    "e": "Ulnar n. supplies hypothenar muscles (ADM), all interossei and medial 2 lumbricals (3rd & 4th)."
+  },
+  {
+    "id": "INAN026",
+    "e": "Action of the muscle at the marked attachment: depression."
+  },
+  {
+    "id": "INAN027",
+    "e": "CN XII is purely motor to the tongue - no role in smell; CN I is the main olfactory nerve (V, IX, X carry irritant/chemosensory input)."
+  },
+  {
+    "id": "INAN028",
+    "e": "Piriform recess is supplied by the internal branch of superior laryngeal n. - afferent limb of the cough reflex."
+  },
+  {
+    "id": "INAN029",
+    "e": "Gluteus medius/minimus (marked) = hip abductors; stabilise pelvis in single-leg stance."
+  },
+  {
+    "id": "INAN030",
+    "e": "Dura of posterior cranial fossa (C2-C3, vagal branches) → referred pain to back of neck/occiput."
+  },
+  {
+    "id": "INAN031",
+    "e": "Calot's triangle: cystic duct, common hepatic duct, inferior liver edge.\nCystic artery is a content, not a boundary."
+  },
+  {
+    "id": "INAN032",
+    "e": "Superficial peroneal n. (L5, S1) → peroneus longus & brevis (evertors).\nPeroneus tertius & EHL = deep peroneal n."
+  },
+  {
+    "id": "INAN033",
+    "e": "Snuffbox tenderness after FOOSH = scaphoid fracture (risk of AVN of proximal pole)."
+  },
+  {
+    "id": "INAN034",
+    "e": "INO = MLF lesion: failure of adduction in ipsilateral eye c̅ nystagmus in abducting eye; convergence preserved."
+  },
+  {
+    "id": "INAN035",
+    "e": "Orbicularis oris is the muscle reconstructed in primary cleft lip repair (restores lip continuity/function)."
+  },
+  {
+    "id": "INAN036",
+    "e": "Ureter passes beneath the vas deferens ('water under the bridge'); seminal vesicles lie on the bladder base lateral to the vas."
+  },
+  {
+    "id": "INAN037",
+    "e": "LA receives pulmonary veins; pulmonary trunk lies anterior to ascending aorta; aorta arises from LV; RV hypertrophies in pulmonary stenosis."
+  },
+  {
+    "id": "INAN038",
+    "e": "Endocrine cell cluster (islet) releases hormones locally to neighbouring cells = paracrine signalling."
   }
 ]

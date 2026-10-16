@@ -154,5 +154,148 @@
       "Thoracic ultrasound"
     ],
     "a": 0
+  },
+  {
+    "id": "INRD013",
+    "y": 2025,
+    "t": "RDM",
+    "q": "A 17-year-old presents with leg pain and swelling, and the X-ray shows a sunburst pattern and a Codman triangle. What is the most likely diagnosis?",
+    "o": [
+      "Osteosarcoma",
+      "Ewing sarcoma",
+      "Giant cell tumor",
+      "Chondroblastoma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD014",
+    "y": 2025,
+    "t": "RDB",
+    "q": "Which of the following investigations is contraindicated in pregnancy?",
+    "o": [
+      "MRI",
+      "CT scan",
+      "USG",
+      "Doppler"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INRD015",
+    "y": 2025,
+    "t": "RDW",
+    "q": "A 35-year-old patient presents with colicky pain and is diagnosed with a ureteric stone. Which investigation is the best choice for diagnosis?",
+    "o": [
+      "Non-contrast CT KUB",
+      "Ultrasonography KUB",
+      "Contrast-enhanced CT KUB",
+      "Ureteroscopy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD016",
+    "y": 2025,
+    "t": "RDN",
+    "q": "A child presents with seizures, and contrast- enhanced CT shows a cystic lesion with a dot sign. What is the most likely diagnosis?",
+    "o": [
+      "Tuberculoma",
+      "Neurocysticercosis",
+      "Brain abscess",
+      "Cerebral metastasis"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INRD017",
+    "y": 2025,
+    "t": "RDI",
+    "q": "What is the most appropriate investigation for locating a parathyroid adenoma?",
+    "o": [
+      "Sestamibi scan",
+      "USG",
+      "FDG PET",
+      "SPECT"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD018",
+    "y": 2025,
+    "t": "RDG",
+    "q": "[Image: X-ray image from a rectal evacuation study.] Identify the investigation modality shown in the image.",
+    "o": [
+      "X-ray defecogram",
+      "Barium swallow",
+      "MR defecogram",
+      "X-ray barium enema"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD019",
+    "y": 2025,
+    "t": "RDM",
+    "q": "Honda or H sign on STIR MRI is characteristic of which condition?",
+    "o": [
+      "Multiple myeloma",
+      "Sacral insufficiency fracture",
+      "Acute osteomyelitis",
+      "Bone marrow edema"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INRD020",
+    "y": 2025,
+    "t": "RDN",
+    "q": "\"Eye of the tiger\" appearance on MRI is associated with:",
+    "o": [
+      "Pantothenate kinase-associated degeneration",
+      "Wilson disease",
+      "Krabbe disease",
+      "Huntington chorea"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD021",
+    "y": 2025,
+    "t": "RDG",
+    "q": "A male patient has had chronic diarrhea for 8 months, and CT imaging shows an ahaustral right colon. What is the most likely diagnosis?",
+    "o": [
+      "Ulcerative colitis",
+      "Tubercular colitis",
+      "Crohn's disease",
+      "Pseudomembranous enterocolitis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INRD022",
+    "y": 2025,
+    "t": "RDM",
+    "q": "[Image: Skull X-ray showing multiple punched-out lytic lesions.] Based on the X-ray shown, what type of thyroid cancer is present?",
+    "o": [
+      "Papillary carcinoma",
+      "Hurthle cell carcinoma",
+      "Follicular carcinoma",
+      "Thyroid lymphoma"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INRD023",
+    "y": 2025,
+    "t": "RDM",
+    "q": "Which of the following is the investigation of choice for spinal TB?",
+    "o": [
+      "Ultrasound",
+      "MRI",
+      "CT scan",
+      "CBNAAT"
+    ],
+    "a": 1
   }
 ]

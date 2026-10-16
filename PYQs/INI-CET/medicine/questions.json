@@ -388,5 +388,239 @@
       "Pituitary adenoma"
     ],
     "a": 1
+  },
+  {
+    "id": "INGM031",
+    "y": 2025,
+    "t": "NEP",
+    "q": "Which of the following is not a cause of high anion gap metabolic acidosis?",
+    "o": [
+      "Diarrhea",
+      "Acute kidney injury",
+      "Ketoacidosis",
+      "Toxins"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM032",
+    "y": 2025,
+    "t": "NRL",
+    "q": "A 20-year-old man presents with fever, severe headache, vomiting, and photophobia. He has neck stiffness and a positive Brudzinski's sign, and a CT scan shows hydrocephalus. What is the most likely diagnosis?",
+    "o": [
+      "Normal Pressure Hydrocephalus",
+      "Bacterial Meningitis",
+      "Viral Encephalitis",
+      "Subarachnoid Hemorrhage"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM033",
+    "y": 2025,
+    "t": "IFD",
+    "q": "A 58-year-old man has burning urination, a normal prostate exam, more than 50 pus cells per HPF on urinalysis, but a sterile urine culture. What is the most likely diagnosis?",
+    "o": [
+      "Chronic bacterial prostatitis",
+      "Acute bacterial prostatitis",
+      "Granulomatous prostatitis",
+      "Sterile pyuria"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM034",
+    "y": 2025,
+    "t": "CAD",
+    "q": "A 62-year-old man presents with sudden shortness of breath and bilateral pedal edema. He is compliant with antihypertensives, and echocardiography shows an ejection fraction of 60%, concentric LV hypertrophy, left atrial enlargement, and grade 2 diastolic dysfunction. What is the most appropriate next step to improve his condition?",
+    "o": [
+      "Perform coronary angiography to rule out ischemic cardiomyopathy",
+      "Initiate loop diuretics and SGLT2 inhibitors for management of HFpEF",
+      "Start digoxin to enhance myocardial contractility",
+      "Initiate ivabradine to reduce heart rate and improve diastolic filling"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM035",
+    "y": 2025,
+    "t": "CAD",
+    "q": "Which of the following is not a symptom of cardiac failure?",
+    "o": [
+      "Right hypochondriac pain",
+      "Non-pulsatile elevation of JVP",
+      "Orthopnea",
+      "Paroxysmal nocturnal dyspnea"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM036",
+    "y": 2025,
+    "t": "PUL",
+    "q": "A 45-year-old chronic smoker presents with dyspnea. Pulmonary function testing shows an FEV /FVC ratio of 65% and an RV/TLC ratio of 141%. Which option best explains the underlying ₁ pathophysiology?",
+    "o": [
+      "Air trapping with hyperinflation of lungs",
+      "Decreased lung compliance",
+      "Restrictive lung disease",
+      "Increased lung compliance"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM037",
+    "y": 2025,
+    "t": "NRL",
+    "q": "Which of the following is an early presenting symptom in patients with multiple sclerosis?",
+    "o": [
+      "Sensory disturbances",
+      "Ataxia",
+      "Vertigo",
+      "Facial palsy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM038",
+    "y": 2025,
+    "t": "RHU",
+    "q": "Which clinical feature is most commonly seen in systemic lupus erythematosus?",
+    "o": [
+      "Photosensitivity",
+      "Nephrotic syndrome",
+      "Arthralgia and myalgia",
+      "Anemia and thrombocytopenia"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM039",
+    "y": 2025,
+    "t": "CAD",
+    "q": "Which pulse type is explained by the Frank– Starling law?",
+    "o": [
+      "Pulsus bisferiens",
+      "Pulsus paradoxus",
+      "Pulsus alternans",
+      "Pulsus parvus"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM040",
+    "y": 2025,
+    "t": "CAD",
+    "q": "The murmur of mitral stenosis corresponds to which ECG wave?",
+    "o": [
+      "QRS complex",
+      "T wave",
+      "P wave",
+      "ST segment"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM041",
+    "y": 2025,
+    "t": "EMR",
+    "q": "A 20-year-old female diagnosed with septic shock presents with a blood pressure of $58/30$ mmHg. After receiving 3 liters of crystalloid fluid, her mean arterial pressure (MAP) remains 58 mmHg. What is the next best step in management?",
+    "o": [
+      "Start dopamine",
+      "Start noradrenaline",
+      "Repeat crystalloid fluid",
+      "Start vasopressin"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM042",
+    "y": 2025,
+    "t": "NRL",
+    "q": "A 65-year-old man with Parkinson’s disease has oropharyngeal dysphagia, recurrent aspiration pneumonitis, and excessive respiratory secretions. Chest imaging shows bilateral bronchiectasis. What is the most appropriate long-term management?",
+    "o": [
+      "High-frequency chest wall oscillation therapy",
+      "Nebulized N-acetylcysteine to reduce secretions",
+      "Percutaneous endoscopic gastrostomy (PEG) tube placement",
+      "Macrolide therapy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM043",
+    "y": 2025,
+    "t": "IFD",
+    "q": "A 56-year-old diabetic man has a complicated urinary tract infection and is hypotensive, with no improvement after IV fluids. Which antibiotic is most appropriate for managing his condition?",
+    "o": [
+      "Amoxicillin-Clavulanate",
+      "Nitrofurantoin",
+      "Meropenem",
+      "Ceftriaxone"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INGM044",
+    "y": 2025,
+    "t": "IFD",
+    "q": "A post–cardiac surgery patient in the ICU develops ventilator-associated pneumonia and is started on empiric antibiotics. Hours later, he develops acute kidney injury, and a serum procalcitonin level is ordered. Which statement about procalcitonin is correct?",
+    "o": [
+      "It helps in determining the duration of antibiotic therapy",
+      "It helps in identifying which empirical antibiotics to be started",
+      "It can be used to confirm source of infection",
+      "It is used to differentiate bacterial from fungal cause"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM045",
+    "y": 2025,
+    "t": "CAD",
+    "q": "A 58-year-old male presents to a PHC for a routine check-up. His blood pressure readings on two separate occasions are 148/90 mmHg and 152/96mmHg. He is asymptomatic and has no known comorbidities. What is the most appropriate next step in management according to current hypertension guidelines?",
+    "o": [
+      "Initiate treatment only if BP exceeds 160/100mmHg",
+      "Start Amlodipine 5 mg once daily and advise follow-up after a month",
+      "Refer to a higher center for further evaluation",
+      "Start the patient on IV anti-hypertensive drugs"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INGM046",
+    "y": 2025,
+    "t": "EMR",
+    "q": "Which colloid is regarded as the best option for volume replacement according to the Muir– Barclay formula?",
+    "o": [
+      "Packed Red Blood Cells (PRBC)",
+      "Fresh Frozen Plasma (FFP)",
+      "Dextran 40",
+      "Albumin"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INGM047",
+    "y": 2025,
+    "t": "RHU",
+    "q": "In a patient diagnosed with lupus nephritis showing wire-loop lesions, which medication is preferred for induction therapy?",
+    "o": [
+      "Steroid alone",
+      "Cyclophosphamide with steroid",
+      "Rituximab",
+      "Mycophenolate"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INGM048",
+    "y": 2025,
+    "t": "NEP",
+    "q": "What is the cause of hyponatremia in diarrhea- induced hypovolemia?",
+    "o": [
+      "Decreased aldosterone",
+      "Decreased ADH",
+      "Decreased sodium absorption from gastrointestinal tract",
+      "Increased sodium absorption from kidney"
+    ],
+    "a": 2
   }
 ]

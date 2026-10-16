@@ -375,5 +375,96 @@
       "Increased activity of tyrosine kinase receptors through gene amplification"
     ],
     "a": 0
+  },
+  {
+    "id": "INBC030",
+    "y": 2025,
+    "t": "MOL",
+    "q": "Two specimens from two different patients are received. Which technique can be used to confirm that they come from different individuals (in the context of Mycobacterium tuberculosis)?",
+    "o": [
+      "RFLP",
+      "Mutation analysis",
+      "Pyrosequencing",
+      "RAPD"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC031",
+    "y": 2025,
+    "t": "MOL",
+    "q": "Match the following blotting techniques with the type of biomolecule they detect: Blotting Technique Detects A. Southern blot 1. RNA B. Northern blot 2. Lipids C. Western blot 3. DNA D. Eastern blot 4. Protein",
+    "o": [
+      "A-3, B-1, C-4, D-2",
+      "A-1, B-3, C-2, D-4",
+      "A-4, B-2, C-1, D-3",
+      "A-2, B-4, C-3, D-1"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC032",
+    "y": 2025,
+    "t": "LIP",
+    "q": "A 90-kg obese man is consuming a carbohydrate- rich diet. Which enzyme or intermediate is likely to be increased in his body? 1. Malonyl CoA 2. Acetyl CoA Carboxylase 3. PDH 4. Citrate Lyase",
+    "o": [
+      "1,2,3",
+      "2,3,4",
+      "1,3,4",
+      "1,2,3,4"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INBC033",
+    "y": 2025,
+    "t": "MSC",
+    "q": "Which of the following does not inhibit cytochrome c oxidase in the electron transport chain?",
+    "o": [
+      "Carbon monoxide (CO)",
+      "Nitric oxide (NO)",
+      "Cyanide (CN)",
+      "Hydrogen sulfide  (H₂S )"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INBC034",
+    "y": 2025,
+    "t": "PRO",
+    "q": "[Image: Titration curve of glycine plotting pH against degree of titration, with pKa values and ionic forms labelled.] At what pH does glycine exist predominantly in its zwitterionic form, as indicated on its titration curve?",
+    "o": [
+      "6",
+      "4.4",
+      "2",
+      "9"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC035",
+    "y": 2025,
+    "t": "CAR",
+    "q": "Which of these tissues is unable to take up glucose in states of insulin resistance, absence of insulin, or diabetes mellitus?",
+    "o": [
+      "Skeletal muscle",
+      "Red blood cells",
+      "Brain",
+      "Kidney"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INBC036",
+    "y": 2025,
+    "t": "CAR",
+    "q": "A child presents with fatigue and hepatomegaly. Liver enzymes (ALT, AST) are elevated. Ketosis was significant. Liver biopsy shows excess glycogen accumulation. After feeding, blood glucose levels rise, but there is no rise in glucose after overnight fasting. Which of the following enzyme deficiencies is most likely responsible for this presentation?",
+    "o": [
+      "Glucose-6-phosphatase",
+      "Liver phosphorylase",
+      "Muscle phosphorylase",
+      "Phosphofructokinase"
+    ],
+    "a": 0
   }
 ]

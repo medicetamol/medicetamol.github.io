@@ -23,13 +23,62 @@ function parseItem(line: string): (StemItem & { kind: Kind }) | null {
   return { label: m[1], text: m[2].trim(), kind: kindOf(m[1]) };
 }
 
+// Stems stored on one line ("... 1. A 2. B 3. C" or "(A) x - 1. y (B) ...") get their
+// list markers moved onto separate lines first. Only sequential markers
+// (1,2,3.. / A,B,C..) are accepted, so ordinary text is left alone.
+type Marker = { start: number; kind: "D" | "L" };
+
+function sequence(stem: string, re: RegExp, kind: "D" | "L"): Marker[] {
+  const out: Marker[] = [];
+  let next = 0;
+  for (const m of stem.matchAll(re)) {
+    const raw = m[1].toUpperCase();
+    const n = kind === "D" ? parseInt(raw, 10) : raw.charCodeAt(0) - 64;
+    if (n !== next + 1) continue;
+    next = n;
+    out.push({ start: (m.index ?? 0) + (m[0].length - m[0].trimStart().length), kind });
+  }
+  return out;
+}
+
+function expandInline(stem: string): string {
+  if (stem.includes("\n")) return stem;
+  const digits = sequence(stem, /(?:^|\s)(\d{1,2})[.)]\s+(?=\S)/g, "D");
+  const paren = sequence(stem, /(?:^|\s)\(([A-Ea-e])\)\s+(?=\S)/g, "L");
+  const dotted = sequence(stem, /(?:^|\s)([A-E])[.)]\s+(?=\S)/g, "L");
+  const letters = paren.length >= dotted.length ? paren : dotted;
+  const dOk = digits.length >= 2;
+  const lOk = letters.length >= 2;
+  if (!dOk && !lOk) return stem;
+
+  const markers = [...(dOk ? digits : []), ...(lOk ? letters : [])].sort((a, b) => a.start - b.start);
+  const head = stem.slice(0, markers[0].start).trim();
+  const segs = markers.map((m, i) =>
+    stem.slice(m.start, i + 1 < markers.length ? markers[i + 1].start : undefined).trim().replace(/[;,]+$/, "").trim()
+  );
+
+  const alternating =
+    dOk && lOk && markers.length % 2 === 0 &&
+    markers.every((m, i) => m.kind === (i % 2 === 0 ? "L" : "D"));
+  let lines: string[];
+  if (alternating) {
+    lines = [];
+    for (let i = 0; i < segs.length; i += 2) {
+      lines.push(`${segs[i].replace(/[-—–:]+$/, "").trim()} — ${segs[i + 1]}`);
+    }
+  } else {
+    lines = segs;
+  }
+  return [head, ...lines].filter(Boolean).join("\n");
+}
+
 export function parseStem(stem: string): StemBlock[] {
-  const lines = stem.replace(/\r/g, "").split("\n");
+  const lines = expandInline(stem.replace(/\r/g, "")).split("\n");
   type Run = { kind: Kind; items: StemItem[] };
   const blocks: StemBlock[] = [];
   let textBuf: string[] = [];
-  let run: Run | null = null;
-  let prevRun: Run | null = null; // finished run that may pair with the next one
+  let run = null as Run | null;
+  let prevRun = null as Run | null; // finished run that may pair with the next one
   let gap: string[] = []; // blank/heading lines between two runs
 
   const flushText = () => {

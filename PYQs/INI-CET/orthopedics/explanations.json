@@ -38,5 +38,21 @@
   {
     "id": "INOR010",
     "e": "Equinus – plantar flexion; planus – flat arch\nCavus – high arch (extended dorsally); calcaneus – dorsiflexion"
+  },
+  {
+    "id": "INOR011",
+    "e": "WHO-recommended rapid molecular test (CBNAAT/Xpert) confirms TB, including spinal TB."
+  },
+  {
+    "id": "INOR012",
+    "e": "Elderly intertrochanteric fracture: intramedullary (cephalomedullary) nail preferred."
+  },
+  {
+    "id": "INOR013",
+    "e": "Snuffbox pain after FOOSH → thumb spica cast and re-image at 10-14 days (occult scaphoid fracture)."
+  },
+  {
+    "id": "INOR014",
+    "e": "RA → transverse ligament laxity → atlantoaxial subluxation → cervical myelopathy."
   }
 ]

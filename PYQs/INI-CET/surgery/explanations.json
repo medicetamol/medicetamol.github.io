@@ -118,5 +118,69 @@
   {
     "id": "INGS030",
     "e": "Mucinous cystic neoplasm: ↑ CEA/mucin c̅ low cyst-fluid amylase.\nIPMN/pseudocyst communicate c̅ duct → ↑ amylase."
+  },
+  {
+    "id": "INGS031",
+    "e": "Adenocarcinoma confined to mucosa (no invasion beyond muscularis mucosae) = Tis → Stage 0."
+  },
+  {
+    "id": "INGS032",
+    "e": "Head injury (GCS 8) c̅ respiratory distress: secure airway (c-spine protected) first in primary survey."
+  },
+  {
+    "id": "INGS033",
+    "e": "Alvarado: migration, nausea, rebound, fever (1 each) + leucocytosis (2) = 6."
+  },
+  {
+    "id": "INGS034",
+    "e": "T4b = ulceration, satellite nodules, peau d'orange.\nInflammatory breast cancer (erythema/cellulitis-like) is T4d."
+  },
+  {
+    "id": "INGS035",
+    "e": "Multifocal disease within a single quadrant is not a contraindication; multicentric disease, prior RT, scleroderma and +ve margins are."
+  },
+  {
+    "id": "INGS036",
+    "e": "LA classification grades reflux oesophagitis, not achalasia (Chicago classification for motility)."
+  },
+  {
+    "id": "INGS037",
+    "e": "ABPI ≈0.3 or less: critical limb ischaemia c̅ rest pain/imminent gangrene."
+  },
+  {
+    "id": "INGS038",
+    "e": "Ventilated ARDS c̅ unilateral ↓ breath sounds and contralateral tracheal shift = tension pneumothorax from barotrauma."
+  },
+  {
+    "id": "INGS039",
+    "e": "Hypocitraturia (not hypercitraturia) promotes recurrent stones; citrate inhibits crystallisation."
+  },
+  {
+    "id": "INGS040",
+    "e": "SADI-S: sleeve gastrectomy + single duodeno-ileal anastomosis."
+  },
+  {
+    "id": "INGS041",
+    "e": "Non-bilious, non-projectile vomiting c̅ normal exam at 6 weeks → GERD (pyloric stenosis: projectile vomiting c̅ olive mass)."
+  },
+  {
+    "id": "INGS042",
+    "e": "Dog-ear (standing cone) excision removes the redundant skin fold at a wound end."
+  },
+  {
+    "id": "INGS043",
+    "e": "Oral candidiasis: KOH shows budding yeast c̅ pseudohyphae."
+  },
+  {
+    "id": "INGS044",
+    "e": "Z-plasty lengthens a contracted scar and changes its direction."
+  },
+  {
+    "id": "INGS045",
+    "e": "VAC: -125 mmHg, continuous or intermittent, ↑es granulation tissue, ↓es oedema and bacterial load."
+  },
+  {
+    "id": "INGS046",
+    "e": "Primary survey (ABC) comes first; needle decompression is done as part of the breathing step."
   }
 ]

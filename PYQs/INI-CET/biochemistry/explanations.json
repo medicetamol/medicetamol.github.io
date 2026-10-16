@@ -114,5 +114,33 @@
   {
     "id": "INBC029",
     "e": "RAS mutation → GTPase-defective, constitutively GTP-bound → continuous RAF-MAPK signalling."
+  },
+  {
+    "id": "INBC030",
+    "e": "RFLP (IS6110 fingerprinting) distinguishes M. tuberculosis strains between patients."
+  },
+  {
+    "id": "INBC031",
+    "e": "Southern = DNA, Northern = RNA, Western = protein, Eastern = lipids/carbohydrates."
+  },
+  {
+    "id": "INBC032",
+    "e": "High-carb diet → insulin ↑es → PDH, acetyl-CoA carboxylase, citrate lyase and malonyl-CoA all ↑es (lipogenesis)."
+  },
+  {
+    "id": "INBC033",
+    "e": "CO, CN⁻, N₃⁻ and H₂S are classic toxins: they block cytochrome c oxidase (IV). \\nNO is only a physiological, reversible regulator of respiration, not an irreversible inhibitor."
+  },
+  {
+    "id": "INBC034",
+    "e": "Glycine pI ≈ 6: neutral zwitterion (NH₃⁺/COO⁻) predominates between pKa₁ (~2.3) and pKa₂ (~9.6)."
+  },
+  {
+    "id": "INBC035",
+    "e": "Skeletal muscle (and adipose) uses insulin-dependent GLUT4; RBC, brain and kidney use insulin-independent transporters."
+  },
+  {
+    "id": "INBC036",
+    "e": "Glucose-6-phosphatase deficiency (von Gierke): hepatomegaly, fasting hypoglycaemia, ketosis, glycogen accumulation."
   }
 ]

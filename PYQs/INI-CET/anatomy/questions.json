@@ -16,14 +16,14 @@
     "id": "INAN002",
     "y": 2026,
     "t": "NEU",
-    "q": "Lesion at which site is associated with impaired emotional prosody (loss of emotional tone/melody of speech)?",
+    "q": "Lesion at which site is associated with impaired emotional prosody?",
     "o": [
       "Cingulate gyrus",
       "Superior temporal gyrus",
       "Parietal lobe",
       "Precentral gyrus"
     ],
-    "a": 0
+    "a": 1
   },
   {
     "id": "INAN003",
@@ -318,5 +318,187 @@
     ],
     "a": 1,
     "img": true
+  },
+  {
+    "id": "INAN025",
+    "y": 2025,
+    "t": "UPL",
+    "q": "Which muscles are supplied by the ulnar nerve?",
+    "o": [
+      "Dorsal interossei",
+      "Abductor digiti minimi",
+      "4th lumbrical",
+      "All of the above"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INAN026",
+    "y": 2025,
+    "t": "HNK",
+    "q": "[Image: Marked area on a skeleton figure indicating a muscle attachment (figure unclear in the source PDF).] What is the function of the muscle that attaches to the indicated area?",
+    "o": [
+      "Protraction",
+      "Retraction",
+      "Depression",
+      "Elevation"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INAN027",
+    "y": 2025,
+    "t": "NEU",
+    "q": "Which nerve is not related to olfaction?",
+    "o": [
+      "Hypoglossal",
+      "Trigeminal",
+      "Glossopharyngeal",
+      "Vagus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN028",
+    "y": 2025,
+    "t": "HNK",
+    "q": "A 35-year-old man comes to the emergency department complaining that food is stuck in his throat. Examination reveals a bone lodged in the left piriform recess. Which function is most likely to be affected?",
+    "o": [
+      "Cough reflex",
+      "Gag reflex",
+      "Mastication",
+      "Salivation"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN029",
+    "y": 2025,
+    "t": "LWL",
+    "q": "[Image: Posterior view of the hip with arrows pointing to labelled gluteal muscles.] What is the action of the muscle marked in the image?",
+    "o": [
+      "Internal rotation",
+      "Hip abduction",
+      "Knee extension",
+      "Knee flexion"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INAN030",
+    "y": 2025,
+    "t": "HNK",
+    "q": "[Image: Skull base viewed from above with numbered markers (1, 2, 3) and a dotted outline around the posterior cranial fossa.] Referred pain from the dura mater of the marked area involves:",
+    "o": [
+      "Back of neck",
+      "Ear",
+      "Vertex",
+      "Forehead"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN031",
+    "y": 2025,
+    "t": "ABP",
+    "q": "Which of the following is not a boundary of the hepatocystic triangle?",
+    "o": [
+      "Common hepatic duct",
+      "Cystic duct",
+      "Right lobe of liver",
+      "Cystic artery"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INAN032",
+    "y": 2025,
+    "t": "LWL",
+    "q": "Which muscles are supplied by the superficial peroneal nerve?",
+    "o": [
+      "Peroneus longus & Brevis",
+      "Extensor hallucis longus",
+      "Peroneus tertius",
+      "Both A & C"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN033",
+    "y": 2025,
+    "t": "UPL",
+    "q": "A teenager comes to the emergency department with wrist pain after falling off his skateboard and has tenderness in the anatomical snuffbox. Which bone is most likely fractured?",
+    "o": [
+      "Scaphoid",
+      "Trapezoid",
+      "Capitate",
+      "Trapezium"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN034",
+    "y": 2025,
+    "t": "NEU",
+    "q": "[Image: Diagram of paired eyes in different gaze positions with arrows showing direction of gaze and a label for nystagmus.] What is the diagnosis suggested by the eye movement abnormality shown in the image?",
+    "o": [
+      "Internuclear ophthalmoplegia",
+      "3rd nerve palsy",
+      "6th nerve palsy",
+      "Horizontal gaze palsy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN035",
+    "y": 2025,
+    "t": "HNK",
+    "q": "Primary muscle repair in cleft lip surgery involves reconstruction of which muscle?",
+    "o": [
+      "Orbicularis oris",
+      "Orbicularis oculi",
+      "Levator palpebrae superioris",
+      "Masseter"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAN036",
+    "y": 2025,
+    "t": "ABP",
+    "q": "[Image: Diagram of male pelvic organs with structures labelled A, B, C and D.] Match the following anatomical structures with their correct image labels: 1. Seminal vesicles 2. Ureter 3. Prostate 4. Vas deferens",
+    "o": [
+      "1-A, 2-B, 3-C, 4-D",
+      "1-B, 2-C, 3-D, 4-A",
+      "1-D, 2-B, 3-A, 4-C",
+      "1-D, 2-C, 3-A, 4-B"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INAN037",
+    "y": 2025,
+    "t": "THX",
+    "q": "Match the cardiac anatomical features with their corresponding labels: 1. Receives oxygenated blood from pulmonary veins 2. Lies anterior to ascending aorta 3. Arises from LV 4. Hypertrophy in pulmonary stenosis; A. Ascending aorta B. Right ventricle C. Pulmonary trunk D. Left atrium",
+    "o": [
+      "1-A, 2-B, 3-C, 4-D",
+      "1-D, 2-C, 3-A, 4-B",
+      "1-B, 2-D, 3-C, 4-A",
+      "1-C, 2-A, 3-D, 4-B"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INAN038",
+    "y": 2025,
+    "t": "HIS",
+    "q": "[Image: Microscopic image with a marked pale rounded cluster of cells within surrounding tissue.] By what mechanism does the marked structure exert its effects on nearby cells?",
+    "o": [
+      "Nerve mediated",
+      "Vein mediated",
+      "Paracrine",
+      "Epithelium to mesothelium transformation"
+    ],
+    "a": 2
   }
 ]

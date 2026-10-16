@@ -89,5 +89,83 @@
       "CBAD"
     ],
     "a": 2
+  },
+  {
+    "id": "INEN008",
+    "y": 2025,
+    "t": "PHR",
+    "q": "A 50-year-old woman reports a foreign body sensation and a change in voice after eating fish. Examination reveals an inflamed fish bone lodged in the pyriform fossa. Which nerve is responsible?",
+    "o": [
+      "Recurrent laryngeal nerve",
+      "Internal branch of superior laryngeal nerve",
+      "External branch of superior laryngeal nerve",
+      "Glossopharyngeal nerve"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INEN009",
+    "y": 2025,
+    "t": "EAR",
+    "q": "A 7-year-old child with a recent ear infection now presents with lockjaw, limb spasms, fever, and neck stiffness. What is the most likely diagnosis?",
+    "o": [
+      "Meningitis",
+      "Tetany",
+      "Bezold abscess",
+      "Sinus thrombosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INEN010",
+    "y": 2025,
+    "t": "NOS",
+    "q": "Which of the following statements about Juvenile Nasopharyngeal Angiofibroma (JNA) is incorrect?",
+    "o": [
+      "Unilateral cervical lymph nodes",
+      "Epistaxis",
+      "Only seen in young boys",
+      "Biopsy"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INEN011",
+    "y": 2025,
+    "t": "EAR",
+    "q": "A 50-year-old woman reports a sudden episode of vertigo with vomiting, unsteadiness, and light-headedness, brought on by changing her head position in the morning. She denies hearing loss, recent viral illness, medications, or head trauma. What is the most likely diagnosis?",
+    "o": [
+      "Meniere disease",
+      "BPPV",
+      "Vestibular neuritis",
+      "Acoustic neuroma"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INEN012",
+    "y": 2025,
+    "t": "EAR",
+    "q": "Choose the most appropriate candidates for cochlear implants: 1. Ototoxicity 2. Congenital hearing loss 3. Ossicular fixation 4. Otosclerosis",
+    "o": [
+      "1 and 2",
+      "2 and 3",
+      "3 and 4",
+      "1 and 4"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INEN013",
+    "y": 2025,
+    "t": "LRY",
+    "q": "Which of the following diagnoses can cause stridor in infants? 1. Laryngomalacia 2. Congenital hemangioma vs polyp 3. Subglottic stenosis 4. Recurrent respiratory papillomatosis (RRP)",
+    "o": [
+      "1 and 3",
+      "2 and 3",
+      "1, 3 and 4",
+      "1 and 4"
+    ],
+    "a": 0
   }
 ]

@@ -128,5 +128,57 @@
       "A) 4, B) 2, C) 1, D) 3"
     ],
     "a": 3
+  },
+  {
+    "id": "INOR011",
+    "y": 2025,
+    "t": "BJI",
+    "q": "According to WHO, which investigation is included in the diagnostic work-up for spinal tuberculosis?",
+    "o": [
+      "X-ray",
+      "CT scan",
+      "CBNAAT",
+      "Culture and sensitivity"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOR012",
+    "y": 2025,
+    "t": "FLL",
+    "q": "What is the recommended treatment for an inter-trochanteric fracture in a 72-year-old woman?",
+    "o": [
+      "Hemiarthroplasty / Dynamic Hip Screw (DHS)",
+      "Intramedullary nailing",
+      "Open Reduction and Internal Fixation (ORIF) with plating",
+      "Boot and bar"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOR013",
+    "y": 2025,
+    "t": "FUL",
+    "q": "A laborer falls on an outstretched hand and develops pain in the anatomical snuffbox. What is the most appropriate next step?",
+    "o": [
+      "NSAIDs and discharge",
+      "MRI of the wrist",
+      "Thumb spica cast and follow-up after 10-14 days",
+      "CT scan of the wrist"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOR014",
+    "y": 2025,
+    "t": "ARJ",
+    "q": "A patient with rheumatoid arthritis develops neck pain along with clinical features of myelopathy. What is the most likely diagnosis?",
+    "o": [
+      "Osteoarthritis of vertebrae",
+      "C2-C3 intervertebral stenosis",
+      "Atlantoaxial dislocation",
+      "Disc herniation"
+    ],
+    "a": 2
   }
 ]

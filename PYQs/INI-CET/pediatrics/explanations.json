@@ -86,5 +86,53 @@
   {
     "id": "INPD022",
     "e": "Ethosuximide – absence seizures only; not used in status epilepticus."
+  },
+  {
+    "id": "INPD023",
+    "e": "MMR is a live vaccine → contraindicated in SCID; inactivated vaccines are safe."
+  },
+  {
+    "id": "INPD024",
+    "e": "Turner: webbed neck, short 4th metacarpal, widely spaced hypoplastic nipples.\nProminent occiput is a feature of Edwards' syndrome."
+  },
+  {
+    "id": "INPD025",
+    "e": "Childhood ITP c̅ severe thrombocytopenia and ↑ megakaryocytes → IVIG (or steroids)."
+  },
+  {
+    "id": "INPD026",
+    "e": "Neonatal CXR c̅ perihilar streaking, fluid in fissures and hyperinflation = transient tachypnoea of newborn; resolves in 48-72 h."
+  },
+  {
+    "id": "INPD027",
+    "e": "TOF = VSD + infundibular pulmonary stenosis + overriding aorta + RVH."
+  },
+  {
+    "id": "INPD028",
+    "e": "Rolling over, babbling 'dada/mama' and stranger anxiety are age-appropriate at 9 months."
+  },
+  {
+    "id": "INPD029",
+    "e": "Marasmus has no oedema; oedema in kwashiorkor is due to hypoalbuminaemia."
+  },
+  {
+    "id": "INPD030",
+    "e": "Aneuploidy = abnormal chromosome number; Bloom syndrome is an AR chromosomal-breakage disorder (BLM helicase)."
+  },
+  {
+    "id": "INPD031",
+    "e": "Correct latch: lower lip everted, more areola visible above than below, chin touching breast, full cheeks."
+  },
+  {
+    "id": "INPD032",
+    "e": "Breast milk jaundice: free fatty acids/β-glucuronidase in milk inhibit conjugation → unconjugated hyperbilirubinaemia."
+  },
+  {
+    "id": "INPD033",
+    "e": "Niemann-Pick A: sphingomyelinase deficiency → hepatosplenomegaly, cherry-red spot, neuroregression (normal startle)."
+  },
+  {
+    "id": "INPD034",
+    "e": "Hypopigmented ash-leaf macules (Wood's lamp) → tuberous sclerosis."
   }
 ]

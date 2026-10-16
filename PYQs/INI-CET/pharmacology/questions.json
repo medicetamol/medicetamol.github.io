@@ -492,5 +492,161 @@
       "Finerenone inhibits aldosterone synthesis."
     ],
     "a": 2
+  },
+  {
+    "id": "INPM039",
+    "y": 2025,
+    "t": "ACI",
+    "q": "Which of the following statements regarding thalidomide is incorrect?",
+    "o": [
+      "Used as an antimetabolite immunosuppressant",
+      "Used in treatment of multiple myeloma",
+      "Used in management of erythema nodosum leprosum",
+      "It is teratogenic"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM040",
+    "y": 2025,
+    "t": "AMI",
+    "q": "What is the recommended treatment for complicated gonorrhea caused by penicillin- resistant Neisseria gonorrhoeae?",
+    "o": [
+      "Ceftriaxone",
+      "Amoxicillin",
+      "Tetracycline",
+      "Vancomycin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM041",
+    "y": 2025,
+    "t": "CVF",
+    "q": "Which of the following is not true regarding bempedoic acid?",
+    "o": [
+      "It is a dicarboxylic acid",
+      "It non-competitively inhibits ATP citrate lyase",
+      "It is used when statins and diet cannot control dyslipidemia",
+      "It inhibits de-novo synthesis of liver cholesterol"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPM042",
+    "y": 2025,
+    "t": "CNF",
+    "q": "A patient is given imipramine along with diphenhydramine. What effect can be expected in this situation?",
+    "o": [
+      "Diphenhydramine inhibits action of imipramine",
+      "Imipramine reduces diphenhydramine elimination",
+      "Both have anti-muscarinic actions",
+      "Both inhibit norepinephrine reuptake"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPM043",
+    "y": 2025,
+    "t": "AMI",
+    "q": "All of the following are clinical cure drugs for malaria except",
+    "o": [
+      "Primaquine",
+      "Chloroquine",
+      "Artesunate",
+      "Sulfadoxine-pyrimethamine"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM044",
+    "y": 2025,
+    "t": "CNF",
+    "q": "Which statement about benzodiazepines and barbiturates is not true?",
+    "o": [
+      "Both act on GABA-A",
+      "With alcohol it causes CNS depression",
+      "Flumazenil can be used for severe alcohol withdrawal symptoms",
+      "Both can be used as a sedative hypnotic"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPM045",
+    "y": 2025,
+    "t": "CNF",
+    "q": "Which of the following anti-epileptics is not given during pregnancy?",
+    "o": [
+      "Lamotrigine",
+      "Valproate",
+      "Levetiracetam",
+      "Carbamazepine"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPM046",
+    "y": 2025,
+    "t": "CVF",
+    "q": "Mechanism of action of Fenoldopam drug is:",
+    "o": [
+      "D1 agonist",
+      "Alpha-1 antagonist",
+      "Beta-2 agonist",
+      "D2 antagonist"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM047",
+    "y": 2025,
+    "t": "GNP",
+    "q": "Match the drug schedules listed with their corresponding drugs under the Drug and Cosmetic Act. (A) Schedule H - 1. Insulin (B) Schedule G - 2. Morphine (C) Schedule 2 - 3. Veterinary drugs (D) Schedule X - 4. Hepatitis B vaccine",
+    "o": [
+      "A-1, B-2, C-3, D-4",
+      "A-2, B-1, C-3, D-4",
+      "A-4, B-2, C-1, D-3",
+      "A-1, B-3, C-4, D-2"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPM048",
+    "y": 2025,
+    "t": "CNF",
+    "q": "Which of the following psychoactive substances possesses antidepressant effects?",
+    "o": [
+      "Bupropion",
+      "Cannabidiol",
+      "Ketamine",
+      "Mephedrone"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPM049",
+    "y": 2025,
+    "t": "GNP",
+    "q": "Loading dose of an oral drug depends on all of the following except?",
+    "o": [
+      "Volume of distribution",
+      "Plasma concentration",
+      "Half-life",
+      "Bioavailability"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPM050",
+    "y": 2025,
+    "t": "GNP",
+    "q": "A patient taking carbamazepine is also given erythromycin and subsequently develops ataxia and dizziness. What is the underlying cause of these symptoms?",
+    "o": [
+      "Toxicity of erythromycin",
+      "Toxicity of carbamazepine",
+      "Erythromycin speeds up carbamazepine metabolism",
+      "Causes recurrent seizure episodes"
+    ],
+    "a": 1
   }
 ]

@@ -26,5 +26,25 @@
   {
     "id": "INPS007",
     "e": "Persecution – harmed/conspired against; grandiose – great powers\nNihilistic – body/world doesn't exist; influence – controlled externally"
+  },
+  {
+    "id": "INPS008",
+    "e": "Acute mania: lithium, valproate and antipsychotics (haloperidol); antidepressants may precipitate mania."
+  },
+  {
+    "id": "INPS009",
+    "e": "Autistic thinking = subjective logic detached from reality (private, wish-driven reasoning)."
+  },
+  {
+    "id": "INPS010",
+    "e": "Flumazenil is a benzodiazepine antagonist; alcohol dependence uses naltrexone, acamprosate or disulfiram."
+  },
+  {
+    "id": "INPS011",
+    "e": "Alcohol is a CNS depressant at all doses; apparent 'stimulation' is disinhibition."
+  },
+  {
+    "id": "INPS012",
+    "e": "ICD-10 core symptoms of depression: low mood, loss of interest/enjoyment, reduced energy."
   }
 ]

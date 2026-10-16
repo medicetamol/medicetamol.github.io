@@ -102,5 +102,135 @@
       "4"
     ],
     "a": 0
+  },
+  {
+    "id": "INOP009",
+    "y": 2025,
+    "t": "CJC",
+    "q": "Which of the following organisms are responsible for acute hemorrhagic conjunctivitis? a. Poliovirus b. Coxsackie A c. Coxsackie B d. Enterovirus 70",
+    "o": [
+      "b and d",
+      "c and d",
+      "b, c and d",
+      "b and c"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOP010",
+    "y": 2025,
+    "t": "CJC",
+    "q": "After a farmer developed a fungal corneal ulcer and subsequently required a corneal transplant, which preservative is used to store the donor corneal graft, and what suture material is typically used during the procedure?",
+    "o": [
+      "Polyethylene glycol, Nylon",
+      "McCarey-Kaufman, Nylon",
+      "Ethanol, Silk",
+      "Moist chamber, Vicryl"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOP011",
+    "y": 2025,
+    "t": "RTV",
+    "q": "Which of the following findings is characteristic of proliferative diabetic retinopathy?",
+    "o": [
+      "Tractional retinal detachment",
+      "Rhegmatogenous retinal detachment",
+      "Exudative retinal detachment",
+      "No retinal detachment"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOP012",
+    "y": 2025,
+    "t": "TRM",
+    "q": "According to NPCBVI, blindness is defined as: 3/60",
+    "o": [
+      "Corrected visual acuity in better eye",
+      "Presenting visual acuity 3/60 in better eye 6/60",
+      "Presenting visual acuity in better eye",
+      "Corrected visual acuity 6/60 in better eye"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOP013",
+    "y": 2025,
+    "t": "RFQ",
+    "q": "All of the following are done in the treatment of amblyopia, except:",
+    "o": [
+      "Video game therapy",
+      "Strabismus surgery",
+      "Patching (occlusion therapy)",
+      "Refractive error correction"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOP014",
+    "y": 2025,
+    "t": "RTV",
+    "q": "Which investigation permits visualization of all the retinal layers?",
+    "o": [
+      "B-scan ultrasonography",
+      "OCT",
+      "Perimetry",
+      "Fundus fluorescein angiography"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOP015",
+    "y": 2025,
+    "t": "UVO",
+    "q": "In optic neuritis, which is true? (A) 70% of multiple sclerosis patients present with optic neuritis (B) Oral steroid is appropriate treatment (C) It can have normal optic nerve with no disc edema (D) Colour vision and contrast are proportionally affected to vision impairment",
+    "o": [
+      "A and D",
+      "B and D",
+      "A, C, D",
+      "Only C"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOP016",
+    "y": 2025,
+    "t": "RFQ",
+    "q": "Which laser is used in refractive eye surgery?",
+    "o": [
+      "Nd:YAG",
+      "Argon",
+      "Excimer laser",
+      "Diode"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOP017",
+    "y": 2025,
+    "t": "LNC",
+    "q": "A patient returns 2 weeks after cataract surgery with reduced vision. Examination shows anterior chamber cells and flare along with a hazy vitreous. What is the likely cause and associated organism?",
+    "o": [
+      "Endophthalmitis with Staphylococcus",
+      "Endophthalmitis with Propionibacterium",
+      "Sympathetic ophthalmia",
+      "Toxic anterior segment syndrome"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOP018",
+    "y": 2025,
+    "t": "ORL",
+    "q": "Which of the following nerves gives sensory supply to the orbit?",
+    "o": [
+      "Vagus nerve",
+      "Trigeminal nerve",
+      "Hypoglossal nerve",
+      "Oculomotor nerve"
+    ],
+    "a": 1
   }
 ]

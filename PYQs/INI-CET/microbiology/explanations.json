@@ -134,5 +134,41 @@
   {
     "id": "INMB034",
     "e": "Wuchereria microfilariae (nocturnal periodicity) sequester in deep lung capillaries by day."
+  },
+  {
+    "id": "INMB035",
+    "e": "PCR doubles each cycle: half of 2²⁷ copies = 2²⁶ → 26 cycles."
+  },
+  {
+    "id": "INMB036",
+    "e": "Weil-Felix (typhus), SAT (brucellosis), MAT (leptospirosis) are correct; Widal turns positive from the 2nd week, not the 1st."
+  },
+  {
+    "id": "INMB037",
+    "e": "Louse - epidemic typhus; mite - scrub typhus; flea - endemic typhus; tick - RMSF."
+  },
+  {
+    "id": "INMB038",
+    "e": "Kanagawa phenomenon = β-haemolysis of pathogenic Vibrio parahaemolyticus on Wagatsuma agar."
+  },
+  {
+    "id": "INMB039",
+    "e": "Acanthamoeba, Naegleria and Giardia have trophozoite + cyst forms; Trichomonas has trophozoite only."
+  },
+  {
+    "id": "INMB040",
+    "e": "Enterobius: plano-convex (D-shaped) egg c̅ perianal itching; diagnosed by Scotch-tape/NIH swab."
+  },
+  {
+    "id": "INMB041",
+    "e": "Strongyloides autoinfection via filariform larvae penetrating gut/perianal skin → hyperinfection in immunosuppression."
+  },
+  {
+    "id": "INMB042",
+    "e": "Cryptococcus is a monomorphic encapsulated yeast; the others are thermally dimorphic."
+  },
+  {
+    "id": "INMB043",
+    "e": "H. influenzae needs X (haemin) and V (NAD) factors → grows around a S. aureus streak (satellitism)."
   }
 ]

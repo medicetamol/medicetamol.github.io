@@ -102,5 +102,45 @@
   {
     "id": "INPH026",
     "e": "↑ Peripheral resistance (afterload) → ↑ peak pressure, ↓ stroke volume (tall, narrow loop)."
+  },
+  {
+    "id": "INPH027",
+    "e": "Hypoxia → hyperventilation → CO₂ ↓es → respiratory alkalosis (renal HCO₃⁻ excretion compensates)."
+  },
+  {
+    "id": "INPH028",
+    "e": "IGF-1/2 are structurally most similar to proinsulin (~50% homology; they retain the C-peptide-like domain), not mature insulin."
+  },
+  {
+    "id": "INPH029",
+    "e": "Surface tension ↑es on inspiration (alveoli expand, surfactant spreads thin); ↓es on expiration as surfactant is concentrated."
+  },
+  {
+    "id": "INPH030",
+    "e": "Bezold-Jarisch reflex: bradycardia + hypotension + apnoea/hypopnoea (vagal); tachycardia is not part of it."
+  },
+  {
+    "id": "INPH031",
+    "e": "Alpha waves (8-13 Hz, occipital) are blocked on eye opening (alpha blockade)."
+  },
+  {
+    "id": "INPH032",
+    "e": "Tetanizing frequency = 1/contraction period = 1/0.04 s = 25 Hz (latent period is not used)"
+  },
+  {
+    "id": "INPH033",
+    "e": "Feed-forward = body reacts before the change happens.\\nSkin cooling → vasoconstriction starts before core temp falls. \\nTemp regulation (D) = both feed-forward + feedback."
+  },
+  {
+    "id": "INPH034",
+    "e": "Fever: pyrogens/PGE₂ raise the set point in the pre-optic nucleus (anterior hypothalamus)."
+  },
+  {
+    "id": "INPH035",
+    "e": "ADH acts on V2 receptors → ↑es AQP2 (water) and urea absorption in the collecting duct.\\nThin ascending limb is passive and ADH has no effect there."
+  },
+  {
+    "id": "INPH036",
+    "e": "Tight junctions (zonula occludens) are apicolateral: at the apical end of the lateral membrane."
   }
 ]

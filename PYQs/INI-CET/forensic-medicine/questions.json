@@ -310,5 +310,174 @@
       "Florence test"
     ],
     "a": 2
+  },
+  {
+    "id": "INFM025",
+    "y": 2025,
+    "t": "TOX",
+    "q": "One of the following statements regarding venom is incorrect:",
+    "o": [
+      "Common cobra - Neurotoxic",
+      "Common krait - Neurotoxic",
+      "Elapidae - Myotoxic",
+      "Viperidae - Hemotoxic"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INFM026",
+    "y": 2025,
+    "t": "TRM",
+    "q": "The triad of abrasions, bruises and punctate lacerations are typically seen in:",
+    "o": [
+      "Fall from height",
+      "Bomb blast injuries",
+      "Road traffic accidents",
+      "Firearm injuries"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INFM027",
+    "y": 2025,
+    "t": "TOX",
+    "q": "Which of the following findings is not seen in a worker exposed to mercury in a thermometer manufacturing company?",
+    "o": [
+      "Tremors and Mad Hatter's disease",
+      "Basophilic stippling",
+      "Mees' lines",
+      "Peripheral neuropathy"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INFM028",
+    "y": 2025,
+    "t": "THA",
+    "q": "[Image: Two dental notation charts showing numbered and lettered teeth in four quadrants with R and L marked.] The dental numbering system illustrated below corresponds to which classification system?",
+    "o": [
+      "Palmer's notation",
+      "Universal system",
+      "FDI formula",
+      "Haderup system"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM029",
+    "y": 2025,
+    "t": "JUR",
+    "q": "Minimum age at which a girl can give valid consent for medical termination of pregnancy (MTP) is:",
+    "o": [
+      "12 years",
+      "16 years",
+      "18 years",
+      "21 years"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INFM030",
+    "y": 2025,
+    "t": "JUR",
+    "q": "According to the MTP Act, at what gestational age is the opinion of two doctors required for termination of pregnancy?",
+    "o": [
+      "16 to 20 weeks",
+      "Less than 16 weeks",
+      "20 to 24 weeks",
+      "24 to 28 weeks"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INFM031",
+    "y": 2025,
+    "t": "TOX",
+    "q": "In which type of poisoning does silver-nitrate– impregnated filter paper turn black when exposed to gastric lavage contents?",
+    "o": [
+      "Aluminium phosphide",
+      "Malathion",
+      "Barbiturates",
+      "Opium"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM032",
+    "y": 2025,
+    "t": "TRM",
+    "q": "A patient has burns on the face, both upper limbs, and the front of the chest. What percentage of total body surface area is involved?",
+    "o": [
+      "27 to 30",
+      "30 to 37",
+      "38 to 42",
+      "25 to 48"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM033",
+    "y": 2025,
+    "t": "TRM",
+    "q": "According to the Bharatiya Nyaya Sanhita (BNS), which of the following injuries is not considered grievous hurt?",
+    "o": [
+      "Emasculation",
+      "Dislocation of elbow",
+      "Severe body pain for 5 days",
+      "Loss of a member"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INFM034",
+    "y": 2025,
+    "t": "JUR",
+    "q": "Which recent legislation provides for the protection and security of medical records?",
+    "o": [
+      "The Digital Personal Data Protection Act, 2023",
+      "PCPNDT Act",
+      "HIPAA",
+      "MRD Act"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM035",
+    "y": 2025,
+    "t": "THA",
+    "q": "Which X-ray is used to confirm that a person is over 18 years of age?",
+    "o": [
+      "Appearance of inner end of clavicle, knee joint, and wrist joint",
+      "Fusion of ischial tuberosity and lower end of humerus",
+      "Medial end of clavicle and sternum",
+      "Medial end of clavicle and skull"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM036",
+    "y": 2025,
+    "t": "TOX",
+    "q": "Match the following: Substance Type of Poisoning A. Lead 1. Metallic irritant B. Croton 2. Organic irritant C. Opium 3. CNS depressant D. Cocaine 4. Deliriant",
+    "o": [
+      "A-1, B-2, C-3, D-4",
+      "A-2, B-1, C-3, D-4",
+      "A-3, B-4, C-1, D-2",
+      "A-4, B-3, C-2, D-1"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INFM037",
+    "y": 2025,
+    "t": "TOX",
+    "q": "Cyanide and carbon monoxide poisoning inhibit which enzyme as their primary mechanism of action?",
+    "o": [
+      "NADH dehydrogenase",
+      "Succinate dehydrogenase",
+      "Cytochrome C oxidoreductase",
+      "Cytochrome C oxidase"
+    ],
+    "a": 3
   }
 ]

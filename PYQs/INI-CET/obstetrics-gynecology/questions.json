@@ -232,5 +232,148 @@
       "AFC"
     ],
     "a": 1
+  },
+  {
+    "id": "INOG019",
+    "y": 2025,
+    "t": "GYM",
+    "q": "A female presents with abdominal fullness, early satiety and weight loss. Her CA-125 level is 125 mg/dL. On examination, she has ascites, omental caking, and bilateral adnexal masses with thick septations on imaging. What is the most likely diagnosis?",
+    "o": [
+      "Serous adenocarcinoma",
+      "Mucinous cystadenoma",
+      "Germ cell tumour",
+      "Endometriosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG020",
+    "y": 2025,
+    "t": "GYM",
+    "q": "Which HPV strains are linked to cervical cancer?",
+    "o": [
+      "31, 33",
+      "16, 18",
+      "6, 8",
+      "1, 2"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOG021",
+    "y": 2025,
+    "t": "IFR",
+    "q": "Which features are included in the Rotterdam criteria for diagnosing PCOS? a. Hirsutism b. Reduced cycles c. Insulin resistance d. Obesity",
+    "o": [
+      "a, b",
+      "b, d",
+      "a, c",
+      "a, d"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG022",
+    "y": 2025,
+    "t": "PPP",
+    "q": "Which of the following drugs are not used in the management of postpartum hemorrhage (PPH)?",
+    "o": [
+      "Dinoprostone",
+      "Methyl PGF2 alpha",
+      "Misoprostol",
+      "Oxytocin"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG023",
+    "y": 2025,
+    "t": "LBD",
+    "q": "Which of the following does not cause fetal bradycardia?",
+    "o": [
+      "Abruptio placenta",
+      "Maternal fever",
+      "Meconium aspiration",
+      "Fetal head compression"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOG024",
+    "y": 2025,
+    "t": "IFR",
+    "q": "A woman presents with delayed menstrual cycles and infertility. Chromopertubation shows bilateral tubal spillage and the uterus is normal, while ultrasound reveals bilaterally enlarged ovaries. What is the diagnosis?",
+    "o": [
+      "Ovarian cyst",
+      "Endometriosis",
+      "Polycystic ovary syndrome (PCOS)",
+      "Tubo-ovarian mass"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOG025",
+    "y": 2025,
+    "t": "HRP",
+    "q": "A 36-year-old primigravida presents to the antenatal ward with complaints of increased urinary frequency and burning micturition. A urine culture showed $\\ge10^{5}$ cells. Repeat culture showed E. coli sensitivity. What is the diagnosis?",
+    "o": [
+      "Asymptomatic bacteriuria",
+      "Normal commensal, no treatment",
+      "Repeat urine culture",
+      "Advice to visit in next semester"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INOG026",
+    "y": 2025,
+    "t": "GYM",
+    "q": "Which of the following is a feature of Pap smear procedure? a. Lithotomy position b. Vaginal examination c. Speculum examination d. Sample taken using Ayre's spatula",
+    "o": [
+      "a, b, d",
+      "a, c, d",
+      "a, c",
+      "b, a, c"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INOG027",
+    "y": 2025,
+    "t": "HRP",
+    "q": "Use of magnesium sulfate (MgSO ) in pre- 4 eclampsia has all of the following effects except:",
+    "o": [
+      "Neuroprotection",
+      "Prevent abruption of placenta",
+      "Decrease seizure incidence",
+      "Prevent preterm labour"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INOG028",
+    "y": 2025,
+    "t": "HRP",
+    "q": "What is the most common complication of a urinary tract infection (UTI) during pregnancy?",
+    "o": [
+      "Miscarriage",
+      "Chorioamnionitis",
+      "Prenatal labour",
+      "Neonatal mortality"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INOG029",
+    "y": 2025,
+    "t": "CNT",
+    "q": "Under the family planning program, an LNG- containing IUCD may be inserted in all of the following situations except which one?",
+    "o": [
+      "Within 48 hours of delivery",
+      "Within 7 days of menstruation",
+      "Within 10 days of next menstrual cycle",
+      "Immediate post delivery"
+    ],
+    "a": 2
   }
 ]

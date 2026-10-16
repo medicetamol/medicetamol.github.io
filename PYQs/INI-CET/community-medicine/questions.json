@@ -297,5 +297,135 @@
       "The null hypothesis is rejected because the chance probability is below 2%."
     ],
     "a": 0
+  },
+  {
+    "id": "INCM024",
+    "y": 2025,
+    "t": "EPI",
+    "q": "Which of the following is the correct order of steps for conducting a research study? 1. Decide study objective 2. Frame a research question 3. Select study sample 4. Select study setting",
+    "o": [
+      "1, 2, 3, 4",
+      "2, 1, 4, 3",
+      "1, 3, 2, 4",
+      "4, 3, 2, 1"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INCM025",
+    "y": 2025,
+    "t": "EPI",
+    "q": "Among 100 people in a village, 10 previously had measles. During the year, 20 new cases occurred. What is the incidence of measles in this population?",
+    "o": [
+      "10%",
+      "20%",
+      "22%",
+      "30%"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM026",
+    "y": 2025,
+    "t": "EPI",
+    "q": "During the Maha Kumbh Mela, mobile health units and multiple surveillance teams were set up. Syndromic surveillance was carried out using symptoms such as fever and diarrhea. What is the primary objective of this type of surveillance?",
+    "o": [
+      "To provide necessary immediate treatment",
+      "For immediate quarantine of healthy contacts",
+      "To detect potential warning signs of any outbreak",
+      "To reduce the need for manpower"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM027",
+    "y": 2025,
+    "t": "NHP",
+    "q": "RMNCH+A offers comprehensive healthcare across the entire life cycle. Which of the following is not included under the RMNCH+A strategy?",
+    "o": [
+      "Family planning",
+      "Maternal and Child Health (MCH) care",
+      "Geriatric population",
+      "Adolescent health"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM028",
+    "y": 2025,
+    "t": "NHP",
+    "q": "According to NACO guidelines, which of the following does not fall under the High-Risk Groups for HIV?",
+    "o": [
+      "Men having sex with men (MSM)",
+      "Female sex workers (FSW)",
+      "Truck drivers",
+      "Injecting drug users (IDUs)"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM029",
+    "y": 2025,
+    "t": "EPI",
+    "q": "In a Primary Health Centre (PHC) study on diabetic patients, body weight was measured before and again 6 months after a dietary intervention. Which statistical test should be used to assess whether the change is significant?",
+    "o": [
+      "Unpaired t-test",
+      "Paired t-test",
+      "ANOVA",
+      "Chi-square test"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INCM030",
+    "y": 2025,
+    "t": "EPI",
+    "q": "Which of the following statistical parameters is paired incorrectly?",
+    "o": [
+      "Mean, median - Dispersion",
+      "Standard error - Variation",
+      "Correlation coefficient - Relationship",
+      "Moments - Skewness"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INCM031",
+    "y": 2025,
+    "t": "EPI",
+    "q": "In statistics, centiles and quartiles are considered as:",
+    "o": [
+      "Measures of central tendency",
+      "Measures of dispersion",
+      "Measures of location/position",
+      "Measures of correlation"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM032",
+    "y": 2025,
+    "t": "EPI",
+    "q": "In a hospital-based study, patients were divided into three groups according to disease prevalence (Low, Medium, High), and then random selections were made from each group. What type of sampling method is this?",
+    "o": [
+      "Simple random sampling",
+      "Systematic random sampling",
+      "Stratified random sampling",
+      "Cluster random sampling"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INCM033",
+    "y": 2025,
+    "t": "FPD",
+    "q": "In a given population: • Less than 15 years: 6000 • 15 to 64 years: 12000 • 65 years and above: 2000 Calculate the dependency ratio.",
+    "o": [
+      "33%",
+      "50%",
+      "66%",
+      "75%"
+    ],
+    "a": 2
   }
 ]

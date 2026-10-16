@@ -90,5 +90,45 @@
   {
     "id": "INCM023",
     "e": "p = 0.03 → 3% probability of such a result by chance if null is true (significant at 0.05)."
+  },
+  {
+    "id": "INCM024",
+    "e": "Order: frame research question → decide objective → select setting → select sample."
+  },
+  {
+    "id": "INCM025",
+    "e": "Incidence = new cases / population at risk = 20/(100-10) = 22.2%."
+  },
+  {
+    "id": "INCM026",
+    "e": "Syndromic (symptom-based, pre-diagnostic) surveillance gives early warning of outbreaks."
+  },
+  {
+    "id": "INCM027",
+    "e": "RMNCH+A covers reproductive, maternal, newborn, child and adolescent health; geriatric care is not included."
+  },
+  {
+    "id": "INCM028",
+    "e": "Truck drivers are a 'bridge population', not a core HRG; HRGs are MSM, FSW, IDU and transgender persons."
+  },
+  {
+    "id": "INCM029",
+    "e": "Same patients measured before and after = paired data → paired t-test."
+  },
+  {
+    "id": "INCM030",
+    "e": "Mean and median are measures of central tendency, not dispersion."
+  },
+  {
+    "id": "INCM031",
+    "e": "Centiles and quartiles are partition values = measures of position/location."
+  },
+  {
+    "id": "INCM032",
+    "e": "Population split into strata (low/medium/high) then random samples from each = stratified random sampling."
+  },
+  {
+    "id": "INCM033",
+    "e": "Dependency ratio = (0-14 + ≥65) / (15-64) = 8000/12000 ≈ 66.7%."
   }
 ]

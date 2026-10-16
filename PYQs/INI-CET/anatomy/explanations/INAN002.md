@@ -1,25 +1,31 @@
-# Cingulate Gyrus
+# Superior Temporal Gyrus
 
-The **cingulate gyrus** is the main cortical component of the **limbic system**, linking emotion with behaviour and vocal expression. Damage to limbic circuits flattens the emotional colouring of speech (loss of emotional tone). Textbooks differ here: the classical aprosodias are usually described with right frontal and temporal lesions.
+**Prosody** is the emotional tone, pitch and rhythm of speech. It is processed mainly by the **non-dominant (usually right) hemisphere**, in areas that mirror the language areas of the left. Damage to the **right posterior superior temporal gyrus** causes **receptive (sensory) aprosodia**, the inability to comprehend emotional tone, while right inferior frontal lesions cause expressive aprosodia.
 
 ## Trigger Point
 
-> **Impaired emotional prosody** (loss of emotional tone or melody of speech), which points to the emotional/limbic component of speech.
+> Impaired **emotional prosody** = non-dominant hemisphere lesion, in the temporal (Wernicke-equivalent) region.
 
 ## Why Not the Other Options?
 
-**B. Superior Temporal Gyrus**
-Houses the primary auditory cortex, and its posterior part on the dominant side is Wernicke's area.
-Lesions mainly cause receptive language deficits; it is not the emotional-expression centre.
+**A. Cingulate gyrus**
+Part of the limbic system, involved in emotion, motivation and attention. Lesions cause apathy or akinetic mutism, not loss of prosody.
 
-**C. Parietal Lobe**
-Sensory integration and spatial awareness; lesions cause neglect, apraxia and agnosia.
-It does not govern the emotional tone of speech.
+**C. Parietal lobe**
+Handles sensory integration and spatial awareness. Lesions cause neglect, apraxia or Gerstmann syndrome, not aprosodia.
 
-**D. Precentral Gyrus**
-Primary motor cortex (area 4).
-A lesion causes contralateral weakness, not altered emotional tone.
+**D. Precentral gyrus**
+The primary motor cortex (area 4). Lesions cause contralateral weakness or paralysis, not a disorder of emotional tone.
+
+## Aprosodia: Mirror of Aphasia
+
+| Type | Site (non-dominant hemisphere) |
+|---|---|
+| Receptive (sensory) aprosodia | **Posterior superior temporal gyrus** (mirrors Wernicke) |
+| Expressive (motor) aprosodia | **Inferior frontal gyrus** (mirrors Broca) |
 
 ## Mind Capsule
 
-> Emotion + speech tone = limbic (cingulate); words = Broca and Wernicke.
+> Prosody = Rt-sided mirror of language areas
+    > Receptive: Wernicke's
+    > Expressive: Broca's

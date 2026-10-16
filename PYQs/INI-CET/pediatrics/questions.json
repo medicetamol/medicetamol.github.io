@@ -284,5 +284,161 @@
       "Levetiracetam"
     ],
     "a": 1
+  },
+  {
+    "id": "INPD023",
+    "y": 2025,
+    "t": "PIM",
+    "q": "Which vaccine is contraindicated in a patient with Severe Combined Immunodeficiency (SCID)?",
+    "o": [
+      "DPT",
+      "Hepatitis B",
+      "MMR",
+      "IPV"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPD024",
+    "y": 2025,
+    "t": "PGS",
+    "q": "Which of the following is not true in Turner Syndrome?",
+    "o": [
+      "Webbed neck",
+      "Short 4th metacarpals",
+      "Widely spaced hypoplastic nipples",
+      "Prominent occiput"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPD025",
+    "y": 2025,
+    "t": "PHO",
+    "q": "A young boy presents with petechiae and a platelet count of 10,000/cu mm. Bone marrow aspirate shows normal cellularity with increased megakaryocytes. What is the most appropriate initial treatment?",
+    "o": [
+      "Aspirin",
+      "Bone Marrow Transplant",
+      "IVIG",
+      "Methotrexate"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPD026",
+    "y": 2025,
+    "t": "NEN",
+    "q": "[Image: Chest X-ray of a neonate.] A 36-week neonate develops respiratory distress shortly after birth, and the chest X-ray is shown. What is the most likely diagnosis?",
+    "o": [
+      "Respiratory Distress Syndrome",
+      "Transient Tachypnea of Newborn",
+      "Neonatal Pneumonia",
+      "Meconium Aspiration Syndrome"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD027",
+    "y": 2025,
+    "t": "PCR",
+    "q": "A 3-year-old child has had cyanosis since infancy. Which component, if present, would indicate Tetralogy of Fallot (TOF)?",
+    "o": [
+      "Left ventricular hypertrophy",
+      "Infundibular pulmonary stenosis",
+      "Transposition of arteries",
+      "Inter-atrial septal defect"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD028",
+    "y": 2025,
+    "t": "GRW",
+    "q": "A 9-month-old child is brought in for developmental concerns. The child cannot sit with support but can roll over, says “dada” and “mama,” and shows stranger anxiety. What is the appropriate management?",
+    "o": [
+      "Order an immediate MRI",
+      "Reassure the parents that it's normal development",
+      "Refer to neurologist for developmental assessment",
+      "Advise parents to start exercises"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD029",
+    "y": 2025,
+    "t": "NUM",
+    "q": "Which of the following statements about marasmus in children is not true?",
+    "o": [
+      "Seen due to carbohydrate (caloric) deficiency",
+      "Protein loss is responsible for edema in this patient",
+      "Child appears emaciated with loss of subcutaneous fat",
+      "Weight-for-age is less than 60% of expected"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD030",
+    "y": 2025,
+    "t": "PGS",
+    "q": "Which of the following is not an aneuploidy?",
+    "o": [
+      "Trisomy 21",
+      "Trisomy 13",
+      "Klinefelter Syndrome",
+      "Bloom Syndrome"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPD031",
+    "y": 2025,
+    "t": "NEN",
+    "q": "Which of the following statements about proper breastfeeding technique is incorrect? 1. Infant's chin should be touching the breast 2. Infant's lower lip should be inverted during latching to the breast 3. A greater part of areola above the breast should be covered than below 4. Infant's cheeks should appear full during effective sucking.",
+    "o": [
+      "1 & 4",
+      "2 & 3",
+      "2, 3 & 4",
+      "1, 2, 3 & 4"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPD032",
+    "y": 2025,
+    "t": "NEN",
+    "q": "Which option best describes the mechanism behind breast milk jaundice?",
+    "o": [
+      "Hepatocellular injury by breast milk",
+      "Increased RBC breakdown producing more unconjugated bilirubin",
+      "Inhibition of conjugation by substances like free fatty acids & beta-glucuronidases in the breast milk",
+      "Reduced intestinal absorption of bilirubin"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPD033",
+    "y": 2025,
+    "t": "PEM",
+    "q": "A child presents with hepatosplenomegaly and cherry-red spots in the eyes, along with developmental regression but a normal startle response. Which enzyme deficiency is most likely?",
+    "o": [
+      "Hexosaminidase A",
+      "Arylsulfatase A",
+      "Sphingomyelinase",
+      "Glucocerebrosidase"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPD034",
+    "y": 2025,
+    "t": "PGS",
+    "q": "A newborn is noted to have several hypopigmented macules, and Wood’s lamp examination reveals ash-leaf spots. What is the most likely diagnosis?",
+    "o": [
+      "Sturge-Weber Syndrome",
+      "Neurofibromatosis Type 1",
+      "Tuberous Sclerosis",
+      "Incontinentia Pigmenti"
+    ],
+    "a": 2
   }
 ]

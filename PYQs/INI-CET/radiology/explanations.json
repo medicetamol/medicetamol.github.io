@@ -46,5 +46,49 @@
   {
     "id": "INRD012",
     "e": "Pleural air c̅ lung collapse: immediate decompression, followed by intercostal drain."
+  },
+  {
+    "id": "INRD013",
+    "e": "Sunburst pattern + Codman triangle in a teenager = osteosarcoma."
+  },
+  {
+    "id": "INRD014",
+    "e": "CT (ionising radiation) is avoided in pregnancy; MRI/USG/Doppler are safe."
+  },
+  {
+    "id": "INRD015",
+    "e": "Non-contrast CT KUB is the most sensitive and specific test for ureteric calculi."
+  },
+  {
+    "id": "INRD016",
+    "e": "Cystic lesion c̅ eccentric scolex ('dot sign') = neurocysticercosis."
+  },
+  {
+    "id": "INRD017",
+    "e": "Tc-99m sestamibi scan localises a hyperfunctioning parathyroid adenoma."
+  },
+  {
+    "id": "INRD018",
+    "e": "Rectal evacuation study c̅ barium paste on X-ray = X-ray defecogram."
+  },
+  {
+    "id": "INRD019",
+    "e": "Honda/H sign: bilateral sacral ala uptake + transverse band = sacral insufficiency fracture."
+  },
+  {
+    "id": "INRD020",
+    "e": "'Eye of the tiger' (hypointense globus pallidus c̅ central hyperintensity) = PKAN."
+  },
+  {
+    "id": "INRD021",
+    "e": "Ahaustral (lead-pipe) colon = chronic ulcerative colitis."
+  },
+  {
+    "id": "INRD022",
+    "e": "Follicular thyroid carcinoma spreads haematogenously to bone (lytic metastases)."
+  },
+  {
+    "id": "INRD023",
+    "e": "MRI is the investigation of choice for spinal TB (early marrow/disc changes, soft tissue, cord compression)."
   }
 ]

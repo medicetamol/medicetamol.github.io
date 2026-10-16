@@ -30,5 +30,45 @@
   {
     "id": "INOP008",
     "e": "Frontal eye field (Brodmann area 8) controls voluntary scanning/saccades."
+  },
+  {
+    "id": "INOP009",
+    "e": "Acute haemorrhagic conjunctivitis: Enterovirus 70 and Coxsackie A24."
+  },
+  {
+    "id": "INOP010",
+    "e": "McCarey-Kaufman (MK) medium stores donor cornea; nylon (10-0) is the usual suture."
+  },
+  {
+    "id": "INOP011",
+    "e": "PDR: fibrovascular proliferation contracts → tractional retinal detachment."
+  },
+  {
+    "id": "INOP012",
+    "e": "NPCBVI blindness: presenting visual acuity <3/60 in the better eye."
+  },
+  {
+    "id": "INOP013",
+    "e": "Amblyopia is treated c̅ refractive correction, patching, penalisation, video games; strabismus surgery does not treat amblyopia."
+  },
+  {
+    "id": "INOP014",
+    "e": "OCT gives high-resolution cross-sectional imaging of all retinal layers."
+  },
+  {
+    "id": "INOP015",
+    "e": "Retrobulbar optic neuritis can have a normal disc (no disc oedema)."
+  },
+  {
+    "id": "INOP016",
+    "e": "Excimer laser (193 nm) photoablates corneal stroma in LASIK/PRK."
+  },
+  {
+    "id": "INOP017",
+    "e": "Delayed post-cataract endophthalmitis (weeks) → Propionibacterium acnes (indolent, capsular plaque)."
+  },
+  {
+    "id": "INOP018",
+    "e": "Orbit's sensory supply is from the trigeminal n. (ophthalmic and maxillary divisions)."
   }
 ]

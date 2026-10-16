@@ -102,5 +102,89 @@
   {
     "id": "INPT026",
     "e": "Microcytic hypochromic anaemia c̅ target cells & normal/↑ RBC count → Hb electrophoresis confirms hemoglobinopathy."
+  },
+  {
+    "id": "INPT027",
+    "e": "Armanni-Ebstein (glycogen in tubular cells) is a rare change; podocyte loss, mesangial widening and GBM thickening are common."
+  },
+  {
+    "id": "INPT028",
+    "e": "Gene pool = all alleles of all genes in a breeding population."
+  },
+  {
+    "id": "INPT029",
+    "e": "Family h/o of breast + ovarian Ca → BRCA1/2 (AD, DNA repair genes).\\nP53 = Li-Fraumeni, PTEN = Cowden, CDH1 = hereditary diffuse gastric/lobular breast Ca."
+  },
+  {
+    "id": "INPT030",
+    "e": "BRCA testing uses sequencing (NGS/whole exome) to detect point mutations and small indels."
+  },
+  {
+    "id": "INPT031",
+    "e": "Mucosal neuroma belongs to MEN2B (RET), not TP53 (Li-Fraumeni: sarcoma, breast, brain, adrenocortical ca)."
+  },
+  {
+    "id": "INPT032",
+    "e": "Pyroptosis = caspase-1/inflammasome-mediated lytic death c̅ IL-1β release (gasdermin D pores)."
+  },
+  {
+    "id": "INPT033",
+    "e": "von Willebrand disease is the commonest inherited bleeding disorder (AD; defective platelet adhesion)."
+  },
+  {
+    "id": "INPT034",
+    "e": "EPO helps anaemia of CKD (↓ renal EPO production); in aplastic/nutritional anaemia EPO is already high or cause is correctable."
+  },
+  {
+    "id": "INPT035",
+    "e": "Post-viral isolated thrombocytopenia c̅ normal smear = ITP → first-line oral corticosteroids."
+  },
+  {
+    "id": "INPT036",
+    "e": "G6PD→Haemolytic pattern: unconjugated (indirect) bilirubin ↑es, direct normal, urine urobilinogen ↑es."
+  },
+  {
+    "id": "INPT037",
+    "e": "Corynebacterium kroppenstedtii (lipophilic) → granulomatous lobular mastitis c̅ neutrophilic microabscesses."
+  },
+  {
+    "id": "INPT038",
+    "e": "Obesity-linked cancers include pancreas, meningioma and myeloma (also gastric cardia); non-cardia stomach cancer is not typically linked."
+  },
+  {
+    "id": "INPT039",
+    "e": "Granulosa cell tumour: Call-Exner bodies, coffee-bean nuclei, inhibin +ve; CA-125 is an epithelial ovarian tumour marker."
+  },
+  {
+    "id": "INPT040",
+    "e": "Congo red stains amyloid, not microorganisms; GMS and PAS stain fungi/Pneumocystis."
+  },
+  {
+    "id": "INPT041",
+    "e": "Only ~10-15% develop PUD, as ulcer needs host factors + virulence (CagA, VacA) + environmental factors (smoking, NSAIDs).\\nMost infections stay asymptomatic."
+  },
+  {
+    "id": "INPT042",
+    "e": "SCID has no functional T cells → cannot mount graft rejection."
+  },
+  {
+    "id": "INPT043",
+    "e": "Terminal bronchiole: simple cuboidal ciliated epithelium c̅ Clara cells, no cartilage/glands/alveoli in wall."
+  },
+  {
+    "id": "INPT044",
+    "e": "Warburg effect: cancer cells prefer aerobic glycolysis (↑ glucose uptake and lactate) even when O₂ is available."
+  },
+  {
+    "id": "INPT045",
+    "e": "Dimeric secretory IgA (J chain + secretory component) predominates on mucosal surfaces."
+  },
+  {
+    "id": "INPT046",
+    "e": "Surface plasmon resonance measures real-time antigen-antibody binding kinetics (kon/koff) → affinity."
+  },
+  {
+    "id": "INPT047",
+    "e": "Procalcitonin-guided therapy allows early antibiotic discontinuation when levels fall."
   }
 ]

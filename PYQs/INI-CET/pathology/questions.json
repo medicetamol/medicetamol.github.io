@@ -336,5 +336,278 @@
       "Hb electrophoresis"
     ],
     "a": 3
+  },
+  {
+    "id": "INPT027",
+    "y": 2025,
+    "t": "RNP",
+    "q": "Least common finding in diabetic kidney is",
+    "o": [
+      "Podocyte loss",
+      "Armani Ebstein",
+      "Mesangial widening",
+      "GBM thickening"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPT028",
+    "y": 2025,
+    "t": "GNC",
+    "q": "Alleles of gene pool belong to",
+    "o": [
+      "Individual",
+      "Family",
+      "Population",
+      "Cell"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPT029",
+    "y": 2025,
+    "t": "NEO",
+    "q": "A woman with a strong family history of both breast and ovarian cancer should be tested for mutation in which gene?",
+    "o": [
+      "BRCA1/2",
+      "P53",
+      "PTEN",
+      "CDH1"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT030",
+    "y": 2025,
+    "t": "NEO",
+    "q": "BRCA testing is done by",
+    "o": [
+      "RT-PCR",
+      "Whole exome sequencing",
+      "qPCR",
+      "Southern blot"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPT031",
+    "y": 2025,
+    "t": "NEO",
+    "q": "Identify the incorrect association",
+    "o": [
+      "BRCA2 Prostate",
+      "PTEN-Thyroid",
+      "STK11-Breast",
+      "TP53 Mucosal neuroma"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT032",
+    "y": 2025,
+    "t": "CIN",
+    "q": "Caspase-1 mediated cell death with inflammation is known as",
+    "o": [
+      "Pyroptosis",
+      "Necroptosis",
+      "Ferroptosis",
+      "Necrosis"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT033",
+    "y": 2025,
+    "t": "HAM",
+    "q": "Most common inherited bleeding disorder is",
+    "o": [
+      "Von Willebrand disease",
+      "Factor V deficiency",
+      "Hemophilia A",
+      "Hemophilia B"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT034",
+    "y": 2025,
+    "t": "HAM",
+    "q": "In which condition is erythropoietin considered beneficial for treatment?",
+    "o": [
+      "Anemia in chronic kidney disease",
+      "Anemia in myelodysplastic syndrome",
+      "Nutritional anemia",
+      "Aplastic anemia"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT035",
+    "y": 2025,
+    "t": "HAM",
+    "q": "A 32-year-old woman presents with easy bruising and petechiae, a platelet count of 18,000/mm³, normal hemoglobin and leukocyte counts, and a recent mild upper respiratory infection. Her peripheral smear is normal. What is the most appropriate next step in management?",
+    "o": [
+      "Oral corticosteroids",
+      "Platelet transfusion",
+      "Bone marrow biopsy",
+      "Splenectomy"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT036",
+    "y": 2025,
+    "t": "LVR",
+    "q": "A deficiency of glucose-6-phosphatase is associated with which pattern of bilirubin levels?",
+    "o": [
+      "Direct bilirubin increased, indirect bilirubin decreased, and urine urobilinogen/urobilin increased",
+      "Direct bilirubin normal, indirect bilirubin increased, and urobilinogen normal",
+      "Raised direct bilirubin, normal indirect bilirubin, and absent urine bilirubin",
+      "Indirect bilirubin increased, direct bilirubin normal, and raised urine urobilinogen"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT037",
+    "y": 2025,
+    "t": "RPD",
+    "q": "Neutrophilic granulomatous mastitis is caused by which organism?",
+    "o": [
+      "Corynebacterium kroppenstedtii",
+      "Corynebacterium minutissimum",
+      "Mycobacterium tuberculosis",
+      "Staphylococcus aureus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT038",
+    "y": 2025,
+    "t": "NEO",
+    "q": "Which of the following malignancies is unrelated to obesity?",
+    "o": [
+      "Stomach",
+      "Pancreas",
+      "Meningioma",
+      "Multiple myeloma"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT039",
+    "y": 2025,
+    "t": "RPD",
+    "q": "Histopathological features of granulosa cell tumor include all except:",
+    "o": [
+      "Call-Exner bodies",
+      "Inhibin A",
+      "CA-125 positivity",
+      "Coffee bean nuclei"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPT040",
+    "y": 2025,
+    "t": "RNP",
+    "q": "Which stain is not used to identify organisms in a renal transplant biopsy?",
+    "o": [
+      "Gomori methenamine silver",
+      "PAS (Periodic acid-Schiff) stain",
+      "Masson Fontana",
+      "Congo red"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT041",
+    "y": 2025,
+    "t": "GIP",
+    "q": "Why does not every Helicobacter pylori infection lead to ulcers?",
+    "o": [
+      "Disease associated with host factors and environmental influences",
+      "Increased risk of peptic ulcer disease when H. pylori is present with NSAIDs",
+      "H. pylori infects the antrum even in asymptomatic individuals",
+      "Majority of H. pylori infections are asymptomatic"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT042",
+    "y": 2025,
+    "t": "IMP",
+    "q": "In which of the following situations does transplant rejection not occur?",
+    "o": [
+      "Bare lymphocyte syndrome",
+      "Chronic granulomatous disease",
+      "Severe Combined Immunodeficiency (SCID)",
+      "DiGeorge syndrome"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPT043",
+    "y": 2025,
+    "t": "RSP",
+    "q": "[Image: Two histology images of lung tissue with a marked airway structure.] Identify the structure labeled in the histology image shown.",
+    "o": [
+      "Terminal bronchiole",
+      "Respiratory bronchiole",
+      "Alveolar duct",
+      "Bronchus"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INPT044",
+    "y": 2025,
+    "t": "NEO",
+    "q": "What explains increased oxygen consumption by cancer cells?",
+    "o": [
+      "Cancer cells need increased lactate production",
+      "Cancer cells have increased mitochondrial function",
+      "Cancer cells rely on anaerobic glycolysis even in presence of oxygen (Warburg effect)",
+      "Cancer cells undergo increased oxidative phosphorylation"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPT045",
+    "y": 2025,
+    "t": "IMP",
+    "q": "[Image: Diagram of an immunoglobulin with heavy chains, light chains, joining chain and secretory component labelled.] Identify the antibody shown in the diagram that contains a joining chain and is primarily located in mucosal surfaces.",
+    "o": [
+      "IgG",
+      "IgM",
+      "IgE",
+      "IgA"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPT046",
+    "y": 2025,
+    "t": "IMP",
+    "q": "[Image: Graph of antigen-antibody interaction kinetics (graph not reproduced in the source PDF).] What technique is illustrated in the graph that depicts antigen-antibody interaction and the kinetics of the immune response?",
+    "o": [
+      "Competitive ELISA for antibody affinity",
+      "Competitive ELISA for antibody concentration",
+      "Surface plasmon resonance for affinity",
+      "Surface plasmon resonance for concentration"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPT047",
+    "y": 2025,
+    "t": "INF",
+    "q": "What is the role of Pro calcitonin in pneumonia?",
+    "o": [
+      "Guiding initiation of antibiotic",
+      "Early antibiotic discontinuation",
+      "Requirement of further investigation",
+      "No role"
+    ],
+    "a": 1
   }
 ]

@@ -336,5 +336,135 @@
       "Increased aortic compliance"
     ],
     "a": 2
+  },
+  {
+    "id": "INPH027",
+    "y": 2025,
+    "t": "RES",
+    "q": "Which of the following is seen in high altitude?",
+    "o": [
+      "Metabolic acidosis",
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Respiratory alkalosis"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPH028",
+    "y": 2025,
+    "t": "ENR",
+    "q": "IGF-1 and IGF-2 are structurally most similar to which molecule?",
+    "o": [
+      "Insulin",
+      "Preproinsulin",
+      "Proinsulin",
+      "C-peptide"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPH029",
+    "y": 2025,
+    "t": "RES",
+    "q": "During which situation does the surface tension of the fluid lining the alveoli increase?",
+    "o": [
+      "Expiration",
+      "Inspiration",
+      "Standing",
+      "Supine"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH030",
+    "y": 2025,
+    "t": "CVS",
+    "q": "Which of the following are features of Bezold Jarisch reflex? 1. Hypopnea 2. Tachycardia 3. Bradycardia 4. Hypotension",
+    "o": [
+      "1,2,3",
+      "1,3,4",
+      "1,3",
+      "All of the above"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH031",
+    "y": 2025,
+    "t": "NPH",
+    "q": "In a normal awake person resting with eyes closed, which EEG waves diminish when the eyes are opened?",
+    "o": [
+      "Beta waves",
+      "Theta waves",
+      "Alpha waves",
+      "Delta waves"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPH032",
+    "y": 2025,
+    "t": "GNM",
+    "q": "Given a latent period of 10 ms, a contraction period of 40 ms, and a relaxation period of 40 ms, how would you calculate the tetanizing frequency?",
+    "o": [
+      "20 Hz",
+      "30 Hz",
+      "40 Hz",
+      "25 Hz"
+    ],
+    "a": 3
+  },
+  {
+    "id": "INPH033",
+    "y": 2025,
+    "t": "GNM",
+    "q": "Which of the following is an example of feed forward mechanism?",
+    "o": [
+      "HR increases from supine to standing",
+      "Vasoconstriction in response to cooling",
+      "Increase in cardiac output in response to anemia",
+      "Temperature regulation"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH034",
+    "y": 2025,
+    "t": "NPH",
+    "q": "A patient comes to the OPD with fever. Which area is most likely affected?",
+    "o": [
+      "Insular cortex",
+      "Pre-optic nucleus",
+      "Periventricular hypothalamus",
+      "Dorsomedial hypothalamus"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INPH035",
+    "y": 2025,
+    "t": "REN",
+    "q": "Which of the following is not a mechanism by which ADH acts?",
+    "o": [
+      "Increases water permeability in collecting ducts",
+      "Increases absorption of urea in medullary collecting duct",
+      "Increases absorption of NaCl in thin ascending limb",
+      "Increases absorption of water in cortical collecting duct"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INPH036",
+    "y": 2025,
+    "t": "GNM",
+    "q": "Tight junctions are mainly found in which region of the cell?",
+    "o": [
+      "Apical",
+      "Apicolateral",
+      "Basolateral",
+      "Basal"
+    ],
+    "a": 1
   }
 ]

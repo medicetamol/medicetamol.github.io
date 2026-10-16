@@ -118,5 +118,77 @@
   {
     "id": "INGM030",
     "e": "Cushingoid features in a child: most commonly exogenous (iatrogenic) steroids."
+  },
+  {
+    "id": "INGM031",
+    "e": "Diarrhoea → HCO₃⁻ loss → normal anion gap (hyperchloraemic) acidosis."
+  },
+  {
+    "id": "INGM032",
+    "e": "Fever, headache, vomiting, photophobia, neck stiffness c̅ +ve Brudzinski → acute bacterial meningitis."
+  },
+  {
+    "id": "INGM033",
+    "e": "Pyuria c̅ sterile culture = sterile pyuria (consider Chlamydia, TB, prior antibiotics)."
+  },
+  {
+    "id": "INGM034",
+    "e": "HFpEF: diuretics for congestion + SGLT2 inhibitors (↓es HF hospitalisation)."
+  },
+  {
+    "id": "INGM035",
+    "e": "In cardiac failure JVP is raised and pulsatile; non-pulsatile rise suggests SVC obstruction."
+  },
+  {
+    "id": "INGM036",
+    "e": "↑ RV/TLC c̅ FEV₁/FVC ↓es = obstruction c̅ air trapping and hyperinflation."
+  },
+  {
+    "id": "INGM037",
+    "e": "Sensory disturbances (numbness/paraesthesia) are the commonest early MS symptom."
+  },
+  {
+    "id": "INGM038",
+    "e": "Arthralgia/myalgia is the most common SLE feature (~90%)."
+  },
+  {
+    "id": "INGM039",
+    "e": "Pulsus alternans (alternating strong/weak beats) reflects Frank-Starling mechanism in LV failure."
+  },
+  {
+    "id": "INGM040",
+    "e": "Mitral stenosis murmur: presystolic accentuation from atrial contraction → P wave."
+  },
+  {
+    "id": "INGM041",
+    "e": "Septic shock c̅ MAP <65 after fluids → noradrenaline is the first-line vasopressor."
+  },
+  {
+    "id": "INGM042",
+    "e": "Bronchiectasis: long-term airway clearance c̅ high-frequency chest wall oscillation."
+  },
+  {
+    "id": "INGM043",
+    "e": "Septic complicated UTI in a diabetic → carbapenem (meropenem) for ESBL cover."
+  },
+  {
+    "id": "INGM044",
+    "e": "Procalcitonin guides duration/stopping of antibiotics; it does not choose the agent or separate bacterial from fungal infection."
+  },
+  {
+    "id": "INGM045",
+    "e": "Uncomplicated stage 1 HTN: lifestyle first; drug therapy started only if BP exceeds 160/100."
+  },
+  {
+    "id": "INGM046",
+    "e": "Muir-Barclay (burns) colloid replacement uses plasma protein; albumin is the preferred colloid."
+  },
+  {
+    "id": "INGM047",
+    "e": "Class IV lupus nephritis (wire-loop): induction c̅ cyclophosphamide + steroids."
+  },
+  {
+    "id": "INGM048",
+    "e": "Sodium is lost in stool (↓es GI absorption) and replaced c̅ water → hyponatraemia."
   }
 ]

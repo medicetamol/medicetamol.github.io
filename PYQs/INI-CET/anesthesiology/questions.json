@@ -89,5 +89,57 @@
       "All are correct"
     ],
     "a": 0
+  },
+  {
+    "id": "INAS008",
+    "y": 2025,
+    "t": "AOP",
+    "q": "Which drug can be used to reverse the effects of rocuronium, a neuromuscular blocking agent?",
+    "o": [
+      "Atropine",
+      "Baclofen",
+      "Neostigmine",
+      "Dantrolene"
+    ],
+    "a": 2
+  },
+  {
+    "id": "INAS009",
+    "y": 2025,
+    "t": "AVC",
+    "q": "In a patient with septic shock who stays hypotensive even after adequate fluid resuscitation, what should be the next medication of choice?",
+    "o": [
+      "Noradrenaline",
+      "Adrenaline",
+      "Dopamine",
+      "Hydrocortisone"
+    ],
+    "a": 0
+  },
+  {
+    "id": "INAS010",
+    "y": 2025,
+    "t": "ARG",
+    "q": "Which of the following about lumbar puncture is incorrect?",
+    "o": [
+      "Urgent indication if suspected SAH with inconclusive CT",
+      "Can be done in thrombocytopenia (platelet count >10,000)",
+      "Meningitis is an unusual complication",
+      "Post-tap headache is more common in females and old age"
+    ],
+    "a": 1
+  },
+  {
+    "id": "INAS011",
+    "y": 2025,
+    "t": "AIV",
+    "q": "Sodium thiopentone is regarded as an ultrashort-acting drug due to (true or false)",
+    "o": [
+      "Rapid redistribution",
+      "Metabolism",
+      "Excretion",
+      "Short elimination half-life"
+    ],
+    "a": 0
   }
 ]

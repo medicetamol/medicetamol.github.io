@@ -26,5 +26,21 @@
   {
     "id": "INAS007",
     "e": "Both ↑ GABA-A action (BZD ↑ frequency; barbiturate ↑ duration) & add to alcohol sedation.\nThiopentone ends by redistribution; flumazenil reverses only BZDs."
+  },
+  {
+    "id": "INAS008",
+    "e": "Neostigmine (anticholinesterase) reverses non-depolarising blockers like rocuronium; given c̅ atropine/glycopyrrolate."
+  },
+  {
+    "id": "INAS009",
+    "e": "Persistent hypotension after adequate fluids in septic shock → noradrenaline."
+  },
+  {
+    "id": "INAS010",
+    "e": "LP needs platelets >40-50,000; 10,000 is unsafe (haematoma risk)."
+  },
+  {
+    "id": "INAS011",
+    "e": "Thiopentone's ultrashort action is due to redistribution (brain → muscle → fat), not metabolism."
   }
 ]
