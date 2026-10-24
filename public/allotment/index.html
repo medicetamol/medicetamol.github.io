@@ -445,6 +445,18 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
 .promo .pt small { display: block; margin-top: .1rem; font-size: .78rem; line-height: 1.4; color: rgb(var(--slate-400)); }
 .promo .pa { font-size: 1.6rem; line-height: 1; color: rgb(var(--accent-text)); }
 
+/* multi-select */
+.ms { position: relative; }
+.ms-btn { display: block; width: 100%; text-align: left; padding-right: 2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background-image: linear-gradient(45deg, transparent 50%, rgb(var(--slate-400)) 50%), linear-gradient(135deg, rgb(var(--slate-400)) 50%, transparent 50%); background-position: calc(100% - 17px) 52%, calc(100% - 12px) 52%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+.ms-btn.on { border-color: rgb(var(--accent) / .6); }
+.ms-pop { position: absolute; left: 0; right: 0; top: calc(100% + .35rem); z-index: 40; max-height: min(22rem, 60vh); overflow: auto; border: 1px solid rgb(var(--slate-700)); border-radius: 1rem; background: rgb(var(--slate-900)); box-shadow: 0 12px 32px rgb(0 0 0 / .35); }
+.ms-top { position: sticky; top: 0; display: flex; gap: .5rem; justify-content: flex-end; padding: .5rem; background: rgb(var(--slate-900)); border-bottom: 1px solid rgb(var(--slate-800)); }
+.ms-top .btn { min-height: 2.1rem; padding: .25rem .85rem; font-size: .8rem; }
+.ms-item { display: flex; align-items: center; gap: .65rem; padding: .55rem .9rem; min-height: 2.5rem; font-size: .88rem; cursor: pointer; }
+.field .ms-item { display: flex; margin: 0; font-size: .88rem; font-weight: 500; color: rgb(var(--slate-200)); }
+.ms-item:hover { background: rgb(var(--slate-800) / .6); }
+.ms-item input { width: 1.05rem; height: 1.05rem; flex: none; accent-color: rgb(var(--accent)); }
+
 /* result head */
 .rhead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem; margin: 1.1rem .25rem .6rem; }
 .rhead .count { font-size: .85rem; color: rgb(var(--slate-400)); }
@@ -553,7 +565,6 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     </section>
 
     <!-- Filters -->
-    <h4>Use filters to view STATEWISE Allotment </h4>
     <section class="card filters" id="filters" aria-label="Filters">
       <div class="search-row">
         <div class="grow">
@@ -569,9 +580,10 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
       <div class="fold" id="fold">
         <div class="fgrid">
           <div class="field" id="stateField"><label for="fState">State</label><select class="ctl" id="fState"></select></div>
-          <div class="field"><label for="fBranch">Branch</label><select class="ctl" id="fBranch"></select></div>
-          <div class="field"><label for="fDegree">Course type</label><select class="ctl" id="fDegree"></select></div>
-          <div class="field" id="quotaField"><label for="fQuota">Quota</label><select class="ctl" id="fQuota"></select></div>
+          <div class="field"><label>Branch</label><div class="ms" id="msBranch"></div></div>
+          <div class="field"><label>Course type</label><div class="ms" id="msDegree"></div></div>
+          <div class="field"><label for="fType">Seat type</label><select class="ctl" id="fType"><option value="">All seat types</option><option value="gov">Government</option><option value="pvt">Private / Deemed</option><option value="dnb">DNB</option></select></div>
+          <div class="field" id="quotaField"><label>Quota</label><div class="ms" id="msQuota"></div></div>
           <div class="field" id="catField"><label for="fCat">Seat category</label><select class="ctl" id="fCat"></select></div>
           <div class="field"><label for="fCollege">College</label><input class="ctl" id="fCollege" list="collegeList" autocomplete="off" placeholder="Start typing a college name" /><datalist id="collegeList"></datalist></div>
           <div class="field" id="rankField"><label>Rank between</label>
@@ -634,7 +646,7 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
 
   var S = {
     index: null, data: null, tab: "list",
-    f: { q: "", state: -1, quota: -1, degree: "", branch: "", cat: -1, college: "", from: 0, to: 0 },
+    f: { q: "", state: -1, stype: "", quota: [], degree: [], branch: [], cat: -1, college: "", from: 0, to: 0 },
     sort: { list: "rank", closing: "close", my: "close", summary: "open" },
     sum: { group: "branch", pwd: false }, prevTab: null, autoQuota: false,
     shown: PAGE,
@@ -726,6 +738,9 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     L.degrees = Array.from(new Set(d.courses.map(function (c) { return c[0]; }))).sort(function (a, b) {
       var x = order.indexOf(a), y = order.indexOf(b); return (x < 0 ? 99 : x) - (y < 0 ? 99 : y);
     });
+    var GOVQ = ["All India", "Delhi University Quota", "IP University Quota", "Banaras Hindu University", "Aligarh Muslim University"];
+    var PVTQ = ["Self-Financed Merit Seat", "Non-Resident Indian", "Jain Minority Quota", "Muslim Minority Quota"];
+    L.qType = d.quotas.map(function (q) { return GOVQ.indexOf(q) >= 0 ? "gov" : PVTQ.indexOf(q) >= 0 ? "pvt" : q === "DNB Quota" ? "dnb" : ""; });
     L.catIdx = {}; d.cats.forEach(function (c, i) { L.catIdx[c] = i; });
     S.L = L;
     resetFilters(true);
@@ -741,8 +756,8 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     var stOpts = (d.states || []).map(function (n, i) { return [n, i]; }).sort(function (a, b) { return cmpText(a[0], b[0]); });
     $("#stateField").hidden = !stOpts.length;
     $("#fState").innerHTML = opt(-1, "All states") + stOpts.map(function (s) { return opt(s[1], s[0]); }).join("");
-    $("#fBranch").innerHTML = opt("", "All branches") + L.branches.map(function (b) { return opt(b, b); }).join("");
-    $("#fDegree").innerHTML = opt("", "All course types") + L.degrees.map(function (b) { return opt(b, b); }).join("");
+    msInit("msBranch", "All branches", L.branches.map(function (b) { return [b, b]; }), "branch");
+    msInit("msDegree", "All course types", L.degrees.map(function (b) { return [b, b]; }), "degree");
     buildQuotaOptions();
     var catOrder = ["Open", "OBC", "EWS", "SC", "ST"];
     var cats = d.cats.map(function (c, i) { return [c, i]; }).sort(function (a, b) {
@@ -753,28 +768,78 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     $("#fCat").innerHTML = opt(-1, "All categories") + cats.map(function (c) { return opt(c[1], c[0] === "Open" ? "Open (General)" : c[0]); }).join("");
     $("#collegeList").innerHTML = Array.from(new Set(L.full)).sort().map(function (n) { return "<option value=\"" + esc(n) + "\"></option>"; }).join("");
     $("#q").value = ""; $("#fCollege").value = ""; $("#fFrom").value = ""; $("#fTo").value = "";
-    $("#fState").value = -1; $("#fBranch").value = ""; $("#fDegree").value = ""; $("#fCat").value = -1;
+    $("#fState").value = -1; $("#fType").value = ""; $("#fCat").value = -1;
+  }
+
+  /* ---- multi-select dropdown ---- */
+  var MS = {};
+  function msInit(id, allLabel, options, key) {
+    var root = $("#" + id);
+    MS[id] = { root: root, options: options, key: key, allLabel: allLabel };
+    root.innerHTML = '<button type="button" class="ctl ms-btn" aria-haspopup="listbox" aria-expanded="false"></button>' +
+      '<div class="ms-pop" hidden><div class="ms-top"><button type="button" class="btn ms-clear">Clear</button><button type="button" class="btn primary ms-done">Done</button></div>' +
+      '<div class="ms-list" role="listbox" aria-multiselectable="true">' +
+      options.map(function (o, i) { return '<label class="ms-item"><input type="checkbox" value="' + i + '"><span>' + esc(o[1]) + "</span></label>"; }).join("") + "</div></div>";
+    msPaint(id);
+  }
+  function msPaint(id) {
+    var m = MS[id]; if (!m) return;
+    var sel = S.f[m.key], btn = m.root.querySelector(".ms-btn"), label = m.allLabel;
+    m.root.querySelectorAll("input").forEach(function (cb) { cb.checked = sel.indexOf(m.options[+cb.value][0]) >= 0; });
+    if (sel.length) {
+      var first = m.options.filter(function (o) { return o[0] === sel[0]; })[0];
+      label = (first ? first[1] : String(sel[0])) + (sel.length > 1 ? " +" + (sel.length - 1) : "");
+    }
+    btn.textContent = label; btn.classList.toggle("on", sel.length > 0);
+  }
+  function msClose() {
+    document.querySelectorAll(".ms-pop").forEach(function (p) { p.hidden = true; });
+    document.querySelectorAll(".ms-btn").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+  }
+  function msBind() {
+    document.addEventListener("click", function (e) {
+      var root = e.target.closest ? e.target.closest(".ms") : null;
+      if (!root) { msClose(); return; }
+      var m = MS[root.id]; if (!m) return;
+      var btn = e.target.closest(".ms-btn");
+      if (btn) {
+        var pop = root.querySelector(".ms-pop"), open = pop.hidden;
+        msClose();
+        if (open) { pop.hidden = false; btn.setAttribute("aria-expanded", "true"); }
+        return;
+      }
+      if (e.target.closest(".ms-done")) { msClose(); return; }
+      if (e.target.closest(".ms-clear")) { S.f[m.key] = []; if (m.key === "quota") S.autoQuota = false; msPaint(root.id); changed(); }
+    });
+    document.addEventListener("change", function (e) {
+      var cb = e.target; if (!cb.closest || cb.type !== "checkbox") return;
+      var root = cb.closest(".ms"); if (!root) return;
+      var m = MS[root.id]; if (!m) return;
+      S.f[m.key] = m.options.filter(function (o, i) { var c = root.querySelector('input[value="' + i + '"]'); return c && c.checked; }).map(function (o) { return o[0]; });
+      if (m.key === "quota") S.autoQuota = false;
+      msPaint(root.id); changed();
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") msClose(); });
   }
 
   function buildQuotaOptions() {
-    var d = S.data;
-    $("#fQuota").innerHTML = opt(-1, "All quotas") + d.quotas.map(function (q, i) { return opt(i, q); }).join("");
-    $("#fQuota").value = String(S.f.quota);
+    msInit("msQuota", "All quotas", S.data.quotas.map(function (q, i) { return [i, q]; }), "quota");
   }
   function syncQuotaForTab() {
     var d = S.data, ai = d.quotas.indexOf("All India");
     if (ai < 0) ai = 0;
     if (S.tab === "summary" && S.prevTab !== "summary") {
-      if (S.f.quota < 0) { S.f.quota = ai; S.autoQuota = true; }
+      if (!S.f.quota.length) { S.f.quota = [ai]; S.autoQuota = true; }
     } else if (S.tab !== "summary" && S.prevTab === "summary") {
-      if (S.autoQuota && S.f.quota === ai) S.f.quota = -1;
+      if (S.autoQuota && S.f.quota.length === 1 && S.f.quota[0] === ai) S.f.quota = [];
       S.autoQuota = false;
     }
     S.prevTab = S.tab;
-    $("#fQuota").value = String(S.f.quota);
+    msPaint("msQuota");
   }
   function resetFilters(silent) {
-    S.f = { q: "", state: -1, quota: -1, degree: "", branch: "", cat: -1, college: "", from: 0, to: 0 };
+    S.f = { q: "", state: -1, stype: "", quota: [], degree: [], branch: [], cat: -1, college: "", from: 0, to: 0 };
+    if (S.tab === "summary" && S.data) { var ai0 = S.data.quotas.indexOf("All India"); S.f.quota = [ai0 < 0 ? 0 : ai0]; S.autoQuota = true; }
     S.shown = PAGE;
     if (!silent) { fillControls(); render(); }
   }
@@ -786,16 +851,18 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     var numQ = (opts.rankSearch && toks.length === 1 && /^\d+$/.test(toks[0])) ? parseInt(toks[0], 10) : null;
     if (numQ !== null) toks = [];
     var col = f.college.trim().toLowerCase();
+    var toSet = function (arr) { if (!arr.length) return null; var o = {}; arr.forEach(function (v) { o[v] = true; }); return o; };
+    var qSet = toSet(f.quota), degSet = toSet(f.degree), brSet = toSet(f.branch);
     var rows = d.rows;
     for (var n = 0; n < rows.length; n++) {
       var r = rows[n];
       if (numQ !== null && r[0] !== numQ) continue;
       if (f.state >= 0 && d.insts[r[2]][2] !== f.state) continue;
-      var qv = opts.quota !== undefined ? opts.quota : f.quota;
-      if (qv >= 0 && r[1] !== qv) continue;
+      if (qSet && !qSet[r[1]]) continue;
+      if (f.stype && L.qType[r[1]] !== f.stype) continue;
       var c = d.courses[r[3]];
-      if (f.degree && c[0] !== f.degree) continue;
-      if (f.branch && c[1] !== f.branch) continue;
+      if (degSet && !degSet[c[0]]) continue;
+      if (brSet && !brSet[c[1]]) continue;
       if (opts.anyCat) { /* all seat categories */ }
       else if (opts.catSet) { if (!opts.catSet[r[4]]) continue; }
       else if (f.cat >= 0 && r[4] !== f.cat) continue;
@@ -910,10 +977,10 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
   function summarize() {
     var f = S.f;
     var rows = filteredRows({ rank: false, anyCat: true });
-    var mode = f.branch ? "college" : (f.state >= 0 && S.sum.group === "college" ? "college" : "branch");
+    var mode = f.branch.length === 1 ? "college" : (f.state >= 0 && S.sum.group === "college" ? "college" : "branch");
     var map = new Map();
     for (var n = 0; n < rows.length; n++) {
-      var r = rows[n], qk = f.quota < 0 ? "|" + r[1] : "";
+      var r = rows[n], qk = f.quota.length !== 1 ? "|" + r[1] : "";
       var key = (mode === "branch" ? String(r[3]) : r[2] + "|" + r[3]) + qk;
       var g = map.get(key);
       if (!g) { g = { i: r[2], c: r[3], q: r[1], cells: {}, n: 0 }; map.set(key, g); }
@@ -939,9 +1006,10 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
   }
   function summaryCaption(sm) {
     var f = S.f, d = S.data;
-    var what = f.college.trim() ? f.college.trim() : ((f.degree ? f.degree + " " : "") + (f.branch ? f.branch : "all branches"));
+    var what = f.college.trim() ? f.college.trim() : ((f.degree.length ? f.degree.join("/") + " " : "") + (f.branch.length ? f.branch.join(", ") : "all branches"));
     var where = f.college.trim() ? "" : (f.state >= 0 ? " in " + d.states[f.state] : " across India");
-    var q = f.quota < 0 ? "all quotas (shown separately)" : d.quotas[f.quota] + " quota";
+    var q = !f.quota.length ? "all quotas (shown separately)" : f.quota.length === 1 ? d.quotas[f.quota[0]] + " quota" : f.quota.map(function (i) { return d.quotas[i]; }).join(", ") + " (shown separately)";
+    if (f.stype) q += " · " + ({ gov: "Government", pvt: "Private / Deemed", dnb: "DNB" })[f.stype] + " seats";
     var s = f.q.trim() ? " matching “" + f.q.trim() + "”" : "";
     return "Showing closing ranks of <b>" + esc(what) + "</b>" + esc(where) + esc(s) + " · " + esc(q);
   }
@@ -966,7 +1034,7 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
       return '<th class="' + (S.sum.pwd && i === 5 ? "gap" : "") + '">' + esc(c.replace(" PwD", "")) + (c.indexOf("PwD") > 0 ? "<small>PwD</small>" : "") + "</th>";
     }).join("") + '<th class="gap">Seats</th></tr>';
     var body = list.map(function (g) {
-      var first, qc = S.f.quota < 0 ? ' <span class="chip c-open">' + esc(QUOTA_SHORT[d.quotas[g.q]] || d.quotas[g.q]) + "</span>" : "";
+      var first, qc = S.f.quota.length !== 1 ? ' <span class="chip c-open">' + esc(QUOTA_SHORT[d.quotas[g.q]] || d.quotas[g.q]) + "</span>" : "";
       if (sm.mode === "branch") {
         first = '<div class="cn">' + esc(d.courses[g.c][1]) + '</div><div class="cl"><span class="chip">' + esc(d.courses[g.c][0]) + "</span>" + qc + "</div>";
       } else {
@@ -985,7 +1053,7 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
 
   function activeFilterCount() {
     var f = S.f, n = 0;
-    if (f.state >= 0) n++; if (f.quota >= 0 && S.tab !== "summary") n++; if (f.degree) n++; if (f.branch) n++;
+    if (f.state >= 0) n++; if (f.stype) n++; if (f.quota.length && S.tab !== "summary") n++; if (f.degree.length) n++; if (f.branch.length) n++;
     if (f.cat >= 0 && S.tab !== "my" && S.tab !== "summary") n++; if (f.college) n++;
     if ((f.from || f.to) && S.tab === "list") n++;
     return n;
@@ -1020,7 +1088,7 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
       extraNote = "Rank is the NEET-PG all-India rank. Seat is the category of the seat that was allotted; Candidate is the student’s own category.";
     } else if (tab === "summary") {
       var sm = summarize();
-      var showG = S.f.state >= 0 && !S.f.branch;
+      var showG = S.f.state >= 0 && S.f.branch.length !== 1;
       $("#groupField").hidden = !showG;
       $("#sumOpts").hidden = !showG;
       $("#caption").innerHTML = summaryCaption(sm);
@@ -1082,9 +1150,8 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
   $("#q").addEventListener("input", function (e) { var v = e.target.value; later("q", function () { S.f.q = v; changed(); }); });
   $("#fCollege").addEventListener("input", function (e) { var v = e.target.value; later("college", function () { S.f.college = v; changed(); }); });
   $("#fState").addEventListener("change", function (e) { S.f.state = parseInt(e.target.value, 10); changed(); });
-  $("#fBranch").addEventListener("change", function (e) { S.f.branch = e.target.value; changed(); });
-  $("#fDegree").addEventListener("change", function (e) { S.f.degree = e.target.value; changed(); });
-  $("#fQuota").addEventListener("change", function (e) { S.f.quota = parseInt(e.target.value, 10); S.autoQuota = false; changed(); });
+  $("#fType").addEventListener("change", function (e) { S.f.stype = e.target.value; changed(); });
+  msBind();
   $("#fCat").addEventListener("change", function (e) { S.f.cat = parseInt(e.target.value, 10); changed(); });
   $("#fFrom").addEventListener("input", function (e) { var v = num(e.target.value); later("from", function () { S.f.from = v; changed(); }); });
   $("#fTo").addEventListener("input", function (e) { var v = num(e.target.value); later("to", function () { S.f.to = v; changed(); }); });
