@@ -538,6 +538,7 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
       <select class="ctl" id="roundSel" style="width:auto;min-width:14rem" disabled><option>Loading…</option></select>
       <span class="stat" id="stat"></span>
     </div>
+    <p class="note" id="roundNote" style="margin:.6rem 0 0" hidden></p>
   </header>
 
   <nav class="tabs rel" aria-label="Views">
@@ -625,12 +626,13 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
      custom domain, change this one line. The relative path is only a fallback. */
   var DATA_BASE = "https://medicetamol.github.io/allotments/rounds/";
   var LOCAL_BASE = "./rounds/";
+  var COLLEGES = "../colleges.json";   /* master list of colleges, one level above rounds/ */
 
   var PAGE = 50;
   var QUOTA_SHORT = {
     "Non-Resident Indian": "NRI", "IP University Quota": "IP Univ", "Delhi University Quota": "DU",
     "DNB Quota": "DNB", "Aligarh Muslim University": "AMU", "Banaras Hindu University": "BHU",
-    "Self-Financed Merit Seat": "Self-financed", "Muslim Minority Quota": "Muslim Minority", "Jain Minority Quota": "Jain Minority"
+    "Self-Financed Merit Seat": "Self-financed", "Armed Forces Medical": "Armed Forces", "Muslim Minority Quota": "Muslim Minority", "Jain Minority Quota": "Jain Minority"
   };
   var SORTS = {
     list: [["rank", "Rank: best first"], ["rank-d", "Rank: last first"], ["college", "College A–Z"], ["course", "Branch A–Z"]],
@@ -677,6 +679,31 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     var ok = function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); };
     return fetch(DATA_BASE + file).then(ok).catch(function () { return fetch(LOCAL_BASE + file).then(ok); });
   }
+  function getColleges() {
+    if (!S.colleges) {
+      var ok = function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); };
+      S.colleges = fetch(DATA_BASE + COLLEGES).then(ok).catch(function () { return fetch(LOCAL_BASE + COLLEGES).then(ok); });
+      S.colleges.catch(function () { S.colleges = null; });
+    }
+    return S.colleges;
+  }
+  /* Round files store only a college code per row; build the college table the page uses from colleges.json */
+  function adapt(d, c) {
+    if (d.insts) return d;
+    var idx = {}, insts = [], stIdx = {}, states = [], codes = [];
+    d.rows = d.rows.map(function (r) {
+      var code = r[2], i = idx[code];
+      if (i === undefined) {
+        var x = c.colleges[code] || [code, "", code.slice(3)];
+        var sc = x[2] || code.slice(3), si = stIdx[sc];
+        if (si === undefined) { si = states.length; stIdx[sc] = si; states.push((c.states && c.states[sc]) || sc); }
+        i = idx[code] = insts.length; insts.push([x[0], x[1] || "", si]); codes.push(code);
+      }
+      return [r[0], r[1], i, r[3], r[4], r[5]];
+    });
+    d.insts = insts; d.states = states; d.codes = codes; d.v = 3;
+    return d;
+  }
   function showSkeleton() { $("#results").innerHTML = '<div class="list"><div class="skel"></div><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>'; }
   function showError(msg) {
     $("#results").innerHTML = '<div class="card empty"><b>Could not load the data</b>' + esc(msg) + '<br><button class="btn primary" id="retry" type="button">Try again</button></div>';
@@ -705,7 +732,7 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     if (S.cache[id]) { setData(S.cache[id]); return; }
     showSkeleton();
     $("#stat").textContent = "";
-    getJSON(meta.file).then(function (d) { S.cache[id] = d; setData(d); })
+    Promise.all([getJSON(meta.file), getColleges()]).then(function (res) { var d = adapt(res[0], res[1]); S.cache[id] = d; setData(d); })
       .catch(function (e) { try { console.error(e); } catch (x) {} showError("The round file could not be loaded."); });
   }
 
@@ -738,7 +765,7 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     L.degrees = Array.from(new Set(d.courses.map(function (c) { return c[0]; }))).sort(function (a, b) {
       var x = order.indexOf(a), y = order.indexOf(b); return (x < 0 ? 99 : x) - (y < 0 ? 99 : y);
     });
-    var GOVQ = ["All India", "Delhi University Quota", "IP University Quota", "Banaras Hindu University", "Aligarh Muslim University"];
+    var GOVQ = ["All India", "Delhi University Quota", "IP University Quota", "Banaras Hindu University", "Aligarh Muslim University", "Armed Forces Medical"];
     var PVTQ = ["Self-Financed Merit Seat", "Non-Resident Indian", "Jain Minority Quota", "Muslim Minority Quota"];
     L.qType = d.quotas.map(function (q) { return GOVQ.indexOf(q) >= 0 ? "gov" : PVTQ.indexOf(q) >= 0 ? "pvt" : q === "DNB Quota" ? "dnb" : ""; });
     L.catIdx = {}; d.cats.forEach(function (c, i) { L.catIdx[c] = i; });
@@ -747,6 +774,8 @@ table.sum .cl { margin-top: .15rem; font-size: .76rem; }
     fillControls();
     $("#roundPill").textContent = d.meta.label;
     $("#stat").innerHTML = "<b>" + fmt(d.rows.length) + "</b> allotments · " + fmt(d.insts.length) + " colleges";
+    var rn = $("#roundNote");
+    if (rn) { var later = d.meta && d.meta.round > 1; rn.hidden = !later; rn.textContent = later ? "Round " + d.meta.round + " lists only the seats allotted in that round (fresh allotments and upgrades). Candidates who kept their earlier seat are not included." : ""; }
     render();
   }
 
