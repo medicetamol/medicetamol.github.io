@@ -20,6 +20,7 @@ const Progress = lazy(() => import("./pages/Progress"));
 const Bookmarks = lazy(() => import("./pages/Bookmarks"));
 const BookmarkQuiz = lazy(() => import("./pages/BookmarkQuiz"));
 const About = lazy(() => import("./pages/About"));
+const Allotments = lazy(() => import("./pages/Allotments"));
 const Settings = lazy(() => import("./pages/Settings"));
 const ReportError = lazy(() => import("./pages/ReportError"));
 
@@ -47,6 +48,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/allotment" element={<Allotments />} />
         <Route path="/pyqs" element={<ExamSelect />} />
         <Route path="/pyqs/:exam" element={<SubjectSelect />} />
         <Route path="/pyqs/:exam/:subjectId" element={<Subject />} />

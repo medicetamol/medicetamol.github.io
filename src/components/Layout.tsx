@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { ArrowRight, BarChart3, Bookmark, BookOpen, Menu, Search, Settings, X } from "lucide-react";
+import { ArrowRight, BarChart3, Bookmark, BookOpen, Menu, Search, Settings, Table2, X } from "lucide-react";
 import { createContext, useContext, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 
 // ─── Header actions slot ────────────────────────────────────────────────────
@@ -38,6 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const navBeforeSearch = [
     { to: "/pyqs", label: "PYQs", icon: BookOpen },
+    { to: "/allotment", label: "Allotments", icon: Table2 },
     { to: "/bookmarks", label: "Bookmarks", icon: Bookmark },
     { to: "/progress", label: "Progress", icon: BarChart3 },
   ];
