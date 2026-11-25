@@ -19,6 +19,13 @@ const PAGES = [
     description:
       "Solve this shared Custom PYQ module on mediceTaMol. Let's do it together.",
   },
+  {
+    route: "allotment",
+    title: "Allotment | mediceTaMol",
+    description:
+      "Check NEET-PG seat allotment results and cut-offs on mediceTaMol, and plan your counselling choices.",
+    image: `${BASE_URL}/og-allotment.jpg`,
+  },
 ];
 
 const esc = (s) =>
@@ -50,10 +57,10 @@ for (const page of PAGES) {
   html = setMeta(html, "property", "og:title", page.title);
   html = setMeta(html, "property", "og:description", page.description);
   html = setMeta(html, "property", "og:url", url);
-  html = setMeta(html, "property", "og:image", IMAGE);
+  html = setMeta(html, "property", "og:image", page.image || IMAGE);
   html = setMeta(html, "name", "twitter:title", page.title);
   html = setMeta(html, "name", "twitter:description", page.description);
-  html = setMeta(html, "name", "twitter:image", IMAGE);
+  html = setMeta(html, "name", "twitter:image", page.image || IMAGE);
 
   const outDir = path.join(DIST, page.route);
   fs.mkdirSync(outDir, { recursive: true });
